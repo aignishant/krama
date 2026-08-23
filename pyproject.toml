@@ -1,0 +1,24 @@
+[project]
+name = "krama"
+version = "0.1.0"
+description = "A 230-day data structures and algorithms curriculum, in Python, from scratch."
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest==8.3.4",
+    "hypothesis==6.122.3",
+    "ruff==0.8.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "N"]
+
+[tool.pytest.ini_options]
+testpaths = ["days", "tests"]
+addopts = "-q"
