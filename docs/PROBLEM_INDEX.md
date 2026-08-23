@@ -43,6 +43,14 @@ Days 2–8 add their rows as they are written.
 | What is `n` here? — eight inputs | own | E | CPX-02 | choosing the size parameter for a grid, a graph, a string, and a single integer |
 | Trial division, priced in digits | own | M | CPX-02 | polynomial in the value, exponential in the size |
 | The cache cliff, measured | own | M | CPX-02 | identical operation counts in two orders, and the size at which the ratio moves |
+| Invariant for a loop you did not write | own | E | CPX-03 | stating the invariant of three unfamiliar loops from the code alone, before running them |
+| Where the invariant first breaks | own | E | CPX-03 | naming the exact iteration at which a proposed invariant stops being preserved |
+| Exit condition, negated | own | E | CPX-03 | deriving the postcondition from invariant and the negated guard, and noticing when it does not follow |
+| The strongest true invariant | own | M | CPX-03 | strengthening a preserved-but-useless claim until it implies the postcondition |
+| Find the variant — five loops | own | M | CPX-03 | naming the decreasing measure for each, and identifying the one loop that has none |
+| The loop that stops for the wrong reason | own | M | CPX-03 | termination resting on a value the invariant never mentions, and what breaks when the input changes |
+| Prove the maximum you wrote on Day 1 | own | E | CPX-03 | writing initialization, maintenance and exit for a loop you already trust |
+| Partial, total, and the bug report | own | M | CPX-03 | telling a wrong-answer failure from a never-returns failure by symptom alone, out loud |
 
 ### `ARR` — Arrays and Dynamic Arrays · Days 15–20
 
