@@ -51,6 +51,30 @@ Days 2–8 add their rows as they are written.
 | The loop that stops for the wrong reason | own | M | CPX-03 | termination resting on a value the invariant never mentions, and what breaks when the input changes |
 | Prove the maximum you wrote on Day 1 | own | E | CPX-03 | writing initialization, maintenance and exit for a loop you already trust |
 | Partial, total, and the bug report | own | M | CPX-03 | telling a wrong-answer failure from a never-returns failure by symptom alone, out loud |
+| Two machines, one ranking | own | E | CPX-04 | reading two timing tables that disagree on every second and agree on every shape |
+| Find the crossover | own | E | CPX-04 | computing the n at which 100n overtakes n squared, then measuring it |
+| The doubling table, read backwards | own | E | CPX-04 | naming the growth of six procedures from their ratio columns alone |
+| Rank eleven functions | own | E | CPX-04 | ordering by eventual dominance, and justifying two adjacent pairs with a ratio |
+| Same class, different job | own | M | CPX-04 | two linear procedures with a thirtyfold constant, and deciding which one ships |
+| Where the lower-order term is the whole cost | own | M | CPX-04 | the input range over which n squared plus a million n is not usefully quadratic |
+| Exhibit the witness | own | E | CPX-05 | producing c and n0 for four O-claims, and the smallest n0 that works for one of them |
+| O, Omega, Theta — twelve statements | own | E | CPX-05 | true or false, including the true-but-useless ones such as a linear loop being O(n cubed) |
+| The tight bound they actually wanted | own | E | CPX-05 | answering "what is the complexity" with Theta, and saying when only O is honest |
+| Disprove an O-claim | own | M | CPX-05 | showing no (c, n0) can exist, by a ratio argument or by contradiction |
+| Two variables, one bound | own | M | CPX-05 | stating a bound over n and m without collapsing them into a single n |
+| The worst case of the best bound | own | M | CPX-05 | separating which case from which bound, and what each of the four combinations claims |
+| The zoo, felt on your machine | own | E | CPX-06 | timing one procedure of each shape until the wall arrives, and recording where it arrived |
+| Which shape is this? — eight loops | own | E | CPX-06 | naming constant, logarithmic, linear, linearithmic, quadratic, cubic, exponential and factorial from code |
+| The largest n you can afford | own | E | CPX-06 | filling the shape-by-budget table for your own machine, and defending the ops-per-second figure |
+| Read the constraint, name the algorithm | own | M | CPX-06 | going from a stated input limit to the intended complexity, on ten problem headers |
+| The hidden quadratic | own | M | CPX-06 | finding the shape of three innocent-looking procedures whose inner step is not constant |
+| When brute force is the right answer | own | M | CPX-06 | the sizes at which exponential is affordable, and what that says about pruning |
+| From loop to recurrence — six functions | own | E | CPX-07 | writing T(n) and its base case from recursive code, including the one with two calls |
+| Unroll three levels and stop | own | E | CPX-07 | substituting three times, spotting the pattern, and writing the general term with its level index |
+| Where does the recursion bottom out? | own | E | CPX-07 | counting levels for subtract-one, halving, and the one that does neither |
+| Draw the recursion tree, sum the levels | own | M | CPX-07 | work per level times number of levels, and which of the three shapes the sum takes |
+| Subtract or divide? | own | M | CPX-07 | two recurrences one character apart, and the gap between their solutions |
+| Prove the guess by substitution | own | M | CPX-07 | turning an unrolled conjecture into an induction, and finding the guess that fails only in the constant |
 
 ### `ARR` — Arrays and Dynamic Arrays · Days 15–20
 
