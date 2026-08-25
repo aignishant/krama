@@ -26,7 +26,7 @@ really testing. Solutions live in the lesson file, not here.*
 
 ## Say these out loud
 
-*Three questions from today. Answer each in under two minutes, standing up, no notes.*
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. What does dp[i] represent in your solution?
 2. Design pastebin. What happens when a paste goes viral?

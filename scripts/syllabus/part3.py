@@ -1,5 +1,6 @@
 """Days 91-135. See scripts/curriculum.py for the row shape."""
 
+# fmt: off
 DAYS = [
  (91, "subsets",
   "Subsets: the include-or-exclude tree",
@@ -361,3 +362,4 @@ DAYS = [
   "You can explain an inverted index and why LIKE does not scale.",
   "How does full-text search work? Why not just use LIKE?"),
 ]
+# fmt: on

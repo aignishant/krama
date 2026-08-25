@@ -1,7 +1,7 @@
 """Check written lessons against the format contract in docs/00_HOW_A_DAY_WORKS.md.
 
-    python scripts/check_day.py         # every day that has been written
-    python scripts/check_day.py 37      # just day 37
+python scripts/check_day.py         # every day that has been written
+python scripts/check_day.py 37      # just day 37
 """
 
 from __future__ import annotations
@@ -18,9 +18,27 @@ DAYS_DIR = ROOT / "days"
 
 # Section 2 is a story. These are the words that mean it stopped being one.
 JARGON = [
-    "algorithm", "complexity", "O(n", "array", "pointer", "hash", "node", "recursion",
-    "server", "database", "cache", "latency", "API", "protocol", "query", "index",
-    "thread", "throughput", "bandwidth", "replica", "shard",
+    "algorithm",
+    "complexity",
+    "O(n",
+    "array",
+    "pointer",
+    "hash",
+    "node",
+    "recursion",
+    "server",
+    "database",
+    "cache",
+    "latency",
+    "API",
+    "protocol",
+    "query",
+    "index",
+    "thread",
+    "throughput",
+    "bandwidth",
+    "replica",
+    "shard",
 ]
 
 
@@ -33,7 +51,7 @@ def body_of(text: str, number: int) -> str:
     m = re.search(rf"^## {number}\.\s*.+$", text, re.M)
     if not m:
         return ""
-    rest = text[m.end():]
+    rest = text[m.end() :]
     nxt = re.search(r"^## ", rest, re.M)
     return rest[: nxt.start()] if nxt else rest
 

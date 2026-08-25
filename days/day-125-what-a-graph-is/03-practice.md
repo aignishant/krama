@@ -26,7 +26,7 @@ really testing. Solutions live in the lesson file, not here.*
 
 ## Say these out loud
 
-*Three questions from today. Answer each in under two minutes, standing up, no notes.*
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Is this a graph problem? What are the nodes and edges?
 2. Everything retried at once and the service died. What went wrong?

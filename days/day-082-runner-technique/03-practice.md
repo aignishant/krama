@@ -26,7 +26,7 @@ really testing. Solutions live in the lesson file, not here.*
 
 ## Say these out loud
 
-*Three questions from today. Answer each in under two minutes, standing up, no notes.*
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Remove the Nth node from the end in one pass.
 2. Design a library system. Who owns the rule about late fees?

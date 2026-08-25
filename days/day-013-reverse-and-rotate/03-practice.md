@@ -26,7 +26,7 @@ really testing. Solutions live in the lesson file, not here.*
 
 ## Say these out loud
 
-*Three questions from today. Answer each in under two minutes, standing up, no notes.*
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Rotate the array to the right by k, in O(1) extra space.
 2. What problem does Docker actually solve?

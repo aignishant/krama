@@ -26,7 +26,7 @@ really testing. Solutions live in the lesson file, not here.*
 
 ## Say these out loud
 
-*Three questions from today. Answer each in under two minutes, standing up, no notes.*
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Serialise this tree, then rebuild it from the string.
 2. Which component here takes the whole system down if it fails?

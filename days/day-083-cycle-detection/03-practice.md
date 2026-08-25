@@ -26,7 +26,7 @@ really testing. Solutions live in the lesson file, not here.*
 
 ## Say these out loud
 
-*Three questions from today. Answer each in under two minutes, standing up, no notes.*
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Detect a cycle in a linked list. Now find the node where it begins.
 2. Design tic-tac-toe. Now make it work for an N by N board.

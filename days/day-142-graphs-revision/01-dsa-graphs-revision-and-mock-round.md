@@ -44,7 +44,7 @@ status: empty
 
 ## 7. The traps
 
-*The wrong versions that look right, the input that kills each one, and the real error text.*
+*The wrong versions that look right, the input that kills each, and the real error text.*
 
 ## 8. In the interview
 

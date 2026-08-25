@@ -1,5 +1,6 @@
 """Days 1-45. See scripts/curriculum.py for the row shape."""
 
+# fmt: off
 DAYS = [
  (1, "how-your-code-actually-runs",
   "How your code actually runs, and where the time goes",
@@ -361,3 +362,4 @@ DAYS = [
   "You can say why public fields are a design bug, with a concrete failure.",
   "Why make a field private if you are going to add a getter anyway?"),
 ]
+# fmt: on

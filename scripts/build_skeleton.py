@@ -23,26 +23,62 @@ DOCS_DIR = ROOT / "docs"
 # The nine sections every lesson carries. DSA and system design share the frame
 # so you only ever learn one reading rhythm; sections 5, 6 and 7 differ.
 DSA_SECTIONS = [
-    ("What this is, and why they ask it", "The idea in three sentences, and the reason it appears in interviews."),
+    (
+        "What this is, and why they ask it",
+        "The idea in three sentences, and the reason it appears in interviews.",
+    ),
     ("The story", "A scene from ordinary life where this idea already exists. No code, no jargon."),
-    ("The idea in plain English", "The story translated into the technical idea, one step at a time."),
-    ("The picture", "The diagram. Arrays with indices above and values below; trees and graphs in Mermaid."),
-    ("The code, built step by step", "Small pieces, each explained, then the complete working solution."),
+    (
+        "The idea in plain English",
+        "The story translated into the technical idea, one step at a time.",
+    ),
+    (
+        "The picture",
+        "The diagram. Arrays with indices above and values below; trees and graphs in Mermaid.",
+    ),
+    (
+        "The code, built step by step",
+        "Small pieces, each explained, then the complete working solution.",
+    ),
     ("What it costs", "Time and space, counted by hand from the loops. No hand-waving."),
-    ("The traps", "The wrong versions that look right, the input that kills each one, and the real error text."),
-    ("In the interview", "How it is asked, what to say out loud, the follow-ups, and a model answer."),
+    (
+        "The traps",
+        "The wrong versions that look right, the input that kills each, and the real error text.",
+    ),
+    (
+        "In the interview",
+        "How it is asked, what to say out loud, the follow-ups, and a model answer.",
+    ),
     ("Recall card", "Five lines. If you remember nothing else from today, remember these."),
 ]
 
 SD_SECTIONS = [
-    ("What this is, and why they ask it", "The idea in three sentences, and the reason it appears in interviews."),
+    (
+        "What this is, and why they ask it",
+        "The idea in three sentences, and the reason it appears in interviews.",
+    ),
     ("The story", "A scene from ordinary life where this idea already exists. No code, no jargon."),
-    ("The idea in plain English", "The story translated into the technical idea, one step at a time."),
-    ("The picture", "The architecture diagram, in Mermaid. Every box labelled, every arrow directed."),
+    (
+        "The idea in plain English",
+        "The story translated into the technical idea, one step at a time.",
+    ),
+    (
+        "The picture",
+        "The architecture diagram, in Mermaid. Every box labelled, every arrow directed.",
+    ),
     ("How it actually works", "The mechanics, and the real products that do it this way."),
-    ("The numbers", "The arithmetic: users, QPS, bytes per record, storage per year. Show the multiplication."),
-    ("The trade-offs", "What you give up by choosing this, and when you would choose something else."),
-    ("In the interview", "How it is asked, what to say out loud, the follow-ups, and a model answer."),
+    (
+        "The numbers",
+        "The arithmetic: users, QPS, bytes per record, storage per year. Show the multiplication.",
+    ),
+    (
+        "The trade-offs",
+        "What you give up by choosing this, and when you would choose something else.",
+    ),
+    (
+        "In the interview",
+        "How it is asked, what to say out loud, the follow-ups, and a model answer.",
+    ),
     ("Recall card", "Five lines. If you remember nothing else from today, remember these."),
 ]
 
@@ -53,7 +89,23 @@ def slugify(text: str) -> str:
     return re.sub(r"-+", "-", text).strip("-")
 
 
-TRAILING_STOP = {"the", "a", "an", "and", "or", "of", "in", "to", "for", "is", "it", "at", "on", "its", "with"}
+TRAILING_STOP = {
+    "the",
+    "a",
+    "an",
+    "and",
+    "or",
+    "of",
+    "in",
+    "to",
+    "for",
+    "is",
+    "it",
+    "at",
+    "on",
+    "its",
+    "with",
+}
 
 
 def short_slug(title: str, words: int = 5) -> str:
@@ -146,7 +198,7 @@ def practice_file(day: Day) -> str:
             "",
             "## Say these out loud",
             "",
-            "*Three questions from today. Answer each in under two minutes, standing up, no notes.*",
+            "*Three questions from today. Answer each in two minutes, standing up, no notes.*",
             "",
             f"1. {day.dsa.ask}",
             f"2. {day.sd.ask}",
@@ -263,7 +315,9 @@ def curriculum_index(days: list[Day]) -> str:
         ]
         for n in range(lo, hi + 1):
             d = by_n[n]
-            lines.append(f"| [{n:03d}](../days/{d.folder}/README.md) | {d.dsa.title} | {d.sd.title} |")
+            lines.append(
+                f"| [{n:03d}](../days/{d.folder}/README.md) | {d.dsa.title} | {d.sd.title} |"
+            )
     lines.append("")
     return "\n".join(lines)
 
@@ -274,15 +328,20 @@ def main() -> int:
     args = ap.parse_args()
 
     days = load()
-    written = skipped = 0
+    written = skipped = generated = 0
 
     for i, day in enumerate(days):
         folder = DAYS_DIR / day.folder
         prev = days[i - 1] if i > 0 else None
         nxt = days[i + 1] if i + 1 < len(days) else None
 
+        # The hub is derived entirely from the syllabus, so it is always regenerated —
+        # like days/README.md and the index. Only the lessons hold hand-written prose.
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / "README.md").write_text(hub_file(day, prev, nxt), encoding="utf-8", newline="\n")
+        generated += 1
+
         targets = [
-            (folder / "README.md", hub_file(day, prev, nxt)),
             (folder / f"01-dsa-{short_slug(day.dsa.title)}.md", lesson_file(day, day.dsa)),
             (folder / f"02-system-design-{short_slug(day.sd.title)}.md", lesson_file(day, day.sd)),
             (folder / "03-practice.md", practice_file(day)),
@@ -296,10 +355,12 @@ def main() -> int:
     DAYS_DIR.mkdir(parents=True, exist_ok=True)
     (DAYS_DIR / "README.md").write_text(days_readme(days), encoding="utf-8", newline="\n")
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
-    (DOCS_DIR / "CURRICULUM_INDEX.md").write_text(curriculum_index(days), encoding="utf-8", newline="\n")
+    (DOCS_DIR / "CURRICULUM_INDEX.md").write_text(
+        curriculum_index(days), encoding="utf-8", newline="\n"
+    )
 
-    print(f"{len(days)} days · {written} files written · {skipped} left alone")
-    print(f"index: docs/CURRICULUM_INDEX.md")
+    print(f"{len(days)} days · {generated} hubs · {written} written · {skipped} left alone")
+    print("index: docs/CURRICULUM_INDEX.md")
     return 0
 
 

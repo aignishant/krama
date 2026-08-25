@@ -1,5 +1,6 @@
 """Days 46-90. See scripts/curriculum.py for the row shape."""
 
+# fmt: off
 DAYS = [
  (46, "binary-search-on-the-answer",
   "Binary search on the answer",
@@ -361,3 +362,4 @@ DAYS = [
   "You can design a cache with a pluggable eviction policy and a TTL.",
   "Design an in-memory cache. Now make the eviction policy swappable."),
 ]
+# fmt: on

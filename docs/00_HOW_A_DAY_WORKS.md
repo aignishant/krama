@@ -161,7 +161,8 @@ re-read the night before the interview.
 - **No cheerleading.** No "Great!", no "Now for the fun part!", no emoji in the body.
 - **Admit difficulty.** "This is the step people get wrong, and here is why it looks
   right" is worth more than confidence.
-- **No time estimates.** No "≈45 minutes", no "quick". A day is a unit of subject.
+- **No study-time estimates.** No "≈45 minutes to read", no "quick". A day is a unit of
+  subject. Timing a drill is different and is allowed — that is the interview clock.
 - **British/Indian-neutral English**, consistent within a file.
 
 ## When a lesson gets long

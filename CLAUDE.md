@@ -43,8 +43,8 @@ Breaking one of these makes the output wrong, not merely weak.
 | 9 | **§7 pastes real error text.** Run it if you can. Reproduce the exact message if you cannot. `IndexError: list index out of range`, never "you get an index error". |
 | 10 | **No `lab/` folder. Ever.** No `implement.py`, no `reference.py`, no pytest harness, no benchmark script. That structure was removed deliberately. Practice is named problems in `03-practice.md`, solved on LeetCode. |
 | 11 | **Problems are named, never reproduced.** Title, source, and one line on what it is really testing. Do not paste problem statements. |
-| 12 | **No time estimates.** No "≈45 minutes", no "quick", no pace language anywhere. |
-| 13 | **Never rename a day folder by hand.** Edit `scripts/curriculum.py` and re-run `python scripts/build_skeleton.py`. `docs/CURRICULUM_INDEX.md` and `days/README.md` are generated — never hand-edit them. |
+| 12 | **No study-time estimates.** No "≈45 minutes to read", no "quick", no pace language. A day is a unit of subject, not of hours. Timing a *drill* is different and is allowed — "answer this in two minutes", "minutes 0-5: requirements" — because that is the interview clock, not a reading estimate. |
+| 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Three things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, and every day's own `README.md` hub. Only the two lesson files and `03-practice.md` hold hand-written prose. |
 | 14 | **Cut anything that is not interview material.** Formal proofs, potential functions, decision-tree lower bounds, CPython internals, the RAM model as a formal object. If it will not be asked and does not make an asked thing clearer, it does not go in. |
 
 ---

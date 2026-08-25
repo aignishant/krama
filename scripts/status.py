@@ -1,6 +1,6 @@
 """Progress, computed from disk. Never a stored number.
 
-    python scripts/status.py
+python scripts/status.py
 """
 
 from __future__ import annotations
@@ -58,7 +58,9 @@ def main() -> None:
         for name, lo, hi in phases:
             span = hi - lo + 1
             got = len([n for n in range(lo, hi + 1) if n in done])
-            mark = f"{GREEN}done{OFF}" if got == span else (f"{got}/{span}" if got else f"{DIM}-{OFF}")
+            mark = (
+                f"{GREEN}done{OFF}" if got == span else (f"{got}/{span}" if got else f"{DIM}-{OFF}")
+            )
             print(f"    {lo:>3}-{hi:<3}  {name:<48} {mark}")
         print()
 

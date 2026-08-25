@@ -1,5 +1,6 @@
 """Days 136-180. See scripts/curriculum.py for the row shape."""
 
+# fmt: off
 DAYS = [
  (136, "dijkstra",
   "Dijkstra's algorithm",
@@ -361,3 +362,4 @@ DAYS = [
   "You have a one-page checklist for both design rounds and the behavioural round.",
   "Do you have any questions for us?"),
 ]
+# fmt: on

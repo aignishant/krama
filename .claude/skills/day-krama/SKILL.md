@@ -79,10 +79,14 @@ findable (LeetCode number, or the standard name).
 
 Then three questions to answer out loud. Two are already in the file; write the third.
 
-### Step 6 · Fill in the hub
+### Step 6 · Leave the hub alone
 
-The hub is generated and mostly correct already. Update only the "Read in this order"
-filenames if you renamed a lesson file, and remove nothing.
+`README.md` is generated from the syllabus on every build. Do not hand-edit it — your
+changes will be overwritten. If it is wrong, the syllabus is wrong: fix
+`scripts/curriculum.py` and run `./k build`.
+
+Never rename a lesson file either. The filename is derived from the topic, and the hub
+links to the derived name.
 
 ### Step 7 · Check
 
@@ -112,5 +116,5 @@ person, rewrite it.
 ## Tone
 
 Second person, present tense. Short sentences, one idea each. Concrete numbers before
-variables. No cheerleading, no emoji in body text, no time estimates. Admit the hard step
+variables. No cheerleading, no emoji in body text, no study-time estimates. Admit the hard step
 instead of glossing it: "this is the part people get wrong, and here is why it looks right".
