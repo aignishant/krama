@@ -1,0 +1,553 @@
+# Krama — Curriculum Index
+
+Every day, what it owns, and where the gates are. **This file is the contract.**
+`scripts/depth_check.py` reads it to know which IDs a day must cover;
+`scripts/tracker.py` reads it to know which days exist on paper but not yet on disk.
+
+Legend: **G** = gate day (no new IDs; interrogation + build + retention set + `NOTES.md`).
+
+---
+
+## Phase 0 — The Foundry · `FND`
+
+| Day | Title | IDs |
+|---:|---|---|
+| 0 | The Foundry — the tools, the repo, and how to read a Krama document | FND-01 · FND-02 · FND-03 · FND-04 |
+
+---
+
+## Phase 1 — Computation and Cost · `CPX` · Days 1–8
+
+| Day | Title | IDs |
+|---:|---|---|
+| 1 | What computation costs — the machine we pretend to have | CPX-01 · CPX-02 |
+| 2 | Correctness: loop invariants and termination | CPX-03 |
+| 3 | Growth: why we count shapes, not seconds | CPX-04 · CPX-05 |
+| 4 | The complexity zoo, felt: constant to factorial | CPX-06 |
+| 5 | Recurrences I: unrolling and the recursion tree | CPX-07 |
+| 6 | Recurrences II: the Master Theorem and its three cases | CPX-08 |
+| 7 | Amortized analysis: the accounting and potential methods | CPX-09 · CPX-10 |
+| 8 | **G** — Space, auxiliary vs total, and five unseen derivations | CPX-11 · CPX-12 |
+
+## Phase 2 — Python as an Algorithms Instrument · `PYX` · Days 9–14
+
+| Day | Title | IDs |
+|---:|---|---|
+| 9 | The CPython object model: names, objects, references | PYX-01 · PYX-02 |
+| 10 | Mutability, aliasing, copying, and the real cost of `[:]` | PYX-03 |
+| 11 | Iterators and generators: laziness as a cost decision | PYX-04 |
+| 12 | Recursion in CPython: frames, limits, and the tail call that isn't | PYX-05 |
+| 13 | Measuring honestly: `perf_counter`, `timeit`, and what benchmarks lie about | PYX-06 · PYX-07 |
+| 14 | **G** — Your benchmark harness, Hypothesis, and the oracle pattern | PYX-08 |
+
+## Phase 3 — Arrays and Dynamic Arrays · `ARR` · Days 15–20
+
+| Day | Title | IDs |
+|---:|---|---|
+| 15 | The contiguous block: why indexing is O(1) and why cache lines matter | ARR-01 · ARR-02 |
+| 16 | Dynamic arrays: growth factors and the amortization of `append` | ARR-03 · ARR-04 |
+| 17 | CPython's `list`, actually: over-allocation and the resize table | ARR-05 |
+| 18 | Insertion, deletion, and the cost of the middle | ARR-06 |
+| 19 | 2D and n-D: row-major order, strides, flattening | ARR-07 · ARR-08 |
+| 20 | **G** — `DynamicArray` from scratch, benchmarked against `list` | ARR-09 |
+
+## Phase 4 — Strings and Text · `STR` · Days 21–26
+
+| Day | Title | IDs |
+|---:|---|---|
+| 21 | What a string is: code points, bytes, encodings | STR-01 · STR-02 |
+| 22 | Immutability and the O(n²) concatenation trap | STR-03 |
+| 23 | Slicing, searching, and the naive matcher | STR-04 |
+| 24 | Building strings: `join`, `StringIO`, `bytearray` | STR-05 |
+| 25 | Frequency vectors: the anagram class of problems | STR-06 |
+| 26 | **G** — Palindromes, reversals, and the immutability cost report | STR-07 |
+
+## Phase 5 — Two Pointers and Sliding Window · `TWP` · Days 27–32
+
+| Day | Title | IDs |
+|---:|---|---|
+| 27 | Two pointers: the converging invariant | TWP-01 |
+| 28 | Fast and slow pointers | TWP-02 |
+| 29 | Fixed-size windows | TWP-03 |
+| 30 | Variable windows: the expand/contract invariant | TWP-04 |
+| 31 | Windows with a map: at-most-K, and `exactly(K) = atMost(K) − atMost(K−1)` | TWP-05 · TWP-06 |
+| 32 | **G** — The window template, defended line by line | TWP-07 |
+
+## Phase 6 — Prefix Sums and Difference Arrays · `PFX` · Days 33–36
+
+| Day | Title | IDs |
+|---:|---|---|
+| 33 | Prefix sums and the O(1) range query | PFX-01 |
+| 34 | Difference arrays: range update, point query | PFX-02 |
+| 35 | 2D prefix sums and inclusion–exclusion | PFX-03 |
+| 36 | **G** — Prefix + hash map: the subarray-sum family | PFX-04 |
+
+## Phase 7 — Binary Search and the Monotone Predicate · `BSR` · Days 37–43
+
+| Day | Title | IDs |
+|---:|---|---|
+| 37 | The invariant of a search | BSR-01 · BSR-02 |
+| 38 | Boundaries: `lower_bound`, `upper_bound`, and off-by-one discipline | BSR-03 |
+| 39 | The monotone predicate: searching on the answer | BSR-04 |
+| 40 | Binary search on floats, and the epsilon question | BSR-05 |
+| 41 | Rotated arrays, peak finding, and structure without sortedness | BSR-06 |
+| 42 | Ternary search and unimodal functions | BSR-07 |
+| 43 | **G** — Three shapes of search-on-answer, cold | BSR-08 |
+
+## Phase 8 — Sorting · `SRT` · Days 44–51
+
+| Day | Title | IDs |
+|---:|---|---|
+| 44 | Quadratic sorts, and what they are genuinely good at | SRT-01 |
+| 45 | Merge sort: the divide-and-conquer archetype, and stability | SRT-02 · SRT-03 |
+| 46 | Quicksort: partition schemes and the adversarial input | SRT-04 · SRT-05 |
+| 47 | Quickselect and expected linear time | SRT-06 |
+| 48 | In-place sorting and the heapsort preview | SRT-07 |
+| 49 | Non-comparison sorts: counting, radix, bucket | SRT-08 · SRT-09 |
+| 50 | The Ω(n log n) lower bound by decision tree | SRT-10 |
+| 51 | **G** — Timsort: runs, galloping, and why `list.sort()` beats you | SRT-11 |
+
+## Phase 9 — Linked Lists · `LNK` · Days 52–58
+
+| Day | Title | IDs |
+|---:|---|---|
+| 52 | Nodes and references: the pointer without pointers | LNK-01 |
+| 53 | Singly linked lists, and the dummy-head discipline | LNK-02 |
+| 54 | Reversal: iterative, recursive, and in k-groups | LNK-03 |
+| 55 | Floyd's cycle detection, proved | LNK-04 |
+| 56 | Doubly linked lists and the O(1) splice | LNK-05 |
+| 57 | Circular lists, and list-vs-array in reality | LNK-06 |
+| 58 | **G** — Pointer surgery: merge, partition, sort in place | LNK-07 |
+
+## Phase 10 — Stacks, Queues, Monotonic Structures · `STQ` · Days 59–65
+
+| Day | Title | IDs |
+|---:|---|---|
+| 59 | The stack: LIFO, call frames, expression evaluation | STQ-01 |
+| 60 | Queues: the circular buffer and the two-stack queue | STQ-02 · STQ-03 |
+| 61 | Deques, and what `collections.deque` actually is | STQ-04 |
+| 62 | Monotonic stack: next-greater-element, derived | STQ-05 |
+| 63 | Monotonic stack II: histograms and the span family | STQ-06 |
+| 64 | Monotonic deque: sliding-window maximum | STQ-07 |
+| 65 | **G** — Min-stack, and amortized reasoning in interview form | STQ-08 |
+
+## Phase 11 — Hashing · `HSH` · Days 66–72
+
+| Day | Title | IDs |
+|---:|---|---|
+| 66 | What a hash function must do | HSH-01 · HSH-02 |
+| 67 | Collisions I: separate chaining | HSH-03 |
+| 68 | Collisions II: open addressing, probing, tombstones | HSH-04 |
+| 69 | Load factor, resizing, and amortized O(1) | HSH-05 |
+| 70 | CPython's `dict`: compact ordered dicts and hash randomisation | HSH-06 |
+| 71 | Hashable keys: the `__hash__`/`__eq__` contract | HSH-07 |
+| 72 | **G** — Your open-addressing `HashMap`, benchmarked | HSH-08 |
+
+## Phase 12 — Heaps and Priority Queues · `HEP` · Days 73–78
+
+| Day | Title | IDs |
+|---:|---|---|
+| 73 | The heap property and the implicit tree | HEP-01 |
+| 74 | Sift-up, sift-down, push, pop | HEP-02 |
+| 75 | Heapify in O(n), derived | HEP-03 |
+| 76 | d-ary heaps, and the decrease-key problem | HEP-04 · HEP-05 |
+| 77 | Top-K, streaming medians, and the two-heap pattern | HEP-06 |
+| 78 | **G** — `heapq` vs yours; merging k sorted streams | HEP-07 |
+
+## Phase 13 — Recursion and Backtracking · `REC` · Days 79–86
+
+| Day | Title | IDs |
+|---:|---|---|
+| 79 | Recursion as a contract: trust the smaller call | REC-01 |
+| 80 | The recursion tree, and where the cost actually lives | REC-02 |
+| 81 | Memoization: turning a tree into a DAG | REC-03 |
+| 82 | Subsets and the binary-choice tree | REC-04 |
+| 83 | Permutations: swapping vs the used-array | REC-05 |
+| 84 | Combinations, and duplicate-skipping discipline | REC-06 |
+| 85 | Backtracking with constraints: N-Queens, Sudoku | REC-07 · REC-08 |
+| 86 | **G** — Pruning that provably preserves the answer set | REC-09 |
+
+## Phase 14 — Divide and Conquer · `DNC` · Days 87–91
+
+| Day | Title | IDs |
+|---:|---|---|
+| 87 | The D&C skeleton, and when splitting actually pays | DNC-01 |
+| 88 | Counting inversions inside merge sort | DNC-02 |
+| 89 | Karatsuba: buying speed with fewer subproblems | DNC-03 |
+| 90 | Strassen, and the limits of the trick | DNC-04 |
+| 91 | **G** — Write your own recurrences and solve them | DNC-05 |
+
+## Phase 15 — Greedy and Exchange Arguments · `GRD` · Days 92–97
+
+| Day | Title | IDs |
+|---:|---|---|
+| 92 | What greedy is, and the two things you must prove | GRD-01 |
+| 93 | The exchange argument | GRD-02 |
+| 94 | Interval scheduling: the sorting key decides everything | GRD-03 |
+| 95 | Huffman coding: greedy on a heap | GRD-04 |
+| 96 | Where greedy fails, and the counterexample discipline | GRD-05 |
+| 97 | **G** — Matroids: why greedy works when it works | GRD-06 |
+
+## Phase 16 — Trees · `TRE` · Days 98–107
+
+| Day | Title | IDs |
+|---:|---|---|
+| 98 | Trees, terminology, and the recursive definition | TRE-01 |
+| 99 | Binary trees: representation and the three DFS orders | TRE-02 · TRE-03 |
+| 100 | Iterative traversals and the explicit stack | TRE-04 |
+| 101 | BFS, level order, and width problems | TRE-05 |
+| 102 | BST: the ordering invariant — search, insert, delete | TRE-06 · TRE-07 |
+| 103 | Why BSTs degrade, and what a rotation is | TRE-08 |
+| 104 | AVL trees: heights, balance factors, four rotations | TRE-09 |
+| 105 | Red-black trees, and the 2-3 tree story behind them | TRE-10 |
+| 106 | Treaps, randomised balance, and LCA by binary lifting | TRE-11 · TRE-12 |
+| 107 | **G** — A self-balancing BST from scratch, deletion included | — |
+
+## Phase 17 — Tries and String Algorithms · `TRI` · Days 108–114
+
+| Day | Title | IDs |
+|---:|---|---|
+| 108 | The trie: prefix as path | TRI-01 |
+| 109 | Compressed tries and radix trees | TRI-02 |
+| 110 | Rabin–Karp and rolling hashes | TRI-03 |
+| 111 | KMP: deriving the failure function | TRI-04 |
+| 112 | The Z-algorithm, and Z vs KMP | TRI-05 |
+| 113 | Manacher, Aho–Corasick, and the suffix-structure map | TRI-06 · TRI-07 · TRI-08 |
+| 114 | **G** — Failure function cold; multi-pattern matcher built | — |
+
+## Phase 18 — Range Query Structures · `RNG` · Days 115–122
+
+| Day | Title | IDs |
+|---:|---|---|
+| 115 | The range-query problem and its tradeoff space | RNG-01 |
+| 116 | Sparse tables and idempotent operations | RNG-02 |
+| 117 | Fenwick trees: the low-bit trick, derived | RNG-03 |
+| 118 | Fenwick II: range update, range query, 2D | RNG-04 |
+| 119 | Segment trees: build, query, point update | RNG-05 |
+| 120 | Segment trees II: lazy propagation | RNG-06 |
+| 121 | Sqrt decomposition and Mo's algorithm | RNG-07 · RNG-08 |
+| 122 | **G** — Choose the structure; defend the choice | — |
+
+## Phase 19 — Disjoint Set Union · `DSU` · Days 123–126
+
+| Day | Title | IDs |
+|---:|---|---|
+| 123 | The connectivity problem and the forest idea | DSU-01 |
+| 124 | Union by size and by rank | DSU-02 |
+| 125 | Path compression, and the shape of the α(n) bound | DSU-03 |
+| 126 | **G** — DSU with rollback; offline query processing | DSU-04 |
+
+## Phase 20 — Graphs I: Modelling and Traversal · `GRA` · Days 127–135
+
+| Day | Title | IDs |
+|---:|---|---|
+| 127 | What a graph is, and how to see the world as one | GRA-01 |
+| 128 | Representations: adjacency list, matrix, implicit graphs | GRA-02 · GRA-03 |
+| 129 | BFS and the unweighted-shortest-path invariant | GRA-04 |
+| 130 | DFS, the recursion/stack duality, and edge classification | GRA-05 · GRA-06 |
+| 131 | Connected components, flood fill, and grid graphs | GRA-07 |
+| 132 | Cycle detection: undirected vs directed | GRA-08 |
+| 133 | Topological sort: Kahn and DFS finish times | GRA-09 |
+| 134 | Bipartite checking and 2-colouring | GRA-10 |
+| 135 | **G** — Model three word-problems as graphs | — |
+
+## Phase 21 — Graphs II: Shortest Paths · `GRB` · Days 136–142
+
+| Day | Title | IDs |
+|---:|---|---|
+| 136 | Weights change everything: why BFS breaks | GRB-01 |
+| 137 | Dijkstra: the greedy invariant, and why negatives destroy it | GRB-02 · GRB-03 |
+| 138 | Dijkstra in practice: heap, lazy deletion, real complexity | GRB-04 |
+| 139 | 0-1 BFS and the deque trick | GRB-05 |
+| 140 | Bellman–Ford and negative-cycle detection | GRB-06 |
+| 141 | Floyd–Warshall, transitive closure, and Johnson's | GRB-07 · GRB-08 |
+| 142 | **G** — A\*, admissible heuristics, and choosing the algorithm | — |
+
+## Phase 22 — Graphs III: MST, SCC, Connectivity · `GRC` · Days 143–150
+
+| Day | Title | IDs |
+|---:|---|---|
+| 143 | The cut property, proved | GRC-01 |
+| 144 | Kruskal, powered by DSU | GRC-02 |
+| 145 | Prim with a heap; Borůvka and parallel MST | GRC-03 · GRC-04 |
+| 146 | Kosaraju and the reverse graph | GRC-05 |
+| 147 | Tarjan's SCC and the low-link value | GRC-06 |
+| 148 | Bridges and articulation points | GRC-07 |
+| 149 | Euler paths, Hierholzer, and 2-SAT | GRC-08 · GRC-09 |
+| 150 | **G** — Tarjan from scratch, low-link explained aloud | — |
+
+## Phase 23 — Flows and Matching · `FLW` · Days 151–157
+
+| Day | Title | IDs |
+|---:|---|---|
+| 151 | The flow problem and the residual graph | FLW-01 · FLW-02 |
+| 152 | Ford–Fulkerson, and how it can fail to terminate | FLW-03 |
+| 153 | Edmonds–Karp and the O(VE²) bound | FLW-04 |
+| 154 | Dinic's algorithm: level graphs and blocking flows | FLW-05 |
+| 155 | Max-flow min-cut, proved | FLW-06 |
+| 156 | Bipartite matching, König's theorem, Hopcroft–Karp | FLW-07 · FLW-08 |
+| 157 | **G** — Min-cost max-flow; model a real problem as flow | FLW-09 |
+
+## Phase 24 — Dynamic Programming I: Foundations · `DPA` · Days 158–168
+
+| Day | Title | IDs |
+|---:|---|---|
+| 158 | What DP is: overlapping subproblems and optimal substructure | DPA-01 |
+| 159 | Memoization vs tabulation, and the state graph | DPA-02 |
+| 160 | Designing state — the hard part, made routine | DPA-03 |
+| 161 | 1D DP: the climbing / robbing / decoding family | DPA-04 |
+| 162 | 0/1 knapsack, and the pseudo-polynomial caveat | DPA-05 · DPA-06 |
+| 163 | Unbounded and bounded knapsack; the coin-change family | DPA-07 |
+| 164 | Subset-sum, partition, and boolean DP | DPA-08 |
+| 165 | LIS: O(n²), then O(n log n) with binary search | DPA-09 |
+| 166 | LCS, edit distance, and the grid-DP archetype | DPA-10 · DPA-11 |
+| 167 | Space optimisation: rolling rows, and the path you lose | DPA-12 |
+| 168 | **G** — Reconstructing the answer, not just its value | DPA-13 |
+
+## Phase 25 — Dynamic Programming II: Advanced · `DPB` · Days 169–180
+
+| Day | Title | IDs |
+|---:|---|---|
+| 169 | Grid DP with obstacles and multi-directional transitions | DPB-01 |
+| 170 | Interval DP: matrix chain, burst balloons | DPB-02 |
+| 171 | Tree DP, and the rerooting technique | DPB-03 · DPB-04 |
+| 172 | Bitmask DP: TSP and assignment | DPB-05 |
+| 173 | Digit DP | DPB-06 |
+| 174 | DP on DAGs and the longest path | DPB-07 |
+| 175 | Probability and expectation DP | DPB-08 |
+| 176 | Game DP: minimax and Sprague–Grundy preview | DPB-09 |
+| 177 | Optimisation I: the monotonic deque | DPB-10 |
+| 178 | Optimisation II: divide-and-conquer optimisation, Knuth | DPB-11 |
+| 179 | Optimisation III: convex hull trick and Li Chao | DPB-12 |
+| 180 | **G** — State design cold; two optimisations benchmarked | — |
+
+## Phase 26 — Mathematics for Algorithms · `MTH` · Days 181–190
+
+| Day | Title | IDs |
+|---:|---|---|
+| 181 | Modular arithmetic and the invariant of remainders | MTH-01 |
+| 182 | GCD, Euclid, extended Euclid, Bézout | MTH-02 · MTH-03 |
+| 183 | Modular inverse, Fermat, and division that isn't division | MTH-04 |
+| 184 | Sieves: Eratosthenes, linear, smallest-prime-factor | MTH-05 · MTH-06 |
+| 185 | Factorisation: trial division, Miller–Rabin, Pollard's rho | MTH-07 |
+| 186 | The Chinese Remainder Theorem | MTH-08 |
+| 187 | Combinatorics: nCr mod p, Pascal, Lucas, Catalan | MTH-09 · MTH-10 |
+| 188 | Fast exponentiation, and matrix exponentiation for recurrences | MTH-11 · MTH-12 |
+| 189 | FFT and NTT: multiplying polynomials fast | MTH-13 |
+| 190 | **G** — Nim, Grundy numbers, and impartial games | MTH-14 |
+
+## Phase 27 — Computational Geometry · `GEO` · Days 191–196
+
+| Day | Title | IDs |
+|---:|---|---|
+| 191 | Points, vectors, and the cross product as an oracle | GEO-01 · GEO-02 |
+| 192 | Orientation, segment intersection, degenerate cases | GEO-03 |
+| 193 | Polygon area and point-in-polygon | GEO-04 |
+| 194 | Convex hull: monotone chain and Graham scan | GEO-05 |
+| 195 | Line sweep: closest pair, interval union | GEO-06 · GEO-07 |
+| 196 | **G** — Rotating calipers; floating point vs exact arithmetic | GEO-08 |
+
+## Phase 28 — Randomised, Approximate, Streaming · `RND` · Days 197–203
+
+| Day | Title | IDs |
+|---:|---|---|
+| 197 | Randomness as an algorithmic tool | RND-01 |
+| 198 | Randomised quickselect and expected-time analysis | RND-02 |
+| 199 | Reservoir sampling, and shuffling correctly | RND-03 · RND-04 |
+| 200 | Skip lists | RND-05 |
+| 201 | Bloom filters and the false-positive equation | RND-06 |
+| 202 | Count-Min sketch and HyperLogLog | RND-07 · RND-08 |
+| 203 | **G** — LSH and approximate nearest neighbour | RND-09 |
+
+## Phase 29 — Intractability · `NPC` · Days 204–209
+
+| Day | Title | IDs |
+|---:|---|---|
+| 204 | Decision problems, P, and what "efficient" means | NPC-01 |
+| 205 | NP, verification, and the certificate idea | NPC-02 |
+| 206 | Reductions and NP-completeness | NPC-03 · NPC-04 |
+| 207 | The catalogue: SAT, clique, vertex cover, Hamiltonian, subset-sum | NPC-05 |
+| 208 | Approximation algorithms and ratio bounds | NPC-06 |
+| 209 | **G** — Heuristics, local search; perform one reduction | NPC-07 |
+
+## Phase 30 — Structures That Run Systems · `SYS` · Days 210–214
+
+| Day | Title | IDs |
+|---:|---|---|
+| 210 | LRU and LFU caches, from scratch | SYS-01 · SYS-02 |
+| 211 | B-trees, and why disk changes every answer | SYS-03 |
+| 212 | LSM trees, SSTables, write-optimised structures | SYS-04 |
+| 213 | Cache-aware and cache-oblivious thinking | SYS-05 |
+| 214 | **G** — Consistent hashing, rate limiters, and the design round | SYS-06 · SYS-07 |
+
+## Phase 31 — Interview and Contest Craft · `IVW` · Days 215–220
+
+| Day | Title | IDs |
+|---:|---|---|
+| 215 | Pattern recognition: statement to shape in ninety seconds | IVW-01 |
+| 216 | Narration: thinking aloud without going silent | IVW-02 |
+| 217 | Complexity negotiation and the "can we do better" moment | IVW-03 |
+| 218 | Debugging under pressure; the edge-case checklist | IVW-04 |
+| 219 | Contest strategy and time allocation | IVW-05 |
+| 220 | **G** — Recorded mock, self-graded against the rubric | — |
+
+## Phase 32 — Capstone: `pykrama` · `CAP` · Days 221–230
+
+| Day | Title | IDs |
+|---:|---|---|
+| 221 | Designing the API, and complexity as part of the contract | CAP-01 |
+| 222 | Porting the structures; the oracle test suite | CAP-02 |
+| 223 | The benchmark harness and `BENCHMARKS.md` | CAP-03 |
+| 224 | Instrumented traces | CAP-04 |
+| 225 | The visualiser | CAP-05 |
+| 226 | The judge: time and memory limits that actually bite | CAP-06 |
+| 227 | Packaging, docs, CI | CAP-07 |
+| 228 | *What I got wrong 230 times* — the write-up | CAP-08 |
+| 229 | Portfolio and README | CAP-09 |
+| 230 | **G** — Final defence: twenty questions, no notes | — |
+
+---
+
+# Track II — System Design · Days 231–308
+
+Track I made you able to build and defend a structure. Track II makes you able to place it inside
+a system that survives real traffic, real failure, and real people. The contract is identical:
+same ten-section depth contract, same gates, same `./k` loop. Day 210–214 (`SYS`) is the hinge —
+those five days are revisited by name in Phase 35.
+
+## Phase 33 — Distributed Foundations · `DST` · Days 231–238
+
+| Day | Title | IDs |
+|---:|---|---|
+| 231 | Why one machine stops being enough: the failure model | DST-01 |
+| 232 | Latency numbers, felt: cache to disk to another continent | DST-02 |
+| 233 | Partial failure, timeouts, and the two-generals problem | DST-03 · DST-04 |
+| 234 | Consistency models, from linearizable to eventual | DST-05 |
+| 235 | CAP as it is actually stated, and PACELC | DST-06 · DST-07 |
+| 236 | Idempotency, and at-least-once as a design stance | DST-08 |
+| 237 | Capacity estimation that survives scrutiny | DST-09 |
+| 238 | **G** — Estimate and defend a system's footprint, out loud | — |
+
+## Phase 34 — The Network · `NET` · Days 239–244
+
+| Day | Title | IDs |
+|---:|---|---|
+| 239 | DNS, anycast, and how a request finds a machine | NET-01 |
+| 240 | TCP: handshakes, congestion, head-of-line blocking | NET-02 |
+| 241 | TLS, and what a handshake costs you | NET-03 |
+| 242 | HTTP/1.1 → 2 → 3: keep-alive, multiplexing, QUIC | NET-04 · NET-05 |
+| 243 | REST, RPC, gRPC, and the cost of serialisation | NET-06 · NET-07 |
+| 244 | **G** — Trace one request end to end, aloud, no notes | — |
+
+## Phase 35 — Storage · `STO` · Days 245–256
+
+| Day | Title | IDs |
+|---:|---|---|
+| 245 | The storage engine: pages, the write-ahead log, durability | STO-01 |
+| 246 | B-trees as a database index — `SYS-03` revisited under load | STO-02 |
+| 247 | LSM trees revisited: write amplification and compaction | STO-03 |
+| 248 | Indexes: composite, covering, cardinality, and the planner | STO-04 · STO-05 |
+| 249 | Transactions: what ACID actually promises | STO-06 |
+| 250 | Isolation levels, and the anomaly each one still permits | STO-07 |
+| 251 | MVCC and snapshot isolation | STO-08 |
+| 252 | Replication: leader-follower, sync vs async, replication lag | STO-09 · STO-10 |
+| 253 | Partitioning: range vs hash, rebalancing, hotspots | STO-11 · STO-12 |
+| 254 | The NoSQL families, and when relational is the wrong shape | STO-13 |
+| 255 | Distributed transactions: 2PC, sagas, the outbox pattern | STO-14 · STO-15 |
+| 256 | **G** — Schema, index, and partition key, designed and defended | — |
+
+## Phase 36 — Caching · `CCH` · Days 257–261
+
+| Day | Title | IDs |
+|---:|---|---|
+| 257 | The cache as an algorithm: hit-ratio arithmetic | CCH-01 |
+| 258 | Placement: client, CDN, edge, application, database | CCH-02 |
+| 259 | Invalidation strategies and the staleness budget | CCH-03 |
+| 260 | Thundering herd, stampede, and negative caching | CCH-04 · CCH-05 |
+| 261 | **G** — Add caching to a design without breaking correctness | — |
+
+## Phase 37 — Messaging and Streaming · `MSG` · Days 262–268
+
+| Day | Title | IDs |
+|---:|---|---|
+| 262 | Why asynchrony changes the shape of a system | MSG-01 |
+| 263 | Queues vs logs: two different mental models | MSG-02 |
+| 264 | The partitioned log: offsets, consumer groups, ordering | MSG-03 · MSG-04 |
+| 265 | Delivery semantics: at-most, at-least, and "exactly" once | MSG-05 |
+| 266 | Backpressure, consumer lag, and dead letters | MSG-06 |
+| 267 | Stream processing: windows, watermarks, late data | MSG-07 · MSG-08 |
+| 268 | **G** — Turn a synchronous design asynchronous, and say what broke | — |
+
+## Phase 38 — Coordination and Consensus · `CNS` · Days 269–276
+
+| Day | Title | IDs |
+|---:|---|---|
+| 269 | Clocks: physical, logical, Lamport, vector | CNS-01 · CNS-02 |
+| 270 | Leader election and split brain | CNS-03 |
+| 271 | Consensus, stated precisely, and why it is hard | CNS-04 |
+| 272 | Raft I: leader election and log replication | CNS-05 |
+| 273 | Raft II: safety, membership change, snapshots | CNS-06 |
+| 274 | Paxos, and why Raft won the classroom | CNS-07 |
+| 275 | Distributed locks, leases, and fencing tokens | CNS-08 · CNS-09 |
+| 276 | **G** — Explain Raft on a whiteboard, no notes | — |
+
+## Phase 39 — Scale Patterns · `SCL` · Days 277–283
+
+| Day | Title | IDs |
+|---:|---|---|
+| 277 | Load balancing: L4 vs L7, algorithms, health checks | SCL-01 · SCL-02 |
+| 278 | Consistent hashing with virtual nodes — `SYS-06` at scale | SCL-03 |
+| 279 | Rate limiting: token bucket, sliding window, distributed counters | SCL-04 |
+| 280 | Hotspots, celebrity keys, and fan-out on read vs write | SCL-05 |
+| 281 | Idempotency keys, retries, exponential backoff, jitter | SCL-06 · SCL-07 |
+| 282 | Bulkheads, circuit breakers, graceful degradation | SCL-08 |
+| 283 | **G** — Take one design from 1k to 10M users, step by step | — |
+
+## Phase 40 — Reliability, Observability, Security · `OBS` · Days 284–288
+
+| Day | Title | IDs |
+|---:|---|---|
+| 284 | SLIs, SLOs, and error budgets | OBS-01 |
+| 285 | Metrics, logs, traces; tail latency and percentiles | OBS-02 · OBS-03 |
+| 286 | Failure injection, chaos, and the incident loop | OBS-04 |
+| 287 | AuthN, AuthZ, secrets, and writing a threat model | OBS-05 · OBS-06 |
+| 288 | **G** — Write the runbook for your own design | — |
+
+## Phase 41 — Design Drills · `DES` · Days 289–300
+
+| Day | Title | IDs |
+|---:|---|---|
+| 289 | The frame: requirements → API → data → scale → tradeoffs | DES-01 |
+| 290 | Design a URL shortener | DES-02 |
+| 291 | Design a rate limiter service | DES-03 |
+| 292 | Design a news feed | DES-04 |
+| 293 | Design a chat system | DES-05 |
+| 294 | Design a rideshare matching system | DES-06 |
+| 295 | Design an object store | DES-07 |
+| 296 | Design a payments ledger | DES-08 |
+| 297 | Design a video streaming platform | DES-09 |
+| 298 | Design search and typeahead | DES-10 |
+| 299 | Design a notification and webhook system | DES-11 |
+| 300 | **G** — Two drills back to back, timed, narrated | — |
+
+## Phase 42 — Capstone II: build one · `SDC` · Days 301–308
+
+| Day | Title | IDs |
+|---:|---|---|
+| 301 | Choose the system; write the requirements document | SDC-01 |
+| 302 | The design document: API, data model, partition key | SDC-02 |
+| 303 | Build the vertical slice | SDC-03 |
+| 304 | Write the load generator; run the load test | SDC-04 |
+| 305 | Break it: failure injection against your own slice | SDC-05 |
+| 306 | The ADR set and the tradeoff table | SDC-06 |
+| 307 | The write-up and the diagram set | SDC-07 |
+| 308 | **G** — Final defence: design and DSA, mixed, no notes | — |
+
+---
+
+**Totals:** 309 day-slots (Day 0 + Days 1–308) · 43 phases · 357 concept IDs · 43 gates.
+**Track I** (DSA): Days 0–230, 33 phases, 272 IDs. **Track II** (System Design): Days 231–308,
+10 phases, 85 IDs.
+
+Problems for every day are drawn from [`PROBLEM_INDEX.md`](PROBLEM_INDEX.md); design drills are
+drawn from Phase 41 and the prompt bank at the end of that file.

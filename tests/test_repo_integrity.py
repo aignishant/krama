@@ -1,86 +1,63 @@
-"""The repo checks itself: the plan and the index must not drift apart."""
+"""The repo checks itself: the syllabus, the folders and the index must not drift apart."""
 
-import re
+from __future__ import annotations
+
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INDEX = ROOT / "docs" / "CURRICULUM_INDEX.md"
-PLAN = ROOT / "docs" / "00_MASTER_PLAN_DSA.md"
-ID_RE = re.compile(r"\b[A-Z]{3}-\d{2}\b")
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from build_skeleton import short_slug  # noqa: E402
+from curriculum import DSA_PHASES, SD_PHASES, load  # noqa: E402
+
+DAYS = load()
+DAYS_DIR = ROOT / "days"
 
 
-def index_rows() -> list[tuple[int, str]]:
-    rows = []
-    for line in INDEX.read_text(encoding="utf-8").splitlines():
-        if not line.startswith("|"):
-            continue
-        cells = [c.strip() for c in line.strip("|").split("|")]
-        if len(cells) >= 3 and cells[0].isdigit():
-            rows.append((int(cells[0]), cells[2]))
-    return rows
+def test_exactly_one_hundred_and_eighty_days() -> None:
+    assert [d.n for d in DAYS] == list(range(1, 181))
 
 
-def test_every_day_slot_present_exactly_once() -> None:
-    days = [d for d, _ in index_rows()]
-    assert days == sorted(days), "index days are out of order"
-    assert len(days) == len(set(days)), "a day appears twice in the index"
-    assert days == list(range(0, 309)), "index must cover day 0 through day 308"
+def test_every_day_has_both_tracks() -> None:
+    for day in DAYS:
+        assert day.dsa.title.strip(), f"day {day.n} has no DSA topic"
+        assert day.sd.title.strip(), f"day {day.n} has no system design topic"
 
 
-def test_no_concept_id_is_owned_twice() -> None:
-    owner: dict[str, int] = {}
-    for day, ids in index_rows():
-        for cid in ID_RE.findall(ids):
-            assert cid not in owner, f"{cid} owned by both day {owner[cid]} and day {day}"
-            owner[cid] = day
+def test_phases_tile_the_whole_course_without_gaps() -> None:
+    for phases in (DSA_PHASES, SD_PHASES):
+        covered: list[int] = []
+        for _, lo, hi in phases:
+            covered += list(range(lo, hi + 1))
+        assert covered == list(range(1, 181)), "phases overlap or leave a gap"
 
 
-def test_plan_id_count_matches_index() -> None:
-    total = sum(len(ID_RE.findall(ids)) for _, ids in index_rows())
-    claimed = re.search(r"\*\*(\d+) concept IDs\*\*", PLAN.read_text(encoding="utf-8"))
-    assert claimed, "plan does not state a concept ID count"
-    assert int(claimed.group(1)) == total, (
-        f"plan claims {claimed.group(1)} IDs, index has {total} — amend the plan"
-    )
+def test_day_slugs_are_unique_and_readable() -> None:
+    slugs = [d.slug for d in DAYS]
+    assert len(slugs) == len(set(slugs)), "two days share a slug"
+    for slug in slugs:
+        assert slug == slug.lower()
+        assert " " not in slug and "_" not in slug
 
 
-def test_no_time_estimates_in_days() -> None:
-    bad = re.compile(r"\b\d+\s*(?:-\s*\d+\s*)?(?:min(?:ute)?s?|hours?|hrs?)\b", re.IGNORECASE)
-    for md in (ROOT / "days").rglob("*.md"):
-        hit = bad.search(md.read_text(encoding="utf-8"))
-        assert not hit, f"{md.relative_to(ROOT)} contains a time estimate: {hit.group(0)!r}"
+def test_every_day_folder_exists_with_its_four_files() -> None:
+    for day in DAYS:
+        folder = DAYS_DIR / day.folder
+        assert folder.is_dir(), f"missing days/{day.folder} — run scripts/build_skeleton.py"
+        assert (folder / "README.md").exists()
+        assert (folder / "03-practice.md").exists()
+        assert (folder / f"01-dsa-{short_slug(day.dsa.title)}.md").exists()
+        assert (folder / f"02-system-design-{short_slug(day.sd.title)}.md").exists()
 
 
-PROBLEMS = ROOT / "docs" / "PROBLEM_INDEX.md"
+def test_no_day_has_a_lab_folder() -> None:
+    """Rule 10. The lab was removed on purpose."""
+    assert not list(DAYS_DIR.glob("*/lab")), "a lab/ folder came back"
 
 
-def catalogue_rows() -> list[list[str]]:
-    rows = []
-    for line in PROBLEMS.read_text(encoding="utf-8").splitlines():
-        if not line.startswith("|") or line.startswith("|---"):
-            continue
-        cells = [c.strip() for c in line.strip("|").split("|")]
-        if len(cells) == 5 and ID_RE.fullmatch(cells[3]):
-            rows.append(cells)
-    return rows
+def test_generated_index_is_current() -> None:
+    from build_skeleton import curriculum_index
 
-
-def test_every_catalogued_problem_targets_a_real_concept_id() -> None:
-    known = {cid for _, ids in index_rows() for cid in ID_RE.findall(ids)}
-    for name, _src, _lv, cid, _testing in catalogue_rows():
-        assert cid in known, f"{name!r} targets {cid}, which no day owns"
-
-
-def test_every_catalogued_problem_has_a_testing_line() -> None:
-    for name, _src, _lv, _cid, testing in catalogue_rows():
-        assert len(testing.split()) >= 4, f"{name!r} has no real 'really testing' line"
-
-
-def test_catalogue_has_no_duplicate_primary_entries() -> None:
-    seen: dict[tuple[str, str], str] = {}
-    for name, src, _lv, cid, testing in catalogue_rows():
-        if "\u21ba" in testing:
-            continue  # an explicit cross-listing, which the catalogue allows
-        key = (name.lower(), src.lower())
-        assert key not in seen, f"{name!r} ({src}) is listed twice as primary ({seen[key]}, {cid})"
-        seen[key] = cid
+    on_disk = (ROOT / "docs" / "CURRICULUM_INDEX.md").read_text(encoding="utf-8")
+    assert on_disk == curriculum_index(DAYS), "index is stale — run scripts/build_skeleton.py"

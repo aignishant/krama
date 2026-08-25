@@ -1,14 +1,13 @@
 [project]
 name = "krama"
 version = "0.1.0"
-description = "A 230-day data structures and algorithms curriculum, in Python, from scratch."
+description = "A 180-day DSA and system design course for product-company interviews."
 requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
 dev = [
     "pytest==8.3.4",
-    "hypothesis==6.122.3",
     "ruff==0.8.4",
 ]
 
@@ -20,5 +19,5 @@ target-version = "py312"
 select = ["E", "F", "I", "UP", "B", "SIM", "N"]
 
 [tool.pytest.ini_options]
-testpaths = ["days", "tests"]
+testpaths = ["tests"]
 addopts = "-q"

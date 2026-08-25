@@ -14,8 +14,10 @@ jobs:
           enable-cache: true
       - run: uv python install 3.12
       - run: uv sync --all-groups
-      - run: uv run ruff format --check .
-      - run: uv run ruff check .
-      - run: uv run pytest days tests -q
-      - run: uv run python scripts/depth_check.py --all
-      # Benchmarks never run in CI: shared-runner variance makes the ratio column meaningless.
+      - run: uv run ruff format --check scripts tests
+      - run: uv run ruff check scripts tests
+      # The syllabus is data: it must load, tile 1-180, and match what is on disk.
+      - run: uv run python scripts/curriculum.py
+      - run: uv run pytest -q
+      # Every lesson that has been written must satisfy the nine-section contract.
+      - run: uv run python scripts/check_day.py
