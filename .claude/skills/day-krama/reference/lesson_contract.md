@@ -26,8 +26,21 @@ this idea already exists without anyone calling it by its technical name.
 sense, no "cache", no "algorithm". A queue at a bank counter is fine; calling it a queue
 data structure is not.
 
-Good story sources: a kitchen, a bank, a wedding, a railway booking counter, a landlord,
-a librarian, a shopkeeper, a hospital reception, a hostel warden, traffic on a road.
+Good story sources: a kitchen, a laundry basket, a canteen counter, a wedding hall, a
+railway booking counter, a hospital reception, a hostel warden, traffic on a road.
+
+**Choose a scene almost anyone has lived.** The reader should recognise it in the first
+line. A scene that only works for someone who has run a chemist's shop, or kept a ledger of
+suppliers, is the wrong scene — it teaches the idea to the few people who have already been
+there. Sorting socks, queueing for lunch and laying tables work for everybody.
+
+**Simple words. Realistic detail.** Talk the way you would to a friend. Give real numbers,
+real times, and the small true details that make it a scene instead of an example — what he
+is holding when he stops, what time the shutters went up, what he nearly did wrong.
+
+**No paper props.** Rule 15 applies inside the story too. When the person needs to store
+something for later, they save it in their phone. Not a diary, not a notebook, not a slip
+kept in a drawer.
 
 The story must contain the **mechanism**, not just the mood. If the idea is "two pointers
 move toward each other", two people in the story must walk toward each other. An analogy

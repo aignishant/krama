@@ -46,7 +46,8 @@ Nine sections, in order, no exceptions. Full guidance in
 [`reference/lesson_contract.md`](reference/lesson_contract.md). The short version:
 
 1. **What this is, and why they ask it** — three sentences, then why it appears in interviews.
-2. **The story** — 200-400 words, a person, ordinary life, **zero technical words**.
+2. **The story** — 200-400 words, a person, a scene almost anyone has lived, **zero
+   technical words**. Simple vocabulary, realistic detail, no paper props.
 3. **The idea in plain English** — map the story onto the technical idea, defining terms.
 4. **The picture** — ASCII for arrays and memory, Mermaid for trees and graphs. Captioned.
 5. **The code, built step by step** — fragments of ten lines or fewer, each explained,
@@ -106,6 +107,9 @@ person, rewrite it.
 - **Never create a `lab/` folder**, an `implement.py`, a `reference.py`, a test file or a
   benchmark script. Rule 10. That structure was removed on purpose.
 - **Never write only one of the two lessons.** Rule 2.
+- **Never ask the reader to reach for paper.** Rule 15. No "draw this on paper", no "on a
+  blank page", no "pen and paper" — in the lessons, in §9, or in the practice checklist.
+  Say it out loud from memory, or draw it in any tool. Stories use a phone, not a diary.
 - **Never leave `status: empty` in the front matter** of a file you have written.
 - **Never hand-edit** `docs/CURRICULUM_INDEX.md` or `days/README.md`. They are generated.
 - **Never compress to save space.** If it is too long, split it into a folder of numbered
@@ -118,3 +122,7 @@ person, rewrite it.
 Second person, present tense. Short sentences, one idea each. Concrete numbers before
 variables. No cheerleading, no emoji in body text, no study-time estimates. Admit the hard step
 instead of glossing it: "this is the part people get wrong, and here is why it looks right".
+
+Write it as prose, not as notes. Full sentences, correct grammar, and the commas and full
+stops actually in place. The reader is a beginner meeting the idea for the first time, and
+a sentence they have to read twice is a sentence that failed.

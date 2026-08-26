@@ -1,5 +1,8 @@
 """Check written lessons against the format contract in docs/00_HOW_A_DAY_WORKS.md.
 
+Sections and their order, the story's length and its freedom from jargon, the weight of
+the interview section, and rule 15 — that nothing sends the reader looking for paper.
+
 python scripts/check_day.py         # every day that has been written
 python scripts/check_day.py 37      # just day 37
 """
@@ -40,6 +43,31 @@ JARGON = [
     "replica",
     "shard",
 ]
+
+
+# Rule 15: the course never sends the reader looking for paper.
+PAPER = [
+    r"on paper",
+    r"a blank page",
+    r"blank sheet",
+    r"pen and paper",
+    r"sheet of paper",
+    r"piece of paper",
+    r"in your notebook",
+    r"on a page",
+]
+
+
+def check_paper(path: Path) -> list[str]:
+    """Rule 15. Draw it in any tool, or say it out loud. Never on paper."""
+    text = path.read_text(encoding="utf-8")
+    if "status: empty" in text[:400]:
+        return []
+    hits = sorted({m.group(0).lower() for pat in PAPER for m in re.finditer(pat, text, re.I)})
+    if not hits:
+        return []
+    rel = path.relative_to(ROOT).as_posix()
+    return [f"{rel}: rule 15 — sends the reader to paper: {', '.join(hits)}"]
 
 
 def sections_of(text: str) -> list[str]:
@@ -127,6 +155,10 @@ def check_day(n: int) -> tuple[bool, list[str]]:
         problems += check_lesson(dsa[0], DSA_SECTIONS)
     if len(sd) == 1:
         problems += check_lesson(sd[0], SD_SECTIONS)
+
+    for path in (*dsa, *sd, folder / "03-practice.md"):
+        if path.exists():
+            problems += check_paper(path)
 
     written = not any("not written yet" in p for p in problems)
     return written, problems

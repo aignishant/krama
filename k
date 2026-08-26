@@ -47,7 +47,7 @@ case "${1:-}" in
     if [ $# -ge 2 ]; then $PY scripts/check_day.py "$2"; else $PY scripts/check_day.py; fi
     ;;
 
-  build) $PY scripts/build_skeleton.py "${2:-}" ;;
+  build) shift; $PY scripts/build_skeleton.py "$@" ;;
 
   *) usage ;;
 esac

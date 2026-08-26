@@ -35,9 +35,9 @@ Breaking one of these makes the output wrong, not merely weak.
 | 1 | **A day is four files.** `README.md` (hub), `01-dsa-<topic>.md`, `02-system-design-<topic>.md`, `03-practice.md`. Nothing else. Folders are `days/day-NNN-<slug>/` — three digits, then a readable slug. |
 | 2 | **Every day teaches both tracks.** Never write only the DSA lesson or only the system design lesson. The whole point is that they run in parallel. |
 | 3 | **Every lesson carries all nine sections, in order.** See the format contract. Not eight. |
-| 4 | **§2 is a story with a person in it, and zero technical words.** 200-400 words. No code, no jargon, not one term of art. If deleting it loses nothing, it was not a story. |
+| 4 | **§2 is a story with a person in it, and zero technical words.** 200-400 words. No code, no jargon, not one term of art. The scene must be one almost anyone has lived — matching socks, a canteen queue, laying tables — told in simple words with realistic detail. If deleting it loses nothing, it was not a story. |
 | 5 | **Show the full solution.** Complete, working, copy-pasteable code lives in §5 of every DSA lesson. This repository does not hide answers from the reader. |
-| 6 | **Simple language, always.** Short sentences. One idea each. Define every term the first time it appears. Concrete numbers before variables. If a sentence needs re-reading, rewrite it. |
+| 6 | **Simple language, always.** Short sentences. One idea each. Define every term the first time it appears. Concrete numbers before variables. Full sentences, correct grammar, and real punctuation — commas and full stops where they belong. If a sentence needs re-reading, rewrite it. |
 | 7 | **§8 is the point of the document.** Real interviewer phrasings, a script for the first ninety seconds, the three follow-ups, and a written-out model answer. Never skip it, never make it thin. |
 | 8 | **§6 shows the arithmetic.** For DSA, count the loop iterations out loud. For system design, show the multiplication — `50M × 20 × 2KB = 2TB`, never "a lot of data". |
 | 9 | **§7 pastes real error text.** Run it if you can. Reproduce the exact message if you cannot. `IndexError: list index out of range`, never "you get an index error". |
@@ -46,6 +46,7 @@ Breaking one of these makes the output wrong, not merely weak.
 | 12 | **No study-time estimates.** No "≈45 minutes to read", no "quick", no pace language. A day is a unit of subject, not of hours. Timing a *drill* is different and is allowed — "answer this in two minutes", "minutes 0-5: requirements" — because that is the interview clock, not a reading estimate. |
 | 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Three things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, and every day's own `README.md` hub. Only the two lesson files and `03-practice.md` hold hand-written prose. |
 | 14 | **Cut anything that is not interview material.** Formal proofs, potential functions, decision-tree lower bounds, CPython internals, the RAM model as a formal object. If it will not be asked and does not make an asked thing clearer, it does not go in. |
+| 15 | **No paper. Anywhere.** Never tell the reader to draw on paper, write it on a blank page, or work it out with pen and paper. Say it out loud from memory, or draw it in any tool they like. Stories do not use paper props either — a phone's contacts, not a diary. |
 
 ---
 
@@ -112,6 +113,8 @@ Say so, name the rule number, and propose the compliant alternative. Do not sile
 - *"Skip the story"* → refuse; §2 is what makes the idea stick for a beginner. Offer to
   tighten it instead. Rule 4.
 - *"Add a lab folder"* → refuse. Rule 10. It was removed on purpose.
+- *"Tell me to sketch it on paper"* → refuse. Rule 15. Offer "say it out loud from memory"
+  or "draw it in whatever tool you like" instead.
 - *"Write a day whose topic is not in the index"* → stop. Amend `scripts/curriculum.py`
   first, as its own commit, then re-run the builder.
 

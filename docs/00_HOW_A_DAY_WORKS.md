@@ -70,10 +70,22 @@ No build-up. The reader should know what they are learning by the end of the fir
 ### 2. The story
 
 A scene from ordinary life, 200-400 words, with a person in it, where this idea already
-exists without anyone calling it by its technical name. A queue at a bank. A librarian
-finding a book. A landlord collecting rent.
+exists without anyone calling it by its technical name. Matching socks after the laundry.
+A queue at a canteen counter. Laying tables before a wedding.
+
+**Pick a scene almost anyone has lived.** Not a trade the reader has never seen. If the
+scene only works for someone who has run a particular kind of shop, or kept a particular
+kind of record, it is the wrong scene. The reader should recognise it in the first line.
+
+**Simple words, and realistic detail.** Short sentences. The kind of vocabulary you would
+use talking to a friend. Real numbers, real times of day, and the small true details that
+make a scene rather than an example — what he is holding when he stops, what time the
+shutters went up.
 
 **No jargon. No code. No technical vocabulary at all.** Not one word.
+
+**No paper props.** If the person in the story has to store something, they save it in
+their phone. See the writing rules below.
 
 The test: if you delete this section and lose nothing, it was decoration, not a story.
 
@@ -163,6 +175,13 @@ re-read the night before the interview.
   right" is worth more than confidence.
 - **No study-time estimates.** No "≈45 minutes to read", no "quick". A day is a unit of
   subject. Timing a drill is different and is allowed — that is the interview clock.
+- **Grammar and punctuation are part of the job.** Full sentences. Commas where the sense
+  needs them, full stops at the end of them. A dropped comma makes a beginner re-read a
+  line, and re-reading is the thing this course exists to prevent.
+- **No paper, anywhere.** Never ask the reader to draw it on paper, write it on a blank
+  page, or work it through with pen and paper. The compliant versions are "say it out loud
+  from memory", "name the six beats in order without looking", or "draw it in any tool you
+  like". This applies to lesson prose, to §9, and to every checklist in `03-practice.md`.
 - **British/Indian-neutral English**, consistent within a file.
 
 ## When a lesson gets long
