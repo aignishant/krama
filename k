@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# k — the Krama daily driver. Five commands run 180 days.
+# k — the Krama daily driver. Six commands run 180 days.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -21,6 +21,7 @@ usage: ./k <command> [args]
   day N         print day N's hub and list its files
   next          the first day that is not written yet
   check [N]     verify written lessons against the format contract
+  wiki [--lint] rebuild wiki/ from the written lessons, or report it stale
   build         create any missing day folders and placeholders
 
   write a day with:  /day-krama N
@@ -47,7 +48,13 @@ case "${1:-}" in
     if [ $# -ge 2 ]; then $PY scripts/check_day.py "$2"; else $PY scripts/check_day.py; fi
     ;;
 
-  build) shift; $PY scripts/build_skeleton.py "$@" ;;
+  wiki) shift; $PY scripts/wiki.py "$@" ;;
+
+  build)
+    shift
+    $PY scripts/build_skeleton.py "$@"
+    $PY scripts/wiki.py
+    ;;
 
   *) usage ;;
 esac

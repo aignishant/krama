@@ -1,7 +1,8 @@
 """Check written lessons against the format contract in docs/00_HOW_A_DAY_WORKS.md.
 
 Sections and their order, the story's length and its freedom from jargon, the weight of
-the interview section, and rule 15 — that nothing sends the reader looking for paper.
+the interview section, rule 15 — that nothing sends the reader looking for paper — and
+that every link a day makes still points at a folder that exists.
 
 python scripts/check_day.py         # every day that has been written
 python scripts/check_day.py 37      # just day 37
@@ -68,6 +69,24 @@ def check_paper(path: Path) -> list[str]:
         return []
     rel = path.relative_to(ROOT).as_posix()
     return [f"{rel}: rule 15 — sends the reader to paper: {', '.join(hits)}"]
+
+
+# A day links to its neighbours and forward to the day that picks the idea up. Slugs move
+# when the syllabus is edited, and a stale link is silent — the reader just lands nowhere.
+LINK = re.compile(r"\]\((\.\./[^)#\s]+|[0-9][^)#\s]*\.md)\)")
+
+
+def check_links(path: Path) -> list[str]:
+    """Every relative link in a written file must point at something that exists."""
+    text = path.read_text(encoding="utf-8")
+    if "status: empty" in text[:400]:
+        return []
+    rel = path.relative_to(ROOT).as_posix()
+    return [
+        f"{rel}: broken link to {target}"
+        for target in dict.fromkeys(LINK.findall(text))
+        if not (path.parent / target).exists()
+    ]
 
 
 def sections_of(text: str) -> list[str]:
@@ -156,9 +175,10 @@ def check_day(n: int) -> tuple[bool, list[str]]:
     if len(sd) == 1:
         problems += check_lesson(sd[0], SD_SECTIONS)
 
-    for path in (*dsa, *sd, folder / "03-practice.md"):
+    for path in (*dsa, *sd, folder / "03-practice.md", folder / "README.md"):
         if path.exists():
             problems += check_paper(path)
+            problems += check_links(path)
 
     written = not any("not written yet" in p for p in problems)
     return written, problems

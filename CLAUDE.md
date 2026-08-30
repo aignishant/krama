@@ -5,11 +5,21 @@ a complete beginner — for **DSA and system design interviews at product compan
 
 Every day teaches two things side by side: one DSA topic and one system design topic.
 
-Read these before writing anything in `days/`:
+Read this before writing anything in `days/`:
 
 1. [`docs/00_HOW_A_DAY_WORKS.md`](docs/00_HOW_A_DAY_WORKS.md) — the format contract. Non-negotiable.
-2. [`docs/CURRICULUM_INDEX.md`](docs/CURRICULUM_INDEX.md) — which day teaches what. Generated.
-3. [`scripts/curriculum.py`](scripts/curriculum.py) — the syllabus as data. The index is built from it.
+
+Then read only what the task needs. The corpus is far larger than any one job:
+
+| You are | Read |
+|---|---|
+| writing or fixing a day | `./k day N`, then `wiki/00-STATE.md`, `wiki/vocab.md`, and the two `wiki/recall/<phase>.md` files that day sits in |
+| changing what a day teaches | [`scripts/curriculum.py`](scripts/curriculum.py) — the syllabus as data |
+| answering "which day covers X" | [`docs/CURRICULUM_INDEX.md`](docs/CURRICULUM_INDEX.md) — the plan for all 180 days. Generated |
+
+`wiki/` is the state of the course; `docs/CURRICULUM_INDEX.md` is the plan for it. Writing
+a day needs the state. Loading the plan as well costs six thousand tokens and answers a
+question `./k day N` already answered.
 
 ---
 
@@ -44,7 +54,7 @@ Breaking one of these makes the output wrong, not merely weak.
 | 10 | **No `lab/` folder. Ever.** No `implement.py`, no `reference.py`, no pytest harness, no benchmark script. That structure was removed deliberately. Practice is named problems in `03-practice.md`, solved on LeetCode. |
 | 11 | **Problems are named, never reproduced.** Title, source, and one line on what it is really testing. Do not paste problem statements. |
 | 12 | **No study-time estimates.** No "≈45 minutes to read", no "quick", no pace language. A day is a unit of subject, not of hours. Timing a *drill* is different and is allowed — "answer this in two minutes", "minutes 0-5: requirements" — because that is the interview clock, not a reading estimate. |
-| 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Three things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, and every day's own `README.md` hub. Only the two lesson files and `03-practice.md` hold hand-written prose. |
+| 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Four things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, every day's own `README.md` hub, and everything under `wiki/`. Only the two lesson files and `03-practice.md` hold hand-written prose. |
 | 14 | **Cut anything that is not interview material.** Formal proofs, potential functions, decision-tree lower bounds, CPython internals, the RAM model as a formal object. If it will not be asked and does not make an asked thing clearer, it does not go in. |
 | 15 | **No paper. Anywhere.** Never tell the reader to draw on paper, write it on a blank page, or work it out with pen and paper. Say it out loud from memory, or draw it in any tool they like. Stories do not use paper props either — a phone's contacts, not a diary. |
 
@@ -89,8 +99,14 @@ python scripts/build_skeleton.py     # create missing day folders and placeholde
 ./k status                           # how many lessons are written, by phase
 ./k day N                            # print day N's hub and list its files
 ./k check                            # verify every written lesson against the contract
+./k wiki                             # rebuild wiki/ from the finished lessons
+./k wiki --lint                      # report wiki/ stale, write nothing
 ./k next                             # the first day that is not written yet
 ```
+
+`wiki/` is a mechanical projection of the written lessons — the state index, the
+vocabulary ledger, and each phase's recall cards. Every byte in it is copied from a
+lesson, never generated. Run `./k wiki` after finishing a day.
 
 To write a day:
 
@@ -127,3 +143,4 @@ Say so, name the rule number, and propose the compliant alternative. Do not sile
 - [ ] §8 of each has real phrasings, a script, follow-ups, and a model answer.
 - [ ] `03-practice.md` names its problems with sources and "really testing" lines.
 - [ ] `./k check` passes.
+- [ ] `./k wiki` has been run, so the next day can see today's vocabulary.

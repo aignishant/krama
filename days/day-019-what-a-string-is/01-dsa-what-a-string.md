@@ -140,7 +140,7 @@ filed, it would be filed in the wrong place and could never be found again. Immu
 hashed safely; mutable things cannot, which is why `{"a": 1}` works and `{[1,2]: 3}` raises
 `TypeError: unhashable type: 'list'`. Dictionaries are days
 [006](../day-006-python-strings-dicts-sets/README.md) and
-[060](../day-060-hashing-what-a-hash-really-is/README.md), and they lean on this completely.
+[060](../day-060-hash-tables/README.md), and they lean on this completely.
 
 **Sharing is free and safe.** Because nothing can modify a string, two variables can point at the
 same one with no risk. Python takes advantage: identical short literals in your source often become

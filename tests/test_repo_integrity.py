@@ -61,3 +61,35 @@ def test_generated_index_is_current() -> None:
 
     on_disk = (ROOT / "docs" / "CURRICULUM_INDEX.md").read_text(encoding="utf-8")
     assert on_disk == curriculum_index(DAYS), "index is stale — run scripts/build_skeleton.py"
+
+
+def test_no_day_links_to_a_folder_that_does_not_exist() -> None:
+    """Slugs move when the syllabus is edited, and a stale link is silent."""
+    from check_day import check_links
+
+    broken: list[str] = []
+    for path in sorted(DAYS_DIR.glob("day-*/*.md")):
+        broken += check_links(path)
+    assert not broken, "\n".join(broken)
+
+
+def test_wiki_is_current() -> None:
+    """wiki/ is a projection of the written lessons. A stale one misleads the writer."""
+    from wiki import lint
+
+    problems = lint()
+    assert not problems, "\n".join(problems) + "\n(run ./k wiki)"
+
+
+def test_wiki_copies_verbatim_and_never_invents() -> None:
+    """Every recall card in the wiki must appear, word for word, in its lesson."""
+    from wiki import load_written, phase_slug, section
+
+    for lesson in load_written():
+        card = section(lesson.text, 9)
+        if not card:
+            continue
+        phase_file = ROOT / "wiki" / "recall" / f"{phase_slug(lesson.phase)}.md"
+        text = phase_file.read_text(encoding="utf-8")
+        first_line = card.splitlines()[0].strip()
+        assert first_line in text, f"day {lesson.day} {lesson.track}: recall card not projected"

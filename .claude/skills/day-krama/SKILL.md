@@ -33,9 +33,25 @@ Also open the two placeholder lesson files. They carry the nine headings already
 
 ### Step 2 · Check what the reader already knows
 
-Skim the hubs of the previous five days and the phase this day sits in
-(`docs/CURRICULUM_INDEX.md`). You may use any term an earlier day defined — link to that
-day when you do. You may **not** use a term nobody has defined yet. Define it or drop it.
+Read three small files. They are compiled from the finished lessons by `./k wiki`, so
+they say what the reader has actually met, not what the syllabus planned.
+
+```bash
+cat wiki/00-STATE.md                    # which days are written, and their titles
+cat wiki/vocab.md                       # every term the reader knows, and its day
+cat wiki/recall/<phase>.md              # the recall cards for this day's two phases
+```
+
+`./k day <N>` names both phases; take the slugs from there. Read only those two recall
+files — the others belong to phases the reader has not reached, or finished long ago.
+
+You may use any term in `wiki/vocab.md`, and you should link to the day it arrived. You
+may **not** use a term that is not there. Define it, or drop it. The ledger prefers
+precision to completeness: if a term you need is missing, define it again rather than
+assume.
+
+Do **not** open `docs/CURRICULUM_INDEX.md` for this. It is the plan, not the state, and
+it costs six thousand tokens to say what `./k day <N>` already told you.
 
 This matters more than anything else in this file. The single most common failure is
 writing for someone who already knows the subject.
@@ -93,10 +109,13 @@ links to the derived name.
 
 ```bash
 ./k check <N>
+./k wiki
 ```
 
-It verifies the nine sections are present and in order, that the story is long enough and
-carries no jargon, and that the interview section is not thin. Fix what it reports. Then
+`check` verifies the nine sections are present and in order, that the story is long enough
+and carries no jargon, that the interview section is not thin, and that every link you
+made points at a folder that exists. `wiki` folds your new lesson into the ledger the next
+day will read. Fix what they report. Then
 read section 2 of both lessons out loud — if it does not sound like a story about a
 person, rewrite it.
 
@@ -111,7 +130,9 @@ person, rewrite it.
   blank page", no "pen and paper" — in the lessons, in §9, or in the practice checklist.
   Say it out loud from memory, or draw it in any tool. Stories use a phone, not a diary.
 - **Never leave `status: empty` in the front matter** of a file you have written.
-- **Never hand-edit** `docs/CURRICULUM_INDEX.md` or `days/README.md`. They are generated.
+- **Never hand-edit** `docs/CURRICULUM_INDEX.md`, `days/README.md`, or anything under
+  `wiki/`. They are generated. `wiki/` is rebuilt by `./k wiki`; run it after writing a
+  day so the next day sees your vocabulary.
 - **Never compress to save space.** If it is too long, split it into a folder of numbered
   parts. Depth over density.
 - **Never include formal proofs, potential functions, or language-internals detail** unless
