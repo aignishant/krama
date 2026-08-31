@@ -68,5 +68,35 @@ front matter. A day that is missing from this table has not been written yet.
 | 059 | Sorting revision and mock round | Dependency inversion |
 | 060 | Hash tables: how a dictionary finds anything instantly | DRY, KISS, and YAGNI |
 | 061 | Collisions, and why a hash map can turn slow | Coupling, cohesion, and code smells |
+| 062 | Sets: membership, deduplication, and the O(1) habit | Design principles revision and interview questions |
+| 063 | Counting with dictionaries | What a design pattern actually is |
+| 064 | Grouping: the key-design skill | Singleton |
+| 065 | Hashing your own objects | Factory and abstract factory |
+| 066 | When a hash map is the wrong answer | Builder |
+| 067 | Hashing revision and mock round | Prototype, and cloning objects |
+| 068 | Stacks: last in, first out | Adapter |
+| 069 | Balanced brackets and the parsing family | Decorator |
+| 070 | Min stack, and stacks that carry extra state | Facade and proxy |
+| 071 | Monotonic stack: the next greater element | Strategy |
+| 072 | Largest rectangle in a histogram | Observer |
+| 073 | Queues: first in, first out | State |
+| 074 | Deques and the sliding-window maximum | Command and chain of responsibility |
+| 075 | A queue from two stacks, and a stack from queues | Template method and iterator |
+| 076 | LRU cache: the structure interviewers love | Design patterns revision and interview questions |
+| 077 | Stacks and queues revision and mock round | How to run a low-level design interview: the forty-minute script |
+| 078 | Nodes and links: pointers without pointers | Design a parking lot |
+| 079 | Traversal, insertion, and deletion | Design an elevator system |
+| 080 | The dummy head trick | Design an ATM |
+| 081 | Reversing a linked list | Design a vending machine |
+| 082 | Finding the middle, and the runner technique | Design a library management system |
+| 083 | Cycle detection, and why Floyd's algorithm works | Design tic-tac-toe, and then chess |
+| 084 | Merging and sorting linked lists | Design a deck of cards and a card game |
+| 085 | Doubly and circular linked lists | Design Splitwise |
+| 086 | Linked lists revision and mock round | Design BookMyShow |
+| 087 | Recursion: the leap of faith | Design a food delivery order flow |
+| 088 | The call stack, drawn | Design a ride-hailing booking flow |
+| 089 | Writing a recursive function that terminates | Design a rate limiter, at the object level |
+| 090 | Recursion on arrays and strings | Design an in-memory cache with eviction |
+| 091 | Subsets: the include-or-exclude tree | Design a logging framework |
 
-**61 of 180 days written.**
+**91 of 180 days written.**

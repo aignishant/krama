@@ -67,3 +67,29 @@ cheaper to define it again than to assume the reader knows it.
 - **059** — adapter
 - **060** — chaining, load factor
 - **061** — deleted, empty, logical cohesion, low cohesion, occupied, tight coupling
+- **062** — linear scan, procedure
+- **063** — count map, counter
+- **064** — singleton
+- **066** — direct addressing, hash map
+- **067** — deep-copied, not a map, shallow-copied
+- **068** — adaptee, client, stack frame, stack overflow
+- **069** — component
+- **070** — cdn, intent plus multiplicity
+- **071** — composition, inheritance, strategy, transitions itself
+- **072** — event object, observers, strictly shorter, subject, subscription list
+- **073** — circular buffer, context, finite state machine, ring buffer
+- **074** — monotonic deque
+- **075** — hook, iterator, one-shot, stack
+- **076** — algorithm, singly linked list, which class
+- **077** — script
+- **079** — and a direction, o(1), two implementations
+- **080** — dummy node
+- **081** — float
+- **082** — facts
+- **085** — ledger entries
+- **086** — status
+- **087** — two
+- **088** — surge multiplier especially, tail call, the return address
+- **089** — exactly correct, latency, lazy refill
+- **090** — cache stampede, expiry, fifo, lfu, lru, never forgets, tail-recursive
+- **091** — correlation id

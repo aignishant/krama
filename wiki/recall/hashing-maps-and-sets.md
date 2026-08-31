@@ -50,3 +50,129 @@ Source: [`days/day-061-collisions/01-dsa-collisions-and-why-a-hash.md`](../../da
   keys stepping by exactly the capacity · **an adversary** — 20,000 colliding form fields turned
   20,000 operations into 200,000,000 in the 2011 hash-flooding attacks. Hence Python's per-process
   **hash randomisation**: never persist, transmit, or assert on a `hash()` value — use `hashlib`.
+
+## Day 062 · dsa — Sets: membership, deduplication, and the O(1) habit
+
+Source: [`days/day-062-sets/01-dsa-sets-membership-deduplication.md`](../../days/day-062-sets/01-dsa-sets-membership-deduplication.md)
+
+- **A set is a hash table with the values deleted.** `in` is O(1) average, duplicates are impossible,
+  order does not exist, elements must be hashable — so tuples and `frozenset`, never lists or dicts.
+- **The seen-set pattern is the reflex:** walk once, `if x in seen`, then `seen.add(x)`. The
+  invariant is *`seen` holds exactly the elements before the current one*. It turns 50,000,000
+  comparisons at n = 10,000 into 20,000 operations.
+- **`seen = []` is the trap** — `in` on a list is O(n), so identical-looking code runs 700× slower at
+  n = 20,000. And `{}` is an empty dict; the empty set is `set()`.
+- **Longest consecutive: put it in a set, and only walk from a number whose `number - 1` is absent.**
+  Without that guard `range(100000)` is 5 × 10⁹ steps. The `while` is bounded **in total, not per
+  iteration** — n outer checks plus n total inner steps.
+- **You are trading memory for time** — O(n) extra space, roughly 32 MB per million integers. Asked
+  for O(1) space, sort instead (O(n log n)) or mark in place when the range is known. Real errors:
+  `TypeError: unhashable type: 'list'`, `RuntimeError: Set changed size during iteration`.
+
+## Day 063 · dsa — Counting with dictionaries
+
+Source: [`days/day-063-counting-with-dicts/01-dsa-counting-with-dictionaries.md`](../../days/day-063-counting-with-dicts/01-dsa-counting-with-dictionaries.md)
+
+- **Three lines, and know all four spellings:** `counts[x] = counts.get(x, 0) + 1` · the explicit
+  `if` · `defaultdict(int)` · `Counter(items)`. Building it is **O(n) time, O(m) extra space**, where
+  m is the number of *distinct* values — not n.
+- **`counts[x] += 1` on a missing key raises `KeyError`.** And `defaultdict` **creates the key when
+  you merely read it**, so `len()` silently grows; `Counter` returns `0` for anything, so typos never
+  raise. Check membership with `in`, never by indexing.
+- **Top k has three answers:** sort `O(m log m)` · heap `O(m log k)` · bucket by count `O(n + m)`.
+  At n = 10⁶, m = 10⁵, k = 10 that is 1.7M vs 330K vs 1.1M. **Buckets beat the n log n bound because
+  they do not compare** — a count is an integer in 1..n, so you index by it.
+- **Say the trade, not just the winner:** buckets allocate `n + 1` slots regardless, so with n huge
+  and m tiny the heap wins. And the `len(result) == k` check goes *inside* the inner loop.
+- **Two O(n²) traps that look clean:** `words.count(word)` inside a loop (400M ops at n = 20,000),
+  and walking the counter instead of the original string for a "first such" question. Real errors:
+  `KeyError`, `RuntimeError: dictionary changed size during iteration`, and `TypeError: unsupported
+  operand type(s) for +: 'int' and 'Counter'` from `sum()`.
+
+## Day 064 · dsa — Grouping: the key-design skill
+
+Source: [`days/day-064-grouping/01-dsa-grouping-the-key-design-skill.md`](../../days/day-064-grouping/01-dsa-grouping-the-key-design-skill.md)
+
+- **Grouping is four lines; the key is the whole problem.**
+  `groups = defaultdict(list)` then `groups[key_of(item)].append(item)`. Without the import,
+  `groups.setdefault(k, []).append(x)` — correct, but it allocates a throwaway `[]` on every call.
+- **The recipe: say in words what makes two items belong together, then compute exactly that — no
+  more, no less.** Then run both tests out loud: *same key but shouldn't be together?* (too coarse) ·
+  *should be together but different keys?* (too fine).
+- **The keys worth memorising:** anagrams → `"".join(sorted(word))` (destroys order, keeps counts) ·
+  shifted strings → `tuple((ord(b)-ord(a)) % 26 ...)` · Sudoku box → `(r // 3, c // 3)` · diagonals →
+  `r - c`, anti-diagonals → `r + c` · duplicate files → size first, then SHA-256, then compare bytes.
+- **The count key is not automatically better.** `k log k` vs `k + 52` crosses over at about
+  **k = 25**, so for interview-length words the sorted key wins — and it survives Unicode, which the
+  26-slot array does not. Cost: **O(n·k log k)** time, **O(n·k)** space, and the space is not optional
+  because the output is that big. Brute force is 5,000× worse at n = 10,000.
+- **Three things that bite:** the key must be hashable (`tuple(counts)`, never `counts`) ·
+  `itertools.groupby` only groups **adjacent** runs, so it splits `aet` three ways unless you
+  `sorted(words, key=key)` first · reading a missing key from a `defaultdict(list)` **inserts an
+  empty list** and it turns up in your output.
+
+## Day 065 · dsa — Hashing your own objects
+
+Source: [`days/day-065-hashing-custom-objects/01-dsa-hashing-your-own-objects.md`](../../days/day-065-hashing-custom-objects/01-dsa-hashing-your-own-objects.md)
+
+- **The default is identity, not value.** No `__eq__`/`__hash__` means Python compares memory
+  addresses, so `len({Order("A-1"), Order("A-1")}) == 2`. That one sentence is the whole interview
+  question.
+- **Two rules. `a == b` ⇒ `hash(a) == hash(b)`, and the hash must not change while the object is a
+  key.** The converse of rule 1 is *not* required — unequal objects sharing a hash is a collision,
+  which costs time, never correctness.
+- **Breaking rule 2 is silent.** Mutate a key in place and `x in d` is `False` while `len(d)` is 1
+  and iteration still yields it. No exception, ever. `@dataclass(frozen=True)` makes it impossible —
+  `FrozenInstanceError` at the moment of the mistake instead of a wrong answer later.
+- **Defining `__eq__` sets `__hash__ = None`,** so a plain `@dataclass` raises `TypeError:
+  unhashable type`. Fixes: `frozen=True` (the default choice) · `NamedTuple` (free, and faster —
+  tuple hashing is C) · `eq=False` to keep identity · `unsafe_hash=True` **never**, it just
+  re-enables the bug.
+- **Hash the identity fields, cheaply.** `__hash__` runs on *every* lookup: a 100 KB field is 8 µs
+  per operation; `tuple(self.items)` on a 10,000-list is 200 µs. And a too-coarse hash (customer
+  instead of order id) gives 200-long chains — 200× slower with no error. Combine fields with
+  `hash((a, b))`, and always guard `__eq__` with `isinstance` returning `NotImplemented`.
+
+## Day 066 · dsa — When a hash map is the wrong answer
+
+Source: [`days/day-066-when-hashing-is-wrong/01-dsa-when-a-hash-map.md`](../../days/day-066-when-hashing-is-wrong/01-dsa-when-a-hash-map.md)
+
+- **A hash map buys time with memory and throws away structure.** Three cases where it is the wrong
+  tool: **space is taken away** · **keys are small dense integers** · **you need order**.
+- **No extra space → three moves.** Sort and walk (O(n log n) time, O(1) space) · two pointers on
+  sorted input (Two Sum sorted is O(n)/O(1), no map) · **mark in the input itself** when values are
+  bounded by n. Always ask first: ***may I modify the input?*** — every O(1)-space answer destroys
+  it.
+- **First Missing Positive is the flagship.** The answer is bounded by **n + 1** (n numbers: either
+  they are exactly 1..n, or one of 1..n is missing). Three passes: clean out-of-range to `n+1` ·
+  mark slot `v-1` with **`-abs(...)`, never `-x`** (on `[1, 1]` plain negation returns 1 instead of
+  2) · return the first positive index + 1.
+- **Direct addressing needs *dense* keys, not just integer ones.** `[0]*26` for letters is right;
+  `[0]*(max+1)` on `[1, 2, 10**9]` is 8 GB and a `MemoryError`. Memory per million ints: **list 7 MB
+  · set 32 MB · dict 40 MB**. And below ~8-16 elements, just scan — at n = 8 a set wins by only 1.8×
+  before you count building it.
+- **A map answers one question: is this key present?** Smallest, k-th, next, previous and range are
+  all O(n) scans against it — use `bisect` on a sorted list, `heapq`, or `SortedList` (Python has no
+  `TreeMap`). And its O(1) is an *average*: where you must promise a bound, a guaranteed O(log n) can
+  beat a faster average.
+
+## Day 067 · dsa — Hashing revision and mock round
+
+Source: [`days/day-067-hashing-revision/01-dsa-hashing-revision-and-mock-round.md`](../../days/day-067-hashing-revision/01-dsa-hashing-revision-and-mock-round.md)
+
+- **Run the five questions before touching the keyboard.** What do I ask repeatedly? · What exactly
+  is the key? · Does the input remove the need for a map (sorted / bounded by n / dense ints)? · What
+  am I trading? · What is the invariant? The two that could **remove** the map come first, or you
+  will commit before you can see them.
+- **Structure by question:** *seen it?* → set · *how many?* → `Counter` · *where?* → dict value→index
+  · *which group?* → `defaultdict(list)` + a designed key · *smallest / k-th / next / between?* →
+  **not a map** — heap, or sorted + `bisect`.
+- **Five sentences carry the phase:** a map computes, it does not search · **O(1) is an average**,
+  O(n) worst · `in` on a list is O(n) and looks identical (700× at n = 20,000) · the key is the
+  problem, the loop is four lines · a map buys time with memory and **throws away structure**.
+- **Numbers to have ready:** nested loop vs map at n = 10,000 = **50M vs 20K (2,500×)** · memory per
+  million ints = **list 7 MB, set 32 MB, dict 40 MB** · top-k at n = 10⁶, m = 10⁵, k = 10 = 1.7M
+  (sort) vs 330K (heap) vs 1.1M (buckets).
+- **The round is scored on five lines, not one.** Communication · approach *before* code · correctness
+  · **edge cases you found yourself** (empty, one, all-same, negatives) · follow-up handling. Minutes
+  0-12 spent writing a brute force in silence is a quarter of the interview thrown away.

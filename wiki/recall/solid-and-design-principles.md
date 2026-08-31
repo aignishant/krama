@@ -171,3 +171,25 @@ Source: [`days/day-061-collisions/02-system-design-coupling-cohesion-and-code-sm
   methods is cohesive; a fluent `df.groupby().agg()` chain is not a Demeter violation; an adapter
   that only forwards is a legitimate middle man. And **a file with two commits in three years is
   finished** — refactor what changes.
+
+## Day 062 · system-design — Design principles revision and interview questions
+
+Source: [`days/day-062-sets/02-system-design-design-principles-revision-and-interview.md`](../../days/day-062-sets/02-system-design-design-principles-revision-and-interview.md)
+
+- **All eight principles answer one question: when requirements change, how much must I touch?** SRP
+  keeps co-changing things together · OCP makes the common change an addition · LSP and ISP keep the
+  abstraction honest · DIP points the import arrows · DRY gives each *fact* one home · KISS and YAGNI
+  refuse flexibility you cannot name a second use for.
+- **Review in a fixed order, cheapest evidence first:** imports · one-sentence description (count the
+  "and"s) · signatures (flags, vendor types, clumps) · branching (`if` chains, `isinstance` in
+  callers) · state and globals · `git log`. The history is the only *measurable* check — 4 teams on
+  one file is divergent change proved, not asserted.
+- **Name findings with evidence, never with labels.** Not "violates SRP" but "`decimal` and `smtplib`
+  in one import block". Not "too many parameters" but "4 booleans = 16 combinations, ~5 meaningful,
+  and `email=False, dry_run=True` silently does nothing".
+- **Always end on a ranking and a thing you would leave alone.** One first change, its reason
+  (usually testability: 180 ms → 0.1 ms), and one honest "I would not touch the three-way `if` until
+  somebody names the fourth kind."
+- **The principles contradict each other and you should say so.** DRY loses to SRP when the owners
+  differ · OCP loses to KISS until you can name implementation two · DIP loses to YAGNI unless the
+  test double counts · and a file with two commits in three years is finished.
