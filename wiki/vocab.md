@@ -41,3 +41,4 @@ cheaper to define it again than to assume the reader knows it.
 - **031** — deque, log-structured merge tree, splits
 - **032** — cost, selectivity
 - **033** — serialisable
+- **034** — snapshot, write skew

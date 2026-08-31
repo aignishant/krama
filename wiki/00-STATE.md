@@ -40,5 +40,6 @@ front matter. A day that is missing from this table has not been written yet.
 | 031 | Fixed-size sliding window | B-trees and why indexes are shaped that way |
 | 032 | Variable-size sliding window | Query plans and the slow query |
 | 033 | Window plus hash map: the longest-substring family | Transactions and ACID |
+| 034 | At-most-K, and the exactly-K trick | Isolation levels and the anomalies they allow |
 
-**33 of 180 days written.**
+**34 of 180 days written.**

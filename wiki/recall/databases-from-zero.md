@@ -128,3 +128,19 @@ Source: [`days/day-033-window-with-a-map/02-system-design-transactions-and-acid.
   [day 034](../../days/day-034-at-most-k/README.md).
 - **Keep transactions short.** No external calls inside one; batch bulk writes in thousands, not one at
   a time and not a million.
+
+## Day 034 · system-design — Isolation levels and the anomalies they allow
+
+Source: [`days/day-034-at-most-k/02-system-design-isolation-levels-and-the-anomalies.md`](../../days/day-034-at-most-k/02-system-design-isolation-levels-and-the-anomalies.md)
+
+- **Three read anomalies, in strength order:** dirty read (uncommitted data), non-repeatable read
+  (same row, two answers), phantom (new rows appear in a repeated search). Plus the write one: the
+  lost update.
+- **The levels forbid them cumulatively:** read committed kills dirty; repeatable read kills
+  non-repeatable; serialisable kills phantoms — and write skew.
+- **Postgres: default read committed; repeatable read = one snapshot per transaction** and stops
+  phantoms too; serialisable = SSI, aborts losers — **retry loop required**.
+- **Write skew:** two snapshots, an invariant across rows, writes to *different* rows — no conflict
+  fires. Fix with `FOR UPDATE` on what you checked, or serialisable.
+- **Choose per transaction:** default + SQL arithmetic for writes, repeatable read for reports,
+  serialisable (retried) for check-then-act. Say what you are accepting.

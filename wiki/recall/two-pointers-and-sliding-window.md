@@ -98,3 +98,18 @@ Source: [`days/day-033-window-with-a-map/01-dsa-window-plus-hash-map.md`](../../
   step at a time and the bug cannot exist.
 - **`O(n)` time, `O(k)` space** where `k` is the alphabet. When there are only two kinds of value, the
   map collapses to one integer.
+
+## Day 034 · dsa — At-most-K, and the exactly-K trick
+
+Source: [`days/day-034-at-most-k/01-dsa-at-most-k-and-the-exactly-k-trick.md`](../../days/day-034-at-most-k/01-dsa-at-most-k-and-the-exactly-k-trick.md)
+
+- **Counting window: `total += right - left + 1`** — after the shrink, every start from `left` to
+  `right` gives a valid subarray ending here.
+- **Why it works: shortening never hurts** — removing front elements cannot add distinct values.
+  Monotonicity is the licence to count this way.
+- **`exactly(k) = at_most(k) - at_most(k - 1)`** — at-most-(k−1) nests inside at-most-k, so the
+  difference is exactly-k. Two linear passes, still `O(n)`.
+- **Guard the inner call: negative k returns 0** — else `at_most(-1)` walks off the array
+  (`IndexError`), and product-less-than-k needs `k <= 1 → 0` for the same reason.
+- **"How many" → accumulate; "longest" → max.** Say which before typing. And sums with negatives
+  break the trick — that is prefix sums, [day 038](../../days/day-038-subarray-sum-k/README.md).
