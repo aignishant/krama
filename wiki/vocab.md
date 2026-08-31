@@ -48,3 +48,13 @@ cheaper to define it again than to assume the reader knows it.
 - **039** — partition key
 - **040** — left, tree
 - **041** — connection, lazy loading, on first touch
+- **042** — search space
+- **043** — class, monotone, object
+- **044** — anaemic model, constructor, fee, returned, run, upper bound
+- **045** — break point, name mangling
+- **046** — depth, greedy simulation, is possible, smallest
+- **047** — duck typing, gap, overloading, overriding
+- **048** — relative epsilon
+- **049** — mixin, negative infinity
+- **050** — dashed, draw two diagrams, filled diamond, hollow triangle, sequence diagram
+- **051** — bounded context, stable, value object

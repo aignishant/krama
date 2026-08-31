@@ -48,5 +48,15 @@ front matter. A day that is missing from this table has not been written yet.
 | 039 | Difference arrays: range updates, cheaply | Wide-column and time-series stores |
 | 040 | 2D prefix sums and inclusion-exclusion | Choosing SQL or NoSQL in an interview |
 | 041 | Prefix sums revision and mock round | Connection pools, ORMs, and the N+1 query |
+| 042 | Binary search: the idea and the invariant | Database revision and interview questions |
+| 043 | Writing binary search without off-by-one bugs | Why interviews ask object-oriented design at all |
+| 044 | First and last occurrence | Classes and objects |
+| 045 | Search in a rotated sorted array | Encapsulation |
+| 046 | Binary search on the answer | Inheritance and its costs |
+| 047 | Minimise the maximum: the capacity family | Polymorphism |
+| 048 | Binary search on floats, and the epsilon question | Abstraction and interfaces |
+| 049 | Peak finding, and searching data that is structured but not sorted | Composition over inheritance |
+| 050 | Binary search revision and mock round | Class diagrams and the UML you will actually draw |
+| 051 | Why sorting matters more than any single sorting algorithm | Modelling a real domain |
 
-**41 of 180 days written.**
+**51 of 180 days written.**

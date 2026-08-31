@@ -254,3 +254,21 @@ Source: [`days/day-041-prefix-revision/02-system-design-connection-pools-orms.md
 - **Fleet arithmetic:** instances × pool vs `max_connections` → PgBouncer multiplexes
   (transaction mode trades away session state). Most "outgrew Postgres" stories are
   conversation-shape stories.
+
+## Day 042 · system-design — Database revision and interview questions
+
+Source: [`days/day-042-binary-search-idea/02-system-design-database-revision-and-interview-questions.md`](../../days/day-042-binary-search-idea/02-system-design-database-revision-and-interview-questions.md)
+
+- **Run the six questions in order, every time:** access paths → numbers → invariants → schema →
+  failure modes → the trigger that would change your mind. Never name a product first.
+- **Schema order is fixed:** table per thing, surrogate key, foreign key on the many side,
+  `NOT NULL`/`NUMERIC`/`TIMESTAMPTZ`, index every foreign key, 3NF then denormalise only by
+  read-to-write ratio with a reconciliation job.
+- **The concurrency answer is one sentence:** do the arithmetic in the `UPDATE` with a `WHERE`
+  guard; use `FOR UPDATE` for check-then-act on one row; use serialisable plus a retry loop when the
+  invariant spans rows.
+- **Diagnose in cost order:** `EXPLAIN ANALYZE` (estimated vs actual rows) → N+1 and deep `OFFSET`,
+  which never appear in the plan → composite index → partition. Most answers are at step two.
+- **Numbers to carry:** index lookup 3-4 pages ≈ 0.4 ms; one node ≈ 10-50k simple reads/s and tens
+  of terabytes; 1B events/day = 11.6k/s; pool ≈ cores × 2. A second database moves one access path,
+  never the system.
