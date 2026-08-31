@@ -23,3 +23,178 @@ Source: [`days/day-051-why-sorting-matters/01-dsa-why-sorting-matters-more-than.
   needs **stability** and the *least* significant key first. Python runs **Timsort** — O(n log n),
   stable, adaptive, in C. In an interview you *call* a sort; the next eight days are about how they
   work because interviewers ask *about* them.
+
+## Day 052 · dsa — Bubble, selection and insertion sort, and what each one teaches
+
+Source: [`days/day-052-quadratic-sorts/01-dsa-bubble-selection-and-insertion-sort.md`](../../days/day-052-quadratic-sorts/01-dsa-bubble-selection-and-insertion-sort.md)
+
+- **All three are O(n²), in place, O(1) space — and they differ where it counts.** Bubble: swap
+  out-of-order neighbours, largest sinks right, needs the `swapped` flag to be O(n) on sorted input.
+  Selection: find the smallest, swap it forward — **exactly n−1 swaps**, never adaptive, **not
+  stable**. Insertion: walk each value back into the sorted prefix, shifting as you go.
+- **Insertion sort is the only one with a real answer to "when would you use it":** small inputs
+  (under ~50; Timsort's threshold is 64), nearly-sorted input (**adaptive** — O(n)), and values
+  arriving one at a time.
+- **The invariant to say out loud:** *before step j, `nums[0:j]` holds the first j values in sorted
+  order.* And it **shifts rather than swaps** — one write per displaced element instead of three.
+- **Two one-character traps.** `while i >= 0 and nums[i] > value` — the guard must come first or
+  `nums[-1]` wraps round and corrupts the list, silently. And `>` not `>=`, or you lose **stability**
+  with no visible failure.
+- **The arithmetic:** n(n−1)/2 = 499,500 comparisons at n = 1,000. Writes on reversed input:
+  bubble 1,498,500 · insertion 500,499 · **selection 2,997** — selection sort's only virtue, and it
+  matters for flash memory and large records.
+
+## Day 053 · dsa — Merge sort
+
+Source: [`days/day-053-merge-sort/01-dsa-merge-sort.md`](../../days/day-053-merge-sort/01-dsa-merge-sort.md)
+
+- **The sentence:** *a list of 0 or 1 is sorted; otherwise sort both halves and **merge** them.* The
+  merge is the engine — compare only the two fronts, take the smaller, and when one side empties copy
+  the rest across with no comparisons. Merging is **O(n)** because nothing is ever searched for.
+- **Why O(n log n), in two facts multiplied:** every level of merging moves all **n** elements (1×n,
+  then 2×n/2, then 4×n/4 …), and there are **log₂ n** levels of halving. Not "because it halves" —
+  binary search halves too and is O(log n), because it discards one side.
+- **No bad input.** Best = average = worst = n log n, and it is **stable** because the merge uses
+  `<=` and takes from the left on a tie. Quicksort is faster in practice but can hit O(n²) and is not
+  stable.
+- **The cost is O(n) extra space** — the merge cannot write over its own inputs. Copy only the *left*
+  half into the buffer; the right half is always at or beyond the write position. Two exceptions:
+  linked lists (pure relinking, O(1)) and LeetCode 88 (merge **backwards** into the free tail).
+- **Three traps:** `//` not `/` for the middle (`TypeError: slice indices must be integers`) · base
+  case `<= 1` not `== 1` or an empty half recurses forever (`RecursionError`) · the two `extend`
+  lines, or the tail is silently dropped. And the free follow-up: **count inversions** in n log n by
+  adding `len(left) - i` whenever you take from the right.
+
+## Day 054 · dsa — Quicksort and partitioning
+
+Source: [`days/day-054-quicksort/01-dsa-quicksort-and-partitioning.md`](../../days/day-054-quicksort/01-dsa-quicksort-and-partitioning.md)
+
+- **Quicksort is one operation: partition.** Pick a pivot, rearrange so smaller is left and larger is
+  right — the pivot is then in its **final** position, and the two sides are independent. No merge
+  step; the work happens on the way *down*, which is why it sorts **in place**.
+- **The invariant to say out loud:** `nums[lo:i]` is all `< pivot`, `nums[i:j]` is all `>= pivot`;
+  at the end swap the pivot into `i`. Recurse on `p-1` and `p+1` — **excluding the pivot**, or it
+  recurses forever.
+- **Worst case O(n²), and the input is an already sorted list** with a first- or last-element pivot:
+  one side empty, depth n, n(n−1)/2 comparisons. 500 sorted values: 124,750 comparisons against
+  ~4,000 with a random pivot.
+- **Fix it with two lines of randomisation** — the time now depends on your dice, not on the input,
+  so no *particular* input is bad. Then median-of-three (deterministic, beatable) and **introsort**
+  (bail to heapsort past depth 2 log n — what `std::sort` does). Separately, **three-way partition**
+  for duplicates: a million equal values goes from O(n²) to one pass.
+- **Against merge sort:** quicksort is in place (O(1) data, O(log n) stack if you recurse into the
+  smaller side) and 2-3× faster despite ~39% more comparisons. It gives up the **guarantee** and
+  **stability**. Choose merge sort for adversarial input, multi-key sorting, linked lists, and data
+  too big for memory.
+
+## Day 055 · dsa — Quickselect: finding the Kth largest without sorting
+
+Source: [`days/day-055-quickselect/01-dsa-quickselect-finding-the-kth-largest.md`](../../days/day-055-quickselect/01-dsa-quickselect-finding-the-kth-largest.md)
+
+- **Same partition as quicksort, one change: recurse into ONE side.** The pivot lands at its final
+  index `p`; compare `p` with the target index. `p == target` → answer · `target < p` → search left,
+  **discard the right** · else search right. Two recursive calls means you wrote quicksort.
+- **The k-th largest is at index `n - k`.** Check both ends out loud: `k=1 → n-1` (largest),
+  `k=n → 0` (smallest). Getting this wrong returns a plausible number with no error — the commonest
+  bug on LeetCode 215.
+- **Expected O(n), and the arithmetic is the answer:** `n + n/2 + n/4 + … = 2n`, because a halving
+  series sums to **twice the first term**. Quicksort is n log n because it does full work at *every*
+  level; here only one branch survives.
+- **Worst case O(n²)** if the pivot is always extreme — fix with a **random pivot**. Randomising the
+  *position* does not help when every *value* is equal, so use a **three-way partition** and return
+  the pivot when `lt <= target <= gt`: a million identical values in one pass.
+- **Three answers, chosen by k and by shape:** `sorted()[-k]` O(n log n) · heap O(n log k), O(k)
+  space, **the only one that works on a stream** · quickselect O(n) expected, **O(1) space but it
+  mutates**. At k = 10 of 10⁶ heap and quickselect are level; at k = n/2 quickselect wins six times
+  over.
+
+## Day 056 · dsa — Counting sort, radix sort, and bucket sort
+
+Source: [`days/day-056-non-comparison-sorts/01-dsa-counting-sort-radix-sort.md`](../../days/day-056-non-comparison-sorts/01-dsa-counting-sort-radix-sort.md)
+
+- **These three don't compare — that is how they beat n log n.** No comparison sort can do better
+  than O(n log n); counting, radix and bucket sort use the **value as a position** instead. The price
+  is a restriction on the keys, and *if you cannot state the restriction, you cannot use the sort*.
+- **Counting sort is O(n + k) where k is the RANGE, not the count.** Count → running totals (how many
+  are ≤ v) → place walking the input **backwards** (that is what keeps it stable). 10⁶ marks in
+  0..100: ~2,000,101 operations against 20,000,000. Three values up to 2×10⁹: **MemoryError**.
+- **Radix sort has no correctness of its own — it borrows all of it from stability.** d passes of
+  counting sort, least significant digit first; a later pass must not disturb order among equal
+  digits, or the earlier passes are destroyed silently. 32-bit ints in base 256 = **4 passes, 256
+  counters**.
+- **Bucket sort is O(n) only if the values are uniformly spread** — otherwise O(n²). 10,000 values in
+  one bucket costs 50,000,000 operations instead of 20,000. State the distribution assumption in the
+  same breath as the complexity.
+- **None of them sorts in place** (O(n + k), O(n + b), O(n)), none handles negatives without a
+  `- min` shift, and none works on arbitrary objects or custom comparisons. And in Python, `sorted()`
+  is C: ten times fewer operations in bytecode can still lose on the clock — give the asymptotic
+  answer, then say that.
+
+## Day 057 · dsa — Stability, and what Python's sort actually does
+
+Source: [`days/day-057-stability-and-pythons-sort/01-dsa-stability-and-what-pythons-sort.md`](../../days/day-057-stability-and-pythons-sort/01-dsa-stability-and-what-pythons-sort.md)
+
+- **Stable = elements that compare *equal* keep their original relative order.** It says nothing
+  about unequal keys. Python's `list.sort` and `sorted` are **guaranteed** stable; most other
+  languages are not (`std::sort` no / `std::stable_sort` yes; Java stable for objects, **not** for
+  primitives; Go and Rust each have both).
+- **Why you care: two-pass multi-key sorting.** Sort by the **least significant key first**, then the
+  most significant — the second pass sees ties and a stable sort must not move them. Prefer a tuple
+  key (`(dept, name)`) when you control both; you *need* two passes when a string field must go
+  descending, because `-p.name` raises `TypeError`.
+- **The rule for which sorts are stable: neighbour swaps are stable, long-distance swaps are not.**
+  Stable: insertion, bubble, merge, counting (placed backwards), radix (it *depends* on it).
+  Unstable: **selection, quicksort, heapsort**. Selection's counter-example is `[2a, 2b, 1]`.
+- **The bugs are one character and silent.** `<` instead of `<=` in a merge, `>=` instead of `>` in
+  insertion sort, counting sort placed forwards — all still sort correctly and quietly lose
+  stability. Keep the four-line `is_stable` test with `(key, tag)` pairs. And `reverse=True`
+  **preserves** ties; `reversed(sorted(...))` flips them.
+- **Python runs Timsort:** finds natural runs (a *strictly* descending one is reversed in place),
+  extends short runs with **binary insertion sort** to a minrun of 32-64, merges with **galloping**
+  (1,000 comparisons → ~17 on concatenated sorted lists). Adaptive — 2M sorted integers in ~0.02 s
+  against ~1.1 s random, 55×. Stable, O(n) space, **not** O(n) in general.
+
+## Day 058 · dsa — Custom comparators and sorting by keys
+
+Source: [`days/day-058-custom-comparators/01-dsa-custom-comparators-and-sorting-by.md`](../../days/day-058-custom-comparators/01-dsa-custom-comparators-and-sorting-by.md)
+
+- **`key=` is a function called once per element that returns what to order by.** Sorting does not
+  change; what it *looks at* does. `key=len`, `key=attrgetter("dept", "name")` (~2× faster than a
+  lambda — it is C), `key=lambda t: STATUS_ORDER.get(t["status"], 99)` for an order given as data.
+- **Two fields: a tuple key.** It compares position by position and stops at the first difference, so
+  the tuple's order *is* the order of the rules. Opposite directions: **negate the number** —
+  `(-s.score, s.name)`. Never `reverse=True` on a tuple key: it reverses the tie-break too and gives
+  a **plausible wrong answer with no error**.
+- **A descending *string* field needs two passes**, because `-p.name` raises
+  `TypeError: bad operand type for unary -: 'str'`. Sort by the **least significant key first**, then
+  the most significant with `reverse=True` — correct only because Python's sort is stable.
+- **`key` runs n times; a comparator runs ~n log n times.** At n = 10⁶ that is 1M calls against ~20M,
+  and on the clock 30-50× because of the wrapper. Use `functools.cmp_to_key` **only when no
+  per-element key exists** — the test case is LeetCode 179, where `a` before `b` iff `a+b > b+a`, and
+  **negative means the first argument comes first**.
+- **Prefer `key=` to `__lt__`** unless the type has one order everybody would agree on (`Version`,
+  `Money`). And always end the key with something **unique** if a person or a test will see the
+  output, or two runs on the same data can differ.
+
+## Day 059 · dsa — Sorting revision and mock round
+
+Source: [`days/day-059-sorting-revision/01-dsa-sorting-revision-and-mock-round.md`](../../days/day-059-sorting-revision/01-dsa-sorting-revision-and-mock-round.md)
+
+- **Run the procedure out loud, in order:** what is the data (size · key type · range · nearly
+  sorted · fits in memory) → *would this be easier in order?* → does a **set** answer it in one pass
+  → do I need the **whole order, one value, or the top k** → which sort, and why → the cost **with
+  arithmetic**.
+- **Five leaves of the decision tree are not "sort the array".** Set for membership · quickselect for
+  the k-th (O(n) expected) · heap of size k for the top k and the only one that works on a **stream**
+  · counting sort for bounded integer keys · Timsort for everything else.
+- **Pick two of: guaranteed · in place · stable.** Merge = guaranteed + stable (O(n) space) · heapsort
+  = guaranteed + in place (not stable) · quicksort = in place + fastest, giving up the guarantee.
+  Quicksort does **39% more comparisons** than merge sort and is still 2-3× faster.
+- **In Python the default answer is `sorted()`, and that is defensible:** Timsort is stable,
+  O(n log n) worst case, **linear on nearly-ordered data**, and in C — ~40× faster than a
+  hand-written merge sort (0.15 s against 8 s at n = 10⁶). Switch only for bounded integer keys, a
+  needed guarantee, tight memory, a linked list, or a stream.
+- **Three numbers and five test inputs.** 20,000,000 against 500,000,000,000 (25,000×) ·
+  n + n/2 + n/4 = **2n** · sort-once break-even at ~17 queries. Always test: empty · one element ·
+  all equal · already sorted · reverse sorted. And **keep talking** — a mock round scores clarifying,
+  stating the cost before coding, narrating while stuck, and testing out loud.

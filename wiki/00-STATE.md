@@ -58,5 +58,15 @@ front matter. A day that is missing from this table has not been written yet.
 | 049 | Peak finding, and searching data that is structured but not sorted | Composition over inheritance |
 | 050 | Binary search revision and mock round | Class diagrams and the UML you will actually draw |
 | 051 | Why sorting matters more than any single sorting algorithm | Modelling a real domain |
+| 052 | Bubble, selection and insertion sort, and what each one teaches | Common object-oriented interview questions |
+| 053 | Merge sort | Writing clean, testable classes |
+| 054 | Quicksort and partitioning | Object-oriented design revision and interview questions |
+| 055 | Quickselect: finding the Kth largest without sorting | Single responsibility |
+| 056 | Counting sort, radix sort, and bucket sort | Open for extension, closed for modification |
+| 057 | Stability, and what Python's sort actually does | Liskov substitution |
+| 058 | Custom comparators and sorting by keys | Interface segregation |
+| 059 | Sorting revision and mock round | Dependency inversion |
+| 060 | Hash tables: how a dictionary finds anything instantly | DRY, KISS, and YAGNI |
+| 061 | Collisions, and why a hash map can turn slow | Coupling, cohesion, and code smells |
 
-**51 of 180 days written.**
+**61 of 180 days written.**

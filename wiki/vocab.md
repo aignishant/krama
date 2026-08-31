@@ -58,3 +58,12 @@ cheaper to define it again than to assume the reader knows it.
 - **049** — mixin, negative infinity
 - **050** — dashed, draw two diagrams, filled diamond, hollow triangle, sequence diagram
 - **051** — bounded context, stable, value object
+- **052** — abstract class, comparison, hiding mechanism, interface, method resolution order, protecting state, sorted region, swap
+- **053** — composition root, dependency, recursion, seam, test double
+- **054** — three-way partition
+- **055** — largest
+- **057** — galloping mode
+- **058** — comparator, header interface, role interface, structural
+- **059** — adapter
+- **060** — chaining, load factor
+- **061** — deleted, empty, logical cohesion, low cohesion, occupied, tight coupling

@@ -173,3 +173,71 @@ Source: [`days/day-051-why-sorting-matters/02-system-design-modelling-a-real-dom
 - **Entity = identity persists (compare by id, mutable). Value object = defined by its values (frozen,
   compare by value).** Test: *would I care which one I got?* A **domain service** is the last resort —
   reach for it only after checking you have not missed a class. 6-10 classes, 2-4 roots.
+
+## Day 052 · system-design — Common object-oriented interview questions
+
+Source: [`days/day-052-quadratic-sorts/02-system-design-common-object-oriented-interview-questions.md`](../../days/day-052-quadratic-sorts/02-system-design-common-object-oriented-interview-questions.md)
+
+- **Every standard OOP question is a handbrake question: booklet answer, then the one that matters.**
+  Answer in three beats and stop — **definition** (one sentence) · **situation** where it decided
+  something · **cost** with a number. Budget 40-50 seconds, about 120 words.
+- **Abstract class = "is a kind of"; interface = "is able to".** Abstract class carries state and
+  working methods and spends the one inheritance slot; interface carries signatures and you can have
+  unlimited ones. Python: `abc.ABC` + `@abstractmethod` (fails at *construction*) versus
+  `typing.Protocol` (structural, implementer inherits nothing).
+- **Encapsulation hides data so a rule cannot be broken; abstraction hides mechanism so it can be
+  replaced.** The pillars split the same way: encapsulation and abstraction are about *hiding*;
+  inheritance and polymorphism are about *varying*.
+- **Python has no overloading** — a second `def` silently replaces the first. Use defaults, `*args`,
+  or `functools.singledispatch`. It has full **overriding**, resolved at runtime through `__mro__`,
+  and `super()` means "next in the MRO", not "my parent" — which is the diamond problem, answered.
+- **Say numbers, not principles.** Composition against inheritance: 3 + 2 + 2 + 3 = **10** classes
+  against 3 × 2 × 2 × 3 = **36**. Polymorphism against a switch: 1 new file + 1 line against 4 edits
+  to working code. And define `__hash__` whenever you define `__eq__`, on fields that never change.
+
+## Day 053 · system-design — Writing clean, testable classes
+
+Source: [`days/day-053-merge-sort/02-system-design-writing-clean-testable-classes.md`](../../days/day-053-merge-sort/02-system-design-writing-clean-testable-classes.md)
+
+- **The whole technique in one sentence: a class asks for what it needs and never goes looking for
+  it.** A constructor that names a driver, host or URL has welded itself shut; take the collaborator
+  as an argument instead. That is **dependency injection**, and it needs no framework — it is
+  argument passing.
+- **Every injected dependency is a seam.** Three things destroy testability: constructing
+  collaborators inside `__init__` · calling `datetime.now()`, `random`, `uuid` or `os.environ`
+  directly · global mutable state. Inject the first, inject a **clock** for the second, delete the
+  third.
+- **Four doubles, used precisely:** dummy (never used) · stub (canned answers) · **fake** (a real
+  simplified implementation — the in-memory dict) · mock (records calls). **Prefer fakes**; a mock
+  asserts *how* and breaks on honest refactors. Use a mock when the outcome is an effect leaving the
+  system.
+- **The argument isn't speed, it's reachability.** ~18 of 40 branches in a service are error paths
+  and none are reachable with a live database; a repository that raises `ConnectionError` on demand
+  makes them all testable. Speed follows: 800 tests, 48 s → 0.3 s.
+- **Concrete classes are named once, in the composition root** (`main()`, or FastAPI's
+  `dependency_overrides`); `grep -rn "psycopg" src/ --exclude=main.py` should be empty. And concede
+  the limit: **fake the collaborator to test your logic, use the real engine (testcontainers) to test
+  the integration** — plus one contract test run against both, so the fake cannot drift.
+
+## Day 054 · system-design — Object-oriented design revision and interview questions
+
+Source: [`days/day-054-quicksort/02-system-design-object-oriented-design-revision-and-interview.md`](../../days/day-054-quicksort/02-system-design-object-oriented-design-revision-and-interview.md)
+
+- **Run five moves on a clock, and say the plan at minute one:** 0-5 clarify and scope (name what you
+  leave out) · 5-10 nouns, 6-10 classes, one sentence each · 10-20 the class diagram with a
+  multiplicity on every line · 20-35 code the one flow that matters · 35-42 their extension, answered
+  in **edits** · 42-45 gaps.
+- **Find the noun nobody wrote down.** "A guest books a room" has no home for the dates, the price,
+  the status or the cancellation deadline — that is `Booking`. Second missing noun: `Inventory`. The
+  test: *is there a rule, a date or an amount of money with no home?*
+- **Behaviour on the class that owns the data.** `booking.cancel(on)`, `room.can_host(n)`,
+  `DateRange` refusing to exist with `end <= start`. Fields plus a `BookingService` is the anaemic
+  model and it is how this round is lost.
+- **An interface only where you can name the second implementation.** Here: `PricingStrategy`
+  (flat/seasonal — and **wrap**, don't subclass) and `CancellationPolicy` (free-until-48h /
+  non-refundable). Not `IHotel`. A repository counts, because the second implementation is the test
+  fake.
+- **Every version of this prompt has the same race: check, then write.** ~2.5 ms window ≈ 5% per
+  contended room-night ≈ a dozen double bookings a day. Fix it by making check-and-write **one**
+  operation — `UPDATE ... WHERE remaining > 0` — plus a 10-minute **hold with a TTL**, because
+  payment is 12 s median and 40 s at p95. An in-process lock is a placeholder; say so.
