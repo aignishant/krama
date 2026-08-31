@@ -42,3 +42,9 @@ cheaper to define it again than to assume the reader knows it.
 - **032** — cost, selectivity
 - **033** — serialisable
 - **034** — snapshot, write skew
+- **035** — exclusive lock, negative, shared lock, victim
+- **037** — prefix sums, sentinel, time-to-live
+- **038** — exactly, negatives, same remainder
+- **039** — partition key
+- **040** — left, tree
+- **041** — connection, lazy loading, on first touch

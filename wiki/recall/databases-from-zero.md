@@ -144,3 +144,113 @@ Source: [`days/day-034-at-most-k/02-system-design-isolation-levels-and-the-anoma
   fires. Fix with `FOR UPDATE` on what you checked, or serialisable.
 - **Choose per transaction:** default + SQL arithmetic for writes, repeatable read for reports,
   serialisable (retried) for check-then-act. Say what you are accepting.
+
+## Day 035 · system-design — Locking and deadlocks
+
+Source: [`days/day-035-choosing-the-pattern/02-system-design-locking-and-deadlocks.md`](../../days/day-035-choosing-the-pattern/02-system-design-locking-and-deadlocks.md)
+
+- **Blocking is a queue; deadlock is a cycle.** T1 holds A wants B, T2 holds B wants A — nobody can
+  ever move. Queues drain; cycles need a victim.
+- **The database resolves it:** after `deadlock_timeout` (1 s), find the cycle in the waits-for
+  graph, abort one transaction — `ERROR: deadlock detected` — and the app **retries from BEGIN**.
+- **Prevention rule number one: lock in a consistent order** — lowest id first, everywhere;
+  `WHERE id IN (...) ORDER BY id FOR UPDATE` puts the discipline in the query.
+- **`FOR UPDATE SKIP LOCKED` turns a table into a job queue** — workers claim different rows, a
+  crashed worker's job frees itself.
+- **Optimistic locking (version column) has no deadlocks** — right when contention is rare; a hot
+  row wants pessimistic locks or database-side arithmetic instead.
+
+## Day 036 · system-design — NoSQL: what it actually means
+
+Source: [`days/day-036-two-pointers-revision/02-system-design-nosql-what-it-actually-means.md`](../../days/day-036-two-pointers-revision/02-system-design-nosql-what-it-actually-means.md)
+
+- **NoSQL = four models, one decision:** store data in the shape you will read it. Arranged for
+  serving; relational is arranged for questions.
+- **The trade, both directions:** buy designed access paths + horizontal scaling by key; sell
+  ad-hoc queries, cross-record transactions, single-copy facts.
+- **"Faster" needs an object.** Faster at the shaped path (assembly moved to write time); slower or
+  silent elsewhere. Speed belongs to a query against an arrangement.
+- **The scaling claim, stated honestly:** no joins → split by key → one machine per request. It
+  matters above what one node holds (~tens of thousands of TPS) — most systems never get there.
+- **Families and homes:** Redis/DynamoDB key-value, MongoDB document, Cassandra wide-column, Neo4j
+  graph — and Postgres JSONB quietly covers many "need Mongo" cases. Default relational; move
+  access paths, not systems.
+
+## Day 037 · system-design — Key-value stores
+
+Source: [`days/day-037-prefix-sums/02-system-design-key-value-stores.md`](../../days/day-037-prefix-sums/02-system-design-key-value-stores.md)
+
+- **One promise: GET by exact key, O(1), any size — and it never looks inside the value.** Every
+  future question must be a key you wrote at write time.
+- **Redis = RAM shelf:** sub-ms, atomic `INCR`, TTL, single-threaded; durability optional
+  (RDB gap / AOF ≈1 s) — nothing irreplaceable lives only there.
+- **DynamoDB = durable, partitioned by hashed key** (+ optional sort key), single-digit ms at any
+  scale, **priced per request** — chatty designs pay linearly.
+- **Homes: sessions, carts, counters, rate limiters, flags** — fetched whole, by identity, often
+  expiring. Sizing: count × size against RAM.
+- **It sits beside the system of record, not instead of it** — Postgres owns the truth, the shelf
+  absorbs every-request reads, and every copy has an owner and a reconciliation path.
+
+## Day 038 · system-design — Document databases
+
+Source: [`days/day-038-subarray-sum-k/02-system-design-document-databases.md`](../../days/day-038-subarray-sum-k/02-system-design-document-databases.md)
+
+- **A document = one entity + its belongings, read and written as one unit; atomicity ends at the
+  document's edge.** Model so everyday writes never cross it.
+- **Embed or reference, by three questions:** read together? change-rate × copies? unbounded
+  growth? Bounded + read-together + own-able → embed; shared or growing → reference.
+- **The rename answer:** truth in `users`, embedded display names fanned out by an idempotent
+  background job — every copy has an owner and a reconciliation path, or the copy is not made.
+- **Ceilings:** 16 MB hard cap; reads haul the whole document far sooner. Run size × growth on
+  every array at design time.
+- **Trees tolerate documents; webs want tables.** And nested data alone justifies JSONB, not a
+  second database.
+
+## Day 039 · system-design — Wide-column and time-series stores
+
+Source: [`days/day-039-difference-arrays/02-system-design-wide-column-and-time-series-stores.md`](../../days/day-039-difference-arrays/02-system-design-wide-column-and-time-series-stores.md)
+
+- **Wide-column = two-part key:** partition key → which machine and bucket (hashed); clustering
+  columns → sort order inside. The designed query reads one sorted slice; everything else fans
+  out to the whole cluster.
+- **One table per query, written at write time** — no joins, no ad-hoc filters; a new question is
+  a new table, not a new index. The promise: *I already know my queries.*
+- **Writes scale because of the LSM** — append, flush, background-merge (day 031), every node
+  accepts writes: millions/s per cluster. Price: read merges and compaction forever.
+- **Key stress-test: unbounded partitions (bucket by time) and hot partitions (spread the key)** —
+  both are landing-rule decisions, unfixable by tuning later.
+- **Time series = the model + compression + retention:** delta encoding ~50×; raw briefly,
+  downsampled aggregates long, chunks dropped whole. TimescaleDB beside an app; Prometheus for
+  infra; InfluxDB/Cassandra at cluster scale.
+
+## Day 040 · system-design — Choosing SQL or NoSQL in an interview
+
+Source: [`days/day-040-2d-prefix-sums/02-system-design-choosing-sql-or-nosql.md`](../../days/day-040-2d-prefix-sums/02-system-design-choosing-sql-or-nosql.md)
+
+- **Never answer the binary — answer per access path.** Patterns → invariants → numbers →
+  settledness, and a product name only at the end.
+- **Invariants pick the core:** cross-entity transactions and constraints = relational. Webs want
+  tables; trees tolerate anything (day 038).
+- **Numbers carve the exceptions:** one node ≈ 10–50k TPS / terabytes; 1B events/day ≈ 11.6k/s —
+  inside it. Sessions → Redis (037); firehose with fixed queries → wide-column/TS (039).
+- **Every carve-out is a copy with an owner (029) and an operational bill** — default to the
+  store you already run; write trigger numbers instead of paying for scale early.
+- **The winning close:** say what evidence would change your mind. The procedure is the answer;
+  the diagram is just today's output.
+
+## Day 041 · system-design — Connection pools, ORMs, and the N+1 query
+
+Source: [`days/day-041-prefix-revision/02-system-design-connection-pools-orms.md`](../../days/day-041-prefix-revision/02-system-design-connection-pools-orms.md)
+
+- **N+1 = one query for the list + one per item**, emitted by lazy loading in a loop. Signature:
+  identical statements differing only in an id. Invisible to EXPLAIN — day 032's warning.
+- **Latency is paid per conversation turn:** 101 × 1 ms sequential beats the database at
+  nothing; 2–3 eager queries carry the same data. Fix: declare the read before the loop —
+  join for to-one (`select_related`), batched `IN` for to-many (`prefetch_related`).
+- **Guard rails, not vigilance:** query counts visible in dev, `assertNumQueries` in CI,
+  `pg_stat_statements` by call count in production.
+- **Pool always:** opening = TCP + TLS + auth + a Postgres process (~5–10 ms, ~7 MB). Size near
+  cores × 2 — bigger pools are queue positions, not throughput.
+- **Fleet arithmetic:** instances × pool vs `max_connections` → PgBouncer multiplexes
+  (transaction mode trades away session state). Most "outgrew Postgres" stories are
+  conversation-shape stories.

@@ -113,3 +113,33 @@ Source: [`days/day-034-at-most-k/01-dsa-at-most-k-and-the-exactly-k-trick.md`](.
   (`IndexError`), and product-less-than-k needs `k <= 1 → 0` for the same reason.
 - **"How many" → accumulate; "longest" → max.** Say which before typing. And sums with negatives
   break the trick — that is prefix sums, [day 038](../../days/day-038-subarray-sum-k/README.md).
+
+## Day 035 · dsa — Choosing between two pointers and a window, under pressure
+
+Source: [`days/day-035-choosing-the-pattern/01-dsa-choosing-between-two-pointers.md`](../../days/day-035-choosing-the-pattern/01-dsa-choosing-between-two-pointers.md)
+
+- **Route before solving, out loud.** Q1 contiguous? Q2 fixed k? Q3 best or count? Q4 monotonic?
+  Q5 which pointer shape? Under a minute, every problem.
+- **Words route wrong; structure routes right.** "Longest" on a subsequence is no window;
+  "indices" plus sorting destroys the answer — hash map.
+- **Two leaves lead out of the family:** negatives in a sum → prefix sums
+  ([day 037](../../days/day-037-prefix-sums/README.md)); "subsequence" → not this corridor at all.
+- **Overlapping source and destination → write from the free end** — merge sorted arrays runs
+  backwards, and `i >= 0` guards the wrap to `nums1[-1]`.
+- **Everything here is O(n).** The differentiator is the first minute, not the asymptotics — one
+  minute of routing against twenty minutes of misroute.
+
+## Day 036 · dsa — Two pointers revision and mock round
+
+Source: [`days/day-036-two-pointers-revision/01-dsa-two-pointers-revision-and-mock.md`](../../days/day-036-two-pointers-revision/01-dsa-two-pointers-revision-and-mock.md)
+
+- **The invariant is the answer.** Seven tools, seven sentences — say the sentence before the code,
+  every time; a loop you cannot defend scores as a guess.
+- **Container: discard the shorter line** — it caps every pair it could still form at smaller
+  width. Moving the taller line returns 8 where 49 exists.
+- **Counting has two directions.** At-most survives shortening → add `right - left + 1`. At-least
+  survives lengthening → shrink while valid, add `left`. The wrong one computes the complement.
+- **Pressure eats, in order: the routing minute, the edge cases, the narration.** Counter each with
+  a ritual — one sentence before code, five inputs by voice, stuck-narration instead of silence.
+- **Everything here is O(n) and the interviewer knows it.** The score lives in the sentences
+  between the lines of code.

@@ -41,5 +41,12 @@ front matter. A day that is missing from this table has not been written yet.
 | 032 | Variable-size sliding window | Query plans and the slow query |
 | 033 | Window plus hash map: the longest-substring family | Transactions and ACID |
 | 034 | At-most-K, and the exactly-K trick | Isolation levels and the anomalies they allow |
+| 035 | Choosing between two pointers and a window, under pressure | Locking and deadlocks |
+| 036 | Two pointers revision and mock round | NoSQL: what it actually means |
+| 037 | Prefix sums: answering range queries instantly | Key-value stores |
+| 038 | Subarray sum equals K: prefix plus hash map | Document databases |
+| 039 | Difference arrays: range updates, cheaply | Wide-column and time-series stores |
+| 040 | 2D prefix sums and inclusion-exclusion | Choosing SQL or NoSQL in an interview |
+| 041 | Prefix sums revision and mock round | Connection pools, ORMs, and the N+1 query |
 
-**34 of 180 days written.**
+**41 of 180 days written.**
