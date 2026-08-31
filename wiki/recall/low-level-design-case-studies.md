@@ -394,3 +394,121 @@ Source: [`days/day-091-subsets/02-system-design-design-a-logging-framework.md`](
   queue — the logs you most want — so **flush on shutdown and write CRITICAL synchronously**. And **a
   logger must never raise**: wrap every emit, fall back to `repr`, and **never interpret user data as a
   template** (Log4Shell).
+
+## Day 092 · system-design — Design a notification service
+
+Source: [`days/day-092-permutations/02-system-design-design-a-notification-service.md`](../../days/day-092-permutations/02-system-design-design-a-notification-service.md)
+
+- **Callers send events, never messages.** `notify(user, ORDER_SHIPPED, data)`. That one rule means the
+  service owns every word, and a new channel or language touches no caller. Then five decisions in
+  order: **idempotency → preferences → channels → render per channel → enqueue one notification per
+  channel.**
+- **Two interfaces, not one.** `Channel` answers the guaranteed follow-up "now add WhatsApp" — one
+  class, one registration line, zero changes to the dispatcher. `RetryPolicy` is the one candidates
+  miss: **a shipping update retries with backoff; a password reset must not be retried after the code
+  expires**, because a late OTP is worse than none.
+- **`SENT` ≠ `DELIVERED`.** Sent means the provider accepted it; delivered arrives later by webhook and
+  only some channels report it. And the queue is **at-least-once**, so the worker must be idempotent: a
+  **compare-and-set** on the status before sending, plus a **unique constraint** on the caller's
+  idempotency key.
+- **Classify every provider error as retryable or permanent.** A timeout is retryable; "no such number"
+  is not, and retrying it five times costs five times the money for a message that can never arrive. Add
+  **jitter** to the backoff, or a brief outage returns as one synchronised spike — a thundering herd.
+- **The numbers:** 10M users × 5/day = **50M notifications/day** = 578/s average, ~1,700/s peak, ×1.8
+  channels ≈ **3,000 provider calls/s**. Log at 300 B/row = **15 GB/day, 5.5 TB/year** → keep 90 days
+  hot. And **SMS at ₹0.15 × 2.5M/day ≈ ₹11M/month**, which is why channel choice is a cost decision.
+  **Broadcast needs its own low-priority queue**, or it starves password resets.
+
+## Day 093 · system-design — Design a file system
+
+Source: [`days/day-093-combinations/02-system-design-design-a-file-system.md`](../../days/day-093-combinations/02-system-design-design-a-file-system.md)
+
+- **One abstract `Entry` with a name and `size()`; `File` and `Directory` both extend it, and a
+  `Directory` holds a `dict[str, Entry]`** — so a directory can hold directories. That shared type is
+  the design: `du` is four lines and `find` is six, with **no `isinstance` anywhere**.
+- **Every operation is "resolve the path, then do one small thing."** Resolution is one dict lookup per
+  component. It has **four outcomes, not two**: missing directory, a file where a directory was
+  expected, missing final component — and for `mkdir` that last one is the work, not an error. And
+  **`ls` on a file returns the file's own name** — the detail everybody forgets.
+- **`dict` of children, not a list.** Lookup is on every component of every call: 100,000 files in a
+  directory makes a five-part resolve **5 ms instead of 250 ns**. The price is that `ls` sorts, which is
+  the rare operation. **Names are unique within a directory, not globally.**
+- **File content is a list of chunks, joined lazily** — `content += text` copies the whole string each
+  time, about **5 GB of copying for 10,000 appends of 100 bytes**. Lock **per file**, not globally; the
+  two real races are two `mkdir`s of the same directory (one silently discards the other's contents) and
+  a read collapsing chunks during an append.
+- **A million files ≈ 300 MB of metadata before any content** — the reason HDFS's NameNode is the limit
+  of a Hadoop cluster. **`find` is a full subtree walk**; making it fast means a second name→paths map,
+  ~150 MB per million and a write on every mutation. **S3 has no directories** — the whole path is one
+  flat key — so renaming a folder is O(1) here and a million copy-and-deletes there.
+
+## Day 094 · system-design — Design snake and ladder
+
+Source: [`days/day-094-backtracking/02-system-design-design-snake-and-ladder.md`](../../days/day-094-backtracking/02-system-design-design-snake-and-ladder.md)
+
+- **A snake and a ladder are the same object.** One `dict[int, int]` from square to destination;
+  `jumps.get(cell, cell)` defaults to the square itself so there is no branch for "no jump". `is_ladder`
+  is **derived** from `end > start`, never stored. Two classes here doubles every piece of logic and buys
+  nothing.
+- **`Dice` is an interface with a `ScriptedDice` for tests** — otherwise no rule in the game is testable,
+  only surveyable. **Randomness, time and I/O are the three things a design must let you replace.** It is
+  also what moves the roll to the server for an online game, where a client must never choose its own
+  number.
+- **The rules that vary are data, not branches:** exact finish, extra turn on six (capped at three),
+  chained jumps, entry rule — all fields on `GameRules`. And **`play_turn` returns a `TurnResult`, never
+  prints**, so one `Game` serves a terminal, a phone and a simulation.
+- **The win check comes AFTER the jump** — a ladder can win the game. **Chained jumps must be validated
+  at load time** (no jump may end on another jump's start) or 30↔60 loops for ever. Any
+  "play until someone wins" loop needs a **turn cap**, because the distribution has a long tail.
+- **The numbers:** one game ≈ 2.3 KB, **board shared not copied** → 100,000 concurrent games ≈ **110 MB**;
+  mean **~39 turns** to finish, 90th percentile ~72; ~12,000 turns/second is nothing in CPU — the real
+  constraint is **400,000 WebSockets ≈ 8 servers**. A game is **inherently serial: one writer per game**,
+  so use a **version compare-and-set** plus a turn number for idempotency, never a lock.
+
+## Day 095 · system-design — Design an online auction
+
+Source: [`days/day-095-n-queens/02-system-design-design-an-online-auction.md`](../../days/day-095-n-queens/02-system-design-design-an-online-auction.md)
+
+- **A bid is a MAXIMUM, not a price.** The visible price is the **loser's** maximum plus one increment,
+  capped at the winner's — so ₹1,200 usually wins at ₹950. Consequences: a bid can be **accepted and
+  instantly losing**, a losing bid **still raises the price**, and **maximums must never leak** anywhere.
+  Ties go to the **earlier** bid.
+- **Two bids at once: a conditional write, never read-then-write.** `UPDATE … WHERE id = ? AND version =
+  ?` — one row means you won, **zero rows means re-read and recompute**. Read-modify-write is a **lost
+  update**: one bid vanishes and its bidder is told they are leading. Not a Redis lock — the row is
+  already the single source of truth.
+- **The end TIME is the authority, not a status column.** `now < ends_at` is checked inside the same
+  transaction as the write, so a late closing job cannot accept bids it should not. The job does only
+  side effects, and `ENDED` and `SOLD` are **separate states** because payment can fail.
+- **Anti-snipe: a bid in the final window extends the end by that window, capped.** Policy, so it lives
+  in a rules object with the tiered increments. The price the design pays is that the end time stops
+  being predictable.
+- **The numbers reframe it: 10M auctions × 12 bids ÷ 7 days ≈ 200 bids/second globally — nothing.** The
+  problem is **~170 writes/second to ONE row** in a hot auction's last 30 seconds. At a 2 ms window that
+  is a ~34% collision rate, **~1.5 attempts expected**, 0.5% exhausting five retries. For the hottest
+  listings, **one queue partition per auction id = one writer, zero contention.** Cache the price for
+  **display** (1–2 s TTL, ~33:1 read:write) — **never for the decision.**
+
+## Day 096 · system-design — Low-level design revision and full mock
+
+Source: [`days/day-096-grid-backtracking/02-system-design-low-level-design-revision-and-full.md`](../../days/day-096-grid-backtracking/02-system-design-low-level-design-revision-and-full.md)
+
+- **Five moves, always, in this order: clarify (0–5) · nouns (5–10) · class diagram (10–20) · the
+  interesting part (20–30) · code (30–40).** Moves 1–3 are table stakes. **You are marked on move 4.**
+  Find it by asking: *which sentence in the prompt would a product manager change next year?* Put an
+  interface there and show **two** implementations.
+- **Fifteen of eighteen case studies had a strategy at their centre** — `EvictionPolicy`,
+  `PricingStrategy`, `SplitStrategy`, `Channel`, `Dice`, `SpotAllocationStrategy`. The tells: *"depending
+  on"* → **strategy**; *"and then it becomes"* → **state machine**; *"notify"* → **observer**;
+  *"contains other"* → **composite**.
+- **Randomness, time and I/O must be replaceable** (`Dice`, `Clock`, `Channel`) or nothing is testable.
+  **Return a result object, never print** — one engine then serves a terminal, a phone and a simulation.
+  **Local rules on the entity, global rules in a service.**
+- **Chess: legality has two layers.** `Piece.candidate_moves` is local and per subclass;
+  `MoveValidator` applies each candidate, asks whether your own king is attacked, and **undoes** it —
+  which is why `Move` must carry the captured piece. That one filter gives **pins, discovered check and
+  escaping check for free**, and then **checkmate = `in_check and not legal_moves`, stalemate =
+  `not in_check and not legal_moves`.**
+- **The five ways to lose:** coding at minute three; silence; anaemic classes plus a God service; an
+  **enum with a switch where polymorphism belongs**; and chasing completeness instead of naming what you
+  left out. **Nobody finishes** — at minute 38, say what is missing and where each piece would attach.

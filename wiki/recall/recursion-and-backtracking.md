@@ -124,3 +124,142 @@ Source: [`days/day-091-subsets/01-dsa-subsets-the-include-or-exclude-tree.md`](.
   the **recursive** one generalises (cap it → combinations, add a check → N-Queens), the **iterative
   doubling** one is two lines and has no copy trap (seed it `[[]]`, not `[]`), and the **bitmask** one
   works to n ≤ 63.
+
+## Day 092 · dsa — Permutations
+
+Source: [`days/day-092-permutations/01-dsa-permutations.md`](../../days/day-092-permutations/01-dsa-permutations.md)
+
+- **`n` choices, then `n − 1`, then `n − 2` — so `n!` permutations, and you cannot beat `n!` because the
+  output *is* `n!` things.** Count it out loud; never say "exponential", because **`n!` is worse than
+  `2ⁿ` and overtakes it at n = 4**. n = 10 is 3.6 million and fine; **n = 13 is 6 billion and
+  impossible**, so the bound in the question tells you which of the two is wanted.
+- **`start` does not work here.** For subsets `[1,2]` and `[2,1]` are the same answer; for permutations
+  they are different, so you look at every element every time and must track **which are already
+  placed** — a `used` boolean per element.
+- **Two chooses, two un-chooses: `used[i] = True`, append, recurse, pop, `used[i] = False`.** Forgetting
+  the unmark gives **one permutation instead of `n!`**, silently. And append `current[:]` — a **copy** —
+  or you get `n!` references to one empty list.
+- **Duplicates: sort, then skip when `items[i] == items[i-1]` AND `not used[i-1]`** — meaning *"my
+  identical twin has not been placed yet, so this branch is a repeat"*. In one sentence: **among equal
+  elements, place them left to right.** This is **not** subsets' `i > start`. Prune, never filter —
+  `set(list_of_lists)` raises `TypeError: unhashable type: 'list'`.
+- **The swap version needs no `used` array**: fix positions left to right, swap `i` into `first`,
+  recurse, **swap back**. O(n) space total. But it **cannot use the adjacency rule for duplicates**,
+  because swapping destroys sorted order — use a per-level `set`, or use the `used` version. And
+  `itertools.permutations` exists, yields **tuples**, and does **not** de-duplicate.
+
+## Day 093 · dsa — Combinations and combination sum
+
+Source: [`days/day-093-combinations/01-dsa-combinations-and-combination-sum.md`](../../days/day-093-combinations/01-dsa-combinations-and-combination-sum.md)
+
+- **Combination = order does not matter, so carry a `start` index and never look backwards.** One loop
+  bound removes every duplicate ordering — no `used` array, no de-duplication. The invariant: every
+  answer is generated in **non-decreasing order**, so there is exactly one path to it.
+- **Sort, then `break` when `candidates[i] > remaining`** — valid only because it is sorted, and the
+  sort is therefore not cosmetic. Unsorted, the `break` drops real answers: `[7,2,6,3]` target 7 gives
+  `[[7]]` instead of `[[2,2,3],[7]]`.
+- **The one character: `build(i, …)` allows reuse; `build(i + 1, …)` uses each element once.** Say which
+  one aloud before typing it. `i + 1` on Combination Sum I gives `[[7]]` instead of `[[2,2,3],[7]]`,
+  with no error.
+- **Combination Sum II has TWO skips with TWO keywords**: `break` for too big, `continue` for
+  `i > start and c[i] == c[i-1]`. `break` on the duplicate loses every later value — four answers become
+  two. And it is **`i > start` here**, versus **`not used[i-1]`** in the permutations tree: same job, two
+  tree shapes.
+- **Depth is `target / smallest candidate`, not `n`** — the only problem in the phase where the stack
+  can actually overflow (`RecursionError` at target 5000 with a candidate of 1), and a **zero candidate
+  never terminates** because the measure stops decreasing. **"How many" is never backtracking**: it is
+  `ways[t] += ways[t-c]`, O(target × n) — 1,500 steps instead of 50,000 lists.
+
+## Day 094 · dsa — Backtracking: the undo step
+
+Source: [`days/day-094-backtracking/01-dsa-backtracking-the-undo-step.md`](../../days/day-094-backtracking/01-dsa-backtracking-the-undo-step.md)
+
+- **The invariant, and there is only one: when a call returns, every piece of shared state is exactly
+  what it was when the call started.** The pop is **not cleanup** — `current` is one object shared by
+  every branch, and the un-choose is what makes the *sibling* branch correct. A missing undo is
+  **always silent**: subsets gets half its answers wrong, permutations returns **one answer instead of
+  `n!`**.
+- **State is three kinds: the partial answer, the availability marks, and derived bookkeeping** (a
+  running sum, an occupied-column set). The third is where the bugs live. **Count the lines before the
+  call and the lines after; they must match, and undo in reverse order.**
+- **Anything passed as an argument needs no undo** — ints, strings and tuples are values, so
+  `build(i+1, remaining - c)` has nothing to restore. Move state into the parameter list wherever you
+  can; it is state you cannot forget.
+- **The `if not is_valid: continue` BEFORE the apply is what makes it backtracking rather than
+  enumeration.** Check on the way down, never at the leaf: **N-Queens at n = 8 is 19,173,961 nodes
+  without it and 2,057 with it.** Every undo must be **O(1)** — `board[r][c] = "."`, not a fresh copy —
+  or the pruning stops being affordable.
+- **Two styles: mutate-and-undo (O(1) per node, must not forget) or pass-a-copy (`explore(current +
+  [x])`, cannot be got wrong, allocates at every node).** Never mix them — popping after passing a copy
+  gives `IndexError: pop from empty list`. And **undo before an early `return`**, or a reused grid
+  reports no path when one exists.
+
+## Day 095 · dsa — N-Queens and constraint grids
+
+Source: [`days/day-095-n-queens/01-dsa-n-queens-and-constraint-grids.md`](../../days/day-095-n-queens/01-dsa-n-queens-and-constraint-grids.md)
+
+- **The reduction is the answer: no two queens share a row, so there is exactly one per row.** That turns
+  "choose `n` squares from `n²`" — **4.4 billion** at n = 8 — into "one column per row", at most
+  **`8! = 40,320`**. The representation follows: **a list of `n` column numbers, never a grid**, so a row
+  conflict is unrepresentable rather than checked.
+- **Every `\` diagonal has a constant `row − col`; every `/` diagonal has a constant `row + col`.** So
+  three sets — `cols`, `row − col`, `row + col` — make the conflict test **three O(1) lookups**. With
+  lists instead of sets, `row − col` is negative and Python indexes from the end: **silently wrong
+  answers**, so add an offset of `n − 1`.
+- **The `if` goes BEFORE the descent.** Checking on the way down visits **2,057 nodes at n = 8**;
+  checking at the leaf visits **19,173,961**. Same program, one line moved. This is the most convincing
+  number in the phase.
+- **Four changes, four restores** — three sets and the placement. Forget the anti-diagonal removal and
+  `total_n_queens(8)` returns **0**, with no error. And **render the board only at a solution**: at
+  n = 12 that is 14,200 renders instead of 856,000.
+- **`O(n!)` is a loose upper bound and there is no closed form** — quote measurements: n = 8 ms, n = 12 a
+  second, n = 14 half a minute. **n = 2 and n = 3 have no solutions.** Space is **O(n)**. Faster:
+  **bitmasks**, where `cols` is absolute but `diag` shifts left and `anti` shifts right each row (5–10×);
+  **symmetry** gives 2×. **Sudoku is the same program**: depth = next blank, choices = 1–9, sets = row,
+  column, box at `(r//3)*3 + (c//3)`.
+
+## Day 096 · dsa — Sudoku, word search, and grid backtracking
+
+Source: [`days/day-096-grid-backtracking/01-dsa-sudoku-word-search-and-grid.md`](../../days/day-096-grid-backtracking/01-dsa-sudoku-word-search-and-grid.md)
+
+- **Classify first: path or region.** A **path** problem (word search, maze, all paths) **clears the
+  marker on the way out**, because a cell used by one route must be free for another —
+  `O(rows·cols·3^L)`. A **region** problem (islands, flood fill) **never clears it**, because a cell
+  belongs to one region for ever — `O(rows·cols)`. **One line, exponential versus linear.** Swap them and
+  word search reports absent words; islands raises `RecursionError`.
+- **Bounds check FIRST, and it does not raise if you skip it** — `board[-1]` is the last row, so the
+  search silently wraps around the grid. Directions live in one tuple `((-1,0),(1,0),(0,-1),(0,1))`,
+  never four copies of the call.
+- **Mark by overwriting the cell with a sentinel, restore after** — zero extra space, and the restore is
+  the un-choose. Use `found = any(...)` then restore, never `if search(...): return True` inside a loop —
+  that **early return skips the restore** and leaves `#` in the grid for the next search.
+- **Complexity is `O(rows × cols × 4 × 3^(L-1))` — the `3`, not `4`, because one neighbour is always
+  where you came from and it is marked.** 6 × 6 grid: L = 8 is 315,000 paths, L = 12 is 25 million,
+  L = 16 will not finish. Space `O(L)`.
+- **Two one-line prunes that remove exponential subtrees:** reject if `Counter(word) > Counter(grid)`,
+  and **reverse the word when its last letter is rarer than its first** (36× fewer starting cells on a
+  grid of `A`s with one `Z`). **Sudoku is the same program** — three sets, pre-computed blanks, and the
+  **most-constrained cell first**, which is ~100× on hard puzzles and free on easy ones.
+
+## Day 097 · dsa — Recursion and backtracking revision and mock round
+
+Source: [`days/day-097-recursion-revision/01-dsa-recursion-and-backtracking-revision.md`](../../days/day-097-recursion-revision/01-dsa-recursion-and-backtracking-revision.md)
+
+- **Two questions choose the template, and that is the whole first minute.** *Does order matter?* Same
+  answer for `[1,2]` and `[2,1]` → **`start` index, never look backwards**; different → **`used` array,
+  look at everything**. *Reuse allowed?* Yes → **recurse on `i`**; no → **`i + 1`** or `used[i]`. Four
+  combinations, four templates, and everything else sits on top of one of them.
+- **The five rules that survive the phase:** append a **copy**; **count the chooses and the undoes** and
+  undo in reverse; **prune before descending, never at the leaf** (N-Queens n = 8: **2,057 vs
+  19,173,961**); **anything passed as an argument needs no undo**; and **say the output size first** —
+  `2ⁿ`, `n!`, `C(n,k)` — which removes "can you do better?".
+- **The duplicate rule, three outfits, one sentence:** *do not start two branches with the same value at
+  the same level.* `i > start` in the start-index tree, `not used[i-1]` in the used-array tree, a
+  per-level `set` in the swap tree. **Always sort first**, or both the dedupe and the `break` are
+  silently wrong.
+- **`break` when sorted and monotone; `continue` otherwise.** Too-big → `break`; duplicate → `continue`.
+  Swapping the first loses speed silently; swapping the second loses **half the answers**.
+- **Read the bound: `n ≤ 8` means `n!`, `n ≤ 20` means `2ⁿ`, `n ≤ 25` means `2ⁿ` and it is tight.** Extra
+  space is **O(depth)** in every problem here — time is the whole tree, space is the deepest path — and
+  the **only** stack risk in the phase is **combination sum**, whose depth is `target / min candidate`.
+  **"How many ways" is not backtracking** when the sub-state repeats: that is dynamic programming.

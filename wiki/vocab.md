@@ -93,3 +93,20 @@ cheaper to define it again than to assume the reader knows it.
 - **089** — exactly correct, latency, lazy refill
 - **090** — cache stampede, expiry, fifo, lfu, lru, never forgets, tail-recursive
 - **091** — correlation id
+- **092** — channels, template, three distinct orderings
+- **093** — candidates, file, root, yes
+- **094** — jump
+- **095** — anti-sniping, snipe
+- **096** — four-direction move, scoping
+- **097** — dau, mau, qps, tiny constraint
+- **098** — binary tree, horizontal scaling, leaf, load balancer, vertical scaling
+- **099** — request-aware routing
+- **100** — breadth-first, depth-first, elastic scaling, shared store
+- **101** — origin
+- **102** — approximate, collapsing writes, write-around with invalidation, write-through
+- **103** — edge compute, origin pull
+- **104** — dangerous, highest node
+- **105** — leader
+- **106** — shard
+- **107** — cache it, rebalancing
+- **108** — assignment rule, hash ring, key property

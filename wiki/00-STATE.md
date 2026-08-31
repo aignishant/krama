@@ -98,5 +98,22 @@ front matter. A day that is missing from this table has not been written yet.
 | 089 | Writing a recursive function that terminates | Design a rate limiter, at the object level |
 | 090 | Recursion on arrays and strings | Design an in-memory cache with eviction |
 | 091 | Subsets: the include-or-exclude tree | Design a logging framework |
+| 092 | Permutations | Design a notification service |
+| 093 | Combinations and combination sum | Design a file system |
+| 094 | Backtracking: the undo step | Design snake and ladder |
+| 095 | N-Queens and constraint grids | Design an online auction |
+| 096 | Sudoku, word search, and grid backtracking | Low-level design revision and full mock |
+| 097 | Recursion and backtracking revision and mock round | What scale actually means, in numbers |
+| 098 | What a tree is, and the vocabulary you need | Vertical versus horizontal scaling |
+| 099 | Binary trees in code | Load balancers |
+| 100 | Depth-first traversal: preorder, inorder, postorder | Stateless services and why they scale |
+| 101 | Breadth-first traversal: level order | Caching: the single biggest win |
+| 102 | Height, depth, and diameter | Cache invalidation and eviction policies |
+| 103 | Same tree, symmetric tree, and subtree | Content delivery networks |
+| 104 | Path problems, and the return-value trick | Database replication |
+| 105 | Lowest common ancestor | Read replicas and replication lag |
+| 106 | Binary search trees: the ordering property | Sharding, part one: choosing the key |
+| 107 | BST insert, search, and delete | Sharding, part two: rebalancing and hot spots |
+| 108 | Validating a binary search tree | Consistent hashing |
 
-**91 of 180 days written.**
+**108 of 180 days written.**
