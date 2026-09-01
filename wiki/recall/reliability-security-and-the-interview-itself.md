@@ -34,3 +34,306 @@ subtraction** — and if under half of pages are real problems, the alerting is 
 fully automatic.** Each nine costs ~10× more. **And CARDINALITY is what actually kills metrics systems** — one
 `user_id` label turns 1.25M series into 12.5 trillion — **so no unbounded value is ever a label.** **Monitoring
 lives in a separate failure domain**, or the outage takes it with you.
+
+## Day 172 · system-design — Logging and distributed tracing
+
+Source: [`days/day-172-bit-tricks/02-system-design-logging-and-distributed-tracing.md`](../../days/day-172-bit-tricks/02-system-design-logging-and-distributed-tracing.md)
+
+**One identifier, minted at the front door, carried everywhere.** The trace id goes in the **`traceparent`
+header (W3C Trace Context)** between services and in a **context object** (`contextvars`, `ThreadLocal`,
+`context.Context`, `AsyncLocalStorage`) inside one — **and it goes on every log line.** **A trace that stops
+halfway is almost always a hop nobody carried context across: a queue, a thread pool, a third party.**
+
+**A SPAN is one unit of work with a name, a duration, an id and a parent id. A TRACE is every span sharing a
+trace id, as a tree.** Read the waterfall and ask **which bar is wide because it is working and which is wide
+because it is waiting** — the slow-looking service is usually just waiting for the real culprit.
+
+**Structured, not prose**: `{"event":..., "trace_id":..., "duration_ms":...}`, because you cannot count
+sentences. **Mandatory fields: timestamp, level, service, trace id.** **NEVER log passwords, auth headers,
+tokens, full card numbers or one-time codes** — redact by field name in the library, because the real leak is
+somebody logging the whole request object during a bug hunt.
+
+**The arithmetic that decides everything.** 100M requests × 8 services × 3 lines × 300 bytes =
+**720 GB/day of logs**, against **9 GB/day of metrics** — **eighty times** — and over **$100k/year** on
+per-gigabyte pricing. Traces unsampled are 600 GB/day; **1% head sampling plus every error and every p99
+breach** brings it to ~9 GB/day. Cut the log bill with **levels, then retention tiers (7 days hot + 90 cold),
+then sampling successes, then a label-only store like Loki.**
+
+**Metrics detect, traces localise, logs diagnose — in that order.** **Trace ids belong in logs and spans and
+NEVER in a metric label** (100M series a day). **Write logs to stdout and let a shipper forward them**, never a
+network call on the request path; **rotate the files, or a full disk takes the process down**; and keep the
+whole stack **in a separate failure domain** from the product.
+
+## Day 173 · system-design — SLAs, SLOs, and error budgets
+
+Source: [`days/day-173-xor/02-system-design-slas-slos-and-error-budgets.md`](../../days/day-173-xor/02-system-design-slas-slos-and-error-budgets.md)
+
+**SLI is the MEASUREMENT (good events / valid events — a ratio, never a count). SLO is the INTERNAL TARGET
+plus a window ("99.9% over a rolling 28 days"). SLA is the EXTERNAL CONTRACT with money attached, and it is
+ALWAYS LOOSER than the SLO** — same number means the first internal miss is already a penalty. Typical
+layering: **SLA 99.9 / SLO 99.95 / alert at 99.97.** Credits are a statement of seriousness, not insurance.
+
+**The table, from 43,200 minutes in a 30-day month.** **99% = 7h12m · 99.9% = 43.2 min · 99.99% = 4.32 min ·
+99.999% = 25.9 seconds.** **Twenty-six seconds is less time than a human needs to read an alert, so at five
+nines nothing human is in the recovery path** — and each nine costs roughly **10×** the last.
+
+**The error budget is a RESOURCE, not an accident allowance.** 99.9% of 3 billion monthly requests =
+**3,000,000 failures allowed**; a 20-minute outage at 1,157 req/s spends **46% of the month in one incident.**
+Spend it on risky deploys, migrations and experiments. **Policy: >25% left ship freely; <25% no risky changes;
+0% feature freeze** — with a named override, or the rule dies the first time it is inconvenient. **An unspent
+budget means you were too cautious or over-provisioned.**
+
+**Alert on BURN RATE, or you find out at month end.** burn = actual error rate / allowed. **1% errors against a
+0.1% allowance = 10× = budget gone in 3 days.** Standard pair: **14.4× for 1 hour (2% of budget) pages; 6× for
+6 hours (5%) tickets** — the fast one catches outages, the slow one catches the 0.15% leak that eats the month
+invisibly.
+
+**IN SERIES YOU MULTIPLY AVAILABILITIES AND GET WORSE; IN PARALLEL YOU MULTIPLY FAILURE RATES AND GET BETTER.**
+Six dependencies at 99.9% → **0.999⁶ = 99.4%**, four and a half hours a month; twenty hops caps you at 98%.
+Fix by making calls **optional**, caching the last good answer, or adding **independent** parallel replicas
+(two at 99% → 99.99%) — and "independent" is doing enormous work, because shared racks, pipelines and DNS
+correlate failures. **100% is the wrong target: unachievable, unaffordable, and invisible behind the user's
+own connection.**
+
+## Day 174 · system-design — Deployments: blue-green, canary, and rollback
+
+Source: [`days/day-174-number-theory/02-system-design-deployments-blue-green-canary-and-rollback.md`](../../days/day-174-number-theory/02-system-design-deployments-blue-green-canary-and-rollback.md)
+
+**Every deployment runs TWO VERSIONS AT ONCE against ONE DATABASE** — that overlap is where everything goes
+wrong, so every change must be backward compatible with the version before it. **Five strategies: RECREATE**
+(downtime, fine for batch), **ROLLING** (free, no extra capacity, but rollback is as slow as rollout),
+**BLUE-GREEN** (rollback in seconds, costs 2× capacity, database still shared), **CANARY** (the only one that
+finds load-dependent bugs, and it is slow), **FEATURE FLAGS** (deploy ≠ release; instant rollback; costs flag
+debt, `n` flags = `2ⁿ` untested combinations).
+
+**The number that decides your culture: time from "this is bad" to "the old version is serving."** Under five
+minutes and you can take risks; an hour and you deploy rarely, which makes each deploy bigger and more
+dangerous. **ROLL BACK FIRST, INVESTIGATE AFTERWARDS** — understanding takes an hour, undoing takes minutes.
+
+**LIVENESS restarts the container; READINESS removes it from the load balancer and leaves it running.** A
+service is alive long before it is ready — **only a liveness check means real users hit a cold instance;
+wiring liveness to the slow condition gives a restart loop.** **Do not make readiness depend hard on a shared
+dependency, or the whole fleet leaves the load balancer at once.** **Drain connections for ~30 s**: 1,000
+req/s × 200 ms = **200 in-flight per machine**, so an undrained 10-machine rollout throws away 2,000 requests,
+and twenty deploys a month is **13% of a three-nines error budget.**
+
+**Canary arithmetic, which almost nobody has.** 1% of 100M requests/day = 11.6 req/s, so detecting a **0.5%
+error rate takes ~29 minutes**, and a 0.05% one takes ~4.8 hours. **A ten-minute 1% canary detects an outage,
+not a regression** — hence the 1/5/25/50/100 ramp. **Compare against the stable version at the same moment,
+never a fixed threshold.**
+
+**You can run two versions of code; you cannot run two versions of data.** **EXPAND AND CONTRACT: add column →
+dual write → backfill in batches → read new → drop the old one weeks later.** **Additive first, destructive
+last, with a gap long enough that rollback still works.** Backfill 500M rows in 10,000-row batches (~2 hours),
+never one `UPDATE`. **And no strategy rolls back an irreversible action** — a sent email, a taken payment, a
+consumed message, a dropped column — **so arrange for the irreversible step to be last, small, and separately
+controlled.**
+
+## Day 175 · system-design — Security in a design interview
+
+Source: [`days/day-175-combinatorics/02-system-design-security-in-a-design-interview.md`](../../days/day-175-combinatorics/02-system-design-security-in-a-design-interview.md)
+
+**AUTHENTICATION is who you are, answered ONCE at the edge. AUTHORISATION is what you may do, answered ON EVERY
+REQUEST FOR EVERY OBJECT — and that is where real breaches live.** The classic bug is **insecure direct object
+reference**: a valid user asks for `/invoices/8813` and gets it. **The fix is not unguessable ids (that is
+hiding); it is `WHERE id = ? AND account_id = ?` in the SAME statement**, and in multi-tenant systems
+**row-level security below the application, so a missing filter returns nothing rather than everything.**
+
+**Passwords: bcrypt / scrypt / Argon2id, salted, ~250 ms per hash. Never a fast hash.** SHA-256 at 10¹⁰
+guesses/s cracks an 8-character lowercase password (26⁸ = 209 billion) in **21 seconds**; bcrypt at 4
+guesses/s/core takes **~1,650 years**. **The salt stops one crack breaking every shared password.** **Length
+beats complexity** — two more characters is ×676. **And 250 ms of CPU a stranger can spend is a DoS vector, so
+rate-limit login hardest, per account AND per address.**
+
+**JWT = stateless scale, NO REVOCATION until expiry. Session = a lookup, instant revocation.** The practical
+shape: **15-minute access token + revocable refresh token**, so a stolen token is worth 15 minutes and
+disabling an account takes effect within 15. **TLS everywhere including internally (mTLS between services) —
+a hard shell with a soft inside fails the moment anything gets in.** **Encryption at rest protects against a
+stolen disk AND NOTHING ELSE**, because the application holds the key; field-level encryption is the real
+defence and **costs you indexing.** **No secrets in the repo — history is forever; prefer short-lived
+workload-identity credentials, and envelope encryption with a master key that never leaves the KMS.**
+
+**The five that actually happen, with the mechanism:** **SQL injection → parameterised statements** (query and
+values travel separately, so values are never parsed as SQL); **XSS → context-correct output encoding + CSP**;
+**CSRF → SameSite cookies + a token**; **SSRF → an allowlist of destinations, never a blocklist**; **credential
+stuffing → MFA, per-account and per-address limits, breached-password checks.** **WebAuthn is
+phishing-resistant by construction** — it will not sign for the wrong domain.
+
+**Defence in depth is an assumption: every layer will fail; the question is what the next one stops.** Ask **"if
+this service is taken over tonight, what can the attacker reach?"** — not "do we trust it". **The audit log is
+NOT the application log**: append-only, a separate store the app cannot rewrite, years of retention, and it
+records **denied** attempts, which carry the most signal. 5M writes/day × 500 B = **2.5 GB/day, 6.4 TB over
+seven years, ~$147/month** — cheap and non-negotiable. **And the finding in most reviews is not a missing
+control; it is one that was quietly bypassed months ago while everything kept working.**
+
+## Day 176 · system-design — Cost: the constraint nobody mentions
+
+Source: [`days/day-176-bits-maths-revision/02-system-design-cost-the-constraint-nobody-mentions.md`](../../days/day-176-bits-maths-revision/02-system-design-cost-the-constraint-nobody-mentions.md)
+
+**Cost is a design constraint, not a report.** Four line items dominate: **COMPUTE (usually only 30-50%),
+STORAGE (cheap, only grows), DATA TRANSFER (the surprise), MANAGED SERVICES (observability is often the largest
+single line)** — plus a fifth that is not on the bill: **people**, which is why "build it ourselves to save
+money" is usually wrong.
+
+**Data transfer is where the shock is. IN is free; OUT to the internet is ~$0.09/GB; BETWEEN ZONES is ~$0.01/GB
+EACH WAY.** Storing 30 TB for a month is ~$690; **sending it out once is $2,700 — serving is 4× more expensive
+than storing.** And **cross-zone chatter appears on no architecture diagram**: 8 internal calls × 100M requests
+× 20 KB = 16 TB/day, two-thirds crossing, both ways ≈ **$6,420/month — more than the entire saving from
+committing the compute.** **Fix it with zone-aware routing, not by collapsing to one zone.**
+
+**Buy compute three ways at once: COMMIT the baseline** (~40% off for 1 year, 60-70% for 3, and you pay whether
+you use it), **ON-DEMAND for the peak**, **SPOT for anything interruptible** (70-90% off, two minutes' notice,
+never a stateful leader). **Serverless is cheapest idle and dearest busy.** **Commit to the floor, never the
+peak.**
+
+**Optimise in order of effort, because the free things are bigger.** **1. Delete what is unused. 2. Switch off
+non-production outside working hours (used 45 of 168 hours — ~73% saving, and it is Ramesh's empty fridge).
+3. Right-size. 4. Commit. 5. Tier storage. 6. Stop the bytes moving — CDN, compression, co-location. 7. Change
+the architecture — LAST, and where everyone starts.** A worked example goes **$29,500 → $10,500, a 65% cut,
+with no product code changed.**
+
+**You cannot reduce what you cannot see.** **Tag everything and enforce it with a policy that refuses untagged
+resources** — the "untagged" row is where abandoned projects live. **Showback changes behaviour almost as much
+as chargeback with far fewer arguments.** **A cost bug pages nobody, so it runs until the invoice** — set a
+daily spend alert per tag on the RATE of change, and price changes in the pull request. **Track cost per DAU
+and per 1,000 requests: the direction matters more than the total, and a bill growing faster than usage is a
+leak.** **And before buying a nine, ask what an hour of downtime actually costs.**
+
+## Day 177 · system-design — Microservices versus monolith, argued both ways
+
+Source: [`days/day-177-the-patterns-on-one-page/02-system-design-microservices-versus-monolith-argued-both.md`](../../days/day-177-the-patterns-on-one-page/02-system-design-microservices-versus-monolith-argued-both.md)
+
+**A MONOLITH is one deployable with one transaction boundary; MICROSERVICES are many deployables, each OWNING
+ITS OWN DATA.** **The data ownership is the definition** — many services sharing one database is a
+**distributed monolith**: every cost of the split, none of the independence. **Never split by technical layer;
+split by business capability.**
+
+**FOR (each with a condition): independent DEPLOYMENT** (the real one — a release train several teams contend
+for), **independent SCALING** (only when profiles differ ~10×), **FAULT ISOLATION** (only if the calls are
+optional), **TEAM AUTONOMY** (Conway's law: the architecture fights the org chart and the org chart wins).
+**AGAINST: you LOSE TRANSACTIONS** (sagas, compensations, an observable inconsistency window, refunds that are
+not inverses, idempotency everywhere — paid on every future feature); **availability MULTIPLIES DOWNWARD**;
+**every call is ~100,000× slower and can now fail, time out or succeed twice**; **~3 hours/service/month of
+upkeep, forever.**
+
+**The arithmetic to have ready.** **8 services at 99.9% = 0.999⁸ = 99.2% → 5h 44m/month instead of 43
+minutes, with nothing built worse.** In-process call ~10 ns against a network call ~1 ms → **8 calls add 8 ms
+to every request**. 16 TB/day of internal traffic ≈ **$6,420/month cross-zone**, where function calls cost
+nothing. **40 services × 3 h = 120 h/month = 0.75 of an engineer on upkeep alone.** And relationships are
+**n(n−1)/2** — 6 services is 15 pairs, 40 is 780.
+
+**The usual right answer is the MODULAR MONOLITH**: one deployable and one transaction, with hard internal
+boundaries enforced by tooling. Shopify does it deliberately; **Segment split and publicly moved back.**
+**Migrate with the STRANGLER FIG — a facade, then one capability at a time, each step reversible — never a
+rewrite.** And there is a **fixed platform cost that arrives with service number two**: tracing, per-service
+metrics and pipelines, service discovery, contract tests, and a laptop story.
+
+**Team count decides it, not taste.** 1 team → monolith. 3 teams → modular monolith. 8 teams blocked on one
+release train → extract along team lines. 50 teams → microservices plus a platform team. **A service per TEAM,
+never per developer, and never more services than there are people to own them.** **Splitting one thing into
+six gives you six things and a problem between every two of them** — so every split must be paid for by a
+specific pressure, and "we might be big one day" does not pay for it.
+
+## Day 178 · system-design — The system design interview framework, memorised
+
+Source: [`days/day-178-thinking-out-loud/02-system-design-the-system-design-interview-framework.md`](../../days/day-178-thinking-out-loud/02-system-design-the-system-design-interview-framework.md)
+
+**Six beats, fixed order, because each one's output is the next one's input.** **1 REQUIREMENTS (5) · 2
+ESTIMATION (5) · 3 INTERFACE (5) · 4 DATA MODEL (5) · 5 ARCHITECTURE (10) · 6 DEEP DIVE (10-15).**
+**Announce the plan in the first fifteen seconds** — it puts you in control and lets the interviewer redirect
+you before you waste twenty minutes. **Beats 1-5 are deliberately shallow; beat 6 is deliberately deep.** The
+two classic failures are **too broad** (40 minutes of boxes, nothing examined) and **too narrow** (30 minutes
+on the cache before anyone agreed what the product does).
+
+**Requirements has two halves and candidates give only the first.** Functional: **3-5 features IN and the rest
+explicitly OUT** — naming what you exclude shows you can scope. Non-functional: **scale, read:write, latency,
+availability, CONSISTENCY, durability.** **Push hardest on consistency** — "must a post appear instantly?" is a
+product question that changes the whole architecture.
+
+**Estimation is "how many plates", and every number must be followed by "so…".** DAU → actions → ÷86,400 (call
+it 100,000) → **peak ×2-3** → bytes → storage/year → bandwidth. **100M DAU × 20 reads = 23,000 reads/s against
+230 writes/s = 100:1 — SO cache hard, read replicas before sharding, fan out on write.** 20M photos × 2 MB =
+**40 TB/day**, so object storage and a CDN, never a database. **700 peak writes against ~5,000/s for one
+Postgres primary — SO do not shard yet**, and say that deliberately.
+
+**Memorise the reference numbers**: memory 100 ns · SSD 100 µs · same-zone network 0.5 ms · cross-region
+50-150 ms · one app machine ~10,000 req/s · one Postgres ~5,000 writes/s · one Redis ~100,000 ops/s · photo
+2 MB · row ~1 KB · egress $0.09/GB. **They turn "should I shard?" into an eight-second decision.**
+
+**Design the data model from ACCESS PATTERNS, not a tidy entity diagram; walk the read path and the write path
+out loud** (a drawing nobody walks through is just boxes); **offer the interviewer a choice of deep dive.**
+**Close with the checklist almost nobody reaches: monitoring and what pages, the SLO in minutes with its error
+budget, auth and what you would refuse to log, a monthly cost, what happens when each box dies — and one
+honest weakness of your own design.** *"The fan-out worker fails silently, so I would alert on queue lag."*
+**A design with no named weakness is a design nobody looked at.**
+
+## Day 179 · system-design — Full mock: one high-level design, one low-level design
+
+Source: [`days/day-179-full-coding-mock/02-system-design-full-mock-one-high-level-design.md`](../../days/day-179-full-coding-mock/02-system-design-full-mock-one-high-level-design.md)
+
+**Two rounds, two different exercises.** **HIGH-LEVEL: six beats — requirements, estimation, interface, data
+model, architecture, deep dive — with every number followed by "so…", and beats 1-5 deliberately shallow so you
+reach the deep dive with fifteen minutes.** **LOW-LEVEL: six DIFFERENT beats — requirements as VERBS, entities,
+relationships, interface, the part that will change, and the EXTENSION question.** **Almost no arithmetic, and
+beat 6 IS the round.**
+
+**The reset between them is Sharada's cloth, and it is sixty seconds.** **Physically stop · ONE sentence about
+the round that finished · ONE thing to change · and NAME THE NEXT ROUND OUT LOUD.** **The commonest failure in
+a back-to-back loop is running the wrong framework** — estimating queries per second for a vending machine, or
+drawing boxes when they asked for classes. **"Forty pots is not one long job."**
+
+**Video streaming, and the one number that is the architecture: 100M viewers × 5 videos × 10 min at ~2 Mbit/s =
+~75 PB/day delivered, ~870 GB/second — $6.75 MILLION A DAY at direct egress.** So the CDN is in the design at
+minute one. **Uploads go straight to object storage via a pre-signed URL** (460 MB/s never touches your
+servers). **Chunk before transcoding** — a 2-hour film is 480 jobs, five minutes instead of eight hours — at the
+cost of **keyframe-aligned boundaries, idempotent jobs (workers die; deterministic output paths), and a
+completion tracker that fails SILENTLY.** Alert on **the age of the oldest video stuck in transcoding.**
+Interruptible + idempotent = **spot instances, 70% off.**
+
+**Expense sharing, and the one decision that is the round: put split types behind a `SplitStrategy`
+interface.** Adding percentage splits is then **a new class and zero edits** — where `if kind == 'EQUAL' …
+elif …` means every addition edits a method two working variants depend on. **Justify the pattern by the signal
+("you told me there are already three"), or it is over-engineering.** **Derive balances rather than store them**
+— stored balances drift when an old expense is edited. **Enforce `sum(splits) == amount` in the CONSTRUCTOR**,
+so an invalid expense cannot exist.
+
+**Money: `Decimal`, never float** (0.1 + 0.2 ≠ 0.3), and **when shares do not divide exactly the remainder goes
+to a NAMED person** — 10.00 split three ways is 9.99, and a missing paisa across a million expenses is ten
+thousand rupees of support tickets. **Close both rounds the same way: what fails, what you would monitor, and
+one honest weakness of your own design.** A design with no named weakness is one nobody looked at.
+
+## Day 180 · system-design — Final revision, and the week before the interview
+
+Source: [`days/day-180-final-revision/02-system-design-final-revision-and-the-week.md`](../../days/day-180-final-revision/02-system-design-final-revision-and-the-week.md)
+
+**Two running orders, and say which round you are in within the first minute.** **HLD: requirements (3-5 in,
+the rest explicitly OUT; scale, read:write, latency, availability, CONSISTENCY) · estimation (every number
+followed by "so…") · interface · data model from ACCESS PATTERNS · architecture, then WALK both paths ·
+deep dive, offered as a choice.** **LLD: verbs · entities · relationships and the invariant in the constructor
+· interface · the thing that will CHANGE · EXTENSION, which is the round.** **Close both with monitoring, the
+SLO in minutes, security, cost, failure per box, and ONE HONEST WEAKNESS OF YOUR OWN.**
+
+**The numbers, cold.** 1 day ≈ 100,000 s. memory 100 ns · SSD 100 µs · same-zone 0.5 ms · cross-region
+50-150 ms — **and an in-process call is ~10 ns, so a network hop is 50,000-100,000× slower.** One machine
+~10,000 req/s · Postgres ~5,000 writes/s · Redis ~100,000 ops/s. Row ~1 KB · photo ~2 MB · 1080p ~50 MB/min.
+**Storage $0.023/GB-mo · EGRESS $0.09/GB · cross-zone $0.01/GB EACH WAY — serving 30 TB costs 4× storing it.**
+**99.9% = 43 min/month, 99.99% = 4.3, 99.999% = 26 seconds. In series you multiply availabilities and get
+worse; in parallel you multiply failure rates and get better.**
+
+**Ten trade-off pairs, argued BOTH ways in thirty seconds each** — SQL/NoSQL, strong/eventual, sync/async,
+normalise/denormalise, fan-out on write/read, cache-aside/write-through, monolith/microservices,
+stateful/stateless, push/pull, committed/on-demand. **The second option is never "the modern one" — it is right
+under different conditions, and naming the condition IS the answer.**
+
+**Revise design by DESIGNING, not reading.** Forty-five minutes, out loud, timed, alone — then compare, and
+note only what you did not think to ask. **Nothing new after two days out**: a case study first read on Friday
+becomes a half-remembered version of somebody else's answer, which is worse than reasoning from the building
+blocks. **If you can say what each of the fifteen building blocks is for, what it costs, and what happens when
+it dies, you can design any of them.**
+
+**"Do you have any questions for us?" is part of the interview, and "no, you've covered everything" is a real
+negative.** Ask about **the first ninety days** (is the work defined, or is defining it the job), **rollback
+time** (the number that decides daily engineering life), **pages per week** (the best available measure of
+system health), and **"what did you not expect before you joined?"** **Then listen the way Latha's mother
+listened — the way an answer comes back tells you as much as the answer.** **Write down every question you
+were asked within the hour**, and ask what the next step is and when.

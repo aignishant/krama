@@ -178,5 +178,14 @@ front matter. A day that is missing from this table has not been written yet.
 | 169 | Jump game and reachability | Design a distributed job scheduler |
 | 170 | Greedy and intervals revision and mock round | High-level design revision and full mock |
 | 171 | Binary, bits, and why they matter | Monitoring, metrics, and alerting |
+| 172 | The bit tricks every interview uses | Logging and distributed tracing |
+| 173 | XOR problems | SLAs, SLOs, and error budgets |
+| 174 | Primes, GCD, and modular arithmetic | Deployments: blue-green, canary, and rollback |
+| 175 | The combinatorics you actually need | Security in a design interview |
+| 176 | Bits and maths revision and mock round | Cost: the constraint nobody mentions |
+| 177 | The twenty patterns, on one page | Microservices versus monolith, argued both ways |
+| 178 | How to think out loud in a coding round | The system design interview framework, memorised |
+| 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design |
+| 180 | Final revision, and the week before the interview | Final revision, and the week before the interview |
 
-**171 of 180 days written.**
+**180 of 180 days written.**

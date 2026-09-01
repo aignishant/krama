@@ -34,3 +34,146 @@ the end.** The range is asymmetric (−128 to 127). **Python is arbitrary-width,
 pattern — mask with `& 0xFF` or `& 0xFFFFFFFF`.** And **`>>` is arithmetic: `-1 >> 5` is still −1, so a
 `while n: n >>= 1` loop HANGS on a negative.** **Always bracket shifts — `1 << n - 1` is `1 << (n-1)`, not
 `(1 << n) - 1`.**
+
+## Day 172 · dsa — The bit tricks every interview uses
+
+Source: [`days/day-172-bit-tricks/01-dsa-the-bit-tricks-every-interview.md`](../../days/day-172-bit-tricks/01-dsa-the-bit-tricks-every-interview.md)
+
+**Two core moves, and they are opposites.** **`n & (n - 1)` CLEARS the lowest set bit** — `n - 1` borrows, so
+the lowest 1 flips and everything below fills with ones; above it nothing changed. **`n & -n` KEEPS ONLY the
+lowest set bit** — `-n` is `~n + 1`, the same ripple from the other side. Almost every trick is one of these
+in a loop.
+
+**Masks: `1 << k` is one bit; `(1 << k) - 1` is `k` ones at the bottom; `~(1 << k)` is a hole.** **Always
+bracket — `1 << k - 1` is `1 << (k-1)`, silently wrong.**
+
+**One-line tests.** Power of two: **`n > 0 and n & (n-1) == 0`** — the guard is not decoration, `0 & -1 == 0`.
+All ones (0, 1, 3, 7, 15): **`n & (n+1) == 0`** — the carry runs off the top. Odd: `n & 1`.
+
+**Counting.** Kernighan `while n: n &= n-1` — **one step per SET bit** (1 against 32 for `1 << 31`, tied at
+255), and it **HANGS on a negative in Python**, so guard or mask. Every count at once:
+**`bits[i] = bits[i & (i-1)] + 1`**, valid because `i & (i-1) < i`. Hamming distance = set bits of `a ^ b`,
+because **XOR is "different"**.
+
+**A subset IS a number.** `for mask in range(1 << n)` lists all `2^n` subsets; `mask >> i & 1` tests item `i`;
+`n × 2^n` is why bitmask problems stop at **n = 20**. Walk sparse masks with isolate-then-clear. Every submask:
+**`sub = (sub - 1) & mask`, append-then-break-on-zero** — `3^n`, not `4^n`, and testing at the top skips the
+empty submask.
+
+## Day 173 · dsa — XOR problems
+
+Source: [`days/day-173-xor/01-dsa-xor-problems.md`](../../days/day-173-xor/01-dsa-xor-problems.md)
+
+**One fact runs the whole family: `a ^ a = 0`, `a ^ 0 = a`, and order does not matter.** So XORing a list
+cancels everything that comes in pairs. **The rearrangement argument IS the proof** — group the duplicates,
+every bracket is zero. **XOR is "is the count of ones in this column odd?", asked independently per column, so
+nothing carries and nothing overflows.**
+
+**One loner: XOR the list. One missing from 0..n: XOR the list against the range** (seed the accumulator with
+`len(numbers)`, or the top of the range has no partner). **Prefer this to the sum formula, which overflows.**
+
+**Two loners is the real question.** XORing everything gives `a ^ b`, which **does not determine the pair** —
+6 could be 3^5 or 1^7. **A set bit in `a ^ b` means they DISAGREE there**, so isolate one with `both & -both`
+and split the list on it: **duplicates agree everywhere so pairs stay together; the loners are forced apart.**
+Then `second = both ^ first` — no third pass. **Needs exactly two loners, or it silently returns `(0, 0)`.**
+
+**k copies means counting modulo k.** Three times each: count every bit position mod 3, 32 passes, O(32n).
+XOR is the `k = 2` case for free. **In Python, fix the sign at the end (`answer - (1 << 32)` when bit 31 is
+set) or minus three comes back as 4,294,967,293.**
+
+**XOR is its own inverse, so it does prefix sums.** `xor(l..r) = prefix[r+1] ^ prefix[l]`, and
+`prefix[i] == prefix[k]` means that stretch XORs to zero. **The XOR of 0..n has period four**: `n, 1, n+1, 0`
+for `n%4 = 0,1,2,3`. **Biggest XOR pair: build the answer from the top bit down and ask `wanted ^ prefix in
+prefixes` — O(32n), not O(n²).** **And the trap that passes small tests: plain XOR looks correct whenever
+every repeat count happens to be even.**
+
+## Day 174 · dsa — Primes, GCD, and modular arithmetic
+
+Source: [`days/day-174-number-theory/01-dsa-primes-gcd-and-modular-arithmetic.md`](../../days/day-174-number-theory/01-dsa-primes-gcd-and-modular-arithmetic.md)
+
+**Primality: test only to the SQUARE ROOT** — if `n = a×b`, they cannot both exceed `√n`, so 1,000 divisions
+instead of a million. **Then step by 6 and test `6k ± 1`, a third again.** **1 is not prime; 2 is, and is the
+only even prime — write the base cases first.** Beyond ~10^14, name **Miller–Rabin**.
+
+**The SIEVE is the change of viewpoint: cross off multiples instead of testing numbers.** **Start at `p × p`**
+(everything smaller already has a smaller prime factor) and **stop when `p × p > limit`**. **O(n log log n)** —
+~2.8M operations for a million, about **100× faster** than testing each — and **memory limits it before time
+does** (8 MB / 80 MB / 800 MB in Python; use a bytearray, a bitset, or a **segmented sieve** for 10^9).
+**78,498 primes below a million.** A **smallest-prime-factor** sieve then factorises anything in **≤ log₂n**
+steps.
+
+**Euclid: `gcd(a, b) = gcd(b, a mod b)`, because a common divisor of both also divides the remainder — so the
+set of common divisors never changes.** The picture is cutting the largest squares off a rectangle. **O(log
+min(a,b))**, worst case consecutive Fibonacci numbers; `gcd(a, 0) = a`. **`lcm = a // gcd * b` — DIVIDE FIRST,
+or `a*b` overflows 64 bits around 3×10⁹.**
+
+**Under a modulus: +, − and × pass through; ÷ does NOT.** **Division becomes multiplication by an inverse.**
+**Fermat, when the modulus is prime: `a^(m−2) mod m`** — one fast power. **On a composite modulus it silently
+returns a wrong number** (the "inverse" of 3 mod 10 comes out as 1); use **extended Euclid** there, and note
+there is no inverse at all when `a` shares a factor with `m`. **In C/Java/Go `%` takes the dividend's sign, so
+write `((a-b) % m + m) % m`; Python's `%` is already non-negative.**
+
+**Fast power: square and multiply, one step per BIT of the exponent** — 30 steps for 10⁹, 60 for 10¹⁸.
+**Forgetting `% m` inside the loop does not crash, it just stops finishing.** **`10^9 + 7` is used because it
+is prime (Fermat works), fits in a signed 32-bit integer, and two values under it multiply to under 10¹⁸ so
+`a*b % m` is safe in 64 bits.**
+
+## Day 175 · dsa — The combinatorics you actually need
+
+Source: [`days/day-175-combinatorics/01-dsa-the-combinatorics-you-actually-need.md`](../../days/day-175-combinatorics/01-dsa-the-combinatorics-you-actually-need.md)
+
+**Two questions decide everything: DOES ORDER MATTER, and CAN THINGS REPEAT.** Order + no repeats = **nPr**;
+no order + no repeats = **nCr**; order + repeats = **nʳ**; no order + repeats = **stars and bars,
+C(n+r−1, r)**. **Derive, do not recall: `n` choices, then `n−1`, then `n−2` — and stop after `r` factors.**
+
+**The most useful sentence in the subject: "I counted each answer once per arrangement, so I divide by the
+number of arrangements."** `nCr = nPr / r!`. **MISSISSIPPI = 11!/(1!·4!·4!·2!) = 34,650.** **When a count comes
+out too big you have double counted — usually the fix is to count the COMPLEMENT.** And **the multiplication
+principle needs independence**; nothing warns you when the second choice is limited by the first.
+
+**NEVER COMPUTE A FACTORIAL. `21!` overflows a 64-bit integer**, so `C(21,2)` = 210 comes back as nonsense.
+Build up: `result = result * (n - i) // (i + 1)`, **multiply before you divide** (the division is exact only
+after the multiplication), and **use `r = min(r, n-r)`** — 3 iterations, not 17, for `C(20,17)`. **`//` not
+`/`: the float version is right on small inputs and quietly wrong past ~15 digits.**
+
+**`C(n,r) = C(n−1,r−1) + C(n−1,r)` is "the item is in, or it is out"** — which is why counting problems become
+DP, and why Pascal's triangle IS the grid-paths table. **Row `n` sums to 2ⁿ, because it is every subset sorted
+by size.** **Pascal is O(n²) time and space** — right for many small queries, impossible at n = 100,000.
+
+**Modulo 10⁹+7 is the tell that the answer is astronomical.** Precompute `fact[]` and `inv_fact[]`, then
+`C(n,r) = fact[n] · inv_fact[r] · inv_fact[n−r]` — **three lookups, O(1) per query.** Build the inverses with
+**ONE fast power at the top and a walk down** (`inv_fact[i-1] = inv_fact[i] * i`), 15× faster than one power
+each. Requires **n < modulus**, else Lucas' theorem. **Recognise the shapes: grid paths = C(m+n−2, m−1);
+Catalan = C(2n,n)/(n+1) = 1, 1, 2, 5, 14, 42, 132 for brackets, tree shapes and parenthesisations; subsets =
+2ⁿ.**
+
+## Day 176 · dsa — Bits and maths revision and mock round
+
+Source: [`days/day-176-bits-maths-revision/01-dsa-bits-and-maths-revision.md`](../../days/day-176-bits-maths-revision/01-dsa-bits-and-maths-revision.md)
+
+**Ask "which of the twelve", not "what is this".** The triggers: **"O(1) space" + repeats → XOR** (one loner:
+XOR all; two: XOR then split on `both & -both`; three copies: count each column **mod 3**). **"n ≤ 20" →
+bitmask over `range(1 << n)`.** **"all primes below N" → sieve** (per group, not per number). **"one number
+prime?" → trial division to √n.** **"modulo 10⁹+7" → factorial tables + Fermat inverse.** **"exponent up to
+10⁹" → square and multiply.** **"how many ways" → does order matter, can things repeat.**
+
+**Read the constraints BEFORE thinking about the problem — that is where the setter names the intended
+solution.** Then: **is the work per number or per group?** (sieve vs test each) — **does anything shrink
+structurally?** — **does the answer need dividing?** **`n & (n-1)`, Euclid and fast power are one idea: shrink
+by a structural step, not by one unit, and linear becomes logarithmic.** **When a limit is 10⁹, the answer is
+almost never a loop.**
+
+**Say the recognition sentence out loud before writing a line.** *"ANDing a range keeps only the common
+prefix."* *"A product is decided independently per prime, so I multiply the counts."* **If you cannot say the
+sentence, you are not ready to write** — and writing anyway is how twenty minutes disappear.
+
+**The silent failures, none of which raise.** `1 << n - 1` is `1 << (n-1)`. `is_power_of_two(0)` is True
+without the guard. **Plain XOR is right whenever repeat counts happen to be even** — `[2,2,2,3]` gives 1.
+**Fermat on a composite modulus returns a plausible non-inverse.** **`21!` overflows 64 bits, so `C(21,2)`=210
+comes out as nonsense.** **`/` instead of `//` in `nCr` lies past ~15 digits.** And `while n: n &= n-1` on a
+negative **hangs**, which is worse than crashing.
+
+**Edge cases in this phase are always 0, 1, 2 and a negative.** **Where there is a clever version and an
+explainable one — the ones/twos state machine against counting columns, a trie against the greedy prefix —
+write the explainable one and say the clever one exists.** Under a clock, **being able to justify what you
+wrote beats a constant factor**, because the reasoning is what is being graded.
