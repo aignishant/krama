@@ -99,3 +99,129 @@ assumed.
 100 against three worth 10 gives greedy 30 and the answer 100. **Weighted interval scheduling is DP —
 `dp[i] = max(dp[i-1], value + dp[p(i)])` with `p(i)` found by BINARY SEARCH** (a linear scan makes it `O(n²)`)
 — **and it is the same `O(n log n)`, so greedy failing costs a table, not a complexity penalty.**
+
+## Day 167 · dsa — Merging intervals
+
+Source: [`days/day-167-merging-intervals/01-dsa-merging-intervals.md`](../../days/day-167-merging-intervals/01-dsa-merging-intervals.md)
+
+**Sort by START, one pass: if the next interval begins at or before the current block ends, extend the block;
+otherwise close it and start a new one.** Sorting by start is what makes a single pass legal — **anything
+overlapping the current block must BEGIN before it ends**, so you never look backwards and never reopen a
+closed block.
+
+**The bug, and it is the point of the lesson: extend to `max(current_end, next_end)`, NEVER `= next_end`.** An
+interval entirely inside the block would otherwise shrink it — `[1,10]` then `[2,3]` becomes `[1,3]`. **And it
+gives exactly the right answer on typical hand-written tests**, because partial overlap is what people write
+and containment is what real data contains.
+
+**Sorted by END the invariant fails**: `[1,10]`, `[2,3]`, `[11,12]` gives `[(2,10)]` — **the block starts at 2
+and no code path reaches backwards to fix a start**, while the block *count* stays right.
+
+**The boundary convention is one character** — `<=` merges touching intervals, `<` does not — and the problem
+decides it. **Ask if it is not stated.**
+
+**Five variants: insert into a sorted list (`O(n)`, three phases — re-sorting is the mistake being tested);
+gaps (the complement, and the two ends are where the bugs live — needs explicit bounds, and
+`cursor = max(cursor, end)`); intersect two lists (two pointers, `[max(starts), min(ends)]`, advance whichever
+ENDS first); total covered (merge first, or overlaps are double-counted); and streaming.**
+
+**Streaming: the one-pass algorithm does not apply.** Keep the blocks in a sorted structure, binary search for
+the position, **and absorb every overlapping block — one arrival can swallow several at once.**
+`O(log n + k)` per insert, **amortised `O(n log n)` overall because a block can be absorbed only once** — the
+same total as sorting once, paid incrementally.
+
+## Day 168 · dsa — Meeting rooms and the sweep line
+
+Source: [`days/day-168-sweep-line/01-dsa-meeting-rooms-and-the-sweep.md`](../../days/day-168-sweep-line/01-dsa-meeting-rooms-and-the-sweep.md)
+
+**The sweep is a COUNTING technique, and the idea is to discard which interval is which.** Break each into
+`+1` at the start and `-1` at the end, **throw away the association**, sort by time, and take the running
+maximum. Six lines. **"How many at once" and "which one is which" are different questions, and the first is far
+easier.**
+
+**The tie-break is where half of implementations are wrong.** For meeting rooms, an end at time 4 must be
+processed **before** a start at 4 — the room is freed and reused, giving one room, not two. **Sorting
+`(time, delta)` tuples gives this for free** because `-1 < +1`. **Getting it backwards is exactly one too high
+on abutting meetings**, which is what every real calendar looks like. **Never encode events as strings** —
+`"end" < "start"` is a coincidence of the alphabet — **and work in integers**, because floating-point times
+destroy the tie entirely.
+
+**Two equivalent forms:** the event list (tie-break in the sort key) and **two pointers over sorted starts and
+ends** (tie-break visible as `<` against `<=`). Same answer, same complexity.
+
+**The sweep cannot give the ASSIGNMENT** — it discarded it, which is what made it cheap. **For "which room",
+use a min-heap of end times**: reuse the earliest-freeing room if free, else open a new one. Same `O(n log n)`,
+`O(k)` space, **and the heap's size agrees with the sweep — a free consistency check** (they disagree only when
+their conventions differ).
+
+**It is a framework: sort events, walk, accumulate — only the ACCUMULATOR changes.** Count → integer; weighted
+(bandwidth) → `+w`/`-w`; total covered → sum the stretches while the count is positive (**accumulate BEFORE
+applying the delta**); **the SKYLINE → `max` instead of `+`, so the accumulator becomes a heap with LAZY
+DELETION** (leave expired entries in, discard them when they surface — each popped once, so still
+`O(n log n)`).
+
+**And when the coordinate space is small and dense, a difference array beats the sweep** — `O(n + horizon)`
+against `O(n log n)`, ~18× faster for 10,000 meetings over 1,440 minutes. **Compare `horizon` against
+`n log n` before choosing.**
+
+## Day 169 · dsa — Jump game and reachability
+
+Source: [`days/day-169-jump-game/01-dsa-jump-game-and-reachability.md`](../../days/day-169-jump-game/01-dsa-jump-game-and-reachability.md)
+
+**This looks like DP and is greedy.** The naive `dp[i] = is position i reachable` is `O(n²)` and correct and
+**remembers more than it needs.** **The insight: you do not need to know WHICH positions are reachable, only
+HOW FAR you can reach** — one number.
+
+**It works because reachability is CONTIGUOUS**: reach position 7 and you reach everything before it, **so the
+reachable set is always a prefix and a prefix is one number.** `O(n)` time, `O(1)` space.
+
+**The stopping rule is the line people omit:** `if i > furthest: return False`. Without it the loop walks past
+an unreachable position **and updates the frontier from it** — returning `True` for `[3,2,1,0,4]`. **It fails
+only on inputs containing a zero**, which is why it survives. **And the update must be `max(furthest, i+jump)`**
+— reachability only ever grows.
+
+**Minimum jumps is a BFS with the queue collapsed into two numbers**, because the levels are contiguous
+ranges: `current_end` (where this level stops) and `furthest` (how far anything in it reaches). **`if i ==
+current_end` is the level boundary.** **The loop stops ONE SHORT** — landing on the last position needs no jump
+from it — **and including it is exactly one too many on every input, with no error.**
+
+**The exchange argument:** greedy jumps to the spot with the furthest reach; swapping it into any optimal
+sequence is legal (both are in the current level) and no worse (it reaches at least as far), **so anything the
+optimum could do next, greedy can too.** **The property it depends on is contiguity — "further is simply
+better", with no trade-off.**
+
+**The test for which technique you have: is the reachable set always a contiguous prefix?** **Yes → one number,
+greedy.** **Jump left OR right → scattered, not a prefix → a graph, plain BFS, and the `O(1)` space is gone.**
+**Add a cost per jump → contiguity survives but "further is better" does not, because reach and price trade
+off → dynamic programming.**
+
+## Day 170 · dsa — Greedy and intervals revision and mock round
+
+Source: [`days/day-170-greedy-revision/01-dsa-greedy-and-intervals-revision.md`](../../days/day-170-greedy-revision/01-dsa-greedy-and-intervals-revision.md)
+
+**The decision procedure, four questions, under two minutes.** (1) Can I name the best-looking choice in one
+sentence? (2) Can I build a counter-example in thirty seconds? (3) Can I state the **exchange argument
+concretely** — the actual swap, not its shape? (4) If 2 or 3 failed, **it is DP — and saying so with the
+counter-example is a correct answer.**
+
+**The exchange argument in thirty seconds:** *take any optimal solution; swap my greedy choice in for its first
+choice; mine finishes no later, so nothing that followed can conflict; same size, still valid; induct.* **This
+is what "why does that work?" wants.**
+
+**The sort-key table, and the rule underneath it — sort so the greedy choice costs the least future.** **END**
+for most non-overlapping. **START** for merging. **EVENTS (+1/−1)** for how-many-at-once. **NO SORT, `O(n)`**
+for reachability — the frontier collapses to one number. **DEADLINE + heap** for fitting deadlines. **POSITION
++ heap** for regret greedy.
+
+**Two middle-ground families, and the heap is the tell.** **Greedy with an undo** (Course Schedule III: take
+everything, drop the longest on overrun — dropping the longest frees the most time at the same cost of one
+course). **Regret greedy** (refuelling: never decide at a station, drive past, buy the biggest tank you passed
+once you know you needed it). **Try these before reaching for DP.**
+
+**Greedy survives when the choice affects only what is still available; it dies when the choice carries a value
+you are optimising.** Jump Game is `O(n)` greedy; jump game with a cost per landing is DP.
+
+**The wrong sort key is SILENT and passes every tidy example.** By start instead of end: keeps 1 not 2. By
+duration instead of deadline: 2 not 3. `>=` instead of `>`: 1 not 2. `<` instead of `<=` in refuelling: `-1`
+not 2. **Your only evidence is a brute-force check on small random inputs; your only argument is the exchange.
+Have one, and say which.**

@@ -622,3 +622,129 @@ person's name defamatorily has produced lawsuits, and **the asymmetry favours ov
 reports a suggestion that never appeared. **And the trending layer is trivially cheap to attack** (~500
 repetitions in a 10-minute window): fix it with the **counting rule — distinct users, rate-limited** — not with
 a longer window.
+
+## Day 167 · system-design — Design a leaderboard
+
+Source: [`days/day-167-merging-intervals/02-system-design-design-a-leaderboard.md`](../../days/day-167-merging-intervals/02-system-design-design-a-leaderboard.md)
+
+**Two questions with different costs, and separating them is the opening move: the TOP TEN is easy in any
+sorted store; the RANK is a count over everyone unless the structure supports it.** Almost every naive design
+gets the first and fails the second.
+
+**Redis sorted sets — and say what is underneath.** A **skip list with SPANS on the forward pointers** (rank is
+the sum of spans along the search path, so `O(log n)` rather than a count) **plus a hash map** for `O(1)` score
+lookup on update. **The spans are precisely the feature that makes rank cheap.** ~100 bytes/entry → 50M players
+≈ **5 GB**, ~50–100 µs per operation, **about half of one instance at peak.**
+
+**Do NOT shard the sorted set: rank is inherently GLOBAL**, so a split makes every rank query hit every shard
+**and get slower as you add shards.** Three better answers: **partition the leaderboard by a product dimension**
+(region, level, season — usually what the product wants anyway); **exact top 10,000 in a bounded set** (~1 MB,
+trimmed with `ZREMRANGEBYRANK` on every write); **or a score histogram** (~200 KB, **25,000× smaller**, accurate
+to a bucket).
+
+**Approximate is the better product below the top few hundred** — "about 2,100th of 50,000" beats a precise
+number that changes every few seconds — **and the interface should say "about" rather than imply precision.**
+
+**Ties break lexicographically by member name by default** — stable, arbitrary, and visible. **Encode the
+tie-break into the score** (`score × 10^10 + inverted timestamp`), **and assert the 53-bit double precision
+bound**, because exceeding it silently reorders players. **Display the real score, never the composite.**
+
+**Windows are separate sorted sets with TTLs** (3–4× write amplification, every read one lookup; shard *by
+window*, which is easy because no query crosses them). **"Rolling last 24 hours" has nothing to expire** —
+hourly buckets and an hour of granularity is the honest answer. **`ZADD ... GT` makes best-score atomic**;
+**`ZREVRANK` is zero-indexed.** **Redis is the serving structure, not the source of truth** — rebuild into a
+temp key and `RENAME`, ~10 minutes, which is affordable precisely because it is a leaderboard.
+
+## Day 168 · system-design — Design an ad click aggregator
+
+Source: [`days/day-168-sweep-line/02-system-design-design-an-ad-click-aggregator.md`](../../days/day-168-sweep-line/02-system-design-design-an-ad-click-aggregator.md)
+
+**The shape is unlike the rest: a million tiny events a second in, a few thousand queries out, and the raw
+events are individually worthless.** So the central move is **aggregate on the way IN, not on the way out** —
+a query becomes a lookup over pre-summed rows, never a scan.
+
+**Five stages: a tiny ingest endpoint (write to Kafka, return `202`, no DB write), Kafka PARTITIONED BY
+CAMPAIGN (so one instance owns each campaign — no cross-instance coordination), stream aggregation into
+one-minute windows, a pre-summed store, and a dashboard that does lookups.**
+
+**Event time versus processing time is the correctness decision.** Processing time is easier and **makes
+reports change when you rerun them.** Event time is correct and means **no window is ever truly closed** —
+resolved by a **watermark** (max event time seen minus a grace period, advancing with the data, not the clock)
+plus an **explicit late-data path**. **~0.1% arrive over a minute late — a million events a day, not an edge
+case.** There is no correct grace period, only a stated one.
+
+**Duplicates are GUARANTEED** (client retries, Kafka at-least-once, aggregator restarts) **and each one is
+money.** **Client-generated event id**, atomic set-if-absent, exact over ~5 minutes (~15 GB). **Explicitly
+reject a Bloom filter**: 4 GB for an hour at 1% sounds good, **but a false positive drops a real click — 1% of
+revenue.** The same structure was fine for a crawler because there the errors were free.
+
+**Never store the cross-product**: campaign × country × device × slot × minute is **7×10¹² rows/day, almost all
+zero**, against **~30 GB/day** for sparse query-driven rollups — **12,000×**. The cost is that a new dimension
+needs a backfill, so the dimension set has real inertia.
+
+**Two paths, deliberately.** Stream = fast and approximate; **nightly batch over the raw log = slow and exact
+(`COUNT(DISTINCT)` over the whole day) and it OVERWRITES closed periods.** Advertisers see the streaming number
+in a minute; **the invoice uses the batch number, and the gap between them is the alert.** **Approximate what
+is reported (HyperLogLog, 1.6% in 12 KB), count exactly what is billed.**
+
+## Day 169 · system-design — Design a distributed job scheduler
+
+Source: [`days/day-169-jump-game/02-system-design-design-a-distributed-job-scheduler.md`](../../days/day-169-jump-game/02-system-design-design-a-distributed-job-scheduler.md)
+
+**The scheduling is the easy part** — a table indexed on `(state, run_at)` and a poll loop; even 100M jobs/day
+is ~1,200/second. **Everything hard is failure and distribution.**
+
+**Model JOBS and RUNS separately** (one job, many runs) for history, natural retries, and **no drift** — the
+next run is computed from the schedule, not from when the last finished. **`UNIQUE (job_id, run_at)`** stops
+two schedulers materialising the same occurrence.
+
+**Claim in ONE atomic statement with `FOR UPDATE SKIP LOCKED`** — a select-then-update is a race, and without
+`SKIP LOCKED` every worker blocks on the same rows and the fleet has the throughput of one. **Increment the
+attempt counter on the CLAIM**, so a worker that dies has consumed an attempt.
+
+**Leases have no good length, because a dead worker and a slow one are indistinguishable over a network.**
+Short steals jobs from slow workers (duplicate execution); long leaves a dead worker's job idle. **The
+resolution is a HEARTBEAT** — 60-second lease, 20-second renewal — **and the heartbeat MUST check ownership**,
+or two workers both believe they own the run.
+
+**Exactly-once is not available:** the side effect and the record of it cannot be atomic when the side effect
+is in someone else's system. **At-least-once + an idempotency key from `(job_id, run_at)`** (not per attempt)
+is the default; at-most-once is an explicit per-job flag. **~0.01–0.1% of runs duplicate — 10,000–100,000/day
+at this volume — so idempotency is a REQUIREMENT, not advice.**
+
+**The herd is what actually breaks it:** ~40% of jobs are scheduled on the hour, so the average rate is fine
+and the instantaneous rate is an outage. **Jitter is one line** (40M over 5 minutes = 133k/second, evenly) —
+**per job, defaulting to zero, so set it on the job TYPE or it will be left at zero.** Plus rate-limited
+dispatch and a **bounded catch-up policy**, or recovering from an outage becomes a second one. **And partition
+by month and DROP** — a `DELETE` over 9 billion rows never finishes.
+
+## Day 170 · system-design — High-level design revision and full mock
+
+Source: [`days/day-170-greedy-revision/02-system-design-high-level-design-revision-and-full.md`](../../days/day-170-greedy-revision/02-system-design-high-level-design-revision-and-full.md)
+
+**Six blocks, forty-five minutes, announced out loud:** **0–5 requirements** (functional, non-functional, and
+what is explicitly out of scope), **5–10 the arithmetic**, **10–15 interface and data model**, **15–30
+architecture in request-flow order**, **30–40 one deep dive — offer two and let them pick**, **40–45 failure
+and what you would measure.** **The most common failure is drawing boxes in minute two**, which says you are
+recalling rather than designing.
+
+**Four opening questions:** how many users and how many at once; **the read-to-write ratio** (the single most
+decision-relevant number — it decides caching, replicas, fan-out and denormalisation); what must not go wrong;
+and what you are **not** building.
+
+**The estimation ladder: users → actions → per second (÷100,000, ×10 for peak) → bytes.** **Round hard** — three
+significant figures reads as not knowing what matters. **The output is ONE SENTENCE**, not a number: *"read-heavy
+50:1, and storage is the real problem."* **Discovering a problem is easy is a result.**
+
+**Numbers cold:** 1M/day ≈ 12/s; 1B/day ≈ 12,000/s; one database ~5,000 writes/s; one cache node ~100,000
+reads/s; memory 100 ns, SSD 100 µs, disk 10 ms; **cross-continent 150 ms and no engineering fixes it.**
+
+**The move worth stealing from the mock: when a huge payload must appear at an INSTANT, pre-position it and
+release something tiny.** 5 TB in a minute becomes 5 TB over an hour plus a 1 GB key — a factor of 5,000. **And
+continuous autosave turns an end-of-exam spike into nothing: the same data either arrives smoothly or all at
+once, and that is the design choice.**
+
+**Three habits that read as senior:** volunteer the failure mode before you are asked (with the mitigation
+ready); **give the number WITH the trade** ("90% hit rate turns 50,000 reads into 5,000, at up to 60 seconds
+of staleness"); and say what you do not know. **And when they say "interesting, but what about X" — X is what
+they want. Abandon your plan.**

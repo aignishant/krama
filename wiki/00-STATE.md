@@ -173,5 +173,10 @@ front matter. A day that is missing from this table has not been written yet.
 | 164 | Greedy: when taking the best option now is safe | Design a payment system |
 | 165 | Proving a greedy choice, simply | Design a ticket booking system |
 | 166 | Interval scheduling | Design search autocomplete at scale |
+| 167 | Merging intervals | Design a leaderboard |
+| 168 | Meeting rooms and the sweep line | Design an ad click aggregator |
+| 169 | Jump game and reachability | Design a distributed job scheduler |
+| 170 | Greedy and intervals revision and mock round | High-level design revision and full mock |
+| 171 | Binary, bits, and why they matter | Monitoring, metrics, and alerting |
 
-**166 of 180 days written.**
+**171 of 180 days written.**
