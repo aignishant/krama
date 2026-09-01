@@ -2,6 +2,7 @@
 day: 120
 track: dsa
 title: "The trie: a tree of characters"
+phase: "Tries"
 status: written
 ---
 

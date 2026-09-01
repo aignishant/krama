@@ -282,3 +282,96 @@ Source: [`days/day-108-validating-a-bst/02-system-design-consistent-hashing.md`]
   (hence directory sharding for big tenants and jurisdictions). **Rendezvous hashing is simpler and more
   even at `O(N)` per lookup — genuinely better under ~50 nodes**; jump hash is memory-free but only allows
   removing the last node; Maglev gives `O(1)`.
+
+## Day 109 · system-design — Back-of-the-envelope estimation
+
+Source: [`days/day-109-balanced-trees/02-system-design-back-of-the-envelope-estimation.md`](../../days/day-109-balanced-trees/02-system-design-back-of-the-envelope-estimation.md)
+
+- **Six steps, in the same order, every time: users → actions/day → QPS (÷100,000, ×3 for peak) →
+  read:write split → storage (× bytes × 365 × 3) → bandwidth.** Then the **seventh and most important**:
+  say what each number *means* for the design. **A number with no consequence attached was not worth
+  computing.**
+- **Round to one significant figure and SAY that you are** — "86,400 rounded to 100,000, so I am ~15% low,
+  which changes nothing". Round **up** for capacity, **down** for savings. The target is the right **order
+  of magnitude**: ±20% changes nothing, **×10 changes the design**.
+- **Sanity-check against something known, every time.** Twitter ~**6,000 tweets/s**; Instagram ~**100M
+  photos/day**; WhatsApp ~**100B messages/day**; YouTube ~**500 hours uploaded/minute**; Stack Overflow ran
+  on **~a dozen servers**. The errors that actually happen are **factors**: registered-as-daily-active
+  (10×), per-day-as-per-second (86,400×), forgetting peak (3×), replication (3×), fan-out or transcoding
+  (2–100×).
+- **Reason about actions per user; never guess a number.** "Three or four sessions, five server requests
+  each, images go to the CDN — so twenty." **The derivation is the answer.** And when you do not know,
+  **ask**; if refused, **assume and label it**.
+- **Memorise the consequence table.** Peak QPS: **<100 → one server · 1,000 → a few + one DB · 10,000 →
+  LB + cache + replicas · 100,000 → sharding**. Storage: **1 TB → one DB · 100 TB → sharded · 1 PB →
+  object storage**. Writes: **>10,000/s → sharded, no other option.** And watch the three invisible
+  constraints: **fan-out**, **connections** (not requests), and **storage accumulating** while QPS does
+  not.
+
+## Day 110 · system-design — Capacity planning: QPS, storage, bandwidth
+
+Source: [`days/day-110-trees-from-traversals/02-system-design-capacity-planning-qps-storage-bandwidth.md`](../../days/day-110-trees-from-traversals/02-system-design-capacity-planning-qps-storage-bandwidth.md)
+
+- **Peak QPS ÷ per-server QPS is NOT the answer** — it is the answer to "what is theoretically possible".
+  Three multipliers follow: **÷ utilisation (0.65) · + redundancy (N+1) · × growth.** 6 machines becomes
+  **14**.
+- **The one idea that matters: queueing delay grows as `u / (1 − u)`.** Flat to ~60%, then vertical: **80%
+  = 4× the wait, 90% = 9×, 99% = 99×.** So **size for 60–70% for user-facing work, 80–90% for batch behind
+  a queue** — that difference is the biggest cost lever available.
+- **Verify the failure case before answering.** 14 machines, one dies → 13 at 46%; a whole AZ dies → 9 at
+  67%. And **redundancy is proportionally cheaper in a big fleet**: losing 1 of 30 costs the survivors
+  3.4%, losing 1 of 3 costs them 50%.
+- **Autoscaling does not remove headroom.** Metric window + decision + boot + warm-up + health checks =
+  **3–4 minutes**, and a spike arrives in seconds — so **the existing fleet takes the whole spike alone.**
+  Autoscaling saves money in the **trough**; a **queue** is the only thing that absorbs a spike instantly.
+- **Three separate plans, and the binding one is rarely the obvious one.** Compute scales with traffic;
+  **storage scales with time and is a ratchet** (retention *is* the plan — and fully loaded it is ~**5×**
+  the raw data after replication, **+30% indexes** and **÷0.8 free space**); **bandwidth binds first for
+  media** — 6,000 QPS × 5 KB is 30 MB/s, but × 2 MB is **12 GB/s**, twelve machines' worth of link. And the
+  per-server figure is an assumption: **load-test to the knee where p99 degrades**, and take the QPS just
+  below it.
+
+## Day 111 · system-design — Single points of failure
+
+Source: [`days/day-111-serialise-a-tree/02-system-design-single-points-of-failure.md`](../../days/day-111-serialise-a-tree/02-system-design-single-points-of-failure.md)
+
+- **An SPOF is any component whose failure stops the system.** Find them two ways: **point at every box and
+  ask what still works**, and **trace one critical path backwards until you leave the system** — the second
+  pass finds what the diagram does not show.
+- **The ones that cause real outages are undrawn: DNS · config and secrets · certificates · the deploy
+  pipeline · monitoring · a shared library · one person.** Config being down does not break running
+  instances — it breaks every **restart, deploy and autoscale**, so you cannot recover during the incident.
+- **Series multiply availabilities, parallel multiply failure rates.** Six components at 99.9% give
+  **~99.4% — two days a year**, so every dependency on the critical path costs availability and **making
+  one optional removes it from the product entirely**. Two parallel copies at 99.9% give **99.9999% — nine
+  hours becomes 32 seconds**.
+- **That parallel figure assumes INDEPENDENCE.** Same rack, same zone, same deploy, same config push, same
+  certificate — and it collapses: **10% correlation turns 32 seconds into ~53 minutes**. A **bad deploy or
+  config push is the correlated failure redundancy cannot help with**, which makes canaries and fast
+  rollback availability work.
+- **Redundancy ≠ failover ≠ degradation.** Two of something with no tested switching is **a second thing
+  that might also be broken** — and DNS TTL is often the largest term in failover time. **Degradation is
+  usually the best value.** And **a slow dependency is more dangerous than a dead one**: use timeouts,
+  **circuit breakers** and **bulkheads**, then **cells** and **shuffle sharding** to shrink blast radius
+  from 100% of users to a fraction of a percent.
+
+## Day 112 · system-design — Scaling revision and interview questions
+
+Source: [`days/day-112-trees-revision/02-system-design-scaling-revision-and-interview-questions.md`](../../days/day-112-trees-revision/02-system-design-scaling-revision-and-interview-questions.md)
+
+- **Diagnose before prescribing, in four questions: one slow request or too many · which resource is
+  saturated · reads or writes · steady or a spike.** *"Throughput scales horizontally; latency does not"*
+  disposes of the most common misdiagnosis, and a **lock** is contention that none of the moves fix.
+- **The ladder, cheapest and most reversible first: measure → fix the obvious → scale up → CACHE → CDN →
+  stateless + LB → read replicas → queue → SHARD → multi-region.** Rungs 3 and 4 hold the leverage: a
+  **90% hit rate is 10×** and a **CDN removes ~95% of the bytes**, both in an afternoon.
+- **"I'd shard it" as a first answer is the failure the question exists to catch.** Sharding is the only
+  thing that scales **writes**, so shard only above **~5,000 writes/s** or when the working set exceeds the
+  biggest machine — and its cost is **not the migration but every feature afterwards**.
+- **Name the price with every move**: cache → staleness and stampedes · CDN → slow purges, nothing
+  personalised · stateless → a hot shared store · replicas → **lag and read-your-own-writes** · queue →
+  at-least-once, caller blind · shard → **no joins, transactions or unique constraints, permanently**.
+- **The numbers: 1 billion/day ≈ 10,000 QPS · app server ~1,000 QPS · DB ~10,000 reads and ~5,000 writes ·
+  Redis ~100,000 ops/s · peak ×3 · size for 65% utilisation because delay is `u/(1−u)` · every replica
+  applies every write.** And check the direction you moved availability: **components in series multiply**,
+  so six at 99.9% is ~99.4% — make the cache **optional**, and prefer **degradation** over redundancy.

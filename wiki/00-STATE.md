@@ -115,5 +115,63 @@ front matter. A day that is missing from this table has not been written yet.
 | 106 | Binary search trees: the ordering property | Sharding, part one: choosing the key |
 | 107 | BST insert, search, and delete | Sharding, part two: rebalancing and hot spots |
 | 108 | Validating a binary search tree | Consistent hashing |
+| 109 | Balanced trees, and why balance matters | Back-of-the-envelope estimation |
+| 110 | Building a tree from its traversals | Capacity planning: QPS, storage, bandwidth |
+| 111 | Serialising and deserialising a tree | Single points of failure |
+| 112 | Trees revision and mock round | Scaling revision and interview questions |
+| 113 | The heap: a tree stored in an array | Why distributed systems are hard |
+| 114 | Push, pop, and heapify | The CAP theorem, honestly |
+| 115 | Python's heapq, and the min-heap-only problem | Consistency models |
+| 116 | Top K problems | Eventual consistency in practice |
+| 117 | Merging K sorted lists | Quorums: why R plus W must exceed N |
+| 118 | Two heaps: the running median | Leader election |
+| 119 | Heaps revision and mock round | Consensus, and Raft in plain English |
+| 120 | The trie: a tree of characters | Distributed transactions and two-phase commit |
+| 121 | Insert, search, and prefix search | The saga pattern |
+| 122 | Autocomplete and word dictionaries | Idempotency and exactly-once delivery |
+| 123 | Tries in interviews: word search II | Clocks, ordering, and why time is a lie |
+| 124 | Tries revision and mock round | Failure detection, heartbeats, and timeouts |
+| 125 | What a graph is, and where graphs hide | Retries, backoff, and thundering herds |
+| 126 | Representing a graph: adjacency matrix versus adjacency list | Circuit breakers and bulkheads |
+| 127 | Breadth-first search on a graph | Distributed locks |
+| 128 | Depth-first search on a graph | Distributed systems revision and interview questions |
+| 129 | Connected components | Message queues: why async changes everything |
+| 130 | Grids are graphs: islands and flood fill | Kafka, explained |
+| 131 | Shortest path in an unweighted graph | Publish-subscribe versus point-to-point |
+| 132 | Cycle detection in an undirected graph | Stream processing basics |
+| 133 | Cycle detection in a directed graph | Object storage, S3-style |
+| 134 | Topological sort | Blob storage versus storing files in the database |
+| 135 | Course schedule and the dependency family | Search: how a search index actually works |
+| 136 | Dijkstra's algorithm | Elasticsearch in a design |
+| 137 | Bellman-Ford, and what negative edges break | Time-series and metrics stores |
+| 138 | Union-Find: the disjoint set union | Data warehouses: OLAP versus OLTP |
+| 139 | Minimum spanning trees: Kruskal and Prim | ETL, batch pipelines, and where data goes to be counted |
+| 140 | Bipartite graphs and two-colouring | Websockets, long polling, and server-sent events |
+| 141 | Multi-source BFS and 0-1 BFS | Push notifications, end to end |
+| 142 | Graphs revision and mock round | Geospatial indexing: geohash and quadtrees |
+| 143 | What dynamic programming actually is | Bloom filters and probabilistic structures |
+| 144 | Fibonacci: memoisation versus tabulation | Building blocks revision and interview questions |
+| 145 | Climbing stairs and the one-dimensional habit | How to run a high-level design interview: the forty-five-minute script |
+| 146 | House robber and the choice at each step | Design a URL shortener |
+| 147 | Finding the state: the hardest part of DP | Design a pastebin |
+| 148 | The 0/1 knapsack | Design a rate limiter, at system scale |
+| 149 | Subset sum and partition problems | Design a distributed key-value store |
+| 150 | Unbounded knapsack and coin change | Design a distributed unique ID generator |
+| 151 | Coin Change II: counting | Design a web crawler |
+| 152 | Longest increasing subsequence | Design a notification system at scale |
+| 153 | Longest common subsequence | Design a news feed |
+| 154 | Edit distance | Design Twitter |
+| 155 | String DP: palindromic substrings | Design Instagram |
+| 156 | Grid DP: unique paths | Design WhatsApp |
+| 157 | DP on decisions: buy and sell stock | Design a chat system with presence |
+| 158 | Interval DP | Design YouTube |
+| 159 | DP on trees | Design Netflix |
+| 160 | Bitmask DP | Design Google Drive or Dropbox |
+| 161 | Space optimisation in DP | Design Uber |
+| 162 | Recognising dynamic programming | Design Google Maps |
+| 163 | Dynamic programming revision and mock round | Design an e-commerce system |
+| 164 | Greedy: when taking the best option now is safe | Design a payment system |
+| 165 | Proving a greedy choice, simply | Design a ticket booking system |
+| 166 | Interval scheduling | Design search autocomplete at scale |
 
-**108 of 180 days written.**
+**166 of 180 days written.**

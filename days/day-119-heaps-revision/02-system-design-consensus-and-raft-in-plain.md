@@ -2,6 +2,7 @@
 day: 119
 track: system-design
 title: "Consensus, and Raft in plain English"
+phase: "Distributed systems core"
 status: written
 ---
 

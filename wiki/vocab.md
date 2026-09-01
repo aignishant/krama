@@ -110,3 +110,40 @@ cheaper to define it again than to assume the reader knows it.
 - **106** — shard
 - **107** — cache it, rebalancing
 - **108** — assignment rule, hash ring, key property
+- **109** — consequence, rebuilding the tree, rotation, routine
+- **110** — inorder, preorder
+- **111** — blast radius, bulkhead, hidden spof, in parallel, in series, spof
+- **112** — lag, still one machine
+- **113** — effect, heapsort, logical time, partial failure, the running median, top-k problems
+- **114** — availability, complete, consistency, indexed heap, lazy deletion, linearizability, network partition
+- **115** — always comparable, eventual consistency, never equal, replica divergence, session guarantees
+- **116** — bounded optimism, k closest points, k most frequent, k-th largest specifically, max-heap, sorting everything
+- **117** — heap, lazy, version
+- **118** — boundary, earlier, election timeout, lease, min-heap, quorum, removal, stonith
+- **119** — a replicated log
+- **120** — coordinator, participants
+- **121** — no children
+- **122** — subtree, weight
+- **123** — total order
+- **124** — false negative, false positive, heartbeat
+- **125** — cycle, in-degree, node, out-degree, vertex
+- **126** — opens
+- **127** — queue
+- **129** — at-least-once
+- **130** — a, implicit graph, offset, partitions
+- **131** — within
+- **132** — parallel edges, parent
+- **134** — broken links, critical path, orphans, toast
+- **135** — diminishing returns
+- **136** — replica
+- **137** — delta of delta
+- **138** — rank
+- **139** — etl, minimum spanning forest, priority queue
+- **141** — collapse key
+- **143** — state
+- **149** — many times
+- **155** — substring
+- **157** — bucket by time, never persisted
+- **158** — manifest
+- **160** — chunks
+- **166** — which is hours

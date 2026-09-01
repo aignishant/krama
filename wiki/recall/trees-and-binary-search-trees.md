@@ -252,3 +252,91 @@ Source: [`days/day-108-validating-a-bst/01-dsa-validating-a-binary-search-tree.m
   **iterative** inorder version when the tree may be a chain — which is not exotic, since a valid BST built
   from sorted input *is* a chain. And **largest BST subtree** is the day-102 trick again: return
   `(is_bst, size, min, max)` upward for `O(n)` instead of `O(n²)`.
+
+## Day 109 · dsa — Balanced trees, and why balance matters
+
+Source: [`days/day-109-balanced-trees/01-dsa-balanced-trees-and-why-balance.md`](../../days/day-109-balanced-trees/01-dsa-balanced-trees-and-why-balance.md)
+
+- **The worst case is a CHAIN, and the input is SORTED DATA — which is the normal case**, since data
+  arrives ordered by id or timestamp far more often than randomly. At n = 1,000,000 that is **1,000,000
+  comparisons instead of ~20**, plus `RecursionError` past ~1,000. **A randomly built BST is fine**
+  (expected height ~`2 log n`): the enemy is order, not adversaries.
+- **Balanced means the subtree heights differ by ≤ 1 at EVERY node, not just the root** — and check it in
+  **one pass with a sentinel**, because calling `height` at every node is `O(n²)` on a chain.
+- **A rotation rewires three pointers to move a child up and its parent down, and it is legal because IT
+  DOES NOT CHANGE THE INORDER SEQUENCE.** `O(1)`, touches nothing outside the subtree, and the caller must
+  **reattach** the returned root. Four cases: **LL and RR need one rotation; LR and RL are zig-zags and
+  need two**, because one rotation on a zig-zag gives the mirror-image zig-zag.
+- **AVL: height ≤ `1.44 log n`, faster reads, more rotations on writes. Red-black: height ≤ `2 log n`, ≤ 2
+  rotations per insert** — which is why `std::map`, Java's `TreeMap` and the Linux scheduler use it.
+  **Do not hand-write either.** Write a **treap** (BST by key, heap by a *random* priority, ~25 lines,
+  `O(log n)` **expected**, immune to insertion order) or a **skip list** (what Redis uses for sorted sets).
+- **Databases do not use binary trees — they use B-trees**, because on disk the cost is the number of node
+  visits (**10 ms a read against 100 ns in memory**). A node is sized to one page and holds hundreds of
+  keys: **1,000,000 keys is height 20 in a binary tree and height 3 in a B-tree**; a billion rows is four
+  levels.
+
+## Day 110 · dsa — Building a tree from its traversals
+
+Source: [`days/day-110-trees-from-traversals/01-dsa-building-a-tree-from.md`](../../days/day-110-trees-from-traversals/01-dsa-building-a-tree-from.md)
+
+- **One traversal NEVER determines a tree** — a left-only and a right-only child both give preorder
+  `[1, 2]`. The two lists do different jobs: **preorder identifies the ROOT (first element); inorder
+  locates the BOUNDARY between the subtrees.**
+- **The non-obvious step: preorder finishes the ENTIRE left subtree before starting the right**, so the
+  size learned from inorder cuts the preorder list at the same place. One number splits both lists.
+- **Two separate `O(n²)`s, and both must be fixed: `inorder.index()` (a scan per node) → a value-to-index
+  map built once; and SLICING (a new list per node) → pass INDEX RANGES.** Together: `O(n)` time, `O(n)`
+  space. Requires **unique values** — say so.
+- **With a cursor into preorder, the LEFT recursion must run first** — it consumes exactly the left
+  subtree's elements. Swapping the lines builds a valid tree from the wrong values, silently. For
+  **postorder + inorder**, mirror it: root is the **last** element, walk **backwards**, and build the
+  **RIGHT** subtree first.
+- **Preorder + postorder is AMBIGUOUS** — both say where the root is, neither says where the boundary is —
+  **except for a full binary tree** (every node has 0 or 2 children). And **a BST needs only ONE
+  traversal**, because inorder is implied by the ordering: walk the preorder with a permitted **range**,
+  `O(n)` and no map. Verify any answer by **round-tripping** both traversals.
+
+## Day 111 · dsa — Serialising and deserialising a tree
+
+Source: [`days/day-111-serialise-a-tree/01-dsa-serialising-and-deserialising-a-tree.md`](../../days/day-111-serialise-a-tree/01-dsa-serialising-and-deserialising-a-tree.md)
+
+- **It is a DESIGN question with four decisions: traversal order · null marker · delimiter · how you
+  consume the string.** Say all four as choices, with reasons — that is the performance.
+- **A single traversal does not determine a tree; a single traversal PLUS explicit null markers does.** The
+  marker says *which* child is missing, which is exactly what distinguishes `1→left 2` from `1→right 2`.
+  **`n` nodes have `n+1` empty slots, so the output is `2n + 1` tokens.**
+- **Choose preorder because the reader consumes tokens in the order the writer wrote them** — one forward
+  walk, no index arithmetic, no queue. Level order is equally valid and is the platform's display format;
+  it is shorter for wide shallow trees and longer for deep narrow ones.
+- **The null marker must not be parseable as a value (`#`, never `-1`) and the delimiter must not appear
+  in a value.** Without a delimiter, `12` reads back as `1, 2` and `-1` as `-, 1` — silent corruption that
+  passes every single-digit test.
+- **Two silent `O(n²)` traps: string `+=` instead of `join` (~35 GB of copying at 100k tokens) and
+  `list.pop(0)` instead of an iterator (~5 billion element moves).** Both directions are `O(n)`. And **a
+  BST needs NO markers — `n` tokens instead of `2n+1`, roughly half** — rebuilt by walking the values with
+  a permitted **range**. The theoretical floor is **`2n` bits** for the shape, since there are ~`4ⁿ` binary
+  trees.
+
+## Day 112 · dsa — Trees revision and mock round
+
+Source: [`days/day-112-trees-revision/01-dsa-trees-revision-and-mock-round.md`](../../days/day-112-trees-revision/01-dsa-trees-revision-and-mock-round.md)
+
+- **One question picks the shape: which way does the information travel?** **Up, combined** → simple
+  postorder (the five-line skeleton). **Up, but you need TWO things** → the **return-value trick**
+  (diameter, max path sum, balanced, largest BST subtree). **Down from an ancestor** → carry it as an
+  argument (paths, depths, BST ranges — and no undo needed). **Across** → BFS with `len(queue)` captured
+  first. **Between two trees** → three base cases. **A BST** → walk down, do not search.
+- **The universal skeleton: handle `None`, recurse both children, combine.** The base case is the
+  **identity** of the combining operation — `0` for sums, `-1` for max-of-heights, `True` for "all".
+- **The five bugs, and only the first one raises.** Missing `None` case · **local check where the property
+  is global** (BST and balance) · returning the answer instead of what the parent needs · **recomputing
+  what you already have** (`O(n²)` in balance, diameter and reconstruction) · **reference instead of
+  copy**.
+- **Time is the whole tree; space is the deepest path — but DFS is `O(height)` and BFS is `O(width)`, in
+  opposite directions.** Perfect million-node tree: 20 frames against 500,000 queued. Chain: 1 queued
+  against `RecursionError`. **`O(height)` is `O(log n)` only if balanced, and sorted input builds a
+  chain.**
+- **Say the convention before the base case** (edges or nodes; empty tree `-1` or `0`), **state both
+  complexities as you write**, and **run the five-bug checklist before declaring done** — four of the five
+  are silent.

@@ -2,6 +2,7 @@
 day: 120
 track: system-design
 title: "Distributed transactions and two-phase commit"
+phase: "Distributed systems core"
 status: written
 ---
 
