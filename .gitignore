@@ -6,3 +6,11 @@ __pycache__/
 .hypothesis/
 .DS_Store
 bench_out/
+book/node_modules/
+book/assets/
+book/package*
+book/build/
+book/src/
+book/preview*
+book/rende*
+book/README.md
