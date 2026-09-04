@@ -4,27 +4,32 @@
 |---|---|
 | **DSA** | What a graph is, and where graphs hide |
 | **System design** | Retries, backoff, and thundering herds |
+| **C++** | Graphs and recursion in C++: adjacency lists, depth, and DSU |
 
 ## What you can do by tonight
 
 - **DSA** — You can see the graph inside a problem that never uses the word.
 - **System design** — You can design a retry policy that does not amplify an outage.
+- **C++** — You can build an adjacency list, run BFS and DFS with the STL, and say why a deep recursion crashes in C++ where Python only raises.
 
-## The two questions today answers
+## The questions today answers
 
 - *Is this a graph problem? What are the nodes and edges?*
 - *Everything retried at once and the service died. What went wrong?*
+- *How do you represent a graph in C++, and what breaks when the recursion goes deep?*
 
 ## Read in this order
 
 1. [01-dsa-what-a-graph.md](01-dsa-what-a-graph.md) — the DSA lesson
 2. [02-system-design-retries-backoff-and-thundering-herds.md](02-system-design-retries-backoff-and-thundering-herds.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
+3. [04-cpp-graphs-and-recursion.md](04-cpp-graphs-and-recursion.md) — the C++ lesson
+4. [03-practice.md](03-practice.md) — code it, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Graphs**
 - System design phase: **Distributed systems core**
+- C++ phase: **C++ and competitive programming**
 
 ---
 

@@ -4,6 +4,9 @@ You are the writing partner for **Krama**, a 180-day course that prepares one pe
 a complete beginner — for **DSA and system design interviews at product companies**.
 
 Every day teaches two things side by side: one DSA topic and one system design topic.
+Ten of the days also carry a third, optional lesson: C++, for the reader who wants to
+solve in C++ as well as Python. Those ten are listed in `CPP_DAYS` in
+[`scripts/curriculum.py`](scripts/curriculum.py).
 
 Read this before writing anything in `days/`:
 
@@ -42,9 +45,9 @@ Breaking one of these makes the output wrong, not merely weak.
 
 | # | Rule |
 |---:|---|
-| 1 | **A day is four files.** `README.md` (hub), `01-dsa-<topic>.md`, `02-system-design-<topic>.md`, `03-practice.md`. Nothing else. Folders are `days/day-NNN-<slug>/` — three digits, then a readable slug. |
-| 2 | **Every day teaches both tracks.** Never write only the DSA lesson or only the system design lesson. The whole point is that they run in parallel. |
-| 3 | **Every lesson carries all nine sections, in order.** See the format contract. Not eight. |
+| 1 | **A day is four files.** `README.md` (hub), `01-dsa-<topic>.md`, `02-system-design-<topic>.md`, `03-practice.md`. Nothing else. Folders are `days/day-NNN-<slug>/` — three digits, then a readable slug. **The one exception:** the ten days listed in `CPP_DAYS` in [`scripts/curriculum.py`](scripts/curriculum.py) also carry `04-cpp-<topic>.md`. Never add one to a day that is not in that dict — add the day to the dict and run `./k build`. |
+| 2 | **Every day teaches both tracks.** Never write only the DSA lesson or only the system design lesson. The whole point is that they run in parallel. On a C++ day, the C++ lesson is a third lesson, never a replacement for either. |
+| 3 | **Every lesson carries all nine sections, in order.** See the format contract. Not eight. This includes the C++ lessons. |
 | 4 | **§2 is a story with a person in it, and zero technical words.** 200-400 words. No code, no jargon, not one term of art. The scene must be one almost anyone has lived — matching socks, a canteen queue, laying tables — told in simple words with realistic detail. If deleting it loses nothing, it was not a story. |
 | 5 | **Show the full solution.** Complete, working, copy-pasteable code lives in §5 of every DSA lesson. This repository does not hide answers from the reader. |
 | 6 | **Simple language, always.** Short sentences. One idea each. Define every term the first time it appears. Concrete numbers before variables. Full sentences, correct grammar, and real punctuation — commas and full stops where they belong. If a sentence needs re-reading, rewrite it. |
@@ -54,7 +57,7 @@ Breaking one of these makes the output wrong, not merely weak.
 | 10 | **No `lab/` folder. Ever.** No `implement.py`, no `reference.py`, no pytest harness, no benchmark script. That structure was removed deliberately. Practice is named problems in `03-practice.md`, solved on LeetCode. |
 | 11 | **Problems are named, never reproduced.** Title, source, and one line on what it is really testing. Do not paste problem statements. |
 | 12 | **No study-time estimates.** No "≈45 minutes to read", no "quick", no pace language. A day is a unit of subject, not of hours. Timing a *drill* is different and is allowed — "answer this in two minutes", "minutes 0-5: requirements" — because that is the interview clock, not a reading estimate. |
-| 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Four things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, every day's own `README.md` hub, and everything under `wiki/`. Only the two lesson files and `03-practice.md` hold hand-written prose. |
+| 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Four things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, every day's own `README.md` hub, and everything under `wiki/`. Only the lesson files and `03-practice.md` hold hand-written prose. |
 | 14 | **Cut anything that is not interview material.** Formal proofs, potential functions, decision-tree lower bounds, CPython internals, the RAM model as a formal object. If it will not be asked and does not make an asked thing clearer, it does not go in. |
 | 15 | **No paper. Anywhere.** Never tell the reader to draw on paper, write it on a blank page, or work it out with pen and paper. Say it out loud from memory, or draw it in any tool they like. Stories do not use paper props either — a phone's contacts, not a diary. |
 

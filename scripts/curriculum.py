@@ -59,6 +59,84 @@ SD_PHASES = [
 
 RAW = part1.DAYS + part2.DAYS + part3.DAYS + part4.DAYS
 
+# ---------------------------------------------------------------------------
+# The C++ track.
+#
+# Ten days, and only ten. Each one sits on the day the course first needs that
+# piece of C++, so a reader who wants to solve in C++ starts in week one and tops
+# up as new structures arrive. Five land in the first six days — enough to write
+# real solutions — and five are placed at the head of the phase that needs them.
+#
+# A day with no entry here carries no C++ lesson, and its folder stays four files.
+#
+#   n: (title, what you can do after it, how an interviewer phrases it)
+# ---------------------------------------------------------------------------
+
+CPP_PHASE = "C++ and competitive programming"
+
+CPP_DAYS: dict[int, tuple[str, str, str]] = {
+    1: (
+        "Compiling and running your first program",
+        "You can install a compiler, turn a text file into a running program, and read a "
+        "compiler error instead of panicking at it.",
+        "What is the difference between a compiled language and an interpreted one?",
+    ),
+    2: (
+        "Types, numbers, and the overflow that costs contests",
+        "You can choose int or long long correctly, and spot the multiplication that will "
+        "overflow before you run it.",
+        "What is the range of an int, and what happens when you go past it?",
+    ),
+    3: (
+        "Input, output, and the competitive template",
+        "You can read any judge's input format fast enough, and say what every line of your "
+        "template actually does.",
+        "Your algorithm is optimal and it still times out. What do you check?",
+    ),
+    5: (
+        "vector, references, and the array you use for everything",
+        "You can use vector for every array problem in the course, and pass one to a function "
+        "without copying four megabytes by accident.",
+        "What is the difference between passing by value, by reference, and by pointer?",
+    ),
+    6: (
+        "string, map, set, and pair: half of DSA in four containers",
+        "You can choose between map and unordered_map with a reason, and count, group and "
+        "deduplicate anything.",
+        "When would you use std::map instead of std::unordered_map?",
+    ),
+    42: (
+        "sort, lambdas, and lower_bound: the algorithms header",
+        "You can sort by any key with a lambda, and binary search a sorted range without "
+        "writing the loop yourself.",
+        "What is the difference between lower_bound and upper_bound?",
+    ),
+    68: (
+        "stack, queue, deque, and priority_queue",
+        "You can reach for the right container adapter instantly, and build a min-heap in C++ "
+        "without having to think about it.",
+        "How do you make a min-heap with std::priority_queue?",
+    ),
+    78: (
+        "structs, pointers, and building your own nodes",
+        "You can define a node, link nodes together, and say what a pointer holds and what "
+        "happens when it dangles.",
+        "What is the difference between a pointer and a reference?",
+    ),
+    125: (
+        "Graphs and recursion in C++: adjacency lists, depth, and DSU",
+        "You can build an adjacency list, run BFS and DFS with the STL, and say why a deep "
+        "recursion crashes in C++ where Python only raises.",
+        "How do you represent a graph in C++, and what breaks when the recursion goes deep?",
+    ),
+    143: (
+        "DP tables in C++, and the contest traps that are left",
+        "You can allocate a DP table of any shape, memoise with a sentinel, and name the five "
+        "bugs that still cost you contests.",
+        "How would you write a 2D DP table in C++, and what does it cost in memory?",
+    ),
+}
+
 
 @dataclass(frozen=True)
 class Lesson:
@@ -77,6 +155,7 @@ class Day:
     slug: str
     dsa: Lesson
     sd: Lesson
+    cpp: Lesson | None = None  # only on the ten days listed in CPP_DAYS
 
     @property
     def folder(self) -> str:
@@ -101,12 +180,17 @@ def load() -> list[Day]:
         if n in seen:
             raise ValueError(f"day {n} appears twice")
         seen.add(n)
+        cpp = None
+        if n in CPP_DAYS:
+            c_title, c_line, c_ask = CPP_DAYS[n]
+            cpp = Lesson("cpp", c_title, c_line, c_ask, CPP_PHASE)
         days.append(
             Day(
                 n=n,
                 slug=slug,
                 dsa=Lesson("dsa", d_title, d_line, d_ask, _phase_of(DSA_PHASES, n)),
                 sd=Lesson("system-design", s_title, s_line, s_ask, _phase_of(SD_PHASES, n)),
+                cpp=cpp,
             )
         )
     days.sort(key=lambda d: d.n)
@@ -114,6 +198,9 @@ def load() -> list[Day]:
     if [d.n for d in days] != expected:
         missing = sorted(set(expected) - seen)
         raise ValueError(f"day numbers are not 1..180; missing {missing}")
+    stray = sorted(set(CPP_DAYS) - seen)
+    if stray:
+        raise ValueError(f"CPP_DAYS names days that do not exist: {stray}")
     return days
 
 

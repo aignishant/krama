@@ -41,6 +41,30 @@ them. The DSA track goes foundations → patterns → data structures → algori
 system design track goes fundamentals → databases → object-oriented design → low-level
 design → distributed systems → high-level design.
 
+### The one exception: the C++ track
+
+Ten days out of the hundred and eighty carry a fifth file:
+
+```
+    04-cpp-<topic>.md               the C++ lesson
+```
+
+It is optional and it is deliberately small. The course teaches Python, because Python
+gets a beginner to a working solution fastest. The C++ track is for the reader who also
+wants to solve in C++ — because contest time limits are set for C++, and because some
+interviews are in it.
+
+Ten days, not a hundred and eighty. Five of them land in the first six days, which is
+enough to start writing real C++ solutions. Five more sit at the head of the phase that
+needs them, so the reader learns `priority_queue` on the day heaps arrive rather than
+four months early.
+
+The days that carry one live in `CPP_DAYS` in [`../scripts/curriculum.py`](../scripts/curriculum.py).
+A day not listed there is four files, exactly as above. The C++ lesson carries the same
+nine sections as a DSA lesson, and is held to the same rules — a story with no technical
+words in it, the full compilable solution, the real compiler error pasted, the arithmetic
+shown.
+
 ---
 
 ## The nine sections

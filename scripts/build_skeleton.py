@@ -83,6 +83,45 @@ SD_SECTIONS = [
 ]
 
 
+# The C++ lesson carries the same nine headings as a DSA lesson, because it is a
+# coding lesson — only the notes under them change.
+CPP_SECTIONS = [
+    (
+        "What this is, and why they ask it",
+        "The idea in three sentences, and the reason it appears in interviews.",
+    ),
+    ("The story", "A scene from ordinary life where this idea already exists. No code, no jargon."),
+    (
+        "The idea in plain English",
+        "The story translated into the C++ idea, one step at a time. Every term defined.",
+    ),
+    (
+        "The picture",
+        "The diagram. Memory laid out in ASCII boxes; what a copy does and what a reference does.",
+    ),
+    (
+        "The code, built step by step",
+        "Fragments of ten lines or fewer, each explained, then the complete compilable program.",
+    ),
+    (
+        "What it costs",
+        "Time, space, and the arithmetic: bytes per element, operations per second, the copy.",
+    ),
+    (
+        "The traps",
+        "The near-miss that compiles and misbehaves, and the compiler's real error text, pasted.",
+    ),
+    (
+        "In the interview",
+        "How it is asked, what to say out loud, the follow-ups, and a model answer.",
+    ),
+    ("Recall card", "Five lines. If you remember nothing else from today, remember these."),
+]
+
+SECTIONS_FOR = {"dsa": DSA_SECTIONS, "system-design": SD_SECTIONS, "cpp": CPP_SECTIONS}
+LABEL_FOR = {"dsa": "DSA", "system-design": "System Design", "cpp": "C++"}
+
+
 def slugify(text: str) -> str:
     text = text.lower().replace("'", "")
     text = re.sub(r"[^a-z0-9]+", "-", text)
@@ -138,8 +177,8 @@ def write(path: Path, body: str, force: bool) -> bool:
 
 
 def lesson_file(day: Day, lesson: Lesson) -> str:
-    label = "DSA" if lesson.track == "dsa" else "System Design"
-    sections = DSA_SECTIONS if lesson.track == "dsa" else SD_SECTIONS
+    label = LABEL_FOR[lesson.track]
+    sections = SECTIONS_FOR[lesson.track]
     lines = [
         "---",
         f"day: {day.n}",
@@ -207,11 +246,16 @@ def practice_file(day: Day) -> str:
             "## Before you move on",
             "",
             "- [ ] I can write today's DSA code from memory, no reference.",
-            "- [ ] I can draw today's system design diagram on a blank page.",
+            "- [ ] I can draw today's system design diagram in whatever tool I like.",
             "- [ ] I answered all three questions above out loud.",
             "",
         ]
     )
+
+
+def cpp_name(day: Day) -> str:
+    """The C++ lesson's filename. Three words is enough after the 04-cpp- prefix."""
+    return f"04-cpp-{short_slug(day.cpp.title, 3)}.md"
 
 
 def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
@@ -224,35 +268,60 @@ def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
     if nxt:
         nav.append(f"[Day {nxt.n:03d} →](../{nxt.folder}/README.md)")
 
+    tracks = [
+        "| Track | Today |",
+        "|---|---|",
+        f"| **DSA** | {day.dsa.title} |",
+        f"| **System design** | {day.sd.title} |",
+    ]
+    tonight = [
+        f"- **DSA** — {day.dsa.line}",
+        f"- **System design** — {day.sd.line}",
+    ]
+    questions = [f"- *{day.dsa.ask}*", f"- *{day.sd.ask}*"]
+    order = [
+        f"1. [{dsa_name}]({dsa_name}) — the DSA lesson",
+        f"2. [{sd_name}]({sd_name}) — the system design lesson",
+    ]
+    sits = [
+        f"- DSA phase: **{day.dsa.phase}**",
+        f"- System design phase: **{day.sd.phase}**",
+    ]
+
+    if day.cpp:
+        name = cpp_name(day)
+        tracks.append(f"| **C++** | {day.cpp.title} |")
+        tonight.append(f"- **C++** — {day.cpp.line}")
+        questions.append(f"- *{day.cpp.ask}*")
+        order.append(f"3. [{name}]({name}) — the C++ lesson")
+        order.append("4. [03-practice.md](03-practice.md) — code it, then say it out loud")
+        sits.append(f"- C++ phase: **{day.cpp.phase}**")
+    else:
+        order.append("3. [03-practice.md](03-practice.md) — code it, then say it out loud")
+
+    heading = "## The questions today answers" if day.cpp else "## The two questions today answers"
+
     return "\n".join(
         [
             f"# Day {day.n:03d} — {day.dsa.title}",
             "",
-            "| Track | Today |",
-            "|---|---|",
-            f"| **DSA** | {day.dsa.title} |",
-            f"| **System design** | {day.sd.title} |",
+            *tracks,
             "",
             "## What you can do by tonight",
             "",
-            f"- **DSA** — {day.dsa.line}",
-            f"- **System design** — {day.sd.line}",
+            *tonight,
             "",
-            "## The two questions today answers",
+            heading,
             "",
-            f"- *{day.dsa.ask}*",
-            f"- *{day.sd.ask}*",
+            *questions,
             "",
             "## Read in this order",
             "",
-            f"1. [{dsa_name}]({dsa_name}) — the DSA lesson",
-            f"2. [{sd_name}]({sd_name}) — the system design lesson",
-            "3. [03-practice.md](03-practice.md) — code it, then say it out loud",
+            *order,
             "",
             "## Where this sits",
             "",
-            f"- DSA phase: **{day.dsa.phase}**",
-            f"- System design phase: **{day.sd.phase}**",
+            *sits,
             "",
             "---",
             "",
@@ -269,11 +338,18 @@ def days_readme(days: list[Day]) -> str:
         "Every day is one folder. Every folder holds one DSA lesson, one system design",
         "lesson, and one practice sheet. Start at day 001 and do not skip.",
         "",
-        "| Day | DSA | System design |",
-        "|---:|---|---|",
+        "Ten of the days carry a fourth lesson: the C++ track, for readers who want to solve",
+        "in C++ as well. They are marked in the last column. A day with a blank there is four",
+        "files, as always.",
+        "",
+        "| Day | DSA | System design | C++ |",
+        "|---:|---|---|---|",
     ]
     for d in days:
-        lines.append(f"| [{d.n:03d}]({d.folder}/README.md) | {d.dsa.title} | {d.sd.title} |")
+        cpp = d.cpp.title if d.cpp else ""
+        lines.append(
+            f"| [{d.n:03d}]({d.folder}/README.md) | {d.dsa.title} | {d.sd.title} | {cpp} |"
+        )
     lines.append("")
     return "\n".join(lines)
 
@@ -302,6 +378,23 @@ def curriculum_index(days: list[Day]) -> str:
     lines += ["", "## The system design track, by phase", "", "| Days | Phase |", "|---|---|"]
     for name, lo, hi in SD_PHASES:
         lines.append(f"| {lo}-{hi} | {name} |")
+
+    cpp_days = [d for d in days if d.cpp]
+    lines += [
+        "",
+        "## The C++ track",
+        "",
+        "Optional, and ten days long. Each one sits on the day the course first needs that",
+        "piece of C++. Five land in the first six days, which is enough to start solving in",
+        "C++; five more are placed at the head of the phase that needs them. Every other day",
+        "is four files, unchanged.",
+        "",
+        "| Day | C++ lesson |",
+        "|---:|---|",
+    ]
+    for d in cpp_days:
+        lines.append(f"| [{d.n:03d}](../days/{d.folder}/README.md) | {d.cpp.title} |")
+
     lines += ["", "---", "", "## Every day"]
 
     # Group the day table by DSA phase so the index reads as a syllabus.
@@ -346,6 +439,8 @@ def main() -> int:
             (folder / f"02-system-design-{short_slug(day.sd.title)}.md", lesson_file(day, day.sd)),
             (folder / "03-practice.md", practice_file(day)),
         ]
+        if day.cpp:
+            targets.append((folder / cpp_name(day), lesson_file(day, day.cpp)))
         for path, body in targets:
             if write(path, body, args.force):
                 written += 1

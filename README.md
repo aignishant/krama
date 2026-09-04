@@ -35,6 +35,9 @@ days/day-001-how-your-code-actually-runs/
 Four files. No lab folder, no test harness, no setup. You read, you code along, you
 say the answers out loud.
 
+**Ten of the 180 days carry a fifth file** — `04-cpp-<topic>.md`, the optional C++ track.
+Every other day is four files, exactly as above.
+
 Each lesson has the same nine sections, so you learn one reading rhythm and keep it
 for six months:
 
@@ -71,6 +74,30 @@ design case studies, then reliability and the interview itself.
 The system design track is deliberately ordered **fundamentals and LLD first, HLD second**.
 Low-level design is what junior candidates actually get asked, and high-level design makes
 no sense until you know what a database index and a message queue are.
+
+**C++ — optional, and ten days long.** The course teaches Python, because Python gets a
+beginner to a working solution fastest. The C++ track is for people who also want to
+compete, where the time limits are set for C++, or who will be interviewed in it. Each
+lesson sits on the day the course first needs that piece of the language:
+
+| Day | C++ lesson |
+|---:|---|
+| [001](days/day-001-how-your-code-actually-runs/04-cpp-compiling-and-running.md) | Compiling and running your first program |
+| [002](days/day-002-counting-steps/04-cpp-types-numbers.md) | Types, numbers, and the overflow that costs contests |
+| [003](days/day-003-big-o-in-plain-english/04-cpp-input-output.md) | Input, output, and the competitive template |
+| [005](days/day-005-python-lists-and-tuples/04-cpp-vector-references.md) | `vector`, references, and the array you use for everything |
+| [006](days/day-006-python-strings-dicts-sets/04-cpp-string-map-set.md) | `string`, `map`, `set`, and `pair` |
+| [042](days/day-042-binary-search-idea/04-cpp-sort-lambdas.md) | `sort`, lambdas, and `lower_bound` |
+| [068](days/day-068-stacks/04-cpp-stack-queue-deque.md) | `stack`, `queue`, `deque`, and `priority_queue` |
+| [078](days/day-078-nodes-and-links/04-cpp-structs-pointers.md) | structs, pointers, and building your own nodes |
+| [125](days/day-125-what-a-graph-is/04-cpp-graphs-and-recursion.md) | Graphs and recursion: adjacency lists, depth, and DSU |
+| [143](days/day-143-what-dp-is/04-cpp-dp-tables.md) | DP tables, and the contest traps that are left |
+
+Five of them land in the first six days, which is enough to start solving the course's
+problems in C++ as well as Python. The other five arrive with the structure that needs
+them. The days that carry one are listed in `CPP_DAYS` in
+[`scripts/curriculum.py`](scripts/curriculum.py) — edit that and run `./k build` to change
+which.
 
 Full syllabus: [`docs/CURRICULUM_INDEX.md`](docs/CURRICULUM_INDEX.md) ·
 Every day at a glance: [`days/README.md`](days/README.md)

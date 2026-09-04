@@ -14,7 +14,7 @@ import re
 import sys
 from pathlib import Path
 
-from build_skeleton import DSA_SECTIONS, SD_SECTIONS
+from build_skeleton import CPP_SECTIONS, DSA_SECTIONS, SD_SECTIONS
 from curriculum import load
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -170,12 +170,25 @@ def check_day(n: int) -> tuple[bool, list[str]]:
     if stray:
         problems.append(f"days/{day.folder}: lab/ exists — rule 10 forbids it")
 
+    # Rule 1's one exception: a fifth file, but only on the days CPP_DAYS names.
+    cpp = sorted(folder.glob("04-cpp-*.md"))
+    if day.cpp and len(cpp) != 1:
+        problems.append(f"days/{day.folder}: expected one 04-cpp-*.md, found {len(cpp)}")
+    if not day.cpp and cpp:
+        problems.append(
+            f"days/{day.folder}: has {cpp[0].name} but day {n} is not in CPP_DAYS — rule 1"
+        )
+
     if len(dsa) == 1:
         problems += check_lesson(dsa[0], DSA_SECTIONS)
     if len(sd) == 1:
         problems += check_lesson(sd[0], SD_SECTIONS)
+    # The C++ lesson is optional, so an unwritten one is not a failure of the day —
+    # it is only held to the contract once somebody has written it.
+    if day.cpp and len(cpp) == 1 and "status: empty" not in cpp[0].read_text(encoding="utf-8")[:400]:
+        problems += check_lesson(cpp[0], CPP_SECTIONS)
 
-    for path in (*dsa, *sd, folder / "03-practice.md", folder / "README.md"):
+    for path in (*dsa, *sd, *cpp, folder / "03-practice.md", folder / "README.md"):
         if path.exists():
             problems += check_paper(path)
             problems += check_links(path)

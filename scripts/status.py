@@ -34,6 +34,8 @@ def main() -> None:
     days = load()
     dsa_done: set[int] = set()
     sd_done: set[int] = set()
+    cpp_done: set[int] = set()
+    cpp_days = [d for d in days if d.cpp]
 
     for day in days:
         folder = DAYS_DIR / day.folder
@@ -44,6 +46,10 @@ def main() -> None:
             dsa_done.add(day.n)
         if sd and written(sd):
             sd_done.add(day.n)
+        if day.cpp:
+            cpp = next(iter(sorted(folder.glob("04-cpp-*.md"))), None)
+            if cpp and written(cpp):
+                cpp_done.add(day.n)
 
     total = len(days)
     both = dsa_done & sd_done
@@ -51,7 +57,11 @@ def main() -> None:
     print(f"\n{BOLD}Krama{OFF} — 180 days, two tracks\n")
     print(f"  DSA            {bar(len(dsa_done), total)} {len(dsa_done):>3}/{total}")
     print(f"  System design  {bar(len(sd_done), total)} {len(sd_done):>3}/{total}")
-    print(f"  Days complete  {bar(len(both), total)} {len(both):>3}/{total}\n")
+    print(f"  Days complete  {bar(len(both), total)} {len(both):>3}/{total}")
+    print(
+        f"  C++ (optional) {bar(len(cpp_done), len(cpp_days))} "
+        f"{len(cpp_done):>3}/{len(cpp_days)}\n"
+    )
 
     def phase_table(title: str, phases: list[tuple[str, int, int]], done: set[int]) -> None:
         print(f"  {BOLD}{title}{OFF}")

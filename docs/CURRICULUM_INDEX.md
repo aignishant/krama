@@ -50,6 +50,26 @@ This file is generated from `scripts/curriculum.py` — edit that, then run
 | 145-170 | High-level design case studies |
 | 171-180 | Reliability, security, and the interview itself |
 
+## The C++ track
+
+Optional, and ten days long. Each one sits on the day the course first needs that
+piece of C++. Five land in the first six days, which is enough to start solving in
+C++; five more are placed at the head of the phase that needs them. Every other day
+is four files, unchanged.
+
+| Day | C++ lesson |
+|---:|---|
+| [001](../days/day-001-how-your-code-actually-runs/README.md) | Compiling and running your first program |
+| [002](../days/day-002-counting-steps/README.md) | Types, numbers, and the overflow that costs contests |
+| [003](../days/day-003-big-o-in-plain-english/README.md) | Input, output, and the competitive template |
+| [005](../days/day-005-python-lists-and-tuples/README.md) | vector, references, and the array you use for everything |
+| [006](../days/day-006-python-strings-dicts-sets/README.md) | string, map, set, and pair: half of DSA in four containers |
+| [042](../days/day-042-binary-search-idea/README.md) | sort, lambdas, and lower_bound: the algorithms header |
+| [068](../days/day-068-stacks/README.md) | stack, queue, deque, and priority_queue |
+| [078](../days/day-078-nodes-and-links/README.md) | structs, pointers, and building your own nodes |
+| [125](../days/day-125-what-a-graph-is/README.md) | Graphs and recursion in C++: adjacency lists, depth, and DSU |
+| [143](../days/day-143-what-dp-is/README.md) | DP tables in C++, and the contest traps that are left |
+
 ---
 
 ## Every day
