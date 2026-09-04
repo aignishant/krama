@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Seventh of the ten C++ days. Today's DSA lesson gives you the stack. This gives you all four
+> Seventh of the twelve C++ days. Today's DSA lesson gives you the stack. This gives you all four
 > of the containers that are really the same idea with different rules about which end you are
 > allowed to touch — and the one whose default is the opposite of Python's.
 

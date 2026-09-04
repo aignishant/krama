@@ -135,6 +135,18 @@ CPP_DAYS: dict[int, tuple[str, str, str]] = {
         "bugs that still cost you contests.",
         "How would you write a 2D DP table in C++, and what does it cost in memory?",
     ),
+    171: (
+        "Shifts, builtins, and bitset",
+        "You can use every bit trick the course needs without the shift that silently overflows, "
+        "and you know the four builtins that replace a loop with one instruction.",
+        "What does 1 << 40 give you, and why?",
+    ),
+    178: (
+        "Stress testing, and reading a judge's verdict",
+        "You can find the input that breaks your solution in about a minute instead of staring "
+        "at it, and you know what TLE, WA, RE and MLE each tell you to check first.",
+        "Your solution fails on test 14 of 60 and you cannot see the test. What do you do?",
+    ),
 }
 
 

@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Second of the ten C++ days. Yesterday you got a compiler working. Today you learn the one
+> Second of the twelve C++ days. Yesterday you got a compiler working. Today you learn the one
 > bug that will cost you more contest points than every other mistake combined.
 
 ---

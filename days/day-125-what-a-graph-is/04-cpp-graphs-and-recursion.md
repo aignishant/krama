@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Ninth of the ten C++ days. Everything from here to day 170 — graphs, trees revisited, shortest
+> Ninth of the twelve C++ days. Everything from here to day 170 — graphs, trees revisited, shortest
 > paths, dynamic programming on graphs — is built on the three lines in section 5. And this is the
 > day you learn the one way C++ fails that Python does not.
 

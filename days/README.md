@@ -179,13 +179,13 @@ files, as always.
 | [168](day-168-sweep-line/README.md) | Meeting rooms and the sweep line | Design an ad click aggregator |  |
 | [169](day-169-jump-game/README.md) | Jump game and reachability | Design a distributed job scheduler |  |
 | [170](day-170-greedy-revision/README.md) | Greedy and intervals revision and mock round | High-level design revision and full mock |  |
-| [171](day-171-binary-and-bits/README.md) | Binary, bits, and why they matter | Monitoring, metrics, and alerting |  |
+| [171](day-171-binary-and-bits/README.md) | Binary, bits, and why they matter | Monitoring, metrics, and alerting | Shifts, builtins, and bitset |
 | [172](day-172-bit-tricks/README.md) | The bit tricks every interview uses | Logging and distributed tracing |  |
 | [173](day-173-xor/README.md) | XOR problems | SLAs, SLOs, and error budgets |  |
 | [174](day-174-number-theory/README.md) | Primes, GCD, and modular arithmetic | Deployments: blue-green, canary, and rollback |  |
 | [175](day-175-combinatorics/README.md) | The combinatorics you actually need | Security in a design interview |  |
 | [176](day-176-bits-maths-revision/README.md) | Bits and maths revision and mock round | Cost: the constraint nobody mentions |  |
 | [177](day-177-the-patterns-on-one-page/README.md) | The twenty patterns, on one page | Microservices versus monolith, argued both ways |  |
-| [178](day-178-thinking-out-loud/README.md) | How to think out loud in a coding round | The system design interview framework, memorised |  |
+| [178](day-178-thinking-out-loud/README.md) | How to think out loud in a coding round | The system design interview framework, memorised | Stress testing, and reading a judge's verdict |
 | [179](day-179-full-coding-mock/README.md) | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design |  |
 | [180](day-180-final-revision/README.md) | Final revision, and the week before the interview | Final revision, and the week before the interview |  |

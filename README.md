@@ -75,7 +75,7 @@ The system design track is deliberately ordered **fundamentals and LLD first, HL
 Low-level design is what junior candidates actually get asked, and high-level design makes
 no sense until you know what a database index and a message queue are.
 
-**C++ — optional, and ten days long.** The course teaches Python, because Python gets a
+**C++ — optional, and twelve days long.** The course teaches Python, because Python gets a
 beginner to a working solution fastest. The C++ track is for people who also want to
 compete, where the time limits are set for C++, or who will be interviewed in it. Each
 lesson sits on the day the course first needs that piece of the language:
@@ -92,10 +92,11 @@ lesson sits on the day the course first needs that piece of the language:
 | [078](days/day-078-nodes-and-links/04-cpp-structs-pointers.md) | structs, pointers, and building your own nodes |
 | [125](days/day-125-what-a-graph-is/04-cpp-graphs-and-recursion.md) | Graphs and recursion: adjacency lists, depth, and DSU |
 | [143](days/day-143-what-dp-is/04-cpp-dp-tables.md) | DP tables, and the contest traps that are left |
+| [171](days/day-171-binary-and-bits/04-cpp-shifts-builtins.md) | Shifts, builtins, and `bitset` |
+| [178](days/day-178-thinking-out-loud/04-cpp-stress-testing.md) | Stress testing, and reading a judge's verdict |
 
 Five of them land in the first six days, which is enough to start solving the course's
-problems in C++ as well as Python. The other five arrive with the structure that needs
-them. The days that carry one are listed in `CPP_DAYS` in
+problems in C++ as well as Python. The rest arrive with the structure that needs them. The days that carry one are listed in `CPP_DAYS` in
 [`scripts/curriculum.py`](scripts/curriculum.py) — edit that and run `./k build` to change
 which.
 

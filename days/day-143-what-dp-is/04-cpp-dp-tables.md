@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> The last of the ten C++ days. Today's DSA lesson tells you what dynamic programming is. This
+> Tenth of the twelve C++ days. Today's DSA lesson tells you what dynamic programming is. This
 > tells you how to hold the table in C++ without running out of memory, and closes the track with
 > the bugs that are left after everything else in it has been learned.
 
@@ -859,36 +859,20 @@ neighbouring problem, and names two things the optimisation costs.
 
 ---
 
-## Where this track ends
+## Two days left
 
-That is the tenth and last C++ day. You now have, across ten lessons:
+That is the DSA half of the C++ track finished. You can now solve every kind of problem this
+course teaches, in C++.
 
-- **[Day 001](../day-001-how-your-code-actually-runs/04-cpp-compiling-and-running.md)** — compiling
-  and running.
-- **[Day 002](../day-002-counting-steps/04-cpp-types-numbers.md)** — types and overflow.
-- **[Day 003](../day-003-big-o-in-plain-english/04-cpp-input-output.md)** — fast I/O, the template,
-  and the constraint-to-complexity table.
-- **[Day 005](../day-005-python-lists-and-tuples/04-cpp-vector-references.md)** — `vector` and
-  references.
-- **[Day 006](../day-006-python-strings-dicts-sets/04-cpp-string-map-set.md)** — `string`, `map`,
-  `set`, `pair`.
-- **[Day 042](../day-042-binary-search-idea/04-cpp-sort-lambdas.md)** — `sort`, lambdas,
-  `lower_bound`.
-- **[Day 068](../day-068-stacks/04-cpp-stack-queue-deque.md)** — the four adapters and the heap.
-- **[Day 078](../day-078-nodes-and-links/04-cpp-structs-pointers.md)** — structs, pointers,
-  ownership.
-- **[Day 125](../day-125-what-a-graph-is/04-cpp-graphs-and-recursion.md)** — graphs, DSU, recursion
-  depth.
-- **Day 143** — DP tables and the remaining traps.
+Two lessons remain, and both are about the things a correct solution still fails on:
 
-That is enough C++ to solve any problem in this course and to compete. What it is not is enough C++
-to pass a C++-specific design round — classes, RAII, virtual functions, smart pointer ownership and
-the design patterns in C++ are a separate body of work, and the course teaches those ideas in the
-system design track from [day 043](../day-043-binary-search-without-bugs/README.md) onwards, in
-Python. If your interviews are in C++, translate those days as you go, the same way this track has
-you translating the DSA days.
+- **[Day 171](../day-171-binary-and-bits/04-cpp-shifts-builtins.md)** — shifts, the `__builtin_`
+  instructions, and `bitset`. Bitmask DP on
+  [day 160](../day-160-bitmask-dp/README.md) needs them, and `1 << 40` is a bug you have not met
+  yet.
+- **[Day 178](../day-178-thinking-out-loud/04-cpp-stress-testing.md)** — stress testing, and what
+  each judge verdict is telling you. That is the day that turns the other eleven into accepted
+  submissions rather than nearly-right ones.
 
-For contest practice: Codeforces Div. 3 and Div. 4 rounds first, then Div. 2 A and B. AtCoder
-Beginner Contests are gentler and better written. Do them with the template from
-[day 003](../day-003-big-o-in-plain-english/04-cpp-input-output.md), read the constraint before you
-read the statement, and compile locally with `-fsanitize=address,undefined` every single time.
+Between now and then, keep solving the course's daily problems in C++ as well as Python, and
+compile locally with `-fsanitize=address,undefined` every single time.

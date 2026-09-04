@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Fifth of the ten C++ days, and the twin of today's DSA lesson. After this you have enough C++
+> Fifth of the twelve C++ days, and the twin of today's DSA lesson. After this you have enough C++
 > to solve real problems, and the next C++ day is not until day 042. From tomorrow, do the
 > course's problems in C++ as well as Python.
 

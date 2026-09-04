@@ -69,6 +69,8 @@ is four files, unchanged.
 | [078](../days/day-078-nodes-and-links/README.md) | structs, pointers, and building your own nodes |
 | [125](../days/day-125-what-a-graph-is/README.md) | Graphs and recursion in C++: adjacency lists, depth, and DSU |
 | [143](../days/day-143-what-dp-is/README.md) | DP tables in C++, and the contest traps that are left |
+| [171](../days/day-171-binary-and-bits/README.md) | Shifts, builtins, and bitset |
+| [178](../days/day-178-thinking-out-loud/README.md) | Stress testing, and reading a judge's verdict |
 
 ---
 

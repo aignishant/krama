@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Third of the ten C++ days. Today's DSA lesson gives you Big-O. This gives you the table that
+> Third of the twelve C++ days. Today's DSA lesson gives you Big-O. This gives you the table that
 > turns a Big-O into a yes-or-no answer about whether your solution will pass, and the template
 > you start every contest problem from.
 

@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Sixth of the ten C++ days, and the first since day 006. Today's DSA lesson teaches you to write
+> Sixth of the twelve C++ days, and the first since day 006. Today's DSA lesson teaches you to write
 > binary search by hand, and you should — you will be asked to. This teaches you the library
 > version you will actually use once you have proved you can write it.
 

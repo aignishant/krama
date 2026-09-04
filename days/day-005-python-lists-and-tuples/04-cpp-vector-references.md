@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Fourth of the ten C++ days, and the twin of today's DSA lesson. You have just learned what a
+> Fourth of the twelve C++ days, and the twin of today's DSA lesson. You have just learned what a
 > Python list costs. `std::vector` is the same structure with the same costs — and one extra
 > question Python never asks you: who is holding the original, and who is holding a copy.
 

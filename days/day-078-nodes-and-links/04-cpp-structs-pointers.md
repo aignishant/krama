@@ -14,7 +14,7 @@ status: written
 
 ---
 
-> Eighth of the ten C++ days. Today's DSA lesson calls it "pointers without pointers", because
+> Eighth of the twelve C++ days. Today's DSA lesson calls it "pointers without pointers", because
 > Python does not make you look at them. C++ does, and this is the day the language stops being
 > a nicer Python and becomes its own thing.
 
