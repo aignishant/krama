@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Searching an array: linear search, done properly
 **System design topic:** How your code becomes a running service
 
+**Theme:** Pointers, references, and value semantics
+
 ---
 
 ## Code these, in this order
@@ -93,8 +95,25 @@ anything in it that should have been an environment variable instead.
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Pass `[1, 2]` to a helper that changes the first element, then to one that replaces its local collection. Predict what the caller sees in each language. | Mutation versus local reassignment. |
+| 2 | Make two equal collections and one alias. Compare equality and identity or addresses without assuming equality means shared storage. | Equal values can be separate objects. |
+| 3 | Implement a counter with a non-mutating update and a mutating update. Print the caller's counter after each. | Python bindings, Go receivers, and C++ value/reference parameters. |
+
+## Compare
+
+- **Python** — Assignment binds names to objects; it does not copy.
+- **Go** — Every Go argument is passed by value.
+- **C++** — A value parameter is independent of its caller's value.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the
 lesson.
 
@@ -110,7 +129,12 @@ lesson.
    Give the first action, the reason with the two timings compared, and the one thing you check
    before doing it.
 
----
+
+
+### Languages
+1. Is this passed by value or by reference?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -120,3 +144,6 @@ lesson.
 - [ ] I can say why absence is always the worst case, in one sentence.
 - [ ] I can name the eight links from commit to serving traffic, and say which one cannot be
       rolled back.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

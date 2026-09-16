@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Max, min, second largest: the single-pass habit
 **System design topic:** Fundamentals revision and interview questions
 
+**Theme:** Formatters, linters, and a real project layout
+
 ---
 
 ## Code these, in this order
@@ -152,8 +154,25 @@ against §4 and mark what you left out. What you leave out twice is what to revi
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Create an empty project, add a program that prints 5, and document the exact commands needed to run it on another machine. | A reproducible entry point, declared prerequisites, and clear working directory. |
+| 2 | Introduce bad formatting and one unused import or a comparable warning. Run the formatter and then the checker; explain which problem each finds. | Formatting, static checks, compilation, and tests are different jobs. |
+| 3 | Recreate the project in a fresh folder using only its source and declared dependency files. Keep build output and local environments out of version control. | The project must not depend on a hidden local installation. |
+
+## Compare
+
+- **Python** — Declare project metadata and dependencies in pyproject.toml.
+- **Go** — go.mod identifies a module and its requirements.
+- **C++** — CMake describes targets and their requirements.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Find the second largest element without sorting.*
@@ -170,7 +189,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    three orders of magnitude, and why one extra network hop can cost more than any amount of
    code tuning.
 
----
+
+
+### Languages
+1. How do you set up a new project so a teammate can build it on day one?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -180,3 +204,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I test every second-largest solution with the largest element **first** in the list.
 - [ ] I can say all ten fundamentals answers out loud, in ninety seconds each, with no notes.
 - [ ] I can produce the latency ladder and the round-trip count from memory.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

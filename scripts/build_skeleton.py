@@ -1,8 +1,9 @@
 """Create every day folder and every empty lesson file from scripts/curriculum.py.
 
-A day is eight files, nine on the C++ contest days: the hub, the DSA lesson, the
-system design lesson, the practice sheet, the three language lessons, and the
-languages practice sheet.
+A consolidated day is seven files, eight on the C++ contest days: the hub, the
+DSA lesson, the system design lesson, one practice sheet, and three language
+lessons. Days outside UNIFIED_PRACTICE_DAYS retain a separate language practice
+sheet until migrated.
 
 Safe to re-run: a file that already has content (status is not "empty") is never
 touched. Only placeholders are regenerated.

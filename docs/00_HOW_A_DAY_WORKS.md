@@ -27,7 +27,7 @@ in the file.
 ## The shape of a day
 
 **Current integrated format:** every day also carries Python, Go, and C++ lessons
-as `05-lang-*`, `06-lang-*`, and `07-lang-*`. Days 001–010 use a single
+as `05-lang-*`, `06-lang-*`, and `07-lang-*`. Days 001–020 use a single
 `03-practice.md` for DSA problems, system design questions, language exercises,
 one oral-drill section, and one completion checklist. Do not create
 `08-lang-practice.md` for these days. Later days retain that separate practice

@@ -24,10 +24,10 @@ Then open [`days/day-001-how-your-code-actually-runs/README.md`](days/day-001-ho
 
 ## What a day looks like
 
-Days **001–010** include the DSA and system design lessons plus Python, Go, and
+Days **001–020** include the DSA and system design lessons plus Python, Go, and
 C++ language lessons (`05-lang-*`, `06-lang-*`, and `07-lang-*`). Read the lessons,
 then use **`03-practice.md`** for all exercises, oral questions, and the completion
-checklist. These ten days have no separate language practice file. Later days
+checklist. These twenty days have no separate language practice file. Later days
 currently retain `08-lang-practice.md` while awaiting the same consolidation.
 
 ```
@@ -36,13 +36,17 @@ days/day-001-how-your-code-actually-runs/
     01-dsa-how-your-code-actually-runs.md        the DSA lesson
     02-system-design-what-happens-when-you-type.md   the system design lesson
     03-practice.md                               problems to code, questions to say aloud
+    05-lang-python-<topic>.md                    the Python lesson
+    06-lang-go-<topic>.md                        the Go lesson
+    07-lang-cpp-<topic>.md                       the C++ language lesson
 ```
 
-Four files. No lab folder, no test harness, no setup. You read, you code along, you
-say the answers out loud.
+Seven files for an integrated day. Read the lessons, run their examples, then use
+the shared practice sheet to code and say the answers out loud. Each language
+lesson states the commands and any tools its examples need.
 
-**Ten of the 180 days carry a fifth file** — `04-cpp-<topic>.md`, the optional C++ track.
-Every other day is four files, exactly as above.
+**Ten of the 180 days also carry** `04-cpp-<topic>.md`, the optional C++ contest
+lesson. Days 021–180 still have a separate language practice template until migrated.
 
 Each lesson has the same nine sections, so you learn one reading rhythm and keep it
 for six months:

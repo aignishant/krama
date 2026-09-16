@@ -25,11 +25,10 @@
 
 1. [01-dsa-arrays-revision-and-mock-round.md](01-dsa-arrays-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-status-codes-errors-and-idempotency.md](02-system-design-status-codes-errors-and-idempotency.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-typing-generics-typevar-generic.md](05-lang-python-typing-generics-typevar-generic.md) — the Python lesson
-5. [06-lang-go-type-parameters-constraints-and.md](06-lang-go-type-parameters-constraints-and.md) — the Go lesson
-6. [07-lang-cpp-templates-template-argument-deduction.md](07-lang-cpp-templates-template-argument-deduction.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-typing-generics-typevar-generic.md](05-lang-python-typing-generics-typevar-generic.md) — the Python lesson
+4. [06-lang-go-type-parameters-constraints-and.md](06-lang-go-type-parameters-constraints-and.md) — the Go lesson
+5. [07-lang-cpp-templates-template-argument-deduction.md](07-lang-cpp-templates-template-argument-deduction.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** What a string is, and why it is immutable
 **System design topic:** Authentication and authorisation
 
+**Theme:** Closures
+
 ---
 
 ## Code these, in this order
@@ -182,8 +184,25 @@ For the last one, name the three flags that are missing and the attack each one 
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Write make_adder(2) and make_adder(5), retain both returned functions, and call each with 7. | The same function body can retain different captured environments. |
+| 2 | Build three callbacks in a loop. Predict their outputs, then use Python's default-argument capture, Go's declared loop variable rules, and C++ explicit capture lists to make the intended values clear. | Late lookup, language-version rules, and capture ownership. |
+| 3 | Write a private counter returned as a function. Call it twice and explain where its state lives and how it survives the factory call. | Captured state lifetime and mutation. |
+
+## Compare
+
+- **Python** — Functions can be returned and stored as values.
+- **Go** — A function value preserves its parameter and result types.
+- **C++** — Lambdas are callable objects with captured state.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Why is string concatenation in a loop slow?*
@@ -200,7 +219,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    about 250 ms, constant-time comparison, library not hand-rolled. Then the number that makes the
    argument: billions of guesses a second against SHA-256, about four a second against bcrypt.
 
----
+
+
+### Languages
+1. What is a closure, and what does it capture?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -213,3 +237,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can answer the password-storage question without hesitating.
 - [ ] I put ownership checks in the query, and I can name the flaw that happens when I do not.
 - [ ] I can redraw the two-doors diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

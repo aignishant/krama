@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Insert, delete, and the cost of the middle
 **System design topic:** The operating system's job
 
+**Theme:** Splitting code across files
+
 ---
 
 ## Code these, in this order
@@ -81,8 +83,25 @@ time and count again.
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Split an add-two-numbers program into an entry file, a calculation file, and a formatting file. Run it with 2 and 3 and print `total=5`. | File boundaries and the commands needed to run or link all pieces. |
+| 2 | Import or include the calculation component twice. Show why its demonstration must not run twice and why duplicate definitions are a separate C++ concern. | Import caching, the main guard, and header guards. |
+| 3 | Make a helper internal to the component. Attempt access from another component and explain what Python conventions, Go export rules, and C++ linkage each enforce. | Visibility is language-specific, not just a filename choice. |
+
+## Compare
+
+- **Python** — A module owns a collection of names.
+- **Go** — Packages, not files, control Go name visibility.
+- **C++** — Headers publish declarations to callers.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the
 lesson.
 
@@ -98,7 +117,12 @@ lesson.
    Do the multiplication out loud for a 1 MB file at one byte and at 4 KB, and say what the
    ratio between a system call and a function call is.
 
----
+
+
+### Languages
+1. What makes a name visible to another file?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -108,3 +132,6 @@ lesson.
 - [ ] I know which direction to shift when inserting, and why the other direction corrupts
       data.
 - [ ] I can name the four jobs of the operating system and say what a system call costs.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** 2D arrays and matrix traversal
 **System design topic:** REST, properly
 
+**Theme:** Interfaces
+
 ---
 
 ## Code these, in this order
@@ -133,8 +135,25 @@ Mark each as **said it / knew it but could not say it / did not know it**. Only 
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Define a greeter contract and implement it with two unrelated objects. Pass each to the same welcome function. | Depend on the needed behaviour rather than one concrete implementation. |
+| 2 | Remove or misspell the required method. Compare Python's runtime failure, a Python static check, and Go/C++ compile failures. | When the contract is checked and what a successful check actually establishes. |
+| 3 | Replace a real message sender with a recording implementation that stores messages in a list. Assert that the caller sends the expected text. | A small interface makes callers testable without external services. |
+
+## Compare
+
+- **Python** — Duck typing asks whether an object supports an operation.
+- **Go** — An interface lists required methods.
+- **C++** — A pure virtual operation defines required behaviour.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Print the matrix diagonally.*
@@ -155,7 +174,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    counts operations, hardware counts cache misses, and the two can differ by a factor of several
    without either being wrong.
 
----
+
+
+### Languages
+1. What is an interface, and when does the compiler check it?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -167,3 +191,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the six REST constraints and say which one is not implemented in practice.
 - [ ] I can look at any endpoint and say whether the path is a noun and the method is right.
 - [ ] I can redraw the collection-versus-item diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

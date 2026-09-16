@@ -18,16 +18,16 @@ is missing from this table has nothing written at all.
 | 008 | Reading a problem like the interviewer wrote it | Processes, threads, and concurrency | class, __init__, methods, and dataclasses | struct, methods with receivers, and constructor functions | struct, class, constructors, and member functions |
 | 009 | What an array really is in memory | CPU, RAM, and disk: the speed hierarchy | Exceptions: try, except, raise, finally | Error values: if err != nil, errors.New, fmt.Errorf | Exceptions and std::expected: throw, catch, and returning failure |
 | 010 | Traversal: the loop patterns you will reuse forever | Latency numbers every engineer should know | open, with, read/write, pathlib, and sys.stdin | os.Open, bufio.Scanner, io.Reader and io.Writer | std::ifstream, std::ofstream, std::cin, std::cout, and buffering |
-| 011 | Insert, delete, and the cost of the middle | The operating system's job | — | — | — |
-| 012 | Searching an array: linear search, done properly | How your code becomes a running service | — | — | — |
-| 013 | Reversing, rotating, and swapping in place | Containers and why everyone uses Docker | — | — | — |
-| 014 | Max, min, second largest: the single-pass habit | Fundamentals revision and interview questions | — | — | — |
-| 015 | Moving elements: zeros, duplicates, and the write pointer | What an API is | — | — | — |
-| 016 | 2D arrays and matrix traversal | REST, properly | — | — | — |
-| 017 | Matrix tricks: rotate, spiral, transpose | Designing a good REST endpoint | — | — | — |
-| 018 | Arrays revision and mock round | Status codes, errors, and idempotency | — | — | — |
-| 019 | What a string is, and why it is immutable | Authentication and authorisation | — | — | — |
-| 020 | Building strings without the quadratic trap | JWT, sessions, and OAuth | — | — | — |
+| 011 | Insert, delete, and the cost of the middle | The operating system's job | import, modules, packages, and the main guard | package, exported names, go.mod, and internal directories | Headers, translation units, #include, and namespaces |
+| 012 | Searching an array: linear search, done properly | How your code becomes a running service | Everything is a reference to an object; is versus == | Pointers with & and *, value receivers versus pointer receivers | Pointers, references, const, and passing by value |
+| 013 | Reversing, rotating, and swapping in place | Containers and why everyone uses Docker | Reference counting and the garbage collector | The garbage collector, escape analysis, and stack versus heap | RAII, new/delete, and why you almost never write delete |
+| 014 | Max, min, second largest: the single-pass habit | Fundamentals revision and interview questions | uv, venv, pyproject.toml, ruff | go fmt, go vet, go mod tidy, and the standard layout | CMake, clang-format, and a src/include layout |
+| 015 | Moving elements: zeros, duplicates, and the write pointer | What an API is | A to-do CLI in Python, saved as JSON | A to-do CLI in Go, saved as JSON | A to-do CLI in C++, saved as JSON |
+| 016 | 2D arrays and matrix traversal | REST, properly | Duck typing, abstract base classes, and Protocol | Interfaces are satisfied implicitly; the empty interface; io.Reader | Abstract classes, pure virtual functions, and vtables |
+| 017 | Matrix tricks: rotate, spiral, transpose | Designing a good REST endpoint | Inheritance, super(), and the MRO | Struct embedding, and why Go has no inheritance | Public inheritance, virtual, override, and object slicing |
+| 018 | Arrays revision and mock round | Status codes, errors, and idempotency | typing generics: TypeVar, Generic, and list[T] | Type parameters, constraints, and any versus comparable | Templates, template argument deduction, and instantiation |
+| 019 | What a string is, and why it is immutable | Authentication and authorisation | Functions as values, lambda, and captured variables | Function literals, captured loop variables, and function types | Lambdas, capture lists by value and by reference, std::function |
+| 020 | Building strings without the quadratic trap | JWT, sessions, and OAuth | __iter__, __next__, yield, and generator expressions | Range-over-func iterators (iter.Seq) and channels as iterators | Iterator categories, begin/end, and C++20 ranges |
 | 021 | Character counting and frequency maps | GraphQL versus REST | — | — | — |
 | 022 | Anagrams: the sorting versus counting choice | gRPC and when binary protocols win | — | — | — |
 | 023 | Palindromes and the two-ends habit | Rate limiting and API gateways | — | — | — |
@@ -189,4 +189,4 @@ is missing from this table has nothing written at all.
 | 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design | — | — | — |
 | 180 | Final revision, and the week before the interview | Final revision, and the week before the interview | — | — | — |
 
-**10 of 180 days fully written; 180 started.**
+**20 of 180 days fully written; 180 started.**

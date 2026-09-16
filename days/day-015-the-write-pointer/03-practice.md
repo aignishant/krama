@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Moving elements: zeros, duplicates, and the write pointer
 **System design topic:** What an API is
 
+**Theme:** Mini project 1: a to-do CLI
+
 ---
 
 ## Code these, in this order
@@ -131,8 +133,25 @@ able to switch registers on demand is exactly what the question is checking.
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Build the JSON to-do CLI from each lesson. Add `buy milk`, exit, list it in a new process, mark item 1 done, and list it again. | Persistence across processes, not just an in-memory demonstration. |
+| 2 | Try an unknown command, a missing title, item 0, a non-numeric ID, malformed JSON, and valid JSON with the wrong shape. Verify failure does not overwrite the store. | Validation before mutation and preservation of existing data. |
+| 3 | Explain how a temporary file plus replacement improves crash behaviour, and why two simultaneous writers still need coordination. Add a second task and confirm completing the first preserves the second. | The difference between a local prototype and a concurrent storage system. |
+
+## Compare
+
+- **Python** — Read command arguments and validate the requested operation.
+- **Go** — Parse command arguments before applying a mutation.
+- **C++** — Use a real JSON parser and serializer.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Move all zeros to the end while keeping the order of the other elements.*
@@ -151,7 +170,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    first two elements pass unconditionally, and why comparing against `read - 1` instead would
    have made this a rewrite rather than a one-character change.
 
----
+
+
+### Languages
+1. Walk me through a small program you wrote. Why did you structure it that way?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -162,3 +186,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can define an API in one plain sentence, with a real method and path as the example.
 - [ ] I can say what an API costs you, not only what it buys you.
 - [ ] I can redraw today's request-and-response diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

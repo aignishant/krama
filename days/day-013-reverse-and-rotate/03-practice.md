@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Reversing, rotating, and swapping in place
 **System design topic:** Containers and why everyone uses Docker
 
+**Theme:** Memory: who frees what
+
 ---
 
 ## Code these, in this order
@@ -108,8 +110,25 @@ If Docker is not installed, answer them from the lesson instead. They are the wh
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Create two references to one object. Drop one and explain why the other must remain usable. Repeat using an appropriate ownership mechanism in C++. | Reachability and ownership rather than scope alone. |
+| 2 | Create a self-reference in Python and Go, remove the outside reference, and explain how collection differs from a C++ shared_ptr ownership cycle. | Cycles do not mean the same thing under tracing and reference counting. |
+| 3 | Open a file, deliberately fail inside the work, and ensure it closes. Use Python with, Go defer, and C++ RAII. | Resource cleanup must not depend on a future garbage collection. |
+
+## Compare
+
+- **Python** — CPython uses reference counting plus cyclic collection.
+- **Go** — Go keeps reachable objects alive.
+- **C++** — RAII ties release to an owning object's lifetime.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Rotate the array to the right by k, in O(1) extra space.*
@@ -125,7 +144,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    density and the Windows-on-Linux question from it. Finish on the trade-off: the shared kernel
    is also the weakness.
 
----
+
+
+### Languages
+1. How does memory get freed in your language?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -137,3 +161,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
       *using*.
 - [ ] I can draw the VM stack against the container stack — in any tool I like — and point at
       the one box that is missing.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

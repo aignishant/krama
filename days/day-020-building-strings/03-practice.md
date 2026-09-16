@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Building strings without the quadratic trap
 **System design topic:** JWT, sessions, and OAuth
 
+**Theme:** Iterators and generators
+
 ---
 
 ## Code these, in this order
@@ -188,8 +190,25 @@ The last one is the strongest thing you can say in this topic. Have it ready.
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Produce squares from 0 to 9 lazily and consume only the first three. Print when each square is produced to confirm later squares are not computed. | Laziness and early termination. |
+| 2 | Consume a Python generator twice, call a reusable Go iterator twice, and traverse a C++ view twice. Explain why reuse is a property of the particular object, not the word iterator. | One-shot state versus repeatable traversal. |
+| 3 | Process a large sequence while retaining only a running sum. Describe the retained state, then explain why converting to a list or vector removes the memory advantage. | Streaming reduces retained storage, not necessarily total processing work. |
+
+## Compare
+
+- **Python** — An iterable supplies an iterator.
+- **Go** — Go 1.23 supports range over iterator functions.
+- **C++** — begin starts traversal; end marks its boundary.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Build a string of n characters efficiently.*
@@ -207,7 +226,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    at a time, then the flush-the-last-group point, then why the in-place write can never overtake
    the read.
 
----
+
+
+### Languages
+1. How do you loop over something that does not fit in memory?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -220,3 +244,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know a JWT is encoded, not encrypted, and what the signature actually guarantees.
 - [ ] I can walk through the OAuth authorisation-code flow and say why the code step exists.
 - [ ] I can redraw the where-the-truth-lives diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

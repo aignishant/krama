@@ -304,3 +304,153 @@ Source: [`days/day-010-traversal-patterns/05-lang-python-open-with-read-write.md
 - Each iterated `line` keeps its `\n`; strip with `.rstrip("\n")` before comparing; `f.write` adds no newline, `print(..., file=f)` does.
 - `Path("dir") / "file.txt"`, `.exists()`, `.read_text()`, `.write_text()`, `.open()`; missing file is `FileNotFoundError: [Errno 2] No such file or directory`.
 - `sys.stdin` is a file object: `for line in sys.stdin:` reads a pipe, a `< file`, or the keyboard the same way.
+
+## Day 011 · lang-cpp — Headers, translation units, #include, and namespaces
+
+Source: [`days/day-011-insert-and-delete/07-lang-cpp-headers-translation-units-include.md`](../../days/day-011-insert-and-delete/07-lang-cpp-headers-translation-units-include.md)
+
+- Headers publish declarations to callers.
+- Each source is compiled as a translation unit.
+- The linker needs the matching definition.
+- Header guards prevent repeated inclusion within one unit.
+- Namespaces organise names; they are not privacy controls.
+
+## Day 011 · lang-go — package, exported names, go.mod, and internal directories
+
+Source: [`days/day-011-insert-and-delete/06-lang-go-package-exported-names-go.md`](../../days/day-011-insert-and-delete/06-lang-go-package-exported-names-go.md)
+
+- Packages, not files, control Go name visibility.
+- Uppercase names are exported to importers.
+- go.mod defines the module path and dependencies.
+- internal restricts imports to an enclosing tree.
+- Run the package with go run .
+
+## Day 011 · lang-python — import, modules, packages, and the main guard
+
+Source: [`days/day-011-insert-and-delete/05-lang-python-import-modules-packages-and.md`](../../days/day-011-insert-and-delete/05-lang-python-import-modules-packages-and.md)
+
+- A module owns a collection of names.
+- Import runs top-level code on first loading.
+- The main guard separates reuse from entry-point work.
+- Packages group modules; underscores express intent.
+- Keep dependencies pointing in a clear direction.
+
+## Day 012 · lang-cpp — Pointers, references, const, and passing by value
+
+Source: [`days/day-012-linear-search/07-lang-cpp-pointers-references-const-and.md`](../../days/day-012-linear-search/07-lang-cpp-pointers-references-const-and.md)
+
+- A value parameter is independent of its caller's value.
+- T& aliases an existing live object.
+- const T& prevents mutation through that reference.
+- Pointers can be null; check before dereferencing.
+- Never return a reference to a local object.
+
+## Day 012 · lang-go — Pointers with & and *, value receivers versus pointer receivers
+
+Source: [`days/day-012-linear-search/06-lang-go-pointers-with-and-value.md`](../../days/day-012-linear-search/06-lang-go-pointers-with-and-value.md)
+
+- Every Go argument is passed by value.
+- Copying a pointer preserves access to one object.
+- Pointer receivers can mutate the original struct.
+- Slice descriptors can share backing storage.
+- Return a slice after append when the caller needs its new length.
+
+## Day 012 · lang-python — Everything is a reference to an object; is versus ==
+
+Source: [`days/day-012-linear-search/05-lang-python-everything-is-a-reference.md`](../../days/day-012-linear-search/05-lang-python-everything-is-a-reference.md)
+
+- Assignment binds names to objects; it does not copy.
+- Aliases observe mutation of the shared object.
+- Rebinding a local parameter leaves the caller's name alone.
+- == checks equality; is checks identity.
+- A shallow copy still shares nested objects.
+
+## Day 013 · lang-cpp — RAII, new/delete, and why you almost never write delete
+
+Source: [`days/day-013-reverse-and-rotate/07-lang-cpp-raii-new-delete-and.md`](../../days/day-013-reverse-and-rotate/07-lang-cpp-raii-new-delete-and.md)
+
+- RAII ties release to an owning object's lifetime.
+- A unique_ptr has one owner at a time.
+- Scope exit destroys local owners deterministically.
+- Borrowed pointers do not own what they observe.
+- Use values first; use shared ownership only when needed.
+
+## Day 013 · lang-go — The garbage collector, escape analysis, and stack versus heap
+
+Source: [`days/day-013-reverse-and-rotate/06-lang-go-the-garbage-collector-escape.md`](../../days/day-013-reverse-and-rotate/06-lang-go-the-garbage-collector-escape.md)
+
+- Go keeps reachable objects alive.
+- Unreachable allocations can be reclaimed later.
+- Escape analysis chooses safe storage placement.
+- Returning a local address is safe in Go.
+- defer manages function-exit cleanup, not collection timing.
+
+## Day 013 · lang-python — Reference counting and the garbage collector
+
+Source: [`days/day-013-reverse-and-rotate/05-lang-python-reference-counting-and-the.md`](../../days/day-013-reverse-and-rotate/05-lang-python-reference-counting-and-the.md)
+
+- CPython uses reference counting plus cyclic collection.
+- Removing one binding may leave other references.
+- Unreachable cycles can be collected.
+- Use with for prompt resource cleanup.
+- Do not depend on exact garbage-collection timing.
+
+## Day 014 · lang-cpp — CMake, clang-format, and a src/include layout
+
+Source: [`days/day-014-single-pass-habit/07-lang-cpp-cmake-clang-format-and.md`](../../days/day-014-single-pass-habit/07-lang-cpp-cmake-clang-format-and.md)
+
+- CMake describes targets and their requirements.
+- Configure into a separate build directory.
+- Build invokes the selected compiler and linker.
+- clang-format controls layout, not correctness.
+- Document compiler prerequisites and the executable location.
+
+## Day 014 · lang-go — go fmt, go vet, go mod tidy, and the standard layout
+
+Source: [`days/day-014-single-pass-habit/06-lang-go-go-fmt-go-vet.md`](../../days/day-014-single-pass-habit/06-lang-go-go-fmt-go-vet.md)
+
+- go.mod identifies a module and its requirements.
+- go fmt standardises source layout.
+- go vet checks suspicious constructs.
+- go mod tidy reconciles dependency metadata.
+- Start small; there is no mandatory universal project tree.
+
+## Day 014 · lang-python — uv, venv, pyproject.toml, ruff
+
+Source: [`days/day-014-single-pass-habit/05-lang-python-uv-venv-pyproject-toml.md`](../../days/day-014-single-pass-habit/05-lang-python-uv-venv-pyproject-toml.md)
+
+- Declare project metadata and dependencies in pyproject.toml.
+- Use a project-specific environment.
+- Run formatting and lint checks separately.
+- Commit an application lockfile; exclude .venv.
+- Verify the documented command in a fresh environment.
+
+## Day 015 · lang-cpp — A to-do CLI in C++, saved as JSON
+
+Source: [`days/day-015-the-write-pointer/07-lang-cpp-a-to-do-cli.md`](../../days/day-015-the-write-pointer/07-lang-cpp-a-to-do-cli.md)
+
+- Use a real JSON parser and serializer.
+- Check the task-list schema after parsing.
+- Validate IDs and commands before saving.
+- RAII closes streams; check their failure state too.
+- Direct whole-file rewriting assumes one writer and can be interrupted.
+
+## Day 015 · lang-go — A to-do CLI in Go, saved as JSON
+
+Source: [`days/day-015-the-write-pointer/06-lang-go-a-to-do-cli.md`](../../days/day-015-the-write-pointer/06-lang-go-a-to-do-cli.md)
+
+- Parse command arguments before applying a mutation.
+- Validate JSON fields, not just JSON syntax.
+- Return read, decode, encode, and write errors.
+- Persist a valid mutation; listing does not save.
+- One small file still needs an explicit concurrency policy.
+
+## Day 015 · lang-python — A to-do CLI in Python, saved as JSON
+
+Source: [`days/day-015-the-write-pointer/05-lang-python-a-to-do-cli.md`](../../days/day-015-the-write-pointer/05-lang-python-a-to-do-cli.md)
+
+- Read command arguments and validate the requested operation.
+- Load and validate the persisted task list.
+- Save only a successful mutation.
+- Missing data and corrupt data are different cases.
+- State the single-writer and direct-write limitations.

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Matrix tricks: rotate, spiral, transpose
 **System design topic:** Designing a good REST endpoint
 
+**Theme:** Composition versus inheritance
+
 ---
 
 ## Code these, in this order
@@ -160,8 +162,25 @@ Then say the sentence those numbers earn you: *"this does not need sharding, and
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Build a notifier that contains a sender. Swap the sender without changing the notifier's public operation. | Composition keeps replaceable responsibilities separate. |
+| 2 | Extend a basic greeter with extra behaviour using Python inheritance, Go embedding, and C++ public inheritance. Explain why Go's version is not subclassing. | Similar syntax conveniences can have different substitution rules. |
+| 3 | Demonstrate Python super lookup, Go promotion, and C++ slicing or its avoidance with a base reference. Predict which method is called. | Dispatch and copying determine behaviour, not a diagram alone. |
+
+## Compare
+
+- **Python** — Inheritance should preserve the base contract.
+- **Go** — Go composition stores another value in a struct.
+- **C++** — Public inheritance commits to the base's contract.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Rotate the image ninety degrees clockwise, in place.*
@@ -180,7 +199,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    bottom and left passes need guards because the remaining block may be a single row or a single
    column, and the square test case will not catch it.
 
----
+
+
+### Languages
+1. Why is composition preferred over inheritance?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -192,3 +216,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I paginate every collection endpoint I design, without being asked.
 - [ ] I know that an empty collection is `200` with `[]`, and that `404` means the parent is missing.
 - [ ] I can redraw the spiral-boundaries diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Arrays revision and mock round
 **System design topic:** Status codes, errors, and idempotency
 
+**Theme:** Generics
+
 ---
 
 ## Code these, in this order
@@ -152,8 +154,25 @@ outage."*
 
 ---
 
+## Build these, in all three languages
+
+Use the same inputs in Python, Go, and C++. Predict the result before running it, then explain any difference.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Implement a stack once and use it with integers and strings. Push two values and pop them in reverse order. | Reusing operations while preserving element types. |
+| 2 | Attempt to push a string into the integer stack. Run the appropriate static checker or compiler, then explain Python's runtime behaviour without a checker. | Type relationships are enforced differently in the three languages. |
+| 3 | Pop an empty stack and handle the failure explicitly. Explain why Go any suffices for storage but comparable is needed if you add == comparisons. | Generic code can use only operations its contract supports. |
+
+## Compare
+
+- **Python** — TypeVar names a relationship between input and output types.
+- **Go** — Type parameters make one implementation work for several types.
+- **C++** — Templates describe implementations parameterised by types.
+
 ## Say these out loud
 
+### DSA and system design
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
 1. *Two array problems, no hints, talk as you go.*
@@ -171,7 +190,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    extreme values means trackers, a shorter version of the array means a write pointer, a pair or a
    window means two indices. Finish with the four questions and why each one has bitten you.
 
----
+
+
+### Languages
+1. How would you write a function that works for any type?
+2. Explain the failure example in each language lesson and repair it.
+3. Which behaviour is checked before the program runs, and which requires a runtime check? Give a concrete example from today.
 
 ## Before you move on
 
@@ -184,3 +208,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give the right status code for all ten cases in the drill, and say why not the neighbour.
 - [ ] I can explain an idempotency key end to end, including why the claim must be atomic.
 - [ ] I can redraw the three-outcomes diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the working examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

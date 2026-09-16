@@ -30,11 +30,10 @@ lessons are the walkthrough; the languages practice sheet is the deliverable.
 
 1. [01-dsa-moving-elements-zeros-duplicates.md](01-dsa-moving-elements-zeros-duplicates.md) — the DSA lesson
 2. [02-system-design-what-an-api.md](02-system-design-what-an-api.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-a-to-do-cli.md](05-lang-python-a-to-do-cli.md) — the Python lesson
-5. [06-lang-go-a-to-do-cli.md](06-lang-go-a-to-do-cli.md) — the Go lesson
-6. [07-lang-cpp-a-to-do-cli.md](07-lang-cpp-a-to-do-cli.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-a-to-do-cli.md](05-lang-python-a-to-do-cli.md) — the Python lesson
+4. [06-lang-go-a-to-do-cli.md](06-lang-go-a-to-do-cli.md) — the Go lesson
+5. [07-lang-cpp-a-to-do-cli.md](07-lang-cpp-a-to-do-cli.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

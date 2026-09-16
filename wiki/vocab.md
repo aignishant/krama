@@ -22,14 +22,15 @@ cheaper to define it again than to assume the reader knows it.
 - **008** — atomic, class, constraints, constructor, data members, dataclass, edge cases, exported, fields, input, instance, internal, member functions, member initialiser list, method, object, process, property, public, race condition, receiver, struct, thread, unexported
 - **009** — 4 kb, block, exception, last result, milliseconds, page, raises, ram, references, register, volatile
 - **010** — and empties it, closed, file object, flush, mode, stream
-- **011** — checks permission, compact, system call, tombstone, virtual address space
-- **012** — artefact, aws ecs, container image, orchestrator
-- **013** — container, containerd, cri-o, guest operating system, hypervisor, image, namespace, union filesystem, virtual machine
-- **015** — array, json
+- **011** — checks permission, compact, header, module, package, system call, tombstone, translation unit, virtual address space
+- **012** — artefact, aws ecs, container image, orchestrator, rebinding
+- **013** — container, containerd, cri-o, cycle, destructor, guest operating system, heap, hypervisor, image, namespace, raii, stack, union filesystem, virtual machine
+- **014** — target
+- **015** — array, cli, json
 - **016** — anti-diagonals, collection, hateoas, item, list of lists, matrix, uri
-- **017** — resources
-- **019** — bearer token, separator, token
-- **020** — generator expression, jwt, session
+- **017** — object slicing, resources
+- **019** — bearer token, closure, function literal, function value, lambda, separator, token
+- **020** — generator, generator expression, iterable, iterator, jwt, range, session, view
 - **021** — fragile, resolver, schema, under-fetching
 - **023** — burst size, key, refill rate
 - **024** — subarray
@@ -80,7 +81,7 @@ cheaper to define it again than to assume the reader knows it.
 - **072** — event object, observers, strictly shorter, subject, subscription list
 - **073** — circular buffer, context, finite state machine, ring buffer
 - **074** — monotonic deque
-- **075** — hook, iterator, one-shot, stack
+- **075** — hook, one-shot
 - **076** — algorithm, singly linked list, which class
 - **077** — script
 - **079** — and a direction, o(1), two implementations
@@ -118,7 +119,7 @@ cheaper to define it again than to assume the reader knows it.
 - **114** — availability, complete, consistency, indexed heap, lazy deletion, linearizability, network partition
 - **115** — always comparable, eventual consistency, never equal, replica divergence, session guarantees
 - **116** — bounded optimism, k closest points, k most frequent, k-th largest specifically, max-heap, sorting everything
-- **117** — heap, lazy, version
+- **117** — lazy, version
 - **118** — boundary, earlier, election timeout, lease, min-heap, quorum, removal, stonith
 - **119** — a replicated log
 - **120** — coordinator, participants
@@ -126,7 +127,7 @@ cheaper to define it again than to assume the reader knows it.
 - **122** — subtree, weight
 - **123** — total order
 - **124** — false negative, false positive, heartbeat
-- **125** — cycle, in-degree, node, out-degree, vertex
+- **125** — in-degree, node, out-degree, vertex
 - **126** — opens
 - **127** — queue
 - **129** — at-least-once
