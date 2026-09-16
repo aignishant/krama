@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Choosing between two pointers and a window, under pressure
 **System design topic:** Locking and deadlocks
 
+**Theme:** Worker pools and pipelines
+
 ---
 
 ## Code these, in this order
@@ -109,7 +111,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Process twenty numbered jobs on three workers and return squares in input order. | Bounded active work and indexed results. |
+| 2 | Make one job slower and show that completion order can differ from result order. | Scheduling versus presentation. |
+| 3 | Make job 7 fail and report its identity while ensuring all worker lifetimes end. | Failure collection and graceful shutdown. |
+
+## Compare
+
+- **Python** — ThreadPoolExecutor reuses worker threads and returns futures. ProcessPoolExecutor uses separate processes for work that benefits from parallel CPU execution. After building, say what was easiest and hardest in this version.
+- **Go** — A worker pool runs a fixed number of goroutines over a shared jobs channel. Fan-in collects their results through one output channel. After building, say what was easiest and hardest in this version.
+- **C++** — A fixed thread pool combines worker threads with a synchronised task queue. Futures connect each submitted task to its eventual value or exception. After building, say what was easiest and hardest in this version.
+
+Python executors provide a pool, Go commonly uses worker goroutines and channels, and C++ can build a pool from threads plus a protected queue. Returning every result still needs storage proportional to the result set.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -126,7 +150,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    `FOR UPDATE SKIP LOCKED`, why workers stop colliding, and what happens to a crashed worker's job
    — then the honest sentence about when this pattern runs out and a real broker earns its place.
 
----
+### Languages
+
+1. How would you process a million items with eight workers?
+2. Does max_workers bound every queued job? Compare the answer across all three languages.
+3. What happens if a collector returns early? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -139,4 +167,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can state the ordering rule and put it inside a query with `ORDER BY id FOR UPDATE`.
 - [ ] I know what the application does on `deadlock detected`, and why retries must be
       side-effect-free.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

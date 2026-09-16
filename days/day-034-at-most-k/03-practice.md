@@ -10,6 +10,8 @@ status: written
 **DSA topic:** At-most-K, and the exactly-K trick
 **System design topic:** Isolation levels and the anomalies they allow
 
+**Theme:** Concurrency IV: async
+
 ---
 
 ## Code these, in this order
@@ -121,7 +123,29 @@ HINT:  The transaction might succeed if retried.
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Start three waiting tasks and collect their numbered results in request order. | Overlap versus sequential waiting. |
+| 2 | Make one task fail and specify whether siblings finish or are cancelled. | An explicit failure policy. |
+| 3 | Add a deadline and ensure every started task is awaited or joined before exit. | Result collection and lifecycle under failure. |
+
+## Compare
+
+- **Python** — asyncio runs coroutines cooperatively. await allows the event loop to run other work while an operation is suspended. After building, say what was easiest and hardest in this version.
+- **Go** — select waits on several channel operations. Goroutines use ordinary-looking blocking code while the runtime can schedule other runnable goroutines. After building, say what was easiest and hardest in this version.
+- **C++** — std::async can launch a computation and return a future. get waits for its result and rethrows a stored exception. After building, say what was easiest and hardest in this version.
+
+Python asyncio uses cooperative await points, Go select chooses among channel operations, and C++ futures hold eventual results. None makes blocking work nonblocking merely by changing its name.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -137,7 +161,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Write skew, told as the on-call doctors. Why repeatable read misses it — different rows written,
    no conflict — and the two fixes: `FOR UPDATE` on what you checked, or serialisable with retries.
 
----
+### Languages
+
+1. What is the difference between concurrency and parallelism?
+2. Does async imply parallel execution? Compare the answer across all three languages.
+3. Does a timeout stop the worker? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -150,4 +178,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can recite the three read anomalies with a two-transaction story each.
 - [ ] I can say the levels table from memory, plus the two Postgres deviations from it.
 - [ ] I can tell write skew as a story and name both fixes.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

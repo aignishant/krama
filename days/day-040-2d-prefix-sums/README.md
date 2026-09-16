@@ -25,11 +25,10 @@
 
 1. [01-dsa-2d-prefix-sums-and-inclusion-exclusion.md](01-dsa-2d-prefix-sums-and-inclusion-exclusion.md) — the DSA lesson
 2. [02-system-design-choosing-sql-or-nosql.md](02-system-design-choosing-sql-or-nosql.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-json-loads-json-dumps.md](05-lang-python-json-loads-json-dumps.md) — the Python lesson
-5. [06-lang-go-encoding-json-struct-tags.md](06-lang-go-encoding-json-struct-tags.md) — the Go lesson
-6. [07-lang-cpp-nlohmann-json-parsing-serialising.md](07-lang-cpp-nlohmann-json-parsing-serialising.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-json-loads-json-dumps.md](05-lang-python-json-loads-json-dumps.md) — the Python lesson
+4. [06-lang-go-encoding-json-struct-tags.md](06-lang-go-encoding-json-struct-tags.md) — the Go lesson
+5. [07-lang-cpp-nlohmann-json-parsing-serialising.md](07-lang-cpp-nlohmann-json-parsing-serialising.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

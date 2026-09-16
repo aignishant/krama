@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Strings revision and mock round
 **System design topic:** Tables, rows, and keys
 
+**Theme:** Immutability
+
 ---
 
 ## Code these, in this order
@@ -190,7 +192,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Create a settings value and demonstrate which attempted changes are rejected. | Who enforces the guarantee. |
+| 2 | Place a mutable collection inside an apparently fixed outer object and show the remaining mutation path. | Shallow versus deep immutability. |
+| 3 | Return a modified copy while preserving the original; verify both values afterwards. | Value updates without shared mutation. |
+
+## Compare
+
+- **Python** — A frozen dataclass rejects ordinary field assignment. tuple and frozenset are immutable containers; Final is a static-checker promise rather than runtime enforcement. After building, say what was easiest and hardest in this version.
+- **Go** — Go const applies to compile-time constants, not arbitrary structs or slices. Runtime immutability is usually enforced through ownership and API design. After building, say what was easiest and hardest in this version.
+- **C++** — const restricts modification through a qualified object or access path. constexpr permits constant evaluation; consteval requires it for immediate calls. After building, say what was easiest and hardest in this version.
+
+Python frozen dataclasses block normal field assignment, Go relies on API boundaries for ordinary runtime values, and C++ const restricts modification through a qualified access path. None automatically freezes every referenced object.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -208,7 +232,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    six families. Then the honest caveat: recognition narrows it, the contract questions confirm it,
    and jumping straight to remembered code is how you solve the wrong problem confidently.
 
----
+### Languages
+
+1. How do you prevent a value from being modified?
+2. Can a tuple contain a mutable list? Compare the answer across all three languages.
+3. Can code in the same package change unexported fields? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -222,3 +250,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know the foreign key goes on the many side, and can say why the other side is impossible.
 - [ ] I index every foreign key and know that the database does not do it for me.
 - [ ] I can redraw the pattern-decision tree and the blog schema from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

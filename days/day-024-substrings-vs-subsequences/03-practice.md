@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Substrings versus subsequences: the distinction they test
 **System design topic:** API revision and interview questions
 
+**Theme:** Pattern matching
+
 ---
 
 ## Code these, in this order
@@ -204,7 +206,29 @@ From memory, in under three minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Handle a number and a text value with distinct output. | Selecting by type or shape. |
+| 2 | Accept a move command only when its distance is positive; reject -2 and unknown commands. | Guards and fallback behaviour. |
+| 3 | Represent accepted and declined invitations with different payloads and print both. | Safe extraction after narrowing. |
+
+## Compare
+
+- **Python** — Structural pattern matching selects a branch by a value’s shape and can bind pieces of that value to names. Guards add conditions after a match. After building, say what was easiest and hardest in this version.
+- **Go** — A type switch inspects the dynamic type of an interface value. A value switch compares values and does not fall through by default. After building, say what was easiest and hardest in this version.
+- **C++** — std::visit dispatches on a variant’s active alternative. if constexpr selects code at compile time for the alternative’s type. After building, say what was easiest and hardest in this version.
+
+Python matches runtime shapes, Go switches on a dynamic type or value, and C++ visits a declared variant alternative. A guard is an extra condition after a match.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -222,7 +246,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    One line of the recurrence, and where the answer lives. Then the deeper point: contiguity means a
    mismatch breaks the run, which is why one resets to zero and the other carries the maximum forward.
 
----
+### Languages
+
+1. How do you handle a value that could be one of several types?
+2. Are extra mapping keys rejected? Compare the answer across all three languages.
+3. What handles a new concrete type? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -235,3 +263,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I produce pagination and idempotency before anyone asks for them.
 - [ ] I answer every "which one" question with a condition, not a preference.
 - [ ] I can redraw the whole-phase diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

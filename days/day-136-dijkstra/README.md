@@ -24,7 +24,7 @@
 ## Project
 
 **Build A: a distributed cache (days 136-140)** — the languages half of today is a build day. The three
-lessons are the walkthrough; the languages practice sheet is the deliverable.
+lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
 
 ## Read in this order
 

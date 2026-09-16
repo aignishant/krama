@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Prefix sums: answering range queries instantly
 **System design topic:** Key-value stores
 
+**Theme:** Memory model, deeper
+
 ---
 
 ## Code these, in this order
@@ -105,7 +107,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Keep an object in a long-lived collection, remove every local name, and explain why it remains alive. | Reachability versus usefulness. |
+| 2 | Create two objects referring to each other and explain how the language reclaims or retains them. | Cycles and ownership. |
+| 3 | Replace an owning observation with a weak/non-owning reference where supported and explain the lifetime check. | Observation without extending lifetime. |
+
+## Compare
+
+- **Python** — CPython uses reference counts and a cyclic garbage collector. Reachable but unnecessary objects remain live, so garbage collection does not prevent every memory leak. After building, say what was easiest and hardest in this version.
+- **Go** — Go’s tracing garbage collector reclaims unreachable heap objects. Escape analysis decides where values may be stored; source syntax alone does not decide stack versus heap. After building, say what was easiest and hardest in this version.
+- **C++** — unique_ptr expresses exclusive ownership, shared_ptr expresses shared ownership, and weak_ptr observes a shared object without extending its lifetime. After building, say what was easiest and hardest in this version.
+
+CPython combines reference counting with cycle collection, Go traces reachable objects, and C++ smart pointers express ownership. Long-lived reachable data can waste memory under any of these models.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -121,7 +145,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Boundaries, not elements. What `prefix[0]` means, which queries need it, and what Python does —
    silently — when it is missing and `i` is 0.
 
----
+### Languages
+
+1. What is a memory leak in a garbage-collected language?
+2. Can a garbage-collected program leak memory? Compare the answer across all three languages.
+3. Can forced GC reclaim a live map entry? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -131,4 +159,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name when the precompute loses: single queries, and updates between queries.
 - [ ] I can say what Redis and DynamoDB each promise, and the questions neither can answer.
 - [ ] I know which data may live only on the shelf, and which needs a ledger behind it.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

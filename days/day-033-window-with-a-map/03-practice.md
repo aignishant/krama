@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Window plus hash map: the longest-substring family
 **System design topic:** Transactions and ACID
 
+**Theme:** Concurrency III: shared memory
+
 ---
 
 ## Code these, in this order
@@ -110,7 +112,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Increment a shared counter from two workers 1,000 times each; require exactly 2,000. | A protected read-modify-write operation. |
+| 2 | Keep a balance and transaction count consistent under one lock and assert their relationship. | Multi-field invariants. |
+| 3 | Create a deliberately unsafe version separately, run suitable race tooling, then restore the lock and explain what the tool can miss. | Detection on executed paths and repair. |
+
+## Compare
+
+- **Python** — A Lock protects a compound operation. The GIL does not make a sequence of reads, calculations, and writes one indivisible application action. After building, say what was easiest and hardest in this version.
+- **Go** — Mutex protects shared invariants, RWMutex permits concurrent readers under a disciplined protocol, and atomic types support individual atomic operations. After building, say what was easiest and hardest in this version.
+- **C++** — std::mutex and RAII lock guards protect shared state. std::atomic makes selected accesses atomic; an ordinary conflicting unsynchronised access is a data race. After building, say what was easiest and hardest in this version.
+
+Python locks protect compound invariants despite the GIL. Go and C++ also provide atomic primitives for selected operations, but atomics do not automatically protect relationships among several fields.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -127,7 +151,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The lost update, why being inside a transaction does not prevent it at read committed, and two
    fixes — arithmetic in the SQL, or `SELECT ... FOR UPDATE`.
 
----
+### Languages
+
+1. What is a data race, and how do you find one?
+2. Does the GIL protect a compound invariant? Compare the answer across all three languages.
+3. Does a clean race run prove correctness? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -137,4 +165,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I notice when the map collapses to one integer, and I say so.
 - [ ] I can give each ACID letter with a failure and a mechanism, from memory.
 - [ ] I can say what happens on `COMMIT`, in order, including where the `fsync` sits.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

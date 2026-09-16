@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Pattern matching, the simple way
 **System design topic:** What a database gives you that a file does not
 
+**Theme:** Making your type behave like a built-in
+
 ---
 
 ## Code these, in this order
@@ -177,7 +179,29 @@ At least three of those are files. If you said "database" to all eight, re-read 
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Create a Money type in integer paise/cents and sort [80, 60, 80]. | Value ordering without floating-point rounding. |
+| 2 | Add two amounts without modifying either input; reject or explicitly convert mismatched currencies. | Predictable operator or method contracts. |
+| 3 | Use equal amounts in a set/map key and explain the equality and hashing requirements. | Consistent identity for collections. |
+
+## Compare
+
+- **Python** — Special methods such as __eq__, __lt__, and __add__ connect user-defined values to familiar Python operations. After building, say what was easiest and hardest in this version.
+- **Go** — Go does not overload arithmetic operators for structs. Named methods, String, and comparison functions provide explicit value behaviour. After building, say what was easiest and hardest in this version.
+- **C++** — C++ operator overloads let a value support equality, ordering, addition, and stream output. Their meaning should follow ordinary expectations. After building, say what was easiest and hardest in this version.
+
+Python and C++ let user types define operators. Go uses named methods and comparison functions. All three still need a consistent equality and ordering policy.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -197,7 +221,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    the needle matched, so a precomputed table lets it slide forward without moving the haystack index
    backwards. `O(n + m)` time, `O(m)` space. Then say you would describe it rather than improvise it.
 
----
+### Languages
+
+1. How would you make your type sortable?
+2. Why does hashing depend on equality? Compare the answer across all three languages.
+3. Can every struct be a map key? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -210,3 +238,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the four things a database gives me, leading with concurrency.
 - [ ] I can describe a lost update as a sequence of four steps with no error message.
 - [ ] I can name three cases where a file is right, and I remember SQLite exists.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

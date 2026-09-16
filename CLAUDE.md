@@ -1,12 +1,15 @@
 # CLAUDE.md — operating rules for this repository
 
 You are the writing partner for **Krama**, a 180-day course that prepares one person —
-a complete beginner — for **DSA and system design interviews at product companies**.
+a complete beginner — for **DSA and system design interviews at product companies**,
+and teaches them to **build and ship in Python, Go, and C++** along the way.
 
-Every day teaches two things side by side: one DSA topic and one system design topic.
-Ten of the days also carry a third, optional lesson: C++, for the reader who wants to
-solve in C++ as well as Python. Those ten are listed in `CPP_DAYS` in
-[`scripts/curriculum.py`](scripts/curriculum.py).
+Every day has two halves. The **interview half** teaches one DSA topic and one system
+design topic. The **languages half** teaches one theme three times — in Python, in Go,
+and in C++ — so the differences become the lesson. A day is complete only when both
+halves are written. Twelve of the days also carry an optional C++ *contest* lesson,
+for the reader who wants to solve DSA problems in C++ as well as Python; those are
+listed in `CPP_DAYS` in [`scripts/curriculum.py`](scripts/curriculum.py).
 
 Read this before writing anything in `days/`:
 
@@ -16,8 +19,8 @@ Then read only what the task needs. The corpus is far larger than any one job:
 
 | You are | Read |
 |---|---|
-| writing or fixing a day | `./k day N`, then `wiki/00-STATE.md`, `wiki/vocab.md`, and the two `wiki/recall/<phase>.md` files that day sits in |
-| changing what a day teaches | [`scripts/curriculum.py`](scripts/curriculum.py) — the syllabus as data |
+| writing or fixing a day | `./k day N`, then `wiki/00-STATE.md`, `wiki/vocab.md`, and the three `wiki/recall/<phase>.md` files that day sits in — its DSA phase, its system design phase, and its languages phase |
+| changing what a day teaches | [`scripts/curriculum.py`](scripts/curriculum.py) — the syllabus as data. DSA and system design rows in `scripts/syllabus/`, languages rows in `scripts/syllabus/langs/` |
 | answering "which day covers X" | [`docs/CURRICULUM_INDEX.md`](docs/CURRICULUM_INDEX.md) — the plan for all 180 days. Generated |
 
 `wiki/` is the state of the course; `docs/CURRICULUM_INDEX.md` is the plan for it. Writing
@@ -45,21 +48,23 @@ Breaking one of these makes the output wrong, not merely weak.
 
 | # | Rule |
 |---:|---|
-| 1 | **A day is four files.** `README.md` (hub), `01-dsa-<topic>.md`, `02-system-design-<topic>.md`, `03-practice.md`. Nothing else. Folders are `days/day-NNN-<slug>/` — three digits, then a readable slug. **The one exception:** the ten days listed in `CPP_DAYS` in [`scripts/curriculum.py`](scripts/curriculum.py) also carry `04-cpp-<topic>.md`. Never add one to a day that is not in that dict — add the day to the dict and run `./k build`. |
-| 2 | **Every day teaches both tracks.** Never write only the DSA lesson or only the system design lesson. The whole point is that they run in parallel. On a C++ day, the C++ lesson is a third lesson, never a replacement for either. |
-| 3 | **Every lesson carries all nine sections, in order.** See the format contract. Not eight. This includes the C++ lessons. |
+| 1 | **A day is seven files.** `README.md` (hub), `01-dsa-<topic>.md`, `02-system-design-<topic>.md`, `03-practice.md`, `05-lang-python-<topic>.md`, `06-lang-go-<topic>.md`, `07-lang-cpp-<topic>.md`. Nothing else. Folders are `days/day-NNN-<slug>/` — three digits, then a readable slug. **The one exception:** the twelve days listed in `CPP_DAYS` in [`scripts/curriculum.py`](scripts/curriculum.py) also carry `04-cpp-<topic>.md`. Never add one to a day that is not in that dict — add the day to the dict and run `./k build`. Days not yet folded into the single practice sheet still carry `08-lang-practice.md`; `UNIFIED_PRACTICE_DAYS` in `scripts/build_skeleton.py` says which, and you never create an `08-` file on a folded day. |
+| 2 | **Every day teaches every track.** Never write only the DSA lesson, only the system design lesson, or only one or two of the three language lessons. The whole point is that they run in parallel. If a language lacks today's feature, its lesson says so and teaches the nearest thing. On a C++ contest day, that lesson is an extra, never a replacement for anything. |
+| 3 | **Every lesson carries all nine sections, in order.** See the format contract. Not eight. This includes the language lessons and the C++ contest lessons. |
 | 4 | **§2 is a story with a person in it, and zero technical words.** 200-400 words. No code, no jargon, not one term of art. The scene must be one almost anyone has lived — matching socks, a canteen queue, laying tables — told in simple words with realistic detail. If deleting it loses nothing, it was not a story. |
-| 5 | **Show the full solution.** Complete, working, copy-pasteable code lives in §5 of every DSA lesson. This repository does not hide answers from the reader. |
+| 5 | **Show the full solution.** Complete, working, copy-pasteable code lives in §5 of every DSA lesson. In a language lesson §5 ends in a complete program with the command that runs it and the exact output it prints — Python 3.12+, Go 1.23+, C++20. This repository does not hide answers from the reader. |
 | 6 | **Simple language, always.** Short sentences. One idea each. Define every term the first time it appears. Concrete numbers before variables. Full sentences, correct grammar, and real punctuation — commas and full stops where they belong. If a sentence needs re-reading, rewrite it. |
 | 7 | **§8 is the point of the document.** Real interviewer phrasings, a script for the first ninety seconds, the three follow-ups, and a written-out model answer. Never skip it, never make it thin. |
 | 8 | **§6 shows the arithmetic.** For DSA, count the loop iterations out loud. For system design, show the multiplication — `50M × 20 × 2KB = 2TB`, never "a lot of data". |
 | 9 | **§7 pastes real error text.** Run it if you can. Reproduce the exact message if you cannot. `IndexError: list index out of range`, never "you get an index error". |
 | 10 | **No `lab/` folder. Ever.** No `implement.py`, no `reference.py`, no pytest harness, no benchmark script. That structure was removed deliberately. Practice is named problems in `03-practice.md`, solved on LeetCode. |
-| 11 | **Problems are named, never reproduced.** Title, source, and one line on what it is really testing. Do not paste problem statements. |
+| 11 | **Problems are named, never reproduced.** Title, source, and one line on what it is really testing. Do not paste problem statements. The language exercises in the same sheet are built three times, once per language, and followed by a one-sentence-per-language Compare. |
 | 12 | **No study-time estimates.** No "≈45 minutes to read", no "quick", no pace language. A day is a unit of subject, not of hours. Timing a *drill* is different and is allowed — "answer this in two minutes", "minutes 0-5: requirements" — because that is the interview clock, not a reading estimate. |
 | 13 | **Never rename a day folder or a lesson file by hand.** Edit `scripts/curriculum.py` and run `./k build`. Four things are generated and must never be hand-edited: `docs/CURRICULUM_INDEX.md`, `days/README.md`, every day's own `README.md` hub, and everything under `wiki/`. Only the lesson files and `03-practice.md` hold hand-written prose. |
 | 14 | **Cut anything that is not interview material.** Formal proofs, potential functions, decision-tree lower bounds, CPython internals, the RAM model as a formal object. If it will not be asked and does not make an asked thing clearer, it does not go in. |
 | 15 | **No paper. Anywhere.** Never tell the reader to draw on paper, write it on a blank page, or work it out with pen and paper. Say it out loud from memory, or draw it in any tool they like. Stories do not use paper props either — a phone's contacts, not a diary. |
+| 16 | **§6 of a language lesson is a real side-by-side.** Code from the other two languages, then the one line of difference that matters. Never a bullet list of feature names. |
+| 17 | **Never invent a library API.** If you are not certain a function exists with that signature, check it before writing it. A lesson that teaches a method that does not exist is worse than no lesson. This matters most on the protobuf, gRPC, and third-party-library days. |
 
 ---
 
@@ -86,10 +91,19 @@ Breaking one of these makes the output wrong, not merely weak.
   Show the from-scratch version first when the day is *about* that structure, then say
   "in an interview you would use this" and show the library call.
 
+In the language lessons, additionally:
+
+- Python: `pathlib`, f-strings, no bare `except`.
+- Go: `gofmt`, every error checked, `context` on anything that waits.
+- C++: C++20, `-Wall -Wextra`, RAII, `std::` containers, no raw owning pointers.
+- Every program shows the command that runs it and the exact output.
+
 ## Diagrams
 
-- **Mermaid** for trees, graphs, architectures, state machines, request flows.
-- **ASCII boxes** for arrays, memory, pointers, bit patterns — anywhere adjacency matters.
+- **Mermaid** for trees, graphs, architectures, state machines, request flows, goroutines
+  and threads.
+- **ASCII boxes** for arrays, memory, pointers, bytes, stacks, bit patterns — anywhere
+  adjacency matters.
 - Arrays drawn with indices above, values below, boundaries marked.
 - Caption every diagram with what to notice in it.
 
@@ -99,12 +113,12 @@ Breaking one of these makes the output wrong, not merely weak.
 
 ```bash
 python scripts/build_skeleton.py     # create missing day folders and placeholders
-./k status                           # how many lessons are written, by phase
+./k status                           # how many lessons are written, on every track, by phase
 ./k day N                            # print day N's hub and list its files
 ./k check                            # verify every written lesson against the contract
 ./k wiki                             # rebuild wiki/ from the finished lessons
 ./k wiki --lint                      # report wiki/ stale, write nothing
-./k next                             # the first day that is not written yet
+./k next                             # the first day that is not complete, and which files it still needs
 ```
 
 `wiki/` is a mechanical projection of the written lessons — the state index, the
@@ -117,7 +131,11 @@ To write a day:
 /day-krama 37
 ```
 
-It writes the hub, both lessons and the practice sheet, then checks them.
+It writes every file of the day — the DSA lesson, the system design lesson, the three
+language lessons, and the practice sheet — then checks them. The language lessons have
+their own skill, `/day-langs N`, which `/day-krama` hands off to for files 05-07; use it
+directly when only the languages half of a day needs writing or fixing. `./k next` tells
+you which half is missing.
 
 ---
 
@@ -136,14 +154,19 @@ Say so, name the rule number, and propose the compliant alternative. Do not sile
   or "draw it in whatever tool you like" instead.
 - *"Write a day whose topic is not in the index"* → stop. Amend `scripts/curriculum.py`
   first, as its own commit, then re-run the builder.
+- *"Just do the DSA and system design, skip the languages"* → refuse. Rule 2. A day is
+  not complete until both halves are; `./k next` will keep pointing at it.
 
 ## Definition of done for a day
 
-- [ ] All four files exist and none still says `status: empty`.
-- [ ] Both lessons carry all nine sections, in order.
+- [ ] All seven files exist and none still says `status: empty`.
+- [ ] All five lessons carry all nine sections, in order.
 - [ ] §2 of each has a person in it and no technical words.
 - [ ] §5 of the DSA lesson ends with a complete runnable solution.
+- [ ] §5 of each language lesson ends in a complete program with its run command and output.
+- [ ] §6 of each language lesson shows real code from the other two languages.
 - [ ] §8 of each has real phrasings, a script, follow-ups, and a model answer.
-- [ ] `03-practice.md` names its problems with sources and "really testing" lines.
+- [ ] `03-practice.md` names its problems with sources and "really testing" lines, and
+      carries three language exercises with a Compare section.
 - [ ] `./k check` passes.
 - [ ] `./k wiki` has been run, so the next day can see today's vocabulary.

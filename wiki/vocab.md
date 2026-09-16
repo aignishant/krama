@@ -32,22 +32,23 @@ cheaper to define it again than to assume the reader knows it.
 - **019** — bearer token, closure, function literal, function value, lambda, separator, token
 - **020** — generator, generator expression, iterable, iterator, jwt, range, session, view
 - **021** — fragile, resolver, schema, under-fetching
+- **022** — iota
 - **023** — burst size, key, refill rate
-- **024** — subarray
+- **024** — guard, subarray
 - **025** — acid, atomicity
 - **026** — column, composite key, many-to-many, orphan rows, row, table, third table
-- **027** — add a tie-breaker
+- **027** — add a tie-breaker, sentinel error
 - **028** — invariant
 - **029** — composite, historical snapshot, transitive dependency
 - **030** — both, fanout
 - **031** — deque, log-structured merge tree, splits
 - **032** — cost, selectivity
-- **033** — serialisable
+- **033** — atomic operation, critical section, serialisable
 - **034** — snapshot, write skew
 - **035** — exclusive lock, negative, shared lock, victim
 - **037** — prefix sums, sentinel, time-to-live
-- **038** — exactly, negatives, same remainder
-- **039** — partition key
+- **038** — exactly, negatives, rule of zero, same remainder
+- **039** — code point, code unit, grapheme cluster, partition key
 - **040** — left, tree
 - **041** — connection, lazy loading, on first touch
 - **042** — search space

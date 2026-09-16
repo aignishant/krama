@@ -25,11 +25,10 @@
 
 1. [01-dsa-prefix-sums-answering-range-queries.md](01-dsa-prefix-sums-answering-range-queries.md) — the DSA lesson
 2. [02-system-design-key-value-stores.md](02-system-design-key-value-stores.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-object-headers-refcounts-cycles.md](05-lang-python-object-headers-refcounts-cycles.md) — the Python lesson
-5. [06-lang-go-escape-analysis-the-gc.md](06-lang-go-escape-analysis-the-gc.md) — the Go lesson
-6. [07-lang-cpp-smart-pointers-unique-ptr.md](07-lang-cpp-smart-pointers-unique-ptr.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-object-headers-refcounts-cycles.md](05-lang-python-object-headers-refcounts-cycles.md) — the Python lesson
+4. [06-lang-go-escape-analysis-the-gc.md](06-lang-go-escape-analysis-the-gc.md) — the Go lesson
+5. [07-lang-cpp-smart-pointers-unique-ptr.md](07-lang-cpp-smart-pointers-unique-ptr.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

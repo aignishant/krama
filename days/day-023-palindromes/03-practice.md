@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Palindromes and the two-ends habit
 **System design topic:** Rate limiting and API gateways
 
+**Theme:** Nothing, safely
+
 ---
 
 ## Code these, in this order
@@ -172,7 +174,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Look up a count for a known zero and an unknown name; preserve the difference. | Presence versus truthiness. |
+| 2 | Apply a default of 1 only when the result is absent. | Explicit fallback semantics. |
+| 3 | Return a missing first-unique-character result in all three languages and test empty input and index zero. | A safe DSA result contract. |
+
+## Compare
+
+- **Python** — None is a singleton used for absence. Optional[T] means T | None; it does not mean that a function argument may be omitted. After building, say what was easiest and hardest in this version.
+- **Go** — Go has zero values and nil for certain types. A map lookup needs the comma-ok result when zero and absence must differ. After building, say what was easiest and hardest in this version.
+- **C++** — std::optional<T> owns either a T or no value. nullptr is a null pointer literal; it is not a general replacement for an absent integer. After building, say what was easiest and hardest in this version.
+
+Python uses None, Go often pairs a value with a boolean, and C++ optional packages presence with a value. A null pointer concerns an object address, not every kind of missing result.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -191,7 +215,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    matched, so the deletion must be at one of those two positions — and you must try both rather than
    guess. Then say why it is still `O(n)`.
 
----
+### Languages
+
+1. How does your language represent the absence of a value?
+2. Is zero missing? Compare the answer across all three languages.
+3. Is a typed nil pointer inside an interface nil? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -205,3 +233,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can state the fixed-window boundary problem with real timestamps.
 - [ ] I say "the check-and-decrement must be atomic" without being prompted.
 - [ ] I can redraw the token-bucket and gateway diagrams from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

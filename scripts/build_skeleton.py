@@ -185,7 +185,7 @@ LANG_FILE_PREFIX = {
 LANG_PRACTICE = "08-lang-practice.md"
 
 # Days completed with the combined DSA, system design and language practice format.
-UNIFIED_PRACTICE_DAYS = frozenset(range(1, 21))
+UNIFIED_PRACTICE_DAYS = frozenset(range(1, 41))
 
 
 def practice_name(day: Day) -> str:
@@ -403,10 +403,10 @@ def combine_practice(core: str, languages: str) -> str:
         + "\n\n## Build these, in all three languages"
         + language_work
         + oral
-        + "\n\n### DSA and system design\n"
-        + core_oral.strip().removesuffix("---")
-        + "\n\n### Languages\n"
-        + language_oral.strip().removesuffix("---")
+        + "\n\n### DSA and system design\n\n"
+        + core_oral.strip().removesuffix("---").rstrip()
+        + "\n\n### Languages\n\n"
+        + language_oral.strip().removesuffix("---").rstrip()
         + "\n\n"
         + checklist
         + "\n\n"
@@ -549,7 +549,8 @@ def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
             "## Project",
             "",
             f"**{langs.project}** — the languages half of today is a build day. The three",
-            "lessons are the walkthrough; the languages practice sheet is the deliverable.",
+            f"lessons are the walkthrough; [{practice_name(day)}]({practice_name(day)}) "
+            "contains the deliverables.",
             "",
         ]
 
@@ -589,8 +590,9 @@ def days_readme(days: list[Day]) -> str:
         "# The 180 days",
         "",
         "Every day is one folder. Every folder holds one DSA lesson, one system design",
-        "lesson, a practice sheet, three language lessons on one theme — Python, Go, C++ —",
-        "and a languages practice sheet. Start at day 001 and do not skip.",
+        "lesson and three language lessons on one theme — Python, Go, C++.",
+        "Days 001–040 share one practice sheet across all tracks. Later days retain",
+        "a separate languages practice sheet until migrated. Start at day 001.",
         "",
         "Twelve of the days carry one more lesson: the C++ contest track, for readers who",
         "want to compete in C++ as well. They are marked in the last column.",

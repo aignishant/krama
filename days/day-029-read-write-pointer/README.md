@@ -25,11 +25,10 @@
 
 1. [01-dsa-same-direction-the-read-pointer.md](01-dsa-same-direction-the-read-pointer.md) — the DSA lesson
 2. [02-system-design-normalisation-and-when-to-break.md](02-system-design-normalisation-and-when-to-break.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-pdb-breakpoint-and-reading.md](05-lang-python-pdb-breakpoint-and-reading.md) — the Python lesson
-5. [06-lang-go-delve-and-reading-a.md](06-lang-go-delve-and-reading-a.md) — the Go lesson
-6. [07-lang-cpp-gdb-sanitizers-and-reading.md](07-lang-cpp-gdb-sanitizers-and-reading.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-pdb-breakpoint-and-reading.md](05-lang-python-pdb-breakpoint-and-reading.md) — the Python lesson
+4. [06-lang-go-delve-and-reading-a.md](06-lang-go-delve-and-reading-a.md) — the Go lesson
+5. [07-lang-cpp-gdb-sanitizers-and-reading.md](07-lang-cpp-gdb-sanitizers-and-reading.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Fast and slow pointers
 **System design topic:** Indexes: how a database finds a row fast
 
+**Theme:** Mini project 2: a text analyser
+
 ---
 
 ## Code these, in this order
@@ -210,7 +212,48 @@ change?
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Build the word-frequency tool and verify “Tea tea, RICE!” produces tea=2 and rice=1. | Normalisation and counting. |
+| 2 | Add a separate log mode for lines beginning INFO, WARN, or ERROR; count malformed lines separately. | A stated input grammar and rejected data. |
+| 3 | Report the top 10 with count descending and word ascending; test empty input, ties, a very long line, and a read failure. | Deterministic output and streaming limits. |
+
+### Project deliverables
+
+Build this in your own working directory; keep course answers in this practice sheet.
+
+```text
+text-tool/
+    python/main.py
+    go/main.go
+    cpp/main.cpp
+```
+
+Each lesson contains the complete corresponding file. The tool reads standard input and accepts `words`, `logs`, or `--self-test`. Word mode uses ASCII letters, lowercases words, and prints at most ten entries ordered by count descending and word ascending. Log mode recognises INFO, WARN, and ERROR followed by a nonempty message; it counts rejected lines as MALFORMED. Use ASCII whitespace in this shared log format.
+
+- In `python/`: `python main.py --self-test`, then `python main.py words` or `python main.py logs`.
+- In `go/`: `go run main.go --self-test`, then `go run main.go words` or `go run main.go logs`.
+- In `cpp/`: `g++ -std=c++20 -Wall -Wextra main.cpp -o demo`, then `./demo --self-test`, `./demo words`, or `./demo logs`. PowerShell uses `.\demo.exe`.
+
+Done means all three self-checks print `tests passed`; the same input produces the same report; empty input, ties, a long token, a missing final newline, malformed log records, and input failure have a stated result. Explain why streaming does not bound vocabulary storage. Report errors visibly and return a failing exit status instead of publishing an incomplete report as successful.
+
+## Compare
+
+- **Python** — A streaming text analyser reads incrementally, normalises according to an explicit policy, and stores one count per distinct word. After building, say what was easiest and hardest in this version.
+- **Go** — A Go text analyser can stream with bufio.Reader, maintain a map of counts, and sort an explicit result slice for deterministic output. After building, say what was easiest and hardest in this version.
+- **C++** — A C++ text analyser can read one character at a time, count completed words, and sort results without retaining the whole input. After building, say what was easiest and hardest in this version.
+
+The three implementations use the same explicit ASCII-word policy and stable tie-break. Test identical input against all three before generalising to multilingual text.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -228,7 +271,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The gap shrinks by exactly one per step, so it cannot skip zero. Then the bound, `μ + λ`. Then why
    speed 3 breaks the argument. Ninety seconds.
 
----
+### Languages
+
+1. How would you find the top 10 words in a 2 GB file?
+2. Does streaming imply constant memory? Compare the answer across all three languages.
+3. How would log mode differ? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -243,3 +290,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know the left-prefix rule and can say why `(a, b)` does not serve `b`.
 - [ ] I can quantify the write cost of an index, and I mention `CONCURRENTLY` unprompted.
 - [ ] I can redraw the rho diagram and the B-tree fanout diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

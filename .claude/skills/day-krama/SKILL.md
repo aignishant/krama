@@ -1,15 +1,19 @@
 ---
 name: day-krama
-description: Write a Krama day — the hub README, the DSA lesson, the system design lesson and the practice sheet, all under the nine-section format contract. Use this skill whenever the user asks to write, generate, draft, expand, rewrite, fix or review any day in days/, mentions a day number ("do day 37", "write the binary search day", "day 102 is thin"), asks for a lesson or a practice sheet, asks anything about the nine-section contract, or asks for a system design day or case study. Use it even when they phrase it casually as "next day please" or "continue the course".
+description: Write a complete Krama day — the DSA lesson, the system design lesson, the three language lessons (Python, Go, C++) and the practice sheet, all under the nine-section format contract. Use this skill whenever the user asks to write, generate, draft, expand, rewrite, fix or review any day in days/, mentions a day number ("do day 37", "write the binary search day", "day 102 is thin"), asks for a lesson or a practice sheet, asks anything about the nine-section contract, or asks for a system design day or case study. Use it even when they phrase it casually as "next day please" or "continue the course". For only the languages half of a day, day-langs is the narrower skill.
 ---
 
 # Writing a Krama day
 
 You are producing the teaching material for one day of a 180-day course. The reader is a
 **complete beginner** preparing for **DSA and system design interviews at product
-companies**. They read only these documents. If an idea is not in them, they never meet it.
+companies**, and learning to build in **Python, Go, and C++** at the same time. They read
+only these documents. If an idea is not in them, they never meet it.
 
-Every day carries **two lessons**: one DSA, one system design. You write both. Never one.
+Every day carries **five lessons**: one DSA, one system design, and one each in Python,
+Go and C++ on a shared languages theme. Plus one practice sheet that serves all of them.
+A day is complete only when every one of those is written; `./k next` will not move on
+until it is. You write whatever is missing. Never stop at one half.
 
 **Read first, every time:** [`docs/00_HOW_A_DAY_WORKS.md`](../../../docs/00_HOW_A_DAY_WORKS.md)
 and [`CLAUDE.md`](../../../CLAUDE.md).
@@ -21,15 +25,18 @@ and [`CLAUDE.md`](../../../CLAUDE.md).
 ### Step 1 · Read the assignment
 
 ```bash
+./k next          # must name N, and says which files of N are still to write
 ./k day <N>
 ```
 
-That prints the hub, which already names both topics, both "after today you can" lines,
-and both interviewer questions. Those four lines are your brief — the syllabus decided
-them, not you. Do not change the topic. If it is genuinely wrong, stop and say so; the
-fix is an edit to `scripts/curriculum.py` in its own commit.
+The hub names the DSA topic, the system design topic, the languages theme with its
+three lesson titles, every "after today you can" line, and every interviewer question.
+Those lines are your brief — the syllabus decided them, not you. Do not change a topic.
+If one is genuinely wrong, stop and say so; the fix is an edit to `scripts/curriculum.py`
+(or `scripts/syllabus/langs/` for the languages rows) in its own commit.
 
-Also open the two placeholder lesson files. They carry the nine headings already.
+Also open the placeholder lesson files. They carry the nine headings already. A file
+whose front matter says `status: written` is done; do not rewrite it unless asked.
 
 ### Step 2 · Check what the reader already knows
 
@@ -39,11 +46,12 @@ they say what the reader has actually met, not what the syllabus planned.
 ```bash
 cat wiki/00-STATE.md                    # which days are written, and their titles
 cat wiki/vocab.md                       # every term the reader knows, and its day
-cat wiki/recall/<phase>.md              # the recall cards for this day's two phases
+cat wiki/recall/<phase>.md              # the recall cards for this day's three phases
 ```
 
-`./k day <N>` names both phases; take the slugs from there. Read only those two recall
-files — the others belong to phases the reader has not reached, or finished long ago.
+`./k day <N>` names all three phases — DSA, system design, and languages; take the slugs
+from there (the languages ones start `languages-`). Read only those three recall files —
+the others belong to phases the reader has not reached, or finished long ago.
 
 You may use any term in `wiki/vocab.md`, and you should link to the day it arrived. You
 may **not** use a term that is not there. Define it, or drop it. The ledger prefers
@@ -88,15 +96,33 @@ Same nine headings; sections 5, 6 and 7 differ:
 For a **case study day** (design a parking lot, design Twitter), read
 [`reference/case_study_day.md`](reference/case_study_day.md) before writing.
 
-### Step 5 · Write the practice sheet
+### Step 5 · Write the three language lessons
 
-`03-practice.md`. Named problems only — title, source, and one line on what it is really
-testing. Never paste a problem statement. Four problems, easiest first, and they must be
-findable (LeetCode number, or the standard name).
+Follow [`../day-langs/SKILL.md`](../day-langs/SKILL.md) for files `05-lang-python-*`,
+`06-lang-go-*` and `07-lang-cpp-*`. It carries the languages-specific rules: the
+complete program with its run command and output, the side-by-side in §6, and the ban
+on invented library APIs. All three, always; if a language lacks the feature, its lesson
+says so and teaches the nearest thing.
 
-Then three questions to answer out loud. Two are already in the file; write the third.
+### Step 6 · Write the practice sheet
 
-### Step 6 · Leave the hub alone
+`03-practice.md` serves both halves. In order:
+
+1. **Code these** — named DSA problems only: title, source, and one line on what it is
+   really testing. Never paste a problem statement. Four problems, easiest first, and
+   they must be findable (LeetCode number, or the standard name).
+2. **Build these, in all three languages** — three exercises for the languages theme,
+   easiest first, each with its "really testing" line, each built three times. Then a
+   **Compare** section, one sentence per language.
+3. **Say these out loud** — every question the day answers, in two groups: DSA and
+   system design, then languages.
+4. **Before you move on** — one checklist covering both halves.
+
+A day that has not yet been folded into this single sheet still carries
+`08-lang-practice.md` for part 2. `practice_name(day)` in `scripts/build_skeleton.py`
+says which file to write; never create an `08-` file on a folded day.
+
+### Step 7 · Leave the hub alone
 
 `README.md` is generated from the syllabus on every build. Do not hand-edit it — your
 changes will be overwritten. If it is wrong, the syllabus is wrong: fix
@@ -105,19 +131,20 @@ changes will be overwritten. If it is wrong, the syllabus is wrong: fix
 Never rename a lesson file either. The filename is derived from the topic, and the hub
 links to the derived name.
 
-### Step 7 · Check
+### Step 8 · Check
 
 ```bash
 ./k check <N>
 ./k wiki
+./k next          # must now name N+1
 ```
 
 `check` verifies the nine sections are present and in order, that the story is long enough
-and carries no jargon, that the interview section is not thin, and that every link you
-made points at a folder that exists. `wiki` folds your new lesson into the ledger the next
-day will read. Fix what they report. Then
-read section 2 of both lessons out loud — if it does not sound like a story about a
-person, rewrite it.
+and carries no jargon, that the interview section is not thin, that each language lesson
+ends §5 in a real program, and that every link you made points at a file that exists.
+`wiki` folds your new lessons into the ledger the next day will read. Fix what they
+report. Then read section 2 of every lesson out loud — if it does not sound like a story
+about a person, rewrite it.
 
 ---
 
@@ -125,7 +152,8 @@ person, rewrite it.
 
 - **Never create a `lab/` folder**, an `implement.py`, a `reference.py`, a test file or a
   benchmark script. Rule 10. That structure was removed on purpose.
-- **Never write only one of the two lessons.** Rule 2.
+- **Never write only some of the five lessons.** Rule 2. Not just the interview half,
+  not just the languages half, not two languages out of three.
 - **Never ask the reader to reach for paper.** Rule 15. No "draw this on paper", no "on a
   blank page", no "pen and paper" — in the lessons, in §9, or in the practice checklist.
   Say it out loud from memory, or draw it in any tool. Stories use a phone, not a diary.
@@ -137,6 +165,7 @@ person, rewrite it.
   parts. Depth over density.
 - **Never include formal proofs, potential functions, or language-internals detail** unless
   an interviewer would ask for it. Rule 14.
+- **Never invent a library API** in a language lesson. Rule 17. Check the signature first.
 
 ## Tone
 

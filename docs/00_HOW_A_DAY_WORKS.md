@@ -1,14 +1,15 @@
 # How a Krama day works
 
-This is the format contract. Every one of the 360 lessons follows it.
+This is the format contract. Every one of the 900 lessons follows it.
 
 ---
 
 ## Who this is written for
 
 Someone who has **never studied this before**. Not a computer science graduate.
-Not someone brushing up. Someone who has to be told what a server is, and who will
-be sitting in a product-company interview at the end of 180 days.
+Not someone brushing up. Someone who has to be told what a server is — and, on the
+languages side, someone who has never written a program — and who will be sitting in
+a product-company interview at the end of 180 days.
 
 That single fact decides everything below.
 
@@ -26,76 +27,111 @@ in the file.
 
 ## The shape of a day
 
-**Current integrated format:** every day also carries Python, Go, and C++ lessons
-as `05-lang-*`, `06-lang-*`, and `07-lang-*`. Days 001–020 use a single
-`03-practice.md` for DSA problems, system design questions, language exercises,
-one oral-drill section, and one completion checklist. Do not create
-`08-lang-practice.md` for these days. Later days retain that separate practice
-file until migrated. This supersedes the older file counts below; the lesson
-writing requirements still apply.
-
 ```
 days/day-NNN-<topic>/
     README.md                       the hub — what today is, in one screen
     01-dsa-<topic>.md               the DSA lesson
     02-system-design-<topic>.md     the system design lesson
-    03-practice.md                  problems to code, questions to say out loud
+    03-practice.md                  problems to code, exercises to build, questions to say out loud
+    05-lang-python-<topic>.md       the Python lesson on today's languages theme
+    06-lang-go-<topic>.md           the Go lesson on the same theme
+    07-lang-cpp-<topic>.md          the C++ lesson on the same theme
 ```
 
-Four files. Nothing else. No `lab/`, no test harness, no benchmark script, no oracle.
+Seven files. Nothing else. No `lab/`, no test harness, no benchmark script, no oracle.
 
-Both tracks run in parallel from day 1 to day 180, so you are never doing only one of
-them. The DSA track goes foundations → patterns → data structures → algorithms. The
-system design track goes fundamentals → databases → object-oriented design → low-level
-design → distributed systems → high-level design.
+A day has two halves, and both run from day 1 to day 180, so you are never doing only
+one of them. A day is **complete** only when both halves are written; `./k status`
+counts it that way, and `./k next` will not move on until they are.
 
-### The one exception: the C++ track
+**The interview half** is files 01 and 02. The DSA track goes foundations → patterns →
+data structures → algorithms. The system design track goes fundamentals → databases →
+object-oriented design → low-level design → distributed systems → high-level design.
 
-Ten days out of the hundred and eighty carry a fifth file:
+**The languages half** is files 05, 06 and 07. Every day has one **theme** (say,
+"closures"), and each of the three lessons teaches that theme in its own language:
+Python, Go, and C++. The same idea three ways, so the differences become the lesson.
+When a language does not have the feature, the lesson says so plainly and teaches the
+nearest thing it does have. "Go has no inheritance; here is embedding, and here is why
+they chose that" is a lesson. Skipping the day for Go is not. Go carries the Protocol
+Buffers and gRPC block; Python and C++ are its clients.
+
+**The practice sheet**, `03-practice.md`, serves both halves: the named problems for
+the DSA lesson, the three exercises built three times for the language lessons, one
+oral drill covering all of today's questions, and one completion checklist.
+
+> **Migration note.** The languages course used to live in its own folder with its own
+> `04-practice.md`. When it merged into `days/`, that sheet became `08-lang-practice.md`
+> and is being folded into `03-practice.md` one block of days at a time. A day that
+> has not been folded yet still carries `08-lang-practice.md`, and `./k check` expects
+> it there. The set of folded days is `UNIFIED_PRACTICE_DAYS` in
+> [`../scripts/build_skeleton.py`](../scripts/build_skeleton.py); `practice_name(day)`
+> says which file a given day's language exercises live in. Never create an
+> `08-lang-practice.md` on a folded day.
+
+### The languages track, by kind of day
+
+| Days | Kind | What changes |
+|---|---|---|
+| 1-15 | Foundations | Every basic, in all three. Short programs. After day 15 you can build a small tool in any of them. |
+| 16-45 | Advanced features | The features that make each language itself. Interfaces, generics, closures, concurrency, memory. |
+| 46-135 | Applied | Networking, data, Protocol Buffers and gRPC, performance, messaging, and design. |
+| 136-180 | Builds and capstone | Six five-day builds, interview prep, and an eight-day capstone. The lessons become walkthroughs and the practice sheet becomes the deliverable. |
+
+Project days are listed in `LANG_PROJECTS` in [`../scripts/curriculum.py`](../scripts/curriculum.py).
+
+### The one exception: the C++ contest track
+
+Twelve days out of the hundred and eighty carry an eighth file:
 
 ```
-    04-cpp-<topic>.md               the C++ lesson
+    04-cpp-<topic>.md               the C++ contest lesson
 ```
 
-It is optional and it is deliberately small. The course teaches Python, because Python
-gets a beginner to a working solution fastest. The C++ track is for the reader who also
-wants to solve in C++ — because contest time limits are set for C++, and because some
-interviews are in it.
+It is optional and it is deliberately small. The DSA track teaches in Python, because
+Python gets a beginner to a working solution fastest. The contest track is for the
+reader who also wants to solve DSA problems in C++ — because contest time limits are
+set for C++, and because some interviews are in it. It is a different thing from the
+languages track's C++ lesson: that one teaches C++ as a language, this one teaches the
+STL you need to solve today's problem.
 
-Ten days, not a hundred and eighty. Five of them land in the first six days, which is
-enough to start writing real C++ solutions. Five more sit at the head of the phase that
+Twelve days, not a hundred and eighty. Five of them land in the first six days, which is
+enough to start writing real C++ solutions. The rest sit at the head of the phase that
 needs them, so the reader learns `priority_queue` on the day heaps arrive rather than
 four months early.
 
 The days that carry one live in `CPP_DAYS` in [`../scripts/curriculum.py`](../scripts/curriculum.py).
-A day not listed there is four files, exactly as above. The C++ lesson carries the same
-nine sections as a DSA lesson, and is held to the same rules — a story with no technical
-words in it, the full compilable solution, the real compiler error pasted, the arithmetic
-shown.
+A day not listed there is seven files, exactly as above. The contest lesson carries the
+same nine sections as a DSA lesson, and is held to the same rules — a story with no
+technical words in it, the full compilable solution, the real compiler error pasted,
+the arithmetic shown.
 
 ---
 
 ## The nine sections
 
-Every lesson carries all nine, in this order. Both tracks share sections 1-4 and 8-9,
-so you only ever learn one reading rhythm. Sections 5, 6 and 7 differ.
+Every lesson carries all nine, in this order. All tracks share sections 2-4 and 9, and
+the interview and language lessons differ only in the wording of headings 1 and 8, so
+you only ever learn one reading rhythm. Sections 5, 6 and 7 are where the tracks differ.
 
-| # | DSA lesson | System design lesson |
-|---:|---|---|
-| 1 | What this is, and why they ask it | What this is, and why they ask it |
-| 2 | The story | The story |
-| 3 | The idea in plain English | The idea in plain English |
-| 4 | The picture | The picture |
-| 5 | The code, built step by step | How it actually works |
-| 6 | What it costs | The numbers |
-| 7 | The traps | The trade-offs |
-| 8 | In the interview | In the interview |
-| 9 | Recall card | Recall card |
+| # | DSA lesson | System design lesson | Language lesson |
+|---:|---|---|---|
+| 1 | What this is, and why they ask it | What this is, and why they ask it | What this is, and why it matters |
+| 2 | The story | The story | The story |
+| 3 | The idea in plain English | The idea in plain English | The idea in plain English |
+| 4 | The picture | The picture | The picture |
+| 5 | The code, built step by step | How it actually works | The code, built step by step |
+| 6 | What it costs | The numbers | How the other two languages do it |
+| 7 | The traps | The trade-offs | The traps |
+| 8 | In the interview | In the interview | Say it out loud |
+| 9 | Recall card | Recall card | Recall card |
 
 ### 1. What this is, and why they ask it
 
 Three sentences saying what the idea is, then one short paragraph on why this shows up
-in interviews. Name the companies or the round type if it is specific.
+in interviews. Name the companies or the round type if it is specific. In a language
+lesson the heading reads "why it matters", and the paragraph says where you meet the
+idea at work as well as in the interview.
 
 No build-up. The reader should know what they are learning by the end of the first line.
 
@@ -119,6 +155,10 @@ shutters went up.
 **No paper props.** If the person in the story has to store something, they save it in
 their phone. See the writing rules below.
 
+The three language lessons of one day may share a story, or each carry their own.
+Sharing is better when the theme is the same idea in three coats; separate stories are
+better when the languages genuinely disagree.
+
 The test: if you delete this section and lose nothing, it was decoration, not a story.
 
 ### 3. The idea in plain English
@@ -136,15 +176,25 @@ At least one diagram, captioned with what to notice in it.
 
 - **ASCII boxes** for arrays, memory, pointers, bit patterns — anything where adjacency
   is the point. Indices above, values below, boundaries marked.
-- **Mermaid** for trees, graphs, architectures, state machines, request flows.
+- **Mermaid** for trees, graphs, architectures, state machines, request flows, goroutine
+  and thread diagrams.
 
-### 5. The code, built step by step *(DSA)*
+### 5. The code, built step by step *(DSA and languages)*
 
 Small fragments, **ten lines or fewer**, each followed by prose explaining what it does
 and why. Never a forty-line block with a comment on top.
 
-Then the complete, working, copy-pasteable solution at the end of the section. Python
-3.12+, type hints on the signature, comments on the lines that are not obvious.
+Then the complete, working, copy-pasteable solution at the end of the section.
+
+For a DSA lesson: Python 3.12+, type hints on the signature, comments on the lines that
+are not obvious.
+
+For a language lesson: the complete program, **with the exact command that runs it and
+the exact output it prints**.
+
+- Python 3.12+, type hints on every public signature.
+- Go 1.23+, `gofmt` formatting, errors handled, never `_` for an error.
+- C++20, compiled with `-Wall -Wextra -std=c++20`, no raw `new` unless the day is about it.
 
 **Show the whole solution.** This repository does not hide answers from you.
 
@@ -167,22 +217,34 @@ bytes → storage per year. Fan-out multipliers. Replica counts.
 
 "It will be a lot of data" is not an answer. `50M users × 20 posts × 2KB = 2TB` is.
 
-### 7. The traps *(DSA)*
+### 6. How the other two languages do it *(languages)*
+
+This section is the reason the languages track exists. A short side-by-side, never more
+than a screen: the same idea in the other two languages, in code, followed by **the one
+line of difference that matters**. Not a feature comparison. The one thing that will
+bite the reader when they switch.
+
+A table is fine. Three columns, one row per aspect, each cell one short phrase.
+
+### 7. The traps *(DSA and languages)*
 
 At least two:
 
 - **The near-miss** — the version that looks correct, and the exact input that kills it.
 - **The real error** — actual pasted output, never a paraphrase.
   `IndexError: list index out of range`, not "you get an index error".
+  `panic: runtime error: index out of range [3] with length 3`, not "you get a panic".
+
+Compiler errors count. Paste the compiler's exact words.
 
 ### 7. The trade-offs *(system design)*
 
 What you give up by choosing this. When you would choose something else instead. The
 sentence that begins "I would not use this if..." is the one that separates candidates.
 
-### 8. In the interview
+### 8. In the interview *(DSA and system design)* · Say it out loud *(languages)*
 
-The section the whole document exists for.
+The section the whole document exists for. Same content under either heading.
 
 - **How it gets asked** — two or three real phrasings.
 - **What to say out loud** — a script for the first ninety seconds.
@@ -193,6 +255,26 @@ The section the whole document exists for.
 
 Five lines, maximum. What survives if you forget everything else. This is what you
 re-read the night before the interview.
+
+---
+
+## The practice sheet
+
+`03-practice.md` has four parts, in this order.
+
+1. **Code these, in this order.** Named problems for the DSA lesson — title, source, one
+   line on what each is really testing — and never a pasted statement. Four problems,
+   easiest first, findable by LeetCode number or standard name.
+2. **Build these, in all three languages.** Three exercises for the languages theme,
+   easiest first, each with one line on what it is really testing. Every exercise is
+   built **three times**, once per language. Then a **Compare** section, one sentence
+   per language on what was easy and what was hard.
+3. **Say these out loud.** Every question the day answers — DSA, system design, and
+   languages — each to be answered in two minutes, standing up, no notes.
+4. **Before you move on.** One checklist covering both halves.
+
+On a languages project day the "build these" part is the deliverable: the requirements,
+the file layout, the commands, and what "done" looks like.
 
 ---
 
@@ -214,6 +296,11 @@ re-read the night before the interview.
   page, or work it through with pen and paper. The compliant versions are "say it out loud
   from memory", "name the six beats in order without looking", or "draw it in any tool you
   like". This applies to lesson prose, to §9, and to every checklist in `03-practice.md`.
+- **Real output.** Every program shows what it prints. Every error is pasted, not described.
+- **Never invent a library API.** If you are not certain a function exists with that
+  signature, check it before writing it. A lesson that teaches a method that does not
+  exist is worse than no lesson. This matters most on the protobuf, gRPC, and
+  third-party-library days.
 - **British/Indian-neutral English**, consistent within a file.
 
 ## When a lesson gets long
@@ -235,9 +322,11 @@ Do **not** compress. Compressing is how the material got too hard the first time
 
 ```bash
 python scripts/build_skeleton.py     # create any missing day folders and placeholders
-./k status                           # how many lessons are written
+./k status                           # how many lessons are written, on every track
 ./k check N                          # does day N follow the nine-section contract
 ```
 
-The syllabus itself lives in [`scripts/curriculum.py`](../scripts/curriculum.py). To change
-what a day teaches, edit that file and re-run the builder — never rename a folder by hand.
+The syllabus itself lives in [`scripts/curriculum.py`](../scripts/curriculum.py) — the
+DSA and system design rows in `scripts/syllabus/`, the languages rows in
+`scripts/syllabus/langs/`. To change what a day teaches, edit those and re-run the
+builder — never rename a folder or a lesson file by hand.

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Difference arrays: range updates, cheaply
 **System design topic:** Wide-column and time-series stores
 
+**Theme:** Text versus bytes
+
 ---
 
 ## Code these, in this order
@@ -113,7 +115,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Count bytes and code points for ASCII and é; state both answers. | The unit of measurement. |
+| 2 | Decode malformed UTF-8 and choose reject, replace, or preserve with an explicit policy. | Boundary validation. |
+| 3 | Reverse text containing a combining accent and explain why byte reversal and code-point reversal can both be unsuitable. | User-perceived characters versus storage units. |
+
+## Compare
+
+- **Python** — str contains Unicode text and bytes contains byte values. encode converts text to bytes; decode interprets bytes using an explicit encoding. After building, say what was easiest and hardest in this version.
+- **Go** — A Go string is a byte sequence. range decodes UTF-8 into runes and reports byte offsets; a rune is an alias for int32 representing a code point. After building, say what was easiest and hardest in this version.
+- **C++** — std::string stores char elements and does not enforce UTF-8 validity. C++20 char8_t distinguishes UTF-8 code units, while string_view borrows storage without owning it. After building, say what was easiest and hardest in this version.
+
+Python str indexes code points, Go string indexes bytes while range decodes runes, and C++ string normally exposes bytes. None of those basic operations automatically counts grapheme clusters.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -130,7 +154,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    written at write time; the two key stress-tests — unbounded and hot partitions — and the
    promise the model demands.
 
----
+### Languages
+
+1. What is the difference between a byte and a character?
+2. Does len(str) count visible characters? Compare the answer across all three languages.
+3. Does []rune solve grapheme segmentation? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -142,4 +170,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can switch the dense array for a sorted map when coordinates are huge.
 - [ ] I can say Cassandra's two keys and their jobs, and design a message table key under stress.
 - [ ] I can size a metrics firehose and defend a retention policy with arithmetic.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

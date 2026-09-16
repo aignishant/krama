@@ -25,11 +25,10 @@
 
 1. [01-dsa-character-counting-and-frequency-maps.md](01-dsa-character-counting-and-frequency-maps.md) — the DSA lesson
 2. [02-system-design-graphql-versus-rest.md](02-system-design-graphql-versus-rest.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-decorators-functools-wraps-and.md](05-lang-python-decorators-functools-wraps-and.md) — the Python lesson
-5. [06-lang-go-middleware-functions-that-take.md](06-lang-go-middleware-functions-that-take.md) — the Go lesson
-6. [07-lang-cpp-function-objects-higher-order.md](07-lang-cpp-function-objects-higher-order.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-decorators-functools-wraps-and.md](05-lang-python-decorators-functools-wraps-and.md) — the Python lesson
+4. [06-lang-go-middleware-functions-that-take.md](06-lang-go-middleware-functions-that-take.md) — the Go lesson
+5. [07-lang-cpp-function-objects-higher-order.md](07-lang-cpp-function-objects-higher-order.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -24,17 +24,16 @@
 ## Project
 
 **Mini project 2: a text analyser** — the languages half of today is a build day. The three
-lessons are the walkthrough; the languages practice sheet is the deliverable.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-fast-and-slow-pointers.md](01-dsa-fast-and-slow-pointers.md) — the DSA lesson
 2. [02-system-design-indexes-how-a-database-finds.md](02-system-design-indexes-how-a-database-finds.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-word-frequency-and-log.md](05-lang-python-word-frequency-and-log.md) — the Python lesson
-5. [06-lang-go-word-frequency-and-log.md](06-lang-go-word-frequency-and-log.md) — the Go lesson
-6. [07-lang-cpp-word-frequency-and-log.md](07-lang-cpp-word-frequency-and-log.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-word-frequency-and-log.md](05-lang-python-word-frequency-and-log.md) — the Python lesson
+4. [06-lang-go-word-frequency-and-log.md](06-lang-go-word-frequency-and-log.md) — the Go lesson
+5. [07-lang-cpp-word-frequency-and-log.md](07-lang-cpp-word-frequency-and-log.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

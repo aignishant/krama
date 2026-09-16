@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Two pointers revision and mock round
 **System design topic:** NoSQL: what it actually means
 
+**Theme:** Timeouts and cancellation
+
 ---
 
 ## Code these, in this order
@@ -108,7 +110,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Cancel a long-running job after its first unit and wait for cleanup to finish. | Cooperative stop and observed completion. |
+| 2 | Apply a deadline and distinguish timeout from an explicit user cancellation. | Failure classification. |
+| 3 | Block a worker on input and make that wait cancellation-aware. | Cancellation reaches blocking operations, not just the outer loop. |
+
+## Compare
+
+- **Python** — asyncio.timeout limits an asynchronous scope using cancellation. Task cancellation is cooperative and cleanup belongs in finally blocks. After building, say what was easiest and hardest in this version.
+- **Go** — context.Context carries cancellation and deadlines across call boundaries. Workers select on Done and report Err when the request is cancelled or expires. After building, say what was easiest and hardest in this version.
+- **C++** — std::stop_token lets work observe a cooperative stop request. A deadline is a separate time condition, usually measured with steady_clock. After building, say what was easiest and hardest in this version.
+
+Python task cancellation is delivered at await points, Go context exposes Done and Err, and C++ stop_token reports a stop request. None safely kills arbitrary work at an arbitrary instruction.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -126,7 +150,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    At-most survives shortening; at-least survives lengthening. Which starts are valid each time,
    and what the wrong choice computes on `"abcabc"`.
 
----
+### Languages
+
+1. How do you cancel a request that is taking too long?
+2. Does cancellation forcibly kill a coroutine? Compare the answer across all three languages.
+3. Can a child deadline extend its parent’s deadline? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -136,4 +164,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can repair all four NoSQL slogans into trade-offs.
 - [ ] I can name the family and a product for all five needs in the drill.
 - [ ] I know which scale honestly needs NoSQL, with the events-per-day arithmetic.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

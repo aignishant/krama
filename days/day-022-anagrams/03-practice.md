@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Anagrams: the sorting versus counting choice
 **System design topic:** gRPC and when binary protocols win
 
+**Theme:** Enums and sum types
+
 ---
 
 ## Code these, in this order
@@ -162,7 +164,29 @@ measurable, and the price is a build step and losing `curl`."*
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Model waiting, accepted, and declined; print a readable name for each. | Named states instead of magic integers. |
+| 2 | Parse the external value 99 and reject it explicitly. | Boundary validation and unknown values. |
+| 3 | Add a cancelled state and update every display branch; keep guest count only with accepted replies. | Evolution and state-specific data. |
+
+## Compare
+
+- **Python** — Enum gives distinct named members. IntEnum also behaves like an integer, which is useful for interoperability but weakens separation from numbers. After building, say what was easiest and hardest in this version.
+- **Go** — A defined integer type with iota constants names states. Go still permits other values of that type, so boundary validation is explicit. After building, say what was easiest and hardest in this version.
+- **C++** — enum class names scoped values without implicit conversion to int. std::variant stores one of several alternative types and std::visit handles the active alternative. After building, say what was easiest and hardest in this version.
+
+Python Enum and Go typed constants name states but need deliberate handling of unknown values. C++ variant represents alternatives with different payload types; enum class alone only names values.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -180,7 +204,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    what changes if this has to run on a million words across several machines. (The key is a pure
    function of the word, so sharding by key needs no merge step.)
 
----
+### Languages
+
+1. How do you represent a fixed set of values?
+2. Does match check all members? Compare the answer across all three languages.
+3. What happens when a new state is added? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -193,3 +221,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can say why field tags may never be renumbered.
 - [ ] I answer "gRPC or REST" by drawing the boundary, not by picking a winner.
 - [ ] I can redraw the inside-versus-edge diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

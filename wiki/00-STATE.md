@@ -28,26 +28,26 @@ is missing from this table has nothing written at all.
 | 018 | Arrays revision and mock round | Status codes, errors, and idempotency | typing generics: TypeVar, Generic, and list[T] | Type parameters, constraints, and any versus comparable | Templates, template argument deduction, and instantiation |
 | 019 | What a string is, and why it is immutable | Authentication and authorisation | Functions as values, lambda, and captured variables | Function literals, captured loop variables, and function types | Lambdas, capture lists by value and by reference, std::function |
 | 020 | Building strings without the quadratic trap | JWT, sessions, and OAuth | __iter__, __next__, yield, and generator expressions | Range-over-func iterators (iter.Seq) and channels as iterators | Iterator categories, begin/end, and C++20 ranges |
-| 021 | Character counting and frequency maps | GraphQL versus REST | — | — | — |
-| 022 | Anagrams: the sorting versus counting choice | gRPC and when binary protocols win | — | — | — |
-| 023 | Palindromes and the two-ends habit | Rate limiting and API gateways | — | — | — |
-| 024 | Substrings versus subsequences: the distinction they test | API revision and interview questions | — | — | — |
-| 025 | Pattern matching, the simple way | What a database gives you that a file does not | — | — | — |
-| 026 | Strings revision and mock round | Tables, rows, and keys | — | — | — |
-| 027 | Two pointers: the idea | SQL you must know for interviews | — | — | — |
-| 028 | Opposite ends: pair sums on a sorted array | Joins, drawn | — | — | — |
-| 029 | Same direction: the read pointer and the write pointer | Normalisation and when to break it | — | — | — |
-| 030 | Fast and slow pointers | Indexes: how a database finds a row fast | — | — | — |
-| 031 | Fixed-size sliding window | B-trees and why indexes are shaped that way | — | — | — |
-| 032 | Variable-size sliding window | Query plans and the slow query | — | — | — |
-| 033 | Window plus hash map: the longest-substring family | Transactions and ACID | — | — | — |
-| 034 | At-most-K, and the exactly-K trick | Isolation levels and the anomalies they allow | — | — | — |
-| 035 | Choosing between two pointers and a window, under pressure | Locking and deadlocks | — | — | — |
-| 036 | Two pointers revision and mock round | NoSQL: what it actually means | — | — | — |
-| 037 | Prefix sums: answering range queries instantly | Key-value stores | — | — | — |
-| 038 | Subarray sum equals K: prefix plus hash map | Document databases | — | — | — |
-| 039 | Difference arrays: range updates, cheaply | Wide-column and time-series stores | — | — | — |
-| 040 | 2D prefix sums and inclusion-exclusion | Choosing SQL or NoSQL in an interview | — | — | — |
+| 021 | Character counting and frequency maps | GraphQL versus REST | Decorators, functools.wraps, and decorators with arguments | Middleware: functions that take and return handlers | Function objects, higher-order functions, and wrapper classes |
+| 022 | Anagrams: the sorting versus counting choice | gRPC and when binary protocols win | Enum, IntEnum, auto, and match on enums | iota, typed constants, and the Stringer pattern | enum class, std::variant, and std::visit |
+| 023 | Palindromes and the two-ends habit | Rate limiting and API gateways | None, Optional[T], and the walrus operator | nil, zero values, and the nil-interface trap | std::optional, nullptr, and value_or |
+| 024 | Substrings versus subsequences: the distinction they test | API revision and interview questions | match/case with structural patterns and guards | Type switches and switch on values | std::visit on variant, if constexpr, and structured bindings |
+| 025 | Pattern matching, the simple way | What a database gives you that a file does not | __eq__, __lt__, __add__, __repr__, __hash__ | No operator overloading: Stringer, sort.Slice, and cmp | operator==, operator<=>, operator<<, and the rule of least surprise |
+| 026 | Strings revision and mock round | Tables, rows, and keys | frozen dataclasses, tuple, frozenset, and Final | const for constants only; immutability by convention | const, constexpr, consteval, and const-correct methods |
+| 027 | Two pointers: the idea | SQL you must know for interviews | Exception hierarchies, exception chaining, and ExceptionGroup | errors.Is, errors.As, %w wrapping, and sentinel errors | Exception hierarchies, noexcept, and std::expected chains |
+| 028 | Opposite ends: pair sums on a sorted array | Joins, drawn | pytest: fixtures, parametrize, and assert introspection | go test, table-driven tests, and t.Run subtests | GoogleTest and CTest: TEST, EXPECT_EQ, and fixtures |
+| 029 | Same direction: the read pointer and the write pointer | Normalisation and when to break it | pdb, breakpoint(), and reading a traceback | delve, and reading a goroutine panic dump | gdb, sanitizers, and reading a segfault |
+| 030 | Fast and slow pointers | Indexes: how a database finds a row fast | Word frequency and log summariser in Python | Word frequency and log summariser in Go | Word frequency and log summariser in C++ |
+| 031 | Fixed-size sliding window | B-trees and why indexes are shaped that way | threading.Thread, the GIL, and what it really blocks | goroutines, go func(), and sync.WaitGroup | std::thread, std::jthread, and join |
+| 032 | Variable-size sliding window | Query plans and the slow query | queue.Queue and producer-consumer | Channels: unbuffered, buffered, close, and range | std::condition_variable and a hand-built thread-safe queue |
+| 033 | Window plus hash map: the longest-substring family | Transactions and ACID | threading.Lock, RLock, and a race you can reproduce | sync.Mutex, sync.RWMutex, atomic, and go test -race | std::mutex, std::lock_guard, std::atomic, and ThreadSanitizer |
+| 034 | At-most-K, and the exactly-K trick | Isolation levels and the anomalies they allow | asyncio, await, gather, and the event loop | select, and why Go does not need async/await | std::async, std::future, and C++20 coroutines in outline |
+| 035 | Choosing between two pointers and a window, under pressure | Locking and deadlocks | concurrent.futures: ThreadPoolExecutor and ProcessPoolExecutor | Worker pool with channels, fan-out and fan-in | A thread pool class with a task queue |
+| 036 | Two pointers revision and mock round | NoSQL: what it actually means | asyncio.timeout, Event, and cooperative cancellation | context.Context: WithTimeout, WithCancel, and Done() | std::stop_token, deadlines, and checking a flag |
+| 037 | Prefix sums: answering range queries instantly | Key-value stores | Object headers, refcounts, cycles, and the gc module | Escape analysis, the GC pacer, and GOGC | Smart pointers: unique_ptr, shared_ptr, weak_ptr |
+| 038 | Subarray sum equals K: prefix plus hash map | Document databases | Shallow copy, deepcopy, and aliasing bugs | Slices share backing arrays; copy(); append aliasing | Copy constructors, std::move, and the rule of five |
+| 039 | Difference arrays: range updates, cheaply | Wide-column and time-series stores | str versus bytes, encode, decode, and UnicodeDecodeError | []byte, rune, the utf8 package, and strings.Builder | char, char8_t, std::string_view, and UTF-8 by hand |
+| 040 | 2D prefix sums and inclusion-exclusion | Choosing SQL or NoSQL in an interview | json.loads, json.dumps, dataclasses, and pydantic | encoding/json, struct tags, and omitempty | nlohmann/json: parsing, serialising, and from_json |
 | 041 | Prefix sums revision and mock round | Connection pools, ORMs, and the N+1 query | — | — | — |
 | 042 | Binary search: the idea and the invariant | Database revision and interview questions | — | — | — |
 | 043 | Writing binary search without off-by-one bugs | Why interviews ask object-oriented design at all | — | — | — |
@@ -189,4 +189,4 @@ is missing from this table has nothing written at all.
 | 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design | — | — | — |
 | 180 | Final revision, and the week before the interview | Final revision, and the week before the interview | — | — | — |
 
-**20 of 180 days fully written; 180 started.**
+**40 of 180 days fully written; 180 started.**

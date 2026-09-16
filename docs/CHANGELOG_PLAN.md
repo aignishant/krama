@@ -40,3 +40,42 @@ before abstract, no cheerleading, no time estimates. The story section, which wa
 best part of the old format. The refusal to hand-edit generated files.
 
 The previous version is in [`archive/`](../archive/) in full.
+
+---
+
+## 2026-09-16 · The languages course merged into the days
+
+Krama Languages — a separate 180-day course under `langs/`, with its own driver `./l`,
+its own syllabus, contract and skill — became **the languages half of every Krama day**.
+
+**Why.** Two courses of exactly 180 days each, meant to be done together, were tracked
+apart. Finishing "day 12" meant finishing it twice, in two folders, with two `next`
+commands that could disagree. The reader wanted one day to be one thing: when day N is
+done, everything for day N is done — DSA, system design, and the three languages.
+
+**What changed.**
+
+| Before | After |
+|---|---|
+| `langs/days/day-NNN-<theme>/` beside `days/day-NNN-<topic>/` | One folder, `days/day-NNN-<topic>/`; the DSA slug names it |
+| `01-python-*`, `02-go-*`, `03-cpp-*`, `04-practice.md` | `05-lang-python-*`, `06-lang-go-*`, `07-lang-cpp-*`; the exercises fold into `03-practice.md` |
+| Front matter `track: python / go / cpp` | `track: lang-python / lang-go / lang-cpp`, so the C++ contest lesson (`track: cpp`) stays distinct |
+| `langs/scripts/syllabus/part1..3.py` | `scripts/syllabus/langs/part1..3.py`, loaded by the one `scripts/curriculum.py` |
+| `./l status / next / check / build` | `./k` does all of it; `./k status` shows every track and `./k next` names the files a day still needs |
+| A day was four files and "complete" meant DSA + system design | A day is seven files and complete means DSA + system design + all three language lessons |
+| `langs/docs/00_HOW_A_DAY_WORKS.md` and `langs/CLAUDE.md` | Folded into the root contract and `CLAUDE.md`; rules 16 and 17 carry the languages-only rules |
+| `/day-langs N` wrote a separate course's day | `/day-krama N` writes the whole day and hands the languages half to `/day-langs` |
+
+**Filenames kept.** The languages files keep the slug rule they were named with (first
+four words, no connector trimming) so that moving them changed only the prefix. The ten
+days already written moved with their history.
+
+**Practice sheets.** The separate language practice sheet became `08-lang-practice.md`
+on the move and is being folded into `03-practice.md` one block of days at a time. The
+folded set is `UNIFIED_PRACTICE_DAYS` in `scripts/build_skeleton.py`; until it reaches
+180, an unfolded day still carries the `08-` file and `./k check` expects it there.
+
+**Kept.** The languages syllabus itself, unchanged: nine phases, ten projects, six
+five-day builds, an eight-day capstone, Go carrying Protocol Buffers and gRPC. The
+nine-section contract, with the languages headings for §1, §6 and §8. The C++ contest
+track, now named as such to tell it apart from the languages track's C++ lesson.

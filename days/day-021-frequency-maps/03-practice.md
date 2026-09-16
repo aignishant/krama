@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Character counting and frequency maps
 **System design topic:** GraphQL versus REST
 
+**Theme:** Wrapping behaviour
+
 ---
 
 ## Code these, in this order
@@ -166,7 +168,29 @@ Then say the sentence those numbers buy you: *"the caching loss is bigger than t
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Wrap a two-number addition operation with a call counter; calls on (2, 3) and (4, 5) must return 5 and 9 and count 2. | Preserving arguments and return values. |
+| 2 | Add elapsed-time reporting and force the wrapped operation to fail. Report the elapsed time while preserving the original failure. | Cleanup on both success and failure. |
+| 3 | Wrap today’s character counter with logging and timing. Reverse the wrapper order and explain which work the measurement includes. | Composition order around a real DSA operation. |
+
+## Compare
+
+- **Python** — A decorator takes a callable and returns a callable with added behaviour. functools.wraps preserves useful identifying metadata. After building, say what was easiest and hardest in this version.
+- **Go** — Middleware is a function that accepts a handler and returns a handler. The returned handler can act before and after the next handler. After building, say what was easiest and hardest in this version.
+- **C++** — A function object is an object with operator(). A wrapper can own another callable and add behaviour around each invocation. After building, say what was easiest and hardest in this version.
+
+Python has decorator syntax, Go wraps a handler explicitly, and C++ can store a callable inside another object. In every version, wrapper order and failure handling are part of the contract.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -184,7 +208,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The counter is bounded by the alphabet, not the length, so pass one streams in constant memory.
    Then the interesting half: how do you avoid a second pass over the data? (Record first positions.)
 
----
+### Languages
+
+1. How would you add timing to every function in a module?
+2. Does decoration call the original function? Compare the answer across all three languages.
+3. Does the wrapper make shared state safe? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -197,3 +225,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know what DataLoader is for and can say the 51-versus-2 number.
 - [ ] I answer "GraphQL or REST" with a condition, never a preference.
 - [ ] I can redraw the both-ways round-trip diagram from memory, in whatever tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

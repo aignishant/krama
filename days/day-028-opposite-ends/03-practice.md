@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Opposite ends: pair sums on a sorted array
 **System design topic:** Joins, drawn
 
+**Theme:** Testing
+
 ---
 
 ## Code these, in this order
@@ -184,7 +186,29 @@ Write "customers who have never ordered" three ways. Then say:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Test addition on (0, 0), (2, 3), and (-2, 2), with expected results 0, 5, and 0. | Named normal and boundary cases. |
+| 2 | Deliberately change addition to subtraction, run the tests, then repair it. | Proof that a test can detect the intended defect. |
+| 3 | Test the first-unique-character function on empty, all-repeated, and first-position-unique inputs. | Cases selected from the DSA contract. |
+
+## Compare
+
+- **Python** — pytest discovers test functions and gives detailed assertion failures. Parameterisation runs one test against several explicit input/output cases. After building, say what was easiest and hardest in this version.
+- **Go** — go test discovers Test functions in _test.go files. Table-driven tests give each input and expected result a named subtest. After building, say what was easiest and hardest in this version.
+- **C++** — GoogleTest supplies TEST and TEST_F cases with fatal and nonfatal assertions. CTest can discover and run the built test executable. After building, say what was easiest and hardest in this version.
+
+pytest parameterisation, Go table tests, and GoogleTest all encode cases and assertions. Fixtures organise setup; they should not hide the expected behaviour.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -202,7 +226,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    to the argument on unsorted input — it returns nothing, with no error, which is the dangerous kind
    of wrong.
 
----
+### Languages
+
+1. How do you test a function with ten input cases?
+2. Why keep expected values independent? Compare the answer across all three languages.
+3. What changes when tests run in parallel? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -217,3 +245,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know `COUNT(o.id)` from `COUNT(*)`, and `ON` from `WHERE`, on an outer join.
 - [ ] I can redraw the elimination diagram and the four-join diagram from memory, in whatever tool I
       like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

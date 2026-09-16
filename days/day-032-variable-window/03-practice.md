@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Variable-size sliding window
 **System design topic:** Query plans and the slow query
 
+**Theme:** Concurrency II: passing messages
+
 ---
 
 ## Code these, in this order
@@ -234,7 +236,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Send 1, 2, and 3 to a consumer and verify a total of 6. | Message ownership and end signalling. |
+| 2 | Limit the buffer to two items and explain what blocks when the consumer is slower. | Backpressure instead of unbounded growth. |
+| 3 | Use two consumers and arrange for both to exit after all work is processed. | Shutdown accounting for every worker. |
+
+## Compare
+
+- **Python** — queue.Queue safely transfers work between threads. A finite maxsize applies backpressure by blocking producers when the queue is full. After building, say what was easiest and hardest in this version.
+- **Go** — An unbuffered channel synchronises a send with a receiver. A buffered channel holds a bounded number of values; closing announces that no more values will be sent. After building, say what was easiest and hardest in this version.
+- **C++** — A condition_variable waits for a state change while a mutex protects the queue. The condition must be checked as a predicate under that mutex. After building, say what was easiest and hardest in this version.
+
+Python Queue combines locking and blocking operations. Go channels integrate communication with the language. C++ condition_variable coordinates waiting around a separately protected queue.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -252,7 +276,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Monotonicity. Give the concrete failure — `[-3, 5]` with target 3 returns "no answer" when the
    answer is 1 — and name the correct technique instead.
 
----
+### Languages
+
+1. How do two threads hand data to each other safely?
+2. Does an empty queue mean done? Compare the answer across all three languages.
+3. How do two consumers stop? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -268,3 +296,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name two causes of slowness that never appear in a plan.
 - [ ] I can redraw the two-shapes template and the bad-estimate diagram from memory, in whatever tool I
       like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Two pointers: the idea
 **System design topic:** SQL you must know for interviews
 
+**Theme:** Error handling, properly
+
 ---
 
 ## Code these, in this order
@@ -190,7 +192,29 @@ Then say two other things you look for in a plan besides `Seq Scan`.
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Reject a negative count with a domain-specific failure. | A deliberate error contract. |
+| 2 | Wrap that failure at two caller layers and recover its original category at the top. | Context without losing identity. |
+| 3 | Process three independent inputs with two failures and report both failures without claiming all succeeded. | Multiple failures and partial results. |
+
+## Compare
+
+- **Python** — Exception chaining preserves a cause when a higher layer adds context. ExceptionGroup carries several independent failures together. After building, say what was easiest and hardest in this version.
+- **Go** — fmt.Errorf with %w wraps an error. errors.Is checks identity through wrappers and errors.As extracts a matching error type. After building, say what was easiest and hardest in this version.
+- **C++** — C++ can preserve exception causes with nested exceptions or represent expected failures as std::expected<T, E>. noexcept promises that an exception will not escape. After building, say what was easiest and hardest in this version.
+
+Python chains exceptions and can group them, Go wraps errors with %w for Is/As, and C++ can nest exceptions or return expected values. Preserve structured causes instead of parsing prose.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -210,7 +234,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    that is its best case — if the best case falls short, nothing works, so discard it and every pair
    containing it. And say what the argument depends on: sortedness.
 
----
+### Languages
+
+1. How do you add context to an error without losing the original?
+2. When should you use bare raise? Compare the answer across all three languages.
+3. Does %v preserve an unwrap chain? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -225,3 +253,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know `WHERE` filters rows and `HAVING` filters groups, and that the choice changes the answer.
 - [ ] I can redraw the pair-table diagram and the clause-order diagram from memory, in whatever tool I
       like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

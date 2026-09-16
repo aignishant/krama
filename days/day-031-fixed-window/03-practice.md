@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Fixed-size sliding window
 **System design topic:** B-trees and why indexes are shaped that way
 
+**Theme:** Concurrency I: threads
+
 ---
 
 ## Code these, in this order
@@ -211,7 +213,29 @@ Cassandra does not use a B-tree at all.
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Start ten tasks, each producing its input squared, and wait for all results. | Lifecycle and completion. |
+| 2 | Give each task separate output storage and print only after waiting. | Ownership instead of unsynchronised shared updates. |
+| 3 | Compare waiting-heavy and CPU-heavy tasks; explain why more workers may not help. | Concurrency versus parallel execution and bottlenecks. |
+
+## Compare
+
+- **Python** — threading.Thread starts work in the same process. join waits for completion; it does not automatically forward a worker’s exception to the caller. After building, say what was easiest and hardest in this version.
+- **Go** — A goroutine is a function executing concurrently under the Go runtime. WaitGroup tracks completion; it does not collect results or errors. After building, say what was easiest and hardest in this version.
+- **C++** — std::thread requires explicit lifecycle management. std::jthread adds automatic stop request and joining on destruction. After building, say what was easiest and hardest in this version.
+
+Python threads share a process and, in standard CPython 3.12, the GIL limits parallel Python bytecode. Go schedules goroutines over threads. C++ threads can execute simultaneously subject to hardware and scheduling.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -229,7 +253,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Say why the arithmetic stops working — addition has an inverse and `max` does not. Then the deque of
    indices, both pop rules with their reasons, and the `O(n)` argument by counting pushes.
 
----
+### Languages
+
+1. What is the difference between a thread and a goroutine?
+2. Does join re-raise a worker exception? Compare the answer across all three languages.
+3. Can main return while goroutines run? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -246,3 +274,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
       faster.
 - [ ] I can redraw the sliding-window diagram and the B-tree fanout diagram from memory, in whatever
       tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.

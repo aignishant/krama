@@ -10,6 +10,8 @@ status: written
 **DSA topic:** 2D prefix sums and inclusion-exclusion
 **System design topic:** Choosing SQL or NoSQL in an interview
 
+**Theme:** JSON in and out
+
 ---
 
 ## Code these, in this order
@@ -101,7 +103,29 @@ From memory, in under two minutes:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Round-trip a meal request with name and integer count; compare values rather than JSON key order. | Serialisation preserves meaning. |
+| 2 | Reject malformed JSON, a missing name, a string count, and a negative count separately. | Syntax, shape, type, and domain checks. |
+| 3 | Define whether unknown fields, omitted fields, null, and explicit zero are accepted; test each case. | Schema evolution and presence semantics. |
+
+## Compare
+
+- **Python** — json.loads parses JSON into Python values and json.dumps serialises them. A dataclass models accepted data but does not validate external input by itself. After building, say what was easiest and hardest in this version.
+- **Go** — encoding/json maps JSON to exported struct fields. Struct tags choose names and omitempty behaviour; decoding still needs presence and domain validation. After building, say what was easiest and hardest in this version.
+- **C++** — nlohmann/json parses and serialises JSON values. to_json and from_json in a type’s namespace define explicit conversions for that type. After building, say what was easiest and hardest in this version.
+
+Python json creates ordinary containers and needs explicit validation, Go decodes into typed structs with configurable strictness, and nlohmann/json uses conversion functions for C++ types. Defaults and omitted fields need a documented policy.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -117,7 +141,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Inclusion-exclusion in one breath: removed twice, restored once — then the same law in two
    other costumes: the build step, and the divisible-by-3-or-5 count.
 
----
+### Languages
+
+1. How do you turn a JSON document into an object?
+2. Does a dataclass validate annotations at runtime? Compare the answer across all three languages.
+3. Does DisallowUnknownFields reject duplicate keys? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -127,4 +155,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the composition that solves submatrix-sum-to-target from two known tools.
 - [ ] I can run patterns → invariants → numbers → settledness on an unseen system in two minutes.
 - [ ] I have trigger numbers, not slogans, for when a path leaves Postgres.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

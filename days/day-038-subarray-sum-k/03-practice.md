@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Subarray sum equals K: prefix plus hash map
 **System design topic:** Document databases
 
+**Theme:** Copies, shares, and moves
+
 ---
 
 ## Code these, in this order
@@ -107,7 +109,29 @@ Answer each in one or two sentences, out loud:
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Copy a two-row matrix and mutate one copied cell; predict whether the original changes. | Nested aliasing. |
+| 2 | Make the copy independent at every mutable level required by the contract. | The depth and cost of copying. |
+| 3 | Transfer ownership or document intentional sharing, then state which operations remain valid on the old handle. | Post-transfer and borrowing rules. |
+
+## Compare
+
+- **Python** — A shallow copy creates a new outer container while retaining references to its elements. deepcopy recursively copies an object graph while preserving internal sharing through memoisation. After building, say what was easiest and hardest in this version.
+- **Go** — Copying a slice value copies its descriptor, not its backing array. copy duplicates elements into destination storage; nested references may still be shared. After building, say what was easiest and hardest in this version.
+- **C++** — Copy and move constructors define how values acquire resources. std::move casts to an rvalue expression; the selected operation determines whether anything actually moves. After building, say what was easiest and hardest in this version.
+
+Python copy can share nested objects, Go slices share backing arrays unless elements are copied, and C++ value types define copy/move behaviour. State exactly which level is independent.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -126,7 +150,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    the honest counterpart: when the window is still the better tool, and what today's O(n) space
    buys instead.
 
----
+### Languages
+
+1. If I modify the copy, does the original change?
+2. Does a shallow list copy isolate nested lists? Compare the answer across all three languages.
+3. Does a full slice expression isolate existing elements? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -138,4 +166,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I ask "can values be negative?" before choosing between window and map.
 - [ ] I can model the blog with reasons per relationship, and answer the rename without pausing.
 - [ ] I can run the 16 MB and fan-out arithmetic for any array or copy in a model.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.

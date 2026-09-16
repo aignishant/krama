@@ -10,6 +10,8 @@ status: written
 **DSA topic:** Same direction: the read pointer and the write pointer
 **System design topic:** Normalisation and when to break it
 
+**Theme:** Debugging
+
 ---
 
 ## Code these, in this order
@@ -228,7 +230,29 @@ alongside it.
 
 ---
 
+## Build these, in all three languages
+
+Complete each exercise in Python, Go, and C++. Use today's lessons as references, then explain the result without looking at them.
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | Run an off-by-one lookup on a three-element input and keep the failure text. | A minimal reproducible failure. |
+| 2 | Stop just before the invalid access and inspect the index and length. | Evidence before changing code. |
+| 3 | Repair the boundary and add empty, one-element, and three-element regression cases. | A fix supported by boundary checks. |
+
+## Compare
+
+- **Python** — A traceback shows the calls that led to an exception. pdb lets you stop at a line, inspect values, and step through the failing path. After building, say what was easiest and hardest in this version.
+- **Go** — A Go panic dump names the failing goroutine and call frames. Delve can pause that execution and inspect the values that violated an assumption. After building, say what was easiest and hardest in this version.
+- **C++** — GDB exposes call frames and local values. Sanitizers instrument a program to detect selected memory errors and undefined behaviour during execution. After building, say what was easiest and hardest in this version.
+
+Python pdb, Go Delve, and C++ GDB all support breakpoints and inspection. Tracebacks identify the failing path; sanitizers add checks for C++ memory and undefined-behaviour defects.
+
+For each implementation, state the expected output, the input that exposes a mistake, and the time and extra space used.
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -247,7 +271,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    is known about the value coming back from each end. Then termination, then `O(n)`/`O(1)`, then
    mention counting sort and why the problem forbids it.
 
----
+### Languages
+
+1. Your program crashes. Walk me through how you find the bug.
+2. Why minimise the input? Compare the answer across all three languages.
+3. Can main recover another goroutine’s panic? Explain the corresponding design decision in Python and C++.
 
 ## Before you move on
 
@@ -262,3 +290,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can tell a snapshot from a copy, and I never denormalise without a reconciliation job.
 - [ ] I can redraw the read/write gap diagram and the four-regions diagram from memory, in whatever
       tool I like.
+- [ ] I completed all three language exercises in Python, Go, and C++.
+- [ ] I can predict the examples and explain the failure cases.
+- [ ] I answered the DSA, system design, and language questions out loud.
