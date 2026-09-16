@@ -184,7 +184,7 @@ LANG_FILE_PREFIX = {
 LANG_PRACTICE = "08-lang-practice.md"
 
 # Days completed with the combined DSA, system design and language practice format.
-UNIFIED_PRACTICE_DAYS = frozenset(range(1, 11))
+UNIFIED_PRACTICE_DAYS = frozenset(range(1, 21))
 
 
 def practice_name(day: Day) -> str:
