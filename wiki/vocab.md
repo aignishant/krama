@@ -55,7 +55,7 @@ cheaper to define it again than to assume the reader knows it.
 - **043** — monotone
 - **044** — anaemic model, fee, returned, run, upper bound
 - **045** — break point, name mangling
-- **046** — depth, greedy simulation, is possible, smallest
+- **046** — address, depth, file descriptor, greedy simulation, is possible, smallest
 - **047** — duck typing, gap, overloading, overriding
 - **048** — relative epsilon
 - **049** — mixin, negative infinity

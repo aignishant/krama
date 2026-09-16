@@ -2,7 +2,7 @@
 day: 43
 track: practice
 title: "Practice — Writing binary search without off-by-one bugs"
-status: draft
+status: written
 ---
 
 # Day 043 · Practice
@@ -115,22 +115,23 @@ for an OOD round would be instead:
 
 ## Build these, in all three languages
 
-*Three exercises, easiest first. Each one says what it is really testing. Every
-exercise is done three times: once in Python, once in Go, once in C++.*
+Complete each exercise in Python, Go, and C++. Keep the same inputs and compare the results.
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Describe a two-field Person; print its supported field names and values. | Runtime metadata in Python/Go versus explicit C++20 mappings. |
+| 2 | Allow updates only to `name`; reject `balance` and unknown names without mutation. | An allowlist is a domain boundary, not just a lookup. |
+| 3 | Create an explicit JSON-name mapping and compare it with dynamic inspection on 10,000 records. | Correctness first; measure runtime work without assuming a winner. |
+
+For each exercise, include a successful case, an absent or empty case, and a rejected input. State the expected result before running it. Preserve valid results when a different record fails.
 
 ## Compare
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+Write one sentence per language explaining its mechanism and one concrete trade-off you observed.
 
-- **Python** — getattr, setattr, __dict__, and metaclasses in outline
-- **Go** — reflect: Type, Value, struct tags, and when to avoid it
-- **C++** — Type traits, if constexpr, and templates as compile-time code
+- **Python** — `getattr` reads an attribute whose name is supplied as text, and `setattr` writes one.
+- **Go** — Go's `reflect.Type` describes a type; `reflect.Value` describes a value. Struct tags are text attached to fields, such as the JSON name `name`. Reflection is useful for reusable encoders, but ordinary struct access gives simpler checks when you already know the shape..
+- **Cpp** — C++20 type traits answer compile-time questions about types. `if constexpr` chooses a branch during template instantiation, allowing the other branch to use operations that the chosen type does not support. This is compile-time metaprogramming, not general runtime member reflection..
 
 ## Say these out loud
 
@@ -152,11 +153,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 
 ### Languages
 
-*Three questions from today. Answer each in two minutes, standing up, no notes.*
+Answer each in two minutes without notes. Give a concrete input or failure case.
 
 1. How does a JSON library know your struct's field names?
-2. 
-3.
+2. Why can inspecting a value succeed while modifying it fails?
+3. What can C++20 type traits tell you that runtime field-name reflection cannot?
 
 ## Before you move on
 
@@ -169,3 +170,7 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered the DSA, system design, and language questions out loud.
 - [ ] All three programs run and I can explain every line.
 - [ ] I can say the one-line difference between the three languages on today's theme.
+
+- [ ] I completed all three language exercises in all three languages, including their failure cases.
+
+- [ ] I completed all three language exercises in all three languages, including their failure cases.

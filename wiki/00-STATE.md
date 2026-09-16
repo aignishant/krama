@@ -49,11 +49,11 @@ is missing from this table has nothing written at all.
 | 039 | Difference arrays: range updates, cheaply | Wide-column and time-series stores | str versus bytes, encode, decode, and UnicodeDecodeError | []byte, rune, the utf8 package, and strings.Builder | char, char8_t, std::string_view, and UTF-8 by hand |
 | 040 | 2D prefix sums and inclusion-exclusion | Choosing SQL or NoSQL in an interview | json.loads, json.dumps, dataclasses, and pydantic | encoding/json, struct tags, and omitempty | nlohmann/json: parsing, serialising, and from_json |
 | 041 | Prefix sums revision and mock round | Connection pools, ORMs, and the N+1 query | datetime, zoneinfo, time.monotonic, and random versus secrets | time.Time, Duration, time.Now, and math/rand versus crypto/rand | std::chrono, time zones, and <random> |
-| 042 | Binary search: the idea and the invariant | Database revision and interview questions | — | — | — |
-| 043 | Writing binary search without off-by-one bugs | Why interviews ask object-oriented design at all | — | — | — |
-| 044 | First and last occurrence | Classes and objects | — | — | — |
-| 045 | Search in a rotated sorted array | Encapsulation | — | — | — |
-| 046 | Binary search on the answer | Inheritance and its costs | — | — | — |
+| 042 | Binary search: the idea and the invariant | Database revision and interview questions | re: search, match, findall, groups, and compiled patterns | regexp: RE2 semantics and why there is no backtracking | std::regex, and why you reach for RE2 or ctre instead |
+| 043 | Writing binary search without off-by-one bugs | Why interviews ask object-oriented design at all | getattr, setattr, __dict__, and metaclasses in outline | reflect: Type, Value, struct tags, and when to avoid it | Type traits, if constexpr, and templates as compile-time code |
+| 044 | First and last occurrence | Classes and objects | pyproject.toml, wheels, and PyInstaller | go build flags, -ldflags, cross-compiling, and a static binary | CMake targets, static versus dynamic linking, and Release builds |
+| 045 | Search in a rotated sorted array | Encapsulation | asyncio and httpx downloader with a progress report | Goroutine worker-pool downloader with context | Thread-pool downloader with libcurl |
+| 046 | Binary search on the answer | Inheritance and its costs | socket, bind, listen, accept, and a threaded echo server | net.Listen, Accept, and one goroutine per connection | POSIX sockets, or Boost.Asio, and one thread per connection |
 | 047 | Minimise the maximum: the capacity family | Polymorphism | — | — | — |
 | 048 | Binary search on floats, and the epsilon question | Abstraction and interfaces | — | — | — |
 | 049 | Peak finding, and searching data that is structured but not sorted | Composition over inheritance | — | — | — |
@@ -189,4 +189,4 @@ is missing from this table has nothing written at all.
 | 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design | — | — | — |
 | 180 | Final revision, and the week before the interview | Final revision, and the week before the interview | — | — | — |
 
-**41 of 180 days fully written; 180 started.**
+**46 of 180 days fully written; 180 started.**

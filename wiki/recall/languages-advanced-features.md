@@ -856,3 +856,123 @@ Source: [`days/day-041-prefix-revision/05-lang-python-datetime-zoneinfo-time-mon
 - Generate 16 secure bytes for 128 bits; encoding adds no randomness.
 
 Further reading: [Python clocks](https://docs.python.org/3.12/library/time.html), [time zones](https://docs.python.org/3.12/library/zoneinfo.html), and [secure tokens](https://docs.python.org/3.12/library/secrets.html).
+
+## Day 042 · lang-cpp — std::regex, and why you reach for RE2 or ctre instead
+
+Source: [`days/day-042-binary-search-idea/07-lang-cpp-std-regex-and-why.md`](../../days/day-042-binary-search-idea/07-lang-cpp-std-regex-and-why.md)
+
+- Choose search or whole-input matching deliberately.
+- Capture parentheses return pieces, not semantic validity.
+- Use ASCII ranges when the contract says ASCII.
+- Compile reusable patterns once; understand the engine's cost.
+- Parse dates; confirm email ownership.
+
+## Day 042 · lang-go — regexp: RE2 semantics and why there is no backtracking
+
+Source: [`days/day-042-binary-search-idea/06-lang-go-regexp-re2-semantics-and.md`](../../days/day-042-binary-search-idea/06-lang-go-regexp-re2-semantics-and.md)
+
+- Choose search or whole-input matching deliberately.
+- Capture parentheses return pieces, not semantic validity.
+- Use ASCII ranges when the contract says ASCII.
+- Compile reusable patterns once; understand the engine's cost.
+- Parse dates; confirm email ownership.
+
+## Day 042 · lang-python — re: search, match, findall, groups, and compiled patterns
+
+Source: [`days/day-042-binary-search-idea/05-lang-python-re-search-match-findall.md`](../../days/day-042-binary-search-idea/05-lang-python-re-search-match-findall.md)
+
+- Choose search or whole-input matching deliberately.
+- Capture parentheses return pieces, not semantic validity.
+- Use ASCII ranges when the contract says ASCII.
+- Compile reusable patterns once; understand the engine's cost.
+- Parse dates; confirm email ownership.
+
+## Day 043 · lang-cpp — Type traits, if constexpr, and templates as compile-time code
+
+Source: [`days/day-043-binary-search-without-bugs/07-lang-cpp-type-traits-if-constexpr.md`](../../days/day-043-binary-search-without-bugs/07-lang-cpp-type-traits-if-constexpr.md)
+
+- Reflection inspects running values; templates operate during compilation.
+- Metadata describes data, not permission to edit it.
+- Check existence, kind, and mutability before dynamic writes.
+- C++20 needs explicit mappings to enumerate member names.
+- Prefer direct access for known shapes.
+
+## Day 043 · lang-go — reflect: Type, Value, struct tags, and when to avoid it
+
+Source: [`days/day-043-binary-search-without-bugs/06-lang-go-reflect-type-value-struct.md`](../../days/day-043-binary-search-without-bugs/06-lang-go-reflect-type-value-struct.md)
+
+- Reflection inspects running values; templates operate during compilation.
+- Metadata describes data, not permission to edit it.
+- Check existence, kind, and mutability before dynamic writes.
+- C++20 needs explicit mappings to enumerate member names.
+- Prefer direct access for known shapes.
+
+## Day 043 · lang-python — getattr, setattr, __dict__, and metaclasses in outline
+
+Source: [`days/day-043-binary-search-without-bugs/05-lang-python-getattr-setattr-dict-and.md`](../../days/day-043-binary-search-without-bugs/05-lang-python-getattr-setattr-dict-and.md)
+
+- Reflection inspects running values; templates operate during compilation.
+- Metadata describes data, not permission to edit it.
+- Check existence, kind, and mutability before dynamic writes.
+- C++20 needs explicit mappings to enumerate member names.
+- Prefer direct access for known shapes.
+
+## Day 044 · lang-cpp — CMake targets, static versus dynamic linking, and Release builds
+
+Source: [`days/day-044-first-and-last-occurrence/07-lang-cpp-cmake-targets-static-versus.md`](../../days/day-044-first-and-last-occurrence/07-lang-cpp-cmake-targets-static-versus.md)
+
+- Name the target OS and architecture before building.
+- A wheel needs Python; a frozen app bundles a runtime.
+- Static libraries are link inputs, not executables.
+- Record versions and check native dependencies.
+- Smoke-test the artifact outside the checkout.
+
+## Day 044 · lang-go — go build flags, -ldflags, cross-compiling, and a static binary
+
+Source: [`days/day-044-first-and-last-occurrence/06-lang-go-go-build-flags-ldflags.md`](../../days/day-044-first-and-last-occurrence/06-lang-go-go-build-flags-ldflags.md)
+
+- Name the target OS and architecture before building.
+- A wheel needs Python; a frozen app bundles a runtime.
+- Static libraries are link inputs, not executables.
+- Record versions and check native dependencies.
+- Smoke-test the artifact outside the checkout.
+
+## Day 044 · lang-python — pyproject.toml, wheels, and PyInstaller
+
+Source: [`days/day-044-first-and-last-occurrence/05-lang-python-pyproject-toml-wheels-and.md`](../../days/day-044-first-and-last-occurrence/05-lang-python-pyproject-toml-wheels-and.md)
+
+- Name the target OS and architecture before building.
+- A wheel needs Python; a frozen app bundles a runtime.
+- Static libraries are link inputs, not executables.
+- Record versions and check native dependencies.
+- Smoke-test the artifact outside the checkout.
+
+## Day 045 · lang-cpp — Thread-pool downloader with libcurl
+
+Source: [`days/day-045-rotated-array-search/07-lang-cpp-thread-pool-downloader-with.md`](../../days/day-045-rotated-array-search/07-lang-cpp-thread-pool-downloader-with.md)
+
+- Bound active work independently of the URL count.
+- Timeout each attempt and cap total attempts.
+- Retry safe operations with backoff, not every failure.
+- Publish a final filename only after success.
+- Join workers and report failures as well as successes.
+
+## Day 045 · lang-go — Goroutine worker-pool downloader with context
+
+Source: [`days/day-045-rotated-array-search/06-lang-go-goroutine-worker-pool-downloader.md`](../../days/day-045-rotated-array-search/06-lang-go-goroutine-worker-pool-downloader.md)
+
+- Bound active work independently of the URL count.
+- Timeout each attempt and cap total attempts.
+- Retry safe operations with backoff, not every failure.
+- Publish a final filename only after success.
+- Join workers and report failures as well as successes.
+
+## Day 045 · lang-python — asyncio and httpx downloader with a progress report
+
+Source: [`days/day-045-rotated-array-search/05-lang-python-asyncio-and-httpx-downloader.md`](../../days/day-045-rotated-array-search/05-lang-python-asyncio-and-httpx-downloader.md)
+
+- Bound active work independently of the URL count.
+- Timeout each attempt and cap total attempts.
+- Retry safe operations with backoff, not every failure.
+- Publish a final filename only after success.
+- Join workers and report failures as well as successes.

@@ -2,7 +2,7 @@
 day: 44
 track: practice
 title: "Practice — First and last occurrence"
-status: draft
+status: written
 ---
 
 # Day 044 · Practice
@@ -110,22 +110,23 @@ latter, name the rule that would fix it:
 
 ## Build these, in all three languages
 
-*Three exercises, easiest first. Each one says what it is really testing. Every
-exercise is done three times: once in Python, once in Go, once in C++.*
+Complete each exercise in Python, Go, and C++. Keep the same inputs and compare the results.
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Ship a CLI that prints `krama 1.0` and rejects an unknown option. | A reproducible entry point and a deliberate failure path. |
+| 2 | Build a wheel and frozen Python app, a Go executable, and a CMake Release executable. | The artifact and its runtime requirements differ by language. |
+| 3 | Copy only the distributable files into a fresh directory and run the smoke test; record OS and architecture. | Finding accidental dependencies on the development checkout. |
+
+For each exercise, include a successful case, an absent or empty case, and a rejected input. State the expected result before running it. Preserve valid results when a different record fails.
 
 ## Compare
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+Write one sentence per language explaining its mechanism and one concrete trade-off you observed.
 
-- **Python** — pyproject.toml, wheels, and PyInstaller
-- **Go** — go build flags, -ldflags, cross-compiling, and a static binary
-- **C++** — CMake targets, static versus dynamic linking, and Release builds
+- **Python** — `pyproject.toml` declares how a Python package is built and what it needs. A wheel is an installable distribution; PyInstaller builds a platform-specific application containing a Python runtime.
+- **Go** — `go build` produces an executable for a selected OS and architecture. Build flags can embed a version or remove local paths.
+- **Cpp** — CMake describes build targets and their dependencies, then generates work for a compiler and linker.
 
 ## Say these out loud
 
@@ -147,11 +148,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 
 ### Languages
 
-*Three questions from today. Answer each in two minutes, standing up, no notes.*
+Answer each in two minutes without notes. Give a concrete input or failure case.
 
 1. How do you ship your program to a machine without the toolchain?
-2. 
-3.
+2. What still needs installing on the destination machine?
+3. Why can a successful cross-build still produce an unusable artifact?
 
 ## Before you move on
 
@@ -164,3 +165,5 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered the DSA, system design, and language questions out loud.
 - [ ] All three programs run and I can explain every line.
 - [ ] I can say the one-line difference between the three languages on today's theme.
+
+- [ ] I completed all three language exercises in all three languages, including their failure cases.

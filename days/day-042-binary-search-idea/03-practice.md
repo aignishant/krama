@@ -2,7 +2,7 @@
 day: 42
 track: practice
 title: "Practice — Binary search: the idea and the invariant"
-status: draft
+status: written
 ---
 
 # Day 042 · Practice
@@ -93,22 +93,23 @@ plan.
 
 ## Build these, in all three languages
 
-*Three exercises, easiest first. Each one says what it is really testing. Every
-exercise is done three times: once in Python, once in Go, once in C++.*
+Complete each exercise in Python, Go, and C++. Keep the same inputs and compare the results.
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Extract both dates from `a 2026-09-16 b 2026-99-40`; print year, month, day. | Captures and the difference between shape and calendar validity. |
+| 2 | Apply the simple email policy to `a@b.in`, `a..b@c.in`, and `prefix a@b.in suffix`. | Whole-input matching and explicit counterexamples. |
+| 3 | Extract dates, parse them, and report accepted/rejected counts without stopping at the first bad date. | Separate extraction, validation, and per-record failure handling. |
+
+For each exercise, include a successful case, an absent or empty case, and a rejected input. State the expected result before running it. Preserve valid results when a different record fails.
 
 ## Compare
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+Write one sentence per language explaining its mechanism and one concrete trade-off you observed.
 
-- **Python** — re: search, match, findall, groups, and compiled patterns
-- **Go** — regexp: RE2 semantics and why there is no backtracking
-- **C++** — std::regex, and why you reach for RE2 or ctre instead
+- **Python** — Python's `re` module searches, captures, and replaces text described by a pattern.
+- **Go** — Go's `regexp` package matches text with RE2-style syntax and guarantees matching time linear in input length for a fixed pattern.
+- **Cpp** — `std::regex` is the C++ standard library's text-pattern facility. `regex_search` finds a substring, while `regex_match` requires the whole input. It is convenient for small tools, but the standard facility does not promise RE2's linear-time behaviour..
 
 ## Say these out loud
 
@@ -131,11 +132,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 
 ### Languages
 
-*Three questions from today. Answer each in two minutes, standing up, no notes.*
+Answer each in two minutes without notes. Give a concrete input or failure case.
 
 1. Write a pattern that matches an email address. Now say why it is wrong.
-2. 
-3.
+2. Why does a regex accepting a date not prove that the date exists?
+3. Which engine can promise linear matching for a fixed pattern, and what syntax does it give up?
 
 ## Before you move on
 
@@ -148,3 +149,7 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered the DSA, system design, and language questions out loud.
 - [ ] All three programs run and I can explain every line.
 - [ ] I can say the one-line difference between the three languages on today's theme.
+
+- [ ] I completed all three language exercises in all three languages, including their failure cases.
+
+- [ ] I completed all three language exercises in all three languages, including their failure cases.

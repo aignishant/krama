@@ -2,7 +2,7 @@
 day: 46
 track: practice
 title: "Practice — Binary search on the answer"
-status: draft
+status: written
 ---
 
 # Day 046 · Practice
@@ -141,17 +141,46 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | The echo server from the lesson, plus a client that sends three lines and prints the three replies | That you can get bind, listen, accept, and the per-connection read-write loop working end to end, and that you close the connected socket on every path out. |
+| 2 | An upper-case server: same shape, but every byte comes back upper-cased, and the server logs one line per connection with the client's address and how many bytes it saw | That the connected socket and the listening socket are two different objects, and that `recv`, `Read` and `read` give you a chunk, not a message — count the bytes, not the calls. |
+| 3 | A line server: the client sends lines ending in `
+`, and the server replies to each complete line with its length — buffering partial lines until the newline arrives, no matter how the bytes are split | That TCP is a stream: you must frame it yourself, and a `recv` that returns half a line is normal, not a bug. |
+
+### On exercise 1, prove the second client is not stuck
+
+Start the server. Start one client and leave it connected. Start a second client. It must get
+its echoes straight away. Then delete the thread, the `go`, or the `detach()` — leave the
+handler being called directly from the accept loop — and repeat. The second client hangs with no
+error. Say out loud where its connection is sitting and why nobody is picking it up.
+
+### On exercise 2, break the close
+
+In each language, take out the line that closes the connected socket, and run the client in a
+loop a few thousand times. Python and Go will get there; for C++ lower the limit first with
+`ulimit -n 64` so the failure arrives in seconds. Paste the exact error text the server prints
+into your notes for the day. Then put the close back and confirm the failure is gone.
+
+### On exercise 3, split the bytes on purpose
+
+Make the client send `"hel"`, pause, then `"lo
+wor"`, pause, then `"ld
+"`. The server must
+reply `5` and then `5`. If it replies to `hel` or to `lo` on its own, the framing is wrong. Say
+the one-sentence reason a real protocol needs either a delimiter or a length prefix.
 
 ## Compare
 
 *One sentence per language: what was easiest, what was hardest, and why.*
 
-- **Python** — socket, bind, listen, accept, and a threaded echo server
-- **Go** — net.Listen, Accept, and one goroutine per connection
-- **C++** — POSIX sockets, or Boost.Asio, and one thread per connection
+- **Python** — Easiest to get running, because `bind`, `listen` and `accept` read like the
+  lesson and `with conn:` closes for you; hardest to scale, because each connection is an
+  operating-system thread behind the GIL.
+- **Go** — Easiest overall: `net.Listen` is the three calls in one, `io.Copy(conn, conn)` is the
+  whole echo, and `go handle(conn)` is the whole concurrency story; the only thing to get right
+  is `defer conn.Close()` on the first line.
+- **C++** — Hardest, because the address is a struct you fill by hand, every call returns `-1`
+  with the reason in `errno`, and nothing closes the descriptor for you; it is also where you
+  finally see what the other two were wrapping.
 
 ## Say these out loud
 
@@ -176,8 +205,16 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. What happens when a client connects to your server?
-2. 
-3.
+   The handshake finishing in the kernel, the listen queue, `accept` returning a *new* socket, the
+   thread or goroutine taking it, and the accept loop going straight back to waiting.
+2. Why does `accept` return a second socket, and what does the first one do for the rest of the
+   program?
+   The listener produces connections and never carries a byte; every byte goes through the
+   connected socket, one per client.
+3. Your server works with one client and hangs with two. What did you write, and what happens
+   to the second client's connection while it waits?
+   The handler called directly from the accept loop; the second connection is complete at the TCP
+   level and sitting in the listen queue with nobody calling `accept`.
 
 ## Before you move on
 
@@ -189,5 +226,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the three inheritance failures with an example each, unprompted.
 - [ ] I did the hierarchy audit including the two-axis class count, both ways.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
+- [ ] All three echo servers run, and a second client gets its echo while the first is still
+      connected.
+- [ ] I removed the close in each language and saw the descriptor leak fail with its real error
+      text, then put it back.
+- [ ] My line server replies correctly when the client splits a line across three sends.
 - [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,7 +2,7 @@
 day: 45
 track: practice
 title: "Practice — Search in a rotated sorted array"
-status: draft
+status: written
 ---
 
 # Day 045 · Practice
@@ -120,22 +120,80 @@ Say the one-line test that decides all six.
 
 ## Build these, in all three languages
 
-*Three exercises, easiest first. Each one says what it is really testing. Every
-exercise is done three times: once in Python, once in Go, once in C++.*
+Complete each exercise in Python, Go, and C++. Keep the same inputs and compare the results.
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Download one local `/ok` URL and publish `000.bin` only after success. | Response checks, size bounds, and temporary file ownership. |
+| 2 | Download 200 local URLs with exactly four workers and progress every 50 completions. | Bounded work, unique outputs, and honest progress. |
+| 3 | Inject 404, 500, and delay cases; cancel a run and record files and results. | Finite retries, bounded shutdown, and no partial file presented as complete. |
+
+### Project deliverable
+
+Use `python/main.py`, `go/main.go`, and `cpp/main.cpp` in your own project
+directory, with separate working directories for their outputs. Keep `urls.txt`,
+an output folder, and a README recording dependency versions, commands, and the
+measured maximum active requests. The complete lessons generate 200 identical
+fixture URLs to make the first run reproducible; extend them to read one URL per
+line from `urls.txt` without changing the worker limit.
+
+Save the following shared fixture as `fixture.py` and run `python fixture.py`
+in a separate terminal. It serves HTTP on loopback only; stop it with Ctrl+C.
+
+```python
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import time
+
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self) -> None:
+        if self.path == "/slow":
+            time.sleep(3)
+        status = 500 if self.path == "/fail" else 404 if self.path == "/missing" else 200
+        body = b"hello" if status == 200 else b"failed"
+        self.send_response(status)
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        try:
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            pass  # A timed-out client may have closed its connection.
+
+    def log_message(self, format: str, *args: object) -> None:
+        pass
+
+if __name__ == "__main__":
+    ThreadingHTTPServer(("127.0.0.1", 8090), Handler).serve_forever()
+```
+
+With `/ok`, expect 200 files, each containing the five bytes `hello`, no `.part`
+files, and a final `success 200 failed 0`. With `/missing`, every job must fail
+after one attempt. With `/fail`, every job must stop after three attempts.
+For `/slow`, first test one URL; the two-second attempt limit should fail it.
+Add a fixture counter so a `/flaky` URL returns 500 once and then 200; prove the
+second attempt succeeds. Record that request count rather than guessing from
+the progress display.
+
+For cancellation, extend the Python entry point to expose an event, the Go
+entry point to accept a signal-derived context, and C++ to stop assigning jobs
+through a stop flag. The Python and Go examples already propagate cancellation;
+the synchronous C++ example bounds each in-flight attempt with libcurl's timeout.
+Require the cancelled run to stop admitting work, join its workers, remove
+temporary files, and print an accurate partial summary. Do not call a run complete
+just because all jobs were placed in a queue.
+
+Done means all three implementations pass the same fixture cases, with at most
+four active requests, finite retries, distinct final and partial filenames, and
+a README explaining the remaining limitations (including body limits and the
+absence of cross-process resume support).
+
 
 ## Compare
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+Write one sentence per language explaining its mechanism and one concrete trade-off you observed.
 
-- **Python** — asyncio and httpx downloader with a progress report
-- **Go** — Goroutine worker-pool downloader with context
-- **C++** — Thread-pool downloader with libcurl
+- **Python** — An `httpx.AsyncClient` reuses connections while `asyncio` workers wait for network I/O without dedicating an OS thread to each request.
+- **Go** — A Go worker pool sends job numbers through a channel to four goroutines. A shared `http.Client` reuses its transport safely.
+- **Cpp** — A fixed group of C++ threads can download concurrently with libcurl. Each worker owns its own easy handle; sharing one handle concurrently is not allowed.
 
 ## Say these out loud
 
@@ -157,11 +215,11 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 
 ### Languages
 
-*Three questions from today. Answer each in two minutes, standing up, no notes.*
+Answer each in two minutes without notes. Give a concrete input or failure case.
 
 1. How would you download a thousand files as fast as possible without overloading the server?
-2. 
-3.
+2. Why do partial files need different names from successful downloads?
+3. What stops a retry loop or cancellation from leaving workers running forever?
 
 ## Before you move on
 
@@ -174,3 +232,5 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered the DSA, system design, and language questions out loud.
 - [ ] All three programs run and I can explain every line.
 - [ ] I can say the one-line difference between the three languages on today's theme.
+
+- [ ] I completed all three language exercises in all three languages, including their failure cases.
