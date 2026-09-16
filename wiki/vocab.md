@@ -56,7 +56,7 @@ cheaper to define it again than to assume the reader knows it.
 - **044** — anaemic model, fee, returned, run, upper bound
 - **045** — break point, name mangling
 - **046** — address, depth, file descriptor, greedy simulation, is possible, smallest
-- **047** — duck typing, gap, overloading, overriding
+- **047** — client, duck typing, gap, headers, overloading, overriding, timeout
 - **048** — relative epsilon
 - **049** — mixin, negative infinity
 - **050** — dashed, draw two diagrams, filled diamond, hollow triangle, sequence diagram
@@ -75,7 +75,7 @@ cheaper to define it again than to assume the reader knows it.
 - **064** — singleton
 - **066** — direct addressing, hash map
 - **067** — deep-copied, not a map, shallow-copied
-- **068** — adaptee, client, stack frame, stack overflow
+- **068** — adaptee, stack frame, stack overflow
 - **069** — component
 - **070** — cdn, intent plus multiplicity
 - **071** — composition, inheritance, strategy, transitions itself

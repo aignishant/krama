@@ -2,7 +2,7 @@
 day: 47
 track: practice
 title: "Practice — Minimise the maximum: the capacity family"
-status: draft
+status: written
 ---
 
 # Day 047 · Practice
@@ -136,17 +136,131 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Same port, five times | Whether you can see connection reuse in a server log instead of trusting the library. |
+| 2 | Retry a flaky endpoint | Telling a 500 from a timeout, and knowing which requests are safe to repeat. |
+| 3 | A tiny command-line client | Mapping the three outcomes, dead line, server said no, and success, onto exit codes. |
+
+All three exercises, and all three lessons, talk to the same local server. Save it as
+`fixture.py` and run `python fixture.py` in a separate terminal; stop it with Ctrl-C. It prints
+one line per request with the port the request came from, and that port is how every exercise
+below is checked.
+
+```python
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import json
+import time
+
+USERS = {1: {"id": 1, "name": "Meera", "city": "Pune"}}
+FLAKY_CALLS = 0
+
+
+class Handler(BaseHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"  # keep-alive, so a reused connection stays open
+
+    def reply(self, status: int, payload: dict) -> None:
+        body = json.dumps(payload).encode()
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def do_GET(self) -> None:
+        port = self.connection.getpeername()[1]
+        print(f"GET  {self.path} from port {port}", flush=True)
+        if self.path == "/slow":
+            time.sleep(3)
+            self.reply(200, {"ok": True})
+        elif self.path == "/fail":
+            self.reply(500, {"error": "database down"})
+        elif self.path == "/flaky":
+            global FLAKY_CALLS
+            FLAKY_CALLS += 1
+            if FLAKY_CALLS % 3:
+                self.reply(500, {"error": "try again", "call": FLAKY_CALLS})
+            else:
+                self.reply(200, {"ok": True, "call": FLAKY_CALLS})
+        elif self.path == "/whoami":
+            self.reply(200, {"headers": dict(self.headers)})
+        elif self.path.startswith("/users/"):
+            user = USERS.get(int(self.path.rsplit("/", 1)[1]))
+            if user:
+                self.reply(200, user)
+            else:
+                self.reply(404, {"error": "no such user"})
+        else:
+            self.reply(404, {"error": "no such path"})
+
+    def do_POST(self) -> None:
+        port = self.connection.getpeername()[1]
+        print(f"POST {self.path} from port {port}", flush=True)
+        length = int(self.headers.get("Content-Length", "0"))
+        raw = self.rfile.read(length)
+        if self.headers.get("Content-Type") != "application/json":
+            self.reply(415, {"error": "send application/json"})
+            return
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError:
+            self.reply(400, {"error": "body is not JSON"})
+            return
+        new_id = max(USERS) + 1
+        USERS[new_id] = {"id": new_id, **data}
+        self.reply(201, USERS[new_id])
+
+    def log_message(self, format: str, *args: object) -> None:
+        pass
+
+
+if __name__ == "__main__":
+    print("fixture listening on 127.0.0.1:8090", flush=True)
+    ThreadingHTTPServer(("127.0.0.1", 8090), Handler).serve_forever()
+```
+
+Routes: `GET /users/1` answers 200 with a user, `GET /users/99` answers 404, `POST /users` with a
+JSON body answers 201 and a 415 without the right `Content-Type`, `GET /fail` is always 500,
+`GET /slow` waits three seconds, `GET /flaky` answers 500 twice and then 200, repeating, and
+`GET /whoami` echoes your request headers back so you can see what you actually sent.
+
+### 1. Same port, five times
+
+Write a program that calls `GET /users/1` five times through one client, then five times through
+the per-request function or a fresh client each time: `httpx.get` in Python, `(&http.Client{}).Get`
+with the body never read in Go, `cpr::Get` in C++. Copy the ten fixture lines into a comment at
+the top of the program: the first five must show one port, the last five must show five. Then
+call `/whoami` once through the shared client and confirm your `User-Agent` and `Accept` headers
+arrive. Done means the comment is in the file and the headers echo back.
+
+### 2. Retry a flaky endpoint
+
+Write `get_with_retry(client, path, attempts)` that calls `GET path` and retries on a 5xx status
+or on a timeout, waiting 100 milliseconds, then 200, then 400 between attempts. It must not retry
+on a 4xx, and it must not exist for POST: write the one-sentence comment that says why a POST that
+creates a user cannot be retried the same way. Run it against `/flaky` and print each attempt's
+status; the third attempt must succeed, and the `call` field in the body proves the fixture saw
+three requests. Run it against `/slow` with a two-second timeout and one attempt; it must give up
+without a traceback in Python, a panic in Go, or `status 0` in C++. Run it against `/users/99` and
+prove it did not retry. Done means all three runs are pasted into a comment and the ports in the
+fixture log are the same across every retry.
+
+### 3. A tiny command-line client
+
+Build `client`, a program run as `client get /users/1` or `client post /users Arjun Delhi`, with
+an optional `--timeout 2` argument, using the argument handling from
+[day 15](../day-015-the-write-pointer/README.md). It prints the status line and the body, pretty
+printed with the JSON library from [day 40](../day-040-2d-prefix-sums/README.md), and exits with
+0 for a 2xx, 1 for any other status, and 2 for a dead line, with a one-line reason on standard
+error for the last two. Test all six: `get /users/1`, `get /users/99`, `post /users Arjun Delhi`,
+`get /fail`, `get /slow --timeout 1`, and any path with the fixture stopped. Done means the six
+exit codes are correct in all three languages and the `--timeout` flag is honoured.
 
 ## Compare
 
 *One sentence per language: what was easiest, what was hardest, and why.*
 
-- **Python** — httpx and requests: GET, POST, headers, timeouts, sessions
-- **Go** — net/http Client, requests, headers, and reusing the transport
-- **C++** — libcurl through cpr: GET, POST, headers, timeouts
+- **Python** — `httpx.Client` in a `with` block did the pooling and the body reading for you, and the only thing you had to remember was `raise_for_status`, because a 500 is not an exception until you ask.
+- **Go** — the client and its transport pooled connections for free, but exercise 1 only showed one port once you read and closed every body, and exercise 2 needed `errors.As` on `*url.Error` to tell a timeout from a refused connection.
+- **C++** — `cpr::Session` made the calls as short as Python's, and every mistake in exercises 2 and 3 came from checking `status_code` before `r.error`, because nothing throws and a timeout looks like status zero.
 
 ## Say these out loud
 
@@ -171,8 +285,16 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. What goes wrong if you create a new HTTP client for every request?
-2. 
-3.
+   The handshake per call, with the round-trip arithmetic, the leaked connections, and the
+   one-client-per-process fix; then the Go-specific half, that reuse depends on closing the body.
+2. The downstream service returns a 500. What does your code see in each language, and what does
+   it do next?
+   A normal response in all three, `err == nil` in Go and `r.error` clear in C++; the status check
+   that has to be yours; and the retry rule, with why a POST is different from a GET.
+3. How do you tell a timeout from a connection refused, and why does it matter?
+   `ReadTimeout` against `ConnectError`, `Client.Timeout exceeded while awaiting headers` against
+   `connection refused`, `OPERATION_TIMEDOUT` against `CONNECTION_FAILURE`; one means the server
+   is slow, the other means it is gone, and you retry them differently.
 
 ## Before you move on
 
@@ -184,5 +306,8 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I ran the switch-removal recipe on the notifier, including step six.
 - [ ] I can sort all six cases into "polymorphism" and "leave the `if`" with a reason each.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson programs run against the fixture and print one port for five requests.
+- [ ] Exercise 1 shows one port and then five ports in all three languages, and my headers echo back from `/whoami`.
+- [ ] Exercise 2 succeeds on the third attempt against `/flaky`, gives up cleanly on `/slow`, and does not retry a 404.
+- [ ] Exercise 3 returns the six correct exit codes in all three languages.
+- [ ] I can say, without looking, how each language reports a dead line, and that none of them reports a 500 without being asked.

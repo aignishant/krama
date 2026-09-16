@@ -34,3 +34,33 @@ Source: [`days/day-046-binary-search-on-the-answer/05-lang-python-socket-bind-li
 - `recv(n)` gives up to `n` bytes; empty means the client closed. Use `sendall`, not `send`.
 - One thread per connection keeps `accept` free; blocking in the accept loop stalls every other client.
 - `Address already in use` means bind lost; `Connection refused` means nobody is listening.
+
+## Day 047 · lang-cpp — libcurl through cpr: GET, POST, headers, timeouts
+
+Source: [`days/day-047-minimise-the-maximum/07-lang-cpp-libcurl-through-cpr-get.md`](../../days/day-047-minimise-the-maximum/07-lang-cpp-libcurl-through-cpr-get.md)
+
+- One `cpr::Session` kept alive; `cpr::Get(...)` and `cpr::Post(...)` build and destroy a session, and its connection, every call.
+- `SetTimeout`, `SetHeader` once; `SetUrl`, `SetBody`, `UpdateHeader` per call; `Get()` or `Post()` returns a `cpr::Response`.
+- Check `r.error` first: a dead line sets `r.error.code` and leaves `status_code` at 0. Then check `status_code`: a 500 has `r.error` clear.
+- `OPERATION_TIMEDOUT` is the timeout; `CONNECTION_FAILURE` is nobody home; `r.error.message` is libcurl's sentence.
+- Link with `-lcpr -lcurl`; `#include <cpr/cpr.h>` alone ends in `undefined reference to cpr::Session::Session()`.
+
+## Day 047 · lang-go — net/http Client, requests, headers, and reusing the transport
+
+Source: [`days/day-047-minimise-the-maximum/06-lang-go-net-http-client-requests.md`](../../days/day-047-minimise-the-maximum/06-lang-go-net-http-client-requests.md)
+
+- One `&http.Client{Timeout: ...}` near `main`, passed in; its `Transport` pools connections and reuses them.
+- `defer resp.Body.Close()` on the line after `if err != nil`, and read the body to the end, or the connection is never returned to the pool.
+- `err` is the dead line only. A 500 is `resp` with `err == nil`; check `resp.StatusCode` before `Decode`.
+- `context deadline exceeded (Client.Timeout exceeded while awaiting headers)` is the timeout; `connect: connection refused` is nobody home.
+- POST needs `bytes.NewReader(json.Marshal(...))` and `Content-Type: application/json` set by hand.
+
+## Day 047 · lang-python — httpx and requests: GET, POST, headers, timeouts, sessions
+
+Source: [`days/day-047-minimise-the-maximum/05-lang-python-httpx-and-requests-get.md`](../../days/day-047-minimise-the-maximum/05-lang-python-httpx-and-requests-get.md)
+
+- One `httpx.Client` (or `requests.Session`) per process, built once with `timeout=` and `headers=`; `httpx.get(...)` at module level is a new connection every call.
+- Same client port in the server log five times means the connection was reused; a new port each time means it was not.
+- A 500 is a response, not an exception: check `status_code` or call `raise_for_status()` before `.json()`.
+- `ReadTimeout` is a dead line after connecting; `ConnectError` is nobody home; `HTTPStatusError` is the server saying no.
+- `json=` sends JSON with the right `Content-Type`; `data=` sends a form. `requests` has no default timeout.

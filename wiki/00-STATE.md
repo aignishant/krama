@@ -54,7 +54,7 @@ is missing from this table has nothing written at all.
 | 044 | First and last occurrence | Classes and objects | pyproject.toml, wheels, and PyInstaller | go build flags, -ldflags, cross-compiling, and a static binary | CMake targets, static versus dynamic linking, and Release builds |
 | 045 | Search in a rotated sorted array | Encapsulation | asyncio and httpx downloader with a progress report | Goroutine worker-pool downloader with context | Thread-pool downloader with libcurl |
 | 046 | Binary search on the answer | Inheritance and its costs | socket, bind, listen, accept, and a threaded echo server | net.Listen, Accept, and one goroutine per connection | POSIX sockets, or Boost.Asio, and one thread per connection |
-| 047 | Minimise the maximum: the capacity family | Polymorphism | — | — | — |
+| 047 | Minimise the maximum: the capacity family | Polymorphism | httpx and requests: GET, POST, headers, timeouts, sessions | net/http Client, requests, headers, and reusing the transport | libcurl through cpr: GET, POST, headers, timeouts |
 | 048 | Binary search on floats, and the epsilon question | Abstraction and interfaces | — | — | — |
 | 049 | Peak finding, and searching data that is structured but not sorted | Composition over inheritance | — | — | — |
 | 050 | Binary search revision and mock round | Class diagrams and the UML you will actually draw | — | — | — |
@@ -189,4 +189,4 @@ is missing from this table has nothing written at all.
 | 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design | — | — | — |
 | 180 | Final revision, and the week before the interview | Final revision, and the week before the interview | — | — | — |
 
-**46 of 180 days fully written; 180 started.**
+**47 of 180 days fully written; 180 started.**
