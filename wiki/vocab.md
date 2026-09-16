@@ -57,15 +57,16 @@ cheaper to define it again than to assume the reader knows it.
 - **045** — break point, name mangling
 - **046** — address, depth, file descriptor, greedy simulation, is possible, smallest
 - **047** — client, duck typing, gap, headers, overloading, overriding, timeout
-- **048** — relative epsilon
-- **049** — mixin, negative infinity
-- **050** — dashed, draw two diagrams, filled diamond, hollow triangle, sequence diagram
-- **051** — bounded context, stable, value object
-- **052** — abstract class, comparison, hiding mechanism, interface, method resolution order, protecting state, sorted region, swap
-- **053** — composition root, dependency, recursion, seam, test double
-- **054** — three-way partition
-- **055** — largest
-- **057** — galloping mode
+- **048** — handler, path parameter, relative epsilon, request model, response model
+- **049** — auth middleware, chain, dependency, logger, logging wrapper, middleware, mixin, negative infinity, pattern, request id
+- **050** — crud, dashed, draw two diagrams, error body, exception handler, filled diamond, hollow triangle, sequence diagram
+- **051** — bounded context, config file, environment, flag, precedence, stable, value object
+- **052** — abstract class, comparison, context, hiding mechanism, interface, levels, method resolution order, never-log list, protecting state, sinks, sorted region, structured logging, swap
+- **053** — binding, composition root, recursion, seam, sql, statement, test double, transaction
+- **054** — connection pool, leaked connection, three-way partition
+- **055** — largest, migrations, raw sql, version
+- **056** — invalidation, pipeline
+- **057** — galloping mode, salt, secret, stateless
 - **058** — comparator, header interface, role interface, structural
 - **059** — adapter
 - **060** — chaining, load factor
@@ -80,7 +81,7 @@ cheaper to define it again than to assume the reader knows it.
 - **070** — cdn, intent plus multiplicity
 - **071** — composition, inheritance, strategy, transitions itself
 - **072** — event object, observers, strictly shorter, subject, subscription list
-- **073** — circular buffer, context, finite state machine, ring buffer
+- **073** — circular buffer, finite state machine, ring buffer
 - **074** — monotonic deque
 - **075** — hook, one-shot
 - **076** — algorithm, singly linked list, which class
@@ -120,7 +121,7 @@ cheaper to define it again than to assume the reader knows it.
 - **114** — availability, complete, consistency, indexed heap, lazy deletion, linearizability, network partition
 - **115** — always comparable, eventual consistency, never equal, replica divergence, session guarantees
 - **116** — bounded optimism, k closest points, k most frequent, k-th largest specifically, max-heap, sorting everything
-- **117** — lazy, version
+- **117** — lazy
 - **118** — boundary, earlier, election timeout, lease, min-heap, quorum, removal, stonith
 - **119** — a replicated log
 - **120** — coordinator, participants

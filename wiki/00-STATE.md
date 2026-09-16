@@ -55,16 +55,16 @@ is missing from this table has nothing written at all.
 | 045 | Search in a rotated sorted array | Encapsulation | asyncio and httpx downloader with a progress report | Goroutine worker-pool downloader with context | Thread-pool downloader with libcurl |
 | 046 | Binary search on the answer | Inheritance and its costs | socket, bind, listen, accept, and a threaded echo server | net.Listen, Accept, and one goroutine per connection | POSIX sockets, or Boost.Asio, and one thread per connection |
 | 047 | Minimise the maximum: the capacity family | Polymorphism | httpx and requests: GET, POST, headers, timeouts, sessions | net/http Client, requests, headers, and reusing the transport | libcurl through cpr: GET, POST, headers, timeouts |
-| 048 | Binary search on floats, and the epsilon question | Abstraction and interfaces | — | — | — |
-| 049 | Peak finding, and searching data that is structured but not sorted | Composition over inheritance | — | — | — |
-| 050 | Binary search revision and mock round | Class diagrams and the UML you will actually draw | — | — | — |
-| 051 | Why sorting matters more than any single sorting algorithm | Modelling a real domain | — | — | — |
-| 052 | Bubble, selection and insertion sort, and what each one teaches | Common object-oriented interview questions | — | — | — |
-| 053 | Merge sort | Writing clean, testable classes | — | — | — |
-| 054 | Quicksort and partitioning | Object-oriented design revision and interview questions | — | — | — |
-| 055 | Quickselect: finding the Kth largest without sorting | Single responsibility | — | — | — |
-| 056 | Counting sort, radix sort, and bucket sort | Open for extension, closed for modification | — | — | — |
-| 057 | Stability, and what Python's sort actually does | Liskov substitution | — | — | — |
+| 048 | Binary search on floats, and the epsilon question | Abstraction and interfaces | FastAPI: a route, a request model, a response model | net/http: ServeMux, handlers, and http.ListenAndServe | cpp-httplib: routes and handlers |
+| 049 | Peak finding, and searching data that is structured but not sorted | Composition over inheritance | Routers, path parameters, dependencies, and middleware in FastAPI | Method and path patterns in ServeMux, and a middleware chain | Route patterns, pre-routing handlers, and a logging wrapper |
+| 050 | Binary search revision and mock round | Class diagrams and the UML you will actually draw | Pydantic models, validation errors, and status codes | Decoding request bodies, validation, and writing error responses | Parsing request bodies, validation, and consistent error shapes |
+| 051 | Why sorting matters more than any single sorting algorithm | Modelling a real domain | argparse and typer, os.environ, and a settings class | flag, cobra, os.Getenv, and a Config struct | CLI11, getenv, and a Config struct |
+| 052 | Bubble, selection and insertion sort, and what each one teaches | Common object-oriented interview questions | logging, structlog, levels, and JSON output | log/slog: structured, levelled, and with context | spdlog: sinks, levels, and formatting |
+| 053 | Merge sort | Writing clean, testable classes | sqlite3: connect, execute, parameters, and transactions | database/sql with modernc sqlite, prepared statements, and Scan | SQLite C API and a thin RAII wrapper |
+| 054 | Quicksort and partitioning | Object-oriented design revision and interview questions | psycopg 3 and asyncpg, and a connection pool | pgx, pgxpool, and context-aware queries | libpqxx: connections, transactions, and prepared statements |
+| 055 | Quickselect: finding the Kth largest without sorting | Single responsibility | SQLAlchemy 2.0 and Alembic | sqlc generated queries and golang-migrate | Raw SQL with a migration runner you write yourself |
+| 056 | Counting sort, radix sort, and bucket sort | Open for extension, closed for modification | redis-py: GET, SET, EX, and cache-aside | go-redis: GET, SET, pipelines, and cache-aside | redis-plus-plus: GET, SET, and cache-aside |
+| 057 | Stability, and what Python's sort actually does | Liskov substitution | bcrypt/argon2, PyJWT, and a login flow | bcrypt, golang-jwt, and a login flow | Argon2 via libsodium, jwt-cpp, and a login flow |
 | 058 | Custom comparators and sorting by keys | Interface segregation | — | — | — |
 | 059 | Sorting revision and mock round | Dependency inversion | — | — | — |
 | 060 | Hash tables: how a dictionary finds anything instantly | DRY, KISS, and YAGNI | — | — | — |
@@ -189,4 +189,4 @@ is missing from this table has nothing written at all.
 | 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design | — | — | — |
 | 180 | Final revision, and the week before the interview | Final revision, and the week before the interview | — | — | — |
 
-**47 of 180 days fully written; 180 started.**
+**57 of 180 days fully written; 180 started.**

@@ -2,7 +2,7 @@
 day: 52
 track: practice
 title: "Practice — Bubble, selection and insertion sort, and what each one teaches"
-status: draft
+status: written
 ---
 
 # Day 052 · Practice
@@ -148,17 +148,41 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | One request, one grep | Whether every line of one request carries the same id, three calls deep, with no id parameter anywhere. |
+| 2 | The secret scan | Turning "never log a password" into a check you can run, not a rule you remember. |
+| 3 | Wire it into the server | Replacing the day 49 print-style log line with the structured logger, request id and all. |
 
-## Compare
+All three start from the lesson's program. Keep the output as JSON lines; the point of every
+exercise is that a machine can read them.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. One request, one grep
 
-- **Python** — logging, structlog, levels, and JSON output
-- **Go** — log/slog: structured, levelled, and with context
-- **C++** — spdlog: sinks, levels, and formatting
+Add a third function under `create_user`, `send_welcome(user_id)`, that logs one `info` line and
+is called by `create_user`. Do not pass the request id to it. Run the program, pick the first
+request id from the output, and `grep` it: you must get exactly four lines, in order, from
+`create_user`, `send_welcome`, and the wrapper, and the `DEBUG` one when the threshold is
+lowered. Then, in C++, move the call to `send_welcome` onto a `std::thread` and join it, and
+show the line that now says `"request_id":"-"`; fix it by passing the id into the thread. Done
+means four lines per request id in all three languages, and the C++ break-and-fix pasted.
+
+### 2. The secret scan
+
+Write a tiny scanner, in any one language, that reads JSON log lines from standard input and
+exits non-zero if any line has a key named `password`, `token`, `authorization`, `api_key`,
+`card`, or `body`, printing the offending line's request id and key. Run each of the three
+programs through it: all must pass. Then add a `password` field to each program's "user
+created" line on purpose, run the scanner again, and paste the three failures. Then remove the
+field. Done means the scanner exists, all three pass, and the three deliberate failures were
+caught.
+
+### 3. Wire it into the server
+
+Take the day 49 server in each language and replace its `print`-style log line with today's
+structured logger: the middleware, the wrapper or the hook sets the request id and logs the done
+line with method, path, status and `ms`; every route logs through the same logger; the level
+comes from the day 51 settings. Send the four requests from day 49 and paste the four JSON lines.
+Then `grep` the 401's request id and show that the auth refusal and the done line share it. Done
+means four JSON lines per language, no `print`, and the level switchable from a setting.
 
 ## Say these out loud
 
@@ -183,8 +207,15 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. What do you log, and what must you never log?
-2. 
-3.
+   The never list with the reason it is absolute; the always list, field by field; one JSON
+   object per line; the request id; the done line with a duration; and the level you run at in
+   production and how you lower it.
+2. How does the request id reach a function three calls deep in each language?
+   A `ContextVar`, a logger in the `context.Context`, a `thread_local`; and the case where each
+   one breaks or does not: an async task, a goroutine, a thread pool.
+3. Why is the message a constant string and the facts fields?
+   Grouping, filtering on a value, and the `f`-string or `Sprintf` line that reads well and
+   cannot be searched. Give the `ms > 500` example.
 
 ## Before you move on
 
@@ -199,5 +230,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can draw the abstract-class-against-interface diagram in any tool and say which triangle is
       which.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson programs print five JSON lines with two request ids, and no `DEBUG` line until the level is lowered.
+- [ ] Exercise 1 gives four lines per request id in all three, and I have the C++ `"-"` line and its fix.
+- [ ] Exercise 2's scanner catches the three deliberate password fields and passes the clean programs.
+- [ ] Exercise 3's servers log four JSON lines for the four day 49 requests, and the 401 shares an id with its done line.
+- [ ] I can say the never-log list without pausing, and the reason it is absolute.
+- [ ] I can say why spdlog needs a helper for fields, and what `!BADKEY` and `Attempt to overwrite 'name'` each mean.

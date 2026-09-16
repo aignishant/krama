@@ -2,7 +2,7 @@
 day: 56
 track: practice
 title: "Practice — Counting sort, radix sort, and bucket sort"
-status: draft
+status: written
 ---
 
 # Day 056 · Practice
@@ -180,17 +180,41 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Measure the hit | Whether you can show, in numbers, that the second read skips the database. |
+| 2 | Invalidate, do not update | Proving that delete-on-write is correct and set-on-write goes stale under concurrency. |
+| 3 | Survive Redis going away | Making a cache miss and a Redis outage both fall through to the database, not crash. |
 
-## Compare
+All three start from the lesson's program. Run a real Redis with the docker command, and for the
+outage exercise you will stop it mid-run.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Measure the hit
 
-- **Python** — redis-py: GET, SET, EX, and cache-aside
-- **Go** — go-redis: GET, SET, pipelines, and cache-aside
-- **C++** — redis-plus-plus: GET, SET, and cache-aside
+Seed one user. Read it a hundred times in a loop and print the total time and the final
+`db_reads`, then flush Redis and read it a hundred times again. The first hundred must show
+`db_reads == 1` and be dominated by one slow miss; the second, after the flush, must show
+`db_reads == 2`. Then set the TTL to two seconds, read, wait three seconds, read again, and show
+`db_reads` went up because the copy expired. Paste the counts and times. Done means the hundred
+reads cost one database trip in all three languages, and the expiry forces a fresh one.
+
+### 2. Invalidate, do not update
+
+Write two versions of `update_city`: one that deletes the key, one that sets the new value into
+the cache. For each, run this race: start two updates of the same user to different cities at the
+same time, on two threads or goroutines, then read the user and compare the cache to the
+database. Run it fifty times. The delete version must never disagree; the set version must
+sometimes show the cache holding a different city from the database. Paste the disagreement count
+for each. Done means the set version is caught disagreeing at least once and the delete version
+never is, in all three languages.
+
+### 3. Survive Redis going away
+
+Wrap the cache calls so a connection failure logs and falls through to the database. Start the
+program in a loop reading the user once a second, printing hit or miss or fell-through. While it
+runs, `docker stop redis`, watch it keep serving from the database, then `docker start redis` and
+watch the hits come back. Paste ten lines spanning the outage. Then confirm a plain cache miss
+(an unknown id) does not log a Redis error, because a miss is not a failure. Done means the
+program served through the outage in all three languages, and a miss is distinguished from an
+outage.
 
 ## Say these out loud
 
@@ -214,8 +238,16 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. How do you keep the cache and the database consistent?
-2. 
-3.
+   Cache-aside, delete-on-write not set, why delete cannot be reordered into disagreement, the
+   TTL as a staleness bound, and the honest admission that consistency is a bounded window, not a
+   guarantee.
+2. Walk me through a read and a write with a cache in front of the database.
+   Read: check the cache, hit returns, miss loads and stores with a TTL. Write: update the
+   database, delete the key. Then how a miss looks in each language: `None`, `redis.Nil`, an
+   empty `std::optional`, and why confusing it with an error is a bug.
+3. What happens when Redis goes down, and what is the thundering herd?
+   The cache is an optimisation: fall through to the database, slower but correct, never fail.
+   Then the stampede when a hot key expires, and the lock or early-refresh that prevents it.
 
 ## Before you move on
 
@@ -227,5 +259,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I refactored the exporter and can give the before-and-after edit counts.
 - [ ] I can name three variations where a plug point would be a mistake, and say why for each.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson programs show a slow miss, a fast hit, and `db_reads` unchanged on the second read.
+- [ ] Exercise 1 shows a hundred reads costing one database trip, and the TTL forcing a fresh one, in all three.
+- [ ] Exercise 2 catches the set-on-write version disagreeing and never the delete-on-write version, in all three.
+- [ ] Exercise 3's program served through a `docker stop redis` and recovered on `docker start`, in all three.
+- [ ] I can say why delete-on-write beats set-on-write in one sentence about ordering.
+- [ ] I can say how a miss looks in each language and why it must never be treated as an error.

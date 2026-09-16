@@ -2,7 +2,7 @@
 day: 53
 track: practice
 title: "Practice — Merge sort"
-status: draft
+status: written
 ---
 
 # Day 053 · Practice
@@ -156,17 +156,40 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | The attack, side by side | Whether you can demonstrate injection and its cure on the same file with the same input. |
+| 2 | Safe to run twice | Handling the constraint failure, and reading a "not found" without treating it as a crash. |
+| 3 | The rollback test | Proving the transaction undoes the first update when the second fails, in the language where you wrote the undo yourself. |
 
-## Compare
+All three start from the lesson's program and the `users.db` it creates. Delete the file
+between runs when an exercise says to start clean.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. The attack, side by side
 
-- **Python** — sqlite3: connect, execute, parameters, and transactions
-- **Go** — database/sql with modernc sqlite, prepared statements, and Scan
-- **C++** — SQLite C API and a thin RAII wrapper
+Write `find_unsafe(name)` next to the lesson's `find_by_name`, building the SQL text with an
+f-string, `Sprintf`, or `+`. Run both with `Meera`, then both with `x' OR '1'='1`, and paste the
+four results into a comment. Then try `x'; DROP TABLE users; --` against the unsafe version and
+paste what happened in each language, including whichever driver refused to run two statements
+and whichever did not. Delete `find_unsafe` afterwards. Done means the four results and the
+DROP outcome pasted, per language, and no unsafe function left in the file.
+
+### 2. Safe to run twice
+
+Make the program idempotent: a second run must print the same six lines as the first, not a
+`UNIQUE constraint failed`. Do it by looking up each user by name first and inserting only if
+absent, which means handling "not found" correctly: `None`, `sql.ErrNoRows`, `step()` returning
+`false`. Then, in Go, delete `defer rows.Close()` from `listUsers`, call it two hundred times in
+a loop, and paste what happens; put it back. Done means two consecutive runs with identical
+output in all three, and the Go leak observed.
+
+### 3. The rollback test
+
+Write a test, in whatever form each language makes easy, that calls `transfer` with an amount
+larger than the balance, catches the refusal, and then reads both balances and asserts neither
+changed. Then break the transaction on purpose, remove `with conn:`, the `defer tx.Rollback()`,
+or the `Transaction` object, and run the test again; it must fail, with the first balance
+reduced. In C++, also throw from between the two updates with the `Transaction` in place and
+show the balances unchanged. Done means the test passes with the transaction and fails without
+it, in all three languages, and the outputs are pasted.
 
 ## Say these out loud
 
@@ -191,8 +214,14 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. What is SQL injection, and how do parameters stop it?
-2. 
-3.
+   The one-sentence attack with the `OR '1'='1` example, the two-channel explanation, why it
+   is a complete defence and escaping is not, and the one thing a parameter cannot be.
+2. What is a transaction, and how does each language make it exception-safe?
+   All or nothing, the transfer example, and then `with conn:`, `defer tx.Rollback()`, and the
+   `Transaction` destructor; what happens to a half-done transfer if you forget each one.
+3. What does `database is locked` mean, and what would you do about it?
+   One writer at a time, the pool or the second process holding a transaction, the Go
+   `rows.Close` leak, and the point at which the answer is Postgres.
 
 ## Before you move on
 
@@ -204,5 +233,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I made `ReminderService` testable and wrote both tests without a database running.
 - [ ] I can name all four test doubles and say when a mock is the right choice.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson programs print the six lines, and `parameterised` finds nobody for the long name in all three.
+- [ ] Exercise 1 shows every row from the unsafe version and none from the safe one, with the DROP outcome per language.
+- [ ] Exercise 2 runs twice with identical output in all three, and I saw what the missing `rows.Close()` does.
+- [ ] Exercise 3's test passes with the transaction and fails without it in all three languages.
+- [ ] I can say the two-channel explanation of parameters in two sentences, and name the one thing they cannot bind.
+- [ ] I can say which C API call each C++ wrapper's destructor makes, and why the deleter is on a `unique_ptr`.

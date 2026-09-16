@@ -2,7 +2,7 @@
 day: 54
 track: practice
 title: "Practice — Quicksort and partitioning"
-status: draft
+status: written
 ---
 
 # Day 054 · Practice
@@ -171,17 +171,44 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Measure the handshake | Whether you can put a number on what a connection costs, on your own machine. |
+| 2 | Exhaust the pool on purpose | Recognising a pool timeout, and telling a slow database from a held connection. |
+| 3 | The server on a pool | Moving the day 50 CRUD server from SQLite to Postgres with a shared pool and no per-request connect. |
 
-## Compare
+All three need the Postgres container from the lesson running, and `DATABASE_URL` set in the
+environment. Delete and recreate the `users` table between exercises with
+`docker exec pg psql -U postgres -d app -c "DROP TABLE IF EXISTS users"`.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Measure the handshake
 
-- **Python** — psycopg 3 and asyncpg, and a connection pool
-- **Go** — pgx, pgxpool, and context-aware queries
-- **C++** — libpqxx: connections, transactions, and prepared statements
+Time two hundred `SELECT 1` calls two ways: opening a fresh connection for each, and borrowing
+from a pool of four for each. Print both totals and the per-call average. Then run the
+per-call version with three hundred threads or goroutines at once against a Postgres with
+`max_connections` left at its default, and paste the error you get. Done means the two averages
+pasted per language, the ratio between them said out loud, and the `too many clients` error
+captured in at least one language.
+
+### 2. Exhaust the pool on purpose
+
+With a pool of four, start four holds of `pg_sleep(10)` on four threads, then make a fifth
+ordinary query with a two-second timeout. Paste the error: `PoolTimeout` in Python,
+`context deadline exceeded` in Go, your own `no connection free` in C++. Then, while the four
+holds are running, run `docker exec pg psql -U postgres -d app -c "SELECT pid, state, query FROM pg_stat_activity WHERE datname = 'app'"`
+and paste the four `pg_sleep` rows. Write two sentences under it: what you would see there if
+the database were slow instead, and what you would see if code were holding connections
+without querying. Done means the three errors pasted, the activity rows pasted, and the two
+sentences written.
+
+### 3. The server on a pool
+
+Port the day 50 CRUD server to Postgres in each language: one pool created at start-up from
+the day 51 settings, every handler borrowing from it, `$1` or `%s` placeholders, `RETURNING id`
+on the create, the unique violation mapped to 409, and no connection opened anywhere except in
+the pool's constructor. In Go, every query takes `r.Context()`. Run the twelve curl commands
+from day 50 against it and paste the twelve status lines. Then run the day 48 load test,
+fifty POSTs at once, against the pool of four and paste the pool's stats afterwards. Done means
+twelve correct status lines per language and a load test that finished with no connection
+opened per request.
 
 ## Say these out loud
 
@@ -206,8 +233,17 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Why do you need a connection pool?
-2. 
-3.
+   What a connection costs on both ends, the `max_connections` cap, where the queue forms with
+   and without a pool, and why the size is not "as many as possible". Then one sentence on the
+   thing that breaks a pool: holding a connection across slow work.
+2. How would you implement a connection pool?
+   The vector, the mutex, the condition variable with `wait_for` and a predicate, the lease
+   whose destructor returns the connection, and the timeout. Then say what Python's `with
+   pool.connection()` and Go's `pool.Begin` are doing in those terms.
+3. What does the context do on a Go database call, and what is the equivalent elsewhere?
+   Bounding the wait for a connection, cancelling the running query when the caller is gone,
+   `r.Context()` in a handler; then the honest answer for Python and C++, where the wait is
+   bounded but a running query is not cancelled.
 
 ## Before you move on
 
@@ -219,5 +255,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the check-then-write gap in six different prompts and give the atomic fix for each.
 - [ ] I can say which interfaces I would create and name the second implementation for each.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson programs run against the container and print the two-second line for five holds on a pool of four.
+- [ ] Exercise 1 gives me a per-connection cost in milliseconds on my machine, and I have seen `too many clients already`.
+- [ ] Exercise 2's three timeout errors are pasted with the `pg_stat_activity` rows, and my two sentences tell a slow database from a held connection.
+- [ ] Exercise 3's servers pass the twelve day 50 commands on Postgres with one pool and no per-request connect.
+- [ ] I can say the pool's four parts, vector, mutex, condition variable, lease, and what each prevents.
+- [ ] I can say why a transaction must stay on one borrowed connection, and what `$1` versus `%s` versus `?` means.

@@ -2,7 +2,7 @@
 day: 49
 track: practice
 title: "Practice — Peak finding, and searching data that is structured but not sorted"
-status: draft
+status: written
 ---
 
 # Day 049 · Practice
@@ -148,17 +148,44 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Turned-back requests in the log | Whether your logging sits outside your auth, so a 401 still gets a line. |
+| 2 | The caller's name reaches the route | How a value computed before routing gets into the handler, in three very different ways. |
+| 3 | Reuse an incoming request id | Reading a header on the way in and echoing it on the way out, so one id follows a request across services. |
 
-## Compare
+All three start from the lesson's server. Drive it with `curl -i` in a second terminal and keep
+the server's terminal visible, because the log lines are the thing being checked.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Turned-back requests in the log
 
-- **Python** — Routers, path parameters, dependencies, and middleware in FastAPI
-- **Go** — Method and path patterns in ServeMux, and a middleware chain
-- **C++** — Route patterns, pre-routing handlers, and a logging wrapper
+Send four requests: `/health` with no key, `/users/1` with no key, `/users/1` with a bad key, and
+`/users/1` with the right key. The server must print exactly four log lines with statuses 200,
+401, 401, 200, each carrying a request id, and every response must carry the same id in
+`X-Request-ID`. Then break it on purpose: in Go, swap the chain to `auth(logging(mux))`; in Python,
+move the key check into the middleware and return a 401 response from there before `call_next`;
+in C++, move the log line into the `timed` wrapper and delete `set_logger`. Paste the four lines,
+or the missing ones, into a comment, and say in one sentence what disappeared and why. Done means
+four lines with the right statuses in all three, and a comment naming the broken order.
+
+### 2. The caller's name reaches the route
+
+Make `GET /users/{id}/greeting` answer `{"message": "hello Meera, from meera"}` where the second
+name is whoever the API key belongs to. In Python it is `Depends(current_user)` as a parameter.
+In Go, the auth middleware puts the caller on the request context with `context.WithValue` and
+`r.WithContext`, under a key of an unexported type, and the handler reads it back. In C++, the
+request is `const` inside a route, so choose: look the key up again in the route, set a response
+header in the pre-routing handler and read it back with `res.get_header_value`, or keep a
+mutex-guarded map from `std::this_thread::get_id()` to caller. Write a comment on the C++ version
+saying which you chose and the one thing wrong with it. Done means the greeting is correct with
+two different keys in all three languages.
+
+### 3. Reuse an incoming request id
+
+If the caller sends `X-Request-ID`, use it instead of making one; if not, make one. Prove it with
+`curl -i -H "X-Request-ID: abc123" ...` and without the header, and paste both log lines. Then
+call yesterday's day 47 client program from one server's handler to another server's `/health`,
+passing the id along in the outgoing request's header, and show the same id appearing in both
+servers' terminals. Done means one id in two logs in at least one language, and the header
+round-trip working in all three.
 
 ## Say these out loud
 
@@ -183,8 +210,16 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. How would you add request logging to every endpoint?
-2. 
-3.
+   One wrapper, not forty edits: where it sits in each language, what one line contains, where
+   the request id comes from, why it must sit outside auth, and the Go catch about reading the
+   status back.
+2. Where does authentication live, and how does the health check skip it?
+   A router dependency in Python, a middleware with a path exception in Go, a pre-routing
+   handler returning `Handled` in C++; and the reason `/health` is open in all three.
+3. Middleware or a dependency: how do you choose?
+   Middleware for what every request gets and what needs the response on the way out;
+   dependencies or context values for what a route needs as a value. Give one example of each
+   and one thing that goes wrong if you swap them.
 
 ## Before you move on
 
@@ -195,5 +230,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I refactored the notification hierarchy and gave the class count for four axes both ways.
 - [ ] I can name the property shared by every case where inheritance is still right.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson servers log every request with a status and a request id, including the ones auth turned back.
+- [ ] Exercise 1 shows four correct lines in all three, and I can say what the broken order loses.
+- [ ] Exercise 2 greets from the right caller with two keys in all three, and my C++ comment names the flaw in the approach I chose.
+- [ ] Exercise 3 carries one id through two servers' logs in at least one language.
+- [ ] I can write the Go middleware signature and the `statusRecorder` from memory, and say why the recorder exists.
+- [ ] I can say what a missing `Header` default does in FastAPI, what `Unhandled` after `reply` does in cpp-httplib, and why the C++ logger needs a mutex.

@@ -2,7 +2,7 @@
 day: 50
 track: practice
 title: "Practice — Binary search revision and mock round"
-status: draft
+status: written
 ---
 
 # Day 050 · Practice
@@ -151,17 +151,45 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Twelve parcels, twelve slips | Whether every failure in the API comes out in one shape, with every problem listed at once. |
+| 2 | Missing is not zero | Telling an absent field from an empty one, in the language where decoding erases the difference. |
+| 3 | A PATCH that leaves things alone | Optional fields, partial updates, and what "not sent" means for each field type. |
 
-## Compare
+Every exercise starts from the lesson's server. Use `curl -i` so the status line is visible, and
+keep the twelve commands from exercise 1 in a file; you will run them again on every later day
+that touches this server.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Twelve parcels, twelve slips
 
-- **Python** — Pydantic models, validation errors, and status codes
-- **Go** — Decoding request bodies, validation, and writing error responses
-- **C++** — Parsing request bodies, validation, and consistent error shapes
+Write a script of twelve `curl` commands: a good create, a blank name, a missing city, an age of
+200, an age of `"thirty"`, a body of `hello`, a body of `[1,2,3]`, an unknown field `town`, a
+duplicate name, a get of id 99, a delete of id 2 twice, and a PUT with a missing field. Run it
+against each server and paste all twelve status lines and bodies into a comment. Every error
+body must have the same outer shape, `error.code` must be one of your fixed words, and the
+blank-name-plus-bad-age case must list both problems. In Python, add
+`model_config = ConfigDict(extra="forbid")` and show the `town` case change from 201 to 422. Done
+means twelve pasted responses per language and no error body that breaks the shape.
+
+### 2. Missing is not zero
+
+Add an optional field, `newsletter: bool`, that defaults to `false` when absent and must be a
+boolean when present. Then prove, with three requests each, that absent, `false` and `true`
+are handled: absent stores `false`, `false` stores `false`, `"yes"` is a validation error naming
+the field. In Go this is `*bool` and a `nil` check; in Python it is `bool = False`; in C++ it is
+`contains` then `is_boolean()`. Then, in a comment on the Go version, explain in two sentences
+what would go wrong with `Newsletter bool` and a rule of "newsletter is required". Done means
+the nine responses pasted per language and the Go comment written.
+
+### 3. A PATCH that leaves things alone
+
+Add `PATCH /users/{id}` that changes only the fields present in the body: `{"city": "Goa"}` changes
+the city and nothing else, `{}` changes nothing and answers 200 with the unchanged user, and
+`{"age": 200}` is a validation error. In Python every field of a `UserPatch` model is
+`str | None = None` and you apply `model_dump(exclude_unset=True)`; in Go every field is a
+pointer; in C++ you walk the keys that are present. Then answer the hard case in a comment: how
+does a caller clear an optional string field, and how does your API tell "set to empty" from
+"not sent"? Done means the three PATCH cases give 200, 200, 400 in all three languages, and the
+comment answers the clearing question.
 
 ## Say these out loud
 
@@ -186,8 +214,17 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. What should a 400 response body look like?
-2. 
-3.
+   The fixed outer shape, the machine code and the human message, the `fields` list with every
+   problem at once, never echoing secrets, and the same shape for 404 and 409. Then say the one
+   line of code in each language that makes it impossible to build a different one.
+2. How do you tell a missing field from an empty one in each language?
+   Pydantic knows which keys it saw; nlohmann's `contains`; Go's `*int` and `nil`. Then the
+   near-miss in each: extras ignored by default, `[]` inserting a null, and `Age int` decoding a
+   missing age as zero.
+3. Walk me through the status code for each CRUD outcome, and defend the two that people argue
+   about.
+   200, 201, 204, 400 or 422, 404, 409, 500, and then: a repeated DELETE, and validation as 400
+   versus 422. Give your choice and the reason, and say what matters more than the number.
 
 ## Before you move on
 
@@ -200,5 +237,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I drew the library diagram in four minutes and it passed all eight checks.
 - [ ] I can produce the five Mermaid arrow forms and the four multiplicities from memory.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson servers give the same five status lines for the five commands in section 5, with one error shape.
+- [ ] Exercise 1 has twelve responses pasted per language and every error body keeps the shape.
+- [ ] Exercise 2 handles absent, `false`, `true` and `"yes"` correctly in all three, and my Go comment explains the zero-value trap.
+- [ ] Exercise 3's PATCH gives 200, 200, 400 in all three, and my comment says how a caller clears a field.
+- [ ] I can write the `writeError` and `validate` shapes from memory in Go, and name the two decoder settings.
+- [ ] I can say why `validate` takes `const json&` in C++, and what `[]` does on a missing key.

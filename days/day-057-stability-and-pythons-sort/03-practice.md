@@ -2,7 +2,7 @@
 day: 57
 track: practice
 title: "Practice — Stability, and what Python's sort actually does"
-status: draft
+status: written
 ---
 
 # Day 057 · Practice
@@ -184,17 +184,42 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Salt and slowness, shown | Proving the hash is salted and slow, not a fast digest, with your own eyes. |
+| 2 | Break the tokens | Making a tampered, expired, wrong-secret, and `alg: none` token all fail. |
+| 3 | A login endpoint | Wiring register, login, and a protected route into the day 49 server. |
 
-## Compare
+All three start from the lesson's program. Keep `JWT_SECRET` set to a long random value in the
+environment for every run.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Salt and slowness, shown
 
-- **Python** — bcrypt/argon2, PyJWT, and a login flow
-- **Go** — bcrypt, golang-jwt, and a login flow
-- **C++** — Argon2 via libsodium, jwt-cpp, and a login flow
+Hash the same password twice and print both hashes: they must differ, because the salt differs.
+Then time a hundred hashes and a hundred verifies and print the average: it must be milliseconds,
+not microseconds, and you should be able to say why milliseconds is the point. For contrast, time
+a hundred SHA-256 hashes of the same password and print how many you could do in a second, then
+write one sentence on why that number is exactly the problem. Done means two different hashes of
+one password, a per-hash time in milliseconds, and the SHA-256 rate with your sentence, in all
+three languages.
+
+### 2. Break the tokens
+
+Issue a valid token and verify it. Then produce four bad tokens and show each is rejected: one
+with a character changed in the signature, one with an `exp` already in the past, one signed with
+a different secret, and one forged with `alg: none` and no signature. Paste the rejection for
+each. The `alg: none` case is the important one: show that your verifier refuses it because it
+pins the algorithm, and then, carefully and only in a throwaway file, show that a verifier without
+the pin would accept it. Done means five outcomes, one valid and four rejected, and the `alg:
+none` refusal explained, in all three languages.
+
+### 3. A login endpoint
+
+Add three routes to the day 49 server: `POST /register` takes a username and password and stores
+the hash; `POST /login` checks the password and returns a token, or 401; and `GET /me` reads the
+`Authorization: Bearer <token>` header, verifies it, and returns the subject, or 401. Register,
+log in, call `/me` with the token, then call `/me` with a tampered token and with no header, and
+paste the four status lines. Confirm, from the day 52 logs, that neither the password nor the
+token appears in any log line. Done means register-login-me works, the two bad `/me` calls are
+401, and the logs are clean, in all three languages.
 
 ## Say these out loud
 
@@ -219,8 +244,15 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. How do you store a password?
-2. 
-3.
+   Not "hashed": slow, salted, with bcrypt or argon2; never a fast hash, never encryption. The
+   salt and the work factor and what each defeats, and the constant-time compare the library does.
+2. What is in a JWT, and what stops it being forged or misused?
+   Signed JSON claims, a subject and an expiry, a server-only secret, HS256. Tampering breaks the
+   seal, expiry bounds it, and pinning the algorithm on verify defeats `alg: none`. Signed, not
+   encrypted, so no secrets in it.
+3. What is the `alg: none` attack, and how does each language stop it?
+   The forged unsigned token, and the allow-list that refuses it: `algorithms=` in Python, the
+   key function asserting the method in Go, `allow_algorithm` in C++. Say what happens if you omit it.
 
 ## Before you move on
 
@@ -232,5 +264,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I ran the square-rectangle failure and can state the unwritten promise in one sentence.
 - [ ] I wrote a contract test suite and watched it catch a deliberate substitution violation.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson programs store a salted hash, verify right and wrong passwords, and reject tampered, expired, wrong-secret, and `alg: none` tokens.
+- [ ] Exercise 1 shows two different hashes of one password, a millisecond-scale hash time, and the SHA-256 rate with my sentence, in all three.
+- [ ] Exercise 2 rejects all four bad tokens, and I can explain the `alg: none` refusal, in all three.
+- [ ] Exercise 3's register-login-me flow works, bad `/me` calls are 401, and no password or token is in the logs, in all three.
+- [ ] I can say the password answer in one sentence with "slow", "salted", and "never encryption" in it.
+- [ ] I can name the algorithm allow-list in each language and say what omitting it opens.

@@ -2,7 +2,7 @@
 day: 51
 track: practice
 title: "Practice — Why sorting matters more than any single sorting algorithm"
-status: draft
+status: written
 ---
 
 # Day 051 · Practice
@@ -157,17 +157,42 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Prove the order | Whether each layer really overrides the one below and leaves the rest alone. |
+| 2 | Refuse the password in the file | Turning "never" into a check the program makes, not a rule people remember. |
+| 3 | Wire it into the server | Replacing every hard-coded value in the day 50 server with the settings object, and nothing else. |
 
-## Compare
+All three start from the lesson's loader. Keep `config.json` next to the program and run each
+command from a fresh shell so a leftover `APP_*` variable does not confuse the result.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Prove the order
 
-- **Python** — argparse and typer, os.environ, and a settings class
-- **Go** — flag, cobra, os.Getenv, and a Config struct
-- **C++** — CLI11, getenv, and a Config struct
+Add a fifth setting, `log_level: str = "info"`, to every layer: a default, a key in the file, an
+`APP_LOG_LEVEL` variable, and a `--log-level` flag. Then run eight commands, every combination of
+"file sets it or not", "environment sets it or not", "flag sets it or not", and paste a table of
+the eight results into a comment. Every row must be explained by "later wins, absent leaves it
+alone". Then break the Go version by assigning the flag unconditionally, and the C++ version by
+dropping `app.count`, and add the row that changed to the comment. Done means an eight-row table
+per language and the two broken rows identified.
+
+### 2. Refuse the password in the file
+
+Make `db_password` in `config.json` a start-up failure with the message
+`config.json: db_password must not be in the file; set APP_DB_PASSWORD`, in all three languages,
+while still accepting it from the environment. Then make `APP_PORT=abc` a one-line refusal that
+names the variable in all three, with no traceback, panic, or `terminate called`. Paste the four
+outputs, two per case, into a comment. Done means the file with a password is refused, the bad
+port is refused with the variable's name, and a good run still starts.
+
+### 3. Wire it into the server
+
+Take the day 50 CRUD server in each language and remove every literal `8000`, `127.0.0.1` and
+`"secret-123"`. The port and host come from the settings object; the API key from day 49 comes
+from `APP_API_KEY` in the environment, and the server refuses to start without it. Print the
+masked settings as the first log line. Start the server three ways, with the file only, with the
+environment overriding the port, and with `--port` overriding both, and paste the three first
+log lines and the three `curl -i http://127.0.0.1:<port>/health` status lines. Done means the
+server listens where the settings say, in all three languages, and the first log line never
+shows the key.
 
 ## Say these out loud
 
@@ -192,8 +217,15 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Where should a database password come from, and where should it never be?
-2. 
-3.
+   Environment or a secrets manager; never the repo's file, never a flag, never a log line, with
+   the reason for each never. Then the refusal at start-up, and the masked print.
+2. What is your configuration precedence order, and how does each language know a flag was not
+   given?
+   Defaults, file, environment, flags, later wins, and why that direction. Then `None` in
+   Python, `flag.Visit` in Go, `app.count` in C++, and the bug each one prevents.
+3. What does reading a missing environment variable do in each language?
+   `None` from `os.environ.get`, `""` and `false` from `os.LookupEnv`, `nullptr` from `getenv`,
+   and what happens if you forget: a `KeyError`, an empty string that looks set, or a crash.
 
 ## Before you move on
 
@@ -207,5 +239,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can define entity, value object, aggregate root, repository and ubiquitous language in one
       sentence each.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson loaders print the same four lines for the four commands, and the refusal comes first.
+- [ ] Exercise 1 has an eight-row table per language, and I found the row that breaks without `Visit` or `count`.
+- [ ] Exercise 2 refuses a password in the file and a bad `APP_PORT` with one clear line each, in all three.
+- [ ] Exercise 3's servers listen where the settings say, and the first log line masks the key.
+- [ ] I can say the precedence order and the reason for its direction without pausing.
+- [ ] I can say what `getenv` returns for a missing variable in C++ and why the `env` wrapper exists.

@@ -2,7 +2,7 @@
 day: 55
 track: practice
 title: "Practice — Quickselect: finding the Kth largest without sorting"
-status: draft
+status: written
 ---
 
 # Day 055 · Practice
@@ -176,17 +176,40 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Two migrations, up and down | Whether you can evolve a schema in numbered steps and see the version move. |
+| 2 | Catch the N+1 | Reading the actual SQL, seeing one-plus-N queries, and cutting it to two. |
+| 3 | A migration that must not half-apply | Proving the transaction leaves the schema untouched when a migration fails partway. |
 
-## Compare
+The Python and Go halves use their tools; the C++ half uses the runner you wrote in the lesson.
+All three need the day 54 Postgres container, or SQLite where the lesson used it, and
+`DATABASE_URL` set.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. Two migrations, up and down
 
-- **Python** — SQLAlchemy 2.0 and Alembic
-- **Go** — sqlc generated queries and golang-migrate
-- **C++** — Raw SQL with a migration runner you write yourself
+Create a `users` table in migration one and add an `age` column in migration two, in each
+language's tool: Alembic autogenerate, golang-migrate files, your C++ runner. Apply both, print
+the recorded version, then apply a third migration that adds an `orders` table. Paste the version
+after each step. In Python and Go, run the down migration for the `age` column and paste the
+error you get if you then run the program that reads `age` (`no such column` / `does not exist`).
+Done means three versions shown moving up, and the missing-column error captured, in all three.
+
+### 2. Catch the N+1
+
+Seed ten users with three orders each. Write "total spend per user" the naive way, a loop that
+reads each user's orders, and turn on SQL logging: Python's `echo=True`, Go's query logging or a
+count, the C++ runner printing each `exec`. Paste the query count: it must be eleven. Then rewrite
+it to two queries, `selectinload` in Python, an `ANY($1)` query in Go and C++, and paste the new
+count of two. Done means eleven-then-two shown in all three, with the SQL that proves it.
+
+### 3. A migration that must not half-apply
+
+Write a migration with two statements where the second is deliberately broken (a typo, or a
+`NOT NULL` column added to a table that already has null rows). Run it, paste the error, and then
+show that the first statement did not take effect and the version did not advance: the table is
+unchanged and `max(version)` is what it was before. Fix the second statement, re-run, and show
+both statements applied and the version advanced by one. In C++ this tests your runner's single
+transaction directly; in Python and Go it tests that the tool wraps each migration. Done means the
+failure left nothing behind and the fixed re-run applied cleanly, in all three.
 
 ## Say these out loud
 
@@ -211,8 +234,16 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. ORM or raw SQL? Defend your answer.
-2. 
-3.
+   What each buys and costs, the N+1 as the demonstrable cost of the ORM, and where you would
+   draw the line: CRUD versus complex reads versus bulk writes. Name the Go third option, sqlc.
+2. What is the N+1 query problem, and how do you find and fix it in each language?
+   The one-plus-N count, the loop that hides it, reading the SQL log to catch it, and the fix:
+   `selectinload`, an `ANY` array query, a join. Say why sqlc and raw SQL cannot cause it by
+   accident.
+3. How does a migration tool work, and what makes a half-applied migration impossible?
+   The version table, the numbered ordered files, the loop, and the one transaction per file that
+   commits the change and the version together. Say why migrations are append-only and when a
+   downgrade is dangerous.
 
 ## Before you move on
 
@@ -224,5 +255,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can say which behaviour stays with the data and why moving everything out is a mistake.
 - [ ] I can describe the over-splitting failure and give its cost in files and wiring lines.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The Python migrations autogenerate, the Go migrations apply with golang-migrate, and my C++ runner applies numbered files.
+- [ ] Exercise 1 shows the version moving up over three migrations, and the missing-column error after a downgrade, in all three.
+- [ ] Exercise 2 shows eleven queries the naive way and two after the fix, with the SQL log in all three.
+- [ ] Exercise 3's broken migration left the schema and the version untouched, and the fixed re-run applied cleanly, in all three.
+- [ ] I can defend ORM-versus-raw-SQL with the N+1 as the concrete cost, and name sqlc as Go's third way.
+- [ ] I can describe a migration runner in four parts, version table, sorted files, loop, transaction per file, from memory.

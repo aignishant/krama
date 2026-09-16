@@ -2,7 +2,7 @@
 day: 48
 track: practice
 title: "Practice — Binary search on floats, and the epsilon question"
-status: draft
+status: written
 ---
 
 # Day 048 · Practice
@@ -145,17 +145,46 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | A health route and a list route | Registering a route with no parameters, and returning a JSON array with the right content type. |
+| 2 | Update and delete | Choosing the status code for each outcome, and returning early on every error branch. |
+| 3 | Fifty requests at once | Whether your shared state survives concurrent handlers, in the language where nothing warns you. |
 
-## Compare
+Every exercise starts from the lesson's server and is checked with `curl -i`, so the status line
+is visible. Keep the server running in one terminal and drive it from another.
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+### 1. A health route and a list route
 
-- **Python** — FastAPI: a route, a request model, a response model
-- **Go** — net/http: ServeMux, handlers, and http.ListenAndServe
-- **C++** — cpp-httplib: routes and handlers
+Add `GET /health`, which answers 200 with `{"ok": true}`, and `GET /users`, which answers 200
+with a JSON array of every user, sorted by id. In Go this means a second row for `/users` that
+checks `r.Method` to tell the list from the create; in C++ it means a second `svr.Get`; in Python
+it is one more decorated function with `response_model=list[UserOut]`. Done means
+`curl -i http://127.0.0.1:8000/users` shows `200 OK`, a `Content-Type: application/json` header,
+and an array with Meera in it, in all three languages.
+
+### 2. Update and delete
+
+Add `PUT /users/{id}`, which replaces a user's name and city and answers 200 with the new card, and
+`DELETE /users/{id}`, which removes the user and answers 204 with no body. Both answer 404 for an
+unknown id, and the PUT answers 400 (422 in FastAPI) for a body with a missing field. Then answer
+the same DELETE twice and decide, in a comment, what the second one should return and why. Done
+means the six curl commands, two per method plus the repeated delete, are pasted in a comment
+with their status lines, in all three languages.
+
+### 3. Fifty requests at once
+
+Run this against each server:
+
+```bash
+seq 50 | xargs -P 10 -I{} curl -s -o /dev/null -X POST -H "Content-Type: application/json" -d '{"name":"u{}","city":"x"}' http://127.0.0.1:8000/users
+```
+
+Then `GET /users` and count. It must be fifty-one every time, on ten runs. In Go, run the server
+with `go run -race main.go` first without a mutex and paste the `WARNING: DATA RACE` block into a
+comment, then add a `sync.Mutex` around the map and run again. In C++, remove the `lock_guard`,
+run the load until the count is wrong or the process dies, paste what happened, and put the lock
+back. In Python, say in one sentence why the count was right even without a lock, and what would
+change if the route did real work between reading `max(users)` and writing. Done means fifty-one
+on ten runs in all three, and the two pasted failures.
 
 ## Say these out loud
 
@@ -180,8 +209,18 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Walk me through how your server handles one request.
-2. 
-3.
+   Bind and listen, one goroutine or thread or event-loop task per connection, parse, route on
+   method and path, convert the path parameter, read and check the body, call your code, status
+   then body, and what happens to the connection afterwards. Name where each step lives in the
+   language you are asked about.
+2. Where does input validation happen in each language, and what does the caller see when it
+   fails?
+   FastAPI before your function, a 422 naming the field; Go and C++ inside your handler, a 400
+   you built, and the zero value or the missing key that got there because nothing checked.
+3. Your handler raises, panics, or throws. What does the caller see in each language?
+   A bare 500 from FastAPI with the detail in the log; a dropped connection from Go after the
+   server recovers and logs the stack; the whole process gone in C++ unless you catch it or set
+   an exception handler.
 
 ## Before you move on
 
@@ -192,5 +231,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I found all three leaks in the `Checkout` class and named each by kind.
 - [ ] I wrote the grep command and can say what a healthy result is.
 - [ ] I answered the DSA, system design, and language questions out loud.
-- [ ] All three programs run and I can explain every line.
-- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] The three lesson servers run, and the four curl commands give 200, 404, 201 and the validation failure in each.
+- [ ] Exercise 1 answers `/health` and `/users` with the right content type in all three languages.
+- [ ] Exercise 2 has all six status lines pasted, and my comment says what a repeated DELETE returns and why.
+- [ ] Exercise 3 counts fifty-one on ten runs in all three, and I have the `DATA RACE` block and the C++ failure pasted.
+- [ ] I can say, without looking, the order of header, status and body in Go and why the first write fixes the status.
+- [ ] I can name which thread or goroutine or task my handler runs on in each language, and what that means for shared state.
