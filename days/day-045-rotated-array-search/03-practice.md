@@ -2,13 +2,15 @@
 day: 45
 track: practice
 title: "Practice — Search in a rotated sorted array"
-status: written
+status: draft
 ---
 
 # Day 045 · Practice
 
 **DSA topic:** Search in a rotated sorted array
 **System design topic:** Encapsulation
+
+**Theme:** Mini project 3: a concurrent downloader
 
 ---
 
@@ -116,7 +118,28 @@ Say the one-line test that decides all six.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — asyncio and httpx downloader with a progress report
+- **Go** — Goroutine worker-pool downloader with context
+- **C++** — Thread-pool downloader with libcurl
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -132,7 +155,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Two candidates: a plain `nums[mid] < target` comparison instead of a range check, or `<` instead of
    `<=` in the sortedness test. Say which input exposes each.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you download a thousand files as fast as possible without overloading the server?
+2. 
+3.
 
 ## Before you move on
 
@@ -142,4 +171,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered all five which-half drills, including the one-element case.
 - [ ] I found at least four ways to break the `Cart` class and fixed each one.
 - [ ] I can state the one-line test that decides whether a getter or a method is right.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 171
 track: practice
 title: "Practice — Binary, bits, and monitoring"
-status: written
+status: draft
 ---
 
 # Day 171 · Practice
 
 **DSA topic:** Binary, bits, and why they matter
 **System design topic:** Monitoring, metrics, and alerting
+
+**Theme:** Capstone, day 1: an order platform. Requirements and API
 
 ---
 
@@ -185,7 +187,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — The FastAPI gateway contract
+- **Go** — The protobuf APIs for orders, inventory, and payments
+- **C++** — The C++ pricing engine contract
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -201,7 +224,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The four golden signals, percentiles over averages with the arithmetic, symptoms over causes, the three
    tests for a page, and the cardinality rule.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Design an e-commerce order platform.
+2. 
+3.
 
 ## Before you move on
 
@@ -240,4 +269,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know what changes in the design at five nines.
 - [ ] I can compute the cardinality explosion and name what is never a label.
 - [ ] I know monitoring must not share a failure domain with the product.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

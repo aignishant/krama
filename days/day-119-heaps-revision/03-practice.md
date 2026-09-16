@@ -2,13 +2,15 @@
 day: 119
 track: practice
 title: "Practice — Heaps revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 119 · Practice
 
 **DSA topic:** Heaps revision and mock round
 **System design topic:** Consensus, and Raft in plain English
+
+**Theme:** Test strategy
 
 ---
 
@@ -212,7 +214,28 @@ Two of the six are not consensus failures at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Unit, integration, and end-to-end with pytest markers
+- **Go** — Unit, integration with build tags, and end-to-end
+- **C++** — Unit, integration, and end-to-end with CTest labels
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -228,7 +251,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Five situations, the quorum comparison, and "I would not implement Raft — I would run etcd" with the
    reason.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is the testing pyramid and where does most of your time go?
+2. 
+3.
 
 ## Before you move on
 
@@ -258,4 +287,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know consensus holds configuration, not data, and the size limit.
 - [ ] I can say when I would use a quorum instead.
 - [ ] I would run etcd rather than implement Raft, and can say why.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 90
 track: practice
 title: "Practice — Recursion on arrays and strings"
-status: written
+status: draft
 ---
 
 # Day 090 · Practice
 
 **DSA topic:** Recursion on arrays and strings
 **System design topic:** Design an in-memory cache with eviction
+
+**Theme:** Mini project 6: a log analytics pipeline
 
 ---
 
@@ -198,7 +200,28 @@ One of the five needs no cache at all. Name it and say what it needs instead.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Ingest, parse, and aggregate with generators and multiprocessing
+- **Go** — Ingest, parse, and aggregate with a channel pipeline
+- **C++** — Ingest, parse, and aggregate with a thread pool and mmap
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -217,7 +240,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The 5,000 × 0.2 arithmetic, why the damage lands on unrelated queries, single-flight with a per-key
    lock and the inner re-check, and jitter as the one-line prevention.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Process 100 GB of logs and give me the top errors per hour. How?
+2. 
+3.
 
 ## Before you move on
 
@@ -237,4 +266,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute the stampede numbers and write single-flight correctly.
 - [ ] I can say why the re-check inside the lock is essential.
 - [ ] I can give the hit-rate table and say where the value falls off a cliff.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

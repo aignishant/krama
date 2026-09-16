@@ -2,13 +2,15 @@
 day: 102
 track: practice
 title: "Practice — Height, depth, and diameter"
-status: written
+status: draft
 ---
 
 # Day 102 · Practice
 
 **DSA topic:** Height, depth, and diameter
 **System design topic:** Cache invalidation and eviction policies
+
+**Theme:** The outbox pattern and event sourcing
 
 ---
 
@@ -198,7 +200,28 @@ Two of the six are not fixed by changing the cache configuration. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Outbox table plus relay in Python
+- **Go** — Outbox table plus relay in Go
+- **C++** — Outbox table plus relay in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -216,7 +239,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    LRU with `allkeys-lru`, Redis's surprising default, the approximate-LRU detail, the scan failure with
    its numbers, and admission control as the fix.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you write to Postgres and publish to Kafka without losing either?
+2. 
+3.
 
 ## Before you move on
 
@@ -239,4 +268,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know Redis's default eviction policy and why it matters.
 - [ ] I can describe the LRU scan incident with numbers and name the fix.
 - [ ] I can invalidate a hundred keys with one command.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

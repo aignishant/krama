@@ -2,13 +2,15 @@
 day: 70
 track: practice
 title: "Practice — Min stack, and stacks that carry extra state"
-status: written
+status: draft
 ---
 
 # Day 070 · Practice
 
 **DSA topic:** Min stack, and stacks that carry extra state
 **System design topic:** Facade and proxy
+
+**Theme:** gRPC IV: errors, deadlines, metadata
 
 ---
 
@@ -164,7 +166,28 @@ Then, for numbers 1 and 3, write the exact fix in one line each.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — grpc.StatusCode, timeouts, and metadata in Python
+- **Go** — status.Error, codes, context deadlines, and metadata.MD
+- **C++** — grpc::Status, deadlines, and ClientContext metadata
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -182,7 +205,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    New-and-simpler over many versus same-over-one controlling access, the two separating questions,
    and the honest admission that proxy and decorator are structurally identical.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do errors work in gRPC?
+2. 
+3.
 
 ## Before you move on
 
@@ -197,4 +226,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can quote the coupling-edge arithmetic and the mobile round-trip arithmetic.
 - [ ] I can name the two rules that stop a facade becoming a god object.
 - [ ] I can explain why `@Transactional` does nothing on self-invocation.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

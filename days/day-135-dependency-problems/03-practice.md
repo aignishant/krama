@@ -2,13 +2,15 @@
 day: 135
 track: practice
 title: "Practice — Course schedule and the dependency family"
-status: written
+status: draft
 ---
 
 # Day 135 · Practice
 
 **DSA topic:** Course schedule and the dependency family
 **System design topic:** Search: how a search index actually works
+
+**Theme:** Mini project 9: a key-value store with a wire protocol
 
 ---
 
@@ -201,7 +203,28 @@ Two of the seven produce wrong results with no error at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A KV server and client in Python
+- **Go** — A KV server and client in Go
+- **C++** — A KV server and client in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -217,7 +240,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The leading-wildcard scan with numbers, the inversion, the analysis pipeline on both sides, BM25's three
    ideas, and staleness raised before it is asked.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Design a protocol for a key-value store.
+2. 
+3.
 
 ## Before you move on
 
@@ -250,4 +279,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why search should return ids and not content.
 - [ ] I can size an index as a percentage of source text.
 - [ ] I know when Postgres full-text search is the right answer.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 152
 track: practice
 title: "Practice — Longest increasing subsequence"
-status: written
+status: draft
 ---
 
 # Day 152 · Practice
 
 **DSA topic:** Longest increasing subsequence
 **System design topic:** Design a notification system at scale
+
+**Theme:** Build D, day 2: gRPC bidirectional streams
 
 ---
 
@@ -179,7 +181,28 @@ Five of the seven give no error at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A Python terminal client on the stream
+- **Go** — The room hub with bidirectional streaming
+- **C++** — A C++ terminal client on the stream
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -195,7 +218,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The five stages, the four gates in order, dedup with an event-derived key, retry classification with the
    `410` action, and the SMS cost line.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you push a message to everyone in a room?
+2. 
+3.
 
 ## Before you move on
 
@@ -229,4 +258,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can do the fan-out arithmetic both ways.
 - [ ] I know engagement filtering beats parallelism, and why.
 - [ ] I know SMS is ~1% of volume and ~88% of cost.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

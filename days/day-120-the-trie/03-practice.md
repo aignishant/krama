@@ -2,13 +2,15 @@
 day: 120
 track: practice
 title: "Practice — The trie: a tree of characters"
-status: written
+status: draft
 ---
 
 # Day 120 · Practice
 
 **DSA topic:** The trie: a tree of characters
 **System design topic:** Distributed transactions and two-phase commit
+
+**Theme:** Mini project 8: a rate-limiter library
 
 ---
 
@@ -198,7 +200,28 @@ Two of the six are not fixed by anything inside 2PC. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A published Python package with docs and tests
+- **Go** — A published Go module with docs and tests
+- **C++** — A C++ library with a CMake package and tests
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -215,7 +238,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The in-doubt window, why the participants cannot decide, the asymmetry between participant and
    coordinator recovery, and the Raft-replicated-coordinator fix.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Show me a library you wrote. How would I use it?
+2. 
+3.
 
 ## Before you move on
 
@@ -246,4 +275,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know the real objection in microservices is coupling.
 - [ ] I know 3PC exists, what it fixes, and why nobody uses it.
 - [ ] I would ask why the data is distributed before designing anything.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 43
 track: practice
 title: "Practice — Writing binary search without off-by-one bugs"
-status: written
+status: draft
 ---
 
 # Day 043 · Practice
 
 **DSA topic:** Writing binary search without off-by-one bugs
 **System design topic:** Why interviews ask object-oriented design at all
+
+**Theme:** Reflection and metaprogramming
 
 ---
 
@@ -111,7 +113,28 @@ for an OOD round would be instead:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — getattr, setattr, __dict__, and metaclasses in outline
+- **Go** — reflect: Type, Value, struct tags, and when to avoid it
+- **C++** — Type traits, if constexpr, and templates as compile-time code
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -127,7 +150,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The `mid < hi` inequality, the two conventions, and the exact pairing that breaks — `hi = mid`
    inside a `while lo <= hi` loop.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How does a JSON library know your struct's field names?
+2. 
+3.
 
 ## Before you move on
 
@@ -137,4 +166,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I produced all five one-character variants without re-deriving the loop.
 - [ ] I ran the four-minute vending machine opening, including the scope I dropped.
 - [ ] I can sort the five wrong-round sentences and give the OOD replacement for each.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

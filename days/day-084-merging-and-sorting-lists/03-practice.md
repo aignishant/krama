@@ -2,13 +2,15 @@
 day: 84
 track: practice
 title: "Practice — Merging and sorting linked lists"
-status: written
+status: draft
 ---
 
 # Day 084 · Practice
 
 **DSA topic:** Merging and sorting linked lists
 **System design topic:** Design a deck of cards and a card game
+
+**Theme:** The filesystem
 
 ---
 
@@ -180,7 +182,28 @@ whole design.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — pathlib, os.walk, tempfile, permissions, and watching for changes
+- **Go** — filepath.WalkDir, os.MkdirTemp, permissions, and fsnotify
+- **C++** — std::filesystem: walking, temp files, permissions
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -198,7 +221,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    No random access for the partition, and merging lists needs no scratch space where merging arrays
    does — so merge sort is the array's worst case for space and the list's best.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you write a file so a crash never leaves it half-written?
+2. 
+3.
 
 ## Before you move on
 
@@ -218,4 +247,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can state the counting argument for the bias in one sentence.
 - [ ] I can compute the fraction of shuffles reachable from a 32-bit seed.
 - [ ] I can score `A A A A` and explain why a per-card ace decision is impossible.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

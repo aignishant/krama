@@ -2,13 +2,15 @@
 day: 149
 track: practice
 title: "Practice — Subset sum and partition problems"
-status: written
+status: draft
 ---
 
 # Day 149 · Practice
 
 **DSA topic:** Subset sum and partition problems
 **System design topic:** Design a distributed key-value store
+
+**Theme:** Build C, day 4: bindings
 
 ---
 
@@ -170,7 +172,28 @@ Five of the seven give no error at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — pybind11 bindings and a Python API
+- **Go** — cgo bindings and a Go API
+- **C++** — extern C surface and a stable ABI
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -186,7 +209,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Consistent hashing with the 91% number, virtual nodes, `N = 3` with the distinctness check, `R + W > N`
    as counting, vector clocks with both versions kept, and the three repair mechanisms.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you expose a C++ library to other languages?
+2. 
+3.
 
 ## Before you move on
 
@@ -220,4 +249,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the three repair mechanisms and what each covers.
 - [ ] I can quantify the Merkle tree saving.
 - [ ] I can say when I would not build this at all.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

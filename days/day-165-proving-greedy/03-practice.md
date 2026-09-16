@@ -2,13 +2,15 @@
 day: 165
 track: practice
 title: "Practice — Proving a greedy choice, simply"
-status: written
+status: draft
 ---
 
 # Day 165 · Practice
 
 **DSA topic:** Proving a greedy choice, simply
 **System design topic:** Design a ticket booking system
+
+**Theme:** Build F, day 5: ship it
 
 ---
 
@@ -191,7 +193,28 @@ does not contain the earliest finisher, **try every possible single swap and rec
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A REPL and docs
+- **Go** — A REPL and docs
+- **C++** — A REPL, benchmarks, and docs
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -207,7 +230,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Why tickets are unlike stock, the atomic hold with its TTL, the three spike layers, why a stale seat map is
    correct, and the TTL trade with its asymmetry.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Which of your three interpreters is fastest, and why?
+2. 
+3.
 
 ## Before you move on
 
@@ -241,4 +270,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute polling versus pushing.
 - [ ] I can state the TTL trade and its asymmetry.
 - [ ] I know the realistic goal for bot defence.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

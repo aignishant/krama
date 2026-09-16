@@ -2,13 +2,15 @@
 day: 66
 track: practice
 title: "Practice — When a hash map is the wrong answer"
-status: written
+status: draft
 ---
 
 # Day 066 · Practice
 
 **DSA topic:** When a hash map is the wrong answer
 **System design topic:** Builder
+
+**Theme:** The Go protobuf API
 
 ---
 
@@ -165,7 +167,28 @@ test only cares that the order is already paid.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Python protobuf API: SerializeToString, ParseFromString, MessageToJson
+- **Go** — proto.Marshal, proto.Unmarshal, proto.Equal, protojson, and protoreflect
+- **C++** — SerializeToString, ParseFromString, and util::MessageToJsonString
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -182,7 +205,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The three cases with an example each, plus the three smaller reasons — memory, tiny n, and
    adversarial keys — and the sentence about O(1) being an average rather than a bound.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you convert a protobuf message to JSON, and what gets lost?
+2. 
+3.
 
 ## Before you move on
 
@@ -196,4 +225,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I found the data clumps in the twelve-parameter constructor before reaching for a pattern.
 - [ ] I wrote both the dataclass and the builder version and can say honestly what the builder added.
 - [ ] I can name the compile-time guarantee Builder gives up, and the four cases where it is worth it.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

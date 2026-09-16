@@ -2,13 +2,15 @@
 day: 73
 track: practice
 title: "Practice — Queues: first in, first out"
-status: written
+status: draft
 ---
 
 # Day 073 · Practice
 
 **DSA topic:** Queues: first in, first out
 **System design topic:** State
+
+**Theme:** Schema hygiene: lint, breaking checks, versioning
 
 ---
 
@@ -179,7 +181,28 @@ One of the six can never go backwards under any circumstance. Name it and say wh
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Packaging generated Python code
+- **Go** — buf lint, buf breaking, module publishing, and package versioning
+- **C++** — Packaging generated C++ code with CMake
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -200,7 +223,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    each operation is O(1) because nothing shifts. Then say what would make it O(n²) — `pop(0)` — and
    what that costs at n = 100,000.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you stop a teammate from shipping a breaking schema change?
+2. 
+3.
 
 ## Before you move on
 
@@ -217,4 +246,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can state the State-versus-Strategy rule in one sentence and point at the telling line.
 - [ ] I can write the conditional UPDATE and say what zero rows updated means.
 - [ ] I can say the honest concession: the branching moved into method dispatch, it did not vanish.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

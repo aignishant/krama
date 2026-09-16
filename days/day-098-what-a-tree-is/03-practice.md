@@ -2,13 +2,15 @@
 day: 98
 track: practice
 title: "Practice — What a tree is, and the vocabulary you need"
-status: written
+status: draft
 ---
 
 # Day 098 · Practice
 
 **DSA topic:** What a tree is, and the vocabulary you need
 **System design topic:** Vertical versus horizontal scaling
+
+**Theme:** Health checks and graceful shutdown
 
 ---
 
@@ -170,7 +172,28 @@ and say what each one's fix is. Then say why none of them is a reason not to sca
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Liveness and readiness routes, and shutdown hooks
+- **Go** — Health endpoints, http.Server.Shutdown, and draining
+- **C++** — Health endpoints, stopping the server, and draining
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -187,7 +210,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    One parent each and no cycles, therefore exactly one path from the root, therefore no visited set and
    therefore natural recursion — plus the `n − 1` edges fact with its one-line proof.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is the difference between liveness and readiness?
+2. 
+3.
 
 ## Before you move on
 
@@ -210,4 +239,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute the availability of one machine versus two and give the factor.
 - [ ] I can assign a direction to each of the five tiers with a reason.
 - [ ] I can say what sharding costs permanently, and why it is not a migration cost.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 48
 track: practice
 title: "Practice — Binary search on floats, and the epsilon question"
-status: written
+status: draft
 ---
 
 # Day 048 · Practice
 
 **DSA topic:** Binary search on floats, and the epsilon question
 **System design topic:** Abstraction and interfaces
+
+**Theme:** HTTP servers
 
 ---
 
@@ -136,7 +138,28 @@ whether that is enough on its own.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — FastAPI: a route, a request model, a response model
+- **Go** — net/http: ServeMux, handlers, and http.ListenAndServe
+- **C++** — cpp-httplib: routes and handlers
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -152,7 +175,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The three candidates, what each does on a large answer, and the sentence about a hundred halvings
    shrinking any range past double precision.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Walk me through how your server handles one request.
+2. 
+3.
 
 ## Before you move on
 
@@ -162,4 +191,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I sized the iteration count for LeetCode 774 from the required precision, with the arithmetic.
 - [ ] I found all three leaks in the `Checkout` class and named each by kind.
 - [ ] I wrote the grep command and can say what a healthy result is.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

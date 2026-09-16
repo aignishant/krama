@@ -2,13 +2,15 @@
 day: 104
 track: practice
 title: "Practice — Path problems, and the return-value trick"
-status: written
+status: draft
 ---
 
 # Day 104 · Practice
 
 **DSA topic:** Path problems, and the return-value trick
 **System design topic:** Database replication
+
+**Theme:** CI for three languages
 
 ---
 
@@ -174,7 +176,28 @@ Two of the six are not solved by replication at all. Name them and say what solv
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — GitHub Actions: uv, ruff, mypy, pytest, and coverage
+- **Go** — GitHub Actions: go vet, staticcheck, test -race, and coverage
+- **C++** — GitHub Actions: CMake, sanitizers, and ctest
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -191,7 +214,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 3. *The old leader comes back. Then what?*
    Split-brain described, why it cannot be auto-repaired, and the three defences with what each one does.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What runs when you open a pull request?
+2. 
+3.
 
 ## Before you move on
 
@@ -213,4 +242,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can define RPO and RTO and give realistic numbers for both.
 - [ ] I can describe split-brain and name three defences.
 - [ ] I can say why replication is not a backup, with the specific example.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

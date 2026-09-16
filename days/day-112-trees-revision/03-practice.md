@@ -2,13 +2,15 @@
 day: 112
 track: practice
 title: "Practice — Trees revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 112 · Practice
 
 **DSA topic:** Trees revision and mock round
 **System design topic:** Scaling revision and interview questions
+
+**Theme:** Standard library tour I: algorithms
 
 ---
 
@@ -185,7 +187,28 @@ For each, say at which rung you stop and why.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — itertools, functools, bisect, and heapq
+- **Go** — slices, maps, sort, and container/heap
+- **C++** — <algorithm>, <ranges>, <numeric>
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -204,7 +227,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Not yet, and why — writes are the ceiling that matters, the threshold, and the permanent cost stated in
    three specific losses.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you find the k largest items?
+2. 
+3.
 
 ## Before you move on
 
@@ -228,4 +257,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can walk through the 10,000 QPS mock in ten minutes.
 - [ ] I refuse to shard first, and can say exactly when I would.
 - [ ] I check whether my scaling changes made availability worse.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

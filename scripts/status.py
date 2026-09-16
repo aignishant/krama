@@ -23,7 +23,7 @@ GREEN, DIM, BOLD, OFF = "\033[32m", "\033[2m", "\033[1m", "\033[0m"
 
 
 def written(path: Path) -> bool:
-    return path.exists() and "status: empty" not in path.read_text(encoding="utf-8")[:400]
+    return path.exists() and "status: written" in path.read_text(encoding="utf-8")[:400]
 
 
 def lesson_paths(folder: Path) -> tuple[Path | None, Path | None]:

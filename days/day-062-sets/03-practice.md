@@ -2,13 +2,15 @@
 day: 62
 track: practice
 title: "Practice — Sets: membership, deduplication, and the O(1) habit"
-status: written
+status: draft
 ---
 
 # Day 062 · Practice
 
 **DSA topic:** Sets: membership, deduplication, and the O(1) habit
 **System design topic:** Design principles revision and interview questions
+
+**Theme:** protoc, buf, and code generation
 
 ---
 
@@ -179,7 +181,28 @@ for", start again.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Generating _pb2.py and using it
+- **Go** — protoc-gen-go, buf generate, and the generated .pb.go
+- **C++** — protoc --cpp_out and linking libprotobuf
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -197,7 +220,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Bounded in total rather than per iteration, each value stepped over by exactly one run's walk,
    n outer checks plus n total inner steps — and the input that breaks it without the guard.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What does the protobuf compiler generate, and why do you never edit it?
+2. 
+3.
 
 ## Before you move on
 
@@ -209,4 +238,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give both O(1)-space alternatives, with complexities and conditions.
 - [ ] I critiqued `ReportManager` through all six passes and ended with a ranking.
 - [ ] I can name one thing in that class I would deliberately not change, and defend it.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

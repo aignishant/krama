@@ -2,13 +2,15 @@
 day: 108
 track: practice
 title: "Practice — Validating a binary search tree"
-status: written
+status: draft
 ---
 
 # Day 108 · Practice
 
 **DSA topic:** Validating a binary search tree
 **System design topic:** Consistent hashing
+
+**Theme:** Encapsulation
 
 ---
 
@@ -171,7 +173,28 @@ Two of the six are not solved by consistent hashing at all. Name them and say wh
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — @property, __slots__, name mangling, and descriptors
+- **Go** — Unexported fields, getters by convention, and method values
+- **C++** — private, const methods, static members, and friend
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -188,7 +211,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Distribution with the 63-percent example, then failure spreading with the doubling-and-cascade
    arithmetic, and the standard count.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. When would you use a getter instead of a public field?
+2. 
+3.
 
 ## Before you move on
 
@@ -210,4 +239,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the wrap-around bug and the hash-determinism bug.
 - [ ] I can say what consistent hashing does not solve, and what does.
 - [ ] I can name one alternative and the cluster size where I would prefer it.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

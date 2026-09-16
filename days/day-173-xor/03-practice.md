@@ -2,13 +2,15 @@
 day: 173
 track: practice
 title: "Practice — XOR, SLOs and error budgets"
-status: written
+status: draft
 ---
 
 # Day 173 · Practice
 
 **DSA topic:** XOR problems
 **System design topic:** SLAs, SLOs, and error budgets
+
+**Theme:** Capstone, day 3: the order service
 
 ---
 
@@ -182,7 +184,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Contract tests from Python
+- **Go** — Order service: Postgres, transactions, and the outbox
+- **C++** — Contract tests from C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -198,7 +221,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The arithmetic from 43,200 minutes, the whole table, the budget in requests, what changes at five nines,
    and why an unspent budget is waste.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you guarantee the order event is published exactly once?
+2. 
+3.
 
 ## Before you move on
 
@@ -233,4 +262,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute six dependencies at 99.9 percent and convert it to minutes.
 - [ ] I know what "independent" is hiding, with examples.
 - [ ] I can give the three reasons 100 percent is the wrong target.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

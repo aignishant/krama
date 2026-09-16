@@ -2,13 +2,15 @@
 day: 144
 track: practice
 title: "Practice — Fibonacci: memoisation versus tabulation"
-status: written
+status: draft
 ---
 
 # Day 144 · Practice
 
 **DSA topic:** Fibonacci: memoisation versus tabulation
 **System design topic:** Building blocks revision and interview questions
+
+**Theme:** Build B, day 4: scheduling and priorities
 
 ---
 
@@ -209,7 +211,28 @@ Two of the seven lose data. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Cron-style scheduling from Python
+- **Go** — Priority queues, delayed jobs, and a scheduler loop
+- **C++** — Priority handling in the C++ worker
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -226,7 +249,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    and the observation that two of the three are derived copies that owe a staleness number and a
    reconciliation job.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you run a job at a specific time in a distributed system?
+2. 
+3.
 
 ## Before you move on
 
@@ -253,4 +282,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can state all five trade-offs as sentences.
 - [ ] I can name seven things I would not add, and what would change my mind.
 - [ ] I know the burden of proof is on leaving the database.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

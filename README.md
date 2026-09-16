@@ -47,9 +47,8 @@ both. A day is complete when both halves are done.
 **Twelve of the 180 days also carry** `04-cpp-<topic>.md`, the optional C++ contest
 lesson — the STL you need to solve that day's DSA problem in C++.
 
-> The languages course used to be a separate folder with its own practice sheet. That
-> sheet is being folded into `03-practice.md` one block of days at a time; a day not
-> folded yet still has an `08-lang-practice.md`. It reads the same either way.
+Every day uses `03-practice.md` for all tracks. A sheet marked `status: draft`
+preserves finished exercises while the remaining exercises are being written.
 
 Each lesson has the same nine sections, so you learn one reading rhythm and keep it
 for six months:

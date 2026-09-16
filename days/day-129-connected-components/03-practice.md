@@ -2,13 +2,15 @@
 day: 129
 track: practice
 title: "Practice — Connected components"
-status: written
+status: draft
 ---
 
 # Day 129 · Practice
 
 **DSA topic:** Connected components
 **System design topic:** Message queues: why async changes everything
+
+**Theme:** Security basics
 
 ---
 
@@ -174,7 +176,28 @@ Two of the seven are design omissions rather than failures. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Input validation, injection, secrets, and pickle
+- **Go** — Input validation, injection, secrets, and the crypto packages
+- **C++** — Bounds checking, undefined behaviour, and the sanitizers
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -190,7 +213,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    What the user actually needs before the response, the latency and availability numbers, then the four
    losses named unprompted — with what the user sees, idempotency, ordering, and the DLQ.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is undefined behaviour, and why does it matter?
+2. 
+3.
 
 ## Before you move on
 
@@ -222,4 +251,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know a queue does not create capacity.
 - [ ] I can distinguish work from events and pick the right system.
 - [ ] I know when a database table is a good enough queue.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

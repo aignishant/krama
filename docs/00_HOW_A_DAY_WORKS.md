@@ -60,14 +60,10 @@ Buffers and gRPC block; Python and C++ are its clients.
 the DSA lesson, the three exercises built three times for the language lessons, one
 oral drill covering all of today's questions, and one completion checklist.
 
-> **Migration note.** The languages course used to live in its own folder with its own
-> `04-practice.md`. When it merged into `days/`, that sheet became `08-lang-practice.md`
-> and is being folded into `03-practice.md` one block of days at a time. A day that
-> has not been folded yet still carries `08-lang-practice.md`, and `./k check` expects
-> it there. The set of folded days is `UNIFIED_PRACTICE_DAYS` in
-> [`../scripts/build_skeleton.py`](../scripts/build_skeleton.py); `practice_name(day)`
-> says which file a given day's language exercises live in. Never create an
-> `08-lang-practice.md` on a folded day.
+Every day uses the single `03-practice.md` sheet. Never create a separate language
+practice file. A partially authored sheet has `status: draft`: it is preserved by
+the builder, including with `--force`, but does not count as finished. Set its
+status to `written` only when every track's exercises are complete.
 
 ### The languages track, by kind of day
 

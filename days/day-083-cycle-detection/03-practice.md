@@ -2,13 +2,15 @@
 day: 83
 track: practice
 title: "Practice — Cycle detection, and why Floyd's algorithm works"
-status: written
+status: draft
 ---
 
 # Day 083 · Practice
 
 **DSA topic:** Cycle detection, and why Floyd's algorithm works
 **System design topic:** Design tic-tac-toe, and then chess
+
+**Theme:** Processes, subprocesses, and signals
 
 ---
 
@@ -176,7 +178,28 @@ Three of the eight cannot belong to any single piece. Name them and say what the
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — subprocess.run, Popen, pipes, and signal handling
+- **Go** — os/exec, pipes, and os/signal with graceful shutdown
+- **C++** — fork/exec, popen, and sigaction
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -195,7 +218,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Not on the piece, and the three reasons a piece cannot decide legality; pseudo-legal generation
    plus the game's filter; make, test, unmake, with the copying number that justifies it.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What happens when you press Ctrl-C on your server?
+2. 
+3.
 
 ## Before you move on
 
@@ -215,4 +244,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the three rules no single piece can own, and what they have in common.
 - [ ] I can justify make-and-unmake with the copying arithmetic.
 - [ ] I can list the five pieces of forgotten chess state and a rule that needs each.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

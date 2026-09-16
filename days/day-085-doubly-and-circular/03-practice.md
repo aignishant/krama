@@ -2,13 +2,15 @@
 day: 85
 track: practice
 title: "Practice — Doubly and circular linked lists"
-status: written
+status: draft
 ---
 
 # Day 085 · Practice
 
 **DSA topic:** Doubly and circular linked lists
 **System design topic:** Design Splitwise
+
+**Theme:** Timers, tickers, and scheduling
 
 ---
 
@@ -178,7 +180,28 @@ Then say which single number tells you this is not a scale problem.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — sched, asyncio.sleep, and a cron-like loop
+- **Go** — time.Ticker, time.AfterFunc, and a scheduler goroutine
+- **C++** — std::this_thread::sleep_until, and a timer wheel in outline
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -197,7 +220,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    that is set-partition and NP-hard; and the practical position on why you would not pay exponential
    time for one payment.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you run a task every day at midnight inside a service?
+2. 
+3.
 
 ## Before you move on
 
@@ -217,4 +246,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the NP-hard problem the true minimum reduces to.
 - [ ] I can defend "provenance loss is a setting, not a bug".
 - [ ] I can write the correct concurrent balance update in SQL.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

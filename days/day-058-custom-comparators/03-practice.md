@@ -2,13 +2,15 @@
 day: 58
 track: practice
 title: "Practice — Custom comparators and sorting by keys"
-status: written
+status: draft
 ---
 
 # Day 058 · Practice
 
 **DSA topic:** Custom comparators and sorting by keys
 **System design topic:** Interface segregation
+
+**Theme:** Testing a service
 
 ---
 
@@ -166,7 +168,28 @@ Two of those six are probably fine as they are. Name them and defend it.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — TestClient, fixtures for a test database, and mocking with respx
+- **Go** — httptest, table tests for handlers, and interfaces for mocking
+- **C++** — GoogleTest with an in-process server, and gMock
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -182,7 +205,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The largest-number example, why no per-element key exists there, the sign convention, and the cost
    ratio that makes it the last resort.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you test code that calls another service?
+2. 
+3.
 
 ## Before you move on
 
@@ -194,4 +223,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can state the `cmp_to_key` sign convention without hesitating.
 - [ ] I built the forced-dependency table for `OrderStore` and can give the total.
 - [ ] I can say what makes narrow interfaces nearly free in Python and expensive in Java.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 88
 track: practice
 title: "Practice — The call stack, drawn"
-status: written
+status: draft
 ---
 
 # Day 088 · Practice
 
 **DSA topic:** The call stack, drawn
 **System design topic:** Design a ride-hailing booking flow
+
+**Theme:** Templates and code generation
 
 ---
 
@@ -183,7 +185,28 @@ Say what is *counted* rather than charged, and why that is a design consequence.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Jinja2 for text, HTML, and generating code
+- **Go** — text/template, html/template, and go generate
+- **C++** — Generating C++ with a script, and CMake configure_file
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -201,7 +224,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 3. *How many calls does `fib(20)` make and how much stack does it use?*
    21,891 and 20, why they diverge, and the seven-word sentence that separates time from space.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. When is generating code better than writing it?
+2. 
+3.
 
 ## Before you move on
 
@@ -222,4 +251,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute both matching times and say what releasing losers late costs.
 - [ ] I can explain the geohash edge problem and the nine-cell query.
 - [ ] I can give the surge arithmetic and say what it is an argument about.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

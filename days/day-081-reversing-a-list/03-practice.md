@@ -2,13 +2,15 @@
 day: 81
 track: practice
 title: "Practice — Reversing a linked list"
-status: written
+status: draft
 ---
 
 # Day 081 · Practice
 
 **DSA topic:** Reversing a linked list
 **System design topic:** Design a vending machine
+
+**Theme:** Binary data
 
 ---
 
@@ -178,7 +180,28 @@ Two of the seven leave the machine in `Collecting`. Name them and say why that i
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — struct.pack, memoryview, and reading a binary header
+- **Go** — encoding/binary, byte order, and bytes.Buffer
+- **C++** — Byte order, std::bit_cast, and reading a binary header
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -197,7 +220,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Neither — verify first. Then the general rule, the ATM comparison, and the concrete failure if you
    get it backwards.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is endianness, and when does it bite?
+2. 
+3.
 
 ## Before you move on
 
@@ -216,4 +245,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I worked the ₹22-versus-₹25 example and can say what it proves about the lamp.
 - [ ] I can explain escrow and why real machines use it.
 - [ ] I computed the stock lifetime and the float lifetime and can quote the gap.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

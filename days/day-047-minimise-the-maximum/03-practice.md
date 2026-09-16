@@ -2,13 +2,15 @@
 day: 47
 track: practice
 title: "Practice — Minimise the maximum: the capacity family"
-status: written
+status: draft
 ---
 
 # Day 047 · Practice
 
 **DSA topic:** Minimise the maximum: the capacity family
 **System design topic:** Polymorphism
+
+**Theme:** HTTP clients
 
 ---
 
@@ -127,7 +129,28 @@ reason:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — httpx and requests: GET, POST, headers, timeouts, sessions
+- **Go** — net/http Client, requests, headers, and reusing the transport
+- **C++** — libcurl through cpr: GET, POST, headers, timeouts
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -143,7 +166,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Negate the question, search the first False with `hi + 1`, subtract one — and say what goes wrong
    with the mirrored version if the midpoint does not round up.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What goes wrong if you create a new HTTP client for every request?
+2. 
+3.
 
 ## Before you move on
 
@@ -154,4 +183,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I made the mirrored template hang, read the traceback, and then chose the version that cannot.
 - [ ] I ran the switch-removal recipe on the notifier, including step six.
 - [ ] I can sort all six cases into "polymorphism" and "leave the `if`" with a reason each.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

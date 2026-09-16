@@ -2,8 +2,7 @@
 
 A consolidated day is seven files, eight on the C++ contest days: the hub, the
 DSA lesson, the system design lesson, one practice sheet, and three language
-lessons. Days outside UNIFIED_PRACTICE_DAYS retain a separate language practice
-sheet until migrated.
+lessons. All 180 days share the same practice sheet.
 
 Safe to re-run: a file that already has content (status is not "empty") is never
 touched. Only placeholders are regenerated.
@@ -185,7 +184,7 @@ LANG_FILE_PREFIX = {
 LANG_PRACTICE = "08-lang-practice.md"
 
 # Days completed with the combined DSA, system design and language practice format.
-UNIFIED_PRACTICE_DAYS = frozenset(range(1, 41))
+UNIFIED_PRACTICE_DAYS = frozenset(range(1, 181))
 
 
 def practice_name(day: Day) -> str:
@@ -591,8 +590,8 @@ def days_readme(days: list[Day]) -> str:
         "",
         "Every day is one folder. Every folder holds one DSA lesson, one system design",
         "lesson and three language lessons on one theme — Python, Go, C++.",
-        "Days 001–040 share one practice sheet across all tracks. Later days retain",
-        "a separate languages practice sheet until migrated. Start at day 001.",
+        "Every day shares one practice sheet across DSA, system design, and languages.",
+        "Start at day 001.",
         "",
         "Twelve of the days carry one more lesson: the C++ contest track, for readers who",
         "want to compete in C++ as well. They are marked in the last column.",

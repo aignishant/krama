@@ -2,13 +2,15 @@
 day: 46
 track: practice
 title: "Practice — Binary search on the answer"
-status: written
+status: draft
 ---
 
 # Day 046 · Practice
 
 **DSA topic:** Binary search on the answer
 **System design topic:** Inheritance and its costs
+
+**Theme:** TCP sockets: an echo server
 
 ---
 
@@ -132,7 +134,28 @@ Number 6 has a different answer from the mutable version. Say what changed.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — socket, bind, listen, accept, and a threaded echo server
+- **Go** — net.Listen, Accept, and one goroutine per connection
+- **C++** — POSIX sockets, or Boost.Asio, and one thread per connection
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -148,7 +171,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The induction argument for the shipping case — more capacity means at least as many packages
    loaded each day, so it can never finish later — and then name a phrasing where it fails.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What happens when a client connects to your server?
+2. 
+3.
 
 ## Before you move on
 
@@ -159,4 +188,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I sorted all five bounds in the drill and named the symptom of each broken one.
 - [ ] I can name the three inheritance failures with an example each, unprompted.
 - [ ] I did the hierarchy audit including the two-axis class count, both ways.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

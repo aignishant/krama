@@ -2,13 +2,15 @@
 day: 63
 track: practice
 title: "Practice — Counting with dictionaries"
-status: written
+status: draft
 ---
 
 # Day 063 · Practice
 
 **DSA topic:** Counting with dictionaries
 **System design topic:** What a design pattern actually is
+
+**Theme:** Messages: scalars, repeated, maps, nested, oneof
 
 ---
 
@@ -163,7 +165,28 @@ would look for before doing it again.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Generated classes: repeated fields, map fields, and oneof in Python
+- **Go** — Generated structs: slices, maps, and the oneof interface pattern
+- **C++** — Generated classes: RepeatedField, Map, and oneof cases
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -179,7 +202,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Because it does not compare — the counts are integers between 1 and n, so you index by them. Then
    the price: `n + 1` buckets allocated regardless, and when the heap wins instead.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you express one-of-several in protobuf?
+2. 
+3.
 
 ## Before you move on
 
@@ -192,4 +221,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give the four parts of a design pattern and say which one people skip.
 - [ ] I can go from a symptom to an axis to a pattern for at least five of the eight symptoms.
 - [ ] I have one specific pattern I regret, with numbers, ready to say out loud.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

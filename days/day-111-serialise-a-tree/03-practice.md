@@ -2,13 +2,15 @@
 day: 111
 track: practice
 title: "Practice — Serialising and deserialising a tree"
-status: written
+status: draft
 ---
 
 # Day 111 · Practice
 
 **DSA topic:** Serialising and deserialising a tree
 **System design topic:** Single points of failure
+
+**Theme:** Parallelism and the scheduler
 
 ---
 
@@ -181,7 +183,28 @@ Three of the six are not fixed by adding a redundant copy. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — multiprocessing, the GIL, and free-threaded Python
+- **Go** — GOMAXPROCS, the M:P:G scheduler, and preemption
+- **C++** — std::execution policies and hardware_concurrency
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -199,7 +222,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Detection, switching and currency — with the DNS TTL as the usual largest term, and the six reasons an
    untested failover fails.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How many goroutines can you run on one core?
+2. 
+3.
 
 ## Before you move on
 
@@ -222,4 +251,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I ask whether every redundant pair fails independently.
 - [ ] I can name the four blast-radius levers and explain shuffle sharding.
 - [ ] I can say why a slow dependency is worse than a dead one.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

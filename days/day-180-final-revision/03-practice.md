@@ -2,13 +2,15 @@
 day: 180
 track: practice
 title: "Practice — The last week, and the questions you ask"
-status: written
+status: draft
 ---
 
 # Day 180 · Practice
 
 **DSA topic:** Final revision, and the week before the interview
 **System design topic:** Final revision, and the week before the interview
+
+**Theme:** Final revision
 
 ---
 
@@ -200,7 +202,28 @@ For each, say what happens:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — The hundred questions, Python
+- **Go** — The hundred questions, Go
+- **C++** — The hundred questions, C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -216,9 +239,15 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Four questions from four categories, why each one is informative, and what you listen for in how they are
    answered.
 
----
+### Languages
 
-## Before the interview
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Tell me about the three languages you know.
+2. 
+3.
+
+## Before you move on
 
 - [ ] I can type all ten templates from memory in under ninety seconds each.
 - [ ] I know the line people get wrong in each of them.
@@ -242,9 +271,9 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I will reset between rounds: stand up, one sentence, name the next round.
 - [ ] I know one bad round is one round.
 - [ ] I will write down every question within an hour of finishing.
-- [ ] I answered all three questions above out loud.
-
----
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.
 
 ## After day 180
 

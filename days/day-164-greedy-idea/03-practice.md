@@ -2,13 +2,15 @@
 day: 164
 track: practice
 title: "Practice — Greedy: when taking the best option now is safe"
-status: written
+status: draft
 ---
 
 # Day 164 · Practice
 
 **DSA topic:** Greedy: when taking the best option now is safe
 **System design topic:** Design a payment system
+
+**Theme:** Build F, day 4: errors and tests
 
 ---
 
@@ -191,7 +193,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Error messages with line numbers, and a test suite
+- **Go** — Error messages with line numbers, and a test suite
+- **C++** — Error messages with line numbers, and a test suite
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -207,7 +230,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Card handling and scale, double-entry with its three properties, the timeout going to `unknown` with the
    three resolving mechanisms, and daily reconciliation with its four categories.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you produce a good error message from a parser?
+2. 
+3.
 
 ## Before you move on
 
@@ -242,4 +271,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why webhooks need signature verification and dedup.
 - [ ] I can give the void-versus-refund asymmetry in money.
 - [ ] I know reconciliation always finds something, and what it means if it does not.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

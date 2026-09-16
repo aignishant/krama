@@ -2,13 +2,15 @@
 day: 97
 track: practice
 title: "Practice — Recursion and backtracking revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 097 · Practice
 
 **DSA topic:** Recursion and backtracking revision and mock round
 **System design topic:** What scale actually means, in numbers
+
+**Theme:** Observability: metrics and traces
 
 ---
 
@@ -219,7 +221,28 @@ For each, say what the naive estimate misses:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — prometheus_client and OpenTelemetry
+- **Go** — prometheus/client_golang and OpenTelemetry
+- **C++** — prometheus-cpp and OpenTelemetry C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -236,7 +259,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 3. *Which of the four templates would you write for a problem you have never seen?*
    The two questions, the four answers, and the sentence about what is identical in all four.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What are the three pillars of observability?
+2. 
+3.
 
 ## Before you move on
 
@@ -256,4 +285,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute the Mumbai–New York round trip and say what it rules out.
 - [ ] I can do the photo-app estimate out loud in under three minutes.
 - [ ] I can tell a machine-count peak from an architecture peak.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

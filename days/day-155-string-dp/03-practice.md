@@ -2,13 +2,15 @@
 day: 155
 track: practice
 title: "Practice — String DP: palindromic substrings"
-status: written
+status: draft
 ---
 
 # Day 155 · Practice
 
 **DSA topic:** String DP: palindromic substrings
 **System design topic:** Design Instagram
+
+**Theme:** Build D, day 5: ship it
 
 ---
 
@@ -178,7 +180,28 @@ Five of the seven give no error at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Load test with locust
+- **Go** — Metrics, tracing, and CI
+- **C++** — Benchmarks
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -194,7 +217,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The two systems and the byte ratio, pre-signed uploads, asynchronous transcoding with the two
    non-size steps, the CDN bill, and the signed-URL cache trap.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Show me one message travelling through your system.
+2. 
+3.
 
 ## Before you move on
 
@@ -228,4 +257,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give tiered and untiered storage costs.
 - [ ] I know the video transcoding rule and its core count.
 - [ ] I know delete has three layers with different timings.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

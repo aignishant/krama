@@ -2,13 +2,15 @@
 day: 44
 track: practice
 title: "Practice — First and last occurrence"
-status: written
+status: draft
 ---
 
 # Day 044 · Practice
 
 **DSA topic:** First and last occurrence
 **System design topic:** Classes and objects
+
+**Theme:** Building and shipping
 
 ---
 
@@ -106,7 +108,28 @@ latter, name the rule that would fix it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — pyproject.toml, wheels, and PyInstaller
+- **Go** — go build flags, -ldflags, cross-compiling, and a static binary
+- **C++** — CMake targets, static versus dynamic linking, and Release builds
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -122,7 +145,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Pick any rule from the cinema drill. The answer is always "on the class that owns the data the
    rule reads" — say it in those words, then name what breaks if it goes elsewhere.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you ship your program to a machine without the toolchain?
+2. 
+3.
 
 ## Before you move on
 
@@ -132,4 +161,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I gave all five free answers from the two bounds without adding a loop.
 - [ ] I ran the cinema modelling drill in four minutes, including the missing class.
 - [ ] I can tell an anaemic model from a real one and name the rule that fixes it.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

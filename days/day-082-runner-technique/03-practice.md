@@ -2,13 +2,15 @@
 day: 82
 track: practice
 title: "Practice — Finding the middle, and the runner technique"
-status: written
+status: draft
 ---
 
 # Day 082 · Practice
 
 **DSA topic:** Finding the middle, and the runner technique
 **System design topic:** Design a library management system
+
+**Theme:** Calling across languages
 
 ---
 
@@ -169,7 +171,28 @@ Then say which two numbers you would quote in the first ten minutes of the inter
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — ctypes and pybind11: calling C++ from Python
+- **Go** — cgo: calling C from Go, and the cost of the boundary
+- **C++** — extern C, and exposing a C++ library to the other two
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -188,7 +211,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The four things it would need that are not on the loan, all of which change without any loan
    changing, and the constructor test that makes it concrete.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. When would you drop down to C++ from Python or Go?
+2. 
+3.
 
 ## Before you move on
 
@@ -207,4 +236,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I wrote the amnesty as a wrapper and named the pattern.
 - [ ] I can explain the `HELD` state and what breaks without a hold expiry.
 - [ ] I can quote the closed-days percentage and the uncapped-fine arithmetic.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

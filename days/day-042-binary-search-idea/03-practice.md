@@ -2,13 +2,15 @@
 day: 42
 track: practice
 title: "Practice — Binary search: the idea and the invariant"
-status: written
+status: draft
 ---
 
 # Day 042 · Practice
 
 **DSA topic:** Binary search: the idea and the invariant
 **System design topic:** Database revision and interview questions
+
+**Theme:** Regular expressions
 
 ---
 
@@ -89,7 +91,28 @@ plan.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — re: search, match, findall, groups, and compiled patterns
+- **Go** — regexp: RE2 semantics and why there is no backtracking
+- **C++** — std::regex, and why you reach for RE2 or ctre instead
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -106,7 +129,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The input was not sorted, or the loop used `<` and never looked at the last remaining cell. Say
    which one produces which symptom, and the clarifying question that prevents the first.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Write a pattern that matches an email address. Now say why it is wrong.
+2. 
+3.
 
 ## Before you move on
 
@@ -116,4 +145,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I predicted the symptom of all four deliberate breakages before running them.
 - [ ] I can give the comparison count for a thousand, a million and a billion without pausing.
 - [ ] I ran the six database questions on the hostel booking system in under four minutes.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

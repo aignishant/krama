@@ -2,13 +2,15 @@
 day: 55
 track: practice
 title: "Practice — Quickselect: finding the Kth largest without sorting"
-status: written
+status: draft
 ---
 
 # Day 055 · Practice
 
 **DSA topic:** Quickselect: finding the Kth largest without sorting
 **System design topic:** Single responsibility
+
+**Theme:** Databases III: migrations and ORMs
 
 ---
 
@@ -167,7 +169,28 @@ what you would call the pieces:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — SQLAlchemy 2.0 and Alembic
+- **Go** — sqlc generated queries and golang-migrate
+- **C++** — Raw SQL with a migration runner you write yourself
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -183,7 +206,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Why quickselect is unavailable, the heap of size k with its two costs, and what you would do if
    `k` were also enormous.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. ORM or raw SQL? Defend your answer.
+2. 
+3.
 
 ## Before you move on
 
@@ -194,4 +223,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I named the stakeholder for every concern in `ReportGenerator` and gave the number.
 - [ ] I can say which behaviour stays with the data and why moving everything out is a mistake.
 - [ ] I can describe the over-splitting failure and give its cost in files and wiring lines.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

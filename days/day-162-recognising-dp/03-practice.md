@@ -2,13 +2,15 @@
 day: 162
 track: practice
 title: "Practice — Recognising dynamic programming"
-status: written
+status: draft
 ---
 
 # Day 162 · Practice
 
 **DSA topic:** Recognising dynamic programming
 **System design topic:** Design Google Maps
+
+**Theme:** Build F, day 2: the parser
 
 ---
 
@@ -199,7 +201,28 @@ For each, say what goes wrong and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A recursive-descent parser in Python
+- **Go** — A recursive-descent parser in Go
+- **C++** — A recursive-descent parser in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -215,7 +238,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Why Dijkstra is off by four orders of magnitude, contraction hierarchies and the upward-only query, the
    two-phase split for traffic, and where the traffic data comes from.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How does a parser handle operator precedence?
+2. 
+3.
 
 ## Before you move on
 
@@ -249,4 +278,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why the contributor threshold is also the privacy guarantee.
 - [ ] I know why an ETA advances the clock as it walks the route.
 - [ ] I know routing is about 2% of the bill.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

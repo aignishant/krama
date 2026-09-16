@@ -2,13 +2,15 @@
 day: 122
 track: practice
 title: "Practice — Autocomplete and word dictionaries"
-status: written
+status: draft
 ---
 
 # Day 122 · Practice
 
 **DSA topic:** Autocomplete and word dictionaries
 **System design topic:** Idempotency and exactly-once delivery
+
+**Theme:** Design patterns II: observer, decorator, adapter
 
 ---
 
@@ -169,7 +171,28 @@ Two of the seven are not fixed by an idempotency key at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Observer with callbacks, decorator as wrapper, adapter as class
+- **Go** — Observer with channels, decorator as wrapping interface, adapter
+- **C++** — Observer with std::function, decorator, adapter
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -188,7 +211,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    at-least-once plus idempotent handlers, what Kafka actually promises, and the one case that is genuinely
    exactly-once because only one store is involved.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you notify five parts of the program when a value changes?
+2. 
+3.
 
 ## Before you move on
 
@@ -219,4 +248,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why the dedup store must be strongly consistent.
 - [ ] I know which way I fail when the dedup store is down, and why.
 - [ ] I can name two things idempotency does not protect.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

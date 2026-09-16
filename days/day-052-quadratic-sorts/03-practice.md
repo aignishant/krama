@@ -2,13 +2,15 @@
 day: 52
 track: practice
 title: "Practice — Bubble, selection and insertion sort, and what each one teaches"
-status: written
+status: draft
 ---
 
 # Day 052 · Practice
 
 **DSA topic:** Bubble, selection and insertion sort, and what each one teaches
 **System design topic:** Common object-oriented interview questions
+
+**Theme:** Logging that helps at 3am
 
 ---
 
@@ -139,7 +141,28 @@ Run each, then explain the output before you read it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — logging, structlog, levels, and JSON output
+- **Go** — log/slog: structured, levelled, and with context
+- **C++** — spdlog: sinks, levels, and formatting
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -155,7 +178,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Comparisons against writes with the numbers, best cases, adaptivity, and stability — ending on
    the one case where selection sort genuinely wins.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What do you log, and what must you never log?
+2. 
+3.
 
 ## Before you move on
 
@@ -169,4 +198,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered all twelve rapid-fire questions in three beats each, inside forty-five seconds.
 - [ ] I can draw the abstract-class-against-interface diagram in any tool and say which triangle is
       which.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

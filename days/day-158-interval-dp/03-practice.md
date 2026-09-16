@@ -2,13 +2,15 @@
 day: 158
 track: practice
 title: "Practice — Interval DP"
-status: written
+status: draft
 ---
 
 # Day 158 · Practice
 
 **DSA topic:** Interval DP
 **System design topic:** Design YouTube
+
+**Theme:** Build E, day 3: time-series storage
 
 ---
 
@@ -185,7 +187,28 @@ Six of the seven give no error at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Querying from Python
+- **Go** — Batching and forwarding
+- **C++** — A columnar time-series store with downsampling
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -201,7 +224,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The scope, chunked transcoding with the keyframe constraint, adaptive bitrate with the client deciding,
    storage tiered by popularity, and the ranked bill.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you store time-series data?
+2. 
+3.
 
 ## Before you move on
 
@@ -235,4 +264,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute storage per year and both tiering costs.
 - [ ] I know why we tier by popularity and why the restore path matters.
 - [ ] I can give the delivery bill and say what you build instead.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

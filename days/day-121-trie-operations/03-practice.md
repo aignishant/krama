@@ -2,13 +2,15 @@
 day: 121
 track: practice
 title: "Practice — Insert, search, and prefix search"
-status: written
+status: draft
 ---
 
 # Day 121 · Practice
 
 **DSA topic:** Insert, search, and prefix search
 **System design topic:** The saga pattern
+
+**Theme:** Design patterns I: strategy, factory, builder
 
 ---
 
@@ -197,7 +199,28 @@ Two of the seven are not fixed by better retry logic. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Strategy as functions, factories as classmethods, builders as kwargs
+- **Go** — Strategy as interfaces, factory functions, functional options
+- **C++** — Strategy with virtual or templates, factories, fluent builders
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -214,7 +237,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Retry forever with backoff, idempotent, dead-letter and alert — then the real answer: design so a lost
    compensation is survivable, with the expiry job and the window it defines.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Implement the builder pattern. Now say why Python rarely needs it.
+2. 
+3.
 
 ## Before you move on
 
@@ -247,4 +276,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know sagas win on contention, not latency.
 - [ ] I can give the operational cost of compensating at scale.
 - [ ] I know five situations where a saga is the wrong choice.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

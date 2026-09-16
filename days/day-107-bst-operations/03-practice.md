@@ -2,13 +2,15 @@
 day: 107
 track: practice
 title: "Practice — BST insert, search, and delete"
-status: written
+status: draft
 ---
 
 # Day 107 · Practice
 
 **DSA topic:** BST insert, search, and delete
 **System design topic:** Sharding, part two: rebalancing and hot spots
+
+**Theme:** Cleanup: context managers, defer, RAII
 
 ---
 
@@ -172,7 +174,28 @@ Two of the six cannot be fixed by changing configuration. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — with, __enter__/__exit__, and contextlib
+- **Go** — defer, its evaluation order, and the loop trap
+- **C++** — RAII, scope guards, and destructors that never throw
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -190,7 +213,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Plain modulo's 89 percent, the logical-shard indirection with what changes and what does not, the
    1/(N+1) result, and the ceiling that the shard count imposes.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you make sure a resource is released even if the code throws?
+2. 
+3.
 
 ## Before you move on
 
@@ -212,4 +241,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the four hot-spot causes with evidence and fixes.
 - [ ] I know which metric decides the diagnosis, and can compute the cluster ceiling.
 - [ ] I can explain why an unbounded key has no after-the-fact fix.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

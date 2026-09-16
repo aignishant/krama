@@ -2,13 +2,15 @@
 day: 75
 track: practice
 title: "Practice — A queue from two stacks, and a stack from queues"
-status: written
+status: draft
 ---
 
 # Day 075 · Practice
 
 **DSA topic:** A queue from two stacks, and a stack from queues
 **System design topic:** Template method and iterator
+
+**Theme:** Mini project 5: an inventory service over gRPC
 
 ---
 
@@ -174,7 +176,28 @@ Two of the seven are strategy, and the deciding question is the same for both. S
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Python client and CLI
+- **Go** — Go server: protobuf API, Postgres, streaming stock updates
+- **C++** — C++ client and a load generator
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -193,7 +216,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The count over an element's whole life, the one-way fact, the concrete thousand-element example,
    and the honest caveat about p99 latency.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Design a service API with protobuf. Now defend the field choices.
+2. 
+3.
 
 ## Before you move on
 
@@ -213,4 +242,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I wrote a one-shot generator bug and saw the second pass return zero.
 - [ ] I can quote 2 GB against 200 KB, and 5 × 10¹⁰ against 10⁷ row reads.
 - [ ] I can name the condition that would make me abandon the template for composition.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

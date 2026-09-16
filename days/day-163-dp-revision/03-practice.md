@@ -2,13 +2,15 @@
 day: 163
 track: practice
 title: "Practice — Dynamic programming revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 163 · Practice
 
 **DSA topic:** Dynamic programming revision and mock round
 **System design topic:** Design an e-commerce system
+
+**Theme:** Build F, day 3: the evaluator
 
 ---
 
@@ -191,7 +193,28 @@ After scoring the six problems:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A tree-walking evaluator with environments
+- **Go** — A tree-walking evaluator with environments
+- **C++** — A tree-walking evaluator with std::variant values
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -207,7 +230,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The 2,000:1 split, the read-then-write race and its fix, the three stock states with the TTL, two-phase
    payment with the void-versus-refund argument, and the saga with its outbox.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do closures capture variables in an interpreter?
+2. 
+3.
 
 ## Before you move on
 
@@ -241,4 +270,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can explain the saga, its compensations, and the outbox.
 - [ ] I know what breaks in a flash sale and the three mitigations.
 - [ ] I know the cost of sharding a counter.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 80
 track: practice
 title: "Practice — The dummy head trick"
-status: written
+status: draft
 ---
 
 # Day 080 · Practice
 
 **DSA topic:** The dummy head trick
 **System design topic:** Design an ATM
+
+**Theme:** Numbers: floats, decimals, and big integers
 
 ---
 
@@ -193,7 +195,28 @@ Compute each, showing the multiplication:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — float pitfalls, decimal, fractions, and arbitrary ints
+- **Go** — float64, math/big, and shopspring decimal
+- **C++** — double, long double, integer overflow, and a big-int library
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -212,7 +235,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Because it is a run, not a single node, so it is a `while`; plus a second branch for the
    everything-deleted case; and the dummy takes the count to zero rather than making it smaller.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why should you never store money as a float?
+2. 
+3.
 
 ## Before you move on
 
@@ -231,4 +260,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I found a cassette state where greedy fails and a solution exists.
 - [ ] I can say where the PIN is verified and what the ATM stores.
 - [ ] I can list the five behaviours a fake bank must produce for testing.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

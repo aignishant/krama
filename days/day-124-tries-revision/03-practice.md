@@ -2,13 +2,15 @@
 day: 124
 track: practice
 title: "Practice — Tries revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 124 · Practice
 
 **DSA topic:** Tries revision and mock round
 **System design topic:** Failure detection, heartbeats, and timeouts
+
+**Theme:** Functional style
 
 ---
 
@@ -163,7 +165,28 @@ Two of the seven are tuning problems and five are design problems. Sort them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — map, filter, reduce, comprehensions, and pure functions
+- **Go** — Higher-order functions, and why Go keeps it plain
+- **C++** — Ranges, views, and pure functions
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -180,7 +203,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    detection time as a formula and a number, the timeout chosen from a distribution, and fencing as the reason
    it does not have to be right.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is a pure function, and why does it matter for testing?
+2. 
+3.
 
 ## Before you move on
 
@@ -210,4 +239,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give the message-rate arithmetic for gossip versus all-to-all.
 - [ ] I can explain a fencing token and where it is checked.
 - [ ] I can say in one sentence why fencing beats a better detector.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

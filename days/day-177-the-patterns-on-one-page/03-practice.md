@@ -2,13 +2,15 @@
 day: 177
 track: practice
 title: "Practice — The pattern index, and monolith versus microservices"
-status: written
+status: draft
 ---
 
 # Day 177 · Practice
 
 **DSA topic:** The twenty patterns, on one page
 **System design topic:** Microservices versus monolith, argued both ways
+
+**Theme:** Capstone, day 7: observe and deploy
 
 ---
 
@@ -194,7 +196,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Tracing through the gateway
+- **Go** — Tracing across gRPC and Kafka; Kubernetes manifests
+- **C++** — Metrics from the engine
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -210,7 +233,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Both sides at full strength, the availability and latency arithmetic, the transaction cost, the modular
    monolith as the usual answer, and team count as the thing that actually decides.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Show me one order travelling through your system.
+2. 
+3.
 
 ## Before you move on
 
@@ -245,4 +274,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can describe the strangler fig and say why a rewrite fails.
 - [ ] I know team count decides this, not taste.
 - [ ] I know putting two services back together is a respectable outcome.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

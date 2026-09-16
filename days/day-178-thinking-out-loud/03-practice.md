@@ -2,13 +2,15 @@
 day: 178
 track: practice
 title: "Practice — Thinking out loud, and the design framework"
-status: written
+status: draft
 ---
 
 # Day 178 · Practice
 
 **DSA topic:** How to think out loud in a coding round
 **System design topic:** The system design interview framework, memorised
+
+**Theme:** Capstone, day 8: load test and review
 
 ---
 
@@ -214,7 +216,28 @@ For each, say what happens and how it is scored:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Load test with locust and a report
+- **Go** — Profile under load and fix the top hotspot
+- **C++** — Profile under load and fix the top hotspot
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -230,7 +253,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The six beats with their minutes, why the order is fixed, an estimation with "so…" after every number, the
    deep dive offered as a choice, and the closing checklist including one honest weakness.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is your p99 latency, and what limits it?
+2. 
+3.
 
 ## Before you move on
 
@@ -265,4 +294,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I walk the read path and the write path out loud.
 - [ ] I offer the deep dive as a choice.
 - [ ] I close with monitoring, SLO, security, cost, failure and one honest weakness.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 169
 track: practice
 title: "Practice — Jump game and reachability"
-status: written
+status: draft
 ---
 
 # Day 169 · Practice
 
 **DSA topic:** Jump game and reachability
 **System design topic:** Design a distributed job scheduler
+
+**Theme:** Choosing a language
 
 ---
 
@@ -190,7 +192,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — When Python: the honest case
+- **Go** — When Go: the honest case
+- **C++** — When C++: the honest case
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -206,7 +229,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    That scheduling is the easy part, `SKIP LOCKED`, the lease trade with no good setting and why, that
    exactly-once is unavailable, and the thundering herd.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Which language would you use for this service, and why?
+2. 
+3.
 
 ## Before you move on
 
@@ -242,4 +271,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know jitter defaults to zero and what risk that creates.
 - [ ] I know why a `DELETE` fails and what replaces it.
 - [ ] I know when this is a workflow engine and not a scheduler.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

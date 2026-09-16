@@ -2,13 +2,15 @@
 day: 95
 track: practice
 title: "Practice — N-Queens and constraint grids"
-status: written
+status: draft
 ---
 
 # Day 095 · Practice
 
 **DSA topic:** N-Queens and constraint grids
 **System design topic:** Design an online auction
+
+**Theme:** Rate limiting and retries
 
 ---
 
@@ -165,7 +167,28 @@ Two of the six are not concurrency problems. Name them and say what kind of prob
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A token bucket, and tenacity for retries with backoff
+- **Go** — golang.org/x/time/rate, and retries with jitter
+- **C++** — A token bucket class, and retries with jitter
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -183,7 +206,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The same three-set technique, the box index expression, the pre-computed blanks, and the one thing
    that differs — returning as soon as a solution is found.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why is retrying immediately worse than not retrying at all?
+2. 
+3.
 
 ## Before you move on
 
@@ -204,4 +233,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the lost update and say why it is worse than an error.
 - [ ] I can say what the authority for "bidding is open" must be, and why.
 - [ ] I can produce the 200 bids/second and 170 writes/second-on-one-row numbers.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

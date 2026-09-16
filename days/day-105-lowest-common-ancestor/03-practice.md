@@ -2,13 +2,15 @@
 day: 105
 track: practice
 title: "Practice — Lowest common ancestor"
-status: written
+status: draft
 ---
 
 # Day 105 · Practice
 
 **DSA topic:** Lowest common ancestor
 **System design topic:** Read replicas and replication lag
+
+**Theme:** Mini project 7: orders, events, and notifications
 
 ---
 
@@ -178,7 +180,28 @@ Two of the six are the same underlying number wearing different names. Name them
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Python notification worker consuming Kafka
+- **Go** — Go order service with gRPC, Postgres, and the outbox
+- **C++** — C++ pricing service called over gRPC
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -196,7 +219,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Search versus map, the walk-down rule, `O(height)` and `O(1)` against `O(n)` and `O(height)`, and the
    numbers at a million nodes.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Design an order pipeline with a notification step. Where can it lose a message?
+2. 
+3.
 
 ## Before you move on
 
@@ -218,4 +247,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can describe monotonic reads and say why it looks like data loss.
 - [ ] I can state the every-replica-applies-every-write ceiling with the table.
 - [ ] I know how to measure lag honestly and what to do when it exceeds a threshold.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

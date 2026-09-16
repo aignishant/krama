@@ -2,13 +2,15 @@
 day: 172
 track: practice
 title: "Practice — Bit tricks, logging and tracing"
-status: written
+status: draft
 ---
 
 # Day 172 · Practice
 
 **DSA topic:** The bit tricks every interview uses
 **System design topic:** Logging and distributed tracing
+
+**Theme:** Capstone, day 2: the gateway
 
 ---
 
@@ -170,7 +172,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — FastAPI gateway: auth, validation, and gRPC calls
+- **Go** — Gateway middleware for auth tokens
+- **C++** — Nothing today; C++ waits for pricing
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -187,7 +210,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    waterfall for waiting rather than working, then logs filtered by the same id — and the sampling policy that
    means you still have the trace.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What belongs in an API gateway?
+2. 
+3.
 
 ## Before you move on
 
@@ -218,4 +247,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name six things that must never be logged, and what to log instead.
 - [ ] I know why services write to standard output rather than over the network.
 - [ ] I can describe today's request path out loud, from the front door to the last service.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

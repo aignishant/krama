@@ -2,13 +2,15 @@
 day: 167
 track: practice
 title: "Practice — Merging intervals"
-status: written
+status: draft
 ---
 
 # Day 167 · Practice
 
 **DSA topic:** Merging intervals
 **System design topic:** Design a leaderboard
+
+**Theme:** Go interview questions
 
 ---
 
@@ -192,7 +194,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — How Python answers the same questions
+- **Go** — The forty questions: goroutines, channels, interfaces, nil, slices, GC
+- **C++** — How C++ answers the same questions
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -208,7 +231,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The top-ten versus rank asymmetry, the skip list with its spans, the sizing, why rank cannot be sharded,
    and exact-at-the-top with approximate below.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why can a nil pointer inside an interface be non-nil?
+2. 
+3.
 
 ## Before you move on
 
@@ -242,4 +271,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give the composite score and its precision bound.
 - [ ] I know the window TTL design and the write amplification.
 - [ ] I know Redis is the serving structure, and the rebuild path.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

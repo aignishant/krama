@@ -2,13 +2,15 @@
 day: 57
 track: practice
 title: "Practice — Stability, and what Python's sort actually does"
-status: written
+status: draft
 ---
 
 # Day 057 · Practice
 
 **DSA topic:** Stability, and what Python's sort actually does
 **System design topic:** Liskov substitution
+
+**Theme:** Authentication: hashing and tokens
 
 ---
 
@@ -175,7 +177,28 @@ Three are legitimate. For the others, say what the real fix is.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — bcrypt/argon2, PyJWT, and a login flow
+- **Go** — bcrypt, golang-jwt, and a login flow
+- **C++** — Argon2 via libsodium, jwt-cpp, and a login flow
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -191,7 +214,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The rule about neighbour swaps against long-distance swaps, the one character in each stable sort
    that makes it so, and the three-element selection-sort counter-example.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you store a password?
+2. 
+3.
 
 ## Before you move on
 
@@ -202,4 +231,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give three facts about Timsort and quote the sorted-versus-random timing.
 - [ ] I ran the square-rectangle failure and can state the unwritten promise in one sentence.
 - [ ] I wrote a contract test suite and watched it catch a deliberate substitution violation.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

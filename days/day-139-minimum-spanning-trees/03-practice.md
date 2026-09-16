@@ -2,13 +2,15 @@
 day: 139
 track: practice
 title: "Practice — Minimum spanning trees: Kruskal and Prim"
-status: written
+status: draft
 ---
 
 # Day 139 · Practice
 
 **DSA topic:** Minimum spanning trees: Kruskal and Prim
 **System design topic:** ETL, batch pipelines, and where data goes to be counted
+
+**Theme:** Build A, day 4: consistent hashing
 
 ---
 
@@ -189,7 +191,28 @@ Two of the seven are caught by no check you can write. Name them and say what do
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Consistent hashing simulation in Python
+- **Go** — A hash ring and node add/remove in Go
+- **C++** — The hash ring in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -206,7 +229,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The DAG and topological order, partitioned idempotent jobs with the execution date as a parameter,
    resumption, backfills falling out for free, late-data policy, and data quality checks that stop the run.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What happens to the keys when you add a cache node?
+2. 
+3.
 
 ## Before you move on
 
@@ -239,4 +268,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know a failed check must stop the run.
 - [ ] I alert on the SLA, not on job failures.
 - [ ] I know what none of the checks catch, and what does.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

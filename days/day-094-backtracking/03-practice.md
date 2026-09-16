@@ -2,13 +2,15 @@
 day: 94
 track: practice
 title: "Practice — Backtracking: the undo step"
-status: written
+status: draft
 ---
 
 # Day 094 · Practice
 
 **DSA topic:** Backtracking: the undo step
 **System design topic:** Design snake and ladder
+
+**Theme:** WebSockets
 
 ---
 
@@ -178,7 +180,28 @@ Two of the six are not code problems. Say which, and what the actual fix is.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — websockets and FastAPI WebSocket routes
+- **Go** — gorilla/websocket or nhooyr, and a broadcast hub
+- **C++** — Boost.Beast or uWebSockets, and a broadcast hub
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -196,7 +219,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    One line — the validity check before the recursive call — plus the N-Queens numbers, and the sentence
    about why the undo is what makes that check affordable.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How does a WebSocket differ from HTTP?
+2. 
+3.
 
 ## Before you move on
 
@@ -217,4 +246,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can construct a board that loops, and write the validation that rejects it.
 - [ ] I can say where the win check goes and why.
 - [ ] I can give the 110 MB figure for 100,000 games and say what makes it that small.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 54
 track: practice
 title: "Practice — Quicksort and partitioning"
-status: written
+status: draft
 ---
 
 # Day 054 · Practice
 
 **DSA topic:** Quicksort and partitioning
 **System design topic:** Object-oriented design revision and interview questions
+
+**Theme:** Databases II: Postgres and connection pools
 
 ---
 
@@ -162,7 +164,28 @@ plainly that you cannot:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — psycopg 3 and asyncpg, and a connection pool
+- **Go** — pgx, pgxpool, and context-aware queries
+- **C++** — libpqxx: connections, transactions, and prepared statements
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -178,7 +201,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    In place and fast against guaranteed and stable, with the numbers — and the three situations where
    merge sort is the only answer.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why do you need a connection pool?
+2. 
+3.
 
 ## Before you move on
 
@@ -189,4 +218,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I ran the twenty-minute cinema design out loud, including the missing noun and the race.
 - [ ] I can name the check-then-write gap in six different prompts and give the atomic fix for each.
 - [ ] I can say which interfaces I would create and name the second implementation for each.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

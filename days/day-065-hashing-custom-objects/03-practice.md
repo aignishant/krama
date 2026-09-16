@@ -2,13 +2,15 @@
 day: 65
 track: practice
 title: "Practice — Hashing your own objects"
-status: written
+status: draft
 ---
 
 # Day 065 · Practice
 
 **DSA topic:** Hashing your own objects
 **System design topic:** Factory and abstract factory
+
+**Theme:** Well-known types
 
 ---
 
@@ -174,7 +176,28 @@ Two of the six are "no" for the same reason and two are "yes" for the same reaso
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Timestamp, Duration, Any, Empty, and wrappers from Python
+- **Go** — timestamppb, durationpb, anypb, and emptypb
+- **C++** — google/protobuf/timestamp.pb.h and friends
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -192,7 +215,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The object stays in its old bucket, lookups compute a new one, `in` is False while `len` counts it
    and iteration yields it, no exception at all — and the one-word fix.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you represent a time in protobuf?
+2. 
+3.
 
 ## Before you move on
 
@@ -206,4 +235,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I wrote the registry factory and can say the three things it moved out of the business logic.
 - [ ] I can state the abstract-factory row/column asymmetry with numbers.
 - [ ] I can name two situations where I would deliberately not write a factory.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

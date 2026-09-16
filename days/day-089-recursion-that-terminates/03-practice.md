@@ -2,13 +2,15 @@
 day: 89
 track: practice
 title: "Practice — Writing a recursive function that terminates"
-status: written
+status: draft
 ---
 
 # Day 089 · Practice
 
 **DSA topic:** Writing a recursive function that terminates
 **System design topic:** Design a rate limiter, at the object level
+
+**Theme:** Plugins
 
 ---
 
@@ -202,7 +204,28 @@ Two of the six want the exact algorithm for the same reason. Name it.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — importlib, entry points, and a plugin registry
+- **Go** — Interfaces plus registration, and why the plugin package is avoided
+- **C++** — dlopen, shared libraries, and a C plugin ABI
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -220,7 +243,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The boundary burst with the exact numbers, why predictability makes it worse, and the one case where
    it is still right.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you let users extend your tool?
+2. 
+3.
 
 ## Before you move on
 
@@ -241,4 +270,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can express a rate and a burst as two independent token-bucket knobs.
 - [ ] I can describe the `INCR`/`EXPIRE` race and its symptom.
 - [ ] I can defend fail-open, and name the case where the opposite is right.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -240,7 +240,7 @@ def check_lang_lesson(path: Path) -> list[str]:
 
 def check_lang_practice(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8")
-    if "status: empty" in text[:400]:
+    if "status: written" not in text[:400]:
         return [f"{path.relative_to(ROOT).as_posix()}: not written yet"]
     rel = path.relative_to(ROOT).as_posix()
     problems: list[str] = []

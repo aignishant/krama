@@ -2,13 +2,15 @@
 day: 174
 track: practice
 title: "Practice — Number theory and deployments"
-status: written
+status: draft
 ---
 
 # Day 174 · Practice
 
 **DSA topic:** Primes, GCD, and modular arithmetic
 **System design topic:** Deployments: blue-green, canary, and rollback
+
+**Theme:** Capstone, day 4: the pricing engine
 
 ---
 
@@ -194,7 +196,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Price rules loaded from Python tooling
+- **Go** — Calling pricing over gRPC with deadlines
+- **C++** — The C++ pricing engine: rules, discounts, and sub-millisecond latency
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -211,7 +234,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Two versions at once against one database, the five strategies with what each costs, the rollback-time
    number, roll back before investigating, and expand-and-contract for the schema.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why is this service in C++?
+2. 
+3.
 
 ## Before you move on
 
@@ -247,4 +276,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why the backfill is batched and the gap before dropping is long.
 - [ ] I can do the canary arithmetic for 0.5 percent and 0.05 percent.
 - [ ] I can name five things no rollback can undo.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

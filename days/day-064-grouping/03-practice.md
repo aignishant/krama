@@ -2,13 +2,15 @@
 day: 64
 track: practice
 title: "Practice — Grouping: the key-design skill"
-status: written
+status: draft
 ---
 
 # Day 064 · Practice
 
 **DSA topic:** Grouping: the key-design skill
 **System design topic:** Singleton
+
+**Theme:** Field numbers, defaults, and schema evolution
 
 ---
 
@@ -173,7 +175,28 @@ class OrderService:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Reading old messages with a new schema in Python
+- **Go** — Reading old messages with a new schema in Go
+- **C++** — Reading old messages with a new schema in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -191,7 +214,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Adjacent runs only, the three different counts you get on unsorted, item-sorted and key-sorted
    input, and the O(n log n) you would pay for a job the dictionary does in O(n).
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Can you rename a field in protobuf? Can you change its type?
+2. 
+3.
 
 ## Before you move on
 
@@ -205,4 +234,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I found the `__new__` bug by setting a field in `__init__` and calling the class twice.
 - [ ] I can compute how many singletons exist across 4 containers of 8 workers, and what that breaks.
 - [ ] I rewrote a singleton as an injected dependency and counted the test setup lines both ways.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

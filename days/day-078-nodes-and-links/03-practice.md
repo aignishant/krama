@@ -2,13 +2,15 @@
 day: 78
 track: practice
 title: "Practice — Nodes and links: pointers without pointers"
-status: written
+status: draft
 ---
 
 # Day 078 · Practice
 
 **DSA topic:** Nodes and links: pointers without pointers
 **System design topic:** Design a parking lot
+
+**Theme:** Memory profiling and leaks
 
 ---
 
@@ -205,7 +207,28 @@ Add `ParkingLotFactory`, `AbstractTicketBuilder`, an observer per event, and a
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — tracemalloc and objgraph
+- **Go** — pprof heap profiles, allocs, and GC traces
+- **C++** — AddressSanitizer, LeakSanitizer, and valgrind
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -225,7 +248,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Copy the successor's value, unlink the successor, say that it is impossible for the tail and why,
    and note that it breaks any outside reference to the successor.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Memory grows for an hour and then the process dies. Walk me through it.
+2. 
+3.
 
 ## Before you move on
 
@@ -243,4 +272,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can sort eight rules into bookkeeping and policy without hesitating.
 - [ ] I can say which two extensions this design cannot absorb, and what they need instead.
 - [ ] I can state the race, the window, the collisions per day, and both fixes.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

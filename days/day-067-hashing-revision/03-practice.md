@@ -2,13 +2,15 @@
 day: 67
 track: practice
 title: "Practice — Hashing revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 067 · Practice
 
 **DSA topic:** Hashing revision and mock round
 **System design topic:** Prototype, and cloning objects
+
+**Theme:** gRPC I: a unary server in Go
 
 ---
 
@@ -168,7 +170,28 @@ Answer each in one sentence:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — grpcio: a Python server for the same service
+- **Go** — service in .proto, protoc-gen-go-grpc, and a Go server
+- **C++** — grpc++: a C++ server for the same service
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -185,7 +208,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The three cases with an example each, the two triggers that come first in the decision procedure,
    and the sentence about O(1) being an average rather than a bound.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is gRPC, and how is it different from REST?
+2. 
+3.
 
 ## Before you move on
 
@@ -199,4 +228,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I triggered a deep-copy failure on a lock and quoted the exact error.
 - [ ] I measured the deepcopy ratio myself and can quote it.
 - [ ] I can say when Prototype does *not* pay, with the arithmetic.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

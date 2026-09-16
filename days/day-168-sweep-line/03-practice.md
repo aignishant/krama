@@ -2,13 +2,15 @@
 day: 168
 track: practice
 title: "Practice — Meeting rooms and the sweep line"
-status: written
+status: draft
 ---
 
 # Day 168 · Practice
 
 **DSA topic:** Meeting rooms and the sweep line
 **System design topic:** Design an ad click aggregator
+
+**Theme:** C++ interview questions
 
 ---
 
@@ -193,7 +195,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — How Python answers the same questions
+- **Go** — How Go answers the same questions
+- **C++** — The forty questions: virtual, smart pointers, move, RAII, UB, templates
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -209,7 +232,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Aggregate on the way in, event time versus processing time with watermarks, why a Bloom filter is wrong
    here, the cross-product trap, and the two paths.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is the rule of five?
+2. 
+3.
 
 ## Before you move on
 
@@ -243,4 +272,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can compute the cross-product against the sparse rollups.
 - [ ] I know what a new dimension costs and when the decision must be made.
 - [ ] I know which number goes on the invoice and what I would alert on.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

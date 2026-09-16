@@ -2,13 +2,15 @@
 day: 103
 track: practice
 title: "Practice — Same tree, symmetric tree, and subtree"
-status: written
+status: draft
 ---
 
 # Day 103 · Practice
 
 **DSA topic:** Same tree, symmetric tree, and subtree
 **System design topic:** Content delivery networks
+
+**Theme:** Kubernetes for your service
 
 ---
 
@@ -175,7 +177,28 @@ Two of the six are security problems rather than performance problems. Name them
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Deployment, Service, probes, and resource limits
+- **Go** — Deployment, Service, probes, and resource limits
+- **C++** — Deployment, Service, probes, and resource limits
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -193,7 +216,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The crossed arguments, the counter-example where identical halves are not symmetric, and why an empty
    tree and a single node both qualify.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What does Kubernetes do when your pod dies?
+2. 
+3.
 
 ## Before you move on
 
@@ -215,4 +244,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name both CDN limits and the page-splitting fix.
 - [ ] I can explain why renaming beats purging, including the coexistence benefit.
 - [ ] I know the first three things to check when a hit rate is low.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

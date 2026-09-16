@@ -2,13 +2,15 @@
 day: 137
 track: practice
 title: "Practice — Bellman-Ford, and what negative edges break"
-status: written
+status: draft
 ---
 
 # Day 137 · Practice
 
 **DSA topic:** Bellman-Ford, and what negative edges break
 **System design topic:** Time-series and metrics stores
+
+**Theme:** Build A, day 2: the server core
 
 ---
 
@@ -196,7 +198,28 @@ Two of the seven are working as designed and need a different tool, not a fix. N
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Property tests against the server
+- **Go** — Sharded maps, TTLs, eviction, and the gRPC service
+- **C++** — A load generator
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -212,7 +235,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The four properties and what each buys, the compression figure, the sizing arithmetic for a real fleet,
    downsampling tiers — and cardinality raised before being asked.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you evict from a cache under memory pressure?
+2. 
+3.
 
 ## Before you move on
 
@@ -246,4 +275,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know histograms multiply cardinality by their bucket count.
 - [ ] I can give the four reasons Postgres fails, with numbers.
 - [ ] I know when Postgres and when TimescaleDB are the right answers.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

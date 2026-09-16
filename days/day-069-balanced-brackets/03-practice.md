@@ -2,13 +2,15 @@
 day: 69
 track: practice
 title: "Practice — Balanced brackets and the parsing family"
-status: written
+status: draft
 ---
 
 # Day 069 · Practice
 
 **DSA topic:** Balanced brackets and the parsing family
 **System design topic:** Decorator
+
+**Theme:** gRPC III: streaming
 
 ---
 
@@ -169,7 +171,28 @@ tells them apart.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Server streaming and bidirectional streaming from Python
+- **Go** — Server, client, and bidirectional streaming in Go
+- **C++** — Server and bidirectional streaming in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -185,7 +208,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Yes, with the cache-and-logger example and the 600-versus-4,000 number, retry versus timeout, and
    the auth case that is a security bug rather than a preference.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. When would you use a streaming RPC instead of a unary one?
+2. 
+3.
 
 ## Before you move on
 
@@ -200,4 +229,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can give three concrete ordering pairs and say what changes in each.
 - [ ] I know which decorator ordering is a security bug and why.
 - [ ] I measured the per-layer overhead myself and can say when it matters.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 79
 track: practice
 title: "Practice — Traversal, insertion, and deletion"
-status: written
+status: draft
 ---
 
 # Day 079 · Practice
 
 **DSA topic:** Traversal, insertion, and deletion
 **System design topic:** Design an elevator system
+
+**Theme:** Cache-friendly data layout
 
 ---
 
@@ -189,7 +191,28 @@ Two of the seven are legal or safety requirements rather than optimisations. Nam
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Why lists of objects are slow, and arrays of numbers are fast
+- **Go** — Slices of structs versus slices of pointers, measured
+- **C++** — Struct of arrays, contiguous memory, and false sharing
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -208,7 +231,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Starvation, with the concrete request stream that causes it, why it shows up as the top floor
    complaining, and how LOOK removes it structurally rather than with a timeout.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why is iterating a linked list slower than iterating an array?
+2. 
+3.
 
 ## Before you move on
 
@@ -227,4 +256,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can explain why the car keeps two stop sets, with a floor that is in both.
 - [ ] I did the up-peak estimate and can say whether three lifts are enough and by how much.
 - [ ] I can say why the dispatcher has an interface and the stop ordering does not.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 170
 track: practice
 title: "Practice — Greedy revision and the mock round"
-status: written
+status: draft
 ---
 
 # Day 170 · Practice
 
 **DSA topic:** Greedy and intervals revision and mock round
 **System design topic:** High-level design revision and full mock
+
+**Theme:** Reading production code
 
 ---
 
@@ -179,7 +181,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A guided read of a popular Python service codebase
+- **Go** — A guided read of a popular Go service codebase
+- **C++** — A guided read of a popular C++ library
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -195,7 +218,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The six blocks, the four opening questions, the estimation ladder ending in one sentence, offering two deep
    dives, and volunteering what breaks.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. You join a team with a 200k-line codebase. Day one, what do you do?
+2. 
+3.
 
 ## Before you move on
 
@@ -230,4 +259,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can say why the end-of-exam spike is not a spike, with numbers.
 - [ ] I can name the three habits that read as senior.
 - [ ] I know what "interesting, but what about X" means and what to do.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

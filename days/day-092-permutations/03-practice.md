@@ -2,13 +2,15 @@
 day: 92
 track: practice
 title: "Practice — Permutations"
-status: written
+status: draft
 ---
 
 # Day 092 · Practice
 
 **DSA topic:** Permutations
 **System design topic:** Design a notification service
+
+**Theme:** Pub/sub patterns
 
 ---
 
@@ -173,7 +175,28 @@ instead.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Consumer groups, partitions, and ordering guarantees from Python
+- **Go** — Consumer groups, partitions, and ordering guarantees from Go
+- **C++** — Consumer groups, partitions, and ordering guarantees from C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -192,7 +215,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    One class, one registration line, one template per event, one preference value — and nothing in the
    dispatcher. Then say what the answer would have been if the dispatcher had an `if channel ==` in it.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What happens if your consumer crashes after processing but before committing?
+2. 
+3.
 
 ## Before you move on
 
@@ -212,4 +241,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can explain at-least-once delivery and write the compare-and-set.
 - [ ] I can produce the volume, storage and SMS-cost numbers with the multiplication shown.
 - [ ] I can say what breaks when ten million broadcast messages hit the same queue.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 133
 track: practice
 title: "Practice — Cycle detection in a directed graph"
-status: written
+status: draft
 ---
 
 # Day 133 · Practice
 
 **DSA topic:** Cycle detection in a directed graph
 **System design topic:** Object storage, S3-style
+
+**Theme:** Python, deep: the object model
 
 ---
 
@@ -188,7 +190,28 @@ Two of the seven produce a bill rather than an outage. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Descriptors, metaclasses, __new__, and the import system
+- **Go** — The nearest Go idea: reflection and struct tags
+- **C++** — The nearest C++ idea: templates and traits
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -204,7 +227,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Object store for bytes and database for the reference, presigned URLs so no bytes touch your servers,
    multipart for large files, a CDN in front — with the egress-versus-storage numbers as the reason.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is a metaclass, and have you ever needed one?
+2. 
+3.
 
 ## Before you move on
 
@@ -237,4 +266,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why a presigned URL alone fails behind a CDN.
 - [ ] I know why 11 nines is not a backup.
 - [ ] I can name four cases where object storage is wrong.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

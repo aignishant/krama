@@ -2,13 +2,15 @@
 day: 136
 track: practice
 title: "Practice — Dijkstra's algorithm"
-status: written
+status: draft
 ---
 
 # Day 136 · Practice
 
 **DSA topic:** Dijkstra's algorithm
 **System design topic:** Elasticsearch in a design
+
+**Theme:** Build A, day 1: a distributed cache. Design
 
 ---
 
@@ -181,7 +183,28 @@ Two of the seven need a reindex to fix. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Requirements and the Python client interface
+- **Go** — Requirements, the .proto API, and the Go server skeleton
+- **C++** — Requirements and the C++ client interface
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -198,7 +221,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Derived copy, never the source of truth, rebuildable. Outbox in one transaction, consumer, bulk index.
    Search returns ids and the app hydrates. Staleness as a number. Reconciliation as a requirement.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Design a distributed cache. Start with the API.
+2. 
+3.
 
 ## Before you move on
 
@@ -231,4 +260,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can size shards from data volume and give the heap and cache rules.
 - [ ] I can decompose staleness and say what I alert on.
 - [ ] I know what forcing a refresh per write does.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 86
 track: practice
 title: "Practice — Linked lists revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 086 · Practice
 
 **DSA topic:** Linked lists revision and mock round
 **System design topic:** Design BookMyShow
+
+**Theme:** Streaming large data
 
 ---
 
@@ -197,7 +199,28 @@ One of the five has an answer that is wrong in both directions until you add a q
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Generators, iterators over files, and chunked reads
+- **Go** — io.Reader, io.Writer, io.Pipe, and composing readers
+- **C++** — std::istream, iterators, and chunked reads
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -217,7 +240,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    the front-insertion measurement, and the honest costs — six times the memory and twice the traversal
    time.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why is io.Reader everywhere in Go?
+2. 
+3.
 
 ## Before you move on
 
@@ -236,4 +265,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can write the conditional confirm and name the failure it prevents.
 - [ ] I can say which number justifies caching the map and which says sharding will not help.
 - [ ] I can defend a ten-minute hold with two numbers.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

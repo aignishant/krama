@@ -2,13 +2,15 @@
 day: 141
 track: practice
 title: "Practice — Multi-source BFS and 0-1 BFS"
-status: written
+status: draft
 ---
 
 # Day 141 · Practice
 
 **DSA topic:** Multi-source BFS and 0-1 BFS
 **System design topic:** Push notifications, end to end
+
+**Theme:** Build B, day 1: a job queue. Design
 
 ---
 
@@ -171,7 +173,28 @@ Two of the seven are security or privacy problems rather than performance. Name 
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Requirements and the FastAPI submit/status API
+- **Go** — Requirements, the .proto job schema, and the Go worker skeleton
+- **C++** — Requirements and the C++ compute worker skeleton
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -187,7 +210,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The three hops and which you control, the token and its silent invalidation, "accepted is not delivered",
    push-as-a-nudge with the 4 KB limit as evidence, and collapse keys plus per-user throttling.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Design a background job system.
+2. 
+3.
 
 ## Before you move on
 
@@ -220,4 +249,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I chunk by key range, never `LIMIT/OFFSET`.
 - [ ] I can quote token churn and its effect on a fan-out.
 - [ ] I can name five ways to control notification volume.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 134
 track: practice
 title: "Practice — Topological sort"
-status: written
+status: draft
 ---
 
 # Day 134 · Practice
 
 **DSA topic:** Topological sort
 **System design topic:** Blob storage versus storing files in the database
+
+**Theme:** One program, three languages, measured
 
 ---
 
@@ -175,7 +177,28 @@ Two of the seven are data loss and five are performance. Sort them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A JSON log parser in Python, profiled
+- **Go** — A JSON log parser in Go, profiled
+- **C++** — A JSON log parser in C++, profiled
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -191,7 +214,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The four numbers, then what the external store costs you — no transaction across two systems — then the
    ordering rule and the reconciliation job, then where the answer flips.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why is the Go version 20 times faster than Python here?
+2. 
+3.
 
 ## Before you move on
 
@@ -223,4 +252,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know what TOAST fixes and what it does not.
 - [ ] I can give the migration steps and the vacuum caveat.
 - [ ] I know the argument that settles it for user-facing files.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

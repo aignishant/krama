@@ -2,13 +2,15 @@
 day: 175
 track: practice
 title: "Practice — Combinatorics and security"
-status: written
+status: draft
 ---
 
 # Day 175 · Practice
 
 **DSA topic:** The combinatorics you actually need
 **System design topic:** Security in a design interview
+
+**Theme:** Capstone, day 5: events and workers
 
 ---
 
@@ -197,7 +199,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Notification and analytics workers on Kafka
+- **Go** — Inventory worker with idempotent consumption
+- **C++** — Nothing today; C++ is done
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -213,7 +236,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The four layers, the authorisation bug that actually happens with the fix in the query, the password
    arithmetic, token lifetime as blast radius, the five attacks with mechanisms, and the audit log.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What happens if the notification worker receives the same event twice?
+2. 
+3.
 
 ## Before you move on
 
@@ -252,4 +281,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can list four ways an audit log differs from an application log.
 - [ ] I know denied attempts carry the most signal.
 - [ ] I know the review question is "what was quietly bypassed", not "what is missing".
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

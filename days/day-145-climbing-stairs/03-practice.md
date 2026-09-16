@@ -2,13 +2,15 @@
 day: 145
 track: practice
 title: "Practice — Climbing stairs and the one-dimensional habit"
-status: written
+status: draft
 ---
 
 # Day 145 · Practice
 
 **DSA topic:** Climbing stairs and the one-dimensional habit
 **System design topic:** How to run a high-level design interview: the forty-five-minute script
+
+**Theme:** Build B, day 5: ship it
 
 ---
 
@@ -178,7 +180,28 @@ Two of the seven are recoverable in under a minute. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A dashboard page
+- **Go** — Metrics, graceful shutdown, and CI
+- **C++** — Benchmarks
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -194,7 +217,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The opening ninety seconds only: the framing sentence, four questions, the scope stated back with
    exclusions, and the move into sizing with a reason.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you know your job system is healthy?
+2. 
+3.
 
 ## Before you move on
 
@@ -225,4 +254,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know the phrasing for not knowing something.
 - [ ] I know what to do with five minutes left mid-deep-dive.
 - [ ] I have the universal opening sentence ready.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 96
 track: practice
 title: "Practice — Sudoku, word search, and grid backtracking"
-status: written
+status: draft
 ---
 
 # Day 096 · Practice
 
 **DSA topic:** Sudoku, word search, and grid backtracking
 **System design topic:** Low-level design revision and full mock
+
+**Theme:** Circuit breakers and idempotency keys
 
 ---
 
@@ -172,7 +174,28 @@ Say which of the five is the "inherently serial" case and what that buys you at 
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A circuit breaker class and idempotency keys in a store
+- **Go** — gobreaker, and idempotency keys in a store
+- **C++** — A circuit breaker class and idempotency keys in a store
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -191,7 +214,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    prompts resolve to a strategy, the four tells, and the two structural rules about replaceable
    dependencies and returned results.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. A client retries a payment. How do you make sure it is charged once?
+2. 
+3.
 
 ## Before you move on
 
@@ -211,4 +240,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can define checkmate and stalemate in one line each.
 - [ ] I can say why `Move` must carry the captured piece.
 - [ ] I can name three faults in my own chess design.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

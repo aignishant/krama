@@ -2,13 +2,15 @@
 day: 127
 track: practice
 title: "Practice — Breadth-first search on a graph"
-status: written
+status: draft
 ---
 
 # Day 127 · Practice
 
 **DSA topic:** Breadth-first search on a graph
 **System design topic:** Distributed locks
+
+**Theme:** Error architecture
 
 ---
 
@@ -177,7 +179,28 @@ Two of the seven are throughput problems and five are correctness problems. Sort
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A domain exception hierarchy mapped to HTTP codes
+- **Go** — Typed errors, sentinel errors, and mapping to gRPC codes
+- **C++** — std::expected with a domain error enum, mapped to codes
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -193,7 +216,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The six versions in order, each fixing the last, then the paused holder as the failure with no fix, then
    fencing at the resource — and "would a unique constraint do instead?" offered first.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. A row is missing. What does the user see, and how did it get there?
+2. 
+3.
 
 ## Before you move on
 
@@ -226,4 +255,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can distinguish efficiency and correctness locks and pick a store for each.
 - [ ] I can compute throughput under a lock and say what actually fixes it.
 - [ ] I look for a unique constraint before reaching for a lock.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

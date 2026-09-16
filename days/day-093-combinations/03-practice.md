@@ -2,13 +2,15 @@
 day: 93
 track: practice
 title: "Practice — Combinations and combination sum"
-status: written
+status: draft
 ---
 
 # Day 093 · Practice
 
 **DSA topic:** Combinations and combination sum
 **System design topic:** Design a file system
+
+**Theme:** Background jobs
 
 ---
 
@@ -168,7 +170,28 @@ Two of the six are not solvable inside this design as drawn. Name them and say w
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Celery or arq: enqueue, retry, and schedule
+- **Go** — asynq or a hand-built worker with Redis
+- **C++** — A worker process pulling from Redis lists
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -186,7 +209,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    `i + 1`, sort, and `i > start` — then the part that separates people: two skips in one loop with two
    different keywords, and what each wrong keyword costs.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. The email takes three seconds to send. Where does that code go?
+2. 
+3.
 
 ## Before you move on
 
@@ -207,4 +236,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can say what `ls` returns for a file path.
 - [ ] I can state the metadata memory for a million files and name the system it limits.
 - [ ] I can explain the S3 renaming contrast in two sentences.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

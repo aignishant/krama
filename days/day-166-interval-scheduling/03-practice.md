@@ -2,13 +2,15 @@
 day: 166
 track: practice
 title: "Practice — Interval scheduling"
-status: written
+status: draft
 ---
 
 # Day 166 · Practice
 
 **DSA topic:** Interval scheduling
 **System design topic:** Design search autocomplete at scale
+
+**Theme:** Python interview questions
 
 ---
 
@@ -211,7 +213,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — The forty questions: GIL, memory, decorators, generators, typing
+- **Go** — How Go answers the same questions
+- **C++** — How C++ answers the same questions
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -227,7 +250,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The latency budget and the per-keystroke traffic, precomputation instead of search, the two layers, and
    where the delivery wins actually are.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is the GIL, and when does it matter?
+2. 
+3.
 
 ## Before you move on
 
@@ -261,4 +290,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know the three client-side reductions and their combined factor.
 - [ ] I know the client-filtering guard and what a cancellable request prevents.
 - [ ] I know why filtering runs at serve time too, and which way the asymmetry points.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

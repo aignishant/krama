@@ -2,13 +2,15 @@
 day: 176
 track: practice
 title: "Practice — Bits and maths mock, and cost"
-status: written
+status: draft
 ---
 
 # Day 176 · Practice
 
 **DSA topic:** Bits and maths revision and mock round
 **System design topic:** Cost: the constraint nobody mentions
+
+**Theme:** Capstone, day 6: resilience
 
 ---
 
@@ -205,7 +207,28 @@ For each, say what happens and whether anything reports it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Timeouts, retries, and a circuit breaker in the gateway
+- **Go** — Deadlines, retries, and idempotency keys across services
+- **C++** — Load shedding in the pricing engine
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -221,7 +244,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The four line items with real multiplication, the two lines that appear on no diagram, the total, cost per
    user, and the two changes you would make.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Kill the pricing service. What does the user see?
+2. 
+3.
 
 ## Before you move on
 
@@ -250,4 +279,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know a cost bug pages nobody, and the alert that fixes that.
 - [ ] I can give cost per user and per thousand requests for a stated system.
 - [ ] I know to ask what an hour of downtime costs before buying a nine.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

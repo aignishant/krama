@@ -2,13 +2,15 @@
 day: 76
 track: practice
 title: "Practice — LRU cache: the structure interviewers love"
-status: written
+status: draft
 ---
 
 # Day 076 · Practice
 
 **DSA topic:** LRU cache: the structure interviewers love
 **System design topic:** Design patterns revision and interview questions
+
+**Theme:** Benchmarking
 
 ---
 
@@ -175,7 +177,28 @@ constant, live with it for a day, and remove it.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — timeit, pytest-benchmark, and pyperf
+- **Go** — testing.B, b.N, benchstat, and allocation counts
+- **C++** — Google Benchmark and DoNotOptimize
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -193,7 +216,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    State, Template Method, Command and Decorator, one sentence each, plus the line of code in which
    the difference is visible.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you prove your change made it faster?
+2. 
+3.
 
 ## Before you move on
 
@@ -212,4 +241,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can say the break-even numbers and the rule of three.
 - [ ] I can name three patterns I have already used without knowing it.
 - [ ] I have a real answer ready for "a pattern you removed".
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

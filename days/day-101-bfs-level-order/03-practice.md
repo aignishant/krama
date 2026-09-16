@@ -2,13 +2,15 @@
 day: 101
 track: practice
 title: "Practice — Breadth-first traversal: level order"
-status: written
+status: draft
 ---
 
 # Day 101 · Practice
 
 **DSA topic:** Breadth-first traversal: level order
 **System design topic:** Caching: the single biggest win
+
+**Theme:** Distributed locks and leader election
 
 ---
 
@@ -180,7 +182,28 @@ Two of the six are not availability problems. Name them and say what they are.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Redis locks and their limits
+- **Go** — etcd leases, leader election, and the lock lease trap
+- **C++** — Redis locks and their limits
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -198,7 +221,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The stampede described with the burst arithmetic, per-key locking and jittered TTLs as the fixes, and
    refresh-ahead as the optional third.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you make sure only one instance runs a job?
+2. 
+3.
 
 ## Before you move on
 
@@ -220,4 +249,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name the three write patterns and which one loses data.
 - [ ] I can describe the stampede with numbers and name two fixes.
 - [ ] I can state the slow-versus-wrong rule and give something I would never cache.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 56
 track: practice
 title: "Practice — Counting sort, radix sort, and bucket sort"
-status: written
+status: draft
 ---
 
 # Day 056 · Practice
 
 **DSA topic:** Counting sort, radix sort, and bucket sort
 **System design topic:** Open for extension, closed for modification
+
+**Theme:** Caching with Redis
 
 ---
 
@@ -171,7 +173,28 @@ For each, say what the stable core is, what the published contract is, and what 
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — redis-py: GET, SET, EX, and cache-aside
+- **Go** — go-redis: GET, SET, pipelines, and cache-aside
+- **C++** — redis-plus-plus: GET, SET, and cache-aside
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -186,7 +209,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 3. *Why does radix sort need a stable sort?*
    The 457-and-657 example, what an unstable pass destroys, and why the failure is silent.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you keep the cache and the database consistent?
+2. 
+3.
 
 ## Before you move on
 
@@ -197,4 +226,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I traced radix sort by hand and can point at the pair whose order came from the previous pass.
 - [ ] I refactored the exporter and can give the before-and-after edit counts.
 - [ ] I can name three variations where a plug point would be a mistake, and say why for each.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

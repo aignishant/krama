@@ -2,13 +2,15 @@
 day: 143
 track: practice
 title: "Practice — What dynamic programming actually is"
-status: written
+status: draft
 ---
 
 # Day 143 · Practice
 
 **DSA topic:** What dynamic programming actually is
 **System design topic:** Bloom filters and probabilistic structures
+
+**Theme:** Build B, day 3: retries and dead letters
 
 ---
 
@@ -183,7 +185,28 @@ Two of the seven are correctness bugs rather than performance problems. Name the
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Retry policy in the API
+- **Go** — Exponential backoff, dead-letter queue, and poison messages
+- **C++** — Idempotent compute in C++
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -199,7 +222,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The guarantee in the right order, the sizing arithmetic with the 100 GB against 1.2 GB, the placement rule,
    what a false positive costs *in this system specifically*, and what the filter cannot do.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is a poison message?
+2. 
+3.
 
 ## Before you move on
 
@@ -232,4 +261,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why `PFMERGE` matters and what HLL cannot tell me.
 - [ ] I know Count-Min's error direction and what it is bad at.
 - [ ] I know the distributed-filter problem and its three answers.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

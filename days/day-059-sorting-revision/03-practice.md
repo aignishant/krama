@@ -2,13 +2,15 @@
 day: 59
 track: practice
 title: "Practice — Sorting revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 059 · Practice
 
 **DSA topic:** Sorting revision and mock round
 **System design topic:** Dependency inversion
+
+**Theme:** Docker for each language
 
 ---
 
@@ -186,7 +188,28 @@ Two of those six are cases where you do *not* own the interface. Name them and s
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A slim Python image with uv and a non-root user
+- **Go** — A multi-stage build to a scratch image
+- **C++** — A multi-stage CMake build to a distroless image
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -203,7 +226,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    `sorted()` and the honest reason, then the five cases where you would do something else, ending on
    "pick two of guaranteed, in place, stable".
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Why is your Docker image so large, and how would you shrink it?
+2. 
+3.
 
 ## Before you move on
 
@@ -216,4 +245,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I refactored `Invoicer` and can give both commands that prove the inversion is real.
 - [ ] I can state the difference between dependency injection and dependency inversion in one
       sentence.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

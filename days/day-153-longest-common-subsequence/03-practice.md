@@ -2,13 +2,15 @@
 day: 153
 track: practice
 title: "Practice — Longest common subsequence"
-status: written
+status: draft
 ---
 
 # Day 153 · Practice
 
 **DSA topic:** Longest common subsequence
 **System design topic:** Design a news feed
+
+**Theme:** Build D, day 3: WebSockets for the browser
 
 ---
 
@@ -171,7 +173,28 @@ Four of the seven give no error at all. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A FastAPI WebSocket gateway to the gRPC hub
+- **Go** — WebSocket to gRPC bridging
+- **C++** — Presence updates over gRPC
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -186,7 +209,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The read-to-write ratio, both fan-out strategies with numbers, the celebrity arithmetic, the hybrid, ids
    not content, and cursor pagination.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. The browser cannot open a gRPC stream. What do you do?
+2. 
+3.
 
 ## Before you move on
 
@@ -220,4 +249,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know hydration must be batched, with the numbers.
 - [ ] I know deletes are filtered at read, and why blocking is the exception.
 - [ ] I can say when I would not build any of this.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

@@ -2,13 +2,15 @@
 day: 126
 track: practice
 title: "Practice — Representing a graph: adjacency matrix versus adjacency list"
-status: written
+status: draft
 ---
 
 # Day 126 · Practice
 
 **DSA topic:** Representing a graph: adjacency matrix versus adjacency list
 **System design topic:** Circuit breakers and bulkheads
+
+**Theme:** Clean architecture
 
 ---
 
@@ -166,7 +168,28 @@ Two of the seven are configuration mistakes and five are design mistakes. Sort t
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Domain, application, infrastructure layers in a Python service
+- **Go** — Domain, application, infrastructure layers in a Go service
+- **C++** — Domain, application, infrastructure layers in a C++ service
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -182,7 +205,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The two-second exhaustion arithmetic first, then the bulkhead with Little's Law sizing, then the breaker
    with its three states, then the fallback decision — and the order in the request path.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you structure a service so the framework can be swapped?
+2. 
+3.
 
 ## Before you move on
 
@@ -212,4 +241,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can list the five fallbacks and the rule about what not to fall back on.
 - [ ] I know the order: bulkhead, breaker, retries, call.
 - [ ] I know why retries live inside the breaker.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

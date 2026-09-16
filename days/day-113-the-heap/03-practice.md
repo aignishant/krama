@@ -2,13 +2,15 @@
 day: 113
 track: practice
 title: "Practice — The heap: a tree stored in an array"
-status: written
+status: draft
 ---
 
 # Day 113 · Practice
 
 **DSA topic:** The heap: a tree stored in an array
 **System design topic:** Why distributed systems are hard
+
+**Theme:** Standard library tour II: containers
 
 ---
 
@@ -182,7 +184,28 @@ Two of the six are not fixed by retrying. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — collections: deque, Counter, defaultdict, OrderedDict
+- **Go** — container/list, container/ring, and why maps and slices win
+- **C++** — deque, list, set, priority_queue, and unordered containers
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -200,7 +223,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    A timeout is not a failure, the four possibilities, is-it-idempotent as the deciding question, backoff
    with jitter, and idempotency keys as what makes at-least-once safe.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Which container would you use for an LRU cache?
+2. 
+3.
 
 ## Before you move on
 
@@ -222,4 +251,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name seven defences and what each protects.
 - [ ] I can state Two Generals and FLP and what systems do instead.
 - [ ] I can name the four reasons to distribute, and say when not to.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

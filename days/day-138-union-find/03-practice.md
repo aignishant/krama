@@ -2,13 +2,15 @@
 day: 138
 track: practice
 title: "Practice — Union-Find: the disjoint set union"
-status: written
+status: draft
 ---
 
 # Day 138 · Practice
 
 **DSA topic:** Union-Find: the disjoint set union
 **System design topic:** Data warehouses: OLAP versus OLTP
+
+**Theme:** Build A, day 3: clients
 
 ---
 
@@ -180,7 +182,28 @@ Two of the seven are correctness problems and five are cost or performance. Sort
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A Python client with connection pooling and retries
+- **Go** — A Go client library
+- **C++** — A C++ client with connection pooling and retries
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -197,7 +220,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    replica as a half-answer, and the warehouse with its deliberate staleness — plus "how much data?" asked
    before recommending anything.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What does a good client library do for you?
+2. 
+3.
 
 ## Before you move on
 
@@ -230,4 +259,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know why per-byte pricing makes partitioning a financial control.
 - [ ] I know the threshold below which I would not build a warehouse.
 - [ ] I can name what I would use instead at a few hundred gigabytes.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

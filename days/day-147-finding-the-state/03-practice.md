@@ -2,13 +2,15 @@
 day: 147
 track: practice
 title: "Practice — Finding the state: the hardest part of DP"
-status: written
+status: draft
 ---
 
 # Day 147 · Practice
 
 **DSA topic:** Finding the state: the hardest part of DP
 **System design topic:** Design a pastebin
+
+**Theme:** Build C, day 2: WAL and memtable
 
 ---
 
@@ -183,7 +185,28 @@ Two of the seven are cost problems rather than correctness problems. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — A pure-Python reference implementation for testing
+- **Go** — A pure-Go reference implementation for testing
+- **C++** — Write-ahead log, fsync, and a sorted in-memory table
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -199,7 +222,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The sizing ending in "fewer writes, six times the storage", the split with the inline threshold,
    immutability as the enabling property, the three caching layers with numbers, and the takedown conflict.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What is a write-ahead log for?
+2. 
+3.
 
 ## Before you move on
 
@@ -231,4 +260,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can name five abuse defences.
 - [ ] I can state the caching-versus-takedown conflict and resolve it.
 - [ ] I know "unlisted" is not private and would say so in the product.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

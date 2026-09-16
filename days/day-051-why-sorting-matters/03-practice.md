@@ -2,13 +2,15 @@
 day: 51
 track: practice
 title: "Practice — Why sorting matters more than any single sorting algorithm"
-status: written
+status: draft
 ---
 
 # Day 051 · Practice
 
 **DSA topic:** Why sorting matters more than any single sorting algorithm
 **System design topic:** Modelling a real domain
+
+**Theme:** Configuration: flags, environment, files
 
 ---
 
@@ -148,7 +150,28 @@ without it:
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — argparse and typer, os.environ, and a settings class
+- **Go** — flag, cobra, os.Getenv, and a Config struct
+- **C++** — CLI11, getenv, and a Config struct
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -164,7 +187,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Half a trillion against twenty-one million, the class-change test, and the counter-example where
    sorting makes it twenty times worse for the same answer.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Where should a database password come from, and where should it never be?
+2. 
+3.
 
 ## Before you move on
 
@@ -177,4 +206,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
       boundaries.
 - [ ] I can define entity, value object, aggregate root, repository and ubiquitous language in one
       sentence each.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

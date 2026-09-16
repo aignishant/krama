@@ -2,13 +2,15 @@
 day: 49
 track: practice
 title: "Practice — Peak finding, and searching data that is structured but not sorted"
-status: written
+status: draft
 ---
 
 # Day 049 · Practice
 
 **DSA topic:** Peak finding, and searching data that is structured but not sorted
 **System design topic:** Composition over inheritance
+
+**Theme:** Routing and middleware
 
 ---
 
@@ -139,7 +141,28 @@ Say the one property shared by every "inherit" answer.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Routers, path parameters, dependencies, and middleware in FastAPI
+- **Go** — Method and path patterns in ServeMux, and a middleware chain
+- **C++** — Route patterns, pre-routing handlers, and a logging wrapper
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -155,7 +178,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    The general statement — binary search needs a discard proof, not sortedness — then this problem's
    proof, then two other days where the proof was something else.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How would you add request logging to every endpoint?
+2. 
+3.
 
 ## Before you move on
 
@@ -165,4 +194,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can say why finding the maximum is O(n) and cannot be beaten.
 - [ ] I refactored the notification hierarchy and gave the class count for four axes both ways.
 - [ ] I can name the property shared by every case where inheritance is still right.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

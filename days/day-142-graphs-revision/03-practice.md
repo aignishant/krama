@@ -2,13 +2,15 @@
 day: 142
 track: practice
 title: "Practice — Graphs revision and mock round"
-status: written
+status: draft
 ---
 
 # Day 142 · Practice
 
 **DSA topic:** Graphs revision and mock round
 **System design topic:** Geospatial indexing: geohash and quadtrees
+
+**Theme:** Build B, day 2: the queue and the worker
 
 ---
 
@@ -194,7 +196,28 @@ Two of the seven are working as designed. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — Submit, poll, and cancel from Python
+- **Go** — Redis Streams or Kafka, the worker loop, and acknowledgements
+- **C++** — The C++ worker consuming protobuf jobs
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -210,7 +233,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    Why a B-tree fails, the 2D-to-1D move, geohash prefixes with cell sizes, the boundary problem with its
    70% figure, the exact distance filter, and the write/read asymmetry that decides where the data lives.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. What happens if a worker dies mid-job?
+2. 
+3.
 
 ## Before you move on
 
@@ -242,4 +271,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I know the index narrows and never answers.
 - [ ] I can compute the write/read asymmetry for ride-hailing.
 - [ ] I know why live locations are ephemeral and what the TTL buys.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.

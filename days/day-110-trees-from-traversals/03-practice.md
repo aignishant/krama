@@ -2,13 +2,15 @@
 day: 110
 track: practice
 title: "Practice — Building a tree from its traversals"
-status: written
+status: draft
 ---
 
 # Day 110 · Practice
 
 **DSA topic:** Building a tree from its traversals
 **System design topic:** Capacity planning: QPS, storage, bandwidth
+
+**Theme:** Async, deep
 
 ---
 
@@ -179,7 +181,28 @@ Two of the six are not fixed by adding machines. Name them.
 
 ---
 
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — TaskGroup, semaphores, cancellation, and aiohttp
+- **Go** — errgroup, sync.Once, semaphores, and singleflight
+- **C++** — Futures, promises, and a coroutine task type
+
 ## Say these out loud
+
+### DSA and system design
 
 Three questions. Answer each one in two minutes, standing up, without looking at the lesson.
 
@@ -197,7 +220,13 @@ Three questions. Answer each one in two minutes, standing up, without looking at
    No in general, the two-node counter-example, the reason stated in terms of boundaries, and the full-tree
    exception with how the size is found.
 
----
+### Languages
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. Ten calls are in flight and one fails. What happens to the other nine?
+2. 
+3.
 
 ## Before you move on
 
@@ -219,4 +248,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I can list the five stages of autoscaling lag and say what it really saves.
 - [ ] I can say what each of the three resources scales with, and which is a ratchet.
 - [ ] I can produce the fully-loaded storage figure and name the two omitted steps.
-- [ ] I answered all three questions above out loud.
+- [ ] I answered the DSA, system design, and language questions out loud.
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.
