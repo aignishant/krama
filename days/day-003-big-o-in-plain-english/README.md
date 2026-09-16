@@ -29,11 +29,10 @@
 1. [01-dsa-big-o-in-plain-english.md](01-dsa-big-o-in-plain-english.md) — the DSA lesson
 2. [02-system-design-ip-addresses-ports-and-dns.md](02-system-design-ip-addresses-ports-and-dns.md) — the system design lesson
 3. [04-cpp-input-output.md](04-cpp-input-output.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-immutable-str-f-strings.md](05-lang-python-immutable-str-f-strings.md) — the Python lesson
-6. [06-lang-go-strings-are-bytes-runes.md](06-lang-go-strings-are-bytes-runes.md) — the Go lesson
-7. [07-lang-cpp-std-string-string-literals.md](07-lang-cpp-std-string-string-literals.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-immutable-str-f-strings.md](05-lang-python-immutable-str-f-strings.md) — the Python lesson
+5. [06-lang-go-strings-are-bytes-runes.md](06-lang-go-strings-are-bytes-runes.md) — the Go lesson
+6. [07-lang-cpp-std-string-string-literals.md](07-lang-cpp-std-string-string-literals.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

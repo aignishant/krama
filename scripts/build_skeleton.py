@@ -162,7 +162,10 @@ LANG_SECTIONS = [
         "A short side-by-side: the same idea in the other two languages, and the one line of "
         "difference that matters.",
     ),
-    ("The traps", "The near-miss that looks right, and the real error text pasted from a real run."),
+    (
+        "The traps",
+        "The near-miss that looks right, and the real error text pasted from a real run.",
+    ),
     (
         "Say it out loud",
         "How it gets asked, a ninety-second script, the three follow-ups, and a model answer.",
@@ -179,6 +182,13 @@ LANG_FILE_PREFIX = {
     "lang-cpp": "07-lang-cpp",
 }
 LANG_PRACTICE = "08-lang-practice.md"
+
+# Days completed with the combined DSA, system design and language practice format.
+UNIFIED_PRACTICE_DAYS = frozenset(range(1, 11))
+
+
+def practice_name(day: Day) -> str:
+    return "03-practice.md" if day.n in UNIFIED_PRACTICE_DAYS else LANG_PRACTICE
 
 
 def slugify(text: str) -> str:
@@ -367,7 +377,51 @@ def lang_practice_file(day: Day) -> str:
     )
 
 
+def combine_practice(core: str, languages: str) -> str:
+    """Keep every exercise, with one shared oral drill and completion checklist."""
+    oral = "## Say these out loud"
+    checklist = "## Before you move on"
+    core_work, core_end = core.split(oral, 1)
+    core_oral, core_checks = core_end.split(checklist, 1)
+    language_work, language_end = languages.split(oral, 1)
+    language_oral, language_checks = language_end.split(checklist, 1)
+    language_work = language_work.split("## Build these, in all three languages", 1)[1]
+    theme = next(line for line in languages.splitlines() if line.startswith("**Theme:**"))
+    core_work = core_work.replace("\n---\n\n## Code", f"\n{theme}\n\n---\n\n## Code")
+    checks = []
+    for line in (core_checks + language_checks).splitlines():
+        if line.startswith("- [ ]"):
+            if "answered all three questions" in line:
+                line = "- [ ] I answered the DSA, system design, and language questions out loud."
+            if line not in checks:
+                checks.append(line)
+        elif line.startswith("      ") and checks:
+            checks[-1] += "\n" + line
+    return (
+        core_work.rstrip()
+        + "\n\n## Build these, in all three languages"
+        + language_work
+        + oral
+        + "\n\n### DSA and system design\n"
+        + core_oral.strip().removesuffix("---")
+        + "\n\n### Languages\n"
+        + language_oral.strip().removesuffix("---")
+        + "\n\n"
+        + checklist
+        + "\n\n"
+        + "\n".join(checks)
+        + "\n"
+    )
+
+
 def practice_file(day: Day) -> str:
+    core = core_practice_file(day)
+    if day.n in UNIFIED_PRACTICE_DAYS:
+        return combine_practice(core, lang_practice_file(day))
+    return core
+
+
+def core_practice_file(day: Day) -> str:
     return "\n".join(
         [
             "---",
@@ -476,9 +530,17 @@ def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
         f"{start}. [{py}]({py}) — the Python lesson",
         f"{start + 1}. [{go}]({go}) — the Go lesson",
         f"{start + 2}. [{cpp}]({cpp}) — the C++ lesson",
-        f"{start + 3}. [{LANG_PRACTICE}]({LANG_PRACTICE}) — build it three times, then say it out loud",
+        f"{start + 3}. [{LANG_PRACTICE}]({LANG_PRACTICE}) "
+        "— build it three times, then say it out loud",
     ]
     sits.append(f"- Languages phase: **{langs.phase}**")
+
+    if day.n in UNIFIED_PRACTICE_DAYS:
+        order = [line for line in order if "practice.md" not in line]
+        order.append(
+            "0. [03-practice.md](03-practice.md) — DSA, system design, and all three languages"
+        )
+        order = [f"{i}. {line.split('. ', 1)[1]}" for i, line in enumerate(order, 1)]
 
     project: list[str] = []
     if langs.project:
@@ -539,7 +601,8 @@ def days_readme(days: list[Day]) -> str:
         cpp = d.cpp.title if d.cpp else ""
         theme = d.langs.theme + (" · **project**" if d.langs.project else "")
         lines.append(
-            f"| [{d.n:03d}]({d.folder}/README.md) | {d.dsa.title} | {d.sd.title} | {theme} | {cpp} |"
+            f"| [{d.n:03d}]({d.folder}/README.md) | {d.dsa.title} | "
+            f"{d.sd.title} | {theme} | {cpp} |"
         )
     lines.append("")
     return "\n".join(lines)
@@ -662,7 +725,8 @@ def main() -> int:
             targets.append((folder / cpp_name(day), lesson_file(day, day.cpp)))
         for lesson in day.langs.lessons:
             targets.append((folder / lang_lesson_name(lesson), lang_lesson_file(day, lesson)))
-        targets.append((folder / LANG_PRACTICE, lang_practice_file(day)))
+        if day.n not in UNIFIED_PRACTICE_DAYS:
+            targets.append((folder / LANG_PRACTICE, lang_practice_file(day)))
         for path, body in targets:
             if write(path, body, args.force):
                 written += 1

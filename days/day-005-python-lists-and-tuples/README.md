@@ -29,11 +29,10 @@
 1. [01-dsa-python-for-dsa-i-lists.md](01-dsa-python-for-dsa-i-lists.md) — the DSA lesson
 2. [02-system-design-http-the-request.md](02-system-design-http-the-request.md) — the system design lesson
 3. [04-cpp-vector-references.md](04-cpp-vector-references.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-def-default-arguments-args.md](05-lang-python-def-default-arguments-args.md) — the Python lesson
-6. [06-lang-go-func-multiple-return-values.md](06-lang-go-func-multiple-return-values.md) — the Go lesson
-7. [07-lang-cpp-declarations-definitions-overloading-default.md](07-lang-cpp-declarations-definitions-overloading-default.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-def-default-arguments-args.md](05-lang-python-def-default-arguments-args.md) — the Python lesson
+5. [06-lang-go-func-multiple-return-values.md](06-lang-go-func-multiple-return-values.md) — the Go lesson
+6. [07-lang-cpp-declarations-definitions-overloading-default.md](07-lang-cpp-declarations-definitions-overloading-default.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

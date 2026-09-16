@@ -13,7 +13,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from build_skeleton import LANG_PRACTICE, lang_lesson_name
+from build_skeleton import lang_lesson_name, practice_name
 from curriculum import DSA_PHASES, LANG_LABEL_FOR, LANG_PHASES, LANG_TRACKS, SD_PHASES, load
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,7 +62,7 @@ def main() -> None:
         for lesson in day.langs.lessons:
             if written(folder / lang_lesson_name(lesson)):
                 lang_done[lesson.track].add(day.n)
-        if written(folder / LANG_PRACTICE):
+        if written(folder / practice_name(day)):
             lang_practice_done.add(day.n)
 
     total = len(days)

@@ -29,11 +29,10 @@
 1. [01-dsa-how-your-code-actually-runs.md](01-dsa-how-your-code-actually-runs.md) — the DSA lesson
 2. [02-system-design-what-happens-when-you-type.md](02-system-design-what-happens-when-you-type.md) — the system design lesson
 3. [04-cpp-compiling-and-running.md](04-cpp-compiling-and-running.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-python3-a-file-and.md](05-lang-python-python3-a-file-and.md) — the Python lesson
-6. [06-lang-go-go-run-go-build.md](06-lang-go-go-run-go-build.md) — the Go lesson
-7. [07-lang-cpp-g-a-file-and.md](07-lang-cpp-g-a-file-and.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-python3-a-file-and.md](05-lang-python-python3-a-file-and.md) — the Python lesson
+5. [06-lang-go-go-run-go-build.md](06-lang-go-go-run-go-build.md) — the Go lesson
+6. [07-lang-cpp-g-a-file-and.md](07-lang-cpp-g-a-file-and.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -29,11 +29,10 @@
 1. [01-dsa-counting-steps-your-first-cost.md](01-dsa-counting-steps-your-first-cost.md) — the DSA lesson
 2. [02-system-design-client-and-server-explained-properly.md](02-system-design-client-and-server-explained-properly.md) — the system design lesson
 3. [04-cpp-types-numbers.md](04-cpp-types-numbers.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-dynamic-names-int-without.md](05-lang-python-dynamic-names-int-without.md) — the Python lesson
-6. [06-lang-go-static-types-int64-and.md](06-lang-go-static-types-int64-and.md) — the Go lesson
-7. [07-lang-cpp-fixed-width-ints-overflow.md](07-lang-cpp-fixed-width-ints-overflow.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-dynamic-names-int-without.md](05-lang-python-dynamic-names-int-without.md) — the Python lesson
+5. [06-lang-go-static-types-int64-and.md](06-lang-go-static-types-int64-and.md) — the Go lesson
+6. [07-lang-cpp-fixed-width-ints-overflow.md](07-lang-cpp-fixed-width-ints-overflow.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

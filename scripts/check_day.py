@@ -19,10 +19,11 @@ from pathlib import Path
 from build_skeleton import (
     CPP_SECTIONS,
     DSA_SECTIONS,
-    LANG_PRACTICE,
     LANG_SECTIONS,
     SD_SECTIONS,
+    UNIFIED_PRACTICE_DAYS,
     lang_lesson_name,
+    practice_name,
 )
 from curriculum import LANG_LABEL_FOR, load
 
@@ -205,9 +206,7 @@ def check_lang_lesson(path: Path) -> list[str]:
         words = len(story.split())
         if words > 400:
             problems.append(f"{rel}: §2 story is {words} words, contract says 200-400")
-        hits = sorted(
-            {j for j in LANG_JARGON if re.search(rf"\b{re.escape(j)}\b", story, re.I)}
-        )
+        hits = sorted({j for j in LANG_JARGON if re.search(rf"\b{re.escape(j)}\b", story, re.I)})
         if hits:
             problems.append(f"{rel}: §2 story uses technical words: {', '.join(hits[:6])}")
 
@@ -295,9 +294,13 @@ def check_day(n: int) -> tuple[bool, list[str]]:
             problems.append(
                 f"days/{day.folder}: missing the {LANG_LABEL_FOR[lesson.track]} lesson {path.name}"
             )
-    lang_practice = folder / LANG_PRACTICE
+    lang_practice = folder / practice_name(day)
     if not lang_practice.exists():
-        problems.append(f"days/{day.folder}: missing {LANG_PRACTICE}")
+        problems.append(f"days/{day.folder}: missing {lang_practice.name}")
+    if day.n in UNIFIED_PRACTICE_DAYS:
+        practices = sorted(folder.glob("*practice.md"))
+        if practices != [folder / "03-practice.md"]:
+            problems.append(f"days/{day.folder}: expected only 03-practice.md")
 
     if len(dsa) == 1:
         problems += check_lesson(dsa[0], DSA_SECTIONS)
@@ -305,7 +308,11 @@ def check_day(n: int) -> tuple[bool, list[str]]:
         problems += check_lesson(sd[0], SD_SECTIONS)
     # The C++ contest lesson is optional, so an unwritten one is not a failure of the
     # day — it is only held to the contract once somebody has written it.
-    if day.cpp and len(cpp) == 1 and "status: empty" not in cpp[0].read_text(encoding="utf-8")[:400]:
+    if (
+        day.cpp
+        and len(cpp) == 1
+        and "status: empty" not in cpp[0].read_text(encoding="utf-8")[:400]
+    ):
         problems += check_lesson(cpp[0], CPP_SECTIONS)
     for path in lang_paths:
         if path.exists():

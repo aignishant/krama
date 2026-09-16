@@ -24,6 +24,12 @@ Then open [`days/day-001-how-your-code-actually-runs/README.md`](days/day-001-ho
 
 ## What a day looks like
 
+Days **001–010** include the DSA and system design lessons plus Python, Go, and
+C++ language lessons (`05-lang-*`, `06-lang-*`, and `07-lang-*`). Read the lessons,
+then use **`03-practice.md`** for all exercises, oral questions, and the completion
+checklist. These ten days have no separate language practice file. Later days
+currently retain `08-lang-practice.md` while awaiting the same consolidation.
+
 ```
 days/day-001-how-your-code-actually-runs/
     README.md                                    the hub — today in one screen
@@ -125,11 +131,10 @@ To write a day, ask Claude:
 
 ## The second course: Krama Languages
 
-[`langs/`](langs/README.md) is a separate 180-day course in the same repository:
-**Python, Go, and C++ side by side**, one theme a day in all three, with Protocol
-Buffers and gRPC carried by the Go track. It has its own driver (`langs/l`), its own
-syllabus (`langs/scripts/curriculum.py`), and its own contract. Write a day with
-`/day-langs N`.
+Language lessons now live inside each day in `days/`: **Python, Go, and C++ side
+by side**, one theme a day in all three, with Protocol Buffers and gRPC carried by
+the Go track. Their syllabus lives in `scripts/syllabus/langs/`, and the shared
+`./k` commands generate and check them alongside DSA and system design.
 
 ## How the repo is put together
 

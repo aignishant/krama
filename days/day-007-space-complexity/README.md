@@ -25,11 +25,10 @@
 
 1. [01-dsa-space-complexity-and-what-in-place.md](01-dsa-space-complexity-and-what-in-place.md) — the DSA lesson
 2. [02-system-design-what-a-web-server-actually.md](02-system-design-what-a-web-server-actually.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-dict-and-set-hashing.md](05-lang-python-dict-and-set-hashing.md) — the Python lesson
-5. [06-lang-go-map-make-lookup-with.md](06-lang-go-map-make-lookup-with.md) — the Go lesson
-6. [07-lang-cpp-std-unordered-map-std.md](07-lang-cpp-std-unordered-map-std.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-dict-and-set-hashing.md](05-lang-python-dict-and-set-hashing.md) — the Python lesson
+4. [06-lang-go-map-make-lookup-with.md](06-lang-go-map-make-lookup-with.md) — the Go lesson
+5. [07-lang-cpp-std-unordered-map-std.md](07-lang-cpp-std-unordered-map-std.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 
