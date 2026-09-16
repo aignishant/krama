@@ -29,11 +29,10 @@
 1. [01-dsa-nodes-and-links-pointers-without.md](01-dsa-nodes-and-links-pointers-without.md) — the DSA lesson
 2. [02-system-design-design-a-parking-lot.md](02-system-design-design-a-parking-lot.md) — the system design lesson
 3. [04-cpp-structs-pointers.md](04-cpp-structs-pointers.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-tracemalloc-and-objgraph.md](05-lang-python-tracemalloc-and-objgraph.md) — the Python lesson
-6. [06-lang-go-pprof-heap-profiles-allocs.md](06-lang-go-pprof-heap-profiles-allocs.md) — the Go lesson
-7. [07-lang-cpp-addresssanitizer-leaksanitizer-and-valgrind.md](07-lang-cpp-addresssanitizer-leaksanitizer-and-valgrind.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-tracemalloc-and-objgraph.md](05-lang-python-tracemalloc-and-objgraph.md) — the Python lesson
+5. [06-lang-go-pprof-heap-profiles-allocs.md](06-lang-go-pprof-heap-profiles-allocs.md) — the Go lesson
+6. [07-lang-cpp-addresssanitizer-leaksanitizer-and-valgrind.md](07-lang-cpp-addresssanitizer-leaksanitizer-and-valgrind.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

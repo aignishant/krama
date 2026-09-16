@@ -25,11 +25,10 @@
 
 1. [01-dsa-tries-revision-and-mock-round.md](01-dsa-tries-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-failure-detection-heartbeats-and-timeouts.md](02-system-design-failure-detection-heartbeats-and-timeouts.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-map-filter-reduce-comprehensions.md](05-lang-python-map-filter-reduce-comprehensions.md) — the Python lesson
-5. [06-lang-go-higher-order-functions-and.md](06-lang-go-higher-order-functions-and.md) — the Go lesson
-6. [07-lang-cpp-ranges-views-and-pure.md](07-lang-cpp-ranges-views-and-pure.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-map-filter-reduce-comprehensions.md](05-lang-python-map-filter-reduce-comprehensions.md) — the Python lesson
+4. [06-lang-go-higher-order-functions-and.md](06-lang-go-higher-order-functions-and.md) — the Go lesson
+5. [07-lang-cpp-ranges-views-and-pure.md](07-lang-cpp-ranges-views-and-pure.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

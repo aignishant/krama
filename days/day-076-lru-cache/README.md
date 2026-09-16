@@ -25,11 +25,10 @@
 
 1. [01-dsa-lru-cache-the-structure-interviewers.md](01-dsa-lru-cache-the-structure-interviewers.md) — the DSA lesson
 2. [02-system-design-design-patterns-revision-and-interview.md](02-system-design-design-patterns-revision-and-interview.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-timeit-pytest-benchmark-and.md](05-lang-python-timeit-pytest-benchmark-and.md) — the Python lesson
-5. [06-lang-go-testing-b-b-n.md](06-lang-go-testing-b-b-n.md) — the Go lesson
-6. [07-lang-cpp-google-benchmark-and-donotoptimize.md](07-lang-cpp-google-benchmark-and-donotoptimize.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-timeit-pytest-benchmark-and.md](05-lang-python-timeit-pytest-benchmark-and.md) — the Python lesson
+4. [06-lang-go-testing-b-b-n.md](06-lang-go-testing-b-b-n.md) — the Go lesson
+5. [07-lang-cpp-google-benchmark-and-donotoptimize.md](07-lang-cpp-google-benchmark-and-donotoptimize.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -24,17 +24,16 @@
 ## Project
 
 **Build B: a job queue (days 141-145)** — the languages half of today is a build day. The three
-lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-multi-source-bfs-and-0-1-bfs.md](01-dsa-multi-source-bfs-and-0-1-bfs.md) — the DSA lesson
 2. [02-system-design-push-notifications-end-to-end.md](02-system-design-push-notifications-end-to-end.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-requirements-and-the-fastapi.md](05-lang-python-requirements-and-the-fastapi.md) — the Python lesson
-5. [06-lang-go-requirements-the-proto-job.md](06-lang-go-requirements-the-proto-job.md) — the Go lesson
-6. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-requirements-and-the-fastapi.md](05-lang-python-requirements-and-the-fastapi.md) — the Python lesson
+4. [06-lang-go-requirements-the-proto-job.md](06-lang-go-requirements-the-proto-job.md) — the Go lesson
+5. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

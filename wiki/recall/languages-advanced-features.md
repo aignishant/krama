@@ -820,3 +820,39 @@ Source: [`days/day-040-2d-prefix-sums/05-lang-python-json-loads-json-dumps.md`](
 - A successful parse does not prove a valid application request.
 
 Further reading: [Official reference](https://docs.python.org/3.12/library/json.html).
+
+## Day 041 · lang-cpp — std::chrono, time zones, and <random>
+
+Source: [`days/day-041-prefix-revision/07-lang-cpp-std-chrono-time-zones.md`](../../days/day-041-prefix-revision/07-lang-cpp-std-chrono-time-zones.md)
+
+- Use wall time for instants and a monotonic clock for durations.
+- A time zone changes the display of an instant, not the instant.
+- Keep duration units explicit; converting to whole units can truncate.
+- Repeatable random engines serve tests, not security tokens.
+- Generate 16 secure bytes for 128 bits; encoding adds no randomness.
+
+Further reading: [C++ clocks and zones](https://learn.microsoft.com/en-us/cpp/standard-library/chrono?view=msvc-170) and [OpenSSL RAND_bytes](https://docs.openssl.org/3.0/man3/RAND_bytes/).
+
+## Day 041 · lang-go — time.Time, Duration, time.Now, and math/rand versus crypto/rand
+
+Source: [`days/day-041-prefix-revision/06-lang-go-time-time-duration-time.md`](../../days/day-041-prefix-revision/06-lang-go-time-time-duration-time.md)
+
+- Use wall time for instants and a monotonic clock for durations.
+- A time zone changes the display of an instant, not the instant.
+- Keep duration units explicit; converting to whole units can truncate.
+- Repeatable random engines serve tests, not security tokens.
+- Generate 16 secure bytes for 128 bits; encoding adds no randomness.
+
+Further reading: [Go time](https://pkg.go.dev/time) and [Go cryptographic randomness](https://pkg.go.dev/crypto/rand).
+
+## Day 041 · lang-python — datetime, zoneinfo, time.monotonic, and random versus secrets
+
+Source: [`days/day-041-prefix-revision/05-lang-python-datetime-zoneinfo-time-monotonic.md`](../../days/day-041-prefix-revision/05-lang-python-datetime-zoneinfo-time-monotonic.md)
+
+- Use wall time for instants and a monotonic clock for durations.
+- A time zone changes the display of an instant, not the instant.
+- Keep duration units explicit; converting to whole units can truncate.
+- Repeatable random engines serve tests, not security tokens.
+- Generate 16 secure bytes for 128 bits; encoding adds no randomness.
+
+Further reading: [Python clocks](https://docs.python.org/3.12/library/time.html), [time zones](https://docs.python.org/3.12/library/zoneinfo.html), and [secure tokens](https://docs.python.org/3.12/library/secrets.html).

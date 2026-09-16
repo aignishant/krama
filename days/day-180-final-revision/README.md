@@ -25,11 +25,10 @@
 
 1. [01-dsa-final-revision-and-the-week.md](01-dsa-final-revision-and-the-week.md) — the DSA lesson
 2. [02-system-design-final-revision-and-the-week.md](02-system-design-final-revision-and-the-week.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-the-hundred-questions-python.md](05-lang-python-the-hundred-questions-python.md) — the Python lesson
-5. [06-lang-go-the-hundred-questions-go.md](06-lang-go-the-hundred-questions-go.md) — the Go lesson
-6. [07-lang-cpp-the-hundred-questions-c.md](07-lang-cpp-the-hundred-questions-c.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-the-hundred-questions-python.md](05-lang-python-the-hundred-questions-python.md) — the Python lesson
+4. [06-lang-go-the-hundred-questions-go.md](06-lang-go-the-hundred-questions-go.md) — the Go lesson
+5. [07-lang-cpp-the-hundred-questions-c.md](07-lang-cpp-the-hundred-questions-c.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

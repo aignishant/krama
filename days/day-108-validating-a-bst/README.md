@@ -25,11 +25,10 @@
 
 1. [01-dsa-validating-a-binary-search-tree.md](01-dsa-validating-a-binary-search-tree.md) — the DSA lesson
 2. [02-system-design-consistent-hashing.md](02-system-design-consistent-hashing.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-property-slots-name-mangling.md](05-lang-python-property-slots-name-mangling.md) — the Python lesson
-5. [06-lang-go-unexported-fields-getters-by.md](06-lang-go-unexported-fields-getters-by.md) — the Go lesson
-6. [07-lang-cpp-private-const-methods-static.md](07-lang-cpp-private-const-methods-static.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-property-slots-name-mangling.md](05-lang-python-property-slots-name-mangling.md) — the Python lesson
+4. [06-lang-go-unexported-fields-getters-by.md](06-lang-go-unexported-fields-getters-by.md) — the Go lesson
+5. [07-lang-cpp-private-const-methods-static.md](07-lang-cpp-private-const-methods-static.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

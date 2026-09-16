@@ -25,11 +25,10 @@
 
 1. [01-dsa-stacks-and-queues-revision.md](01-dsa-stacks-and-queues-revision.md) — the DSA lesson
 2. [02-system-design-how-to-run-a-low-level.md](02-system-design-how-to-run-a-low-level.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-cprofile-py-spy-and.md](05-lang-python-cprofile-py-spy-and.md) — the Python lesson
-5. [06-lang-go-pprof-cpu-profiles-and.md](06-lang-go-pprof-cpu-profiles-and.md) — the Go lesson
-6. [07-lang-cpp-perf-and-flame-graphs.md](07-lang-cpp-perf-and-flame-graphs.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-cprofile-py-spy-and.md](05-lang-python-cprofile-py-spy-and.md) — the Python lesson
+4. [06-lang-go-pprof-cpu-profiles-and.md](06-lang-go-pprof-cpu-profiles-and.md) — the Go lesson
+5. [07-lang-cpp-perf-and-flame-graphs.md](07-lang-cpp-perf-and-flame-graphs.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -25,11 +25,10 @@
 
 1. [01-dsa-push-pop-and-heapify.md](01-dsa-push-pop-and-heapify.md) — the DSA lesson
 2. [02-system-design-the-cap-theorem-honestly.md](02-system-design-the-cap-theorem-honestly.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-str-methods-textwrap-string.md](05-lang-python-str-methods-textwrap-string.md) — the Python lesson
-5. [06-lang-go-strings-strconv-unicode-and.md](06-lang-go-strings-strconv-unicode-and.md) — the Go lesson
-6. [07-lang-cpp-std-string-std-string.md](07-lang-cpp-std-string-std-string.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-str-methods-textwrap-string.md](05-lang-python-str-methods-textwrap-string.md) — the Python lesson
+4. [06-lang-go-strings-strconv-unicode-and.md](06-lang-go-strings-strconv-unicode-and.md) — the Go lesson
+5. [07-lang-cpp-std-string-std-string.md](07-lang-cpp-std-string-std-string.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

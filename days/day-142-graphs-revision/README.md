@@ -25,11 +25,10 @@
 
 1. [01-dsa-graphs-revision-and-mock-round.md](01-dsa-graphs-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-geospatial-indexing-geohash-and-quadtrees.md](02-system-design-geospatial-indexing-geohash-and-quadtrees.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-submit-poll-and-cancel.md](05-lang-python-submit-poll-and-cancel.md) — the Python lesson
-5. [06-lang-go-redis-streams-or-kafka.md](06-lang-go-redis-streams-or-kafka.md) — the Go lesson
-6. [07-lang-cpp-the-c-worker-consuming.md](07-lang-cpp-the-c-worker-consuming.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-submit-poll-and-cancel.md](05-lang-python-submit-poll-and-cancel.md) — the Python lesson
+4. [06-lang-go-redis-streams-or-kafka.md](06-lang-go-redis-streams-or-kafka.md) — the Go lesson
+5. [07-lang-cpp-the-c-worker-consuming.md](07-lang-cpp-the-c-worker-consuming.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

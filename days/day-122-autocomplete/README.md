@@ -25,11 +25,10 @@
 
 1. [01-dsa-autocomplete-and-word-dictionaries.md](01-dsa-autocomplete-and-word-dictionaries.md) — the DSA lesson
 2. [02-system-design-idempotency-and-exactly-once-delivery.md](02-system-design-idempotency-and-exactly-once-delivery.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-observer-with-callbacks-decorator.md](05-lang-python-observer-with-callbacks-decorator.md) — the Python lesson
-5. [06-lang-go-observer-with-channels-decorator.md](06-lang-go-observer-with-channels-decorator.md) — the Go lesson
-6. [07-lang-cpp-observer-with-std-function.md](07-lang-cpp-observer-with-std-function.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-observer-with-callbacks-decorator.md](05-lang-python-observer-with-callbacks-decorator.md) — the Python lesson
+4. [06-lang-go-observer-with-channels-decorator.md](06-lang-go-observer-with-channels-decorator.md) — the Go lesson
+5. [07-lang-cpp-observer-with-std-function.md](07-lang-cpp-observer-with-std-function.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

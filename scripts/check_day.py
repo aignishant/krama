@@ -298,7 +298,11 @@ def check_day(n: int) -> tuple[bool, list[str]]:
     if not lang_practice.exists():
         problems.append(f"days/{day.folder}: missing {lang_practice.name}")
     if day.n in UNIFIED_PRACTICE_DAYS:
-        practices = sorted(folder.glob("*practice.md"))
+        practices = sorted(
+            path
+            for path in folder.glob("*.md")
+            if re.fullmatch(r"\d+-(?:lang-)?practice\.md", path.name)
+        )
         if practices != [folder / "03-practice.md"]:
             problems.append(f"days/{day.folder}: expected only 03-practice.md")
 

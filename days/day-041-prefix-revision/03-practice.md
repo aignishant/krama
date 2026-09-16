@@ -2,7 +2,7 @@
 day: 41
 track: practice
 title: "Practice — Prefix sums revision and mock round"
-status: draft
+status: written
 ---
 
 # Day 041 · Practice
@@ -110,22 +110,28 @@ the phase, portable.
 
 ## Build these, in all three languages
 
-*Three exercises, easiest first. Each one says what it is really testing. Every
-exercise is done three times: once in Python, once in Go, once in C++.*
+Build each exercise in Python, Go, and C++. Use today's lesson programs as the
+starting point; use OpenSSL for secure bytes in C++.
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Display a meeting at 2026-01-15 10:00 UTC in Asia/Kolkata; expect 15:30 on the same date. | Converting one instant with named zone rules rather than relabelling its hour. |
+| 2 | Time a sum of 0 through 999 using the monotonic clock, then report milliseconds with explicit units. | Separating an event timestamp from elapsed time; the sum must be 499500 and the duration nonnegative. |
+| 3 | Generate 16 secure bytes and encode them as 32 hex characters; separately replay two identically seeded simulation generators. | Secure randomness versus repeatability; check failures and never print an actual reset token. |
+
+For exercise 1 in C++, use the lesson's C++20 zone fragment with a library supporting
+time zones and an installed zone database. Report a missing dependency explicitly;
+do not replace a named zone with a fixed offset and claim the general problem solved.
+For exercise 2, also calculate a simulated wall difference from readings 100 and 95:
+it is -5 seconds, demonstrating why corrected wall time cannot time your database call.
 
 ## Compare
 
-*One sentence per language: what was easiest, what was hardest, and why.*
+Write one sentence for each language after running the exercises:
 
-- **Python** — datetime, zoneinfo, time.monotonic, and random versus secrets
-- **Go** — time.Time, Duration, time.Now, and math/rand versus crypto/rand
-- **C++** — std::chrono, time zones, and <random>
+- **Python** — Explain why datetime, time.monotonic, and secrets have separate jobs.
+- **Go** — Explain what time.Now retains and what serialising a time loses.
+- **C++** — Explain the duration units and which dependencies provide zones and secure bytes.
 
 ## Say these out loud
 
@@ -147,11 +153,12 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 
 ### Languages
 
-*Three questions from today. Answer each in two minutes, standing up, no notes.*
+Answer each in two minutes, standing up, without notes.
 
 1. Why should you not use the wall clock to measure elapsed time?
-2. 
-3.
+2. Why is 10:00 UTC the same instant as 15:30 in Kolkata on the example date?
+3. Why is a seeded simulation generator unsuitable for a reset token?
+
 
 ## Before you move on
 
@@ -165,3 +172,6 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 - [ ] I answered the DSA, system design, and language questions out loud.
 - [ ] All three programs run and I can explain every line.
 - [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] I converted the fixed meeting correctly in all three languages.
+- [ ] I measured elapsed time with a monotonic clock and named its units.
+- [ ] I generated secure bytes, checked failures, and explained why encoding adds no randomness.

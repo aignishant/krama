@@ -50,7 +50,7 @@ cheaper to define it again than to assume the reader knows it.
 - **038** — exactly, negatives, rule of zero, same remainder
 - **039** — code point, code unit, grapheme cluster, partition key
 - **040** — left, tree
-- **041** — connection, lazy loading, on first touch
+- **041** — connection, duration, lazy loading, on first touch
 - **042** — search space
 - **043** — monotone
 - **044** — anaemic model, fee, returned, run, upper bound

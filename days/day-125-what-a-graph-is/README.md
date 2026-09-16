@@ -29,11 +29,10 @@
 1. [01-dsa-what-a-graph.md](01-dsa-what-a-graph.md) — the DSA lesson
 2. [02-system-design-retries-backoff-and-thundering-herds.md](02-system-design-retries-backoff-and-thundering-herds.md) — the system design lesson
 3. [04-cpp-graphs-and-recursion.md](04-cpp-graphs-and-recursion.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-constructor-injection-with-protocols.md](05-lang-python-constructor-injection-with-protocols.md) — the Python lesson
-6. [06-lang-go-constructor-injection-with-interfaces.md](06-lang-go-constructor-injection-with-interfaces.md) — the Go lesson
-7. [07-lang-cpp-constructor-injection-with-interfaces.md](07-lang-cpp-constructor-injection-with-interfaces.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-constructor-injection-with-protocols.md](05-lang-python-constructor-injection-with-protocols.md) — the Python lesson
+5. [06-lang-go-constructor-injection-with-interfaces.md](06-lang-go-constructor-injection-with-interfaces.md) — the Go lesson
+6. [07-lang-cpp-constructor-injection-with-interfaces.md](07-lang-cpp-constructor-injection-with-interfaces.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -24,12 +24,10 @@
 ## Read in this order
 
 1. [01-dsa-top-k-problems.md](01-dsa-top-k-problems.md) — the DSA lesson
-2. [02-system-design-eventual-consistency-in-practice.md](02-system-design-eventual-consistency-in-practice.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-docstrings-sphinx-or-mkdocs.md](05-lang-python-docstrings-sphinx-or-mkdocs.md) — the Python lesson
-5. [06-lang-go-godoc-conventions-examples-that.md](06-lang-go-godoc-conventions-examples-that.md) — the Go lesson
-6. [07-lang-cpp-doxygen-and-a-readme.md](07-lang-cpp-doxygen-and-a-readme.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+2. [05-lang-python-docstrings-sphinx-or-mkdocs.md](05-lang-python-docstrings-sphinx-or-mkdocs.md) — the Python lesson
+3. [06-lang-go-godoc-conventions-examples-that.md](06-lang-go-godoc-conventions-examples-that.md) — the Go lesson
+4. [07-lang-cpp-doxygen-and-a-readme.md](07-lang-cpp-doxygen-and-a-readme.md) — the C++ lesson
+5. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -24,17 +24,16 @@
 ## Project
 
 **Build E: an observability toolkit (days 156-160)** — the languages half of today is a build day. The three
-lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-grid-dp-unique-paths.md](01-dsa-grid-dp-unique-paths.md) — the DSA lesson
 2. [02-system-design-design-whatsapp.md](02-system-design-design-whatsapp.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-requirements-and-the-dashboard.md](05-lang-python-requirements-and-the-dashboard.md) — the Python lesson
-5. [06-lang-go-requirements-the-proto-metrics.md](06-lang-go-requirements-the-proto-metrics.md) — the Go lesson
-6. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-requirements-and-the-dashboard.md](05-lang-python-requirements-and-the-dashboard.md) — the Python lesson
+4. [06-lang-go-requirements-the-proto-metrics.md](06-lang-go-requirements-the-proto-metrics.md) — the Go lesson
+5. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

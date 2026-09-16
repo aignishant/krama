@@ -48,7 +48,7 @@ is missing from this table has nothing written at all.
 | 038 | Subarray sum equals K: prefix plus hash map | Document databases | Shallow copy, deepcopy, and aliasing bugs | Slices share backing arrays; copy(); append aliasing | Copy constructors, std::move, and the rule of five |
 | 039 | Difference arrays: range updates, cheaply | Wide-column and time-series stores | str versus bytes, encode, decode, and UnicodeDecodeError | []byte, rune, the utf8 package, and strings.Builder | char, char8_t, std::string_view, and UTF-8 by hand |
 | 040 | 2D prefix sums and inclusion-exclusion | Choosing SQL or NoSQL in an interview | json.loads, json.dumps, dataclasses, and pydantic | encoding/json, struct tags, and omitempty | nlohmann/json: parsing, serialising, and from_json |
-| 041 | Prefix sums revision and mock round | Connection pools, ORMs, and the N+1 query | — | — | — |
+| 041 | Prefix sums revision and mock round | Connection pools, ORMs, and the N+1 query | datetime, zoneinfo, time.monotonic, and random versus secrets | time.Time, Duration, time.Now, and math/rand versus crypto/rand | std::chrono, time zones, and <random> |
 | 042 | Binary search: the idea and the invariant | Database revision and interview questions | — | — | — |
 | 043 | Writing binary search without off-by-one bugs | Why interviews ask object-oriented design at all | — | — | — |
 | 044 | First and last occurrence | Classes and objects | — | — | — |
@@ -189,4 +189,4 @@ is missing from this table has nothing written at all.
 | 179 | Full mock: two problems, forty-five minutes | Full mock: one high-level design, one low-level design | — | — | — |
 | 180 | Final revision, and the week before the interview | Final revision, and the week before the interview | — | — | — |
 
-**40 of 180 days fully written; 180 started.**
+**41 of 180 days fully written; 180 started.**

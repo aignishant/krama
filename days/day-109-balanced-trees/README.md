@@ -25,11 +25,10 @@
 
 1. [01-dsa-balanced-trees-and-why-balance.md](01-dsa-balanced-trees-and-why-balance.md) — the DSA lesson
 2. [02-system-design-back-of-the-envelope-estimation.md](02-system-design-back-of-the-envelope-estimation.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-mypy-strict-protocol-typevar.md](05-lang-python-mypy-strict-protocol-typevar.md) — the Python lesson
-5. [06-lang-go-generic-constraints-type-sets.md](06-lang-go-generic-constraints-type-sets.md) — the Go lesson
-6. [07-lang-cpp-concepts-requires-clauses-and.md](07-lang-cpp-concepts-requires-clauses-and.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-mypy-strict-protocol-typevar.md](05-lang-python-mypy-strict-protocol-typevar.md) — the Python lesson
+4. [06-lang-go-generic-constraints-type-sets.md](06-lang-go-generic-constraints-type-sets.md) — the Go lesson
+5. [07-lang-cpp-concepts-requires-clauses-and.md](07-lang-cpp-concepts-requires-clauses-and.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

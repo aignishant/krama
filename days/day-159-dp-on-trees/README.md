@@ -25,11 +25,10 @@
 
 1. [01-dsa-dp-on-trees.md](01-dsa-dp-on-trees.md) — the DSA lesson
 2. [02-system-design-design-netflix.md](02-system-design-design-netflix.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-a-fastapi-dashboard-and.md](05-lang-python-a-fastapi-dashboard-and.md) — the Python lesson
-5. [06-lang-go-alert-rules-and-notification.md](06-lang-go-alert-rules-and-notification.md) — the Go lesson
-6. [07-lang-cpp-query-api-in-c.md](07-lang-cpp-query-api-in-c.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-a-fastapi-dashboard-and.md](05-lang-python-a-fastapi-dashboard-and.md) — the Python lesson
+4. [06-lang-go-alert-rules-and-notification.md](06-lang-go-alert-rules-and-notification.md) — the Go lesson
+5. [07-lang-cpp-query-api-in-c.md](07-lang-cpp-query-api-in-c.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

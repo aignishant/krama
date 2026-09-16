@@ -25,11 +25,10 @@
 
 1. [01-dsa-same-tree-symmetric-tree.md](01-dsa-same-tree-symmetric-tree.md) — the DSA lesson
 2. [02-system-design-content-delivery-networks.md](02-system-design-content-delivery-networks.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-deployment-service-probes-and.md](05-lang-python-deployment-service-probes-and.md) — the Python lesson
-5. [06-lang-go-deployment-service-probes-and.md](06-lang-go-deployment-service-probes-and.md) — the Go lesson
-6. [07-lang-cpp-deployment-service-probes-and.md](07-lang-cpp-deployment-service-probes-and.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-deployment-service-probes-and.md](05-lang-python-deployment-service-probes-and.md) — the Python lesson
+4. [06-lang-go-deployment-service-probes-and.md](06-lang-go-deployment-service-probes-and.md) — the Go lesson
+5. [07-lang-cpp-deployment-service-probes-and.md](07-lang-cpp-deployment-service-probes-and.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

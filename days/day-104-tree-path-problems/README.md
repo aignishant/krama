@@ -25,11 +25,10 @@
 
 1. [01-dsa-path-problems-and-the-return-value.md](01-dsa-path-problems-and-the-return-value.md) — the DSA lesson
 2. [02-system-design-database-replication.md](02-system-design-database-replication.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-github-actions-uv-ruff.md](05-lang-python-github-actions-uv-ruff.md) — the Python lesson
-5. [06-lang-go-github-actions-go-vet.md](06-lang-go-github-actions-go-vet.md) — the Go lesson
-6. [07-lang-cpp-github-actions-cmake-sanitizers.md](07-lang-cpp-github-actions-cmake-sanitizers.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-github-actions-uv-ruff.md](05-lang-python-github-actions-uv-ruff.md) — the Python lesson
+4. [06-lang-go-github-actions-go-vet.md](06-lang-go-github-actions-go-vet.md) — the Go lesson
+5. [07-lang-cpp-github-actions-cmake-sanitizers.md](07-lang-cpp-github-actions-cmake-sanitizers.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

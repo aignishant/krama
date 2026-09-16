@@ -25,11 +25,10 @@
 
 1. [01-dsa-first-and-last-occurrence.md](01-dsa-first-and-last-occurrence.md) — the DSA lesson
 2. [02-system-design-classes-and-objects.md](02-system-design-classes-and-objects.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-pyproject-toml-wheels-and.md](05-lang-python-pyproject-toml-wheels-and.md) — the Python lesson
-5. [06-lang-go-go-build-flags-ldflags.md](06-lang-go-go-build-flags-ldflags.md) — the Go lesson
-6. [07-lang-cpp-cmake-targets-static-versus.md](07-lang-cpp-cmake-targets-static-versus.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-pyproject-toml-wheels-and.md](05-lang-python-pyproject-toml-wheels-and.md) — the Python lesson
+4. [06-lang-go-go-build-flags-ldflags.md](06-lang-go-go-build-flags-ldflags.md) — the Go lesson
+5. [07-lang-cpp-cmake-targets-static-versus.md](07-lang-cpp-cmake-targets-static-versus.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

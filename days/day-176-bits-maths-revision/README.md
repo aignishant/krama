@@ -25,11 +25,10 @@
 
 1. [01-dsa-bits-and-maths-revision.md](01-dsa-bits-and-maths-revision.md) — the DSA lesson
 2. [02-system-design-cost-the-constraint-nobody-mentions.md](02-system-design-cost-the-constraint-nobody-mentions.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-timeouts-retries-and-a.md](05-lang-python-timeouts-retries-and-a.md) — the Python lesson
-5. [06-lang-go-deadlines-retries-and-idempotency.md](06-lang-go-deadlines-retries-and-idempotency.md) — the Go lesson
-6. [07-lang-cpp-load-shedding-in-the.md](07-lang-cpp-load-shedding-in-the.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-timeouts-retries-and-a.md](05-lang-python-timeouts-retries-and-a.md) — the Python lesson
+4. [06-lang-go-deadlines-retries-and-idempotency.md](06-lang-go-deadlines-retries-and-idempotency.md) — the Go lesson
+5. [07-lang-cpp-load-shedding-in-the.md](07-lang-cpp-load-shedding-in-the.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

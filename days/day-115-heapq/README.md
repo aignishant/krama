@@ -25,11 +25,10 @@
 
 1. [01-dsa-pythons-heapq-and-the-min-heap-only.md](01-dsa-pythons-heapq-and-the-min-heap-only.md) — the DSA lesson
 2. [02-system-design-consistency-models.md](02-system-design-consistency-models.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-pypi-versioning-and-a.md](05-lang-python-pypi-versioning-and-a.md) — the Python lesson
-5. [06-lang-go-module-proxy-semantic-import.md](06-lang-go-module-proxy-semantic-import.md) — the Go lesson
-6. [07-lang-cpp-vcpkg-or-conan-a.md](07-lang-cpp-vcpkg-or-conan-a.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-pypi-versioning-and-a.md](05-lang-python-pypi-versioning-and-a.md) — the Python lesson
+4. [06-lang-go-module-proxy-semantic-import.md](06-lang-go-module-proxy-semantic-import.md) — the Go lesson
+5. [07-lang-cpp-vcpkg-or-conan-a.md](07-lang-cpp-vcpkg-or-conan-a.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

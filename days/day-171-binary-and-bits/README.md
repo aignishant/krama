@@ -27,18 +27,17 @@
 ## Project
 
 **Capstone: an order platform (days 171-178)** — the languages half of today is a build day. The three
-lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-binary-bits-and-why-they.md](01-dsa-binary-bits-and-why-they.md) — the DSA lesson
 2. [02-system-design-monitoring-metrics-and-alerting.md](02-system-design-monitoring-metrics-and-alerting.md) — the system design lesson
 3. [04-cpp-shifts-builtins.md](04-cpp-shifts-builtins.md) — the C++ contest lesson (optional)
-4. [03-practice.md](03-practice.md) — code it, then say it out loud
-5. [05-lang-python-the-fastapi-gateway-contract.md](05-lang-python-the-fastapi-gateway-contract.md) — the Python lesson
-6. [06-lang-go-the-protobuf-apis-for.md](06-lang-go-the-protobuf-apis-for.md) — the Go lesson
-7. [07-lang-cpp-the-c-pricing-engine.md](07-lang-cpp-the-c-pricing-engine.md) — the C++ lesson
-8. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+4. [05-lang-python-the-fastapi-gateway-contract.md](05-lang-python-the-fastapi-gateway-contract.md) — the Python lesson
+5. [06-lang-go-the-protobuf-apis-for.md](06-lang-go-the-protobuf-apis-for.md) — the Go lesson
+6. [07-lang-cpp-the-c-pricing-engine.md](07-lang-cpp-the-c-pricing-engine.md) — the C++ lesson
+7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

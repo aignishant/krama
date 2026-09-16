@@ -24,17 +24,16 @@
 ## Project
 
 **Build C: a storage engine (days 146-150)** — the languages half of today is a build day. The three
-lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-house-robber-and-the-choice.md](01-dsa-house-robber-and-the-choice.md) — the DSA lesson
 2. [02-system-design-design-a-url-shortener.md](02-system-design-design-a-url-shortener.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-python-bindings-plan.md](05-lang-python-python-bindings-plan.md) — the Python lesson
-5. [06-lang-go-go-bindings-plan.md](06-lang-go-go-bindings-plan.md) — the Go lesson
-6. [07-lang-cpp-requirements-the-on-disk.md](07-lang-cpp-requirements-the-on-disk.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-python-bindings-plan.md](05-lang-python-python-bindings-plan.md) — the Python lesson
+4. [06-lang-go-go-bindings-plan.md](06-lang-go-go-bindings-plan.md) — the Go lesson
+5. [07-lang-cpp-requirements-the-on-disk.md](07-lang-cpp-requirements-the-on-disk.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

@@ -24,17 +24,16 @@
 ## Project
 
 **Mini project 4: a URL shortener API** — the languages half of today is a build day. The three
-lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-hash-tables-how-a-dictionary.md](01-dsa-hash-tables-how-a-dictionary.md) — the DSA lesson
 2. [02-system-design-dry-kiss-and-yagni.md](02-system-design-dry-kiss-and-yagni.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-fastapi-plus-postgres-plus.md](05-lang-python-fastapi-plus-postgres-plus.md) — the Python lesson
-5. [06-lang-go-net-http-plus-pgx.md](06-lang-go-net-http-plus-pgx.md) — the Go lesson
-6. [07-lang-cpp-cpp-httplib-plus-libpqxx.md](07-lang-cpp-cpp-httplib-plus-libpqxx.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-fastapi-plus-postgres-plus.md](05-lang-python-fastapi-plus-postgres-plus.md) — the Python lesson
+4. [06-lang-go-net-http-plus-pgx.md](06-lang-go-net-http-plus-pgx.md) — the Go lesson
+5. [07-lang-cpp-cpp-httplib-plus-libpqxx.md](07-lang-cpp-cpp-httplib-plus-libpqxx.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

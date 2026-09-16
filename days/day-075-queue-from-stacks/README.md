@@ -24,17 +24,16 @@
 ## Project
 
 **Mini project 5: an inventory service over gRPC** — the languages half of today is a build day. The three
-lessons are the walkthrough; [08-lang-practice.md](08-lang-practice.md) contains the deliverables.
+lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliverables.
 
 ## Read in this order
 
 1. [01-dsa-a-queue-from-two-stacks.md](01-dsa-a-queue-from-two-stacks.md) — the DSA lesson
 2. [02-system-design-template-method-and-iterator.md](02-system-design-template-method-and-iterator.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-python-client-and-cli.md](05-lang-python-python-client-and-cli.md) — the Python lesson
-5. [06-lang-go-go-server-protobuf-api.md](06-lang-go-go-server-protobuf-api.md) — the Go lesson
-6. [07-lang-cpp-c-client-and-a.md](07-lang-cpp-c-client-and-a.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-python-client-and-cli.md](05-lang-python-python-client-and-cli.md) — the Python lesson
+4. [06-lang-go-go-server-protobuf-api.md](06-lang-go-go-server-protobuf-api.md) — the Go lesson
+5. [07-lang-cpp-c-client-and-a.md](07-lang-cpp-c-client-and-a.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

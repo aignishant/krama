@@ -25,11 +25,10 @@
 
 1. [01-dsa-merge-sort.md](01-dsa-merge-sort.md) — the DSA lesson
 2. [02-system-design-writing-clean-testable-classes.md](02-system-design-writing-clean-testable-classes.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-sqlite3-connect-execute-parameters.md](05-lang-python-sqlite3-connect-execute-parameters.md) — the Python lesson
-5. [06-lang-go-database-sql-with-modernc.md](06-lang-go-database-sql-with-modernc.md) — the Go lesson
-6. [07-lang-cpp-sqlite-c-api-and.md](07-lang-cpp-sqlite-c-api-and.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-sqlite3-connect-execute-parameters.md](05-lang-python-sqlite3-connect-execute-parameters.md) — the Python lesson
+4. [06-lang-go-database-sql-with-modernc.md](06-lang-go-database-sql-with-modernc.md) — the Go lesson
+5. [07-lang-cpp-sqlite-c-api-and.md](07-lang-cpp-sqlite-c-api-and.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

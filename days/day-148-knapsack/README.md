@@ -25,11 +25,10 @@
 
 1. [01-dsa-the-0-1-knapsack.md](01-dsa-the-0-1-knapsack.md) — the DSA lesson
 2. [02-system-design-design-a-rate-limiter.md](02-system-design-design-a-rate-limiter.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-reading-sstables-from-python.md](05-lang-python-reading-sstables-from-python.md) — the Python lesson
-5. [06-lang-go-reading-sstables-from-go.md](06-lang-go-reading-sstables-from-go.md) — the Go lesson
-6. [07-lang-cpp-flushing-sorted-files-bloom.md](07-lang-cpp-flushing-sorted-files-bloom.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-reading-sstables-from-python.md](05-lang-python-reading-sstables-from-python.md) — the Python lesson
+4. [06-lang-go-reading-sstables-from-go.md](06-lang-go-reading-sstables-from-go.md) — the Go lesson
+5. [07-lang-cpp-flushing-sorted-files-bloom.md](07-lang-cpp-flushing-sorted-files-bloom.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

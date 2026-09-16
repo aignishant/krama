@@ -25,11 +25,10 @@
 
 1. [01-dsa-breadth-first-traversal-level-order.md](01-dsa-breadth-first-traversal-level-order.md) — the DSA lesson
 2. [02-system-design-caching-the-single-biggest-win.md](02-system-design-caching-the-single-biggest-win.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-redis-locks-and-their.md](05-lang-python-redis-locks-and-their.md) — the Python lesson
-5. [06-lang-go-etcd-leases-leader-election.md](06-lang-go-etcd-leases-leader-election.md) — the Go lesson
-6. [07-lang-cpp-redis-locks-and-their.md](07-lang-cpp-redis-locks-and-their.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-redis-locks-and-their.md](05-lang-python-redis-locks-and-their.md) — the Python lesson
+4. [06-lang-go-etcd-leases-leader-election.md](06-lang-go-etcd-leases-leader-election.md) — the Go lesson
+5. [07-lang-cpp-redis-locks-and-their.md](07-lang-cpp-redis-locks-and-their.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 

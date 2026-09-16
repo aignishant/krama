@@ -2,8 +2,8 @@
 
 Every day is one folder. Every folder holds one DSA lesson, one system design
 lesson and three language lessons on one theme — Python, Go, C++.
-Days 001–040 share one practice sheet across all tracks. Later days retain
-a separate languages practice sheet until migrated. Start at day 001.
+Every day shares one practice sheet across DSA, system design, and languages.
+Start at day 001.
 
 Twelve of the days carry one more lesson: the C++ contest track, for readers who
 want to compete in C++ as well. They are marked in the last column.

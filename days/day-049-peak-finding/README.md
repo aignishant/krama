@@ -25,11 +25,10 @@
 
 1. [01-dsa-peak-finding-and-searching-data.md](01-dsa-peak-finding-and-searching-data.md) — the DSA lesson
 2. [02-system-design-composition-over-inheritance.md](02-system-design-composition-over-inheritance.md) — the system design lesson
-3. [03-practice.md](03-practice.md) — code it, then say it out loud
-4. [05-lang-python-routers-path-parameters-dependencies.md](05-lang-python-routers-path-parameters-dependencies.md) — the Python lesson
-5. [06-lang-go-method-and-path-patterns.md](06-lang-go-method-and-path-patterns.md) — the Go lesson
-6. [07-lang-cpp-route-patterns-pre-routing.md](07-lang-cpp-route-patterns-pre-routing.md) — the C++ lesson
-7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
+3. [05-lang-python-routers-path-parameters-dependencies.md](05-lang-python-routers-path-parameters-dependencies.md) — the Python lesson
+4. [06-lang-go-method-and-path-patterns.md](06-lang-go-method-and-path-patterns.md) — the Go lesson
+5. [07-lang-cpp-route-patterns-pre-routing.md](07-lang-cpp-route-patterns-pre-routing.md) — the C++ lesson
+6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
 
 ## Where this sits
 
