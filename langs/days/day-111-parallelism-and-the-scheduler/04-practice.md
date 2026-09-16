@@ -1,0 +1,45 @@
+---
+day: 111
+track: practice
+title: "Practice — Parallelism and the scheduler"
+status: empty
+---
+
+# Day 111 · Practice
+
+**Theme:** Parallelism and the scheduler
+
+---
+
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — multiprocessing, the GIL, and free-threaded Python
+- **Go** — GOMAXPROCS, the M:P:G scheduler, and preemption
+- **C++** — std::execution policies and hardware_concurrency
+
+## Say these out loud
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How many goroutines can you run on one core?
+2. 
+3. 
+
+## Before you move on
+
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] I answered all three questions above out loud.

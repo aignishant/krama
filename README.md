@@ -123,6 +123,14 @@ To write a day, ask Claude:
 
 ---
 
+## The second course: Krama Languages
+
+[`langs/`](langs/README.md) is a separate 180-day course in the same repository:
+**Python, Go, and C++ side by side**, one theme a day in all three, with Protocol
+Buffers and gRPC carried by the Go track. It has its own driver (`langs/l`), its own
+syllabus (`langs/scripts/curriculum.py`), and its own contract. Write a day with
+`/day-langs N`.
+
 ## How the repo is put together
 
 | Path | What it is |

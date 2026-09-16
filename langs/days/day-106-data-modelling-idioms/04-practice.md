@@ -1,0 +1,45 @@
+---
+day: 106
+track: practice
+title: "Practice — Data modelling idioms"
+status: empty
+---
+
+# Day 106 · Practice
+
+**Theme:** Data modelling idioms
+
+---
+
+## Build these, in all three languages
+
+*Three exercises, easiest first. Each one says what it is really testing. Every
+exercise is done three times: once in Python, once in Go, once in C++.*
+
+| # | Exercise | What it is really testing |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+
+## Compare
+
+*One sentence per language: what was easiest, what was hardest, and why.*
+
+- **Python** — dataclasses, attrs, pydantic, and when each
+- **Go** — Struct tags, validation, and functional options
+- **C++** — Aggregates, designated initialisers, and builder structs
+
+## Say these out loud
+
+*Three questions from today. Answer each in two minutes, standing up, no notes.*
+
+1. How do you validate a struct on construction?
+2. 
+3. 
+
+## Before you move on
+
+- [ ] All three programs run and I can explain every line.
+- [ ] I can say the one-line difference between the three languages on today's theme.
+- [ ] I answered all three questions above out loud.
