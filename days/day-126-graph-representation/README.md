@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Representing a graph: adjacency matrix versus adjacency list |
 | **System design** | Circuit breakers and bulkheads |
+| **Languages** | Clean architecture |
+| &nbsp;&nbsp;Python | Domain, application, infrastructure layers in a Python service |
+| &nbsp;&nbsp;Go | Domain, application, infrastructure layers in a Go service |
+| &nbsp;&nbsp;C++ | Domain, application, infrastructure layers in a C++ service |
 
 ## What you can do by tonight
 
 - **DSA** — You can choose the representation from the density and say what each costs.
 - **System design** — You can stop one failing dependency from taking down the whole service.
+- **Languages** — You can lay out a service so the business rules never import the database, in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *How will you store this graph? Why not the other way?*
 - *One downstream service is slow. How do you protect the rest?*
+- *How do you structure a service so the framework can be swapped?*
 
 ## Read in this order
 
 1. [01-dsa-representing-a-graph-adjacency-matrix.md](01-dsa-representing-a-graph-adjacency-matrix.md) — the DSA lesson
 2. [02-system-design-circuit-breakers-and-bulkheads.md](02-system-design-circuit-breakers-and-bulkheads.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-domain-application-infrastructure-layers.md](05-lang-python-domain-application-infrastructure-layers.md) — the Python lesson
+5. [06-lang-go-domain-application-infrastructure-layers.md](06-lang-go-domain-application-infrastructure-layers.md) — the Go lesson
+6. [07-lang-cpp-domain-application-infrastructure-layers.md](07-lang-cpp-domain-application-infrastructure-layers.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Graphs**
 - System design phase: **Distributed systems core**
+- Languages phase: **Languages: idiomatic depth and design**
 
 ---
 

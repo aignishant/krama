@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Autocomplete and word dictionaries |
 | **System design** | Idempotency and exactly-once delivery |
+| **Languages** | Design patterns II: observer, decorator, adapter |
+| &nbsp;&nbsp;Python | Observer with callbacks, decorator as wrapper, adapter as class |
+| &nbsp;&nbsp;Go | Observer with channels, decorator as wrapping interface, adapter |
+| &nbsp;&nbsp;C++ | Observer with std::function, decorator, adapter |
 
 ## What you can do by tonight
 
 - **DSA** — You can return the top suggestions for a prefix and say what you store at each node.
 - **System design** — You can design an operation that is safe to retry, and explain why exactly-once is a lie.
+- **Languages** — You can implement the three most-asked structural patterns idiomatically in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *Design autocomplete for a search box.*
 - *The payment request timed out. Is it safe to retry?*
+- *How would you notify five parts of the program when a value changes?*
 
 ## Read in this order
 
 1. [01-dsa-autocomplete-and-word-dictionaries.md](01-dsa-autocomplete-and-word-dictionaries.md) — the DSA lesson
 2. [02-system-design-idempotency-and-exactly-once-delivery.md](02-system-design-idempotency-and-exactly-once-delivery.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-observer-with-callbacks-decorator.md](05-lang-python-observer-with-callbacks-decorator.md) — the Python lesson
+5. [06-lang-go-observer-with-channels-decorator.md](06-lang-go-observer-with-channels-decorator.md) — the Go lesson
+6. [07-lang-cpp-observer-with-std-function.md](07-lang-cpp-observer-with-std-function.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Tries**
 - System design phase: **Distributed systems core**
+- Languages phase: **Languages: idiomatic depth and design**
 
 ---
 

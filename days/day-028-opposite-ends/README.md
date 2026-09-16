@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Opposite ends: pair sums on a sorted array |
 | **System design** | Joins, drawn |
+| **Languages** | Testing |
+| &nbsp;&nbsp;Python | pytest: fixtures, parametrize, and assert introspection |
+| &nbsp;&nbsp;Go | go test, table-driven tests, and t.Run subtests |
+| &nbsp;&nbsp;C++ | GoogleTest and CTest: TEST, EXPECT_EQ, and fixtures |
 
 ## What you can do by tonight
 
 - **DSA** — You can find a pair summing to a target in O(n) and argue that you miss nothing.
 - **System design** — You can draw inner, left, right and full joins and predict the row count of each.
+- **Languages** — You can write a test file in each language and make it fail on purpose to see the report.
 
-## The two questions today answers
+## The questions today answers
 
 - *Find two numbers in a sorted array that add up to the target.*
 - *What is the difference between an inner join and a left join?*
+- *How do you test a function with ten input cases?*
 
 ## Read in this order
 
 1. [01-dsa-opposite-ends-pair-sums.md](01-dsa-opposite-ends-pair-sums.md) — the DSA lesson
 2. [02-system-design-joins-drawn.md](02-system-design-joins-drawn.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-pytest-fixtures-parametrize-and.md](05-lang-python-pytest-fixtures-parametrize-and.md) — the Python lesson
+5. [06-lang-go-go-test-table-driven.md](06-lang-go-go-test-table-driven.md) — the Go lesson
+6. [07-lang-cpp-googletest-and-ctest-test.md](07-lang-cpp-googletest-and-ctest-test.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Two pointers and sliding window**
 - System design phase: **Databases from zero**
+- Languages phase: **Languages: advanced features**
 
 ---
 

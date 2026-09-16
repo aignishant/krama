@@ -4,27 +4,43 @@
 |---|---|
 | **DSA** | House robber and the choice at each step |
 | **System design** | Design a URL shortener |
+| **Languages** | Build C, day 1: a storage engine. Design |
+| &nbsp;&nbsp;Python | Python bindings plan |
+| &nbsp;&nbsp;Go | Go bindings plan |
+| &nbsp;&nbsp;C++ | Requirements, the on-disk format, and the C++ engine skeleton |
 
 ## What you can do by tonight
 
 - **DSA** — You can express take-it-or-leave-it as a recurrence and optimise the space.
 - **System design** — You can design the encoding, the storage, the read path and the analytics.
+- **Languages** — You can design a log-structured storage engine and its file format.
 
-## The two questions today answers
+## The questions today answers
 
 - *Maximise the sum with no two adjacent elements.*
 - *Design a URL shortener like bit.ly.*
+- *How does a database store data on disk?*
+
+## Project
+
+**Build C: a storage engine (days 146-150)** — the languages half of today is a build day. The three
+lessons are the walkthrough; the languages practice sheet is the deliverable.
 
 ## Read in this order
 
 1. [01-dsa-house-robber-and-the-choice.md](01-dsa-house-robber-and-the-choice.md) — the DSA lesson
 2. [02-system-design-design-a-url-shortener.md](02-system-design-design-a-url-shortener.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-python-bindings-plan.md](05-lang-python-python-bindings-plan.md) — the Python lesson
+5. [06-lang-go-go-bindings-plan.md](06-lang-go-go-bindings-plan.md) — the Go lesson
+6. [07-lang-cpp-requirements-the-on-disk.md](07-lang-cpp-requirements-the-on-disk.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Dynamic programming**
 - System design phase: **High-level design case studies**
+- Languages phase: **Languages: six five-day builds**
 
 ---
 

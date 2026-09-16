@@ -1,7 +1,7 @@
 """Days 1-45: foundations (1-15) and advanced features (16-45).
 
 Row shape: (n, slug, theme, py_title, go_title, cpp_title, outcome, ask)
-See ../curriculum.py.
+See ../../curriculum.py.
 """
 
 # fmt: off

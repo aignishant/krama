@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | N-Queens and constraint grids |
 | **System design** | Design an online auction |
+| **Languages** | Rate limiting and retries |
+| &nbsp;&nbsp;Python | A token bucket, and tenacity for retries with backoff |
+| &nbsp;&nbsp;Go | golang.org/x/time/rate, and retries with jitter |
+| &nbsp;&nbsp;C++ | A token bucket class, and retries with jitter |
 
 ## What you can do by tonight
 
 - **DSA** — You can prune a search tree with a validity check and count the work you avoided.
 - **System design** — You can model bids, the closing rule, and concurrent bidding.
+- **Languages** — You can protect a service from too many calls and retry safely, in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *Place n queens on an n by n board.*
 - *Design an auction site. Two bids arrive in the same millisecond.*
+- *Why is retrying immediately worse than not retrying at all?*
 
 ## Read in this order
 
 1. [01-dsa-n-queens-and-constraint-grids.md](01-dsa-n-queens-and-constraint-grids.md) — the DSA lesson
 2. [02-system-design-design-an-online-auction.md](02-system-design-design-an-online-auction.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-a-token-bucket-and.md](05-lang-python-a-token-bucket-and.md) — the Python lesson
+5. [06-lang-go-golang-org-x-time.md](06-lang-go-golang-org-x-time.md) — the Go lesson
+6. [07-lang-cpp-a-token-bucket-class.md](07-lang-cpp-a-token-bucket-class.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Recursion and backtracking**
 - System design phase: **Low-level design case studies**
+- Languages phase: **Languages: messaging, resilience, and deployment**
 
 ---
 

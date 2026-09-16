@@ -12,27 +12,28 @@ here is a term the reader has never seen — define it, or drop it.**
 This list prefers precision to completeness. If a term you need is missing, it is
 cheaper to define it again than to assume the reader knows it.
 
-- **001** — list, loop, nested loop, program, statements, url
-- **002** — backend, best case, frontend, loop body, worst case
-- **003** — cache, domain name, port, shape, squares, ttl
-- **004** — connection-oriented, tcp, udp
-- **005** — amortised, capacity, path, tuple
-- **006** — certificate, integrity, set
-- **007** — blocked, load shedding
-- **008** — atomic, constraints, edge cases, input, process, race condition, thread
-- **009** — 4 kb, block, milliseconds, page, ram, references, register, volatile
+- **001** — binary, command, commands, compiler, executable, file, interpreter, list, loop, nested loop, program, statements, terminal, url
+- **002** — backend, best case, dynamic typing, float, frontend, int, loop body, name, static typing, str, type, variable, worst case
+- **003** — bytes, cache, domain name, f-string, immutable, port, shape, squares, string, ttl
+- **004** — bool, condition, connection-oriented, tcp, udp
+- **005** — amortised, argument, arguments, call, capacity, declaration, default argument, definition, function, global, header files, keyword argument, local, named, parameters, path, result, structured bindings, tuple
+- **006** — amortised constant time, certificate, copy, index, integrity, length, mutable, pointer, set, slice
+- **007** — blocked, comparable, hashing, insertion order, keys, load shedding, map, values
+- **008** — atomic, class, constraints, constructor, data members, dataclass, edge cases, exported, fields, input, instance, internal, member functions, member initialiser list, method, object, process, property, public, race condition, receiver, struct, thread, unexported
+- **009** — 4 kb, block, exception, last result, milliseconds, page, raises, ram, references, register, volatile
+- **010** — and empties it, closed, file object, flush, mode, stream
 - **011** — checks permission, compact, system call, tombstone, virtual address space
 - **012** — artefact, aws ecs, container image, orchestrator
 - **013** — container, containerd, cri-o, guest operating system, hypervisor, image, namespace, union filesystem, virtual machine
-- **015** — array, json, parameters
+- **015** — array, json
 - **016** — anti-diagonals, collection, hateoas, item, list of lists, matrix, uri
 - **017** — resources
-- **019** — bearer token, separator, slice, token
+- **019** — bearer token, separator, token
 - **020** — generator expression, jwt, session
 - **021** — fragile, resolver, schema, under-fetching
 - **023** — burst size, key, refill rate
 - **024** — subarray
-- **025** — acid, atomicity, index
+- **025** — acid, atomicity
 - **026** — column, composite key, many-to-many, orphan rows, row, table, third table
 - **027** — add a tie-breaker
 - **028** — invariant
@@ -49,8 +50,8 @@ cheaper to define it again than to assume the reader knows it.
 - **040** — left, tree
 - **041** — connection, lazy loading, on first touch
 - **042** — search space
-- **043** — class, monotone, object
-- **044** — anaemic model, constructor, fee, returned, run, upper bound
+- **043** — monotone
+- **044** — anaemic model, fee, returned, run, upper bound
 - **045** — break point, name mangling
 - **046** — depth, greedy simulation, is possible, smallest
 - **047** — duck typing, gap, overloading, overriding
@@ -84,7 +85,6 @@ cheaper to define it again than to assume the reader knows it.
 - **077** — script
 - **079** — and a direction, o(1), two implementations
 - **080** — dummy node
-- **081** — float
 - **082** — facts
 - **085** — ledger entries
 - **086** — status
@@ -94,7 +94,7 @@ cheaper to define it again than to assume the reader knows it.
 - **090** — cache stampede, expiry, fifo, lfu, lru, never forgets, tail-recursive
 - **091** — correlation id
 - **092** — channels, template, three distinct orderings
-- **093** — candidates, file, root, yes
+- **093** — candidates, root, yes
 - **094** — jump
 - **095** — anti-sniping, snipe
 - **096** — four-direction move, scoping

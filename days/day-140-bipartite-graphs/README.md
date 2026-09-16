@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Bipartite graphs and two-colouring |
 | **System design** | Websockets, long polling, and server-sent events |
+| **Languages** | Build A, day 5: ship it |
+| &nbsp;&nbsp;Python | Docs and a demo notebook |
+| &nbsp;&nbsp;Go | Docker, metrics, and CI |
+| &nbsp;&nbsp;C++ | Benchmarks |
 
 ## What you can do by tonight
 
 - **DSA** — You can check whether a graph splits into two groups, and see it in real problems.
 - **System design** — You can pick the right push mechanism for a live-updating feature.
+- **Languages** — You can ship the cache with docs, metrics, containers, and a README a stranger could use.
 
-## The two questions today answers
+## The questions today answers
 
 - *Can these people be split into two teams with no conflicts?*
 - *How does the browser find out about a new message?*
+- *Walk me through a system you built end to end.*
 
 ## Read in this order
 
 1. [01-dsa-bipartite-graphs-and-two-colouring.md](01-dsa-bipartite-graphs-and-two-colouring.md) — the DSA lesson
 2. [02-system-design-websockets-long-polling-and-server-sent.md](02-system-design-websockets-long-polling-and-server-sent.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-docs-and-a-demo.md](05-lang-python-docs-and-a-demo.md) — the Python lesson
+5. [06-lang-go-docker-metrics-and-ci.md](06-lang-go-docker-metrics-and-ci.md) — the Go lesson
+6. [07-lang-cpp-benchmarks.md](07-lang-cpp-benchmarks.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Graphs**
 - System design phase: **Building blocks of big systems**
+- Languages phase: **Languages: six five-day builds**
 
 ---
 

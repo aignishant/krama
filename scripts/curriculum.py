@@ -1,9 +1,10 @@
 """The Krama syllabus, as data.
 
-One row per day. Every day carries two lessons: a DSA lesson and a System Design
-lesson. build_skeleton.py turns this file into days/ and docs/CURRICULUM_INDEX.md.
+Two tables, one row per day each. Every day carries five lessons: a DSA lesson, a
+System Design lesson, and three language lessons — Python, Go and C++ — on one shared
+theme. build_skeleton.py turns this file into days/ and docs/CURRICULUM_INDEX.md.
 
-Row shape:
+The DSA and system design row (syllabus/part1..4.py):
 
     (n, day_slug,
      dsa_title, dsa_line, dsa_ask,
@@ -12,6 +13,17 @@ Row shape:
     day_slug   folder name after "day-NNN-"; taken from the DSA topic
     *_line     what you can DO after reading it, in one sentence
     *_ask      how an interviewer actually phrases this question
+
+The languages row (syllabus/langs/part1..3.py):
+
+    (n, lang_slug, theme,
+     py_title, go_title, cpp_title,
+     outcome, ask)
+
+    lang_slug   the theme's own slug; shown in the index, not used for the folder
+    theme       the one idea all three language lessons teach today
+    outcome     what you can DO after the three lessons, in one sentence
+    ask         how an interviewer actually phrases the question
 """
 
 from __future__ import annotations
@@ -19,6 +31,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from syllabus import part1, part2, part3, part4
+from syllabus.langs import part1 as lang_part1
+from syllabus.langs import part2 as lang_part2
+from syllabus.langs import part3 as lang_part3
 
 DSA_PHASES = [
     ("Foundations: how code costs", 1, 8),
@@ -60,14 +75,65 @@ SD_PHASES = [
 RAW = part1.DAYS + part2.DAYS + part3.DAYS + part4.DAYS
 
 # ---------------------------------------------------------------------------
+# The languages track.
+#
+# Every day, all 180, carries three more lessons on one theme: the same idea in
+# Python, in Go, and in C++, so the differences become the lesson. Go carries the
+# Protocol Buffers and gRPC block; Python and C++ are its clients. The track has
+# its own phases, which do not line up with the DSA or system design phases and
+# do not need to.
+# ---------------------------------------------------------------------------
+
+LANG_TRACKS = ("lang-python", "lang-go", "lang-cpp")
+
+LANG_LABEL_FOR = {"lang-python": "Python", "lang-go": "Go", "lang-cpp": "C++"}
+
+LANG_PHASES = [
+    ("Languages: every language, every basic", 1, 15),
+    ("Languages: advanced features", 16, 45),
+    ("Languages: networking, HTTP, and data", 46, 60),
+    ("Languages: Protocol Buffers and gRPC", 61, 75),
+    ("Languages: performance and systems programming", 76, 90),
+    ("Languages: messaging, resilience, and deployment", 91, 105),
+    ("Languages: idiomatic depth and design", 106, 135),
+    ("Languages: six five-day builds", 136, 165),
+    ("Languages: interview prep and the capstone", 166, 180),
+]
+
+# Days that end a languages block with something you can run and show. Mini projects
+# are one day; builds and the capstone span several days and are named by their first.
+LANG_PROJECTS: dict[int, str] = {
+    15: "Mini project 1: a to-do CLI",
+    30: "Mini project 2: a text analyser",
+    45: "Mini project 3: a concurrent downloader",
+    60: "Mini project 4: a URL shortener API",
+    75: "Mini project 5: an inventory service over gRPC",
+    90: "Mini project 6: a log analytics pipeline",
+    105: "Mini project 7: orders, events, and notifications",
+    120: "Mini project 8: a rate-limiter library",
+    135: "Mini project 9: a key-value store with a wire protocol",
+    136: "Build A: a distributed cache (days 136-140)",
+    141: "Build B: a job queue (days 141-145)",
+    146: "Build C: a storage engine (days 146-150)",
+    151: "Build D: a chat system (days 151-155)",
+    156: "Build E: an observability toolkit (days 156-160)",
+    161: "Build F: a tiny language (days 161-165)",
+    171: "Capstone: an order platform (days 171-178)",
+}
+
+LANG_RAW = lang_part1.DAYS + lang_part2.DAYS + lang_part3.DAYS
+
+# ---------------------------------------------------------------------------
 # The C++ track.
 #
-# Ten days, and only ten. Each one sits on the day the course first needs that
-# piece of C++, so a reader who wants to solve in C++ starts in week one and tops
-# up as new structures arrive. Five land in the first six days — enough to write
-# real solutions — and five are placed at the head of the phase that needs them.
+# Twelve days, and only twelve. Each one sits on the day the DSA course first needs
+# that piece of C++, so a reader who wants to solve in C++ starts in week one and
+# tops up as new structures arrive. Five land in the first six days — enough to
+# write real solutions — and the rest are placed at the head of the phase that
+# needs them. This is the contest-and-interview C++ track; it is separate from the
+# languages track's C++ lesson, which every day carries.
 #
-# A day with no entry here carries no C++ lesson, and its folder stays four files.
+# A day with no entry here carries no 04-cpp lesson.
 #
 #   n: (title, what you can do after it, how an interviewer phrases it)
 # ---------------------------------------------------------------------------
@@ -152,13 +218,46 @@ CPP_DAYS: dict[int, tuple[str, str, str]] = {
 
 @dataclass(frozen=True)
 class Lesson:
-    """One of the two lessons a day carries."""
+    """A DSA, system design, or optional C++-track lesson."""
 
-    track: str  # "dsa" or "system-design"
+    track: str  # "dsa", "system-design" or "cpp"
     title: str
     line: str  # what you can do after reading it
     ask: str  # how an interviewer phrases it
     phase: str
+
+
+@dataclass(frozen=True)
+class LangLesson:
+    """One of the three language lessons a day carries."""
+
+    track: str  # "lang-python", "lang-go" or "lang-cpp"
+    title: str
+
+
+@dataclass(frozen=True)
+class Langs:
+    """The languages half of a day: one theme, taught three times."""
+
+    slug: str
+    theme: str
+    outcome: str
+    ask: str
+    lessons: tuple[LangLesson, LangLesson, LangLesson]  # python, go, cpp — always this order
+    phase: str
+    project: str | None
+
+    @property
+    def python(self) -> LangLesson:
+        return self.lessons[0]
+
+    @property
+    def go(self) -> LangLesson:
+        return self.lessons[1]
+
+    @property
+    def cpp(self) -> LangLesson:
+        return self.lessons[2]
 
 
 @dataclass(frozen=True)
@@ -167,7 +266,8 @@ class Day:
     slug: str
     dsa: Lesson
     sd: Lesson
-    cpp: Lesson | None = None  # only on the ten days listed in CPP_DAYS
+    langs: Langs
+    cpp: Lesson | None = None  # only on the days listed in CPP_DAYS
 
     @property
     def folder(self) -> str:
@@ -181,8 +281,38 @@ def _phase_of(phases: list[tuple[str, int, int]], n: int) -> str:
     raise ValueError(f"day {n} falls outside every phase")
 
 
+def _load_langs() -> dict[int, Langs]:
+    langs: dict[int, Langs] = {}
+    for row in LANG_RAW:
+        if len(row) != 8:
+            raise ValueError(f"languages row for day {row[0]} has {len(row)} fields, expected 8")
+        n, slug, theme, py, go, cpp, outcome, ask = row
+        if n in langs:
+            raise ValueError(f"languages day {n} appears twice")
+        langs[n] = Langs(
+            slug=slug,
+            theme=theme,
+            outcome=outcome,
+            ask=ask,
+            lessons=(
+                LangLesson("lang-python", py),
+                LangLesson("lang-go", go),
+                LangLesson("lang-cpp", cpp),
+            ),
+            phase=_phase_of(LANG_PHASES, n),
+            project=LANG_PROJECTS.get(n),
+        )
+    expected = set(range(1, 181))
+    if set(langs) != expected:
+        missing = sorted(expected - set(langs))
+        extra = sorted(set(langs) - expected)
+        raise ValueError(f"languages days must be exactly 1..180; missing={missing} extra={extra}")
+    return langs
+
+
 def load() -> list[Day]:
     """Validate the raw rows and return them as Day objects."""
+    langs = _load_langs()
     days: list[Day] = []
     seen: set[int] = set()
     for row in RAW:
@@ -202,6 +332,7 @@ def load() -> list[Day]:
                 slug=slug,
                 dsa=Lesson("dsa", d_title, d_line, d_ask, _phase_of(DSA_PHASES, n)),
                 sd=Lesson("system-design", s_title, s_line, s_ask, _phase_of(SD_PHASES, n)),
+                langs=langs[n],
                 cpp=cpp,
             )
         )
@@ -218,8 +349,10 @@ def load() -> list[Day]:
 
 if __name__ == "__main__":
     loaded = load()
-    print(f"{len(loaded)} days, {len(loaded) * 2} lessons")
+    print(f"{len(loaded)} days, {len(loaded) * 5} lessons")
     for name, lo, hi in DSA_PHASES:
-        print(f"  DSA  {lo:>3}-{hi:<3} {name}")
+        print(f"  DSA   {lo:>3}-{hi:<3} {name}")
     for name, lo, hi in SD_PHASES:
-        print(f"  SD   {lo:>3}-{hi:<3} {name}")
+        print(f"  SD    {lo:>3}-{hi:<3} {name}")
+    for name, lo, hi in LANG_PHASES:
+        print(f"  LANG  {lo:>3}-{hi:<3} {name}")

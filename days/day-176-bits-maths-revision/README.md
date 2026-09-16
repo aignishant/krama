@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Bits and maths revision and mock round |
 | **System design** | Cost: the constraint nobody mentions |
+| **Languages** | Capstone, day 6: resilience |
+| &nbsp;&nbsp;Python | Timeouts, retries, and a circuit breaker in the gateway |
+| &nbsp;&nbsp;Go | Deadlines, retries, and idempotency keys across services |
+| &nbsp;&nbsp;C++ | Load shedding in the pricing engine |
 
 ## What you can do by tonight
 
 - **DSA** — You can solve two unseen bit or maths problems cold.
 - **System design** — You can put a monthly bill on your architecture, which almost no candidate does.
+- **Languages** — You can kill any one service and show the platform degrade instead of fall over.
 
-## The two questions today answers
+## The questions today answers
 
 - *Two problems, no hints, talk as you go.*
 - *What does this system cost to run per month?*
+- *Kill the pricing service. What does the user see?*
 
 ## Read in this order
 
 1. [01-dsa-bits-and-maths-revision.md](01-dsa-bits-and-maths-revision.md) — the DSA lesson
 2. [02-system-design-cost-the-constraint-nobody-mentions.md](02-system-design-cost-the-constraint-nobody-mentions.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-timeouts-retries-and-a.md](05-lang-python-timeouts-retries-and-a.md) — the Python lesson
+5. [06-lang-go-deadlines-retries-and-idempotency.md](06-lang-go-deadlines-retries-and-idempotency.md) — the Go lesson
+6. [07-lang-cpp-load-shedding-in-the.md](07-lang-cpp-load-shedding-in-the.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Bits and maths**
 - System design phase: **Reliability, security, and the interview itself**
+- Languages phase: **Languages: interview prep and the capstone**
 
 ---
 

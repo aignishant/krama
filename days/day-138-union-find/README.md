@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Union-Find: the disjoint set union |
 | **System design** | Data warehouses: OLAP versus OLTP |
+| **Languages** | Build A, day 3: clients |
+| &nbsp;&nbsp;Python | A Python client with connection pooling and retries |
+| &nbsp;&nbsp;Go | A Go client library |
+| &nbsp;&nbsp;C++ | A C++ client with connection pooling and retries |
 
 ## What you can do by tonight
 
 - **DSA** — You can implement find and union with path compression and say why it is nearly O(1).
 - **System design** — You can say why analytics does not run on the production database.
+- **Languages** — You can write a client library in each language against the same protobuf API.
 
-## The two questions today answers
+## The questions today answers
 
 - *Are these two nodes in the same group? Now merge two groups.*
 - *The analytics query is locking the production table. What do you do?*
+- *What does a good client library do for you?*
 
 ## Read in this order
 
 1. [01-dsa-union-find-the-disjoint-set-union.md](01-dsa-union-find-the-disjoint-set-union.md) — the DSA lesson
 2. [02-system-design-data-warehouses-olap-versus-oltp.md](02-system-design-data-warehouses-olap-versus-oltp.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-a-python-client-with.md](05-lang-python-a-python-client-with.md) — the Python lesson
+5. [06-lang-go-a-go-client-library.md](06-lang-go-a-go-client-library.md) — the Go lesson
+6. [07-lang-cpp-a-c-client-with.md](07-lang-cpp-a-c-client-with.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Graphs**
 - System design phase: **Building blocks of big systems**
+- Languages phase: **Languages: six five-day builds**
 
 ---
 

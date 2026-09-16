@@ -1,9 +1,9 @@
 """Project the written lessons into a small index the writer can afford to read.
 
 The problem this solves: before writing day N you must know what the reader already
-knows. The lessons that carry that knowledge run to 30 KB each, and there are two per
-day. By day 100 you cannot read them. This file compiles them into three small
-documents instead.
+knows. The lessons that carry that knowledge run to 30 KB each, and there are five per
+day — DSA, system design, and the three language lessons. By day 100 you cannot read
+them. This file compiles them into three small documents instead.
 
 Nothing here is generated, summarised or paraphrased. Every byte written is copied
 verbatim from a lesson, and every entry carries the path it came from. If a claim is
@@ -14,12 +14,13 @@ wrong, the lesson is wrong.
 
 Three files come out:
 
-    wiki/00-STATE.md          one row per written day, both tracks
+    wiki/00-STATE.md          one row per written day, every track
     wiki/vocab.md             every term the reader has met, and the day it arrived
     wiki/recall/<phase>.md    section 9 of each lesson in that phase, verbatim
 
-Read 00-STATE.md and vocab.md always. Read only the two recall files for the phases
-the day sits in. That is the whole saving.
+Read 00-STATE.md and vocab.md always. Read only the three recall files for the phases
+the day sits in — its DSA phase, its system design phase, and its languages phase.
+That is the whole saving.
 """
 
 from __future__ import annotations
@@ -89,7 +90,9 @@ def section(text: str, number: int) -> str:
 def load_written() -> list[WrittenLesson]:
     """Every lesson whose front matter says it is written, in day order."""
     lessons: list[WrittenLesson] = []
-    for path in sorted(DAYS_DIR.glob("day-*/0[12]-*.md")):
+    # The DSA lesson, the system design lesson, and the three language lessons. The
+    # practice sheets and the optional C++ contest lesson carry no recall card.
+    for path in sorted(DAYS_DIR.glob("day-*/0[1256-7]-*.md")):
         text = path.read_text(encoding="utf-8")
         fields = _front_matter(text)
         if fields.get("status") != "written":
@@ -160,18 +163,22 @@ def write_state(lessons: list[WrittenLesson]) -> Path:
         "",
         GENERATED,
         "",
-        "One row per day whose lessons are finished. Titles are copied from each lesson's",
-        "front matter. A day that is missing from this table has not been written yet.",
+        "One row per day with at least one finished lesson. Titles are copied from each",
+        "lesson's front matter. A dash means that lesson is not written yet; a day that",
+        "is missing from this table has nothing written at all.",
         "",
-        "| Day | DSA lesson | System design lesson |",
-        "|---:|---|---|",
+        "| Day | DSA lesson | System design lesson | Python | Go | C++ |",
+        "|---:|---|---|---|---|---|",
     ]
+    columns = ("dsa", "system-design", "lang-python", "lang-go", "lang-cpp")
+    complete = 0
     for day in sorted(by_day):
         tracks = by_day[day]
-        dsa = tracks["dsa"].title if "dsa" in tracks else "—"
-        sd = tracks["system-design"].title if "system-design" in tracks else "—"
-        lines += [f"| {day:03d} | {dsa} | {sd} |"]
-    lines += ["", f"**{len(by_day)} of 180 days written.**", ""]
+        cells = [tracks[t].title if t in tracks else "—" for t in columns]
+        if all(t in tracks for t in columns):
+            complete += 1
+        lines += [f"| {day:03d} | " + " | ".join(cells) + " |"]
+    lines += ["", f"**{complete} of 180 days fully written; {len(by_day)} started.**", ""]
 
     path = WIKI_DIR / "00-STATE.md"
     path.write_text("\n".join(lines), encoding="utf-8")

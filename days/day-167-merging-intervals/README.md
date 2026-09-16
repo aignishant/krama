@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Merging intervals |
 | **System design** | Design a leaderboard |
+| **Languages** | Go interview questions |
+| &nbsp;&nbsp;Python | How Python answers the same questions |
+| &nbsp;&nbsp;Go | The forty questions: goroutines, channels, interfaces, nil, slices, GC |
+| &nbsp;&nbsp;C++ | How C++ answers the same questions |
 
 ## What you can do by tonight
 
 - **DSA** — You can merge, insert and subtract intervals without missing an edge case.
 - **System design** — You can rank millions of players in real time and answer give me my rank.
+- **Languages** — You can answer the forty most-asked Go questions out loud.
 
-## The two questions today answers
+## The questions today answers
 
 - *Merge all overlapping intervals.*
 - *Design a game leaderboard for ten million players.*
+- *Why can a nil pointer inside an interface be non-nil?*
 
 ## Read in this order
 
 1. [01-dsa-merging-intervals.md](01-dsa-merging-intervals.md) — the DSA lesson
 2. [02-system-design-design-a-leaderboard.md](02-system-design-design-a-leaderboard.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-how-python-answers-the.md](05-lang-python-how-python-answers-the.md) — the Python lesson
+5. [06-lang-go-the-forty-questions-goroutines.md](06-lang-go-the-forty-questions-goroutines.md) — the Go lesson
+6. [07-lang-cpp-how-c-answers-the.md](07-lang-cpp-how-c-answers-the.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Greedy and intervals**
 - System design phase: **High-level design case studies**
+- Languages phase: **Languages: interview prep and the capstone**
 
 ---
 

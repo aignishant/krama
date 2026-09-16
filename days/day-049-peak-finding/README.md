@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Peak finding, and searching data that is structured but not sorted |
 | **System design** | Composition over inheritance |
+| **Languages** | Routing and middleware |
+| &nbsp;&nbsp;Python | Routers, path parameters, dependencies, and middleware in FastAPI |
+| &nbsp;&nbsp;Go | Method and path patterns in ServeMux, and a middleware chain |
+| &nbsp;&nbsp;C++ | Route patterns, pre-routing handlers, and a logging wrapper |
 
 ## What you can do by tonight
 
 - **DSA** — You can binary search using local structure alone, with no global ordering.
 - **System design** — You can rewrite an inheritance tree as composition and say what improved.
+- **Languages** — You can add authentication and logging to every route without repeating code, in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *Find a peak element in O(log n).*
 - *Refactor this class hierarchy. Why is your version better?*
+- *How would you add request logging to every endpoint?*
 
 ## Read in this order
 
 1. [01-dsa-peak-finding-and-searching-data.md](01-dsa-peak-finding-and-searching-data.md) — the DSA lesson
 2. [02-system-design-composition-over-inheritance.md](02-system-design-composition-over-inheritance.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-routers-path-parameters-dependencies.md](05-lang-python-routers-path-parameters-dependencies.md) — the Python lesson
+5. [06-lang-go-method-and-path-patterns.md](06-lang-go-method-and-path-patterns.md) — the Go lesson
+6. [07-lang-cpp-route-patterns-pre-routing.md](07-lang-cpp-route-patterns-pre-routing.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Binary search**
 - System design phase: **Object-oriented design**
+- Languages phase: **Languages: networking, HTTP, and data**
 
 ---
 

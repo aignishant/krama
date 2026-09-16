@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | 2D prefix sums and inclusion-exclusion |
 | **System design** | Choosing SQL or NoSQL in an interview |
+| **Languages** | JSON in and out |
+| &nbsp;&nbsp;Python | json.loads, json.dumps, dataclasses, and pydantic |
+| &nbsp;&nbsp;Go | encoding/json, struct tags, and omitempty |
+| &nbsp;&nbsp;C++ | nlohmann/json: parsing, serialising, and from_json |
 
 ## What you can do by tonight
 
 - **DSA** — You can answer any rectangle-sum query in O(1) and derive the four-term formula yourself.
 - **System design** — You can make the choice out loud, with the access patterns as your evidence.
+- **Languages** — You can round-trip a struct through JSON in each language and handle a bad document.
 
-## The two questions today answers
+## The questions today answers
 
 - *Answer many rectangle-sum queries on a fixed matrix.*
 - *SQL or NoSQL for this system, and what made you decide?*
+- *How do you turn a JSON document into an object?*
 
 ## Read in this order
 
 1. [01-dsa-2d-prefix-sums-and-inclusion-exclusion.md](01-dsa-2d-prefix-sums-and-inclusion-exclusion.md) — the DSA lesson
 2. [02-system-design-choosing-sql-or-nosql.md](02-system-design-choosing-sql-or-nosql.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-json-loads-json-dumps.md](05-lang-python-json-loads-json-dumps.md) — the Python lesson
+5. [06-lang-go-encoding-json-struct-tags.md](06-lang-go-encoding-json-struct-tags.md) — the Go lesson
+6. [07-lang-cpp-nlohmann-json-parsing-serialising.md](07-lang-cpp-nlohmann-json-parsing-serialising.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Prefix sums**
 - System design phase: **Databases from zero**
+- Languages phase: **Languages: advanced features**
 
 ---
 

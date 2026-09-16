@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Finding the state: the hardest part of DP |
 | **System design** | Design a pastebin |
+| **Languages** | Build C, day 2: WAL and memtable |
+| &nbsp;&nbsp;Python | A pure-Python reference implementation for testing |
+| &nbsp;&nbsp;Go | A pure-Go reference implementation for testing |
+| &nbsp;&nbsp;C++ | Write-ahead log, fsync, and a sorted in-memory table |
 
 ## What you can do by tonight
 
 - **DSA** — You can decide what the subproblem index means, which is where most people get stuck.
 - **System design** — You can design text storage, expiry, and the read-heavy access pattern.
+- **Languages** — You can make writes durable and explain what fsync guarantees.
 
-## The two questions today answers
+## The questions today answers
 
 - *What does dp[i] represent in your solution?*
 - *Design pastebin. What happens when a paste goes viral?*
+- *What is a write-ahead log for?*
 
 ## Read in this order
 
 1. [01-dsa-finding-the-state-the-hardest.md](01-dsa-finding-the-state-the-hardest.md) — the DSA lesson
 2. [02-system-design-design-a-pastebin.md](02-system-design-design-a-pastebin.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-a-pure-python-reference.md](05-lang-python-a-pure-python-reference.md) — the Python lesson
+5. [06-lang-go-a-pure-go-reference.md](06-lang-go-a-pure-go-reference.md) — the Go lesson
+6. [07-lang-cpp-write-ahead-log-fsync.md](07-lang-cpp-write-ahead-log-fsync.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Dynamic programming**
 - System design phase: **High-level design case studies**
+- Languages phase: **Languages: six five-day builds**
 
 ---
 

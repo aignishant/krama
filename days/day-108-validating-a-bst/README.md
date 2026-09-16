@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Validating a binary search tree |
 | **System design** | Consistent hashing |
+| **Languages** | Encapsulation |
+| &nbsp;&nbsp;Python | @property, __slots__, name mangling, and descriptors |
+| &nbsp;&nbsp;Go | Unexported fields, getters by convention, and method values |
+| &nbsp;&nbsp;C++ | private, const methods, static members, and friend |
 
 ## What you can do by tonight
 
 - **DSA** — You avoid the classic wrong answer and can show the input that kills it.
 - **System design** — You can explain why adding a server does not reshuffle every key.
+- **Languages** — You can hide a field and expose a computed one in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *Is this a valid BST? Are you sure your check is correct?*
 - *You add a cache node. How many keys move?*
+- *When would you use a getter instead of a public field?*
 
 ## Read in this order
 
 1. [01-dsa-validating-a-binary-search-tree.md](01-dsa-validating-a-binary-search-tree.md) — the DSA lesson
 2. [02-system-design-consistent-hashing.md](02-system-design-consistent-hashing.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-property-slots-name-mangling.md](05-lang-python-property-slots-name-mangling.md) — the Python lesson
+5. [06-lang-go-unexported-fields-getters-by.md](06-lang-go-unexported-fields-getters-by.md) — the Go lesson
+6. [07-lang-cpp-private-const-methods-static.md](07-lang-cpp-private-const-methods-static.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Trees and binary search trees**
 - System design phase: **Scaling fundamentals**
+- Languages phase: **Languages: idiomatic depth and design**
 
 ---
 

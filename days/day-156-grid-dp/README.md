@@ -4,27 +4,43 @@
 |---|---|
 | **DSA** | Grid DP: unique paths and minimum path sum |
 | **System design** | Design WhatsApp |
+| **Languages** | Build E, day 1: an observability toolkit. Design |
+| &nbsp;&nbsp;Python | Requirements and the dashboard plan |
+| &nbsp;&nbsp;Go | Requirements, the .proto metrics schema, and the Go agent |
+| &nbsp;&nbsp;C++ | Requirements and the C++ collector skeleton |
 
 ## What you can do by tonight
 
 - **DSA** — You can walk a grid with DP and handle obstacles and boundaries cleanly.
 - **System design** — You can design message delivery, ordering, offline users and end-to-end encryption.
+- **Languages** — You can design a metrics agent, a collector, and a dashboard.
 
-## The two questions today answers
+## The questions today answers
 
 - *How many paths from the top left to the bottom right?*
 - *Design WhatsApp. What happens when the recipient is offline?*
+- *Design a monitoring system.*
+
+## Project
+
+**Build E: an observability toolkit (days 156-160)** — the languages half of today is a build day. The three
+lessons are the walkthrough; the languages practice sheet is the deliverable.
 
 ## Read in this order
 
 1. [01-dsa-grid-dp-unique-paths.md](01-dsa-grid-dp-unique-paths.md) — the DSA lesson
 2. [02-system-design-design-whatsapp.md](02-system-design-design-whatsapp.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-requirements-and-the-dashboard.md](05-lang-python-requirements-and-the-dashboard.md) — the Python lesson
+5. [06-lang-go-requirements-the-proto-metrics.md](06-lang-go-requirements-the-proto-metrics.md) — the Go lesson
+6. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Dynamic programming**
 - System design phase: **High-level design case studies**
+- Languages phase: **Languages: six five-day builds**
 
 ---
 

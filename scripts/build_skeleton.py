@@ -1,5 +1,9 @@
 """Create every day folder and every empty lesson file from scripts/curriculum.py.
 
+A day is eight files, nine on the C++ contest days: the hub, the DSA lesson, the
+system design lesson, the practice sheet, the three language lessons, and the
+languages practice sheet.
+
 Safe to re-run: a file that already has content (status is not "empty") is never
 touched. Only placeholders are regenerated.
 
@@ -14,7 +18,17 @@ import re
 import sys
 from pathlib import Path
 
-from curriculum import DSA_PHASES, SD_PHASES, Day, Lesson, load
+from curriculum import (
+    DSA_PHASES,
+    LANG_LABEL_FOR,
+    LANG_PHASES,
+    LANG_PROJECTS,
+    SD_PHASES,
+    Day,
+    LangLesson,
+    Lesson,
+    load,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 DAYS_DIR = ROOT / "days"
@@ -118,8 +132,53 @@ CPP_SECTIONS = [
     ("Recall card", "Five lines. If you remember nothing else from today, remember these."),
 ]
 
+# The three language lessons share one frame. Section 6 is the one that makes the
+# languages track different: the same idea in the other two languages, side by side.
+LANG_SECTIONS = [
+    (
+        "What this is, and why it matters",
+        "Three sentences on what the idea is, then why it shows up at work and in interviews.",
+    ),
+    (
+        "The story",
+        "200-400 words. A person, a scene almost anyone has lived, and zero technical words.",
+    ),
+    (
+        "The idea in plain English",
+        "Map the story onto the idea, one step at a time. Define each term the first time it "
+        "appears.",
+    ),
+    (
+        "The picture",
+        "At least one diagram, captioned with what to notice. ASCII for memory, Mermaid for flows.",
+    ),
+    (
+        "The code, built step by step",
+        "Fragments of ten lines or fewer, each followed by prose. Then the complete runnable "
+        "program.",
+    ),
+    (
+        "How the other two languages do it",
+        "A short side-by-side: the same idea in the other two languages, and the one line of "
+        "difference that matters.",
+    ),
+    ("The traps", "The near-miss that looks right, and the real error text pasted from a real run."),
+    (
+        "Say it out loud",
+        "How it gets asked, a ninety-second script, the three follow-ups, and a model answer.",
+    ),
+    ("Recall card", "Five lines, maximum. What survives if you forget everything else."),
+]
+
 SECTIONS_FOR = {"dsa": DSA_SECTIONS, "system-design": SD_SECTIONS, "cpp": CPP_SECTIONS}
 LABEL_FOR = {"dsa": "DSA", "system-design": "System Design", "cpp": "C++"}
+
+LANG_FILE_PREFIX = {
+    "lang-python": "05-lang-python",
+    "lang-go": "06-lang-go",
+    "lang-cpp": "07-lang-cpp",
+}
+LANG_PRACTICE = "08-lang-practice.md"
 
 
 def slugify(text: str) -> str:
@@ -157,6 +216,21 @@ def short_slug(title: str, words: int = 5) -> str:
     while parts and parts[-1] in TRAILING_STOP:
         parts.pop()
     return "-".join(parts) or slugify(title)[:30]
+
+
+def lang_short_slug(title: str, words: int = 4) -> str:
+    """The languages track's filename slug: first four words, no connector trimming.
+
+    Kept separate from short_slug on purpose. Five hundred and forty language files
+    were named with this rule before the two courses merged, and a filename that
+    changes is a link that breaks.
+    """
+    parts = [p for p in slugify(title).split("-") if p]
+    return "-".join(parts[:words]) or "lesson"
+
+
+def lang_lesson_name(lesson: LangLesson) -> str:
+    return f"{LANG_FILE_PREFIX[lesson.track]}-{lang_short_slug(lesson.title)}.md"
 
 
 def is_placeholder(path: Path) -> bool:
@@ -204,6 +278,93 @@ def lesson_file(day: Day, lesson: Lesson) -> str:
     for i, (heading, note) in enumerate(sections, start=1):
         lines += [f"## {i}. {heading}", "", f"*{note}*", ""]
     return "\n".join(lines)
+
+
+def lang_lesson_file(day: Day, lesson: LangLesson) -> str:
+    langs = day.langs
+    label = LANG_LABEL_FOR[lesson.track]
+    lines = [
+        "---",
+        f"day: {day.n}",
+        f"track: {lesson.track}",
+        f'title: "{lesson.title}"',
+        f'theme: "{langs.theme}"',
+        f'phase: "{langs.phase}"',
+        "status: empty",
+        "---",
+        "",
+        f"# Day {day.n:03d} · {label} — {lesson.title}",
+        "",
+        f"**Today's theme:** {langs.theme}",
+        "",
+        f"**After today you can:** {langs.outcome}",
+        "",
+        f"**The interviewer asks it as:** *{langs.ask}*",
+        "",
+        "---",
+        "",
+        "> Not written yet. The nine headings below are the shape every lesson takes;",
+        "> the italic line under each says what belongs there.",
+        "> See [how a day works](../../docs/00_HOW_A_DAY_WORKS.md).",
+        "",
+    ]
+    for i, (heading, note) in enumerate(LANG_SECTIONS, start=1):
+        lines += [f"## {i}. {heading}", "", f"*{note}*", ""]
+    return "\n".join(lines)
+
+
+def lang_practice_file(day: Day) -> str:
+    langs = day.langs
+    return "\n".join(
+        [
+            "---",
+            f"day: {day.n}",
+            "track: lang-practice",
+            f'title: "Practice — {langs.theme}"',
+            "status: empty",
+            "---",
+            "",
+            f"# Day {day.n:03d} · Languages practice",
+            "",
+            f"**Theme:** {langs.theme}",
+            "",
+            "---",
+            "",
+            "## Build these, in all three languages",
+            "",
+            "*Three exercises, easiest first. Each one says what it is really testing. Every",
+            "exercise is done three times: once in Python, once in Go, once in C++.*",
+            "",
+            "| # | Exercise | What it is really testing |",
+            "|---|---|---|",
+            "| 1 | | |",
+            "| 2 | | |",
+            "| 3 | | |",
+            "",
+            "## Compare",
+            "",
+            "*One sentence per language: what was easiest, what was hardest, and why.*",
+            "",
+            f"- **Python** — {langs.python.title}",
+            f"- **Go** — {langs.go.title}",
+            f"- **C++** — {langs.cpp.title}",
+            "",
+            "## Say these out loud",
+            "",
+            "*Three questions from today. Answer each in two minutes, standing up, no notes.*",
+            "",
+            f"1. {langs.ask}",
+            "2. ",
+            "3. ",
+            "",
+            "## Before you move on",
+            "",
+            "- [ ] All three programs run and I can explain every line.",
+            "- [ ] I can say the one-line difference between the three languages on today's theme.",
+            "- [ ] I answered all three questions above out loud.",
+            "",
+        ]
+    )
 
 
 def practice_file(day: Day) -> str:
@@ -268,6 +429,7 @@ def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
     if nxt:
         nav.append(f"[Day {nxt.n:03d} →](../{nxt.folder}/README.md)")
 
+    langs = day.langs
     tracks = [
         "| Track | Today |",
         "|---|---|",
@@ -290,16 +452,43 @@ def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
 
     if day.cpp:
         name = cpp_name(day)
-        tracks.append(f"| **C++** | {day.cpp.title} |")
-        tonight.append(f"- **C++** — {day.cpp.line}")
+        tracks.append(f"| **C++ for contests** | {day.cpp.title} |")
+        tonight.append(f"- **C++ for contests** — {day.cpp.line}")
         questions.append(f"- *{day.cpp.ask}*")
-        order.append(f"3. [{name}]({name}) — the C++ lesson")
+        order.append(f"3. [{name}]({name}) — the C++ contest lesson (optional)")
         order.append("4. [03-practice.md](03-practice.md) — code it, then say it out loud")
-        sits.append(f"- C++ phase: **{day.cpp.phase}**")
+        sits.append(f"- C++ for contests: **{day.cpp.phase}**")
     else:
         order.append("3. [03-practice.md](03-practice.md) — code it, then say it out loud")
 
-    heading = "## The questions today answers" if day.cpp else "## The two questions today answers"
+    # The languages half. One theme, three lessons, one practice sheet — every day.
+    py, go, cpp = (lang_lesson_name(lesson) for lesson in langs.lessons)
+    tracks += [
+        f"| **Languages** | {langs.theme} |",
+        f"| &nbsp;&nbsp;Python | {langs.python.title} |",
+        f"| &nbsp;&nbsp;Go | {langs.go.title} |",
+        f"| &nbsp;&nbsp;C++ | {langs.cpp.title} |",
+    ]
+    tonight.append(f"- **Languages** — {langs.outcome}")
+    questions.append(f"- *{langs.ask}*")
+    start = len(order) + 1
+    order += [
+        f"{start}. [{py}]({py}) — the Python lesson",
+        f"{start + 1}. [{go}]({go}) — the Go lesson",
+        f"{start + 2}. [{cpp}]({cpp}) — the C++ lesson",
+        f"{start + 3}. [{LANG_PRACTICE}]({LANG_PRACTICE}) — build it three times, then say it out loud",
+    ]
+    sits.append(f"- Languages phase: **{langs.phase}**")
+
+    project: list[str] = []
+    if langs.project:
+        project = [
+            "## Project",
+            "",
+            f"**{langs.project}** — the languages half of today is a build day. The three",
+            "lessons are the walkthrough; the languages practice sheet is the deliverable.",
+            "",
+        ]
 
     return "\n".join(
         [
@@ -311,10 +500,11 @@ def hub_file(day: Day, prev: Day | None, nxt: Day | None) -> str:
             "",
             *tonight,
             "",
-            heading,
+            "## The questions today answers",
             "",
             *questions,
             "",
+            *project,
             "## Read in this order",
             "",
             *order,
@@ -336,19 +526,20 @@ def days_readme(days: list[Day]) -> str:
         "# The 180 days",
         "",
         "Every day is one folder. Every folder holds one DSA lesson, one system design",
-        "lesson, and one practice sheet. Start at day 001 and do not skip.",
+        "lesson, a practice sheet, three language lessons on one theme — Python, Go, C++ —",
+        "and a languages practice sheet. Start at day 001 and do not skip.",
         "",
-        "Ten of the days carry a fourth lesson: the C++ track, for readers who want to solve",
-        "in C++ as well. They are marked in the last column. A day with a blank there is four",
-        "files, as always.",
+        "Twelve of the days carry one more lesson: the C++ contest track, for readers who",
+        "want to compete in C++ as well. They are marked in the last column.",
         "",
-        "| Day | DSA | System design | C++ |",
-        "|---:|---|---|---|",
+        "| Day | DSA | System design | Languages theme | C++ for contests |",
+        "|---:|---|---|---|---|",
     ]
     for d in days:
         cpp = d.cpp.title if d.cpp else ""
+        theme = d.langs.theme + (" · **project**" if d.langs.project else "")
         lines.append(
-            f"| [{d.n:03d}]({d.folder}/README.md) | {d.dsa.title} | {d.sd.title} | {cpp} |"
+            f"| [{d.n:03d}]({d.folder}/README.md) | {d.dsa.title} | {d.sd.title} | {theme} | {cpp} |"
         )
     lines.append("")
     return "\n".join(lines)
@@ -359,12 +550,15 @@ def curriculum_index(days: list[Day]) -> str:
     lines = [
         "# Krama — the curriculum index",
         "",
-        "180 days. Each day teaches one DSA topic and one system design topic, side by side.",
+        "180 days. Each day teaches one DSA topic and one system design topic, side by side,",
+        "and one languages theme taught three times — in Python, in Go, and in C++.",
         "This file is generated from `scripts/curriculum.py` — edit that, then run",
         "`python scripts/build_skeleton.py`.",
         "",
         "- **Days 1-96** build the foundations and the low-level design half.",
         "- **Days 97-180** build distributed systems and the high-level design half.",
+        "- **The languages track** runs its own nine phases alongside, from the first",
+        "  program to an eight-day capstone; Go carries Protocol Buffers and gRPC.",
         "",
         "---",
         "",
@@ -378,24 +572,30 @@ def curriculum_index(days: list[Day]) -> str:
     lines += ["", "## The system design track, by phase", "", "| Days | Phase |", "|---|---|"]
     for name, lo, hi in SD_PHASES:
         lines.append(f"| {lo}-{hi} | {name} |")
+    lines += ["", "## The languages track, by phase", "", "| Days | Phase |", "|---|---|"]
+    for name, lo, hi in LANG_PHASES:
+        lines.append(f"| {lo}-{hi} | {name} |")
+    lines += ["", "### Languages projects", "", "| Starts | Project |", "|---|---|"]
+    for n, name in sorted(LANG_PROJECTS.items()):
+        lines.append(f"| Day {n:03d} | {name} |")
 
     cpp_days = [d for d in days if d.cpp]
     lines += [
         "",
-        "## The C++ track",
+        "## The C++ contest track",
         "",
-        "Optional, and ten days long. Each one sits on the day the course first needs that",
-        "piece of C++. Five land in the first six days, which is enough to start solving in",
-        "C++; five more are placed at the head of the phase that needs them. Every other day",
-        "is four files, unchanged.",
+        "Optional, and twelve days long. Each one sits on the day the DSA course first needs",
+        "that piece of C++. Five land in the first six days, which is enough to start solving",
+        "in C++; the rest are placed at the head of the phase that needs them. This is separate",
+        "from the languages track's C++ lesson, which every day carries.",
         "",
-        "| Day | C++ lesson |",
+        "| Day | C++ contest lesson |",
         "|---:|---|",
     ]
     for d in cpp_days:
         lines.append(f"| [{d.n:03d}](../days/{d.folder}/README.md) | {d.cpp.title} |")
 
-    lines += ["", "---", "", "## Every day"]
+    lines += ["", "---", "", "## Every day: DSA and system design"]
 
     # Group the day table by DSA phase so the index reads as a syllabus.
     for name, lo, hi in DSA_PHASES:
@@ -410,6 +610,25 @@ def curriculum_index(days: list[Day]) -> str:
             d = by_n[n]
             lines.append(
                 f"| [{n:03d}](../days/{d.folder}/README.md) | {d.dsa.title} | {d.sd.title} |"
+            )
+
+    lines += ["", "---", "", "## Every day: the languages track"]
+
+    # And again by languages phase, since the two sets of phases do not line up.
+    for name, lo, hi in LANG_PHASES:
+        lines += [
+            "",
+            f"### Days {lo}-{hi} — {name}",
+            "",
+            "| Day | Theme | Python | Go | C++ | You can |",
+            "|---:|---|---|---|---|---|",
+        ]
+        for n in range(lo, hi + 1):
+            d = by_n[n]
+            lg = d.langs
+            lines.append(
+                f"| [{n:03d}](../days/{d.folder}/README.md) | {lg.theme} | {lg.python.title} | "
+                f"{lg.go.title} | {lg.cpp.title} | {lg.outcome} |"
             )
     lines.append("")
     return "\n".join(lines)
@@ -441,6 +660,9 @@ def main() -> int:
         ]
         if day.cpp:
             targets.append((folder / cpp_name(day), lesson_file(day, day.cpp)))
+        for lesson in day.langs.lessons:
+            targets.append((folder / lang_lesson_name(lesson), lang_lesson_file(day, lesson)))
+        targets.append((folder / LANG_PRACTICE, lang_practice_file(day)))
         for path, body in targets:
             if write(path, body, args.force):
                 written += 1

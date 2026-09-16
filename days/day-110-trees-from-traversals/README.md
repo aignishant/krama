@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Building a tree from its traversals |
 | **System design** | Capacity planning: QPS, storage, bandwidth |
+| **Languages** | Async, deep |
+| &nbsp;&nbsp;Python | TaskGroup, semaphores, cancellation, and aiohttp |
+| &nbsp;&nbsp;Go | errgroup, sync.Once, semaphores, and singleflight |
+| &nbsp;&nbsp;C++ | Futures, promises, and a coroutine task type |
 
 ## What you can do by tonight
 
 - **DSA** — You can reconstruct a tree from preorder plus inorder, and say why postorder plus preorder fails.
 - **System design** — You can turn a product requirement into a server count.
+- **Languages** — You can run bounded concurrent work with error propagation in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *Build the tree from its preorder and inorder traversals.*
 - *How many servers does this system need?*
+- *Ten calls are in flight and one fails. What happens to the other nine?*
 
 ## Read in this order
 
 1. [01-dsa-building-a-tree-from.md](01-dsa-building-a-tree-from.md) — the DSA lesson
 2. [02-system-design-capacity-planning-qps-storage-bandwidth.md](02-system-design-capacity-planning-qps-storage-bandwidth.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-taskgroup-semaphores-cancellation-and.md](05-lang-python-taskgroup-semaphores-cancellation-and.md) — the Python lesson
+5. [06-lang-go-errgroup-sync-once-semaphores.md](06-lang-go-errgroup-sync-once-semaphores.md) — the Go lesson
+6. [07-lang-cpp-futures-promises-and-a.md](07-lang-cpp-futures-promises-and-a.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Trees and binary search trees**
 - System design phase: **Scaling fundamentals**
+- Languages phase: **Languages: idiomatic depth and design**
 
 ---
 

@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Breadth-first traversal: level order |
 | **System design** | Caching: the single biggest win |
+| **Languages** | Distributed locks and leader election |
+| &nbsp;&nbsp;Python | Redis locks and their limits |
+| &nbsp;&nbsp;Go | etcd leases, leader election, and the lock lease trap |
+| &nbsp;&nbsp;C++ | Redis locks and their limits |
 
 ## What you can do by tonight
 
 - **DSA** — You can process a tree level by level and know exactly where the level boundary is.
 - **System design** — You can place a cache at four different layers and say what each one saves.
+- **Languages** — You can ensure only one instance runs the nightly job, and say why that is hard.
 
-## The two questions today answers
+## The questions today answers
 
 - *Print the tree level by level. Now print each level as its own list.*
 - *Where would you put a cache in this system?*
+- *How do you make sure only one instance runs a job?*
 
 ## Read in this order
 
 1. [01-dsa-breadth-first-traversal-level-order.md](01-dsa-breadth-first-traversal-level-order.md) — the DSA lesson
 2. [02-system-design-caching-the-single-biggest-win.md](02-system-design-caching-the-single-biggest-win.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-redis-locks-and-their.md](05-lang-python-redis-locks-and-their.md) — the Python lesson
+5. [06-lang-go-etcd-leases-leader-election.md](06-lang-go-etcd-leases-leader-election.md) — the Go lesson
+6. [07-lang-cpp-redis-locks-and-their.md](07-lang-cpp-redis-locks-and-their.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Trees and binary search trees**
 - System design phase: **Scaling fundamentals**
+- Languages phase: **Languages: messaging, resilience, and deployment**
 
 ---
 

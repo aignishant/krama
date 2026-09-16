@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | XOR problems |
 | **System design** | SLAs, SLOs, and error budgets |
+| **Languages** | Capstone, day 3: the order service |
+| &nbsp;&nbsp;Python | Contract tests from Python |
+| &nbsp;&nbsp;Go | Order service: Postgres, transactions, and the outbox |
+| &nbsp;&nbsp;C++ | Contract tests from C++ |
 
 ## What you can do by tonight
 
 - **DSA** — You can use XOR to cancel pairs, which solves a whole family of interview questions.
 - **System design** — You can translate 99.9 percent uptime into minutes and into engineering decisions.
+- **Languages** — You can create an order atomically with an event that will definitely be published.
 
-## The two questions today answers
+## The questions today answers
 
 - *Every number appears twice except one. Find it, in O(1) space.*
 - *What does three nines mean in minutes per month?*
+- *How do you guarantee the order event is published exactly once?*
 
 ## Read in this order
 
 1. [01-dsa-xor-problems.md](01-dsa-xor-problems.md) — the DSA lesson
 2. [02-system-design-slas-slos-and-error-budgets.md](02-system-design-slas-slos-and-error-budgets.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-contract-tests-from-python.md](05-lang-python-contract-tests-from-python.md) — the Python lesson
+5. [06-lang-go-order-service-postgres-transactions.md](06-lang-go-order-service-postgres-transactions.md) — the Go lesson
+6. [07-lang-cpp-contract-tests-from-c.md](07-lang-cpp-contract-tests-from-c.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Bits and maths**
 - System design phase: **Reliability, security, and the interview itself**
+- Languages phase: **Languages: interview prep and the capstone**
 
 ---
 

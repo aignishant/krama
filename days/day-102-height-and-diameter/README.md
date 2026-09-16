@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Height, depth, and diameter |
 | **System design** | Cache invalidation and eviction policies |
+| **Languages** | The outbox pattern and event sourcing |
+| &nbsp;&nbsp;Python | Outbox table plus relay in Python |
+| &nbsp;&nbsp;Go | Outbox table plus relay in Go |
+| &nbsp;&nbsp;C++ | Outbox table plus relay in C++ |
 
 ## What you can do by tonight
 
 - **DSA** — You can compute the diameter in one pass, using the height as a by-product.
 - **System design** — You can pick write-through, write-back or write-around and defend it.
+- **Languages** — You can publish an event and write to the database atomically, in each language.
 
-## The two questions today answers
+## The questions today answers
 
 - *Find the diameter of the binary tree in O(n).*
 - *How do you keep the cache consistent with the database?*
+- *How do you write to Postgres and publish to Kafka without losing either?*
 
 ## Read in this order
 
 1. [01-dsa-height-depth-and-diameter.md](01-dsa-height-depth-and-diameter.md) — the DSA lesson
 2. [02-system-design-cache-invalidation-and-eviction-policies.md](02-system-design-cache-invalidation-and-eviction-policies.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-outbox-table-plus-relay.md](05-lang-python-outbox-table-plus-relay.md) — the Python lesson
+5. [06-lang-go-outbox-table-plus-relay.md](06-lang-go-outbox-table-plus-relay.md) — the Go lesson
+6. [07-lang-cpp-outbox-table-plus-relay.md](07-lang-cpp-outbox-table-plus-relay.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Trees and binary search trees**
 - System design phase: **Scaling fundamentals**
+- Languages phase: **Languages: messaging, resilience, and deployment**
 
 ---
 

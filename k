@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# k — the Krama daily driver. Six commands run 180 days.
+# k — the Krama daily driver. Six commands run 180 days, five lessons a day.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -17,7 +17,7 @@ usage() {
   cat <<'EOF'
 usage: ./k <command> [args]
 
-  status        progress on both tracks, computed from disk
+  status        progress on every track, computed from disk
   day N         print day N's hub and list its files
   next          the first day that is not written yet
   check [N]     verify written lessons against the format contract
@@ -41,7 +41,7 @@ case "${1:-}" in
     ;;
 
   next)
-    $PY scripts/status.py | grep -A2 '^  Next:' || echo "all 180 days written"
+    $PY scripts/status.py | grep -A4 '^  Next:' || echo "all 180 days written"
     ;;
 
   check)

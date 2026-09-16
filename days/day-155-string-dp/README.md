@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | String DP: palindromic substrings and subsequences |
 | **System design** | Design Instagram |
+| **Languages** | Build D, day 5: ship it |
+| &nbsp;&nbsp;Python | Load test with locust |
+| &nbsp;&nbsp;Go | Metrics, tracing, and CI |
+| &nbsp;&nbsp;C++ | Benchmarks |
 
 ## What you can do by tonight
 
 - **DSA** — You can fill a table by substring length, which is the trick these problems need.
 - **System design** — You can design uploads, the feed, storage, and the CDN path for images.
+- **Languages** — You can ship the chat system and show a trace of one message end to end.
 
-## The two questions today answers
+## The questions today answers
 
 - *Find the longest palindromic substring. Now the longest palindromic subsequence.*
 - *Design Instagram.*
+- *Show me one message travelling through your system.*
 
 ## Read in this order
 
 1. [01-dsa-string-dp-palindromic-substrings.md](01-dsa-string-dp-palindromic-substrings.md) — the DSA lesson
 2. [02-system-design-design-instagram.md](02-system-design-design-instagram.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-load-test-with-locust.md](05-lang-python-load-test-with-locust.md) — the Python lesson
+5. [06-lang-go-metrics-tracing-and-ci.md](06-lang-go-metrics-tracing-and-ci.md) — the Go lesson
+6. [07-lang-cpp-benchmarks.md](07-lang-cpp-benchmarks.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Dynamic programming**
 - System design phase: **High-level design case studies**
+- Languages phase: **Languages: six five-day builds**
 
 ---
 

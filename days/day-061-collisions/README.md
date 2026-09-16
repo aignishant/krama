@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Collisions, and why a hash map can turn slow |
 | **System design** | Coupling, cohesion, and code smells |
+| **Languages** | Protocol Buffers: what and why |
+| &nbsp;&nbsp;Python | JSON versus protobuf: size and speed, measured |
+| &nbsp;&nbsp;Go | JSON versus protobuf: size and speed, measured |
+| &nbsp;&nbsp;C++ | JSON versus protobuf: size and speed, measured |
 
 ## What you can do by tonight
 
 - **DSA** — You can describe chaining and open addressing, and the worst case of each.
 - **System design** — You can name what is wrong with a bad module in the vocabulary reviewers use.
+- **Languages** — You can explain what a schema is, why binary beats text on the wire, and write your first .proto file.
 
-## The two questions today answers
+## The questions today answers
 
 - *What is the worst-case complexity of a hash map lookup? When does it happen?*
 - *Review this module. What would you change?*
+- *Why would you use protobuf instead of JSON?*
 
 ## Read in this order
 
 1. [01-dsa-collisions-and-why-a-hash.md](01-dsa-collisions-and-why-a-hash.md) — the DSA lesson
 2. [02-system-design-coupling-cohesion-and-code-smells.md](02-system-design-coupling-cohesion-and-code-smells.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-json-versus-protobuf-size.md](05-lang-python-json-versus-protobuf-size.md) — the Python lesson
+5. [06-lang-go-json-versus-protobuf-size.md](06-lang-go-json-versus-protobuf-size.md) — the Go lesson
+6. [07-lang-cpp-json-versus-protobuf-size.md](07-lang-cpp-json-versus-protobuf-size.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Hashing: maps and sets**
 - System design phase: **SOLID and design principles**
+- Languages phase: **Languages: Protocol Buffers and gRPC**
 
 ---
 

@@ -4,27 +4,38 @@
 |---|---|
 | **DSA** | Writing binary search without off-by-one bugs |
 | **System design** | Why interviews ask object-oriented design at all |
+| **Languages** | Reflection and metaprogramming |
+| &nbsp;&nbsp;Python | getattr, setattr, __dict__, and metaclasses in outline |
+| &nbsp;&nbsp;Go | reflect: Type, Value, struct tags, and when to avoid it |
+| &nbsp;&nbsp;C++ | Type traits, if constexpr, and templates as compile-time code |
 
 ## What you can do by tonight
 
 - **DSA** — You can write it correctly the first time, every time, using one template.
 - **System design** — You can say what an OOP round is really testing, so you stop answering the wrong question.
+- **Languages** — You can inspect a type at run time in each language and say what it costs.
 
-## The two questions today answers
+## The questions today answers
 
 - *Write binary search on the whiteboard. No compiler.*
 - *Design a class structure for this feature.*
+- *How does a JSON library know your struct's field names?*
 
 ## Read in this order
 
 1. [01-dsa-writing-binary-search-without-off-by-one.md](01-dsa-writing-binary-search-without-off-by-one.md) — the DSA lesson
 2. [02-system-design-why-interviews-ask-object-oriented-design.md](02-system-design-why-interviews-ask-object-oriented-design.md) — the system design lesson
 3. [03-practice.md](03-practice.md) — code it, then say it out loud
+4. [05-lang-python-getattr-setattr-dict-and.md](05-lang-python-getattr-setattr-dict-and.md) — the Python lesson
+5. [06-lang-go-reflect-type-value-struct.md](06-lang-go-reflect-type-value-struct.md) — the Go lesson
+6. [07-lang-cpp-type-traits-if-constexpr.md](07-lang-cpp-type-traits-if-constexpr.md) — the C++ lesson
+7. [08-lang-practice.md](08-lang-practice.md) — build it three times, then say it out loud
 
 ## Where this sits
 
 - DSA phase: **Binary search**
 - System design phase: **Object-oriented design**
+- Languages phase: **Languages: advanced features**
 
 ---
 
