@@ -6,8 +6,6 @@
 | **System design** | Design Google Drive or Dropbox |
 | **Languages** | Build E, day 5: ship it |
 | &nbsp;&nbsp;Python | Docs and demo |
-| &nbsp;&nbsp;Go | CI and containers |
-| &nbsp;&nbsp;C++ | Benchmarks |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-bitmask-dp.md](01-dsa-bitmask-dp.md) — the DSA lesson
 2. [02-system-design-design-google-drive-or-dropbox.md](02-system-design-design-google-drive-or-dropbox.md) — the system design lesson
 3. [05-lang-python-docs-and-demo.md](05-lang-python-docs-and-demo.md) — the Python lesson
-4. [06-lang-go-ci-and-containers.md](06-lang-go-ci-and-containers.md) — the Go lesson
-5. [07-lang-cpp-benchmarks.md](07-lang-cpp-benchmarks.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

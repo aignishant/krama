@@ -6,8 +6,6 @@
 | **System design** | Facade and proxy |
 | **Languages** | gRPC IV: errors, deadlines, metadata |
 | &nbsp;&nbsp;Python | grpc.StatusCode, timeouts, and metadata in Python |
-| &nbsp;&nbsp;Go | status.Error, codes, context deadlines, and metadata.MD |
-| &nbsp;&nbsp;C++ | grpc::Status, deadlines, and ClientContext metadata |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-min-stack-and-stacks-that.md](01-dsa-min-stack-and-stacks-that.md) — the DSA lesson
 2. [02-system-design-facade-and-proxy.md](02-system-design-facade-and-proxy.md) — the system design lesson
 3. [05-lang-python-grpc-statuscode-timeouts-and.md](05-lang-python-grpc-statuscode-timeouts-and.md) — the Python lesson
-4. [06-lang-go-status-error-codes-context.md](06-lang-go-status-error-codes-context.md) — the Go lesson
-5. [07-lang-cpp-grpc-status-deadlines-and.md](07-lang-cpp-grpc-status-deadlines-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

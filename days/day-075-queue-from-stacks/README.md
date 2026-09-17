@@ -6,8 +6,6 @@
 | **System design** | Template method and iterator |
 | **Languages** | Mini project 5: an inventory service over gRPC |
 | &nbsp;&nbsp;Python | Python client and CLI |
-| &nbsp;&nbsp;Go | Go server: protobuf API, Postgres, streaming stock updates |
-| &nbsp;&nbsp;C++ | C++ client and a load generator |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-a-queue-from-two-stacks.md](01-dsa-a-queue-from-two-stacks.md) — the DSA lesson
 2. [02-system-design-template-method-and-iterator.md](02-system-design-template-method-and-iterator.md) — the system design lesson
 3. [05-lang-python-python-client-and-cli.md](05-lang-python-python-client-and-cli.md) — the Python lesson
-4. [06-lang-go-go-server-protobuf-api.md](06-lang-go-go-server-protobuf-api.md) — the Go lesson
-5. [07-lang-cpp-c-client-and-a.md](07-lang-cpp-c-client-and-a.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

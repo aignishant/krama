@@ -6,8 +6,6 @@
 | **System design** | Building blocks revision and interview questions |
 | **Languages** | Build B, day 4: scheduling and priorities |
 | &nbsp;&nbsp;Python | Cron-style scheduling from Python |
-| &nbsp;&nbsp;Go | Priority queues, delayed jobs, and a scheduler loop |
-| &nbsp;&nbsp;C++ | Priority handling in the C++ worker |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-fibonacci-memoisation-versus-tabulation.md](01-dsa-fibonacci-memoisation-versus-tabulation.md) — the DSA lesson
 2. [02-system-design-building-blocks-revision-and-interview.md](02-system-design-building-blocks-revision-and-interview.md) — the system design lesson
 3. [05-lang-python-cron-style-scheduling-from.md](05-lang-python-cron-style-scheduling-from.md) — the Python lesson
-4. [06-lang-go-priority-queues-delayed-jobs.md](06-lang-go-priority-queues-delayed-jobs.md) — the Go lesson
-5. [07-lang-cpp-priority-handling-in-the.md](07-lang-cpp-priority-handling-in-the.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

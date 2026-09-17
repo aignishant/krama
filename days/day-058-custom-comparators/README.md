@@ -6,8 +6,6 @@
 | **System design** | Interface segregation |
 | **Languages** | Testing a service |
 | &nbsp;&nbsp;Python | TestClient, fixtures for a test database, and mocking with respx |
-| &nbsp;&nbsp;Go | httptest, table tests for handlers, and interfaces for mocking |
-| &nbsp;&nbsp;C++ | GoogleTest with an in-process server, and gMock |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-custom-comparators-and-sorting-by.md](01-dsa-custom-comparators-and-sorting-by.md) — the DSA lesson
 2. [02-system-design-interface-segregation.md](02-system-design-interface-segregation.md) — the system design lesson
 3. [05-lang-python-testclient-fixtures-for-a.md](05-lang-python-testclient-fixtures-for-a.md) — the Python lesson
-4. [06-lang-go-httptest-table-tests-for.md](06-lang-go-httptest-table-tests-for.md) — the Go lesson
-5. [07-lang-cpp-googletest-with-an-in.md](07-lang-cpp-googletest-with-an-in.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Why interviews ask object-oriented design at all |
 | **Languages** | Reflection and metaprogramming |
 | &nbsp;&nbsp;Python | getattr, setattr, __dict__, and metaclasses in outline |
-| &nbsp;&nbsp;Go | reflect: Type, Value, struct tags, and when to avoid it |
-| &nbsp;&nbsp;C++ | Type traits, if constexpr, and templates as compile-time code |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-writing-binary-search-without-off-by-one.md](01-dsa-writing-binary-search-without-off-by-one.md) — the DSA lesson
 2. [02-system-design-why-interviews-ask-object-oriented-design.md](02-system-design-why-interviews-ask-object-oriented-design.md) — the system design lesson
 3. [05-lang-python-getattr-setattr-dict-and.md](05-lang-python-getattr-setattr-dict-and.md) — the Python lesson
-4. [06-lang-go-reflect-type-value-struct.md](06-lang-go-reflect-type-value-struct.md) — the Go lesson
-5. [07-lang-cpp-type-traits-if-constexpr.md](07-lang-cpp-type-traits-if-constexpr.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

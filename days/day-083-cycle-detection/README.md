@@ -6,8 +6,6 @@
 | **System design** | Design tic-tac-toe, and then chess |
 | **Languages** | Processes, subprocesses, and signals |
 | &nbsp;&nbsp;Python | subprocess.run, Popen, pipes, and signal handling |
-| &nbsp;&nbsp;Go | os/exec, pipes, and os/signal with graceful shutdown |
-| &nbsp;&nbsp;C++ | fork/exec, popen, and sigaction |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-cycle-detection-and-why-floyds.md](01-dsa-cycle-detection-and-why-floyds.md) — the DSA lesson
 2. [02-system-design-design-tic-tac-toe-and-then-chess.md](02-system-design-design-tic-tac-toe-and-then-chess.md) — the system design lesson
 3. [05-lang-python-subprocess-run-popen-pipes.md](05-lang-python-subprocess-run-popen-pipes.md) — the Python lesson
-4. [06-lang-go-os-exec-pipes-and.md](06-lang-go-os-exec-pipes-and.md) — the Go lesson
-5. [07-lang-cpp-fork-exec-popen-and.md](07-lang-cpp-fork-exec-popen-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

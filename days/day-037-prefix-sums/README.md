@@ -6,8 +6,6 @@
 | **System design** | Key-value stores |
 | **Languages** | Memory model, deeper |
 | &nbsp;&nbsp;Python | Object headers, refcounts, cycles, and the gc module |
-| &nbsp;&nbsp;Go | Escape analysis, the GC pacer, and GOGC |
-| &nbsp;&nbsp;C++ | Smart pointers: unique_ptr, shared_ptr, weak_ptr |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-prefix-sums-answering-range-queries.md](01-dsa-prefix-sums-answering-range-queries.md) — the DSA lesson
 2. [02-system-design-key-value-stores.md](02-system-design-key-value-stores.md) — the system design lesson
 3. [05-lang-python-object-headers-refcounts-cycles.md](05-lang-python-object-headers-refcounts-cycles.md) — the Python lesson
-4. [06-lang-go-escape-analysis-the-gc.md](06-lang-go-escape-analysis-the-gc.md) — the Go lesson
-5. [07-lang-cpp-smart-pointers-unique-ptr.md](07-lang-cpp-smart-pointers-unique-ptr.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

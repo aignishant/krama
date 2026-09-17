@@ -6,8 +6,6 @@
 | **System design** | gRPC and when binary protocols win |
 | **Languages** | Enums and sum types |
 | &nbsp;&nbsp;Python | Enum, IntEnum, auto, and match on enums |
-| &nbsp;&nbsp;Go | iota, typed constants, and the Stringer pattern |
-| &nbsp;&nbsp;C++ | enum class, std::variant, and std::visit |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-anagrams-the-sorting-versus-counting.md](01-dsa-anagrams-the-sorting-versus-counting.md) — the DSA lesson
 2. [02-system-design-grpc-and-when-binary-protocols.md](02-system-design-grpc-and-when-binary-protocols.md) — the system design lesson
 3. [05-lang-python-enum-intenum-auto-and.md](05-lang-python-enum-intenum-auto-and.md) — the Python lesson
-4. [06-lang-go-iota-typed-constants-and.md](06-lang-go-iota-typed-constants-and.md) — the Go lesson
-5. [07-lang-cpp-enum-class-std-variant.md](07-lang-cpp-enum-class-std-variant.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

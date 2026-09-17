@@ -6,8 +6,6 @@
 | **System design** | Database replication |
 | **Languages** | CI for three languages |
 | &nbsp;&nbsp;Python | GitHub Actions: uv, ruff, mypy, pytest, and coverage |
-| &nbsp;&nbsp;Go | GitHub Actions: go vet, staticcheck, test -race, and coverage |
-| &nbsp;&nbsp;C++ | GitHub Actions: CMake, sanitizers, and ctest |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-path-problems-and-the-return-value.md](01-dsa-path-problems-and-the-return-value.md) — the DSA lesson
 2. [02-system-design-database-replication.md](02-system-design-database-replication.md) — the system design lesson
 3. [05-lang-python-github-actions-uv-ruff.md](05-lang-python-github-actions-uv-ruff.md) — the Python lesson
-4. [06-lang-go-github-actions-go-vet.md](06-lang-go-github-actions-go-vet.md) — the Go lesson
-5. [07-lang-cpp-github-actions-cmake-sanitizers.md](07-lang-cpp-github-actions-cmake-sanitizers.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

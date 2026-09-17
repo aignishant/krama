@@ -6,8 +6,6 @@
 | **System design** | Distributed systems revision and interview questions |
 | **Languages** | Twelve-factor services |
 | &nbsp;&nbsp;Python | Config, logs to stdout, stateless processes, in Python |
-| &nbsp;&nbsp;Go | Config, logs to stdout, stateless processes, in Go |
-| &nbsp;&nbsp;C++ | Config, logs to stdout, stateless processes, in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-depth-first-search-on-a-graph.md](01-dsa-depth-first-search-on-a-graph.md) — the DSA lesson
 2. [02-system-design-distributed-systems-revision-and-interview.md](02-system-design-distributed-systems-revision-and-interview.md) — the system design lesson
 3. [05-lang-python-config-logs-to-stdout.md](05-lang-python-config-logs-to-stdout.md) — the Python lesson
-4. [06-lang-go-config-logs-to-stdout.md](06-lang-go-config-logs-to-stdout.md) — the Go lesson
-5. [07-lang-cpp-config-logs-to-stdout.md](07-lang-cpp-config-logs-to-stdout.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | GraphQL versus REST |
 | **Languages** | Wrapping behaviour |
 | &nbsp;&nbsp;Python | Decorators, functools.wraps, and decorators with arguments |
-| &nbsp;&nbsp;Go | Middleware: functions that take and return handlers |
-| &nbsp;&nbsp;C++ | Function objects, higher-order functions, and wrapper classes |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-character-counting-and-frequency-maps.md](01-dsa-character-counting-and-frequency-maps.md) — the DSA lesson
 2. [02-system-design-graphql-versus-rest.md](02-system-design-graphql-versus-rest.md) — the system design lesson
 3. [05-lang-python-decorators-functools-wraps-and.md](05-lang-python-decorators-functools-wraps-and.md) — the Python lesson
-4. [06-lang-go-middleware-functions-that-take.md](06-lang-go-middleware-functions-that-take.md) — the Go lesson
-5. [07-lang-cpp-function-objects-higher-order.md](07-lang-cpp-function-objects-higher-order.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

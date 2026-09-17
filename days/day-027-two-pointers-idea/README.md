@@ -6,8 +6,6 @@
 | **System design** | SQL you must know for interviews |
 | **Languages** | Error handling, properly |
 | &nbsp;&nbsp;Python | Exception hierarchies, exception chaining, and ExceptionGroup |
-| &nbsp;&nbsp;Go | errors.Is, errors.As, %w wrapping, and sentinel errors |
-| &nbsp;&nbsp;C++ | Exception hierarchies, noexcept, and std::expected chains |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-two-pointers-the-idea.md](01-dsa-two-pointers-the-idea.md) — the DSA lesson
 2. [02-system-design-sql-you-must-know.md](02-system-design-sql-you-must-know.md) — the system design lesson
 3. [05-lang-python-exception-hierarchies-exception-chaining.md](05-lang-python-exception-hierarchies-exception-chaining.md) — the Python lesson
-4. [06-lang-go-errors-is-errors-as.md](06-lang-go-errors-is-errors-as.md) — the Go lesson
-5. [07-lang-cpp-exception-hierarchies-noexcept-and.md](07-lang-cpp-exception-hierarchies-noexcept-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

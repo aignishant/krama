@@ -6,8 +6,6 @@
 | **System design** | Design Instagram |
 | **Languages** | Build D, day 5: ship it |
 | &nbsp;&nbsp;Python | Load test with locust |
-| &nbsp;&nbsp;Go | Metrics, tracing, and CI |
-| &nbsp;&nbsp;C++ | Benchmarks |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-string-dp-palindromic-substrings.md](01-dsa-string-dp-palindromic-substrings.md) — the DSA lesson
 2. [02-system-design-design-instagram.md](02-system-design-design-instagram.md) — the system design lesson
 3. [05-lang-python-load-test-with-locust.md](05-lang-python-load-test-with-locust.md) — the Python lesson
-4. [06-lang-go-metrics-tracing-and-ci.md](06-lang-go-metrics-tracing-and-ci.md) — the Go lesson
-5. [07-lang-cpp-benchmarks.md](07-lang-cpp-benchmarks.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Strategy |
 | **Languages** | gRPC V: interceptors, auth, TLS |
 | &nbsp;&nbsp;Python | Interceptors in grpcio and token auth |
-| &nbsp;&nbsp;Go | Unary and stream interceptors, per-RPC credentials, TLS |
-| &nbsp;&nbsp;C++ | Interceptors in grpc++ and TLS credentials |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-monotonic-stack-the-next-greater.md](01-dsa-monotonic-stack-the-next-greater.md) — the DSA lesson
 2. [02-system-design-strategy.md](02-system-design-strategy.md) — the system design lesson
 3. [05-lang-python-interceptors-in-grpcio-and.md](05-lang-python-interceptors-in-grpcio-and.md) — the Python lesson
-4. [06-lang-go-unary-and-stream-interceptors.md](06-lang-go-unary-and-stream-interceptors.md) — the Go lesson
-5. [07-lang-cpp-interceptors-in-grpc-and.md](07-lang-cpp-interceptors-in-grpc-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Latency numbers every engineer should know |
 | **Languages** | Files and standard I/O |
 | &nbsp;&nbsp;Python | open, with, read/write, pathlib, and sys.stdin |
-| &nbsp;&nbsp;Go | os.Open, bufio.Scanner, io.Reader and io.Writer |
-| &nbsp;&nbsp;C++ | std::ifstream, std::ofstream, std::cin, std::cout, and buffering |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-traversal-the-loop-patterns-you.md](01-dsa-traversal-the-loop-patterns-you.md) — the DSA lesson
 2. [02-system-design-latency-numbers-every-engineer-should.md](02-system-design-latency-numbers-every-engineer-should.md) — the system design lesson
 3. [05-lang-python-open-with-read-write.md](05-lang-python-open-with-read-write.md) — the Python lesson
-4. [06-lang-go-os-open-bufio-scanner.md](06-lang-go-os-open-bufio-scanner.md) — the Go lesson
-5. [07-lang-cpp-std-ifstream-std-ofstream.md](07-lang-cpp-std-ifstream-std-ofstream.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

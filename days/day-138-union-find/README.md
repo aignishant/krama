@@ -6,8 +6,6 @@
 | **System design** | Data warehouses: OLAP versus OLTP |
 | **Languages** | Build A, day 3: clients |
 | &nbsp;&nbsp;Python | A Python client with connection pooling and retries |
-| &nbsp;&nbsp;Go | A Go client library |
-| &nbsp;&nbsp;C++ | A C++ client with connection pooling and retries |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-union-find-the-disjoint-set-union.md](01-dsa-union-find-the-disjoint-set-union.md) — the DSA lesson
 2. [02-system-design-data-warehouses-olap-versus-oltp.md](02-system-design-data-warehouses-olap-versus-oltp.md) — the system design lesson
 3. [05-lang-python-a-python-client-with.md](05-lang-python-a-python-client-with.md) — the Python lesson
-4. [06-lang-go-a-go-client-library.md](06-lang-go-a-go-client-library.md) — the Go lesson
-5. [07-lang-cpp-a-c-client-with.md](07-lang-cpp-a-c-client-with.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

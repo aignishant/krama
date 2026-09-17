@@ -6,8 +6,6 @@
 | **System design** | Inheritance and its costs |
 | **Languages** | TCP sockets: an echo server |
 | &nbsp;&nbsp;Python | socket, bind, listen, accept, and a threaded echo server |
-| &nbsp;&nbsp;Go | net.Listen, Accept, and one goroutine per connection |
-| &nbsp;&nbsp;C++ | POSIX sockets, or Boost.Asio, and one thread per connection |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-binary-search-on-the-answer.md](01-dsa-binary-search-on-the-answer.md) — the DSA lesson
 2. [02-system-design-inheritance-and-its-costs.md](02-system-design-inheritance-and-its-costs.md) — the system design lesson
 3. [05-lang-python-socket-bind-listen-accept.md](05-lang-python-socket-bind-listen-accept.md) — the Python lesson
-4. [06-lang-go-net-listen-accept-and.md](06-lang-go-net-listen-accept-and.md) — the Go lesson
-5. [07-lang-cpp-posix-sockets-or-boost.md](07-lang-cpp-posix-sockets-or-boost.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

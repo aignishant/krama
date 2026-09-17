@@ -6,8 +6,6 @@
 | **System design** | Why distributed systems are hard |
 | **Languages** | Standard library tour II: containers |
 | &nbsp;&nbsp;Python | collections: deque, Counter, defaultdict, OrderedDict |
-| &nbsp;&nbsp;Go | container/list, container/ring, and why maps and slices win |
-| &nbsp;&nbsp;C++ | deque, list, set, priority_queue, and unordered containers |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-heap-a-tree-stored.md](01-dsa-the-heap-a-tree-stored.md) — the DSA lesson
 2. [02-system-design-why-distributed-systems-are-hard.md](02-system-design-why-distributed-systems-are-hard.md) — the system design lesson
 3. [05-lang-python-collections-deque-counter-defaultdict.md](05-lang-python-collections-deque-counter-defaultdict.md) — the Python lesson
-4. [06-lang-go-container-list-container-ring.md](06-lang-go-container-list-container-ring.md) — the Go lesson
-5. [07-lang-cpp-deque-list-set-priority.md](07-lang-cpp-deque-list-set-priority.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Normalisation and when to break it |
 | **Languages** | Debugging |
 | &nbsp;&nbsp;Python | pdb, breakpoint(), and reading a traceback |
-| &nbsp;&nbsp;Go | delve, and reading a goroutine panic dump |
-| &nbsp;&nbsp;C++ | gdb, sanitizers, and reading a segfault |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-same-direction-the-read-pointer.md](01-dsa-same-direction-the-read-pointer.md) — the DSA lesson
 2. [02-system-design-normalisation-and-when-to-break.md](02-system-design-normalisation-and-when-to-break.md) — the system design lesson
 3. [05-lang-python-pdb-breakpoint-and-reading.md](05-lang-python-pdb-breakpoint-and-reading.md) — the Python lesson
-4. [06-lang-go-delve-and-reading-a.md](06-lang-go-delve-and-reading-a.md) — the Go lesson
-5. [07-lang-cpp-gdb-sanitizers-and-reading.md](07-lang-cpp-gdb-sanitizers-and-reading.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

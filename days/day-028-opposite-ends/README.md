@@ -6,8 +6,6 @@
 | **System design** | Joins, drawn |
 | **Languages** | Testing |
 | &nbsp;&nbsp;Python | pytest: fixtures, parametrize, and assert introspection |
-| &nbsp;&nbsp;Go | go test, table-driven tests, and t.Run subtests |
-| &nbsp;&nbsp;C++ | GoogleTest and CTest: TEST, EXPECT_EQ, and fixtures |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-opposite-ends-pair-sums.md](01-dsa-opposite-ends-pair-sums.md) — the DSA lesson
 2. [02-system-design-joins-drawn.md](02-system-design-joins-drawn.md) — the system design lesson
 3. [05-lang-python-pytest-fixtures-parametrize-and.md](05-lang-python-pytest-fixtures-parametrize-and.md) — the Python lesson
-4. [06-lang-go-go-test-table-driven.md](06-lang-go-go-test-table-driven.md) — the Go lesson
-5. [07-lang-cpp-googletest-and-ctest-test.md](07-lang-cpp-googletest-and-ctest-test.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

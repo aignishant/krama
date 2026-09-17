@@ -6,8 +6,6 @@
 | **System design** | Design a distributed unique ID generator |
 | **Languages** | Build C, day 5: ship it |
 | &nbsp;&nbsp;Python | Tests through the bindings |
-| &nbsp;&nbsp;Go | Tests through the bindings |
-| &nbsp;&nbsp;C++ | Crash tests, benchmarks, and docs |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-unbounded-knapsack-and-coin-change.md](01-dsa-unbounded-knapsack-and-coin-change.md) — the DSA lesson
 2. [02-system-design-design-a-distributed-unique-id.md](02-system-design-design-a-distributed-unique-id.md) — the system design lesson
 3. [05-lang-python-tests-through-the-bindings.md](05-lang-python-tests-through-the-bindings.md) — the Python lesson
-4. [06-lang-go-tests-through-the-bindings.md](06-lang-go-tests-through-the-bindings.md) — the Go lesson
-5. [07-lang-cpp-crash-tests-benchmarks-and.md](07-lang-cpp-crash-tests-benchmarks-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

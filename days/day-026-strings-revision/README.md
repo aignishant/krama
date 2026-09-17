@@ -6,8 +6,6 @@
 | **System design** | Tables, rows, and keys |
 | **Languages** | Immutability |
 | &nbsp;&nbsp;Python | frozen dataclasses, tuple, frozenset, and Final |
-| &nbsp;&nbsp;Go | const for constants only; immutability by convention |
-| &nbsp;&nbsp;C++ | const, constexpr, consteval, and const-correct methods |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-strings-revision-and-mock-round.md](01-dsa-strings-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-tables-rows-and-keys.md](02-system-design-tables-rows-and-keys.md) — the system design lesson
 3. [05-lang-python-frozen-dataclasses-tuple-frozenset.md](05-lang-python-frozen-dataclasses-tuple-frozenset.md) — the Python lesson
-4. [06-lang-go-const-for-constants-only.md](06-lang-go-const-for-constants-only.md) — the Go lesson
-5. [07-lang-cpp-const-constexpr-consteval-and.md](07-lang-cpp-const-constexpr-consteval-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | How to run a low-level design interview: the forty-minute script |
 | **Languages** | CPU profiling |
 | &nbsp;&nbsp;Python | cProfile, py-spy, and flame graphs |
-| &nbsp;&nbsp;Go | pprof CPU profiles and the flame graph |
-| &nbsp;&nbsp;C++ | perf, and flame graphs from a Release build with symbols |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-stacks-and-queues-revision.md](01-dsa-stacks-and-queues-revision.md) — the DSA lesson
 2. [02-system-design-how-to-run-a-low-level.md](02-system-design-how-to-run-a-low-level.md) — the system design lesson
 3. [05-lang-python-cprofile-py-spy-and.md](05-lang-python-cprofile-py-spy-and.md) — the Python lesson
-4. [06-lang-go-pprof-cpu-profiles-and.md](06-lang-go-pprof-cpu-profiles-and.md) — the Go lesson
-5. [07-lang-cpp-perf-and-flame-graphs.md](07-lang-cpp-perf-and-flame-graphs.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Design Netflix |
 | **Languages** | Build E, day 4: the dashboard and alerts |
 | &nbsp;&nbsp;Python | A FastAPI dashboard and an alert evaluator |
-| &nbsp;&nbsp;Go | Alert rules and notification fan-out |
-| &nbsp;&nbsp;C++ | Query API in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-dp-on-trees.md](01-dsa-dp-on-trees.md) — the DSA lesson
 2. [02-system-design-design-netflix.md](02-system-design-design-netflix.md) — the system design lesson
 3. [05-lang-python-a-fastapi-dashboard-and.md](05-lang-python-a-fastapi-dashboard-and.md) — the Python lesson
-4. [06-lang-go-alert-rules-and-notification.md](06-lang-go-alert-rules-and-notification.md) — the Go lesson
-5. [07-lang-cpp-query-api-in-c.md](07-lang-cpp-query-api-in-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Dependency inversion |
 | **Languages** | Docker for each language |
 | &nbsp;&nbsp;Python | A slim Python image with uv and a non-root user |
-| &nbsp;&nbsp;Go | A multi-stage build to a scratch image |
-| &nbsp;&nbsp;C++ | A multi-stage CMake build to a distroless image |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-sorting-revision-and-mock-round.md](01-dsa-sorting-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-dependency-inversion.md](02-system-design-dependency-inversion.md) — the system design lesson
 3. [05-lang-python-a-slim-python-image.md](05-lang-python-a-slim-python-image.md) — the Python lesson
-4. [06-lang-go-a-multi-stage-build.md](06-lang-go-a-multi-stage-build.md) — the Go lesson
-5. [07-lang-cpp-a-multi-stage-cmake.md](07-lang-cpp-a-multi-stage-cmake.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

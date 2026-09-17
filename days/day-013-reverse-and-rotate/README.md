@@ -6,8 +6,6 @@
 | **System design** | Containers and why everyone uses Docker |
 | **Languages** | Memory: who frees what |
 | &nbsp;&nbsp;Python | Reference counting and the garbage collector |
-| &nbsp;&nbsp;Go | The garbage collector, escape analysis, and stack versus heap |
-| &nbsp;&nbsp;C++ | RAII, new/delete, and why you almost never write delete |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-reversing-rotating-and-swapping.md](01-dsa-reversing-rotating-and-swapping.md) — the DSA lesson
 2. [02-system-design-containers-and-why-everyone-uses.md](02-system-design-containers-and-why-everyone-uses.md) — the system design lesson
 3. [05-lang-python-reference-counting-and-the.md](05-lang-python-reference-counting-and-the.md) — the Python lesson
-4. [06-lang-go-the-garbage-collector-escape.md](06-lang-go-the-garbage-collector-escape.md) — the Go lesson
-5. [07-lang-cpp-raii-new-delete-and.md](07-lang-cpp-raii-new-delete-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

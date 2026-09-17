@@ -6,8 +6,6 @@
 | **System design** | TCP and UDP |
 | **Languages** | Conditions and loops |
 | &nbsp;&nbsp;Python | if/elif/else, for-in, while, break and continue |
-| &nbsp;&nbsp;Go | if with init statements, the only loop is for, switch without fallthrough |
-| &nbsp;&nbsp;C++ | if, for, while, do-while, range-for, switch with fallthrough |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-growth-curves-you-will.md](01-dsa-the-growth-curves-you-will.md) — the DSA lesson
 2. [02-system-design-tcp-and-udp.md](02-system-design-tcp-and-udp.md) — the system design lesson
 3. [05-lang-python-if-elif-else-for.md](05-lang-python-if-elif-else-for.md) — the Python lesson
-4. [06-lang-go-if-with-init-statements.md](06-lang-go-if-with-init-statements.md) — the Go lesson
-5. [07-lang-cpp-if-for-while-do.md](07-lang-cpp-if-for-while-do.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

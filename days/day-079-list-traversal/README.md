@@ -6,8 +6,6 @@
 | **System design** | Design an elevator system |
 | **Languages** | Cache-friendly data layout |
 | &nbsp;&nbsp;Python | Why lists of objects are slow, and arrays of numbers are fast |
-| &nbsp;&nbsp;Go | Slices of structs versus slices of pointers, measured |
-| &nbsp;&nbsp;C++ | Struct of arrays, contiguous memory, and false sharing |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-traversal-insertion-and-deletion.md](01-dsa-traversal-insertion-and-deletion.md) — the DSA lesson
 2. [02-system-design-design-an-elevator-system.md](02-system-design-design-an-elevator-system.md) — the system design lesson
 3. [05-lang-python-why-lists-of-objects.md](05-lang-python-why-lists-of-objects.md) — the Python lesson
-4. [06-lang-go-slices-of-structs-versus.md](06-lang-go-slices-of-structs-versus.md) — the Go lesson
-5. [07-lang-cpp-struct-of-arrays-contiguous.md](07-lang-cpp-struct-of-arrays-contiguous.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

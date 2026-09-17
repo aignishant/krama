@@ -6,8 +6,6 @@
 | **System design** | Capacity planning: QPS, storage, bandwidth |
 | **Languages** | Async, deep |
 | &nbsp;&nbsp;Python | TaskGroup, semaphores, cancellation, and aiohttp |
-| &nbsp;&nbsp;Go | errgroup, sync.Once, semaphores, and singleflight |
-| &nbsp;&nbsp;C++ | Futures, promises, and a coroutine task type |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-building-a-tree-from.md](01-dsa-building-a-tree-from.md) — the DSA lesson
 2. [02-system-design-capacity-planning-qps-storage-bandwidth.md](02-system-design-capacity-planning-qps-storage-bandwidth.md) — the system design lesson
 3. [05-lang-python-taskgroup-semaphores-cancellation-and.md](05-lang-python-taskgroup-semaphores-cancellation-and.md) — the Python lesson
-4. [06-lang-go-errgroup-sync-once-semaphores.md](06-lang-go-errgroup-sync-once-semaphores.md) — the Go lesson
-5. [07-lang-cpp-futures-promises-and-a.md](07-lang-cpp-futures-promises-and-a.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

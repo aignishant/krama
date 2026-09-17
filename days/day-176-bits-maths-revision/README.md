@@ -6,8 +6,6 @@
 | **System design** | Cost: the constraint nobody mentions |
 | **Languages** | Capstone, day 6: resilience |
 | &nbsp;&nbsp;Python | Timeouts, retries, and a circuit breaker in the gateway |
-| &nbsp;&nbsp;Go | Deadlines, retries, and idempotency keys across services |
-| &nbsp;&nbsp;C++ | Load shedding in the pricing engine |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-bits-and-maths-revision.md](01-dsa-bits-and-maths-revision.md) — the DSA lesson
 2. [02-system-design-cost-the-constraint-nobody-mentions.md](02-system-design-cost-the-constraint-nobody-mentions.md) — the system design lesson
 3. [05-lang-python-timeouts-retries-and-a.md](05-lang-python-timeouts-retries-and-a.md) — the Python lesson
-4. [06-lang-go-deadlines-retries-and-idempotency.md](06-lang-go-deadlines-retries-and-idempotency.md) — the Go lesson
-5. [07-lang-cpp-load-shedding-in-the.md](07-lang-cpp-load-shedding-in-the.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

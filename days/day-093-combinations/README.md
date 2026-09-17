@@ -6,8 +6,6 @@
 | **System design** | Design a file system |
 | **Languages** | Background jobs |
 | &nbsp;&nbsp;Python | Celery or arq: enqueue, retry, and schedule |
-| &nbsp;&nbsp;Go | asynq or a hand-built worker with Redis |
-| &nbsp;&nbsp;C++ | A worker process pulling from Redis lists |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-combinations-and-combination-sum.md](01-dsa-combinations-and-combination-sum.md) — the DSA lesson
 2. [02-system-design-design-a-file-system.md](02-system-design-design-a-file-system.md) — the system design lesson
 3. [05-lang-python-celery-or-arq-enqueue.md](05-lang-python-celery-or-arq-enqueue.md) — the Python lesson
-4. [06-lang-go-asynq-or-a-hand.md](06-lang-go-asynq-or-a-hand.md) — the Go lesson
-5. [07-lang-cpp-a-worker-process-pulling.md](07-lang-cpp-a-worker-process-pulling.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

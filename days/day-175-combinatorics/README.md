@@ -6,8 +6,6 @@
 | **System design** | Security in a design interview |
 | **Languages** | Capstone, day 5: events and workers |
 | &nbsp;&nbsp;Python | Notification and analytics workers on Kafka |
-| &nbsp;&nbsp;Go | Inventory worker with idempotent consumption |
-| &nbsp;&nbsp;C++ | Nothing today; C++ is done |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-combinatorics-you-actually-need.md](01-dsa-the-combinatorics-you-actually-need.md) — the DSA lesson
 2. [02-system-design-security-in-a-design-interview.md](02-system-design-security-in-a-design-interview.md) — the system design lesson
 3. [05-lang-python-notification-and-analytics-workers.md](05-lang-python-notification-and-analytics-workers.md) — the Python lesson
-4. [06-lang-go-inventory-worker-with-idempotent.md](06-lang-go-inventory-worker-with-idempotent.md) — the Go lesson
-5. [07-lang-cpp-nothing-today-c-is.md](07-lang-cpp-nothing-today-c-is.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Query plans and the slow query |
 | **Languages** | Concurrency II: passing messages |
 | &nbsp;&nbsp;Python | queue.Queue and producer-consumer |
-| &nbsp;&nbsp;Go | Channels: unbuffered, buffered, close, and range |
-| &nbsp;&nbsp;C++ | std::condition_variable and a hand-built thread-safe queue |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-variable-size-sliding-window.md](01-dsa-variable-size-sliding-window.md) — the DSA lesson
 2. [02-system-design-query-plans-and-the-slow.md](02-system-design-query-plans-and-the-slow.md) — the system design lesson
 3. [05-lang-python-queue-queue-and-producer.md](05-lang-python-queue-queue-and-producer.md) — the Python lesson
-4. [06-lang-go-channels-unbuffered-buffered-close.md](06-lang-go-channels-unbuffered-buffered-close.md) — the Go lesson
-5. [07-lang-cpp-std-condition-variable-and.md](07-lang-cpp-std-condition-variable-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

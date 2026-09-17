@@ -6,8 +6,6 @@
 | **System design** | Eventual consistency in practice |
 | **Languages** | Documentation |
 | &nbsp;&nbsp;Python | Docstrings, Sphinx or mkdocs, and doctest |
-| &nbsp;&nbsp;Go | godoc conventions, examples that run as tests |
-| &nbsp;&nbsp;C++ | Doxygen and a README that builds |
 
 ## What you can do by tonight
 
@@ -25,9 +23,7 @@
 
 1. [01-dsa-top-k-problems.md](01-dsa-top-k-problems.md) — the DSA lesson
 2. [05-lang-python-docstrings-sphinx-or-mkdocs.md](05-lang-python-docstrings-sphinx-or-mkdocs.md) — the Python lesson
-3. [06-lang-go-godoc-conventions-examples-that.md](06-lang-go-godoc-conventions-examples-that.md) — the Go lesson
-4. [07-lang-cpp-doxygen-and-a-readme.md](07-lang-cpp-doxygen-and-a-readme.md) — the C++ lesson
-5. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+3. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

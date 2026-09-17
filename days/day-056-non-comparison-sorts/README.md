@@ -6,8 +6,6 @@
 | **System design** | Open for extension, closed for modification |
 | **Languages** | Caching with Redis |
 | &nbsp;&nbsp;Python | redis-py: GET, SET, EX, and cache-aside |
-| &nbsp;&nbsp;Go | go-redis: GET, SET, pipelines, and cache-aside |
-| &nbsp;&nbsp;C++ | redis-plus-plus: GET, SET, and cache-aside |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-counting-sort-radix-sort.md](01-dsa-counting-sort-radix-sort.md) — the DSA lesson
 2. [02-system-design-open-for-extension-closed.md](02-system-design-open-for-extension-closed.md) — the system design lesson
 3. [05-lang-python-redis-py-get-set.md](05-lang-python-redis-py-get-set.md) — the Python lesson
-4. [06-lang-go-go-redis-get-set.md](06-lang-go-go-redis-get-set.md) — the Go lesson
-5. [07-lang-cpp-redis-plus-plus-get.md](07-lang-cpp-redis-plus-plus-get.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

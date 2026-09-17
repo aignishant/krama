@@ -6,8 +6,6 @@
 | **System design** | Load balancers |
 | **Languages** | Config, secrets, and feature flags |
 | &nbsp;&nbsp;Python | Secrets from the environment, a vault client, and a flag store |
-| &nbsp;&nbsp;Go | Secrets from the environment, a vault client, and a flag store |
-| &nbsp;&nbsp;C++ | Secrets from the environment, a vault client, and a flag store |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-binary-trees-in-code.md](01-dsa-binary-trees-in-code.md) — the DSA lesson
 2. [02-system-design-load-balancers.md](02-system-design-load-balancers.md) — the system design lesson
 3. [05-lang-python-secrets-from-the-environment.md](05-lang-python-secrets-from-the-environment.md) — the Python lesson
-4. [06-lang-go-secrets-from-the-environment.md](06-lang-go-secrets-from-the-environment.md) — the Go lesson
-5. [07-lang-cpp-secrets-from-the-environment.md](07-lang-cpp-secrets-from-the-environment.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

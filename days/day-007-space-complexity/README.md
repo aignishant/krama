@@ -6,8 +6,6 @@
 | **System design** | What a web server actually does |
 | **Languages** | Key-value and membership |
 | &nbsp;&nbsp;Python | dict and set: hashing, ordering, and the in operator |
-| &nbsp;&nbsp;Go | map: make, lookup with the comma-ok idiom, delete, and no order |
-| &nbsp;&nbsp;C++ | std::unordered_map, std::map, std::set, and the choice between them |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-space-complexity-and-what-in-place.md](01-dsa-space-complexity-and-what-in-place.md) — the DSA lesson
 2. [02-system-design-what-a-web-server-actually.md](02-system-design-what-a-web-server-actually.md) — the system design lesson
 3. [05-lang-python-dict-and-set-hashing.md](05-lang-python-dict-and-set-hashing.md) — the Python lesson
-4. [06-lang-go-map-make-lookup-with.md](06-lang-go-map-make-lookup-with.md) — the Go lesson
-5. [07-lang-cpp-std-unordered-map-std.md](07-lang-cpp-std-unordered-map-std.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

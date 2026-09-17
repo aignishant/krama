@@ -6,8 +6,6 @@
 | **System design** | What an API is |
 | **Languages** | Mini project 1: a to-do CLI |
 | &nbsp;&nbsp;Python | A to-do CLI in Python, saved as JSON |
-| &nbsp;&nbsp;Go | A to-do CLI in Go, saved as JSON |
-| &nbsp;&nbsp;C++ | A to-do CLI in C++, saved as JSON |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-moving-elements-zeros-duplicates.md](01-dsa-moving-elements-zeros-duplicates.md) — the DSA lesson
 2. [02-system-design-what-an-api.md](02-system-design-what-an-api.md) — the system design lesson
 3. [05-lang-python-a-to-do-cli.md](05-lang-python-a-to-do-cli.md) — the Python lesson
-4. [06-lang-go-a-to-do-cli.md](06-lang-go-a-to-do-cli.md) — the Go lesson
-5. [07-lang-cpp-a-to-do-cli.md](07-lang-cpp-a-to-do-cli.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

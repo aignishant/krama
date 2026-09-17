@@ -6,8 +6,6 @@
 | **System design** | Designing a good REST endpoint |
 | **Languages** | Composition versus inheritance |
 | &nbsp;&nbsp;Python | Inheritance, super(), and the MRO |
-| &nbsp;&nbsp;Go | Struct embedding, and why Go has no inheritance |
-| &nbsp;&nbsp;C++ | Public inheritance, virtual, override, and object slicing |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-matrix-tricks-rotate-spiral-transpose.md](01-dsa-matrix-tricks-rotate-spiral-transpose.md) — the DSA lesson
 2. [02-system-design-designing-a-good-rest-endpoint.md](02-system-design-designing-a-good-rest-endpoint.md) — the system design lesson
 3. [05-lang-python-inheritance-super-and-the.md](05-lang-python-inheritance-super-and-the.md) — the Python lesson
-4. [06-lang-go-struct-embedding-and-why.md](06-lang-go-struct-embedding-and-why.md) — the Go lesson
-5. [07-lang-cpp-public-inheritance-virtual-override.md](07-lang-cpp-public-inheritance-virtual-override.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Blob storage versus storing files in the database |
 | **Languages** | One program, three languages, measured |
 | &nbsp;&nbsp;Python | A JSON log parser in Python, profiled |
-| &nbsp;&nbsp;Go | A JSON log parser in Go, profiled |
-| &nbsp;&nbsp;C++ | A JSON log parser in C++, profiled |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-topological-sort.md](01-dsa-topological-sort.md) — the DSA lesson
 2. [02-system-design-blob-storage-versus-storing-files.md](02-system-design-blob-storage-versus-storing-files.md) — the system design lesson
 3. [05-lang-python-a-json-log-parser.md](05-lang-python-a-json-log-parser.md) — the Python lesson
-4. [06-lang-go-a-json-log-parser.md](06-lang-go-a-json-log-parser.md) — the Go lesson
-5. [07-lang-cpp-a-json-log-parser.md](07-lang-cpp-a-json-log-parser.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

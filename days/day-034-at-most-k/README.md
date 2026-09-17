@@ -6,8 +6,6 @@
 | **System design** | Isolation levels and the anomalies they allow |
 | **Languages** | Concurrency IV: async |
 | &nbsp;&nbsp;Python | asyncio, await, gather, and the event loop |
-| &nbsp;&nbsp;Go | select, and why Go does not need async/await |
-| &nbsp;&nbsp;C++ | std::async, std::future, and C++20 coroutines in outline |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-at-most-k-and-the-exactly-k-trick.md](01-dsa-at-most-k-and-the-exactly-k-trick.md) — the DSA lesson
 2. [02-system-design-isolation-levels-and-the-anomalies.md](02-system-design-isolation-levels-and-the-anomalies.md) — the system design lesson
 3. [05-lang-python-asyncio-await-gather-and.md](05-lang-python-asyncio-await-gather-and.md) — the Python lesson
-4. [06-lang-go-select-and-why-go.md](06-lang-go-select-and-why-go.md) — the Go lesson
-5. [07-lang-cpp-std-async-std-future.md](07-lang-cpp-std-async-std-future.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

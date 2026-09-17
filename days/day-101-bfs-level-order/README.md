@@ -6,8 +6,6 @@
 | **System design** | Caching: the single biggest win |
 | **Languages** | Distributed locks and leader election |
 | &nbsp;&nbsp;Python | Redis locks and their limits |
-| &nbsp;&nbsp;Go | etcd leases, leader election, and the lock lease trap |
-| &nbsp;&nbsp;C++ | Redis locks and their limits |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-breadth-first-traversal-level-order.md](01-dsa-breadth-first-traversal-level-order.md) — the DSA lesson
 2. [02-system-design-caching-the-single-biggest-win.md](02-system-design-caching-the-single-biggest-win.md) — the system design lesson
 3. [05-lang-python-redis-locks-and-their.md](05-lang-python-redis-locks-and-their.md) — the Python lesson
-4. [06-lang-go-etcd-leases-leader-election.md](06-lang-go-etcd-leases-leader-election.md) — the Go lesson
-5. [07-lang-cpp-redis-locks-and-their.md](07-lang-cpp-redis-locks-and-their.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

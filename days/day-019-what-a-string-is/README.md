@@ -6,8 +6,6 @@
 | **System design** | Authentication and authorisation |
 | **Languages** | Closures |
 | &nbsp;&nbsp;Python | Functions as values, lambda, and captured variables |
-| &nbsp;&nbsp;Go | Function literals, captured loop variables, and function types |
-| &nbsp;&nbsp;C++ | Lambdas, capture lists by value and by reference, std::function |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-what-a-string.md](01-dsa-what-a-string.md) — the DSA lesson
 2. [02-system-design-authentication-and-authorisation.md](02-system-design-authentication-and-authorisation.md) — the system design lesson
 3. [05-lang-python-functions-as-values-lambda.md](05-lang-python-functions-as-values-lambda.md) — the Python lesson
-4. [06-lang-go-function-literals-captured-loop.md](06-lang-go-function-literals-captured-loop.md) — the Go lesson
-5. [07-lang-cpp-lambdas-capture-lists-by.md](07-lang-cpp-lambdas-capture-lists-by.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

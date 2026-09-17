@@ -6,8 +6,6 @@
 | **System design** | Factory and abstract factory |
 | **Languages** | Well-known types |
 | &nbsp;&nbsp;Python | Timestamp, Duration, Any, Empty, and wrappers from Python |
-| &nbsp;&nbsp;Go | timestamppb, durationpb, anypb, and emptypb |
-| &nbsp;&nbsp;C++ | google/protobuf/timestamp.pb.h and friends |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-hashing-your-own-objects.md](01-dsa-hashing-your-own-objects.md) — the DSA lesson
 2. [02-system-design-factory-and-abstract-factory.md](02-system-design-factory-and-abstract-factory.md) — the system design lesson
 3. [05-lang-python-timestamp-duration-any-empty.md](05-lang-python-timestamp-duration-any-empty.md) — the Python lesson
-4. [06-lang-go-timestamppb-durationpb-anypb-and.md](06-lang-go-timestamppb-durationpb-anypb-and.md) — the Go lesson
-5. [07-lang-cpp-google-protobuf-timestamp-pb.md](07-lang-cpp-google-protobuf-timestamp-pb.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

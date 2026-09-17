@@ -6,8 +6,6 @@
 | **System design** | Design a rate limiter, at system scale |
 | **Languages** | Build C, day 3: SSTables and compaction |
 | &nbsp;&nbsp;Python | Reading SSTables from Python |
-| &nbsp;&nbsp;Go | Reading SSTables from Go |
-| &nbsp;&nbsp;C++ | Flushing, sorted files, bloom filters, and compaction |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-0-1-knapsack.md](01-dsa-the-0-1-knapsack.md) — the DSA lesson
 2. [02-system-design-design-a-rate-limiter.md](02-system-design-design-a-rate-limiter.md) — the system design lesson
 3. [05-lang-python-reading-sstables-from-python.md](05-lang-python-reading-sstables-from-python.md) — the Python lesson
-4. [06-lang-go-reading-sstables-from-go.md](06-lang-go-reading-sstables-from-go.md) — the Go lesson
-5. [07-lang-cpp-flushing-sorted-files-bloom.md](07-lang-cpp-flushing-sorted-files-bloom.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

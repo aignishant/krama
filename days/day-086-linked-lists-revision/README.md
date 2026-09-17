@@ -6,8 +6,6 @@
 | **System design** | Design BookMyShow |
 | **Languages** | Streaming large data |
 | &nbsp;&nbsp;Python | Generators, iterators over files, and chunked reads |
-| &nbsp;&nbsp;Go | io.Reader, io.Writer, io.Pipe, and composing readers |
-| &nbsp;&nbsp;C++ | std::istream, iterators, and chunked reads |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-linked-lists-revision-and-mock.md](01-dsa-linked-lists-revision-and-mock.md) — the DSA lesson
 2. [02-system-design-design-bookmyshow.md](02-system-design-design-bookmyshow.md) — the system design lesson
 3. [05-lang-python-generators-iterators-over-files.md](05-lang-python-generators-iterators-over-files.md) — the Python lesson
-4. [06-lang-go-io-reader-io-writer.md](06-lang-go-io-reader-io-writer.md) — the Go lesson
-5. [07-lang-cpp-std-istream-iterators-and.md](07-lang-cpp-std-istream-iterators-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

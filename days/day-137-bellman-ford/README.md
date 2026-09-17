@@ -6,8 +6,6 @@
 | **System design** | Time-series and metrics stores |
 | **Languages** | Build A, day 2: the server core |
 | &nbsp;&nbsp;Python | Property tests against the server |
-| &nbsp;&nbsp;Go | Sharded maps, TTLs, eviction, and the gRPC service |
-| &nbsp;&nbsp;C++ | A load generator |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-bellman-ford-and-what-negative-edges.md](01-dsa-bellman-ford-and-what-negative-edges.md) — the DSA lesson
 2. [02-system-design-time-series-and-metrics-stores.md](02-system-design-time-series-and-metrics-stores.md) — the system design lesson
 3. [05-lang-python-property-tests-against-the.md](05-lang-python-property-tests-against-the.md) — the Python lesson
-4. [06-lang-go-sharded-maps-ttls-eviction.md](06-lang-go-sharded-maps-ttls-eviction.md) — the Go lesson
-5. [07-lang-cpp-a-load-generator.md](07-lang-cpp-a-load-generator.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

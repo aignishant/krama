@@ -6,8 +6,6 @@
 | **System design** | Transactions and ACID |
 | **Languages** | Concurrency III: shared memory |
 | &nbsp;&nbsp;Python | threading.Lock, RLock, and a race you can reproduce |
-| &nbsp;&nbsp;Go | sync.Mutex, sync.RWMutex, atomic, and go test -race |
-| &nbsp;&nbsp;C++ | std::mutex, std::lock_guard, std::atomic, and ThreadSanitizer |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-window-plus-hash-map.md](01-dsa-window-plus-hash-map.md) — the DSA lesson
 2. [02-system-design-transactions-and-acid.md](02-system-design-transactions-and-acid.md) — the system design lesson
 3. [05-lang-python-threading-lock-rlock-and.md](05-lang-python-threading-lock-rlock-and.md) — the Python lesson
-4. [06-lang-go-sync-mutex-sync-rwmutex.md](06-lang-go-sync-mutex-sync-rwmutex.md) — the Go lesson
-5. [07-lang-cpp-std-mutex-std-lock.md](07-lang-cpp-std-mutex-std-lock.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

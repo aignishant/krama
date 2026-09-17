@@ -6,8 +6,6 @@
 | **System design** | Design Splitwise |
 | **Languages** | Timers, tickers, and scheduling |
 | &nbsp;&nbsp;Python | sched, asyncio.sleep, and a cron-like loop |
-| &nbsp;&nbsp;Go | time.Ticker, time.AfterFunc, and a scheduler goroutine |
-| &nbsp;&nbsp;C++ | std::this_thread::sleep_until, and a timer wheel in outline |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-doubly-and-circular-linked-lists.md](01-dsa-doubly-and-circular-linked-lists.md) — the DSA lesson
 2. [02-system-design-design-splitwise.md](02-system-design-design-splitwise.md) — the system design lesson
 3. [05-lang-python-sched-asyncio-sleep-and.md](05-lang-python-sched-asyncio-sleep-and.md) — the Python lesson
-4. [06-lang-go-time-ticker-time-afterfunc.md](06-lang-go-time-ticker-time-afterfunc.md) — the Go lesson
-5. [07-lang-cpp-std-this-thread-sleep.md](07-lang-cpp-std-this-thread-sleep.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Status codes, errors, and idempotency |
 | **Languages** | Generics |
 | &nbsp;&nbsp;Python | typing generics: TypeVar, Generic, and list[T] |
-| &nbsp;&nbsp;Go | Type parameters, constraints, and any versus comparable |
-| &nbsp;&nbsp;C++ | Templates, template argument deduction, and instantiation |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-arrays-revision-and-mock-round.md](01-dsa-arrays-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-status-codes-errors-and-idempotency.md](02-system-design-status-codes-errors-and-idempotency.md) — the system design lesson
 3. [05-lang-python-typing-generics-typevar-generic.md](05-lang-python-typing-generics-typevar-generic.md) — the Python lesson
-4. [06-lang-go-type-parameters-constraints-and.md](06-lang-go-type-parameters-constraints-and.md) — the Go lesson
-5. [07-lang-cpp-templates-template-argument-deduction.md](07-lang-cpp-templates-template-argument-deduction.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

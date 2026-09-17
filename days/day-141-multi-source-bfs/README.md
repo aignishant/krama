@@ -6,8 +6,6 @@
 | **System design** | Push notifications, end to end |
 | **Languages** | Build B, day 1: a job queue. Design |
 | &nbsp;&nbsp;Python | Requirements and the FastAPI submit/status API |
-| &nbsp;&nbsp;Go | Requirements, the .proto job schema, and the Go worker skeleton |
-| &nbsp;&nbsp;C++ | Requirements and the C++ compute worker skeleton |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-multi-source-bfs-and-0-1-bfs.md](01-dsa-multi-source-bfs-and-0-1-bfs.md) — the DSA lesson
 2. [02-system-design-push-notifications-end-to-end.md](02-system-design-push-notifications-end-to-end.md) — the system design lesson
 3. [05-lang-python-requirements-and-the-fastapi.md](05-lang-python-requirements-and-the-fastapi.md) — the Python lesson
-4. [06-lang-go-requirements-the-proto-job.md](06-lang-go-requirements-the-proto-job.md) — the Go lesson
-5. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

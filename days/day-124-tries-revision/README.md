@@ -6,8 +6,6 @@
 | **System design** | Failure detection, heartbeats, and timeouts |
 | **Languages** | Functional style |
 | &nbsp;&nbsp;Python | map, filter, reduce, comprehensions, and pure functions |
-| &nbsp;&nbsp;Go | Higher-order functions, and why Go keeps it plain |
-| &nbsp;&nbsp;C++ | Ranges, views, and pure functions |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-tries-revision-and-mock-round.md](01-dsa-tries-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-failure-detection-heartbeats-and-timeouts.md](02-system-design-failure-detection-heartbeats-and-timeouts.md) — the system design lesson
 3. [05-lang-python-map-filter-reduce-comprehensions.md](05-lang-python-map-filter-reduce-comprehensions.md) — the Python lesson
-4. [06-lang-go-higher-order-functions-and.md](06-lang-go-higher-order-functions-and.md) — the Go lesson
-5. [07-lang-cpp-ranges-views-and-pure.md](07-lang-cpp-ranges-views-and-pure.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

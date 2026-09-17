@@ -6,8 +6,6 @@
 | **System design** | Design a rate limiter, at the object level |
 | **Languages** | Plugins |
 | &nbsp;&nbsp;Python | importlib, entry points, and a plugin registry |
-| &nbsp;&nbsp;Go | Interfaces plus registration, and why the plugin package is avoided |
-| &nbsp;&nbsp;C++ | dlopen, shared libraries, and a C plugin ABI |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-writing-a-recursive-function-that.md](01-dsa-writing-a-recursive-function-that.md) — the DSA lesson
 2. [02-system-design-design-a-rate-limiter.md](02-system-design-design-a-rate-limiter.md) — the system design lesson
 3. [05-lang-python-importlib-entry-points-and.md](05-lang-python-importlib-entry-points-and.md) — the Python lesson
-4. [06-lang-go-interfaces-plus-registration-and.md](06-lang-go-interfaces-plus-registration-and.md) — the Go lesson
-5. [07-lang-cpp-dlopen-shared-libraries-and.md](07-lang-cpp-dlopen-shared-libraries-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

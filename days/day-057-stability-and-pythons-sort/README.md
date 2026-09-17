@@ -6,8 +6,6 @@
 | **System design** | Liskov substitution |
 | **Languages** | Authentication: hashing and tokens |
 | &nbsp;&nbsp;Python | bcrypt/argon2, PyJWT, and a login flow |
-| &nbsp;&nbsp;Go | bcrypt, golang-jwt, and a login flow |
-| &nbsp;&nbsp;C++ | Argon2 via libsodium, jwt-cpp, and a login flow |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-stability-and-what-pythons-sort.md](01-dsa-stability-and-what-pythons-sort.md) — the DSA lesson
 2. [02-system-design-liskov-substitution.md](02-system-design-liskov-substitution.md) — the system design lesson
 3. [05-lang-python-bcrypt-argon2-pyjwt-and.md](05-lang-python-bcrypt-argon2-pyjwt-and.md) — the Python lesson
-4. [06-lang-go-bcrypt-golang-jwt-and.md](06-lang-go-bcrypt-golang-jwt-and.md) — the Go lesson
-5. [07-lang-cpp-argon2-via-libsodium-jwt.md](07-lang-cpp-argon2-via-libsodium-jwt.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

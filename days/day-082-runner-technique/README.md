@@ -6,8 +6,6 @@
 | **System design** | Design a library management system |
 | **Languages** | Calling across languages |
 | &nbsp;&nbsp;Python | ctypes and pybind11: calling C++ from Python |
-| &nbsp;&nbsp;Go | cgo: calling C from Go, and the cost of the boundary |
-| &nbsp;&nbsp;C++ | extern C, and exposing a C++ library to the other two |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-finding-the-middle.md](01-dsa-finding-the-middle.md) — the DSA lesson
 2. [02-system-design-design-a-library-management-system.md](02-system-design-design-a-library-management-system.md) — the system design lesson
 3. [05-lang-python-ctypes-and-pybind11-calling.md](05-lang-python-ctypes-and-pybind11-calling.md) — the Python lesson
-4. [06-lang-go-cgo-calling-c-from.md](06-lang-go-cgo-calling-c-from.md) — the Go lesson
-5. [07-lang-cpp-extern-c-and-exposing.md](07-lang-cpp-extern-c-and-exposing.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

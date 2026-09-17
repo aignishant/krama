@@ -6,8 +6,6 @@
 | **System design** | Read replicas and replication lag |
 | **Languages** | Mini project 7: orders, events, and notifications |
 | &nbsp;&nbsp;Python | Python notification worker consuming Kafka |
-| &nbsp;&nbsp;Go | Go order service with gRPC, Postgres, and the outbox |
-| &nbsp;&nbsp;C++ | C++ pricing service called over gRPC |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-lowest-common-ancestor.md](01-dsa-lowest-common-ancestor.md) — the DSA lesson
 2. [02-system-design-read-replicas-and-replication-lag.md](02-system-design-read-replicas-and-replication-lag.md) — the system design lesson
 3. [05-lang-python-python-notification-worker-consuming.md](05-lang-python-python-notification-worker-consuming.md) — the Python lesson
-4. [06-lang-go-go-order-service-with.md](06-lang-go-go-order-service-with.md) — the Go lesson
-5. [07-lang-cpp-c-pricing-service-called.md](07-lang-cpp-c-pricing-service-called.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

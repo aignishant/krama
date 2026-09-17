@@ -6,8 +6,6 @@
 | **System design** | Clocks, ordering, and why time is a lie |
 | **Languages** | Design patterns III: singleton, state, command |
 | &nbsp;&nbsp;Python | Module-level singletons, state as enum plus match, command as callable |
-| &nbsp;&nbsp;Go | sync.Once, state as interface, command as func |
-| &nbsp;&nbsp;C++ | Meyers singleton, state as variant, command as std::function |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-tries-in-interviews-word-search.md](01-dsa-tries-in-interviews-word-search.md) — the DSA lesson
 2. [02-system-design-clocks-ordering-and-why-time.md](02-system-design-clocks-ordering-and-why-time.md) — the system design lesson
 3. [05-lang-python-module-level-singletons-state.md](05-lang-python-module-level-singletons-state.md) — the Python lesson
-4. [06-lang-go-sync-once-state-as.md](06-lang-go-sync-once-state-as.md) — the Go lesson
-5. [07-lang-cpp-meyers-singleton-state-as.md](07-lang-cpp-meyers-singleton-state-as.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

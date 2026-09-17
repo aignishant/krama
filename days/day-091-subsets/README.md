@@ -6,8 +6,6 @@
 | **System design** | Design a logging framework |
 | **Languages** | Message brokers: Kafka |
 | &nbsp;&nbsp;Python | confluent-kafka: produce, consume, commit |
-| &nbsp;&nbsp;Go | franz-go: produce, consume, commit |
-| &nbsp;&nbsp;C++ | librdkafka: produce, consume, commit |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-subsets-the-include-or-exclude-tree.md](01-dsa-subsets-the-include-or-exclude-tree.md) — the DSA lesson
 2. [02-system-design-design-a-logging-framework.md](02-system-design-design-a-logging-framework.md) — the system design lesson
 3. [05-lang-python-confluent-kafka-produce-consume.md](05-lang-python-confluent-kafka-produce-consume.md) — the Python lesson
-4. [06-lang-go-franz-go-produce-consume.md](06-lang-go-franz-go-produce-consume.md) — the Go lesson
-5. [07-lang-cpp-librdkafka-produce-consume-commit.md](07-lang-cpp-librdkafka-produce-consume-commit.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

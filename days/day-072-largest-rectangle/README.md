@@ -6,8 +6,6 @@
 | **System design** | Observer |
 | **Languages** | gRPC and REST together |
 | &nbsp;&nbsp;Python | Calling a gRPC service from a FastAPI gateway |
-| &nbsp;&nbsp;Go | grpc-gateway: JSON transcoding, and when to expose both |
-| &nbsp;&nbsp;C++ | Calling a gRPC service from a C++ HTTP handler |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-largest-rectangle-in-a-histogram.md](01-dsa-largest-rectangle-in-a-histogram.md) — the DSA lesson
 2. [02-system-design-observer.md](02-system-design-observer.md) — the system design lesson
 3. [05-lang-python-calling-a-grpc-service.md](05-lang-python-calling-a-grpc-service.md) — the Python lesson
-4. [06-lang-go-grpc-gateway-json-transcoding.md](06-lang-go-grpc-gateway-json-transcoding.md) — the Go lesson
-5. [07-lang-cpp-calling-a-grpc-service.md](07-lang-cpp-calling-a-grpc-service.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

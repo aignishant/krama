@@ -6,8 +6,6 @@
 | **System design** | Design a pastebin |
 | **Languages** | Build C, day 2: WAL and memtable |
 | &nbsp;&nbsp;Python | A pure-Python reference implementation for testing |
-| &nbsp;&nbsp;Go | A pure-Go reference implementation for testing |
-| &nbsp;&nbsp;C++ | Write-ahead log, fsync, and a sorted in-memory table |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-finding-the-state-the-hardest.md](01-dsa-finding-the-state-the-hardest.md) — the DSA lesson
 2. [02-system-design-design-a-pastebin.md](02-system-design-design-a-pastebin.md) — the system design lesson
 3. [05-lang-python-a-pure-python-reference.md](05-lang-python-a-pure-python-reference.md) — the Python lesson
-4. [06-lang-go-a-pure-go-reference.md](06-lang-go-a-pure-go-reference.md) — the Go lesson
-5. [07-lang-cpp-write-ahead-log-fsync.md](07-lang-cpp-write-ahead-log-fsync.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

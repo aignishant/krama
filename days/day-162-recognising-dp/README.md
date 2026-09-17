@@ -6,8 +6,6 @@
 | **System design** | Design Google Maps |
 | **Languages** | Build F, day 2: the parser |
 | &nbsp;&nbsp;Python | A recursive-descent parser in Python |
-| &nbsp;&nbsp;Go | A recursive-descent parser in Go |
-| &nbsp;&nbsp;C++ | A recursive-descent parser in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-recognising-dynamic-programming.md](01-dsa-recognising-dynamic-programming.md) — the DSA lesson
 2. [02-system-design-design-google-maps.md](02-system-design-design-google-maps.md) — the system design lesson
 3. [05-lang-python-a-recursive-descent-parser.md](05-lang-python-a-recursive-descent-parser.md) — the Python lesson
-4. [06-lang-go-a-recursive-descent-parser.md](06-lang-go-a-recursive-descent-parser.md) — the Go lesson
-5. [07-lang-cpp-a-recursive-descent-parser.md](07-lang-cpp-a-recursive-descent-parser.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

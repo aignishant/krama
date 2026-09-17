@@ -6,8 +6,6 @@
 | **System design** | ETL, batch pipelines, and where data goes to be counted |
 | **Languages** | Build A, day 4: consistent hashing |
 | &nbsp;&nbsp;Python | Consistent hashing simulation in Python |
-| &nbsp;&nbsp;Go | A hash ring and node add/remove in Go |
-| &nbsp;&nbsp;C++ | The hash ring in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-minimum-spanning-trees-kruskal.md](01-dsa-minimum-spanning-trees-kruskal.md) — the DSA lesson
 2. [02-system-design-etl-batch-pipelines-and-where.md](02-system-design-etl-batch-pipelines-and-where.md) — the system design lesson
 3. [05-lang-python-consistent-hashing-simulation-in.md](05-lang-python-consistent-hashing-simulation-in.md) — the Python lesson
-4. [06-lang-go-a-hash-ring-and.md](06-lang-go-a-hash-ring-and.md) — the Go lesson
-5. [07-lang-cpp-the-hash-ring-in.md](07-lang-cpp-the-hash-ring-in.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

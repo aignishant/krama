@@ -6,8 +6,6 @@
 | **System design** | SLAs, SLOs, and error budgets |
 | **Languages** | Capstone, day 3: the order service |
 | &nbsp;&nbsp;Python | Contract tests from Python |
-| &nbsp;&nbsp;Go | Order service: Postgres, transactions, and the outbox |
-| &nbsp;&nbsp;C++ | Contract tests from C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-xor-problems.md](01-dsa-xor-problems.md) — the DSA lesson
 2. [02-system-design-slas-slos-and-error-budgets.md](02-system-design-slas-slos-and-error-budgets.md) — the system design lesson
 3. [05-lang-python-contract-tests-from-python.md](05-lang-python-contract-tests-from-python.md) — the Python lesson
-4. [06-lang-go-order-service-postgres-transactions.md](06-lang-go-order-service-postgres-transactions.md) — the Go lesson
-5. [07-lang-cpp-contract-tests-from-c.md](07-lang-cpp-contract-tests-from-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

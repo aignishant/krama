@@ -6,8 +6,6 @@
 | **System design** | Cache invalidation and eviction policies |
 | **Languages** | The outbox pattern and event sourcing |
 | &nbsp;&nbsp;Python | Outbox table plus relay in Python |
-| &nbsp;&nbsp;Go | Outbox table plus relay in Go |
-| &nbsp;&nbsp;C++ | Outbox table plus relay in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-height-depth-and-diameter.md](01-dsa-height-depth-and-diameter.md) — the DSA lesson
 2. [02-system-design-cache-invalidation-and-eviction-policies.md](02-system-design-cache-invalidation-and-eviction-policies.md) — the system design lesson
 3. [05-lang-python-outbox-table-plus-relay.md](05-lang-python-outbox-table-plus-relay.md) — the Python lesson
-4. [06-lang-go-outbox-table-plus-relay.md](06-lang-go-outbox-table-plus-relay.md) — the Go lesson
-5. [07-lang-cpp-outbox-table-plus-relay.md](07-lang-cpp-outbox-table-plus-relay.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

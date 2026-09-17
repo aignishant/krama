@@ -6,8 +6,6 @@
 | **System design** | Rate limiting and API gateways |
 | **Languages** | Nothing, safely |
 | &nbsp;&nbsp;Python | None, Optional[T], and the walrus operator |
-| &nbsp;&nbsp;Go | nil, zero values, and the nil-interface trap |
-| &nbsp;&nbsp;C++ | std::optional, nullptr, and value_or |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-palindromes-and-the-two-ends-habit.md](01-dsa-palindromes-and-the-two-ends-habit.md) — the DSA lesson
 2. [02-system-design-rate-limiting-and-api-gateways.md](02-system-design-rate-limiting-and-api-gateways.md) — the system design lesson
 3. [05-lang-python-none-optional-t-and.md](05-lang-python-none-optional-t-and.md) — the Python lesson
-4. [06-lang-go-nil-zero-values-and.md](06-lang-go-nil-zero-values-and.md) — the Go lesson
-5. [07-lang-cpp-std-optional-nullptr-and.md](07-lang-cpp-std-optional-nullptr-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

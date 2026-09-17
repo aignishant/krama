@@ -6,8 +6,6 @@
 | **System design** | Design a food delivery order flow |
 | **Languages** | Other data formats |
 | &nbsp;&nbsp;Python | csv, tomllib, and PyYAML |
-| &nbsp;&nbsp;Go | encoding/csv, BurntSushi/toml, and yaml.v3 |
-| &nbsp;&nbsp;C++ | fast-cpp-csv-parser, toml++, and yaml-cpp |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-recursion-the-leap-of-faith.md](01-dsa-recursion-the-leap-of-faith.md) — the DSA lesson
 2. [02-system-design-design-a-food-delivery-order.md](02-system-design-design-a-food-delivery-order.md) — the system design lesson
 3. [05-lang-python-csv-tomllib-and-pyyaml.md](05-lang-python-csv-tomllib-and-pyyaml.md) — the Python lesson
-4. [06-lang-go-encoding-csv-burntsushi-toml.md](06-lang-go-encoding-csv-burntsushi-toml.md) — the Go lesson
-5. [07-lang-cpp-fast-cpp-csv-parser.md](07-lang-cpp-fast-cpp-csv-parser.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

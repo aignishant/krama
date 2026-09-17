@@ -6,8 +6,6 @@
 | **System design** | Design Twitter |
 | **Languages** | Build D, day 4: history and presence |
 | &nbsp;&nbsp;Python | History queries |
-| &nbsp;&nbsp;Go | Postgres history, cursor pagination, and Redis presence |
-| &nbsp;&nbsp;C++ | The presence service with heartbeats |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-edit-distance.md](01-dsa-edit-distance.md) — the DSA lesson
 2. [02-system-design-design-twitter.md](02-system-design-design-twitter.md) — the system design lesson
 3. [05-lang-python-history-queries.md](05-lang-python-history-queries.md) — the Python lesson
-4. [06-lang-go-postgres-history-cursor-pagination.md](06-lang-go-postgres-history-cursor-pagination.md) — the Go lesson
-5. [07-lang-cpp-the-presence-service-with.md](07-lang-cpp-the-presence-service-with.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Design an in-memory cache with eviction |
 | **Languages** | Mini project 6: a log analytics pipeline |
 | &nbsp;&nbsp;Python | Ingest, parse, and aggregate with generators and multiprocessing |
-| &nbsp;&nbsp;Go | Ingest, parse, and aggregate with a channel pipeline |
-| &nbsp;&nbsp;C++ | Ingest, parse, and aggregate with a thread pool and mmap |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-recursion-on-arrays-and-strings.md](01-dsa-recursion-on-arrays-and-strings.md) — the DSA lesson
 2. [02-system-design-design-an-in-memory-cache.md](02-system-design-design-an-in-memory-cache.md) — the system design lesson
 3. [05-lang-python-ingest-parse-and-aggregate.md](05-lang-python-ingest-parse-and-aggregate.md) — the Python lesson
-4. [06-lang-go-ingest-parse-and-aggregate.md](06-lang-go-ingest-parse-and-aggregate.md) — the Go lesson
-5. [07-lang-cpp-ingest-parse-and-aggregate.md](07-lang-cpp-ingest-parse-and-aggregate.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

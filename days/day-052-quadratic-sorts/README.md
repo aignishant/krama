@@ -6,8 +6,6 @@
 | **System design** | Common object-oriented interview questions |
 | **Languages** | Logging that helps at 3am |
 | &nbsp;&nbsp;Python | logging, structlog, levels, and JSON output |
-| &nbsp;&nbsp;Go | log/slog: structured, levelled, and with context |
-| &nbsp;&nbsp;C++ | spdlog: sinks, levels, and formatting |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-bubble-selection-and-insertion-sort.md](01-dsa-bubble-selection-and-insertion-sort.md) — the DSA lesson
 2. [02-system-design-common-object-oriented-interview-questions.md](02-system-design-common-object-oriented-interview-questions.md) — the system design lesson
 3. [05-lang-python-logging-structlog-levels-and.md](05-lang-python-logging-structlog-levels-and.md) — the Python lesson
-4. [06-lang-go-log-slog-structured-levelled.md](06-lang-go-log-slog-structured-levelled.md) — the Go lesson
-5. [07-lang-cpp-spdlog-sinks-levels-and.md](07-lang-cpp-spdlog-sinks-levels-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

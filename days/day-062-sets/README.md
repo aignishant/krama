@@ -6,8 +6,6 @@
 | **System design** | Design principles revision and interview questions |
 | **Languages** | protoc, buf, and code generation |
 | &nbsp;&nbsp;Python | Generating _pb2.py and using it |
-| &nbsp;&nbsp;Go | protoc-gen-go, buf generate, and the generated .pb.go |
-| &nbsp;&nbsp;C++ | protoc --cpp_out and linking libprotobuf |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-sets-membership-deduplication.md](01-dsa-sets-membership-deduplication.md) — the DSA lesson
 2. [02-system-design-design-principles-revision-and-interview.md](02-system-design-design-principles-revision-and-interview.md) — the system design lesson
 3. [05-lang-python-generating-pb2-py-and.md](05-lang-python-generating-pb2-py-and.md) — the Python lesson
-4. [06-lang-go-protoc-gen-go-buf.md](06-lang-go-protoc-gen-go-buf.md) — the Go lesson
-5. [07-lang-cpp-protoc-cpp-out-and.md](07-lang-cpp-protoc-cpp-out-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

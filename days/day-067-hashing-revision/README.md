@@ -6,8 +6,6 @@
 | **System design** | Prototype, and cloning objects |
 | **Languages** | gRPC I: a unary server in Go |
 | &nbsp;&nbsp;Python | grpcio: a Python server for the same service |
-| &nbsp;&nbsp;Go | service in .proto, protoc-gen-go-grpc, and a Go server |
-| &nbsp;&nbsp;C++ | grpc++: a C++ server for the same service |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-hashing-revision-and-mock-round.md](01-dsa-hashing-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-prototype-and-cloning-objects.md](02-system-design-prototype-and-cloning-objects.md) — the system design lesson
 3. [05-lang-python-grpcio-a-python-server.md](05-lang-python-grpcio-a-python-server.md) — the Python lesson
-4. [06-lang-go-service-in-proto-protoc.md](06-lang-go-service-in-proto-protoc.md) — the Go lesson
-5. [07-lang-cpp-grpc-a-c-server.md](07-lang-cpp-grpc-a-c-server.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

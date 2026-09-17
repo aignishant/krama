@@ -6,8 +6,6 @@
 | **System design** | REST, properly |
 | **Languages** | Interfaces |
 | &nbsp;&nbsp;Python | Duck typing, abstract base classes, and Protocol |
-| &nbsp;&nbsp;Go | Interfaces are satisfied implicitly; the empty interface; io.Reader |
-| &nbsp;&nbsp;C++ | Abstract classes, pure virtual functions, and vtables |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-2d-arrays-and-matrix-traversal.md](01-dsa-2d-arrays-and-matrix-traversal.md) — the DSA lesson
 2. [02-system-design-rest-properly.md](02-system-design-rest-properly.md) — the system design lesson
 3. [05-lang-python-duck-typing-abstract-base.md](05-lang-python-duck-typing-abstract-base.md) — the Python lesson
-4. [06-lang-go-interfaces-are-satisfied-implicitly.md](06-lang-go-interfaces-are-satisfied-implicitly.md) — the Go lesson
-5. [07-lang-cpp-abstract-classes-pure-virtual.md](07-lang-cpp-abstract-classes-pure-virtual.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

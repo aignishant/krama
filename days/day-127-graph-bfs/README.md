@@ -6,8 +6,6 @@
 | **System design** | Distributed locks |
 | **Languages** | Error architecture |
 | &nbsp;&nbsp;Python | A domain exception hierarchy mapped to HTTP codes |
-| &nbsp;&nbsp;Go | Typed errors, sentinel errors, and mapping to gRPC codes |
-| &nbsp;&nbsp;C++ | std::expected with a domain error enum, mapped to codes |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-breadth-first-search-on-a-graph.md](01-dsa-breadth-first-search-on-a-graph.md) — the DSA lesson
 2. [02-system-design-distributed-locks.md](02-system-design-distributed-locks.md) — the system design lesson
 3. [05-lang-python-a-domain-exception-hierarchy.md](05-lang-python-a-domain-exception-hierarchy.md) — the Python lesson
-4. [06-lang-go-typed-errors-sentinel-errors.md](06-lang-go-typed-errors-sentinel-errors.md) — the Go lesson
-5. [07-lang-cpp-std-expected-with-a.md](07-lang-cpp-std-expected-with-a.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

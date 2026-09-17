@@ -6,8 +6,6 @@
 | **System design** | Choosing SQL or NoSQL in an interview |
 | **Languages** | JSON in and out |
 | &nbsp;&nbsp;Python | json.loads, json.dumps, dataclasses, and pydantic |
-| &nbsp;&nbsp;Go | encoding/json, struct tags, and omitempty |
-| &nbsp;&nbsp;C++ | nlohmann/json: parsing, serialising, and from_json |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-2d-prefix-sums-and-inclusion-exclusion.md](01-dsa-2d-prefix-sums-and-inclusion-exclusion.md) — the DSA lesson
 2. [02-system-design-choosing-sql-or-nosql.md](02-system-design-choosing-sql-or-nosql.md) — the system design lesson
 3. [05-lang-python-json-loads-json-dumps.md](05-lang-python-json-loads-json-dumps.md) — the Python lesson
-4. [06-lang-go-encoding-json-struct-tags.md](06-lang-go-encoding-json-struct-tags.md) — the Go lesson
-5. [07-lang-cpp-nlohmann-json-parsing-serialising.md](07-lang-cpp-nlohmann-json-parsing-serialising.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Design a notification system at scale |
 | **Languages** | Build D, day 2: gRPC bidirectional streams |
 | &nbsp;&nbsp;Python | A Python terminal client on the stream |
-| &nbsp;&nbsp;Go | The room hub with bidirectional streaming |
-| &nbsp;&nbsp;C++ | A C++ terminal client on the stream |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-longest-increasing-subsequence.md](01-dsa-longest-increasing-subsequence.md) — the DSA lesson
 2. [02-system-design-design-a-notification-system.md](02-system-design-design-a-notification-system.md) — the system design lesson
 3. [05-lang-python-a-python-terminal-client.md](05-lang-python-a-python-terminal-client.md) — the Python lesson
-4. [06-lang-go-the-room-hub-with.md](06-lang-go-the-room-hub-with.md) — the Go lesson
-5. [07-lang-cpp-a-c-terminal-client.md](07-lang-cpp-a-c-terminal-client.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Classes and objects |
 | **Languages** | Building and shipping |
 | &nbsp;&nbsp;Python | pyproject.toml, wheels, and PyInstaller |
-| &nbsp;&nbsp;Go | go build flags, -ldflags, cross-compiling, and a static binary |
-| &nbsp;&nbsp;C++ | CMake targets, static versus dynamic linking, and Release builds |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-first-and-last-occurrence.md](01-dsa-first-and-last-occurrence.md) — the DSA lesson
 2. [02-system-design-classes-and-objects.md](02-system-design-classes-and-objects.md) — the system design lesson
 3. [05-lang-python-pyproject-toml-wheels-and.md](05-lang-python-pyproject-toml-wheels-and.md) — the Python lesson
-4. [06-lang-go-go-build-flags-ldflags.md](06-lang-go-go-build-flags-ldflags.md) — the Go lesson
-5. [07-lang-cpp-cmake-targets-static-versus.md](07-lang-cpp-cmake-targets-static-versus.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

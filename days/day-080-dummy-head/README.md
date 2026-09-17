@@ -6,8 +6,6 @@
 | **System design** | Design an ATM |
 | **Languages** | Numbers: floats, decimals, and big integers |
 | &nbsp;&nbsp;Python | float pitfalls, decimal, fractions, and arbitrary ints |
-| &nbsp;&nbsp;Go | float64, math/big, and shopspring decimal |
-| &nbsp;&nbsp;C++ | double, long double, integer overflow, and a big-int library |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-dummy-head-trick.md](01-dsa-the-dummy-head-trick.md) — the DSA lesson
 2. [02-system-design-design-an-atm.md](02-system-design-design-an-atm.md) — the system design lesson
 3. [05-lang-python-float-pitfalls-decimal-fractions.md](05-lang-python-float-pitfalls-decimal-fractions.md) — the Python lesson
-4. [06-lang-go-float64-math-big-and.md](06-lang-go-float64-math-big-and.md) — the Go lesson
-5. [07-lang-cpp-double-long-double-integer.md](07-lang-cpp-double-long-double-integer.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

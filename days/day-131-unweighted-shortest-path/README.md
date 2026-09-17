@@ -6,8 +6,6 @@
 | **System design** | Publish-subscribe versus point-to-point |
 | **Languages** | Go, deep: channel patterns |
 | &nbsp;&nbsp;Python | The same patterns with asyncio queues |
-| &nbsp;&nbsp;Go | Done channels, fan-in, fan-out, select with default, and time.After |
-| &nbsp;&nbsp;C++ | The same patterns with condition variables |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-shortest-path-in-an-unweighted.md](01-dsa-shortest-path-in-an-unweighted.md) — the DSA lesson
 2. [02-system-design-publish-subscribe-versus-point-to-point.md](02-system-design-publish-subscribe-versus-point-to-point.md) — the system design lesson
 3. [05-lang-python-the-same-patterns-with.md](05-lang-python-the-same-patterns-with.md) — the Python lesson
-4. [06-lang-go-done-channels-fan-in.md](06-lang-go-done-channels-fan-in.md) — the Go lesson
-5. [07-lang-cpp-the-same-patterns-with.md](07-lang-cpp-the-same-patterns-with.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

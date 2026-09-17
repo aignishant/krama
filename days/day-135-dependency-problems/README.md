@@ -6,8 +6,6 @@
 | **System design** | Search: how a search index actually works |
 | **Languages** | Mini project 9: a key-value store with a wire protocol |
 | &nbsp;&nbsp;Python | A KV server and client in Python |
-| &nbsp;&nbsp;Go | A KV server and client in Go |
-| &nbsp;&nbsp;C++ | A KV server and client in C++ |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-course-schedule-and-the-dependency.md](01-dsa-course-schedule-and-the-dependency.md) — the DSA lesson
 2. [02-system-design-search-how-a-search-index.md](02-system-design-search-how-a-search-index.md) — the system design lesson
 3. [05-lang-python-a-kv-server-and.md](05-lang-python-a-kv-server-and.md) — the Python lesson
-4. [06-lang-go-a-kv-server-and.md](06-lang-go-a-kv-server-and.md) — the Go lesson
-5. [07-lang-cpp-a-kv-server-and.md](07-lang-cpp-a-kv-server-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

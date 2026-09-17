@@ -6,8 +6,6 @@
 | **System design** | Locking and deadlocks |
 | **Languages** | Worker pools and pipelines |
 | &nbsp;&nbsp;Python | concurrent.futures: ThreadPoolExecutor and ProcessPoolExecutor |
-| &nbsp;&nbsp;Go | Worker pool with channels, fan-out and fan-in |
-| &nbsp;&nbsp;C++ | A thread pool class with a task queue |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-choosing-between-two-pointers.md](01-dsa-choosing-between-two-pointers.md) — the DSA lesson
 2. [02-system-design-locking-and-deadlocks.md](02-system-design-locking-and-deadlocks.md) — the system design lesson
 3. [05-lang-python-concurrent-futures-threadpoolexecutor-and.md](05-lang-python-concurrent-futures-threadpoolexecutor-and.md) — the Python lesson
-4. [06-lang-go-worker-pool-with-channels.md](06-lang-go-worker-pool-with-channels.md) — the Go lesson
-5. [07-lang-cpp-a-thread-pool-class.md](07-lang-cpp-a-thread-pool-class.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

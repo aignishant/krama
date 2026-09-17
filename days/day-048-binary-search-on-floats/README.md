@@ -6,8 +6,6 @@
 | **System design** | Abstraction and interfaces |
 | **Languages** | HTTP servers |
 | &nbsp;&nbsp;Python | FastAPI: a route, a request model, a response model |
-| &nbsp;&nbsp;Go | net/http: ServeMux, handlers, and http.ListenAndServe |
-| &nbsp;&nbsp;C++ | cpp-httplib: routes and handlers |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-binary-search-on-floats.md](01-dsa-binary-search-on-floats.md) — the DSA lesson
 2. [02-system-design-abstraction-and-interfaces.md](02-system-design-abstraction-and-interfaces.md) — the system design lesson
 3. [05-lang-python-fastapi-a-route-a.md](05-lang-python-fastapi-a-route-a.md) — the Python lesson
-4. [06-lang-go-net-http-servemux-handlers.md](06-lang-go-net-http-servemux-handlers.md) — the Go lesson
-5. [07-lang-cpp-cpp-httplib-routes-and.md](07-lang-cpp-cpp-httplib-routes-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

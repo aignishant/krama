@@ -6,8 +6,6 @@
 | **System design** | Polymorphism |
 | **Languages** | HTTP clients |
 | &nbsp;&nbsp;Python | httpx and requests: GET, POST, headers, timeouts, sessions |
-| &nbsp;&nbsp;Go | net/http Client, requests, headers, and reusing the transport |
-| &nbsp;&nbsp;C++ | libcurl through cpr: GET, POST, headers, timeouts |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-minimise-the-maximum-the-capacity.md](01-dsa-minimise-the-maximum-the-capacity.md) — the DSA lesson
 2. [02-system-design-polymorphism.md](02-system-design-polymorphism.md) — the system design lesson
 3. [05-lang-python-httpx-and-requests-get.md](05-lang-python-httpx-and-requests-get.md) — the Python lesson
-4. [06-lang-go-net-http-client-requests.md](06-lang-go-net-http-client-requests.md) — the Go lesson
-5. [07-lang-cpp-libcurl-through-cpr-get.md](07-lang-cpp-libcurl-through-cpr-get.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

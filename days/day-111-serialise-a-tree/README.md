@@ -6,8 +6,6 @@
 | **System design** | Single points of failure |
 | **Languages** | Parallelism and the scheduler |
 | &nbsp;&nbsp;Python | multiprocessing, the GIL, and free-threaded Python |
-| &nbsp;&nbsp;Go | GOMAXPROCS, the M:P:G scheduler, and preemption |
-| &nbsp;&nbsp;C++ | std::execution policies and hardware_concurrency |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-serialising-and-deserialising-a-tree.md](01-dsa-serialising-and-deserialising-a-tree.md) — the DSA lesson
 2. [02-system-design-single-points-of-failure.md](02-system-design-single-points-of-failure.md) — the system design lesson
 3. [05-lang-python-multiprocessing-the-gil-and.md](05-lang-python-multiprocessing-the-gil-and.md) — the Python lesson
-4. [06-lang-go-gomaxprocs-the-m-p.md](06-lang-go-gomaxprocs-the-m-p.md) — the Go lesson
-5. [07-lang-cpp-std-execution-policies-and.md](07-lang-cpp-std-execution-policies-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

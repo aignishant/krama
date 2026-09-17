@@ -6,8 +6,6 @@
 | **System design** | Design a ride-hailing booking flow |
 | **Languages** | Templates and code generation |
 | &nbsp;&nbsp;Python | Jinja2 for text, HTML, and generating code |
-| &nbsp;&nbsp;Go | text/template, html/template, and go generate |
-| &nbsp;&nbsp;C++ | Generating C++ with a script, and CMake configure_file |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-call-stack-drawn.md](01-dsa-the-call-stack-drawn.md) — the DSA lesson
 2. [02-system-design-design-a-ride-hailing-booking-flow.md](02-system-design-design-a-ride-hailing-booking-flow.md) — the system design lesson
 3. [05-lang-python-jinja2-for-text-html.md](05-lang-python-jinja2-for-text-html.md) — the Python lesson
-4. [06-lang-go-text-template-html-template.md](06-lang-go-text-template-html-template.md) — the Go lesson
-5. [07-lang-cpp-generating-c-with-a.md](07-lang-cpp-generating-c-with-a.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

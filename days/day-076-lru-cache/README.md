@@ -6,8 +6,6 @@
 | **System design** | Design patterns revision and interview questions |
 | **Languages** | Benchmarking |
 | &nbsp;&nbsp;Python | timeit, pytest-benchmark, and pyperf |
-| &nbsp;&nbsp;Go | testing.B, b.N, benchstat, and allocation counts |
-| &nbsp;&nbsp;C++ | Google Benchmark and DoNotOptimize |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-lru-cache-the-structure-interviewers.md](01-dsa-lru-cache-the-structure-interviewers.md) — the DSA lesson
 2. [02-system-design-design-patterns-revision-and-interview.md](02-system-design-design-patterns-revision-and-interview.md) — the system design lesson
 3. [05-lang-python-timeit-pytest-benchmark-and.md](05-lang-python-timeit-pytest-benchmark-and.md) — the Python lesson
-4. [06-lang-go-testing-b-b-n.md](06-lang-go-testing-b-b-n.md) — the Go lesson
-5. [07-lang-cpp-google-benchmark-and-donotoptimize.md](07-lang-cpp-google-benchmark-and-donotoptimize.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

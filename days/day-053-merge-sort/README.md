@@ -6,8 +6,6 @@
 | **System design** | Writing clean, testable classes |
 | **Languages** | Databases I: SQLite |
 | &nbsp;&nbsp;Python | sqlite3: connect, execute, parameters, and transactions |
-| &nbsp;&nbsp;Go | database/sql with modernc sqlite, prepared statements, and Scan |
-| &nbsp;&nbsp;C++ | SQLite C API and a thin RAII wrapper |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-merge-sort.md](01-dsa-merge-sort.md) — the DSA lesson
 2. [02-system-design-writing-clean-testable-classes.md](02-system-design-writing-clean-testable-classes.md) — the system design lesson
 3. [05-lang-python-sqlite3-connect-execute-parameters.md](05-lang-python-sqlite3-connect-execute-parameters.md) — the Python lesson
-4. [06-lang-go-database-sql-with-modernc.md](06-lang-go-database-sql-with-modernc.md) — the Go lesson
-5. [07-lang-cpp-sqlite-c-api-and.md](07-lang-cpp-sqlite-c-api-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

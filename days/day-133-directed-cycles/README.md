@@ -6,8 +6,6 @@
 | **System design** | Object storage, S3-style |
 | **Languages** | Python, deep: the object model |
 | &nbsp;&nbsp;Python | Descriptors, metaclasses, __new__, and the import system |
-| &nbsp;&nbsp;Go | The nearest Go idea: reflection and struct tags |
-| &nbsp;&nbsp;C++ | The nearest C++ idea: templates and traits |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-cycle-detection-in-a-directed.md](01-dsa-cycle-detection-in-a-directed.md) — the DSA lesson
 2. [02-system-design-object-storage-s3-style.md](02-system-design-object-storage-s3-style.md) — the system design lesson
 3. [05-lang-python-descriptors-metaclasses-new-and.md](05-lang-python-descriptors-metaclasses-new-and.md) — the Python lesson
-4. [06-lang-go-the-nearest-go-idea.md](06-lang-go-the-nearest-go-idea.md) — the Go lesson
-5. [07-lang-cpp-the-nearest-c-idea.md](07-lang-cpp-the-nearest-c-idea.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

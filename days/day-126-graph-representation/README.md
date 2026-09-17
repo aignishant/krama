@@ -6,8 +6,6 @@
 | **System design** | Circuit breakers and bulkheads |
 | **Languages** | Clean architecture |
 | &nbsp;&nbsp;Python | Domain, application, infrastructure layers in a Python service |
-| &nbsp;&nbsp;Go | Domain, application, infrastructure layers in a Go service |
-| &nbsp;&nbsp;C++ | Domain, application, infrastructure layers in a C++ service |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-representing-a-graph-adjacency-matrix.md](01-dsa-representing-a-graph-adjacency-matrix.md) — the DSA lesson
 2. [02-system-design-circuit-breakers-and-bulkheads.md](02-system-design-circuit-breakers-and-bulkheads.md) — the system design lesson
 3. [05-lang-python-domain-application-infrastructure-layers.md](05-lang-python-domain-application-infrastructure-layers.md) — the Python lesson
-4. [06-lang-go-domain-application-infrastructure-layers.md](06-lang-go-domain-application-infrastructure-layers.md) — the Go lesson
-5. [07-lang-cpp-domain-application-infrastructure-layers.md](07-lang-cpp-domain-application-infrastructure-layers.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

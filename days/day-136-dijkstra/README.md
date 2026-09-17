@@ -6,8 +6,6 @@
 | **System design** | Elasticsearch in a design |
 | **Languages** | Build A, day 1: a distributed cache. Design |
 | &nbsp;&nbsp;Python | Requirements and the Python client interface |
-| &nbsp;&nbsp;Go | Requirements, the .proto API, and the Go server skeleton |
-| &nbsp;&nbsp;C++ | Requirements and the C++ client interface |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-dijkstras-algorithm.md](01-dsa-dijkstras-algorithm.md) — the DSA lesson
 2. [02-system-design-elasticsearch-in-a-design.md](02-system-design-elasticsearch-in-a-design.md) — the system design lesson
 3. [05-lang-python-requirements-and-the-python.md](05-lang-python-requirements-and-the-python.md) — the Python lesson
-4. [06-lang-go-requirements-the-proto-api.md](06-lang-go-requirements-the-proto-api.md) — the Go lesson
-5. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

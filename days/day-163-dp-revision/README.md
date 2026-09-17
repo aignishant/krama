@@ -6,8 +6,6 @@
 | **System design** | Design an e-commerce system |
 | **Languages** | Build F, day 3: the evaluator |
 | &nbsp;&nbsp;Python | A tree-walking evaluator with environments |
-| &nbsp;&nbsp;Go | A tree-walking evaluator with environments |
-| &nbsp;&nbsp;C++ | A tree-walking evaluator with std::variant values |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-dynamic-programming-revision-and-mock.md](01-dsa-dynamic-programming-revision-and-mock.md) — the DSA lesson
 2. [02-system-design-design-an-e-commerce-system.md](02-system-design-design-an-e-commerce-system.md) — the system design lesson
 3. [05-lang-python-a-tree-walking-evaluator.md](05-lang-python-a-tree-walking-evaluator.md) — the Python lesson
-4. [06-lang-go-a-tree-walking-evaluator.md](06-lang-go-a-tree-walking-evaluator.md) — the Go lesson
-5. [07-lang-cpp-a-tree-walking-evaluator.md](07-lang-cpp-a-tree-walking-evaluator.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

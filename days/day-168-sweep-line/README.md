@@ -6,8 +6,6 @@
 | **System design** | Design an ad click aggregator |
 | **Languages** | C++ interview questions |
 | &nbsp;&nbsp;Python | How Python answers the same questions |
-| &nbsp;&nbsp;Go | How Go answers the same questions |
-| &nbsp;&nbsp;C++ | The forty questions: virtual, smart pointers, move, RAII, UB, templates |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-meeting-rooms-and-the-sweep.md](01-dsa-meeting-rooms-and-the-sweep.md) — the DSA lesson
 2. [02-system-design-design-an-ad-click-aggregator.md](02-system-design-design-an-ad-click-aggregator.md) — the system design lesson
 3. [05-lang-python-how-python-answers-the.md](05-lang-python-how-python-answers-the.md) — the Python lesson
-4. [06-lang-go-how-go-answers-the.md](06-lang-go-how-go-answers-the.md) — the Go lesson
-5. [07-lang-cpp-the-forty-questions-virtual.md](07-lang-cpp-the-forty-questions-virtual.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | B-trees and why indexes are shaped that way |
 | **Languages** | Concurrency I: threads |
 | &nbsp;&nbsp;Python | threading.Thread, the GIL, and what it really blocks |
-| &nbsp;&nbsp;Go | goroutines, go func(), and sync.WaitGroup |
-| &nbsp;&nbsp;C++ | std::thread, std::jthread, and join |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-fixed-size-sliding-window.md](01-dsa-fixed-size-sliding-window.md) — the DSA lesson
 2. [02-system-design-b-trees-and-why-indexes-are.md](02-system-design-b-trees-and-why-indexes-are.md) — the system design lesson
 3. [05-lang-python-threading-thread-the-gil.md](05-lang-python-threading-thread-the-gil.md) — the Python lesson
-4. [06-lang-go-goroutines-go-func-and.md](06-lang-go-goroutines-go-func-and.md) — the Go lesson
-5. [07-lang-cpp-std-thread-std-jthread.md](07-lang-cpp-std-thread-std-jthread.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

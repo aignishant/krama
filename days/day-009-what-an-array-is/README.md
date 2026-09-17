@@ -6,8 +6,6 @@
 | **System design** | CPU, RAM, and disk: the speed hierarchy |
 | **Languages** | Errors, three ways |
 | &nbsp;&nbsp;Python | Exceptions: try, except, raise, finally |
-| &nbsp;&nbsp;Go | Error values: if err != nil, errors.New, fmt.Errorf |
-| &nbsp;&nbsp;C++ | Exceptions and std::expected: throw, catch, and returning failure |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-what-an-array-really.md](01-dsa-what-an-array-really.md) — the DSA lesson
 2. [02-system-design-cpu-ram-and-disk.md](02-system-design-cpu-ram-and-disk.md) — the system design lesson
 3. [05-lang-python-exceptions-try-except-raise.md](05-lang-python-exceptions-try-except-raise.md) — the Python lesson
-4. [06-lang-go-error-values-if-err.md](06-lang-go-error-values-if-err.md) — the Go lesson
-5. [07-lang-cpp-exceptions-and-std-expected.md](07-lang-cpp-exceptions-and-std-expected.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

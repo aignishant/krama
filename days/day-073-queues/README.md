@@ -6,8 +6,6 @@
 | **System design** | State |
 | **Languages** | Schema hygiene: lint, breaking checks, versioning |
 | &nbsp;&nbsp;Python | Packaging generated Python code |
-| &nbsp;&nbsp;Go | buf lint, buf breaking, module publishing, and package versioning |
-| &nbsp;&nbsp;C++ | Packaging generated C++ code with CMake |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-queues-first-in-first-out.md](01-dsa-queues-first-in-first-out.md) — the DSA lesson
 2. [02-system-design-state.md](02-system-design-state.md) — the system design lesson
 3. [05-lang-python-packaging-generated-python-code.md](05-lang-python-packaging-generated-python-code.md) — the Python lesson
-4. [06-lang-go-buf-lint-buf-breaking.md](06-lang-go-buf-lint-buf-breaking.md) — the Go lesson
-5. [07-lang-cpp-packaging-generated-c-code.md](07-lang-cpp-packaging-generated-c-code.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

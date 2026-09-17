@@ -6,8 +6,6 @@
 | **System design** | Design a vending machine |
 | **Languages** | Binary data |
 | &nbsp;&nbsp;Python | struct.pack, memoryview, and reading a binary header |
-| &nbsp;&nbsp;Go | encoding/binary, byte order, and bytes.Buffer |
-| &nbsp;&nbsp;C++ | Byte order, std::bit_cast, and reading a binary header |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-reversing-a-linked-list.md](01-dsa-reversing-a-linked-list.md) — the DSA lesson
 2. [02-system-design-design-a-vending-machine.md](02-system-design-design-a-vending-machine.md) — the system design lesson
 3. [05-lang-python-struct-pack-memoryview-and.md](05-lang-python-struct-pack-memoryview-and.md) — the Python lesson
-4. [06-lang-go-encoding-binary-byte-order.md](06-lang-go-encoding-binary-byte-order.md) — the Go lesson
-5. [07-lang-cpp-byte-order-std-bit.md](07-lang-cpp-byte-order-std-bit.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

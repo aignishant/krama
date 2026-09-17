@@ -6,8 +6,6 @@
 | **System design** | Decorator |
 | **Languages** | gRPC III: streaming |
 | &nbsp;&nbsp;Python | Server streaming and bidirectional streaming from Python |
-| &nbsp;&nbsp;Go | Server, client, and bidirectional streaming in Go |
-| &nbsp;&nbsp;C++ | Server and bidirectional streaming in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-balanced-brackets-and-the-parsing.md](01-dsa-balanced-brackets-and-the-parsing.md) — the DSA lesson
 2. [02-system-design-decorator.md](02-system-design-decorator.md) — the system design lesson
 3. [05-lang-python-server-streaming-and-bidirectional.md](05-lang-python-server-streaming-and-bidirectional.md) — the Python lesson
-4. [06-lang-go-server-client-and-bidirectional.md](06-lang-go-server-client-and-bidirectional.md) — the Go lesson
-5. [07-lang-cpp-server-and-bidirectional-streaming.md](07-lang-cpp-server-and-bidirectional-streaming.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

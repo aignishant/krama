@@ -6,8 +6,6 @@
 | **System design** | What a design pattern actually is |
 | **Languages** | Messages: scalars, repeated, maps, nested, oneof |
 | &nbsp;&nbsp;Python | Generated classes: repeated fields, map fields, and oneof in Python |
-| &nbsp;&nbsp;Go | Generated structs: slices, maps, and the oneof interface pattern |
-| &nbsp;&nbsp;C++ | Generated classes: RepeatedField, Map, and oneof cases |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-counting-with-dictionaries.md](01-dsa-counting-with-dictionaries.md) — the DSA lesson
 2. [02-system-design-what-a-design-pattern-actually.md](02-system-design-what-a-design-pattern-actually.md) — the system design lesson
 3. [05-lang-python-generated-classes-repeated-fields.md](05-lang-python-generated-classes-repeated-fields.md) — the Python lesson
-4. [06-lang-go-generated-structs-slices-maps.md](06-lang-go-generated-structs-slices-maps.md) — the Go lesson
-5. [07-lang-cpp-generated-classes-repeatedfield-map.md](07-lang-cpp-generated-classes-repeatedfield-map.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

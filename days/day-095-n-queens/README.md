@@ -6,8 +6,6 @@
 | **System design** | Design an online auction |
 | **Languages** | Rate limiting and retries |
 | &nbsp;&nbsp;Python | A token bucket, and tenacity for retries with backoff |
-| &nbsp;&nbsp;Go | golang.org/x/time/rate, and retries with jitter |
-| &nbsp;&nbsp;C++ | A token bucket class, and retries with jitter |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-n-queens-and-constraint-grids.md](01-dsa-n-queens-and-constraint-grids.md) — the DSA lesson
 2. [02-system-design-design-an-online-auction.md](02-system-design-design-an-online-auction.md) — the system design lesson
 3. [05-lang-python-a-token-bucket-and.md](05-lang-python-a-token-bucket-and.md) — the Python lesson
-4. [06-lang-go-golang-org-x-time.md](06-lang-go-golang-org-x-time.md) — the Go lesson
-5. [07-lang-cpp-a-token-bucket-class.md](07-lang-cpp-a-token-bucket-class.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

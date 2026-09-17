@@ -4,17 +4,13 @@
 |---|---|
 | **DSA** | Binary search: the idea and the invariant |
 | **System design** | Database revision and interview questions |
-| **C++ for contests** | sort, lambdas, and lower_bound: the algorithms header |
 | **Languages** | Regular expressions |
 | &nbsp;&nbsp;Python | re: search, match, findall, groups, and compiled patterns |
-| &nbsp;&nbsp;Go | regexp: RE2 semantics and why there is no backtracking |
-| &nbsp;&nbsp;C++ | std::regex, and why you reach for RE2 or ctre instead |
 
 ## What you can do by tonight
 
 - **DSA** — You can state, at every step, which half of the array still contains the answer.
 - **System design** — You can answer schema, index, transaction and scaling questions about a database cold.
-- **C++ for contests** — You can sort by any key with a lambda, and binary search a sorted range without writing the loop yourself.
 - **Languages** — You can extract dates and emails from text in each language and say when regex is the wrong tool.
 
 ## The questions today answers
@@ -28,17 +24,13 @@
 
 1. [01-dsa-binary-search-the-idea.md](01-dsa-binary-search-the-idea.md) — the DSA lesson
 2. [02-system-design-database-revision-and-interview-questions.md](02-system-design-database-revision-and-interview-questions.md) — the system design lesson
-3. [04-cpp-sort-lambdas.md](04-cpp-sort-lambdas.md) — the C++ contest lesson (optional)
-4. [05-lang-python-re-search-match-findall.md](05-lang-python-re-search-match-findall.md) — the Python lesson
-5. [06-lang-go-regexp-re2-semantics-and.md](06-lang-go-regexp-re2-semantics-and.md) — the Go lesson
-6. [07-lang-cpp-std-regex-and-why.md](07-lang-cpp-std-regex-and-why.md) — the C++ lesson
-7. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+3. [05-lang-python-re-search-match-findall.md](05-lang-python-re-search-match-findall.md) — the Python lesson
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 
 - DSA phase: **Binary search**
 - System design phase: **Databases from zero**
-- C++ for contests: **C++ and competitive programming**
 - Languages phase: **Languages: advanced features**
 
 ---

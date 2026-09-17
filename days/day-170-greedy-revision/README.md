@@ -6,8 +6,6 @@
 | **System design** | High-level design revision and full mock |
 | **Languages** | Reading production code |
 | &nbsp;&nbsp;Python | A guided read of a popular Python service codebase |
-| &nbsp;&nbsp;Go | A guided read of a popular Go service codebase |
-| &nbsp;&nbsp;C++ | A guided read of a popular C++ library |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-greedy-and-intervals-revision.md](01-dsa-greedy-and-intervals-revision.md) — the DSA lesson
 2. [02-system-design-high-level-design-revision-and-full.md](02-system-design-high-level-design-revision-and-full.md) — the system design lesson
 3. [05-lang-python-a-guided-read-of.md](05-lang-python-a-guided-read-of.md) — the Python lesson
-4. [06-lang-go-a-guided-read-of.md](06-lang-go-a-guided-read-of.md) — the Go lesson
-5. [07-lang-cpp-a-guided-read-of.md](07-lang-cpp-a-guided-read-of.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

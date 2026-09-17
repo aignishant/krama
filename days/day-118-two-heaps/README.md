@@ -6,8 +6,6 @@
 | **System design** | Leader election |
 | **Languages** | Fuzz testing |
 | &nbsp;&nbsp;Python | hypothesis for property-based tests |
-| &nbsp;&nbsp;Go | go test -fuzz and the corpus |
-| &nbsp;&nbsp;C++ | libFuzzer with sanitizers |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-two-heaps-the-running-median.md](01-dsa-two-heaps-the-running-median.md) — the DSA lesson
 2. [02-system-design-leader-election.md](02-system-design-leader-election.md) — the system design lesson
 3. [05-lang-python-hypothesis-for-property-based.md](05-lang-python-hypothesis-for-property-based.md) — the Python lesson
-4. [06-lang-go-go-test-fuzz-and.md](06-lang-go-go-test-fuzz-and.md) — the Go lesson
-5. [07-lang-cpp-libfuzzer-with-sanitizers.md](07-lang-cpp-libfuzzer-with-sanitizers.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

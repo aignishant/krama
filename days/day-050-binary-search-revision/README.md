@@ -6,8 +6,6 @@
 | **System design** | Class diagrams and the UML you will actually draw |
 | **Languages** | Designing a JSON API |
 | &nbsp;&nbsp;Python | Pydantic models, validation errors, and status codes |
-| &nbsp;&nbsp;Go | Decoding request bodies, validation, and writing error responses |
-| &nbsp;&nbsp;C++ | Parsing request bodies, validation, and consistent error shapes |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-binary-search-revision-and-mock.md](01-dsa-binary-search-revision-and-mock.md) — the DSA lesson
 2. [02-system-design-class-diagrams-and-the-uml.md](02-system-design-class-diagrams-and-the-uml.md) — the system design lesson
 3. [05-lang-python-pydantic-models-validation-errors.md](05-lang-python-pydantic-models-validation-errors.md) — the Python lesson
-4. [06-lang-go-decoding-request-bodies-validation.md](06-lang-go-decoding-request-bodies-validation.md) — the Go lesson
-5. [07-lang-cpp-parsing-request-bodies-validation.md](07-lang-cpp-parsing-request-bodies-validation.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

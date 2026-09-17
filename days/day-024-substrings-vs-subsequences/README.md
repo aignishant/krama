@@ -6,8 +6,6 @@
 | **System design** | API revision and interview questions |
 | **Languages** | Pattern matching |
 | &nbsp;&nbsp;Python | match/case with structural patterns and guards |
-| &nbsp;&nbsp;Go | Type switches and switch on values |
-| &nbsp;&nbsp;C++ | std::visit on variant, if constexpr, and structured bindings |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-substrings-versus-subsequences-the-distinction.md](01-dsa-substrings-versus-subsequences-the-distinction.md) — the DSA lesson
 2. [02-system-design-api-revision-and-interview-questions.md](02-system-design-api-revision-and-interview-questions.md) — the system design lesson
 3. [05-lang-python-match-case-with-structural.md](05-lang-python-match-case-with-structural.md) — the Python lesson
-4. [06-lang-go-type-switches-and-switch.md](06-lang-go-type-switches-and-switch.md) — the Go lesson
-5. [07-lang-cpp-std-visit-on-variant.md](07-lang-cpp-std-visit-on-variant.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

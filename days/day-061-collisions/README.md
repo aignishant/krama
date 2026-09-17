@@ -6,8 +6,6 @@
 | **System design** | Coupling, cohesion, and code smells |
 | **Languages** | Protocol Buffers: what and why |
 | &nbsp;&nbsp;Python | JSON versus protobuf: size and speed, measured |
-| &nbsp;&nbsp;Go | JSON versus protobuf: size and speed, measured |
-| &nbsp;&nbsp;C++ | JSON versus protobuf: size and speed, measured |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-collisions-and-why-a-hash.md](01-dsa-collisions-and-why-a-hash.md) — the DSA lesson
 2. [02-system-design-coupling-cohesion-and-code-smells.md](02-system-design-coupling-cohesion-and-code-smells.md) — the system design lesson
 3. [05-lang-python-json-versus-protobuf-size.md](05-lang-python-json-versus-protobuf-size.md) — the Python lesson
-4. [06-lang-go-json-versus-protobuf-size.md](06-lang-go-json-versus-protobuf-size.md) — the Go lesson
-5. [07-lang-cpp-json-versus-protobuf-size.md](07-lang-cpp-json-versus-protobuf-size.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

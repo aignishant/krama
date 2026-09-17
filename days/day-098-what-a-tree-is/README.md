@@ -6,8 +6,6 @@
 | **System design** | Vertical versus horizontal scaling |
 | **Languages** | Health checks and graceful shutdown |
 | &nbsp;&nbsp;Python | Liveness and readiness routes, and shutdown hooks |
-| &nbsp;&nbsp;Go | Health endpoints, http.Server.Shutdown, and draining |
-| &nbsp;&nbsp;C++ | Health endpoints, stopping the server, and draining |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-what-a-tree.md](01-dsa-what-a-tree.md) — the DSA lesson
 2. [02-system-design-vertical-versus-horizontal-scaling.md](02-system-design-vertical-versus-horizontal-scaling.md) — the system design lesson
 3. [05-lang-python-liveness-and-readiness-routes.md](05-lang-python-liveness-and-readiness-routes.md) — the Python lesson
-4. [06-lang-go-health-endpoints-http-server.md](06-lang-go-health-endpoints-http-server.md) — the Go lesson
-5. [07-lang-cpp-health-endpoints-stopping-the.md](07-lang-cpp-health-endpoints-stopping-the.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

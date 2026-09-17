@@ -6,8 +6,6 @@
 | **System design** | Final revision, and the week before the interview |
 | **Languages** | Final revision |
 | &nbsp;&nbsp;Python | The hundred questions, Python |
-| &nbsp;&nbsp;Go | The hundred questions, Go |
-| &nbsp;&nbsp;C++ | The hundred questions, C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-final-revision-and-the-week.md](01-dsa-final-revision-and-the-week.md) — the DSA lesson
 2. [02-system-design-final-revision-and-the-week.md](02-system-design-final-revision-and-the-week.md) — the system design lesson
 3. [05-lang-python-the-hundred-questions-python.md](05-lang-python-the-hundred-questions-python.md) — the Python lesson
-4. [06-lang-go-the-hundred-questions-go.md](06-lang-go-the-hundred-questions-go.md) — the Go lesson
-5. [07-lang-cpp-the-hundred-questions-c.md](07-lang-cpp-the-hundred-questions-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

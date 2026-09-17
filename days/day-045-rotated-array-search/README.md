@@ -6,8 +6,6 @@
 | **System design** | Encapsulation |
 | **Languages** | Mini project 3: a concurrent downloader |
 | &nbsp;&nbsp;Python | asyncio and httpx downloader with a progress report |
-| &nbsp;&nbsp;Go | Goroutine worker-pool downloader with context |
-| &nbsp;&nbsp;C++ | Thread-pool downloader with libcurl |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-search-in-a-rotated-sorted.md](01-dsa-search-in-a-rotated-sorted.md) — the DSA lesson
 2. [02-system-design-encapsulation.md](02-system-design-encapsulation.md) — the system design lesson
 3. [05-lang-python-asyncio-and-httpx-downloader.md](05-lang-python-asyncio-and-httpx-downloader.md) — the Python lesson
-4. [06-lang-go-goroutine-worker-pool-downloader.md](06-lang-go-goroutine-worker-pool-downloader.md) — the Go lesson
-5. [07-lang-cpp-thread-pool-downloader-with.md](07-lang-cpp-thread-pool-downloader-with.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

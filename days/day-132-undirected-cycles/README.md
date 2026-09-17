@@ -6,8 +6,6 @@
 | **System design** | Stream processing basics |
 | **Languages** | C++, deep: templates and constexpr |
 | &nbsp;&nbsp;Python | The nearest Python idea: generics and runtime dispatch |
-| &nbsp;&nbsp;Go | The nearest Go idea: generics and code generation |
-| &nbsp;&nbsp;C++ | Templates, CRTP, concepts, constexpr, and compile-time tables |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-cycle-detection-in-an-undirected.md](01-dsa-cycle-detection-in-an-undirected.md) — the DSA lesson
 2. [02-system-design-stream-processing-basics.md](02-system-design-stream-processing-basics.md) — the system design lesson
 3. [05-lang-python-the-nearest-python-idea.md](05-lang-python-the-nearest-python-idea.md) — the Python lesson
-4. [06-lang-go-the-nearest-go-idea.md](06-lang-go-the-nearest-go-idea.md) — the Go lesson
-5. [07-lang-cpp-templates-crtp-concepts-constexpr.md](07-lang-cpp-templates-crtp-concepts-constexpr.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

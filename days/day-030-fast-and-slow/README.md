@@ -6,8 +6,6 @@
 | **System design** | Indexes: how a database finds a row fast |
 | **Languages** | Mini project 2: a text analyser |
 | &nbsp;&nbsp;Python | Word frequency and log summariser in Python |
-| &nbsp;&nbsp;Go | Word frequency and log summariser in Go |
-| &nbsp;&nbsp;C++ | Word frequency and log summariser in C++ |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-fast-and-slow-pointers.md](01-dsa-fast-and-slow-pointers.md) — the DSA lesson
 2. [02-system-design-indexes-how-a-database-finds.md](02-system-design-indexes-how-a-database-finds.md) — the system design lesson
 3. [05-lang-python-word-frequency-and-log.md](05-lang-python-word-frequency-and-log.md) — the Python lesson
-4. [06-lang-go-word-frequency-and-log.md](06-lang-go-word-frequency-and-log.md) — the Go lesson
-5. [07-lang-cpp-word-frequency-and-log.md](07-lang-cpp-word-frequency-and-log.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

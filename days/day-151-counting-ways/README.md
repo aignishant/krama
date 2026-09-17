@@ -6,8 +6,6 @@
 | **System design** | Design a web crawler |
 | **Languages** | Build D, day 1: a chat system. Design |
 | &nbsp;&nbsp;Python | Requirements and the web client plan |
-| &nbsp;&nbsp;Go | Requirements, the .proto messages, and the Go hub |
-| &nbsp;&nbsp;C++ | Requirements and the C++ presence service |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-coin-change-ii-counting.md](01-dsa-coin-change-ii-counting.md) — the DSA lesson
 2. [02-system-design-design-a-web-crawler.md](02-system-design-design-a-web-crawler.md) — the system design lesson
 3. [05-lang-python-requirements-and-the-web.md](05-lang-python-requirements-and-the-web.md) — the Python lesson
-4. [06-lang-go-requirements-the-proto-messages.md](06-lang-go-requirements-the-proto-messages.md) — the Go lesson
-5. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

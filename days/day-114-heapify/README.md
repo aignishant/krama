@@ -6,8 +6,6 @@
 | **System design** | The CAP theorem, honestly |
 | **Languages** | Standard library tour III: text |
 | &nbsp;&nbsp;Python | str methods, textwrap, string.Template, and difflib |
-| &nbsp;&nbsp;Go | strings, strconv, unicode, and text/tabwriter |
-| &nbsp;&nbsp;C++ | std::string, std::string_view, std::format, and <charconv> |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-push-pop-and-heapify.md](01-dsa-push-pop-and-heapify.md) — the DSA lesson
 2. [02-system-design-the-cap-theorem-honestly.md](02-system-design-the-cap-theorem-honestly.md) — the system design lesson
 3. [05-lang-python-str-methods-textwrap-string.md](05-lang-python-str-methods-textwrap-string.md) — the Python lesson
-4. [06-lang-go-strings-strconv-unicode-and.md](06-lang-go-strings-strconv-unicode-and.md) — the Go lesson
-5. [07-lang-cpp-std-string-std-string.md](07-lang-cpp-std-string-std-string.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | The saga pattern |
 | **Languages** | Design patterns I: strategy, factory, builder |
 | &nbsp;&nbsp;Python | Strategy as functions, factories as classmethods, builders as kwargs |
-| &nbsp;&nbsp;Go | Strategy as interfaces, factory functions, functional options |
-| &nbsp;&nbsp;C++ | Strategy with virtual or templates, factories, fluent builders |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-insert-search-and-prefix-search.md](01-dsa-insert-search-and-prefix-search.md) — the DSA lesson
 2. [02-system-design-the-saga-pattern.md](02-system-design-the-saga-pattern.md) — the system design lesson
 3. [05-lang-python-strategy-as-functions-factories.md](05-lang-python-strategy-as-functions-factories.md) — the Python lesson
-4. [06-lang-go-strategy-as-interfaces-factory.md](06-lang-go-strategy-as-interfaces-factory.md) — the Go lesson
-5. [07-lang-cpp-strategy-with-virtual-or.md](07-lang-cpp-strategy-with-virtual-or.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

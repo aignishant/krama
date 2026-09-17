@@ -6,8 +6,6 @@
 | **System design** | Processes, threads, and concurrency |
 | **Languages** | Modelling a thing |
 | &nbsp;&nbsp;Python | class, __init__, methods, and dataclasses |
-| &nbsp;&nbsp;Go | struct, methods with receivers, and constructor functions |
-| &nbsp;&nbsp;C++ | struct, class, constructors, and member functions |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-reading-a-problem-like.md](01-dsa-reading-a-problem-like.md) — the DSA lesson
 2. [02-system-design-processes-threads-and-concurrency.md](02-system-design-processes-threads-and-concurrency.md) — the system design lesson
 3. [05-lang-python-class-init-methods-and.md](05-lang-python-class-init-methods-and.md) — the Python lesson
-4. [06-lang-go-struct-methods-with-receivers.md](06-lang-go-struct-methods-with-receivers.md) — the Go lesson
-5. [07-lang-cpp-struct-class-constructors-and.md](07-lang-cpp-struct-class-constructors-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

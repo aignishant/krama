@@ -6,8 +6,6 @@
 | **System design** | Wide-column and time-series stores |
 | **Languages** | Text versus bytes |
 | &nbsp;&nbsp;Python | str versus bytes, encode, decode, and UnicodeDecodeError |
-| &nbsp;&nbsp;Go | []byte, rune, the utf8 package, and strings.Builder |
-| &nbsp;&nbsp;C++ | char, char8_t, std::string_view, and UTF-8 by hand |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-difference-arrays-range-updates-cheaply.md](01-dsa-difference-arrays-range-updates-cheaply.md) — the DSA lesson
 2. [02-system-design-wide-column-and-time-series-stores.md](02-system-design-wide-column-and-time-series-stores.md) — the system design lesson
 3. [05-lang-python-str-versus-bytes-encode.md](05-lang-python-str-versus-bytes-encode.md) — the Python lesson
-4. [06-lang-go-byte-rune-the-utf8.md](06-lang-go-byte-rune-the-utf8.md) — the Go lesson
-5. [07-lang-cpp-char-char8-t-std.md](07-lang-cpp-char-char8-t-std.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

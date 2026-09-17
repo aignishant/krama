@@ -6,8 +6,6 @@
 | **System design** | Design search autocomplete at scale |
 | **Languages** | Python interview questions |
 | &nbsp;&nbsp;Python | The forty questions: GIL, memory, decorators, generators, typing |
-| &nbsp;&nbsp;Go | How Go answers the same questions |
-| &nbsp;&nbsp;C++ | How C++ answers the same questions |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-interval-scheduling.md](01-dsa-interval-scheduling.md) — the DSA lesson
 2. [02-system-design-design-search-autocomplete-at-scale.md](02-system-design-design-search-autocomplete-at-scale.md) — the system design lesson
 3. [05-lang-python-the-forty-questions-gil.md](05-lang-python-the-forty-questions-gil.md) — the Python lesson
-4. [06-lang-go-how-go-answers-the.md](06-lang-go-how-go-answers-the.md) — the Go lesson
-5. [07-lang-cpp-how-c-answers-the.md](07-lang-cpp-how-c-answers-the.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Kafka, explained |
 | **Languages** | Reading idiomatic code |
 | &nbsp;&nbsp;Python | A tour of a well-written Python package |
-| &nbsp;&nbsp;Go | A tour of a well-written Go package from the standard library |
-| &nbsp;&nbsp;C++ | A tour of a well-written C++ library |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-grids-are-graphs-islands.md](01-dsa-grids-are-graphs-islands.md) — the DSA lesson
 2. [02-system-design-kafka-explained.md](02-system-design-kafka-explained.md) — the system design lesson
 3. [05-lang-python-a-tour-of-a.md](05-lang-python-a-tour-of-a.md) — the Python lesson
-4. [06-lang-go-a-tour-of-a.md](06-lang-go-a-tour-of-a.md) — the Go lesson
-5. [07-lang-cpp-a-tour-of-a.md](07-lang-cpp-a-tour-of-a.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

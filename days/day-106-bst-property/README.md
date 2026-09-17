@@ -6,8 +6,6 @@
 | **System design** | Sharding, part one: choosing the key |
 | **Languages** | Data modelling idioms |
 | &nbsp;&nbsp;Python | dataclasses, attrs, pydantic, and when each |
-| &nbsp;&nbsp;Go | Struct tags, validation, and functional options |
-| &nbsp;&nbsp;C++ | Aggregates, designated initialisers, and builder structs |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-binary-search-trees-the-ordering.md](01-dsa-binary-search-trees-the-ordering.md) — the DSA lesson
 2. [02-system-design-sharding-part-one-choosing.md](02-system-design-sharding-part-one-choosing.md) — the system design lesson
 3. [05-lang-python-dataclasses-attrs-pydantic-and.md](05-lang-python-dataclasses-attrs-pydantic-and.md) — the Python lesson
-4. [06-lang-go-struct-tags-validation-and.md](06-lang-go-struct-tags-validation-and.md) — the Go lesson
-5. [07-lang-cpp-aggregates-designated-initialisers-and.md](07-lang-cpp-aggregates-designated-initialisers-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

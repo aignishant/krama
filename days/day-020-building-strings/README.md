@@ -6,8 +6,6 @@
 | **System design** | JWT, sessions, and OAuth |
 | **Languages** | Iterators and generators |
 | &nbsp;&nbsp;Python | __iter__, __next__, yield, and generator expressions |
-| &nbsp;&nbsp;Go | Range-over-func iterators (iter.Seq) and channels as iterators |
-| &nbsp;&nbsp;C++ | Iterator categories, begin/end, and C++20 ranges |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-building-strings-without-the-quadratic.md](01-dsa-building-strings-without-the-quadratic.md) — the DSA lesson
 2. [02-system-design-jwt-sessions-and-oauth.md](02-system-design-jwt-sessions-and-oauth.md) — the system design lesson
 3. [05-lang-python-iter-next-yield-and.md](05-lang-python-iter-next-yield-and.md) — the Python lesson
-4. [06-lang-go-range-over-func-iterators.md](06-lang-go-range-over-func-iterators.md) — the Go lesson
-5. [07-lang-cpp-iterator-categories-begin-end.md](07-lang-cpp-iterator-categories-begin-end.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

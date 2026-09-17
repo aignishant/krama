@@ -6,8 +6,6 @@
 | **System design** | Modelling a real domain |
 | **Languages** | Configuration: flags, environment, files |
 | &nbsp;&nbsp;Python | argparse and typer, os.environ, and a settings class |
-| &nbsp;&nbsp;Go | flag, cobra, os.Getenv, and a Config struct |
-| &nbsp;&nbsp;C++ | CLI11, getenv, and a Config struct |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-why-sorting-matters-more-than.md](01-dsa-why-sorting-matters-more-than.md) — the DSA lesson
 2. [02-system-design-modelling-a-real-domain.md](02-system-design-modelling-a-real-domain.md) — the system design lesson
 3. [05-lang-python-argparse-and-typer-os.md](05-lang-python-argparse-and-typer-os.md) — the Python lesson
-4. [06-lang-go-flag-cobra-os-getenv.md](06-lang-go-flag-cobra-os-getenv.md) — the Go lesson
-5. [07-lang-cpp-cli11-getenv-and-a.md](07-lang-cpp-cli11-getenv-and-a.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

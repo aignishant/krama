@@ -6,8 +6,6 @@
 | **System design** | Object-oriented design revision and interview questions |
 | **Languages** | Databases II: Postgres and connection pools |
 | &nbsp;&nbsp;Python | psycopg 3 and asyncpg, and a connection pool |
-| &nbsp;&nbsp;Go | pgx, pgxpool, and context-aware queries |
-| &nbsp;&nbsp;C++ | libpqxx: connections, transactions, and prepared statements |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-quicksort-and-partitioning.md](01-dsa-quicksort-and-partitioning.md) — the DSA lesson
 2. [02-system-design-object-oriented-design-revision-and-interview.md](02-system-design-object-oriented-design-revision-and-interview.md) — the system design lesson
 3. [05-lang-python-psycopg-3-and-asyncpg.md](05-lang-python-psycopg-3-and-asyncpg.md) — the Python lesson
-4. [06-lang-go-pgx-pgxpool-and-context.md](06-lang-go-pgx-pgxpool-and-context.md) — the Go lesson
-5. [07-lang-cpp-libpqxx-connections-transactions-and.md](07-lang-cpp-libpqxx-connections-transactions-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

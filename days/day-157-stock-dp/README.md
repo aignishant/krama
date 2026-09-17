@@ -6,8 +6,6 @@
 | **System design** | Design a chat system with presence |
 | **Languages** | Build E, day 2: the agent |
 | &nbsp;&nbsp;Python | A Python client library for custom metrics |
-| &nbsp;&nbsp;Go | Collecting CPU, memory, and app metrics; shipping over gRPC |
-| &nbsp;&nbsp;C++ | Receiving and buffering in C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-dp-on-decisions-buy.md](01-dsa-dp-on-decisions-buy.md) — the DSA lesson
 2. [02-system-design-design-a-chat-system.md](02-system-design-design-a-chat-system.md) — the system design lesson
 3. [05-lang-python-a-python-client-library.md](05-lang-python-a-python-client-library.md) — the Python lesson
-4. [06-lang-go-collecting-cpu-memory-and.md](06-lang-go-collecting-cpu-memory-and.md) — the Go lesson
-5. [07-lang-cpp-receiving-and-buffering-in.md](07-lang-cpp-receiving-and-buffering-in.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

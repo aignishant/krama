@@ -6,8 +6,6 @@
 | **System design** | Fundamentals revision and interview questions |
 | **Languages** | Formatters, linters, and a real project layout |
 | &nbsp;&nbsp;Python | uv, venv, pyproject.toml, ruff |
-| &nbsp;&nbsp;Go | go fmt, go vet, go mod tidy, and the standard layout |
-| &nbsp;&nbsp;C++ | CMake, clang-format, and a src/include layout |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-max-min-second-largest.md](01-dsa-max-min-second-largest.md) — the DSA lesson
 2. [02-system-design-fundamentals-revision-and-interview-questions.md](02-system-design-fundamentals-revision-and-interview-questions.md) — the system design lesson
 3. [05-lang-python-uv-venv-pyproject-toml.md](05-lang-python-uv-venv-pyproject-toml.md) — the Python lesson
-4. [06-lang-go-go-fmt-go-vet.md](06-lang-go-go-fmt-go-vet.md) — the Go lesson
-5. [07-lang-cpp-cmake-clang-format-and.md](07-lang-cpp-cmake-clang-format-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

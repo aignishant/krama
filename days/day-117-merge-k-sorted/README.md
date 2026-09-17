@@ -6,8 +6,6 @@
 | **System design** | Quorums: why R plus W must exceed N |
 | **Languages** | Linting and static analysis |
 | &nbsp;&nbsp;Python | ruff, mypy, and pre-commit |
-| &nbsp;&nbsp;Go | vet, staticcheck, golangci-lint |
-| &nbsp;&nbsp;C++ | clang-tidy, cppcheck, and warnings as errors |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-merging-k-sorted-lists.md](01-dsa-merging-k-sorted-lists.md) — the DSA lesson
 2. [02-system-design-quorums-why-r-plus-w.md](02-system-design-quorums-why-r-plus-w.md) — the system design lesson
 3. [05-lang-python-ruff-mypy-and-pre.md](05-lang-python-ruff-mypy-and-pre.md) — the Python lesson
-4. [06-lang-go-vet-staticcheck-golangci-lint.md](06-lang-go-vet-staticcheck-golangci-lint.md) — the Go lesson
-5. [07-lang-cpp-clang-tidy-cppcheck-and.md](07-lang-cpp-clang-tidy-cppcheck-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

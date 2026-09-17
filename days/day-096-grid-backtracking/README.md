@@ -6,8 +6,6 @@
 | **System design** | Low-level design revision and full mock |
 | **Languages** | Circuit breakers and idempotency keys |
 | &nbsp;&nbsp;Python | A circuit breaker class and idempotency keys in a store |
-| &nbsp;&nbsp;Go | gobreaker, and idempotency keys in a store |
-| &nbsp;&nbsp;C++ | A circuit breaker class and idempotency keys in a store |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-sudoku-word-search-and-grid.md](01-dsa-sudoku-word-search-and-grid.md) — the DSA lesson
 2. [02-system-design-low-level-design-revision-and-full.md](02-system-design-low-level-design-revision-and-full.md) — the system design lesson
 3. [05-lang-python-a-circuit-breaker-class.md](05-lang-python-a-circuit-breaker-class.md) — the Python lesson
-4. [06-lang-go-gobreaker-and-idempotency-keys.md](06-lang-go-gobreaker-and-idempotency-keys.md) — the Go lesson
-5. [07-lang-cpp-a-circuit-breaker-class.md](07-lang-cpp-a-circuit-breaker-class.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

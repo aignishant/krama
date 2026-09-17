@@ -6,8 +6,6 @@
 | **System design** | Design a distributed job scheduler |
 | **Languages** | Choosing a language |
 | &nbsp;&nbsp;Python | When Python: the honest case |
-| &nbsp;&nbsp;Go | When Go: the honest case |
-| &nbsp;&nbsp;C++ | When C++: the honest case |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-jump-game-and-reachability.md](01-dsa-jump-game-and-reachability.md) — the DSA lesson
 2. [02-system-design-design-a-distributed-job-scheduler.md](02-system-design-design-a-distributed-job-scheduler.md) — the system design lesson
 3. [05-lang-python-when-python-the-honest.md](05-lang-python-when-python-the-honest.md) — the Python lesson
-4. [06-lang-go-when-go-the-honest.md](06-lang-go-when-go-the-honest.md) — the Go lesson
-5. [07-lang-cpp-when-c-the-honest.md](07-lang-cpp-when-c-the-honest.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

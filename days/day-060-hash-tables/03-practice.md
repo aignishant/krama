@@ -2,7 +2,7 @@
 day: 60
 track: practice
 title: "Practice — Hash tables: how a dictionary finds anything instantly"
-status: draft
+status: written
 ---
 
 # Day 060 · Practice
@@ -185,17 +185,120 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | The service, running under compose | Wiring routes, Postgres, and Redis together and proving the redirect works end to end. |
+| 2 | The seams, and the tests | Putting the store and the cache behind an interface and testing both routes without either running. |
+| 3 | The demo, with the cache shown working | Measuring that the second redirect never touches Postgres, and what happens when Redis is stopped. |
+
+This is a project day. The three exercises are one deliverable, built three times, and the
+lessons are the walkthroughs. Done is the same for all three languages and is listed at the end.
+
+### The requirements
+
+- `POST /links` with a JSON body `{"url": "..."}` answers `201` with `{"code": "...", "url": "..."}`.
+  The URL must be `http` or `https` with a host; anything else is `422` with `{"error": "invalid_url"}`,
+  and a body that is not JSON is `400`.
+- `GET /{code}` answers `302` with a `Location` header holding the long URL, or `404` with
+  `{"error": "not_found"}`.
+- Codes are seven characters from the sixty-two letters and digits, chosen at random from a
+  source a stranger cannot predict. A collision is detected by the database's primary key, never
+  by a lookup first, and retried with a fresh code, three times.
+- Redirects are cache-aside on Redis with a one-hour expiry. A Redis failure is logged and falls
+  through to Postgres; it is never a `500`.
+- `DATABASE_URL` and `REDIS_URL` come from the environment, and the process refuses to start
+  without them.
+- The service runs in the day 59 image, and `docker compose up` starts it with Postgres and Redis.
+
+### The file layout
+
+```text
+shortener-python/     app.py, test_app.py, pyproject.toml, uv.lock, Dockerfile, compose.yaml
+shortener-go/         main.go, main_test.go, go.mod, go.sum, Dockerfile, compose.yaml
+shortener-cpp/        src/main.cpp, test/shortener_test.cpp, CMakeLists.txt, Dockerfile, compose.yaml
+```
+
+The same `compose.yaml` works for all three, with the `build:` context changed:
+
+```yaml
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: shortener
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      retries: 15
+  redis:
+    image: redis:7
+  api:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      DATABASE_URL: postgresql://postgres:secret@db:5432/shortener
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+```
+
+For C++ the `REDIS_URL` is `tcp://redis:6379`, because redis-plus-plus takes its own URL form.
+The C++ Dockerfile's builder adds `libpqxx-dev libhiredis-dev` to the `apt-get install`, builds
+redis-plus-plus from source with `cmake` in a `RUN` step, and the runtime stage adds
+`COPY --from=builder /usr/lib/x86_64-linux-gnu/libpq.so.5* /usr/lib/x86_64-linux-gnu/` plus the
+same for `libpqxx` and `libhiredis`, because distroless/cc has none of them. Run `ldd` on the
+binary in the builder and copy every line it lists that distroless does not already provide.
+
+### 1. The service, running under compose
+
+Start it with `docker compose up --build`. Create a link, follow it with `curl -i`, follow a
+code you never issued, and post a URL with an `ftp://` scheme. Paste the four responses. Then
+`docker compose logs api` and confirm no password appears in any line. Done means `201`, `302`
+with the right `Location`, `404`, and `422`, from the container, in all three languages.
+
+### 2. The seams, and the tests
+
+The lessons use concrete database and cache objects. Put each behind a seam, the day 58 way:
+`Depends` and `dependency_overrides` in Python with a fake cache object that has `get` and `set`;
+`Store` and `Cache` interfaces with fakes in Go; abstract `Store` and `Cache` classes with a map
+and a gMock in C++. Then write five tests: create returns a code of length seven; create with a
+bad URL is `422`; follow on a hit never calls the store; follow on a miss calls the store then
+sets the cache; follow on a miss with the cache throwing still redirects. The fourth test is the
+one to get right: assert the order, store then cache set, and that the value set is the URL.
+Done means five tests passing with neither Postgres nor Redis running, in all three languages.
+
+### 3. The demo, with the cache shown working
+
+Bring compose up and create a link. Run `docker compose exec db psql -U postgres -d shortener
+-c "SELECT count(*) FROM links"` to see the row. Follow the link twice, and between the two
+follows run `docker compose exec redis redis-cli TTL link:<code>` to see the expiry counting
+down; the second follow must not add a Postgres query, which you can prove by turning on
+`log_statement = 'all'` in Postgres and reading the log. Then `docker compose stop redis` and
+follow the link again: it must still redirect, and the api log must show the Redis error once
+and no stack trace. Done means the TTL observed, the second follow absent from the Postgres log,
+and the redirect surviving a stopped Redis, in all three languages.
+
+Also swap the collision check in Go for `pgerrcode.UniqueViolation` from
+`github.com/jackc/pgerrcode`, and replace the modulo in `newCode` with an unbiased draw, and say
+in one sentence why each change matters.
+
+### Done means
+
+- All four responses from exercise 1 pasted, from the container.
+- Five tests passing offline in each language.
+- The TTL, the Postgres log, and the stopped-Redis redirect from exercise 3 recorded.
+- One paragraph per language on the choices: random codes, primary key not check-then-insert,
+  302 not 301, cache on the read path only, and what you would change first under load.
 
 ## Compare
 
 *One sentence per language: what was easiest, what was hardest, and why.*
 
-- **Python** — FastAPI plus Postgres plus Redis
-- **Go** — net/http plus pgx plus go-redis
-- **C++** — cpp-httplib plus libpqxx plus redis-plus-plus
+- **Python** — Easiest to validate, because `HttpUrl` on the model makes a bad URL a 422 before the route runs; hardest to keep honest in tests, because SQLite cannot stand in for Postgres here and the fixture has to be a real throwaway database.
+- **Go** — Easiest to keep correct under load, because the pool hands each request its own connection and `ctx` frees it when the client leaves; hardest is the collision, a SQLSTATE string `23505` that no compiler checks.
+- **C++** — Easiest to get the collision right, because libpqxx throws a typed `unique_violation` and the transaction rolls back by itself; hardest is that one connection needs a mutex and one escaped throw in a handler ends the process.
 
 ## Say these out loud
 
@@ -222,8 +325,8 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Design and build a URL shortener. Now explain every choice.
-2. 
-3.
+2. What happens on a code collision, and why is a primary key better than checking first?
+3. What happens when Redis is down, and what would be wrong if the answer were a 500?
 
 ## Before you move on
 

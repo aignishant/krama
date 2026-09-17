@@ -6,8 +6,6 @@
 | **System design** | NoSQL: what it actually means |
 | **Languages** | Timeouts and cancellation |
 | &nbsp;&nbsp;Python | asyncio.timeout, Event, and cooperative cancellation |
-| &nbsp;&nbsp;Go | context.Context: WithTimeout, WithCancel, and Done() |
-| &nbsp;&nbsp;C++ | std::stop_token, deadlines, and checking a flag |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-two-pointers-revision-and-mock.md](01-dsa-two-pointers-revision-and-mock.md) — the DSA lesson
 2. [02-system-design-nosql-what-it-actually-means.md](02-system-design-nosql-what-it-actually-means.md) — the system design lesson
 3. [05-lang-python-asyncio-timeout-event-and.md](05-lang-python-asyncio-timeout-event-and.md) — the Python lesson
-4. [06-lang-go-context-context-withtimeout-withcancel.md](06-lang-go-context-context-withtimeout-withcancel.md) — the Go lesson
-5. [07-lang-cpp-std-stop-token-deadlines.md](07-lang-cpp-std-stop-token-deadlines.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

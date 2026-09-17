@@ -6,8 +6,6 @@
 | **System design** | Logging and distributed tracing |
 | **Languages** | Capstone, day 2: the gateway |
 | &nbsp;&nbsp;Python | FastAPI gateway: auth, validation, and gRPC calls |
-| &nbsp;&nbsp;Go | Gateway middleware for auth tokens |
-| &nbsp;&nbsp;C++ | Nothing today; C++ waits for pricing |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-bit-tricks-every-interview.md](01-dsa-the-bit-tricks-every-interview.md) — the DSA lesson
 2. [02-system-design-logging-and-distributed-tracing.md](02-system-design-logging-and-distributed-tracing.md) — the system design lesson
 3. [05-lang-python-fastapi-gateway-auth-validation.md](05-lang-python-fastapi-gateway-auth-validation.md) — the Python lesson
-4. [06-lang-go-gateway-middleware-for-auth.md](06-lang-go-gateway-middleware-for-auth.md) — the Go lesson
-5. [07-lang-cpp-nothing-today-c-waits.md](07-lang-cpp-nothing-today-c-waits.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

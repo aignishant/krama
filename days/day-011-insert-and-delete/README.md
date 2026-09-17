@@ -6,8 +6,6 @@
 | **System design** | The operating system's job |
 | **Languages** | Splitting code across files |
 | &nbsp;&nbsp;Python | import, modules, packages, and the main guard |
-| &nbsp;&nbsp;Go | package, exported names, go.mod, and internal directories |
-| &nbsp;&nbsp;C++ | Headers, translation units, #include, and namespaces |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-insert-delete-and-the-cost.md](01-dsa-insert-delete-and-the-cost.md) — the DSA lesson
 2. [02-system-design-the-operating-systems-job.md](02-system-design-the-operating-systems-job.md) — the system design lesson
 3. [05-lang-python-import-modules-packages-and.md](05-lang-python-import-modules-packages-and.md) — the Python lesson
-4. [06-lang-go-package-exported-names-go.md](06-lang-go-package-exported-names-go.md) — the Go lesson
-5. [07-lang-cpp-headers-translation-units-include.md](07-lang-cpp-headers-translation-units-include.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

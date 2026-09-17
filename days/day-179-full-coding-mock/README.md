@@ -6,8 +6,6 @@
 | **System design** | Full mock: one high-level design, one low-level design |
 | **Languages** | Your portfolio |
 | &nbsp;&nbsp;Python | READMEs, demos, and the two-minute pitch for each project |
-| &nbsp;&nbsp;Go | READMEs, demos, and the two-minute pitch for each project |
-| &nbsp;&nbsp;C++ | READMEs, demos, and the two-minute pitch for each project |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-full-mock-two-problems-forty-five.md](01-dsa-full-mock-two-problems-forty-five.md) — the DSA lesson
 2. [02-system-design-full-mock-one-high-level-design.md](02-system-design-full-mock-one-high-level-design.md) — the system design lesson
 3. [05-lang-python-readmes-demos-and-the.md](05-lang-python-readmes-demos-and-the.md) — the Python lesson
-4. [06-lang-go-readmes-demos-and-the.md](06-lang-go-readmes-demos-and-the.md) — the Go lesson
-5. [07-lang-cpp-readmes-demos-and-the.md](07-lang-cpp-readmes-demos-and-the.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Design WhatsApp |
 | **Languages** | Build E, day 1: an observability toolkit. Design |
 | &nbsp;&nbsp;Python | Requirements and the dashboard plan |
-| &nbsp;&nbsp;Go | Requirements, the .proto metrics schema, and the Go agent |
-| &nbsp;&nbsp;C++ | Requirements and the C++ collector skeleton |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-grid-dp-unique-paths.md](01-dsa-grid-dp-unique-paths.md) — the DSA lesson
 2. [02-system-design-design-whatsapp.md](02-system-design-design-whatsapp.md) — the system design lesson
 3. [05-lang-python-requirements-and-the-dashboard.md](05-lang-python-requirements-and-the-dashboard.md) — the Python lesson
-4. [06-lang-go-requirements-the-proto-metrics.md](06-lang-go-requirements-the-proto-metrics.md) — the Go lesson
-5. [07-lang-cpp-requirements-and-the-c.md](07-lang-cpp-requirements-and-the-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

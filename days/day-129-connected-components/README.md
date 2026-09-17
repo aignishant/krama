@@ -6,8 +6,6 @@
 | **System design** | Message queues: why async changes everything |
 | **Languages** | Security basics |
 | &nbsp;&nbsp;Python | Input validation, injection, secrets, and pickle |
-| &nbsp;&nbsp;Go | Input validation, injection, secrets, and the crypto packages |
-| &nbsp;&nbsp;C++ | Bounds checking, undefined behaviour, and the sanitizers |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-connected-components.md](01-dsa-connected-components.md) — the DSA lesson
 2. [02-system-design-message-queues-why-async-changes.md](02-system-design-message-queues-why-async-changes.md) — the system design lesson
 3. [05-lang-python-input-validation-injection-secrets.md](05-lang-python-input-validation-injection-secrets.md) — the Python lesson
-4. [06-lang-go-input-validation-injection-secrets.md](06-lang-go-input-validation-injection-secrets.md) — the Go lesson
-5. [07-lang-cpp-bounds-checking-undefined-behaviour.md](07-lang-cpp-bounds-checking-undefined-behaviour.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

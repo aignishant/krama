@@ -6,8 +6,6 @@
 | **System design** | DRY, KISS, and YAGNI |
 | **Languages** | Mini project 4: a URL shortener API |
 | &nbsp;&nbsp;Python | FastAPI plus Postgres plus Redis |
-| &nbsp;&nbsp;Go | net/http plus pgx plus go-redis |
-| &nbsp;&nbsp;C++ | cpp-httplib plus libpqxx plus redis-plus-plus |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-hash-tables-how-a-dictionary.md](01-dsa-hash-tables-how-a-dictionary.md) — the DSA lesson
 2. [02-system-design-dry-kiss-and-yagni.md](02-system-design-dry-kiss-and-yagni.md) — the system design lesson
 3. [05-lang-python-fastapi-plus-postgres-plus.md](05-lang-python-fastapi-plus-postgres-plus.md) — the Python lesson
-4. [06-lang-go-net-http-plus-pgx.md](06-lang-go-net-http-plus-pgx.md) — the Go lesson
-5. [07-lang-cpp-cpp-httplib-plus-libpqxx.md](07-lang-cpp-cpp-httplib-plus-libpqxx.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

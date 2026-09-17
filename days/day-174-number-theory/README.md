@@ -6,8 +6,6 @@
 | **System design** | Deployments: blue-green, canary, and rollback |
 | **Languages** | Capstone, day 4: the pricing engine |
 | &nbsp;&nbsp;Python | Price rules loaded from Python tooling |
-| &nbsp;&nbsp;Go | Calling pricing over gRPC with deadlines |
-| &nbsp;&nbsp;C++ | The C++ pricing engine: rules, discounts, and sub-millisecond latency |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-primes-gcd-and-modular-arithmetic.md](01-dsa-primes-gcd-and-modular-arithmetic.md) — the DSA lesson
 2. [02-system-design-deployments-blue-green-canary-and-rollback.md](02-system-design-deployments-blue-green-canary-and-rollback.md) — the system design lesson
 3. [05-lang-python-price-rules-loaded-from.md](05-lang-python-price-rules-loaded-from.md) — the Python lesson
-4. [06-lang-go-calling-pricing-over-grpc.md](06-lang-go-calling-pricing-over-grpc.md) — the Go lesson
-5. [07-lang-cpp-the-c-pricing-engine.md](07-lang-cpp-the-c-pricing-engine.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

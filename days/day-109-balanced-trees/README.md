@@ -6,8 +6,6 @@
 | **System design** | Back-of-the-envelope estimation |
 | **Languages** | Static typing, deep |
 | &nbsp;&nbsp;Python | mypy strict, Protocol, TypeVar bounds, and overload |
-| &nbsp;&nbsp;Go | Generic constraints, type sets, and interface embedding |
-| &nbsp;&nbsp;C++ | Concepts, requires clauses, and constrained auto |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-balanced-trees-and-why-balance.md](01-dsa-balanced-trees-and-why-balance.md) — the DSA lesson
 2. [02-system-design-back-of-the-envelope-estimation.md](02-system-design-back-of-the-envelope-estimation.md) — the system design lesson
 3. [05-lang-python-mypy-strict-protocol-typevar.md](05-lang-python-mypy-strict-protocol-typevar.md) — the Python lesson
-4. [06-lang-go-generic-constraints-type-sets.md](06-lang-go-generic-constraints-type-sets.md) — the Go lesson
-5. [07-lang-cpp-concepts-requires-clauses-and.md](07-lang-cpp-concepts-requires-clauses-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Geospatial indexing: geohash and quadtrees |
 | **Languages** | Build B, day 2: the queue and the worker |
 | &nbsp;&nbsp;Python | Submit, poll, and cancel from Python |
-| &nbsp;&nbsp;Go | Redis Streams or Kafka, the worker loop, and acknowledgements |
-| &nbsp;&nbsp;C++ | The C++ worker consuming protobuf jobs |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-graphs-revision-and-mock-round.md](01-dsa-graphs-revision-and-mock-round.md) — the DSA lesson
 2. [02-system-design-geospatial-indexing-geohash-and-quadtrees.md](02-system-design-geospatial-indexing-geohash-and-quadtrees.md) — the system design lesson
 3. [05-lang-python-submit-poll-and-cancel.md](05-lang-python-submit-poll-and-cancel.md) — the Python lesson
-4. [06-lang-go-redis-streams-or-kafka.md](06-lang-go-redis-streams-or-kafka.md) — the Go lesson
-5. [07-lang-cpp-the-c-worker-consuming.md](07-lang-cpp-the-c-worker-consuming.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

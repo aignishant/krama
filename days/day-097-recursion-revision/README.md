@@ -6,8 +6,6 @@
 | **System design** | What scale actually means, in numbers |
 | **Languages** | Observability: metrics and traces |
 | &nbsp;&nbsp;Python | prometheus_client and OpenTelemetry |
-| &nbsp;&nbsp;Go | prometheus/client_golang and OpenTelemetry |
-| &nbsp;&nbsp;C++ | prometheus-cpp and OpenTelemetry C++ |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-recursion-and-backtracking-revision.md](01-dsa-recursion-and-backtracking-revision.md) — the DSA lesson
 2. [02-system-design-what-scale-actually-means.md](02-system-design-what-scale-actually-means.md) — the system design lesson
 3. [05-lang-python-prometheus-client-and-opentelemetry.md](05-lang-python-prometheus-client-and-opentelemetry.md) — the Python lesson
-4. [06-lang-go-prometheus-client-golang-and.md](06-lang-go-prometheus-client-golang-and.md) — the Go lesson
-5. [07-lang-cpp-prometheus-cpp-and-opentelemetry.md](07-lang-cpp-prometheus-cpp-and-opentelemetry.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

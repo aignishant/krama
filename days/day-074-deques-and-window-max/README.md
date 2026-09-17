@@ -6,8 +6,6 @@
 | **System design** | Command and chain of responsibility |
 | **Languages** | The wire format, decoded by hand |
 | &nbsp;&nbsp;Python | Dumping bytes and decoding them with the Python library |
-| &nbsp;&nbsp;Go | protowire: reading tags and varints yourself |
-| &nbsp;&nbsp;C++ | Decoding a message with CodedInputStream |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-deques-and-the-sliding-window-maximum.md](01-dsa-deques-and-the-sliding-window-maximum.md) — the DSA lesson
 2. [02-system-design-command-and-chain-of-responsibility.md](02-system-design-command-and-chain-of-responsibility.md) — the system design lesson
 3. [05-lang-python-dumping-bytes-and-decoding.md](05-lang-python-dumping-bytes-and-decoding.md) — the Python lesson
-4. [06-lang-go-protowire-reading-tags-and.md](06-lang-go-protowire-reading-tags-and.md) — the Go lesson
-5. [07-lang-cpp-decoding-a-message-with.md](07-lang-cpp-decoding-a-message-with.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

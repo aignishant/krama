@@ -6,8 +6,6 @@
 | **System design** | What a database gives you that a file does not |
 | **Languages** | Making your type behave like a built-in |
 | &nbsp;&nbsp;Python | __eq__, __lt__, __add__, __repr__, __hash__ |
-| &nbsp;&nbsp;Go | No operator overloading: Stringer, sort.Slice, and cmp |
-| &nbsp;&nbsp;C++ | operator==, operator<=>, operator<<, and the rule of least surprise |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-pattern-matching-the-simple-way.md](01-dsa-pattern-matching-the-simple-way.md) — the DSA lesson
 2. [02-system-design-what-a-database-gives-you.md](02-system-design-what-a-database-gives-you.md) — the system design lesson
 3. [05-lang-python-eq-lt-add-repr.md](05-lang-python-eq-lt-add-repr.md) — the Python lesson
-4. [06-lang-go-no-operator-overloading-stringer.md](06-lang-go-no-operator-overloading-stringer.md) — the Go lesson
-5. [07-lang-cpp-operator-operator-operator-and.md](07-lang-cpp-operator-operator-operator-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

@@ -6,8 +6,6 @@
 | **System design** | Document databases |
 | **Languages** | Copies, shares, and moves |
 | &nbsp;&nbsp;Python | Shallow copy, deepcopy, and aliasing bugs |
-| &nbsp;&nbsp;Go | Slices share backing arrays; copy(); append aliasing |
-| &nbsp;&nbsp;C++ | Copy constructors, std::move, and the rule of five |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-subarray-sum-equals-k-prefix.md](01-dsa-subarray-sum-equals-k-prefix.md) — the DSA lesson
 2. [02-system-design-document-databases.md](02-system-design-document-databases.md) — the system design lesson
 3. [05-lang-python-shallow-copy-deepcopy-and.md](05-lang-python-shallow-copy-deepcopy-and.md) — the Python lesson
-4. [06-lang-go-slices-share-backing-arrays.md](06-lang-go-slices-share-backing-arrays.md) — the Go lesson
-5. [07-lang-cpp-copy-constructors-std-move.md](07-lang-cpp-copy-constructors-std-move.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

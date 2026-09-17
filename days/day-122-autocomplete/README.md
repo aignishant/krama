@@ -6,8 +6,6 @@
 | **System design** | Idempotency and exactly-once delivery |
 | **Languages** | Design patterns II: observer, decorator, adapter |
 | &nbsp;&nbsp;Python | Observer with callbacks, decorator as wrapper, adapter as class |
-| &nbsp;&nbsp;Go | Observer with channels, decorator as wrapping interface, adapter |
-| &nbsp;&nbsp;C++ | Observer with std::function, decorator, adapter |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-autocomplete-and-word-dictionaries.md](01-dsa-autocomplete-and-word-dictionaries.md) — the DSA lesson
 2. [02-system-design-idempotency-and-exactly-once-delivery.md](02-system-design-idempotency-and-exactly-once-delivery.md) — the system design lesson
 3. [05-lang-python-observer-with-callbacks-decorator.md](05-lang-python-observer-with-callbacks-decorator.md) — the Python lesson
-4. [06-lang-go-observer-with-channels-decorator.md](06-lang-go-observer-with-channels-decorator.md) — the Go lesson
-5. [07-lang-cpp-observer-with-std-function.md](07-lang-cpp-observer-with-std-function.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

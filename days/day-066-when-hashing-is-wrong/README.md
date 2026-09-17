@@ -6,8 +6,6 @@
 | **System design** | Builder |
 | **Languages** | The Go protobuf API |
 | &nbsp;&nbsp;Python | Python protobuf API: SerializeToString, ParseFromString, MessageToJson |
-| &nbsp;&nbsp;Go | proto.Marshal, proto.Unmarshal, proto.Equal, protojson, and protoreflect |
-| &nbsp;&nbsp;C++ | SerializeToString, ParseFromString, and util::MessageToJsonString |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-when-a-hash-map.md](01-dsa-when-a-hash-map.md) — the DSA lesson
 2. [02-system-design-builder.md](02-system-design-builder.md) — the system design lesson
 3. [05-lang-python-python-protobuf-api-serializetostring.md](05-lang-python-python-protobuf-api-serializetostring.md) — the Python lesson
-4. [06-lang-go-proto-marshal-proto-unmarshal.md](06-lang-go-proto-marshal-proto-unmarshal.md) — the Go lesson
-5. [07-lang-cpp-serializetostring-parsefromstring-and-util.md](07-lang-cpp-serializetostring-parsefromstring-and-util.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

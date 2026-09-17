@@ -6,8 +6,6 @@
 | **System design** | Design a leaderboard |
 | **Languages** | Go interview questions |
 | &nbsp;&nbsp;Python | How Python answers the same questions |
-| &nbsp;&nbsp;Go | The forty questions: goroutines, channels, interfaces, nil, slices, GC |
-| &nbsp;&nbsp;C++ | How C++ answers the same questions |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-merging-intervals.md](01-dsa-merging-intervals.md) — the DSA lesson
 2. [02-system-design-design-a-leaderboard.md](02-system-design-design-a-leaderboard.md) — the system design lesson
 3. [05-lang-python-how-python-answers-the.md](05-lang-python-how-python-answers-the.md) — the Python lesson
-4. [06-lang-go-the-forty-questions-goroutines.md](06-lang-go-the-forty-questions-goroutines.md) — the Go lesson
-5. [07-lang-cpp-how-c-answers-the.md](07-lang-cpp-how-c-answers-the.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

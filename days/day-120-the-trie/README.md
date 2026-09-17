@@ -6,8 +6,6 @@
 | **System design** | Distributed transactions and two-phase commit |
 | **Languages** | Mini project 8: a rate-limiter library |
 | &nbsp;&nbsp;Python | A published Python package with docs and tests |
-| &nbsp;&nbsp;Go | A published Go module with docs and tests |
-| &nbsp;&nbsp;C++ | A C++ library with a CMake package and tests |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-the-trie-a-tree.md](01-dsa-the-trie-a-tree.md) — the DSA lesson
 2. [02-system-design-distributed-transactions-and-two-phase-commit.md](02-system-design-distributed-transactions-and-two-phase-commit.md) — the system design lesson
 3. [05-lang-python-a-published-python-package.md](05-lang-python-a-published-python-package.md) — the Python lesson
-4. [06-lang-go-a-published-go-module.md](06-lang-go-a-published-go-module.md) — the Go lesson
-5. [07-lang-cpp-a-c-library-with.md](07-lang-cpp-a-c-library-with.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

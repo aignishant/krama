@@ -6,8 +6,6 @@
 | **System design** | How your code becomes a running service |
 | **Languages** | Pointers, references, and value semantics |
 | &nbsp;&nbsp;Python | Everything is a reference to an object; is versus == |
-| &nbsp;&nbsp;Go | Pointers with & and *, value receivers versus pointer receivers |
-| &nbsp;&nbsp;C++ | Pointers, references, const, and passing by value |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-searching-an-array-linear-search.md](01-dsa-searching-an-array-linear-search.md) — the DSA lesson
 2. [02-system-design-how-your-code-becomes.md](02-system-design-how-your-code-becomes.md) — the system design lesson
 3. [05-lang-python-everything-is-a-reference.md](05-lang-python-everything-is-a-reference.md) — the Python lesson
-4. [06-lang-go-pointers-with-and-value.md](06-lang-go-pointers-with-and-value.md) — the Go lesson
-5. [07-lang-cpp-pointers-references-const-and.md](07-lang-cpp-pointers-references-const-and.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

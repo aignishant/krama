@@ -6,8 +6,6 @@
 | **System design** | Design YouTube |
 | **Languages** | Build E, day 3: time-series storage |
 | &nbsp;&nbsp;Python | Querying from Python |
-| &nbsp;&nbsp;Go | Batching and forwarding |
-| &nbsp;&nbsp;C++ | A columnar time-series store with downsampling |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-interval-dp.md](01-dsa-interval-dp.md) — the DSA lesson
 2. [02-system-design-design-youtube.md](02-system-design-design-youtube.md) — the system design lesson
 3. [05-lang-python-querying-from-python.md](05-lang-python-querying-from-python.md) — the Python lesson
-4. [06-lang-go-batching-and-forwarding.md](06-lang-go-batching-and-forwarding.md) — the Go lesson
-5. [07-lang-cpp-a-columnar-time-series.md](07-lang-cpp-a-columnar-time-series.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

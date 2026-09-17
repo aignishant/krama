@@ -6,8 +6,6 @@
 | **System design** | Design Uber |
 | **Languages** | Build F, day 1: a tiny language. The lexer |
 | &nbsp;&nbsp;Python | The lexer in Python |
-| &nbsp;&nbsp;Go | The lexer in Go |
-| &nbsp;&nbsp;C++ | The lexer in C++ |
 
 ## What you can do by tonight
 
@@ -31,9 +29,7 @@ lessons are the walkthrough; [03-practice.md](03-practice.md) contains the deliv
 1. [01-dsa-space-optimisation-in-dp.md](01-dsa-space-optimisation-in-dp.md) — the DSA lesson
 2. [02-system-design-design-uber.md](02-system-design-design-uber.md) — the system design lesson
 3. [05-lang-python-the-lexer-in-python.md](05-lang-python-the-lexer-in-python.md) — the Python lesson
-4. [06-lang-go-the-lexer-in-go.md](06-lang-go-the-lexer-in-go.md) — the Go lesson
-5. [07-lang-cpp-the-lexer-in-c.md](07-lang-cpp-the-lexer-in-c.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

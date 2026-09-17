@@ -6,8 +6,6 @@
 | **System design** | Microservices versus monolith, argued both ways |
 | **Languages** | Capstone, day 7: observe and deploy |
 | &nbsp;&nbsp;Python | Tracing through the gateway |
-| &nbsp;&nbsp;Go | Tracing across gRPC and Kafka; Kubernetes manifests |
-| &nbsp;&nbsp;C++ | Metrics from the engine |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-the-twenty-patterns-on-one.md](01-dsa-the-twenty-patterns-on-one.md) — the DSA lesson
 2. [02-system-design-microservices-versus-monolith-argued-both.md](02-system-design-microservices-versus-monolith-argued-both.md) — the system design lesson
 3. [05-lang-python-tracing-through-the-gateway.md](05-lang-python-tracing-through-the-gateway.md) — the Python lesson
-4. [06-lang-go-tracing-across-grpc-and.md](06-lang-go-tracing-across-grpc-and.md) — the Go lesson
-5. [07-lang-cpp-metrics-from-the-engine.md](07-lang-cpp-metrics-from-the-engine.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 

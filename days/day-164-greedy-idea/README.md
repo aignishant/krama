@@ -6,8 +6,6 @@
 | **System design** | Design a payment system |
 | **Languages** | Build F, day 4: errors and tests |
 | &nbsp;&nbsp;Python | Error messages with line numbers, and a test suite |
-| &nbsp;&nbsp;Go | Error messages with line numbers, and a test suite |
-| &nbsp;&nbsp;C++ | Error messages with line numbers, and a test suite |
 
 ## What you can do by tonight
 
@@ -26,9 +24,7 @@
 1. [01-dsa-greedy-when-taking-the-best.md](01-dsa-greedy-when-taking-the-best.md) — the DSA lesson
 2. [02-system-design-design-a-payment-system.md](02-system-design-design-a-payment-system.md) — the system design lesson
 3. [05-lang-python-error-messages-with-line.md](05-lang-python-error-messages-with-line.md) — the Python lesson
-4. [06-lang-go-error-messages-with-line.md](06-lang-go-error-messages-with-line.md) — the Go lesson
-5. [07-lang-cpp-error-messages-with-line.md](07-lang-cpp-error-messages-with-line.md) — the C++ lesson
-6. [03-practice.md](03-practice.md) — DSA, system design, and all three languages
+4. [03-practice.md](03-practice.md) — DSA, system design, and Python
 
 ## Where this sits
 
