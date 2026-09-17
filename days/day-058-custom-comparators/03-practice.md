@@ -2,7 +2,7 @@
 day: 58
 track: practice
 title: "Practice — Custom comparators and sorting by keys"
-status: draft
+status: written
 ---
 
 # Day 058 · Practice
@@ -175,17 +175,50 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | Make the tests fail on purpose | That each test can actually fail, and fails for the reason it claims to protect. |
+| 2 | The timeout case | Turning a slow dependency into a 504 without ever waiting for it in the test. |
+| 3 | A second dependency behind the seam | Adding a stock service, mocking two things at once, and asserting what each was asked. |
+
+All three start from the lesson's price service and its four tests. Keep the Wi-Fi off for every
+run; if a test needs it, the test is wrong.
+
+### 1. Make the tests fail on purpose
+
+Break the handler four ways, one at a time, and run the suite after each: return the rupee price
+without converting; return 500 instead of 404 for a missing item; call the rate source even when
+the currency is INR; and swallow the rate source's failure and return 200 with a price of zero.
+Each break must make exactly one test fail, and you must be able to say which assertion caught it.
+The third break is the interesting one: in Python it is `route.called`, in Go it is the `calls`
+column, in C++ it is `Times(0)`. Undo each break before the next. Done means four breaks, four
+single failures, and the name of the assertion that caught each, in all three languages.
+
+### 2. The timeout case
+
+The rates service is not down; it is slow. In Python, mock the route with
+`side_effect=httpx.TimeoutException("slow")`; in Go, have the fake return `context.DeadlineExceeded`;
+in C++, have the mock `Throw` a `std::runtime_error("timeout")`. The handler should answer 504,
+not 502, and the test should assert it. Then the harder half: prove the test itself never waits.
+Time the suite before and after; if the timeout test added seconds, the mock is not intercepting
+and the real timeout is running. Done means a 504, a distinct error code in the body, and a suite
+that is no slower than before, in all three languages.
+
+### 3. A second dependency behind the seam
+
+Add a stock service: `GET /price/{sku}` must also report `"in_stock": true` or `false`, from a
+second outside call. Put it behind the same kind of seam as the rates service: a second respx
+route in Python, a second interface and fake in Go, a second abstract base and mock in C++. Write
+one test where rates answers and stock is down, and one the other way round, and say which
+status each should produce and why they might differ. Assert on what each stand-in was asked.
+Done means two seams, both mocked, both failure orders tested, and the same four statuses in all
+three languages.
 
 ## Compare
 
 *One sentence per language: what was easiest, what was hardest, and why.*
 
-- **Python** — TestClient, fixtures for a test database, and mocking with respx
-- **Go** — httptest, table tests for handlers, and interfaces for mocking
-- **C++** — GoogleTest with an in-process server, and gMock
+- **Python** — Easiest to retrofit, because respx patches `httpx` from outside and `dependency_overrides` swaps a function by identity, so nothing in the route had to be designed for testing; hardest is remembering `clear()` so the override does not leak.
+- **Go** — Easiest to read, because the fake is a ten-line struct and the table names every case; hardest is that the seam must be an interface in the design, and `:memory:` needs `SetMaxOpenConns(1)` or the table vanishes between connections.
+- **C++** — Easiest to assert with, because gMock checks counts and arguments for you; hardest is that there is no in-process client, so the fixture must bind, thread, wait until ready, stop, and join, and each of those can race.
 
 ## Say these out loud
 
@@ -210,8 +243,8 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. How do you test code that calls another service?
-2. 
-3.
+2. What is the difference between a fixture, a fake, and a mock, and which of today's three pieces is which?
+3. Why does the Python version need no interface, and what does that cost the Go and C++ versions?
 
 ## Before you move on
 

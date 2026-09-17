@@ -2,7 +2,7 @@
 day: 59
 track: practice
 title: "Practice — Sorting revision and mock round"
-status: draft
+status: written
 ---
 
 # Day 059 · Practice
@@ -195,17 +195,48 @@ exercise is done three times: once in Python, once in Go, once in C++.*
 
 | # | Exercise | What it is really testing |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
+| 1 | The fat image, measured | Building the one-stage, root, full-base version and reading the size difference off `docker images`. |
+| 2 | Break the runtime stage | Producing, and then reading, the three start-up failures a wrong runtime stage gives. |
+| 3 | The layer cache, timed | Proving the dependency layer is cached across a code edit, and that the wrong order loses it. |
+
+All three start from the lesson's Dockerfile. Keep the lesson's image name and give the variants
+their own tags, so `docker images` shows them side by side.
+
+### 1. The fat image, measured
+
+Write the naive Dockerfile for each service: one stage, the full base (`python:3.12`,
+`golang:1.23`, `debian:bookworm` with the compiler installed), everything copied, no `USER`
+line. Build it as `<name>-fat` and the lesson's as `<name>`. Run `docker images` and write the
+two sizes next to each other. Then run `id` in each container that has a shell, and `docker
+inspect --format '{{.Config.User}}'` on the ones that do not, and note who each runs as. Done
+means six images, three pairs of sizes you can quote from memory, and one sentence per language
+on where the difference went, in all three languages.
+
+### 2. Break the runtime stage
+
+Three deliberate breaks, one at a time, each undone before the next. Python: bind uvicorn to
+`127.0.0.1` and try to `curl` it through the port mapping. Go: drop `CGO_ENABLED=0` and run the
+image. C++: change the runtime line to `gcr.io/distroless/static-debian12` and run the image.
+Paste the exact error for each, then say in one sentence what is actually missing, because in
+two of the three cases the message names the wrong thing. Done means three pasted errors and
+three corrected one-line explanations.
+
+### 3. The layer cache, timed
+
+Build the lesson's image twice, editing one line of the source between builds, and time the
+second build. Then swap the order so the source is copied before the dependency step, and repeat.
+For Python the dependency step is `uv sync`, for Go `go mod download`, for C++ the configure
+step that runs `FetchContent`. Record the four times. Done means a second build that reports
+`CACHED` for the dependency step in the right order and re-runs it in the wrong order, with the
+times to show it, in all three languages.
 
 ## Compare
 
 *One sentence per language: what was easiest, what was hardest, and why.*
 
-- **Python** — A slim Python image with uv and a non-root user
-- **Go** — A multi-stage build to a scratch image
-- **C++** — A multi-stage CMake build to a distroless image
+- **Python** — Easiest to write, because the runtime stage is just slim plus a copied `.venv`; hardest to accept, because 180 MB is the floor and no flag moves it, since the interpreter and every package must ship.
+- **Go** — Easiest to shrink, because `CGO_ENABLED=0` makes one static file and `scratch` holds only that; hardest to debug, because the image has no shell, no certificates, and no time zones unless you copy them.
+- **C++** — Easiest to get wrong, because the builder and the distroless runtime must be the same Debian or glibc symbol versions fail at start-up; easiest to explain once `ldd` shows exactly which libraries the 20 MB are.
 
 ## Say these out loud
 
@@ -231,8 +262,8 @@ Three questions. Answer each one in two minutes, standing up, without looking at
 *Three questions from today. Answer each in two minutes, standing up, no notes.*
 
 1. Why is your Docker image so large, and how would you shrink it?
-2. 
-3.
+2. Why are the three images 180 MB, 10 MB, and 20 MB, and which of the three numbers is a floor?
+3. What does `FROM scratch` not contain, and what does distroless/cc add back, and why does C++ need it and Go not?
 
 ## Before you move on
 
