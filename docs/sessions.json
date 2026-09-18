@@ -1,0 +1,2690 @@
+[
+  {
+    "day": 1,
+    "week": 1,
+    "folder": "day-001-count-target-values",
+    "titles": [
+      "Count target values",
+      "Functional scope",
+      "Identity and equality"
+    ],
+    "ids": [
+      "DSA-01",
+      "SD-01",
+      "PY-01"
+    ],
+    "review": false
+  },
+  {
+    "day": 2,
+    "week": 1,
+    "folder": "day-002-find-the-first-maximum",
+    "titles": [
+      "Find the first maximum",
+      "Quality requirements",
+      "Shallow and deep copies"
+    ],
+    "ids": [
+      "DSA-02",
+      "SD-02",
+      "PY-02"
+    ],
+    "review": false
+  },
+  {
+    "day": 3,
+    "week": 1,
+    "folder": "day-003-stable-compaction",
+    "titles": [
+      "Stable compaction",
+      "Traffic estimates",
+      "Mutable defaults"
+    ],
+    "ids": [
+      "DSA-03",
+      "SD-03",
+      "PY-03"
+    ],
+    "review": false
+  },
+  {
+    "day": 4,
+    "week": 1,
+    "folder": "day-004-reverse-a-segment",
+    "titles": [
+      "Reverse a segment",
+      "Storage estimates",
+      "Hash and equality"
+    ],
+    "ids": [
+      "DSA-04",
+      "SD-04",
+      "PY-04"
+    ],
+    "review": false
+  },
+  {
+    "day": 5,
+    "week": 1,
+    "folder": "day-005-merge-sorted-arrays",
+    "titles": [
+      "Merge sorted arrays",
+      "Latency budgets",
+      "Truth and sentinels"
+    ],
+    "ids": [
+      "DSA-05",
+      "SD-05",
+      "PY-05"
+    ],
+    "review": false
+  },
+  {
+    "day": 6,
+    "week": 1,
+    "folder": "day-006-best-single-trade",
+    "titles": [
+      "Best single trade",
+      "Single-node baseline",
+      "Mutation contracts"
+    ],
+    "ids": [
+      "DSA-06",
+      "SD-06",
+      "PY-06"
+    ],
+    "review": false
+  },
+  {
+    "day": 7,
+    "week": 1,
+    "folder": "day-007-week-1-review",
+    "titles": [
+      "Week 1 DSA review",
+      "Week 1 design review",
+      "Week 1 Python review"
+    ],
+    "ids": [
+      "DSA-07",
+      "SD-07",
+      "PY-07"
+    ],
+    "review": true
+  },
+  {
+    "day": 8,
+    "week": 2,
+    "folder": "day-008-first-repeated-value",
+    "titles": [
+      "First repeated value",
+      "Request journey",
+      "Argument binding"
+    ],
+    "ids": [
+      "DSA-08",
+      "SD-08",
+      "PY-08"
+    ],
+    "review": false
+  },
+  {
+    "day": 9,
+    "week": 2,
+    "folder": "day-009-frequency-ranking",
+    "titles": [
+      "Frequency ranking",
+      "HTTP methods",
+      "Closure binding"
+    ],
+    "ids": [
+      "DSA-09",
+      "SD-09",
+      "PY-09"
+    ],
+    "review": false
+  },
+  {
+    "day": 10,
+    "week": 2,
+    "folder": "day-010-pair-sum-indices",
+    "titles": [
+      "Pair sum indices",
+      "Idempotency semantics",
+      "Nonlocal state"
+    ],
+    "ids": [
+      "DSA-10",
+      "SD-10",
+      "PY-10"
+    ],
+    "review": false
+  },
+  {
+    "day": 11,
+    "week": 2,
+    "folder": "day-011-group-anagrams",
+    "titles": [
+      "Group anagrams",
+      "Connection budgets",
+      "Decorator metadata"
+    ],
+    "ids": [
+      "DSA-11",
+      "SD-11",
+      "PY-11"
+    ],
+    "review": false
+  },
+  {
+    "day": 12,
+    "week": 2,
+    "folder": "day-012-range-sums",
+    "titles": [
+      "Range sums",
+      "Timeout propagation",
+      "Decorator arguments"
+    ],
+    "ids": [
+      "DSA-12",
+      "SD-12",
+      "PY-12"
+    ],
+    "review": false
+  },
+  {
+    "day": 13,
+    "week": 2,
+    "folder": "day-013-count-target-subarrays",
+    "titles": [
+      "Count target subarrays",
+      "Pagination",
+      "Partial application"
+    ],
+    "ids": [
+      "DSA-13",
+      "SD-13",
+      "PY-13"
+    ],
+    "review": false
+  },
+  {
+    "day": 14,
+    "week": 2,
+    "folder": "day-014-week-2-review",
+    "titles": [
+      "Week 2 DSA review",
+      "Week 2 design review",
+      "Week 2 Python review"
+    ],
+    "ids": [
+      "DSA-14",
+      "SD-14",
+      "PY-14"
+    ],
+    "review": true
+  },
+  {
+    "day": 15,
+    "week": 3,
+    "folder": "day-015-sorted-pair-existence",
+    "titles": [
+      "Sorted pair existence",
+      "Domain model",
+      "Iterator protocol"
+    ],
+    "ids": [
+      "DSA-15",
+      "SD-15",
+      "PY-15"
+    ],
+    "review": false
+  },
+  {
+    "day": 16,
+    "week": 3,
+    "folder": "day-016-unique-triples",
+    "titles": [
+      "Unique triples",
+      "API contract",
+      "Generator laziness"
+    ],
+    "ids": [
+      "DSA-16",
+      "SD-16",
+      "PY-16"
+    ],
+    "review": false
+  },
+  {
+    "day": 17,
+    "week": 3,
+    "folder": "day-017-container-capacity",
+    "titles": [
+      "Container capacity",
+      "Stateless workers",
+      "Generator cleanup"
+    ],
+    "ids": [
+      "DSA-17",
+      "SD-17",
+      "PY-17"
+    ],
+    "review": false
+  },
+  {
+    "day": 18,
+    "week": 3,
+    "folder": "day-018-fixed-window-maximum-sum",
+    "titles": [
+      "Fixed window maximum sum",
+      "Sync versus async",
+      "Yield delegation"
+    ],
+    "ids": [
+      "DSA-18",
+      "SD-18",
+      "PY-18"
+    ],
+    "review": false
+  },
+  {
+    "day": 19,
+    "week": 3,
+    "folder": "day-019-longest-distinct-substring",
+    "titles": [
+      "Longest distinct substring",
+      "Compatibility",
+      "Iterator consumption"
+    ],
+    "ids": [
+      "DSA-19",
+      "SD-19",
+      "PY-19"
+    ],
+    "review": false
+  },
+  {
+    "day": 20,
+    "week": 3,
+    "folder": "day-020-minimum-positive-window",
+    "titles": [
+      "Minimum positive window",
+      "Modular monolith",
+      "Streaming pipeline"
+    ],
+    "ids": [
+      "DSA-20",
+      "SD-20",
+      "PY-20"
+    ],
+    "review": false
+  },
+  {
+    "day": 21,
+    "week": 3,
+    "folder": "day-021-week-3-review",
+    "titles": [
+      "Week 3 DSA review",
+      "Week 3 design review",
+      "Week 3 Python review"
+    ],
+    "ids": [
+      "DSA-21",
+      "SD-21",
+      "PY-21"
+    ],
+    "review": true
+  },
+  {
+    "day": 22,
+    "week": 4,
+    "folder": "day-022-lower-bound",
+    "titles": [
+      "Lower bound",
+      "Schema constraints",
+      "Representations"
+    ],
+    "ids": [
+      "DSA-22",
+      "SD-22",
+      "PY-22"
+    ],
+    "review": false
+  },
+  {
+    "day": 23,
+    "week": 4,
+    "folder": "day-023-target-range",
+    "titles": [
+      "Target range",
+      "Index selection",
+      "Rich comparison"
+    ],
+    "ids": [
+      "DSA-23",
+      "SD-23",
+      "PY-23"
+    ],
+    "review": false
+  },
+  {
+    "day": 24,
+    "week": 4,
+    "folder": "day-024-rotated-search",
+    "titles": [
+      "Rotated search",
+      "Query plans",
+      "Container protocol"
+    ],
+    "ids": [
+      "DSA-24",
+      "SD-24",
+      "PY-24"
+    ],
+    "review": false
+  },
+  {
+    "day": 25,
+    "week": 4,
+    "folder": "day-025-integer-square-root",
+    "titles": [
+      "Integer square root",
+      "Transactions",
+      "Indexing and slicing"
+    ],
+    "ids": [
+      "DSA-25",
+      "SD-25",
+      "PY-25"
+    ],
+    "review": false
+  },
+  {
+    "day": 26,
+    "week": 4,
+    "folder": "day-026-minimum-shipping-capacity",
+    "titles": [
+      "Minimum shipping capacity",
+      "Isolation anomalies",
+      "Callable instances"
+    ],
+    "ids": [
+      "DSA-26",
+      "SD-26",
+      "PY-26"
+    ],
+    "review": false
+  },
+  {
+    "day": 27,
+    "week": 4,
+    "folder": "day-027-median-of-two-arrays",
+    "titles": [
+      "Median of two arrays",
+      "Optimistic concurrency",
+      "Context managers"
+    ],
+    "ids": [
+      "DSA-27",
+      "SD-27",
+      "PY-27"
+    ],
+    "review": false
+  },
+  {
+    "day": 28,
+    "week": 4,
+    "folder": "day-028-week-4-review",
+    "titles": [
+      "Week 4 DSA review",
+      "Week 4 design review",
+      "Week 4 Python review"
+    ],
+    "ids": [
+      "DSA-28",
+      "SD-28",
+      "PY-28"
+    ],
+    "review": true
+  },
+  {
+    "day": 29,
+    "week": 5,
+    "folder": "day-029-stable-record-sorting",
+    "titles": [
+      "Stable record sorting",
+      "Tree indexes",
+      "Attribute lookup"
+    ],
+    "ids": [
+      "DSA-29",
+      "SD-29",
+      "PY-29"
+    ],
+    "review": false
+  },
+  {
+    "day": 30,
+    "week": 5,
+    "folder": "day-030-merge-overlapping-intervals",
+    "titles": [
+      "Merge overlapping intervals",
+      "Log structured storage",
+      "Properties"
+    ],
+    "ids": [
+      "DSA-30",
+      "SD-30",
+      "PY-30"
+    ],
+    "review": false
+  },
+  {
+    "day": 31,
+    "week": 5,
+    "folder": "day-031-insert-an-interval",
+    "titles": [
+      "Insert an interval",
+      "Access-pattern modeling",
+      "Descriptors"
+    ],
+    "ids": [
+      "DSA-31",
+      "SD-31",
+      "PY-31"
+    ],
+    "review": false
+  },
+  {
+    "day": 32,
+    "week": 5,
+    "folder": "day-032-minimum-meeting-rooms",
+    "titles": [
+      "Minimum meeting rooms",
+      "Hot partitions",
+      "Method binding"
+    ],
+    "ids": [
+      "DSA-32",
+      "SD-32",
+      "PY-32"
+    ],
+    "review": false
+  },
+  {
+    "day": 33,
+    "week": 5,
+    "folder": "day-033-kth-smallest",
+    "titles": [
+      "Kth smallest",
+      "TTL and deletion",
+      "Inheritance and super"
+    ],
+    "ids": [
+      "DSA-33",
+      "SD-33",
+      "PY-33"
+    ],
+    "review": false
+  },
+  {
+    "day": 34,
+    "week": 5,
+    "folder": "day-034-count-inversions",
+    "titles": [
+      "Count inversions",
+      "Storage decision memo",
+      "Slots"
+    ],
+    "ids": [
+      "DSA-34",
+      "SD-34",
+      "PY-34"
+    ],
+    "review": false
+  },
+  {
+    "day": 35,
+    "week": 5,
+    "folder": "day-035-week-5-review",
+    "titles": [
+      "Week 5 DSA review",
+      "Week 5 design review",
+      "Week 5 Python review"
+    ],
+    "ids": [
+      "DSA-35",
+      "SD-35",
+      "PY-35"
+    ],
+    "review": true
+  },
+  {
+    "day": 36,
+    "week": 6,
+    "folder": "day-036-reverse-a-linked-list",
+    "titles": [
+      "Reverse a linked list",
+      "Cache aside",
+      "Dataclass defaults"
+    ],
+    "ids": [
+      "DSA-36",
+      "SD-36",
+      "PY-36"
+    ],
+    "review": false
+  },
+  {
+    "day": 37,
+    "week": 6,
+    "folder": "day-037-middle-node",
+    "titles": [
+      "Middle node",
+      "Invalidation race",
+      "Frozen models"
+    ],
+    "ids": [
+      "DSA-37",
+      "SD-37",
+      "PY-37"
+    ],
+    "review": false
+  },
+  {
+    "day": 38,
+    "week": 6,
+    "folder": "day-038-cycle-entry",
+    "titles": [
+      "Cycle entry",
+      "TTL and eviction",
+      "Ordering and hashing"
+    ],
+    "ids": [
+      "DSA-38",
+      "SD-38",
+      "PY-38"
+    ],
+    "review": false
+  },
+  {
+    "day": 39,
+    "week": 6,
+    "folder": "day-039-merge-linked-lists",
+    "titles": [
+      "Merge linked lists",
+      "Stampede control",
+      "Enums"
+    ],
+    "ids": [
+      "DSA-39",
+      "SD-39",
+      "PY-39"
+    ],
+    "review": false
+  },
+  {
+    "day": 40,
+    "week": 6,
+    "folder": "day-040-remove-from-end",
+    "titles": [
+      "Remove from end",
+      "Negative caching",
+      "Composition"
+    ],
+    "ids": [
+      "DSA-40",
+      "SD-40",
+      "PY-40"
+    ],
+    "review": false
+  },
+  {
+    "day": 41,
+    "week": 6,
+    "folder": "day-041-least-recently-used-cache",
+    "titles": [
+      "Least recently used cache",
+      "CDN behavior",
+      "Model boundary"
+    ],
+    "ids": [
+      "DSA-41",
+      "SD-41",
+      "PY-41"
+    ],
+    "review": false
+  },
+  {
+    "day": 42,
+    "week": 6,
+    "folder": "day-042-week-6-review",
+    "titles": [
+      "Week 6 DSA review",
+      "Week 6 design review",
+      "Week 6 Python review"
+    ],
+    "ids": [
+      "DSA-42",
+      "SD-42",
+      "PY-42"
+    ],
+    "review": true
+  },
+  {
+    "day": 43,
+    "week": 7,
+    "folder": "day-043-balanced-delimiters",
+    "titles": [
+      "Balanced delimiters",
+      "Balancing policies",
+      "Annotations at runtime"
+    ],
+    "ids": [
+      "DSA-43",
+      "SD-43",
+      "PY-43"
+    ],
+    "review": false
+  },
+  {
+    "day": 44,
+    "week": 7,
+    "folder": "day-044-queue-from-stacks",
+    "titles": [
+      "Queue from stacks",
+      "Health checks",
+      "Optional and narrowing"
+    ],
+    "ids": [
+      "DSA-44",
+      "SD-44",
+      "PY-44"
+    ],
+    "review": false
+  },
+  {
+    "day": 45,
+    "week": 7,
+    "folder": "day-045-minimum-stack",
+    "titles": [
+      "Minimum stack",
+      "Horizontal scaling",
+      "Typed dictionaries"
+    ],
+    "ids": [
+      "DSA-45",
+      "SD-45",
+      "PY-45"
+    ],
+    "review": false
+  },
+  {
+    "day": 46,
+    "week": 7,
+    "folder": "day-046-warmer-days",
+    "titles": [
+      "Warmer days",
+      "Partition keys",
+      "Protocols"
+    ],
+    "ids": [
+      "DSA-46",
+      "SD-46",
+      "PY-46"
+    ],
+    "review": false
+  },
+  {
+    "day": 47,
+    "week": 7,
+    "folder": "day-047-largest-histogram-rectangle",
+    "titles": [
+      "Largest histogram rectangle",
+      "Consistent placement",
+      "Generics"
+    ],
+    "ids": [
+      "DSA-47",
+      "SD-47",
+      "PY-47"
+    ],
+    "review": false
+  },
+  {
+    "day": 48,
+    "week": 7,
+    "folder": "day-048-sliding-window-maxima",
+    "titles": [
+      "Sliding window maxima",
+      "Resharding",
+      "Overloads"
+    ],
+    "ids": [
+      "DSA-48",
+      "SD-48",
+      "PY-48"
+    ],
+    "review": false
+  },
+  {
+    "day": 49,
+    "week": 7,
+    "folder": "day-049-week-7-review",
+    "titles": [
+      "Week 7 DSA review",
+      "Week 7 design review",
+      "Week 7 Python review"
+    ],
+    "ids": [
+      "DSA-49",
+      "SD-49",
+      "PY-49"
+    ],
+    "review": true
+  },
+  {
+    "day": 50,
+    "week": 8,
+    "folder": "day-050-enumerate-subsets",
+    "titles": [
+      "Enumerate subsets",
+      "Leader replication",
+      "Callable signatures"
+    ],
+    "ids": [
+      "DSA-50",
+      "SD-50",
+      "PY-50"
+    ],
+    "review": false
+  },
+  {
+    "day": 51,
+    "week": 8,
+    "folder": "day-051-enumerate-permutations",
+    "titles": [
+      "Enumerate permutations",
+      "Read-your-writes",
+      "Variance reasoning"
+    ],
+    "ids": [
+      "DSA-51",
+      "SD-51",
+      "PY-51"
+    ],
+    "review": false
+  },
+  {
+    "day": 52,
+    "week": 8,
+    "folder": "day-052-combination-sum",
+    "titles": [
+      "Combination sum",
+      "Consistency models",
+      "Literal states"
+    ],
+    "ids": [
+      "DSA-52",
+      "SD-52",
+      "PY-52"
+    ],
+    "review": false
+  },
+  {
+    "day": 53,
+    "week": 8,
+    "folder": "day-053-balanced-parentheses",
+    "titles": [
+      "Balanced parentheses",
+      "Quorum reasoning",
+      "Type guards"
+    ],
+    "ids": [
+      "DSA-53",
+      "SD-53",
+      "PY-53"
+    ],
+    "review": false
+  },
+  {
+    "day": 54,
+    "week": 8,
+    "folder": "day-054-word-search",
+    "titles": [
+      "Word search",
+      "Network partitions",
+      "NewType"
+    ],
+    "ids": [
+      "DSA-54",
+      "SD-54",
+      "PY-54"
+    ],
+    "review": false
+  },
+  {
+    "day": 55,
+    "week": 8,
+    "folder": "day-055-nonattacking-queens",
+    "titles": [
+      "Nonattacking queens",
+      "Failover",
+      "Typing debt"
+    ],
+    "ids": [
+      "DSA-55",
+      "SD-55",
+      "PY-55"
+    ],
+    "review": false
+  },
+  {
+    "day": 56,
+    "week": 8,
+    "folder": "day-056-week-8-review",
+    "titles": [
+      "Week 8 DSA review",
+      "Week 8 design review",
+      "Week 8 Python review"
+    ],
+    "ids": [
+      "DSA-56",
+      "SD-56",
+      "PY-56"
+    ],
+    "review": true
+  },
+  {
+    "day": 57,
+    "week": 9,
+    "folder": "day-057-tree-depth",
+    "titles": [
+      "Tree depth",
+      "Queue fundamentals",
+      "Exception chaining"
+    ],
+    "ids": [
+      "DSA-57",
+      "SD-57",
+      "PY-57"
+    ],
+    "review": false
+  },
+  {
+    "day": 58,
+    "week": 9,
+    "folder": "day-058-level-order",
+    "titles": [
+      "Level order",
+      "Delivery semantics",
+      "Exception boundaries"
+    ],
+    "ids": [
+      "DSA-58",
+      "SD-58",
+      "PY-58"
+    ],
+    "review": false
+  },
+  {
+    "day": 59,
+    "week": 9,
+    "folder": "day-059-validate-search-tree",
+    "titles": [
+      "Validate search tree",
+      "Consumer idempotency",
+      "Finally behavior"
+    ],
+    "ids": [
+      "DSA-59",
+      "SD-59",
+      "PY-59"
+    ],
+    "review": false
+  },
+  {
+    "day": 60,
+    "week": 9,
+    "folder": "day-060-kth-tree-value",
+    "titles": [
+      "Kth tree value",
+      "Ordering",
+      "Contextlib"
+    ],
+    "ids": [
+      "DSA-60",
+      "SD-60",
+      "PY-60"
+    ],
+    "review": false
+  },
+  {
+    "day": 61,
+    "week": 9,
+    "folder": "day-061-tree-diameter",
+    "titles": [
+      "Tree diameter",
+      "Backpressure",
+      "ExitStack"
+    ],
+    "ids": [
+      "DSA-61",
+      "SD-61",
+      "PY-61"
+    ],
+    "review": false
+  },
+  {
+    "day": 62,
+    "week": 9,
+    "folder": "day-062-lowest-shared-ancestor",
+    "titles": [
+      "Lowest shared ancestor",
+      "Poison messages",
+      "Exception groups"
+    ],
+    "ids": [
+      "DSA-62",
+      "SD-62",
+      "PY-62"
+    ],
+    "review": false
+  },
+  {
+    "day": 63,
+    "week": 9,
+    "folder": "day-063-week-9-review",
+    "titles": [
+      "Week 9 DSA review",
+      "Week 9 design review",
+      "Week 9 Python review"
+    ],
+    "ids": [
+      "DSA-63",
+      "SD-63",
+      "PY-63"
+    ],
+    "review": true
+  },
+  {
+    "day": 64,
+    "week": 10,
+    "folder": "day-064-k-largest-stream-values",
+    "titles": [
+      "K largest stream values",
+      "Retry budgets",
+      "Unittest subtests"
+    ],
+    "ids": [
+      "DSA-64",
+      "SD-64",
+      "PY-64"
+    ],
+    "review": false
+  },
+  {
+    "day": 65,
+    "week": 10,
+    "folder": "day-065-merge-sorted-streams",
+    "titles": [
+      "Merge sorted streams",
+      "Backoff and jitter",
+      "Test doubles"
+    ],
+    "ids": [
+      "DSA-65",
+      "SD-65",
+      "PY-65"
+    ],
+    "review": false
+  },
+  {
+    "day": 66,
+    "week": 10,
+    "folder": "day-066-running-median",
+    "titles": [
+      "Running median",
+      "Circuit breakers",
+      "Mock boundaries"
+    ],
+    "ids": [
+      "DSA-66",
+      "SD-66",
+      "PY-66"
+    ],
+    "review": false
+  },
+  {
+    "day": 67,
+    "week": 10,
+    "folder": "day-067-prefix-dictionary",
+    "titles": [
+      "Prefix dictionary",
+      "Bulkheads",
+      "Property checks"
+    ],
+    "ids": [
+      "DSA-67",
+      "SD-67",
+      "PY-67"
+    ],
+    "review": false
+  },
+  {
+    "day": 68,
+    "week": 10,
+    "folder": "day-068-tree-reconstruction",
+    "titles": [
+      "Tree reconstruction",
+      "Rate limiting",
+      "Metamorphic tests"
+    ],
+    "ids": [
+      "DSA-68",
+      "SD-68",
+      "PY-68"
+    ],
+    "review": false
+  },
+  {
+    "day": 69,
+    "week": 10,
+    "folder": "day-069-tree-codec-round-trip",
+    "titles": [
+      "Tree codec round trip",
+      "Graceful degradation",
+      "Debugging workflow"
+    ],
+    "ids": [
+      "DSA-69",
+      "SD-69",
+      "PY-69"
+    ],
+    "review": false
+  },
+  {
+    "day": 70,
+    "week": 10,
+    "folder": "day-070-week-10-review",
+    "titles": [
+      "Week 10 DSA review",
+      "Week 10 design review",
+      "Week 10 Python review"
+    ],
+    "ids": [
+      "DSA-70",
+      "SD-70",
+      "PY-70"
+    ],
+    "review": true
+  },
+  {
+    "day": 71,
+    "week": 11,
+    "folder": "day-071-reachability",
+    "titles": [
+      "Reachability",
+      "Logical ordering",
+      "Deque behavior"
+    ],
+    "ids": [
+      "DSA-71",
+      "SD-71",
+      "PY-71"
+    ],
+    "review": false
+  },
+  {
+    "day": 72,
+    "week": 11,
+    "folder": "day-072-unweighted-distance",
+    "titles": [
+      "Unweighted distance",
+      "Consensus purpose",
+      "Counter algebra"
+    ],
+    "ids": [
+      "DSA-72",
+      "SD-72",
+      "PY-72"
+    ],
+    "review": false
+  },
+  {
+    "day": 73,
+    "week": 11,
+    "folder": "day-073-island-count",
+    "titles": [
+      "Island count",
+      "Leader terms",
+      "Default dictionaries"
+    ],
+    "ids": [
+      "DSA-73",
+      "SD-73",
+      "PY-73"
+    ],
+    "review": false
+  },
+  {
+    "day": 74,
+    "week": 11,
+    "folder": "day-074-dependency-order",
+    "titles": [
+      "Dependency order",
+      "Distributed locks",
+      "Heap ordering"
+    ],
+    "ids": [
+      "DSA-74",
+      "SD-74",
+      "PY-74"
+    ],
+    "review": false
+  },
+  {
+    "day": 75,
+    "week": 11,
+    "folder": "day-075-two-color-graph",
+    "titles": [
+      "Two-color graph",
+      "Unique identifiers",
+      "Bisect contracts"
+    ],
+    "ids": [
+      "DSA-75",
+      "SD-75",
+      "PY-75"
+    ],
+    "review": false
+  },
+  {
+    "day": 76,
+    "week": 11,
+    "folder": "day-076-multi-source-spread",
+    "titles": [
+      "Multi-source spread",
+      "Cross-service transactions",
+      "Sorting keys"
+    ],
+    "ids": [
+      "DSA-76",
+      "SD-76",
+      "PY-76"
+    ],
+    "review": false
+  },
+  {
+    "day": 77,
+    "week": 11,
+    "folder": "day-077-week-11-review",
+    "titles": [
+      "Week 11 DSA review",
+      "Week 11 design review",
+      "Week 11 Python review"
+    ],
+    "ids": [
+      "DSA-77",
+      "SD-77",
+      "PY-77"
+    ],
+    "review": true
+  },
+  {
+    "day": 78,
+    "week": 12,
+    "folder": "day-078-nonnegative-shortest-paths",
+    "titles": [
+      "Nonnegative shortest paths",
+      "SLIs and SLOs",
+      "Itertools grouping"
+    ],
+    "ids": [
+      "DSA-78",
+      "SD-78",
+      "PY-78"
+    ],
+    "review": false
+  },
+  {
+    "day": 79,
+    "week": 12,
+    "folder": "day-079-negative-edge-paths",
+    "titles": [
+      "Negative edge paths",
+      "Error budgets",
+      "Iterator duplication"
+    ],
+    "ids": [
+      "DSA-79",
+      "SD-79",
+      "PY-79"
+    ],
+    "review": false
+  },
+  {
+    "day": 80,
+    "week": 12,
+    "folder": "day-080-disjoint-set-queries",
+    "titles": [
+      "Disjoint set queries",
+      "Logs metrics traces",
+      "Bounded iteration"
+    ],
+    "ids": [
+      "DSA-80",
+      "SD-80",
+      "PY-80"
+    ],
+    "review": false
+  },
+  {
+    "day": 81,
+    "week": 12,
+    "folder": "day-081-minimum-spanning-cost",
+    "titles": [
+      "Minimum spanning cost",
+      "Tail latency",
+      "Function caching"
+    ],
+    "ids": [
+      "DSA-81",
+      "SD-81",
+      "PY-81"
+    ],
+    "review": false
+  },
+  {
+    "day": 82,
+    "week": 12,
+    "folder": "day-082-strong-components",
+    "titles": [
+      "Strong components",
+      "Capacity and cost",
+      "Cache invalidation"
+    ],
+    "ids": [
+      "DSA-82",
+      "SD-82",
+      "PY-82"
+    ],
+    "review": false
+  },
+  {
+    "day": 83,
+    "week": 12,
+    "folder": "day-083-critical-edges",
+    "titles": [
+      "Critical edges",
+      "Incident review",
+      "Dispatch"
+    ],
+    "ids": [
+      "DSA-83",
+      "SD-83",
+      "PY-83"
+    ],
+    "review": false
+  },
+  {
+    "day": 84,
+    "week": 12,
+    "folder": "day-084-week-12-review",
+    "titles": [
+      "Week 12 DSA review",
+      "Week 12 design review",
+      "Week 12 Python review"
+    ],
+    "ids": [
+      "DSA-84",
+      "SD-84",
+      "PY-84"
+    ],
+    "review": true
+  },
+  {
+    "day": 85,
+    "week": 13,
+    "folder": "day-085-maximum-compatible-meetings",
+    "titles": [
+      "Maximum compatible meetings",
+      "Trust boundaries",
+      "Coroutine lifecycle"
+    ],
+    "ids": [
+      "DSA-85",
+      "SD-85",
+      "PY-85"
+    ],
+    "review": false
+  },
+  {
+    "day": 86,
+    "week": 13,
+    "folder": "day-086-reach-the-end",
+    "titles": [
+      "Reach the end",
+      "Authentication and authorization",
+      "Blocking the loop"
+    ],
+    "ids": [
+      "DSA-86",
+      "SD-86",
+      "PY-86"
+    ],
+    "review": false
+  },
+  {
+    "day": 87,
+    "week": 13,
+    "folder": "day-087-minimum-jumps",
+    "titles": [
+      "Minimum jumps",
+      "Abuse prevention",
+      "Concurrent tasks"
+    ],
+    "ids": [
+      "DSA-87",
+      "SD-87",
+      "PY-87"
+    ],
+    "review": false
+  },
+  {
+    "day": 88,
+    "week": 13,
+    "folder": "day-088-circular-fuel-route",
+    "titles": [
+      "Circular fuel route",
+      "Secret handling",
+      "Cancellation"
+    ],
+    "ids": [
+      "DSA-88",
+      "SD-88",
+      "PY-88"
+    ],
+    "review": false
+  },
+  {
+    "day": 89,
+    "week": 13,
+    "folder": "day-089-task-cooldown-length",
+    "titles": [
+      "Task cooldown length",
+      "Tenant isolation",
+      "Timeout scopes"
+    ],
+    "ids": [
+      "DSA-89",
+      "SD-89",
+      "PY-89"
+    ],
+    "review": false
+  },
+  {
+    "day": 90,
+    "week": 13,
+    "folder": "day-090-optimal-merge-cost",
+    "titles": [
+      "Optimal merge cost",
+      "Retention and audit",
+      "Async context managers"
+    ],
+    "ids": [
+      "DSA-90",
+      "SD-90",
+      "PY-90"
+    ],
+    "review": false
+  },
+  {
+    "day": 91,
+    "week": 13,
+    "folder": "day-091-week-13-review",
+    "titles": [
+      "Week 13 DSA review",
+      "Week 13 design review",
+      "Week 13 Python review"
+    ],
+    "ids": [
+      "DSA-91",
+      "SD-91",
+      "PY-91"
+    ],
+    "review": true
+  },
+  {
+    "day": 92,
+    "week": 14,
+    "folder": "day-092-climbing-steps",
+    "titles": [
+      "Climbing steps",
+      "Shortener requirements",
+      "Bounded concurrency"
+    ],
+    "ids": [
+      "DSA-92",
+      "SD-92",
+      "PY-92"
+    ],
+    "review": false
+  },
+  {
+    "day": 93,
+    "week": 14,
+    "folder": "day-093-nonadjacent-loot",
+    "titles": [
+      "Nonadjacent loot",
+      "Shortener API and data",
+      "Async queues"
+    ],
+    "ids": [
+      "DSA-93",
+      "SD-93",
+      "PY-93"
+    ],
+    "review": false
+  },
+  {
+    "day": 94,
+    "week": 14,
+    "folder": "day-094-minimum-coins",
+    "titles": [
+      "Minimum coins",
+      "Shortener capacity",
+      "Task failure"
+    ],
+    "ids": [
+      "DSA-94",
+      "SD-94",
+      "PY-94"
+    ],
+    "review": false
+  },
+  {
+    "day": 95,
+    "week": 14,
+    "folder": "day-095-coin-combinations",
+    "titles": [
+      "Coin combinations",
+      "Shortener architecture",
+      "Context variables"
+    ],
+    "ids": [
+      "DSA-95",
+      "SD-95",
+      "PY-95"
+    ],
+    "review": false
+  },
+  {
+    "day": 96,
+    "week": 14,
+    "folder": "day-096-increasing-subsequence",
+    "titles": [
+      "Increasing subsequence",
+      "Shortener deep dive",
+      "Offloading blocking work"
+    ],
+    "ids": [
+      "DSA-96",
+      "SD-96",
+      "PY-96"
+    ],
+    "review": false
+  },
+  {
+    "day": 97,
+    "week": 14,
+    "folder": "day-097-decode-digits",
+    "titles": [
+      "Decode digits",
+      "Shortener failure review",
+      "Async shutdown"
+    ],
+    "ids": [
+      "DSA-97",
+      "SD-97",
+      "PY-97"
+    ],
+    "review": false
+  },
+  {
+    "day": 98,
+    "week": 14,
+    "folder": "day-098-week-14-review",
+    "titles": [
+      "Week 14 DSA review",
+      "Week 14 design review",
+      "Week 14 Python review"
+    ],
+    "ids": [
+      "DSA-98",
+      "SD-98",
+      "PY-98"
+    ],
+    "review": true
+  },
+  {
+    "day": 99,
+    "week": 15,
+    "folder": "day-099-grid-path-count",
+    "titles": [
+      "Grid path count",
+      "Feed requirements",
+      "Thread ownership"
+    ],
+    "ids": [
+      "DSA-99",
+      "SD-99",
+      "PY-99"
+    ],
+    "review": false
+  },
+  {
+    "day": 100,
+    "week": 15,
+    "folder": "day-100-minimum-grid-path",
+    "titles": [
+      "Minimum grid path",
+      "Feed API and data",
+      "Condition signaling"
+    ],
+    "ids": [
+      "DSA-100",
+      "SD-100",
+      "PY-100"
+    ],
+    "review": false
+  },
+  {
+    "day": 101,
+    "week": 15,
+    "folder": "day-101-common-subsequence-length",
+    "titles": [
+      "Common subsequence length",
+      "Feed capacity",
+      "Thread pools"
+    ],
+    "ids": [
+      "DSA-101",
+      "SD-101",
+      "PY-101"
+    ],
+    "review": false
+  },
+  {
+    "day": 102,
+    "week": 15,
+    "folder": "day-102-edit-distance",
+    "titles": [
+      "Edit distance",
+      "Feed architecture",
+      "Process pools"
+    ],
+    "ids": [
+      "DSA-102",
+      "SD-102",
+      "PY-102"
+    ],
+    "review": false
+  },
+  {
+    "day": 103,
+    "week": 15,
+    "folder": "day-103-longest-palindrome-length",
+    "titles": [
+      "Longest palindrome length",
+      "Feed deep dive",
+      "Serialization cost"
+    ],
+    "ids": [
+      "DSA-103",
+      "SD-103",
+      "PY-103"
+    ],
+    "review": false
+  },
+  {
+    "day": 104,
+    "week": 15,
+    "folder": "day-104-word-segmentation",
+    "titles": [
+      "Word segmentation",
+      "Feed failure review",
+      "GIL boundaries"
+    ],
+    "ids": [
+      "DSA-104",
+      "SD-104",
+      "PY-104"
+    ],
+    "review": false
+  },
+  {
+    "day": 105,
+    "week": 15,
+    "folder": "day-105-week-15-review",
+    "titles": [
+      "Week 15 DSA review",
+      "Week 15 design review",
+      "Week 15 Python review"
+    ],
+    "ids": [
+      "DSA-105",
+      "SD-105",
+      "PY-105"
+    ],
+    "review": true
+  },
+  {
+    "day": 106,
+    "week": 16,
+    "folder": "day-106-zero-one-knapsack",
+    "titles": [
+      "Zero-one knapsack",
+      "Chat requirements",
+      "Measurement design"
+    ],
+    "ids": [
+      "DSA-106",
+      "SD-106",
+      "PY-106"
+    ],
+    "review": false
+  },
+  {
+    "day": 107,
+    "week": 16,
+    "folder": "day-107-equal-partition",
+    "titles": [
+      "Equal partition",
+      "Chat API and data",
+      "CPU profiles"
+    ],
+    "ids": [
+      "DSA-107",
+      "SD-107",
+      "PY-107"
+    ],
+    "review": false
+  },
+  {
+    "day": 108,
+    "week": 16,
+    "folder": "day-108-signed-target-count",
+    "titles": [
+      "Signed target count",
+      "Chat connections",
+      "Allocation tracing"
+    ],
+    "ids": [
+      "DSA-108",
+      "SD-108",
+      "PY-108"
+    ],
+    "review": false
+  },
+  {
+    "day": 109,
+    "week": 16,
+    "folder": "day-109-weighted-scheduling",
+    "titles": [
+      "Weighted scheduling",
+      "Chat architecture",
+      "Reference cycles"
+    ],
+    "ids": [
+      "DSA-109",
+      "SD-109",
+      "PY-109"
+    ],
+    "review": false
+  },
+  {
+    "day": 110,
+    "week": 16,
+    "folder": "day-110-matrix-chain-cost",
+    "titles": [
+      "Matrix chain cost",
+      "Chat deep dive",
+      "Weak references"
+    ],
+    "ids": [
+      "DSA-110",
+      "SD-110",
+      "PY-110"
+    ],
+    "review": false
+  },
+  {
+    "day": 111,
+    "week": 16,
+    "folder": "day-111-visit-every-city",
+    "titles": [
+      "Visit every city",
+      "Chat failure review",
+      "Optimization memo"
+    ],
+    "ids": [
+      "DSA-111",
+      "SD-111",
+      "PY-111"
+    ],
+    "review": false
+  },
+  {
+    "day": 112,
+    "week": 16,
+    "folder": "day-112-week-16-review",
+    "titles": [
+      "Week 16 DSA review",
+      "Week 16 design review",
+      "Week 16 Python review"
+    ],
+    "ids": [
+      "DSA-112",
+      "SD-112",
+      "PY-112"
+    ],
+    "review": true
+  },
+  {
+    "day": 113,
+    "week": 17,
+    "folder": "day-113-single-unmatched-value",
+    "titles": [
+      "Single unmatched value",
+      "Upload requirements",
+      "Path handling"
+    ],
+    "ids": [
+      "DSA-113",
+      "SD-113",
+      "PY-113"
+    ],
+    "review": false
+  },
+  {
+    "day": 114,
+    "week": 17,
+    "folder": "day-114-set-bit-counts",
+    "titles": [
+      "Set bit counts",
+      "Upload API and metadata",
+      "Unicode normalization"
+    ],
+    "ids": [
+      "DSA-114",
+      "SD-114",
+      "PY-114"
+    ],
+    "review": false
+  },
+  {
+    "day": 115,
+    "week": 17,
+    "folder": "day-115-modular-power",
+    "titles": [
+      "Modular power",
+      "Upload capacity",
+      "Binary interfaces"
+    ],
+    "ids": [
+      "DSA-115",
+      "SD-115",
+      "PY-115"
+    ],
+    "review": false
+  },
+  {
+    "day": 116,
+    "week": 17,
+    "folder": "day-116-primes-below-a-bound",
+    "titles": [
+      "Primes below a bound",
+      "Upload architecture",
+      "JSON boundaries"
+    ],
+    "ids": [
+      "DSA-116",
+      "SD-116",
+      "PY-116"
+    ],
+    "review": false
+  },
+  {
+    "day": 117,
+    "week": 17,
+    "folder": "day-117-mutable-range-sums",
+    "titles": [
+      "Mutable range sums",
+      "Upload deep dive",
+      "Decimal arithmetic"
+    ],
+    "ids": [
+      "DSA-117",
+      "SD-117",
+      "PY-117"
+    ],
+    "review": false
+  },
+  {
+    "day": 118,
+    "week": 17,
+    "folder": "day-118-mutable-range-minima",
+    "titles": [
+      "Mutable range minima",
+      "Upload failure review",
+      "Timezone handling"
+    ],
+    "ids": [
+      "DSA-118",
+      "SD-118",
+      "PY-118"
+    ],
+    "review": false
+  },
+  {
+    "day": 119,
+    "week": 17,
+    "folder": "day-119-week-17-review",
+    "titles": [
+      "Week 17 DSA review",
+      "Week 17 design review",
+      "Week 17 Python review"
+    ],
+    "ids": [
+      "DSA-119",
+      "SD-119",
+      "PY-119"
+    ],
+    "review": true
+  },
+  {
+    "day": 120,
+    "week": 18,
+    "folder": "day-120-normalize-text-units",
+    "titles": [
+      "Normalize text units",
+      "Search requirements",
+      "SQLite transactions"
+    ],
+    "ids": [
+      "DSA-120",
+      "SD-120",
+      "PY-120"
+    ],
+    "review": false
+  },
+  {
+    "day": 121,
+    "week": 18,
+    "folder": "day-121-prefix-border-lengths",
+    "titles": [
+      "Prefix border lengths",
+      "Search indexing",
+      "CSV streaming"
+    ],
+    "ids": [
+      "DSA-121",
+      "SD-121",
+      "PY-121"
+    ],
+    "review": false
+  },
+  {
+    "day": 122,
+    "week": 18,
+    "folder": "day-122-find-all-pattern-matches",
+    "titles": [
+      "Find all pattern matches",
+      "Search query path",
+      "Atomic replacement"
+    ],
+    "ids": [
+      "DSA-122",
+      "SD-122",
+      "PY-122"
+    ],
+    "review": false
+  },
+  {
+    "day": 123,
+    "week": 18,
+    "folder": "day-123-rolling-hash-matching",
+    "titles": [
+      "Rolling hash matching",
+      "Notification requirements",
+      "Subprocess contracts"
+    ],
+    "ids": [
+      "DSA-123",
+      "SD-123",
+      "PY-123"
+    ],
+    "review": false
+  },
+  {
+    "day": 124,
+    "week": 18,
+    "folder": "day-124-smallest-covering-window",
+    "titles": [
+      "Smallest covering window",
+      "Notification architecture",
+      "Untrusted serialization"
+    ],
+    "ids": [
+      "DSA-124",
+      "SD-124",
+      "PY-124"
+    ],
+    "review": false
+  },
+  {
+    "day": 125,
+    "week": 18,
+    "folder": "day-125-dictionary-wildcard-search",
+    "titles": [
+      "Dictionary wildcard search",
+      "Notification failure review",
+      "Resource limits"
+    ],
+    "ids": [
+      "DSA-125",
+      "SD-125",
+      "PY-125"
+    ],
+    "review": false
+  },
+  {
+    "day": 126,
+    "week": 18,
+    "folder": "day-126-week-18-review",
+    "titles": [
+      "Week 18 DSA review",
+      "Week 18 design review",
+      "Week 18 Python review"
+    ],
+    "ids": [
+      "DSA-126",
+      "SD-126",
+      "PY-126"
+    ],
+    "review": true
+  },
+  {
+    "day": 127,
+    "week": 19,
+    "folder": "day-127-longest-dag-path",
+    "titles": [
+      "Longest DAG path",
+      "Reservation invariants",
+      "Import execution"
+    ],
+    "ids": [
+      "DSA-127",
+      "SD-127",
+      "PY-127"
+    ],
+    "review": false
+  },
+  {
+    "day": 128,
+    "week": 19,
+    "folder": "day-128-minimum-effort-grid-route",
+    "titles": [
+      "Minimum effort grid route",
+      "Reservation data",
+      "Circular imports"
+    ],
+    "ids": [
+      "DSA-128",
+      "SD-128",
+      "PY-128"
+    ],
+    "review": false
+  },
+  {
+    "day": 129,
+    "week": 19,
+    "folder": "day-129-redundant-undirected-edge",
+    "titles": [
+      "Redundant undirected edge",
+      "Payment idempotency",
+      "Entry points"
+    ],
+    "ids": [
+      "DSA-129",
+      "SD-129",
+      "PY-129"
+    ],
+    "review": false
+  },
+  {
+    "day": 130,
+    "week": 19,
+    "folder": "day-130-subtree-sizes",
+    "titles": [
+      "Subtree sizes",
+      "Transactional outbox",
+      "Package layout"
+    ],
+    "ids": [
+      "DSA-130",
+      "SD-130",
+      "PY-130"
+    ],
+    "review": false
+  },
+  {
+    "day": 131,
+    "week": 19,
+    "folder": "day-131-tree-distance-sums",
+    "titles": [
+      "Tree distance sums",
+      "Compensation workflow",
+      "Environment isolation"
+    ],
+    "ids": [
+      "DSA-131",
+      "SD-131",
+      "PY-131"
+    ],
+    "review": false
+  },
+  {
+    "day": 132,
+    "week": 19,
+    "folder": "day-132-bipartite-matching",
+    "titles": [
+      "Bipartite matching",
+      "Reconciliation",
+      "Dependency policy"
+    ],
+    "ids": [
+      "DSA-132",
+      "SD-132",
+      "PY-132"
+    ],
+    "review": false
+  },
+  {
+    "day": 133,
+    "week": 19,
+    "folder": "day-133-week-19-review",
+    "titles": [
+      "Week 19 DSA review",
+      "Week 19 design review",
+      "Week 19 Python review"
+    ],
+    "ids": [
+      "DSA-133",
+      "SD-133",
+      "PY-133"
+    ],
+    "review": true
+  },
+  {
+    "day": 134,
+    "week": 20,
+    "folder": "day-134-time-indexed-values",
+    "titles": [
+      "Time-indexed values",
+      "Analytics requirements",
+      "Structured logs"
+    ],
+    "ids": [
+      "DSA-134",
+      "SD-134",
+      "PY-134"
+    ],
+    "review": false
+  },
+  {
+    "day": 135,
+    "week": 20,
+    "folder": "day-135-frequency-stack",
+    "titles": [
+      "Frequency stack",
+      "Event time",
+      "Configuration"
+    ],
+    "ids": [
+      "DSA-135",
+      "SD-135",
+      "PY-135"
+    ],
+    "review": false
+  },
+  {
+    "day": 136,
+    "week": 20,
+    "folder": "day-136-least-frequently-used-cache",
+    "titles": [
+      "Least frequently used cache",
+      "Aggregation windows",
+      "Retry wrapper"
+    ],
+    "ids": [
+      "DSA-136",
+      "SD-136",
+      "PY-136"
+    ],
+    "review": false
+  },
+  {
+    "day": 137,
+    "week": 20,
+    "folder": "day-137-order-statistic-stream",
+    "titles": [
+      "Order statistic stream",
+      "Partitioned aggregation",
+      "Idempotent handler"
+    ],
+    "ids": [
+      "DSA-137",
+      "SD-137",
+      "PY-137"
+    ],
+    "review": false
+  },
+  {
+    "day": 138,
+    "week": 20,
+    "folder": "day-138-expiring-counter",
+    "titles": [
+      "Expiring counter",
+      "Approximate answers",
+      "Shutdown hooks"
+    ],
+    "ids": [
+      "DSA-138",
+      "SD-138",
+      "PY-138"
+    ],
+    "review": false
+  },
+  {
+    "day": 139,
+    "week": 20,
+    "folder": "day-139-autocomplete-ranking",
+    "titles": [
+      "Autocomplete ranking",
+      "Replay and rebuild",
+      "Error taxonomy"
+    ],
+    "ids": [
+      "DSA-139",
+      "SD-139",
+      "PY-139"
+    ],
+    "review": false
+  },
+  {
+    "day": 140,
+    "week": 20,
+    "folder": "day-140-week-20-review",
+    "titles": [
+      "Week 20 DSA review",
+      "Week 20 design review",
+      "Week 20 Python review"
+    ],
+    "ids": [
+      "DSA-140",
+      "SD-140",
+      "PY-140"
+    ],
+    "review": true
+  },
+  {
+    "day": 141,
+    "week": 21,
+    "folder": "day-141-product-except-self",
+    "titles": [
+      "Product except self",
+      "Regional topology",
+      "Bytecode inspection"
+    ],
+    "ids": [
+      "DSA-141",
+      "SD-141",
+      "PY-141"
+    ],
+    "review": false
+  },
+  {
+    "day": 142,
+    "week": 21,
+    "folder": "day-142-longest-consecutive-run",
+    "titles": [
+      "Longest consecutive run",
+      "Recovery objectives",
+      "Object sizes"
+    ],
+    "ids": [
+      "DSA-142",
+      "SD-142",
+      "PY-142"
+    ],
+    "review": false
+  },
+  {
+    "day": 143,
+    "week": 21,
+    "folder": "day-143-trapped-rainwater",
+    "titles": [
+      "Trapped rainwater",
+      "Conflict resolution",
+      "Name resolution"
+    ],
+    "ids": [
+      "DSA-143",
+      "SD-143",
+      "PY-143"
+    ],
+    "review": false
+  },
+  {
+    "day": 144,
+    "week": 21,
+    "folder": "day-144-top-frequent-words",
+    "titles": [
+      "Top frequent words",
+      "Data placement",
+      "Special method lookup"
+    ],
+    "ids": [
+      "DSA-144",
+      "SD-144",
+      "PY-144"
+    ],
+    "review": false
+  },
+  {
+    "day": 145,
+    "week": 21,
+    "folder": "day-145-rotated-minimum-with-duplicates",
+    "titles": [
+      "Rotated minimum with duplicates",
+      "Disaster recovery drill",
+      "Version compatibility"
+    ],
+    "ids": [
+      "DSA-145",
+      "SD-145",
+      "PY-145"
+    ],
+    "review": false
+  },
+  {
+    "day": 146,
+    "week": 21,
+    "folder": "day-146-find-duplicate-without-mutation",
+    "titles": [
+      "Find duplicate without mutation",
+      "Migration strategy",
+      "Implementation portability"
+    ],
+    "ids": [
+      "DSA-146",
+      "SD-146",
+      "PY-146"
+    ],
+    "review": false
+  },
+  {
+    "day": 147,
+    "week": 21,
+    "folder": "day-147-week-21-review",
+    "titles": [
+      "Week 21 DSA review",
+      "Week 21 design review",
+      "Week 21 Python review"
+    ],
+    "ids": [
+      "DSA-147",
+      "SD-147",
+      "PY-147"
+    ],
+    "review": true
+  },
+  {
+    "day": 148,
+    "week": 22,
+    "folder": "day-148-interleaved-strings",
+    "titles": [
+      "Interleaved strings",
+      "Responsibilities",
+      "API simplification"
+    ],
+    "ids": [
+      "DSA-148",
+      "SD-148",
+      "PY-148"
+    ],
+    "review": false
+  },
+  {
+    "day": 149,
+    "week": 22,
+    "folder": "day-149-course-completion-time",
+    "titles": [
+      "Course completion time",
+      "State machines",
+      "Hidden state"
+    ],
+    "ids": [
+      "DSA-149",
+      "SD-149",
+      "PY-149"
+    ],
+    "review": false
+  },
+  {
+    "day": 150,
+    "week": 22,
+    "folder": "day-150-maximum-path-sum",
+    "titles": [
+      "Maximum path sum",
+      "Dependency inversion",
+      "Mutable ownership review"
+    ],
+    "ids": [
+      "DSA-150",
+      "SD-150",
+      "PY-150"
+    ],
+    "review": false
+  },
+  {
+    "day": 151,
+    "week": 22,
+    "folder": "day-151-smallest-missing-positive",
+    "titles": [
+      "Smallest missing positive",
+      "Concurrency contracts",
+      "Concurrency review"
+    ],
+    "ids": [
+      "DSA-151",
+      "SD-151",
+      "PY-151"
+    ],
+    "review": false
+  },
+  {
+    "day": 152,
+    "week": 22,
+    "folder": "day-152-shortest-subarray-with-negatives",
+    "titles": [
+      "Shortest subarray with negatives",
+      "Extensibility",
+      "Typing review"
+    ],
+    "ids": [
+      "DSA-152",
+      "SD-152",
+      "PY-152"
+    ],
+    "review": false
+  },
+  {
+    "day": 153,
+    "week": 22,
+    "folder": "day-153-minimum-interval-for-queries",
+    "titles": [
+      "Minimum interval for queries",
+      "Design review",
+      "Performance review"
+    ],
+    "ids": [
+      "DSA-153",
+      "SD-153",
+      "PY-153"
+    ],
+    "review": false
+  },
+  {
+    "day": 154,
+    "week": 22,
+    "folder": "day-154-week-22-review",
+    "titles": [
+      "Week 22 DSA review",
+      "Week 22 design review",
+      "Week 22 Python review"
+    ],
+    "ids": [
+      "DSA-154",
+      "SD-154",
+      "PY-154"
+    ],
+    "review": true
+  },
+  {
+    "day": 155,
+    "week": 23,
+    "folder": "day-155-mock-arrays",
+    "titles": [
+      "Mock arrays",
+      "Mock requirements round",
+      "Semantics drill"
+    ],
+    "ids": [
+      "DSA-155",
+      "SD-155",
+      "PY-155"
+    ],
+    "review": false
+  },
+  {
+    "day": 156,
+    "week": 23,
+    "folder": "day-156-mock-search",
+    "titles": [
+      "Mock search",
+      "Mock architecture round",
+      "Protocol drill"
+    ],
+    "ids": [
+      "DSA-156",
+      "SD-156",
+      "PY-156"
+    ],
+    "review": false
+  },
+  {
+    "day": 157,
+    "week": 23,
+    "folder": "day-157-mock-graph",
+    "titles": [
+      "Mock graph",
+      "Mock deep dive",
+      "Typing drill"
+    ],
+    "ids": [
+      "DSA-157",
+      "SD-157",
+      "PY-157"
+    ],
+    "review": false
+  },
+  {
+    "day": 158,
+    "week": 23,
+    "folder": "day-158-mock-dp",
+    "titles": [
+      "Mock DP",
+      "Mock alternative",
+      "Concurrency drill"
+    ],
+    "ids": [
+      "DSA-158",
+      "SD-158",
+      "PY-158"
+    ],
+    "review": false
+  },
+  {
+    "day": 159,
+    "week": 23,
+    "folder": "day-159-mock-heap",
+    "titles": [
+      "Mock heap",
+      "Critique round",
+      "Debugging drill"
+    ],
+    "ids": [
+      "DSA-159",
+      "SD-159",
+      "PY-159"
+    ],
+    "review": false
+  },
+  {
+    "day": 160,
+    "week": 23,
+    "folder": "day-160-mock-backtracking",
+    "titles": [
+      "Mock backtracking",
+      "Repair round",
+      "Review drill"
+    ],
+    "ids": [
+      "DSA-160",
+      "SD-160",
+      "PY-160"
+    ],
+    "review": false
+  },
+  {
+    "day": 161,
+    "week": 23,
+    "folder": "day-161-week-23-review",
+    "titles": [
+      "Week 23 DSA review",
+      "Week 23 design review",
+      "Week 23 Python review"
+    ],
+    "ids": [
+      "DSA-161",
+      "SD-161",
+      "PY-161"
+    ],
+    "review": true
+  },
+  {
+    "day": 162,
+    "week": 24,
+    "folder": "day-162-routing-capstone",
+    "titles": [
+      "Routing capstone",
+      "Capstone brief",
+      "Capstone interface"
+    ],
+    "ids": [
+      "DSA-162",
+      "SD-162",
+      "PY-162"
+    ],
+    "review": false
+  },
+  {
+    "day": 163,
+    "week": 24,
+    "folder": "day-163-scheduling-capstone",
+    "titles": [
+      "Scheduling capstone",
+      "Capstone architecture",
+      "Capstone generator"
+    ],
+    "ids": [
+      "DSA-163",
+      "SD-163",
+      "PY-163"
+    ],
+    "review": false
+  },
+  {
+    "day": 164,
+    "week": 24,
+    "folder": "day-164-search-capstone",
+    "titles": [
+      "Search capstone",
+      "Capstone consistency",
+      "Capstone execution"
+    ],
+    "ids": [
+      "DSA-164",
+      "SD-164",
+      "PY-164"
+    ],
+    "review": false
+  },
+  {
+    "day": 165,
+    "week": 24,
+    "folder": "day-165-range-capstone",
+    "titles": [
+      "Range capstone",
+      "Capstone resilience",
+      "Capstone tests"
+    ],
+    "ids": [
+      "DSA-165",
+      "SD-165",
+      "PY-165"
+    ],
+    "review": false
+  },
+  {
+    "day": 166,
+    "week": 24,
+    "folder": "day-166-counterexample-capstone",
+    "titles": [
+      "Counterexample capstone",
+      "Capstone tradeoffs",
+      "Capstone profile"
+    ],
+    "ids": [
+      "DSA-166",
+      "SD-166",
+      "PY-166"
+    ],
+    "review": false
+  },
+  {
+    "day": 167,
+    "week": 24,
+    "folder": "day-167-final-independent-problem",
+    "titles": [
+      "Final independent problem",
+      "Final defense",
+      "Final explanation"
+    ],
+    "ids": [
+      "DSA-167",
+      "SD-167",
+      "PY-167"
+    ],
+    "review": false
+  },
+  {
+    "day": 168,
+    "week": 24,
+    "folder": "day-168-week-24-review",
+    "titles": [
+      "Week 24 DSA review",
+      "Week 24 design review",
+      "Week 24 Python review"
+    ],
+    "ids": [
+      "DSA-168",
+      "SD-168",
+      "PY-168"
+    ],
+    "review": true
+  }
+]

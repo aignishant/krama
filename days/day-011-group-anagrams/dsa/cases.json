@@ -1,0 +1,25 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "words": [
+        "eat",
+        "tea",
+        "tan",
+        "ate",
+        "nat"
+      ]
+    },
+    "expected": [
+      [
+        "ate",
+        "eat",
+        "tea"
+      ],
+      [
+        "nat",
+        "tan"
+      ]
+    ]
+  }
+]

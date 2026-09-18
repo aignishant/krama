@@ -1,0 +1,25 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "words": [
+        "car",
+        "cat",
+        "dog",
+        "car"
+      ],
+      "prefixes": [
+        "ca",
+        "c",
+        "z",
+        ""
+      ]
+    },
+    "expected": [
+      2,
+      2,
+      0,
+      3
+    ]
+  }
+]

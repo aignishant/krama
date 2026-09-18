@@ -1,0 +1,31 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "ops": [
+        [
+          "push",
+          1
+        ],
+        [
+          "push",
+          2
+        ],
+        [
+          "pop"
+        ],
+        [
+          "push",
+          3
+        ],
+        [
+          "pop"
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      2
+    ]
+  }
+]

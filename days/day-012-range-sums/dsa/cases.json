@@ -1,0 +1,27 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "nums": [
+        2,
+        -1,
+        4,
+        3
+      ],
+      "queries": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "expected": [
+      5,
+      6
+    ]
+  }
+]

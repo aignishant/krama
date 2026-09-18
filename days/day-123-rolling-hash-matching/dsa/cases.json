@@ -1,0 +1,10 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "text": "abracadabra",
+      "pattern": "cada"
+    },
+    "expected": 4
+  }
+]

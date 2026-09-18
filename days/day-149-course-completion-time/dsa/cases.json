@@ -1,0 +1,23 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "durations": [
+        3,
+        2,
+        5
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": 8
+  }
+]

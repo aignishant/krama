@@ -1,0 +1,9 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "text": "226"
+    },
+    "expected": 3
+  }
+]

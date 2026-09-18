@@ -1,0 +1,28 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "left": 3,
+      "right": 3,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "expected": 3
+  }
+]

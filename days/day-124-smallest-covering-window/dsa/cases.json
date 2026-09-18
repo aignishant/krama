@@ -1,0 +1,10 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "text": "ADOBECODEBANC",
+      "pattern": "ABC"
+    },
+    "expected": "BANC"
+  }
+]

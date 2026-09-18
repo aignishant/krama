@@ -1,0 +1,11 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "base": 3,
+      "exp": 13,
+      "mod": 17
+    },
+    "expected": 12
+  }
+]

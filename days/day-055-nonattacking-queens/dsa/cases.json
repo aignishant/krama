@@ -1,0 +1,9 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "n": 4
+    },
+    "expected": 2
+  }
+]

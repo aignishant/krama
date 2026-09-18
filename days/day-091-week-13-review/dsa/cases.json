@@ -1,0 +1,17 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "tasks": [
+        "A",
+        "A",
+        "A",
+        "B",
+        "B",
+        "B"
+      ],
+      "n": 2
+    },
+    "expected": 8
+  }
+]

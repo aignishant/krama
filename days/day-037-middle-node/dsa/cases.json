@@ -1,0 +1,14 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "expected": 3
+  }
+]

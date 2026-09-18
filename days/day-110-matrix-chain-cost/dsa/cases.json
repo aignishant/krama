@@ -1,0 +1,14 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "dims": [
+        10,
+        30,
+        5,
+        60
+      ]
+    },
+    "expected": 4500
+  }
+]

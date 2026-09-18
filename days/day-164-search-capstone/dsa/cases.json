@@ -1,0 +1,28 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "board": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "c",
+          "d"
+        ]
+      ],
+      "words": [
+        "ab",
+        "abd",
+        "ac",
+        "aba"
+      ]
+    },
+    "expected": [
+      "ab",
+      "abd",
+      "ac"
+    ]
+  }
+]

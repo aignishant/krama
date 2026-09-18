@@ -1,0 +1,19 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "text": "aab"
+    },
+    "expected": [
+      [
+        "a",
+        "a",
+        "b"
+      ],
+      [
+        "aa",
+        "b"
+      ]
+    ]
+  }
+]

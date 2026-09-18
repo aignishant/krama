@@ -1,0 +1,31 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "entries": [
+        [
+          "cat",
+          4
+        ],
+        [
+          "car",
+          4
+        ],
+        [
+          "cart",
+          2
+        ],
+        [
+          "dog",
+          9
+        ]
+      ],
+      "prefix": "ca",
+      "k": 2
+    },
+    "expected": [
+      "car",
+      "cat"
+    ]
+  }
+]

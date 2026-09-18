@@ -1,0 +1,26 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "envelopes": [
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": 3
+  }
+]

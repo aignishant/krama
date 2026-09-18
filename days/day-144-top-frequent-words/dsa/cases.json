@@ -1,0 +1,20 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "words": [
+        "i",
+        "love",
+        "code",
+        "i",
+        "love",
+        "python"
+      ],
+      "k": 2
+    },
+    "expected": [
+      "i",
+      "love"
+    ]
+  }
+]

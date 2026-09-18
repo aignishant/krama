@@ -1,0 +1,13 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "text": "A-b 2!"
+    },
+    "expected": [
+      "a",
+      "b",
+      "2"
+    ]
+  }
+]

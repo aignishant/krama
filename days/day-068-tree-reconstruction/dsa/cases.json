@@ -1,0 +1,42 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "pre": [
+        3,
+        9,
+        20,
+        15,
+        7
+      ],
+      "ino": [
+        9,
+        3,
+        15,
+        20,
+        7
+      ]
+    },
+    "expected": [
+      3,
+      [
+        9,
+        null,
+        null
+      ],
+      [
+        20,
+        [
+          15,
+          null,
+          null
+        ],
+        [
+          7,
+          null,
+          null
+        ]
+      ]
+    ]
+  }
+]

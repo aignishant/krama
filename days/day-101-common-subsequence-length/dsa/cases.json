@@ -1,0 +1,10 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "a": "abcde",
+      "b": "ace"
+    },
+    "expected": 3
+  }
+]

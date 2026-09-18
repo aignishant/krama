@@ -1,0 +1,31 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "tree": [
+        3,
+        [
+          5,
+          [
+            6,
+            null,
+            null
+          ],
+          [
+            2,
+            null,
+            null
+          ]
+        ],
+        [
+          1,
+          null,
+          null
+        ]
+      ],
+      "p": 6,
+      "q": 2
+    },
+    "expected": 5
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "words": [
+        "bad",
+        "dad",
+        "mad"
+      ],
+      "queries": [
+        "pad",
+        "bad",
+        ".ad",
+        "b.."
+      ]
+    },
+    "expected": [
+      false,
+      true,
+      true,
+      true
+    ]
+  }
+]

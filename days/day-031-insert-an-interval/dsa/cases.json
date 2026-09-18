@@ -1,0 +1,31 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "intervals": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "new": [
+        2,
+        5
+      ]
+    },
+    "expected": [
+      [
+        1,
+        5
+      ],
+      [
+        6,
+        9
+      ]
+    ]
+  }
+]

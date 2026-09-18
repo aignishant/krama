@@ -1,0 +1,33 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "nums": [
+        1,
+        2,
+        3
+      ],
+      "ops": [
+        [
+          "sum",
+          0,
+          2
+        ],
+        [
+          "add",
+          1,
+          4
+        ],
+        [
+          "sum",
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": [
+      6,
+      9
+    ]
+  }
+]

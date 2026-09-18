@@ -1,0 +1,17 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "nums": [
+        2,
+        3,
+        1,
+        2,
+        4,
+        3
+      ],
+      "target": 7
+    },
+    "expected": 2
+  }
+]

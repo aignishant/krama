@@ -1,0 +1,16 @@
+[project]
+name = "Krama"
+slug = "krama"
+topic = "DSA, system design and advanced Python"
+plan_version = "v1.0.0"
+driver = "python granth.py"
+
+[paths]
+plan = "docs/00_MASTER_PLAN.md"
+docs = "docs"
+days = "days"
+
+[toolchain]
+lint = ""
+format_check = ""
+test = "python course.py check"

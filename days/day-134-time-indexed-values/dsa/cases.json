@@ -1,0 +1,35 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "ops": [
+        [
+          "set",
+          "a",
+          "x",
+          1
+        ],
+        [
+          "set",
+          "a",
+          "y",
+          3
+        ],
+        [
+          "get",
+          "a",
+          2
+        ],
+        [
+          "get",
+          "a",
+          0
+        ]
+      ]
+    },
+    "expected": [
+      "x",
+      null
+    ]
+  }
+]

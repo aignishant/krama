@@ -1,0 +1,11 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "a": "aabcc",
+      "b": "dbbca",
+      "c": "aadbbcbcac"
+    },
+    "expected": true
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "specified example",
+    "input": {
+      "board": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "word": "ABD"
+    },
+    "expected": true
+  }
+]
