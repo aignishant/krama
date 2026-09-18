@@ -4,7 +4,7 @@ phase: 23
 title: "Mock DP"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-158, SD-158, PY-158; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Mock DP](dsa/README.md) |
-| System design | 30 minutes | [Mock alternative](sd/README.md) |
-| Python | 15 minutes | [Concurrency drill](lang/README.md) |
+| DSA | 60 minutes | [Mock DP](dsa_mock-dp/README.md) |
+| System design | 30 minutes | [Mock alternative](sd_mock-alternative/README.md) |
+| Python | 15 minutes | [Concurrency drill](lang_concurrency-drill/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

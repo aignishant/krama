@@ -4,7 +4,7 @@ phase: 24
 title: "Final independent problem"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-167, SD-167, PY-167; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Final independent problem](dsa/README.md) |
-| System design | 30 minutes | [Final defense](sd/README.md) |
-| Python | 15 minutes | [Final explanation](lang/README.md) |
+| DSA | 60 minutes | [Final independent problem](dsa_final-independent-problem/README.md) |
+| System design | 30 minutes | [Final defense](sd_final-defense/README.md) |
+| Python | 15 minutes | [Final explanation](lang_final-explanation/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

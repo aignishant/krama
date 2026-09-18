@@ -4,7 +4,7 @@ phase: 13
 title: "Reach the end"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-86, SD-86, PY-86; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Reach the end](dsa/README.md) |
-| System design | 30 minutes | [Authentication and authorization](sd/README.md) |
-| Python | 15 minutes | [Blocking the loop](lang/README.md) |
+| DSA | 60 minutes | [Reach the end](dsa_reach-the-end/README.md) |
+| System design | 30 minutes | [Authentication and authorization](sd_authentication-and-authorization/README.md) |
+| Python | 15 minutes | [Blocking the loop](lang_blocking-the-loop/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

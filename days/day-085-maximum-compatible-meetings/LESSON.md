@@ -4,7 +4,7 @@ phase: 13
 title: "Maximum compatible meetings"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-85, SD-85, PY-85; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Maximum compatible meetings](dsa/README.md) |
-| System design | 30 minutes | [Trust boundaries](sd/README.md) |
-| Python | 15 minutes | [Coroutine lifecycle](lang/README.md) |
+| DSA | 60 minutes | [Maximum compatible meetings](dsa_maximum-compatible-meetings/README.md) |
+| System design | 30 minutes | [Trust boundaries](sd_trust-boundaries/README.md) |
+| Python | 15 minutes | [Coroutine lifecycle](lang_coroutine-lifecycle/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

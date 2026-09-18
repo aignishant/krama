@@ -4,7 +4,7 @@ phase: 17
 title: "Modular power"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-115, SD-115, PY-115; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Modular power](dsa/README.md) |
-| System design | 30 minutes | [Upload capacity](sd/README.md) |
-| Python | 15 minutes | [Binary interfaces](lang/README.md) |
+| DSA | 60 minutes | [Modular power](dsa_modular-power/README.md) |
+| System design | 30 minutes | [Upload capacity](sd_upload-capacity/README.md) |
+| Python | 15 minutes | [Binary interfaces](lang_binary-interfaces/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

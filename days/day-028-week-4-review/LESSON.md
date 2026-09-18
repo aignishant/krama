@@ -4,7 +4,7 @@ phase: 4
 title: "Week 4 DSA review"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-28, SD-28, PY-28; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Week 4 DSA review](dsa/README.md) |
-| System design | 30 minutes | [Week 4 design review](sd/README.md) |
-| Python | 15 minutes | [Week 4 Python review](lang/README.md) |
+| DSA | 60 minutes | [Week 4 DSA review](dsa_week-4-dsa-review/README.md) |
+| System design | 30 minutes | [Week 4 design review](sd_week-4-design-review/README.md) |
+| Python | 15 minutes | [Week 4 Python review](lang_week-4-python-review/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

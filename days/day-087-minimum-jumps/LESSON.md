@@ -4,7 +4,7 @@ phase: 13
 title: "Minimum jumps"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-87, SD-87, PY-87; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Minimum jumps](dsa/README.md) |
-| System design | 30 minutes | [Abuse prevention](sd/README.md) |
-| Python | 15 minutes | [Concurrent tasks](lang/README.md) |
+| DSA | 60 minutes | [Minimum jumps](dsa_minimum-jumps/README.md) |
+| System design | 30 minutes | [Abuse prevention](sd_abuse-prevention/README.md) |
+| Python | 15 minutes | [Concurrent tasks](lang_concurrent-tasks/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

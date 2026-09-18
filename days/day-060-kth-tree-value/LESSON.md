@@ -4,7 +4,7 @@ phase: 9
 title: "Kth tree value"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-60, SD-60, PY-60; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Kth tree value](dsa/README.md) |
-| System design | 30 minutes | [Ordering](sd/README.md) |
-| Python | 15 minutes | [Contextlib](lang/README.md) |
+| DSA | 60 minutes | [Kth tree value](dsa_kth-tree-value/README.md) |
+| System design | 30 minutes | [Ordering](sd_ordering/README.md) |
+| Python | 15 minutes | [Contextlib](lang_contextlib/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

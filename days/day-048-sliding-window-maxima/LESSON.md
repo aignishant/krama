@@ -4,7 +4,7 @@ phase: 7
 title: "Sliding window maxima"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-48, SD-48, PY-48; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Sliding window maxima](dsa/README.md) |
-| System design | 30 minutes | [Resharding](sd/README.md) |
-| Python | 15 minutes | [Overloads](lang/README.md) |
+| DSA | 60 minutes | [Sliding window maxima](dsa_sliding-window-maxima/README.md) |
+| System design | 30 minutes | [Resharding](sd_resharding/README.md) |
+| Python | 15 minutes | [Overloads](lang_overloads/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

@@ -4,7 +4,7 @@ phase: 21
 title: "Top frequent words"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-144, SD-144, PY-144; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Top frequent words](dsa/README.md) |
-| System design | 30 minutes | [Data placement](sd/README.md) |
-| Python | 15 minutes | [Special method lookup](lang/README.md) |
+| DSA | 60 minutes | [Top frequent words](dsa_top-frequent-words/README.md) |
+| System design | 30 minutes | [Data placement](sd_data-placement/README.md) |
+| Python | 15 minutes | [Special method lookup](lang_special-method-lookup/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

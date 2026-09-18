@@ -4,7 +4,7 @@ phase: 2
 title: "First repeated value"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-08, SD-08, PY-08; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [First repeated value](dsa/README.md) |
-| System design | 30 minutes | [Request journey](sd/README.md) |
-| Python | 15 minutes | [Argument binding](lang/README.md) |
+| DSA | 60 minutes | [First repeated value](dsa_first-repeated-value/README.md) |
+| System design | 30 minutes | [Request journey](sd_request-journey/README.md) |
+| Python | 15 minutes | [Argument binding](lang_argument-binding/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

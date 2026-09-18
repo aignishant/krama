@@ -4,7 +4,7 @@ phase: 20
 title: "Expiring counter"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-138, SD-138, PY-138; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Expiring counter](dsa/README.md) |
-| System design | 30 minutes | [Approximate answers](sd/README.md) |
-| Python | 15 minutes | [Shutdown hooks](lang/README.md) |
+| DSA | 60 minutes | [Expiring counter](dsa_expiring-counter/README.md) |
+| System design | 30 minutes | [Approximate answers](sd_approximate-answers/README.md) |
+| Python | 15 minutes | [Shutdown hooks](lang_shutdown-hooks/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

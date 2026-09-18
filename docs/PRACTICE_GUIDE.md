@@ -4,6 +4,12 @@ This is a broad interview-oriented course. Advanced range queries, matching, bit
 tree rerooting provide breadth; deep competitive programming, geometry, FFT and advanced flow
 are outside the core. A one-hour daily budget prioritizes one serious problem over a problem quota.
 
+The focus includes product-company interviews such as the user's Google goal. Follow the
+[interview method](INTERVIEW_PREP.md) and each day's LEETCODE.md for one online companion,
+or use the local task as its free fallback/variation. These are recommended patterns, not
+verified company-tagged questions. The local instructions below apply to the local route;
+the online route uses the official contract and records submission plus explanation evidence.
+
 ## What each section contains
 
 Every core day supplies an original problem contract, JSON example, target complexity, unsolved

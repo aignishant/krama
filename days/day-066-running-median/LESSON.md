@@ -4,7 +4,7 @@ phase: 10
 title: "Running median"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-66, SD-66, PY-66; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Running median](dsa/README.md) |
-| System design | 30 minutes | [Circuit breakers](sd/README.md) |
-| Python | 15 minutes | [Mock boundaries](lang/README.md) |
+| DSA | 60 minutes | [Running median](dsa_running-median/README.md) |
+| System design | 30 minutes | [Circuit breakers](sd_circuit-breakers/README.md) |
+| Python | 15 minutes | [Mock boundaries](lang_mock-boundaries/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

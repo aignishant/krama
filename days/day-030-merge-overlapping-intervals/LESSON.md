@@ -4,7 +4,7 @@ phase: 5
 title: "Merge overlapping intervals"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-30, SD-30, PY-30; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Merge overlapping intervals](dsa/README.md) |
-| System design | 30 minutes | [Log structured storage](sd/README.md) |
-| Python | 15 minutes | [Properties](lang/README.md) |
+| DSA | 60 minutes | [Merge overlapping intervals](dsa_merge-overlapping-intervals/README.md) |
+| System design | 30 minutes | [Log structured storage](sd_log-structured-storage/README.md) |
+| Python | 15 minutes | [Properties](lang_properties/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

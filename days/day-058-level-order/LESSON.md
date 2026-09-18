@@ -4,7 +4,7 @@ phase: 9
 title: "Level order"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-58, SD-58, PY-58; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Level order](dsa/README.md) |
-| System design | 30 minutes | [Delivery semantics](sd/README.md) |
-| Python | 15 minutes | [Exception boundaries](lang/README.md) |
+| DSA | 60 minutes | [Level order](dsa_level-order/README.md) |
+| System design | 30 minutes | [Delivery semantics](sd_delivery-semantics/README.md) |
+| Python | 15 minutes | [Exception boundaries](lang_exception-boundaries/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

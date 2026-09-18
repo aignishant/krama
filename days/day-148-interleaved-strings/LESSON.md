@@ -4,7 +4,7 @@ phase: 22
 title: "Interleaved strings"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-148, SD-148, PY-148; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Interleaved strings](dsa/README.md) |
-| System design | 30 minutes | [Responsibilities](sd/README.md) |
-| Python | 15 minutes | [API simplification](lang/README.md) |
+| DSA | 60 minutes | [Interleaved strings](dsa_interleaved-strings/README.md) |
+| System design | 30 minutes | [Responsibilities](sd_responsibilities/README.md) |
+| Python | 15 minutes | [API simplification](lang_api-simplification/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

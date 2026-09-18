@@ -4,14 +4,24 @@ Run commands from the repository root. `python course.py start N --track dsa` (o
 prints the path and assignment. `python course.py practice N` runs that day's DSA example tests.
 The tool never opens a GUI, edits progress automatically, or commits your work.
 
+Subject folders now include their topic, for example `dsa_pair-sum-indices`. Keep passing
+`--track dsa`, `sd` or `lang`; the manifest resolves the current path. Historical evidence paths
+in append-only ledgers can be translated with [folder_renames.json](folder_renames.json).
+Reopen old IDE tabs under the new folder name.
+
+For DSA, [LEETCODE_INDEX.md](LEETCODE_INDEX.md) links each day's online assignment. Record actual
+submission outcomes in NOTES.md or append to [LEETCODE_PROGRESS.csv](LEETCODE_PROGRESS.csv).
+You can satisfy the daily attempt through the online or local route described in LEETCODE.md;
+the local practice command never submits to LeetCode.
+
 ## Independent progress
 
 Append events to TRACK_PROGRESS.csv; keep old events. Allowed tracks: dsa, sd, lang.
 Allowed statuses: not-started, partial, needs-review, complete. Example syntax only:
 
 ```csv
-1,dsa,partial,2026-09-18,days/day-001-count-target-values/dsa/NOTES.md,Baseline written; add boundary tests
-1,lang,complete,2026-09-18,days/day-001-count-target-values/lang/NOTES.md,Experiment and explanation recorded
+1,dsa,partial,2026-09-18,days/day-001-count-target-values/dsa_count-target-values/NOTES.md,Baseline written; add boundary tests
+1,lang,complete,2026-09-18,days/day-001-count-target-values/lang_identity-and-equality/NOTES.md,Experiment and explanation recorded
 ```
 
 Use your real dates and evidence. The latest event for each day/track is current. Quote CSV

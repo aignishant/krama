@@ -4,7 +4,7 @@ phase: 6
 title: "Middle node"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-37, SD-37, PY-37; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Middle node](dsa/README.md) |
-| System design | 30 minutes | [Invalidation race](sd/README.md) |
-| Python | 15 minutes | [Frozen models](lang/README.md) |
+| DSA | 60 minutes | [Middle node](dsa_middle-node/README.md) |
+| System design | 30 minutes | [Invalidation race](sd_invalidation-race/README.md) |
+| Python | 15 minutes | [Frozen models](lang_frozen-models/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

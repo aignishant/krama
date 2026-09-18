@@ -4,7 +4,7 @@ phase: 19
 title: "Bipartite matching"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-132, SD-132, PY-132; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Bipartite matching](dsa/README.md) |
-| System design | 30 minutes | [Reconciliation](sd/README.md) |
-| Python | 15 minutes | [Dependency policy](lang/README.md) |
+| DSA | 60 minutes | [Bipartite matching](dsa_bipartite-matching/README.md) |
+| System design | 30 minutes | [Reconciliation](sd_reconciliation/README.md) |
+| Python | 15 minutes | [Dependency policy](lang_dependency-policy/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

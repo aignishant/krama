@@ -16,6 +16,11 @@ Every seventh session reviews the previous six. You can study the three tracks s
 keep independent progress. The 168-day length is a recommendation; hard problems can need extra
 calendar sessions. See the overload policy in the master plan.
 
+DSA now targets product-company interview preparation, including your Google goal. Each daily
+DSA folder includes a LeetCode companion with difficulty and contract-comparison notes. Use it
+as the main attempt within the existing hour. See the [full LeetCode index](docs/LEETCODE_INDEX.md)
+and [interview practice method](docs/INTERVIEW_PREP.md). Premium companions have local free alternatives.
+
 ## Start here
 
 - [Master plan and all 168 daily assignments](docs/00_MASTER_PLAN.md)
@@ -42,10 +47,13 @@ or paid services are needed to start.
 days/day-001-count-target-values/
   LESSON.md
   CHECKLIST.md
-  dsa/   README, PRACTICE, HINTS, solution, cases, tests, notes
-  sd/    README, DESIGN
-  lang/  README, lab, notes
+  dsa_count-target-values/       README, PRACTICE, LEETCODE, HINTS, solution, cases, tests, notes
+  sd_functional-scope/           README, DESIGN
+  lang_identity-and-equality/    README, lab, notes
 ```
+
+All 168 days use the same `track_topic-title` naming convention. CLI aliases stay `dsa`, `sd`
+and `lang`; old IDE tabs should reopen the files under their new topic-named folders.
 
 ## Verify the course
 

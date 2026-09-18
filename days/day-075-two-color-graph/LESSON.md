@@ -4,7 +4,7 @@ phase: 11
 title: "Two-color graph"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-75, SD-75, PY-75; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Two-color graph](dsa/README.md) |
-| System design | 30 minutes | [Unique identifiers](sd/README.md) |
-| Python | 15 minutes | [Bisect contracts](lang/README.md) |
+| DSA | 60 minutes | [Two-color graph](dsa_two-color-graph/README.md) |
+| System design | 30 minutes | [Unique identifiers](sd_unique-identifiers/README.md) |
+| Python | 15 minutes | [Bisect contracts](lang_bisect-contracts/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

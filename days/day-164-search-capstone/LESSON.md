@@ -4,7 +4,7 @@ phase: 24
 title: "Search capstone"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-164, SD-164, PY-164; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Search capstone](dsa/README.md) |
-| System design | 30 minutes | [Capstone consistency](sd/README.md) |
-| Python | 15 minutes | [Capstone execution](lang/README.md) |
+| DSA | 60 minutes | [Search capstone](dsa_search-capstone/README.md) |
+| System design | 30 minutes | [Capstone consistency](sd_capstone-consistency/README.md) |
+| Python | 15 minutes | [Capstone execution](lang_capstone-execution/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

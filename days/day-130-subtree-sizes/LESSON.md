@@ -4,7 +4,7 @@ phase: 19
 title: "Subtree sizes"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-130, SD-130, PY-130; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Subtree sizes](dsa/README.md) |
-| System design | 30 minutes | [Transactional outbox](sd/README.md) |
-| Python | 15 minutes | [Package layout](lang/README.md) |
+| DSA | 60 minutes | [Subtree sizes](dsa_subtree-sizes/README.md) |
+| System design | 30 minutes | [Transactional outbox](sd_transactional-outbox/README.md) |
+| Python | 15 minutes | [Package layout](lang_package-layout/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

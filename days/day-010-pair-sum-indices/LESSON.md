@@ -4,7 +4,7 @@ phase: 2
 title: "Pair sum indices"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-10, SD-10, PY-10; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Pair sum indices](dsa/README.md) |
-| System design | 30 minutes | [Idempotency semantics](sd/README.md) |
-| Python | 15 minutes | [Nonlocal state](lang/README.md) |
+| DSA | 60 minutes | [Pair sum indices](dsa_pair-sum-indices/README.md) |
+| System design | 30 minutes | [Idempotency semantics](sd_idempotency-semantics/README.md) |
+| Python | 15 minutes | [Nonlocal state](lang_nonlocal-state/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

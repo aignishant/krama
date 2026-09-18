@@ -4,7 +4,7 @@ phase: 19
 title: "Tree distance sums"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-131, SD-131, PY-131; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Tree distance sums](dsa/README.md) |
-| System design | 30 minutes | [Compensation workflow](sd/README.md) |
-| Python | 15 minutes | [Environment isolation](lang/README.md) |
+| DSA | 60 minutes | [Tree distance sums](dsa_tree-distance-sums/README.md) |
+| System design | 30 minutes | [Compensation workflow](sd_compensation-workflow/README.md) |
+| Python | 15 minutes | [Environment isolation](lang_environment-isolation/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

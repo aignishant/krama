@@ -4,7 +4,7 @@ phase: 16
 title: "Visit every city"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-111, SD-111, PY-111; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Visit every city](dsa/README.md) |
-| System design | 30 minutes | [Chat failure review](sd/README.md) |
-| Python | 15 minutes | [Optimization memo](lang/README.md) |
+| DSA | 60 minutes | [Visit every city](dsa_visit-every-city/README.md) |
+| System design | 30 minutes | [Chat failure review](sd_chat-failure-review/README.md) |
+| Python | 15 minutes | [Optimization memo](lang_optimization-memo/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

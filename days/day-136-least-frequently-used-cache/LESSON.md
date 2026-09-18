@@ -4,7 +4,7 @@ phase: 20
 title: "Least frequently used cache"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-136, SD-136, PY-136; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Least frequently used cache](dsa/README.md) |
-| System design | 30 minutes | [Aggregation windows](sd/README.md) |
-| Python | 15 minutes | [Retry wrapper](lang/README.md) |
+| DSA | 60 minutes | [Least frequently used cache](dsa_least-frequently-used-cache/README.md) |
+| System design | 30 minutes | [Aggregation windows](sd_aggregation-windows/README.md) |
+| Python | 15 minutes | [Retry wrapper](lang_retry-wrapper/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

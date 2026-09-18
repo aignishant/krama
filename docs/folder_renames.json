@@ -1,0 +1,2018 @@
+[
+  {
+    "old": "days/day-001-count-target-values/dsa",
+    "new": "days/day-001-count-target-values/dsa_count-target-values"
+  },
+  {
+    "old": "days/day-001-count-target-values/sd",
+    "new": "days/day-001-count-target-values/sd_functional-scope"
+  },
+  {
+    "old": "days/day-001-count-target-values/lang",
+    "new": "days/day-001-count-target-values/lang_identity-and-equality"
+  },
+  {
+    "old": "days/day-002-find-the-first-maximum/dsa",
+    "new": "days/day-002-find-the-first-maximum/dsa_find-the-first-maximum"
+  },
+  {
+    "old": "days/day-002-find-the-first-maximum/sd",
+    "new": "days/day-002-find-the-first-maximum/sd_quality-requirements"
+  },
+  {
+    "old": "days/day-002-find-the-first-maximum/lang",
+    "new": "days/day-002-find-the-first-maximum/lang_shallow-and-deep-copies"
+  },
+  {
+    "old": "days/day-003-stable-compaction/dsa",
+    "new": "days/day-003-stable-compaction/dsa_stable-compaction"
+  },
+  {
+    "old": "days/day-003-stable-compaction/sd",
+    "new": "days/day-003-stable-compaction/sd_traffic-estimates"
+  },
+  {
+    "old": "days/day-003-stable-compaction/lang",
+    "new": "days/day-003-stable-compaction/lang_mutable-defaults"
+  },
+  {
+    "old": "days/day-004-reverse-a-segment/dsa",
+    "new": "days/day-004-reverse-a-segment/dsa_reverse-a-segment"
+  },
+  {
+    "old": "days/day-004-reverse-a-segment/sd",
+    "new": "days/day-004-reverse-a-segment/sd_storage-estimates"
+  },
+  {
+    "old": "days/day-004-reverse-a-segment/lang",
+    "new": "days/day-004-reverse-a-segment/lang_hash-and-equality"
+  },
+  {
+    "old": "days/day-005-merge-sorted-arrays/dsa",
+    "new": "days/day-005-merge-sorted-arrays/dsa_merge-sorted-arrays"
+  },
+  {
+    "old": "days/day-005-merge-sorted-arrays/sd",
+    "new": "days/day-005-merge-sorted-arrays/sd_latency-budgets"
+  },
+  {
+    "old": "days/day-005-merge-sorted-arrays/lang",
+    "new": "days/day-005-merge-sorted-arrays/lang_truth-and-sentinels"
+  },
+  {
+    "old": "days/day-006-best-single-trade/dsa",
+    "new": "days/day-006-best-single-trade/dsa_best-single-trade"
+  },
+  {
+    "old": "days/day-006-best-single-trade/sd",
+    "new": "days/day-006-best-single-trade/sd_single-node-baseline"
+  },
+  {
+    "old": "days/day-006-best-single-trade/lang",
+    "new": "days/day-006-best-single-trade/lang_mutation-contracts"
+  },
+  {
+    "old": "days/day-007-week-1-review/dsa",
+    "new": "days/day-007-week-1-review/dsa_week-1-dsa-review"
+  },
+  {
+    "old": "days/day-007-week-1-review/sd",
+    "new": "days/day-007-week-1-review/sd_week-1-design-review"
+  },
+  {
+    "old": "days/day-007-week-1-review/lang",
+    "new": "days/day-007-week-1-review/lang_week-1-python-review"
+  },
+  {
+    "old": "days/day-008-first-repeated-value/dsa",
+    "new": "days/day-008-first-repeated-value/dsa_first-repeated-value"
+  },
+  {
+    "old": "days/day-008-first-repeated-value/sd",
+    "new": "days/day-008-first-repeated-value/sd_request-journey"
+  },
+  {
+    "old": "days/day-008-first-repeated-value/lang",
+    "new": "days/day-008-first-repeated-value/lang_argument-binding"
+  },
+  {
+    "old": "days/day-009-frequency-ranking/dsa",
+    "new": "days/day-009-frequency-ranking/dsa_frequency-ranking"
+  },
+  {
+    "old": "days/day-009-frequency-ranking/sd",
+    "new": "days/day-009-frequency-ranking/sd_http-methods"
+  },
+  {
+    "old": "days/day-009-frequency-ranking/lang",
+    "new": "days/day-009-frequency-ranking/lang_closure-binding"
+  },
+  {
+    "old": "days/day-010-pair-sum-indices/dsa",
+    "new": "days/day-010-pair-sum-indices/dsa_pair-sum-indices"
+  },
+  {
+    "old": "days/day-010-pair-sum-indices/sd",
+    "new": "days/day-010-pair-sum-indices/sd_idempotency-semantics"
+  },
+  {
+    "old": "days/day-010-pair-sum-indices/lang",
+    "new": "days/day-010-pair-sum-indices/lang_nonlocal-state"
+  },
+  {
+    "old": "days/day-011-group-anagrams/dsa",
+    "new": "days/day-011-group-anagrams/dsa_group-anagrams"
+  },
+  {
+    "old": "days/day-011-group-anagrams/sd",
+    "new": "days/day-011-group-anagrams/sd_connection-budgets"
+  },
+  {
+    "old": "days/day-011-group-anagrams/lang",
+    "new": "days/day-011-group-anagrams/lang_decorator-metadata"
+  },
+  {
+    "old": "days/day-012-range-sums/dsa",
+    "new": "days/day-012-range-sums/dsa_range-sums"
+  },
+  {
+    "old": "days/day-012-range-sums/sd",
+    "new": "days/day-012-range-sums/sd_timeout-propagation"
+  },
+  {
+    "old": "days/day-012-range-sums/lang",
+    "new": "days/day-012-range-sums/lang_decorator-arguments"
+  },
+  {
+    "old": "days/day-013-count-target-subarrays/dsa",
+    "new": "days/day-013-count-target-subarrays/dsa_count-target-subarrays"
+  },
+  {
+    "old": "days/day-013-count-target-subarrays/sd",
+    "new": "days/day-013-count-target-subarrays/sd_pagination"
+  },
+  {
+    "old": "days/day-013-count-target-subarrays/lang",
+    "new": "days/day-013-count-target-subarrays/lang_partial-application"
+  },
+  {
+    "old": "days/day-014-week-2-review/dsa",
+    "new": "days/day-014-week-2-review/dsa_week-2-dsa-review"
+  },
+  {
+    "old": "days/day-014-week-2-review/sd",
+    "new": "days/day-014-week-2-review/sd_week-2-design-review"
+  },
+  {
+    "old": "days/day-014-week-2-review/lang",
+    "new": "days/day-014-week-2-review/lang_week-2-python-review"
+  },
+  {
+    "old": "days/day-015-sorted-pair-existence/dsa",
+    "new": "days/day-015-sorted-pair-existence/dsa_sorted-pair-existence"
+  },
+  {
+    "old": "days/day-015-sorted-pair-existence/sd",
+    "new": "days/day-015-sorted-pair-existence/sd_domain-model"
+  },
+  {
+    "old": "days/day-015-sorted-pair-existence/lang",
+    "new": "days/day-015-sorted-pair-existence/lang_iterator-protocol"
+  },
+  {
+    "old": "days/day-016-unique-triples/dsa",
+    "new": "days/day-016-unique-triples/dsa_unique-triples"
+  },
+  {
+    "old": "days/day-016-unique-triples/sd",
+    "new": "days/day-016-unique-triples/sd_api-contract"
+  },
+  {
+    "old": "days/day-016-unique-triples/lang",
+    "new": "days/day-016-unique-triples/lang_generator-laziness"
+  },
+  {
+    "old": "days/day-017-container-capacity/dsa",
+    "new": "days/day-017-container-capacity/dsa_container-capacity"
+  },
+  {
+    "old": "days/day-017-container-capacity/sd",
+    "new": "days/day-017-container-capacity/sd_stateless-workers"
+  },
+  {
+    "old": "days/day-017-container-capacity/lang",
+    "new": "days/day-017-container-capacity/lang_generator-cleanup"
+  },
+  {
+    "old": "days/day-018-fixed-window-maximum-sum/dsa",
+    "new": "days/day-018-fixed-window-maximum-sum/dsa_fixed-window-maximum-sum"
+  },
+  {
+    "old": "days/day-018-fixed-window-maximum-sum/sd",
+    "new": "days/day-018-fixed-window-maximum-sum/sd_sync-versus-async"
+  },
+  {
+    "old": "days/day-018-fixed-window-maximum-sum/lang",
+    "new": "days/day-018-fixed-window-maximum-sum/lang_yield-delegation"
+  },
+  {
+    "old": "days/day-019-longest-distinct-substring/dsa",
+    "new": "days/day-019-longest-distinct-substring/dsa_longest-distinct-substring"
+  },
+  {
+    "old": "days/day-019-longest-distinct-substring/sd",
+    "new": "days/day-019-longest-distinct-substring/sd_compatibility"
+  },
+  {
+    "old": "days/day-019-longest-distinct-substring/lang",
+    "new": "days/day-019-longest-distinct-substring/lang_iterator-consumption"
+  },
+  {
+    "old": "days/day-020-minimum-positive-window/dsa",
+    "new": "days/day-020-minimum-positive-window/dsa_minimum-positive-window"
+  },
+  {
+    "old": "days/day-020-minimum-positive-window/sd",
+    "new": "days/day-020-minimum-positive-window/sd_modular-monolith"
+  },
+  {
+    "old": "days/day-020-minimum-positive-window/lang",
+    "new": "days/day-020-minimum-positive-window/lang_streaming-pipeline"
+  },
+  {
+    "old": "days/day-021-week-3-review/dsa",
+    "new": "days/day-021-week-3-review/dsa_week-3-dsa-review"
+  },
+  {
+    "old": "days/day-021-week-3-review/sd",
+    "new": "days/day-021-week-3-review/sd_week-3-design-review"
+  },
+  {
+    "old": "days/day-021-week-3-review/lang",
+    "new": "days/day-021-week-3-review/lang_week-3-python-review"
+  },
+  {
+    "old": "days/day-022-lower-bound/dsa",
+    "new": "days/day-022-lower-bound/dsa_lower-bound"
+  },
+  {
+    "old": "days/day-022-lower-bound/sd",
+    "new": "days/day-022-lower-bound/sd_schema-constraints"
+  },
+  {
+    "old": "days/day-022-lower-bound/lang",
+    "new": "days/day-022-lower-bound/lang_representations"
+  },
+  {
+    "old": "days/day-023-target-range/dsa",
+    "new": "days/day-023-target-range/dsa_target-range"
+  },
+  {
+    "old": "days/day-023-target-range/sd",
+    "new": "days/day-023-target-range/sd_index-selection"
+  },
+  {
+    "old": "days/day-023-target-range/lang",
+    "new": "days/day-023-target-range/lang_rich-comparison"
+  },
+  {
+    "old": "days/day-024-rotated-search/dsa",
+    "new": "days/day-024-rotated-search/dsa_rotated-search"
+  },
+  {
+    "old": "days/day-024-rotated-search/sd",
+    "new": "days/day-024-rotated-search/sd_query-plans"
+  },
+  {
+    "old": "days/day-024-rotated-search/lang",
+    "new": "days/day-024-rotated-search/lang_container-protocol"
+  },
+  {
+    "old": "days/day-025-integer-square-root/dsa",
+    "new": "days/day-025-integer-square-root/dsa_integer-square-root"
+  },
+  {
+    "old": "days/day-025-integer-square-root/sd",
+    "new": "days/day-025-integer-square-root/sd_transactions"
+  },
+  {
+    "old": "days/day-025-integer-square-root/lang",
+    "new": "days/day-025-integer-square-root/lang_indexing-and-slicing"
+  },
+  {
+    "old": "days/day-026-minimum-shipping-capacity/dsa",
+    "new": "days/day-026-minimum-shipping-capacity/dsa_minimum-shipping-capacity"
+  },
+  {
+    "old": "days/day-026-minimum-shipping-capacity/sd",
+    "new": "days/day-026-minimum-shipping-capacity/sd_isolation-anomalies"
+  },
+  {
+    "old": "days/day-026-minimum-shipping-capacity/lang",
+    "new": "days/day-026-minimum-shipping-capacity/lang_callable-instances"
+  },
+  {
+    "old": "days/day-027-median-of-two-arrays/dsa",
+    "new": "days/day-027-median-of-two-arrays/dsa_median-of-two-arrays"
+  },
+  {
+    "old": "days/day-027-median-of-two-arrays/sd",
+    "new": "days/day-027-median-of-two-arrays/sd_optimistic-concurrency"
+  },
+  {
+    "old": "days/day-027-median-of-two-arrays/lang",
+    "new": "days/day-027-median-of-two-arrays/lang_context-managers"
+  },
+  {
+    "old": "days/day-028-week-4-review/dsa",
+    "new": "days/day-028-week-4-review/dsa_week-4-dsa-review"
+  },
+  {
+    "old": "days/day-028-week-4-review/sd",
+    "new": "days/day-028-week-4-review/sd_week-4-design-review"
+  },
+  {
+    "old": "days/day-028-week-4-review/lang",
+    "new": "days/day-028-week-4-review/lang_week-4-python-review"
+  },
+  {
+    "old": "days/day-029-stable-record-sorting/dsa",
+    "new": "days/day-029-stable-record-sorting/dsa_stable-record-sorting"
+  },
+  {
+    "old": "days/day-029-stable-record-sorting/sd",
+    "new": "days/day-029-stable-record-sorting/sd_tree-indexes"
+  },
+  {
+    "old": "days/day-029-stable-record-sorting/lang",
+    "new": "days/day-029-stable-record-sorting/lang_attribute-lookup"
+  },
+  {
+    "old": "days/day-030-merge-overlapping-intervals/dsa",
+    "new": "days/day-030-merge-overlapping-intervals/dsa_merge-overlapping-intervals"
+  },
+  {
+    "old": "days/day-030-merge-overlapping-intervals/sd",
+    "new": "days/day-030-merge-overlapping-intervals/sd_log-structured-storage"
+  },
+  {
+    "old": "days/day-030-merge-overlapping-intervals/lang",
+    "new": "days/day-030-merge-overlapping-intervals/lang_properties"
+  },
+  {
+    "old": "days/day-031-insert-an-interval/dsa",
+    "new": "days/day-031-insert-an-interval/dsa_insert-an-interval"
+  },
+  {
+    "old": "days/day-031-insert-an-interval/sd",
+    "new": "days/day-031-insert-an-interval/sd_access-pattern-modeling"
+  },
+  {
+    "old": "days/day-031-insert-an-interval/lang",
+    "new": "days/day-031-insert-an-interval/lang_descriptors"
+  },
+  {
+    "old": "days/day-032-minimum-meeting-rooms/dsa",
+    "new": "days/day-032-minimum-meeting-rooms/dsa_minimum-meeting-rooms"
+  },
+  {
+    "old": "days/day-032-minimum-meeting-rooms/sd",
+    "new": "days/day-032-minimum-meeting-rooms/sd_hot-partitions"
+  },
+  {
+    "old": "days/day-032-minimum-meeting-rooms/lang",
+    "new": "days/day-032-minimum-meeting-rooms/lang_method-binding"
+  },
+  {
+    "old": "days/day-033-kth-smallest/dsa",
+    "new": "days/day-033-kth-smallest/dsa_kth-smallest"
+  },
+  {
+    "old": "days/day-033-kth-smallest/sd",
+    "new": "days/day-033-kth-smallest/sd_ttl-and-deletion"
+  },
+  {
+    "old": "days/day-033-kth-smallest/lang",
+    "new": "days/day-033-kth-smallest/lang_inheritance-and-super"
+  },
+  {
+    "old": "days/day-034-count-inversions/dsa",
+    "new": "days/day-034-count-inversions/dsa_count-inversions"
+  },
+  {
+    "old": "days/day-034-count-inversions/sd",
+    "new": "days/day-034-count-inversions/sd_storage-decision-memo"
+  },
+  {
+    "old": "days/day-034-count-inversions/lang",
+    "new": "days/day-034-count-inversions/lang_slots"
+  },
+  {
+    "old": "days/day-035-week-5-review/dsa",
+    "new": "days/day-035-week-5-review/dsa_week-5-dsa-review"
+  },
+  {
+    "old": "days/day-035-week-5-review/sd",
+    "new": "days/day-035-week-5-review/sd_week-5-design-review"
+  },
+  {
+    "old": "days/day-035-week-5-review/lang",
+    "new": "days/day-035-week-5-review/lang_week-5-python-review"
+  },
+  {
+    "old": "days/day-036-reverse-a-linked-list/dsa",
+    "new": "days/day-036-reverse-a-linked-list/dsa_reverse-a-linked-list"
+  },
+  {
+    "old": "days/day-036-reverse-a-linked-list/sd",
+    "new": "days/day-036-reverse-a-linked-list/sd_cache-aside"
+  },
+  {
+    "old": "days/day-036-reverse-a-linked-list/lang",
+    "new": "days/day-036-reverse-a-linked-list/lang_dataclass-defaults"
+  },
+  {
+    "old": "days/day-037-middle-node/dsa",
+    "new": "days/day-037-middle-node/dsa_middle-node"
+  },
+  {
+    "old": "days/day-037-middle-node/sd",
+    "new": "days/day-037-middle-node/sd_invalidation-race"
+  },
+  {
+    "old": "days/day-037-middle-node/lang",
+    "new": "days/day-037-middle-node/lang_frozen-models"
+  },
+  {
+    "old": "days/day-038-cycle-entry/dsa",
+    "new": "days/day-038-cycle-entry/dsa_cycle-entry"
+  },
+  {
+    "old": "days/day-038-cycle-entry/sd",
+    "new": "days/day-038-cycle-entry/sd_ttl-and-eviction"
+  },
+  {
+    "old": "days/day-038-cycle-entry/lang",
+    "new": "days/day-038-cycle-entry/lang_ordering-and-hashing"
+  },
+  {
+    "old": "days/day-039-merge-linked-lists/dsa",
+    "new": "days/day-039-merge-linked-lists/dsa_merge-linked-lists"
+  },
+  {
+    "old": "days/day-039-merge-linked-lists/sd",
+    "new": "days/day-039-merge-linked-lists/sd_stampede-control"
+  },
+  {
+    "old": "days/day-039-merge-linked-lists/lang",
+    "new": "days/day-039-merge-linked-lists/lang_enums"
+  },
+  {
+    "old": "days/day-040-remove-from-end/dsa",
+    "new": "days/day-040-remove-from-end/dsa_remove-from-end"
+  },
+  {
+    "old": "days/day-040-remove-from-end/sd",
+    "new": "days/day-040-remove-from-end/sd_negative-caching"
+  },
+  {
+    "old": "days/day-040-remove-from-end/lang",
+    "new": "days/day-040-remove-from-end/lang_composition"
+  },
+  {
+    "old": "days/day-041-least-recently-used-cache/dsa",
+    "new": "days/day-041-least-recently-used-cache/dsa_least-recently-used-cache"
+  },
+  {
+    "old": "days/day-041-least-recently-used-cache/sd",
+    "new": "days/day-041-least-recently-used-cache/sd_cdn-behavior"
+  },
+  {
+    "old": "days/day-041-least-recently-used-cache/lang",
+    "new": "days/day-041-least-recently-used-cache/lang_model-boundary"
+  },
+  {
+    "old": "days/day-042-week-6-review/dsa",
+    "new": "days/day-042-week-6-review/dsa_week-6-dsa-review"
+  },
+  {
+    "old": "days/day-042-week-6-review/sd",
+    "new": "days/day-042-week-6-review/sd_week-6-design-review"
+  },
+  {
+    "old": "days/day-042-week-6-review/lang",
+    "new": "days/day-042-week-6-review/lang_week-6-python-review"
+  },
+  {
+    "old": "days/day-043-balanced-delimiters/dsa",
+    "new": "days/day-043-balanced-delimiters/dsa_balanced-delimiters"
+  },
+  {
+    "old": "days/day-043-balanced-delimiters/sd",
+    "new": "days/day-043-balanced-delimiters/sd_balancing-policies"
+  },
+  {
+    "old": "days/day-043-balanced-delimiters/lang",
+    "new": "days/day-043-balanced-delimiters/lang_annotations-at-runtime"
+  },
+  {
+    "old": "days/day-044-queue-from-stacks/dsa",
+    "new": "days/day-044-queue-from-stacks/dsa_queue-from-stacks"
+  },
+  {
+    "old": "days/day-044-queue-from-stacks/sd",
+    "new": "days/day-044-queue-from-stacks/sd_health-checks"
+  },
+  {
+    "old": "days/day-044-queue-from-stacks/lang",
+    "new": "days/day-044-queue-from-stacks/lang_optional-and-narrowing"
+  },
+  {
+    "old": "days/day-045-minimum-stack/dsa",
+    "new": "days/day-045-minimum-stack/dsa_minimum-stack"
+  },
+  {
+    "old": "days/day-045-minimum-stack/sd",
+    "new": "days/day-045-minimum-stack/sd_horizontal-scaling"
+  },
+  {
+    "old": "days/day-045-minimum-stack/lang",
+    "new": "days/day-045-minimum-stack/lang_typed-dictionaries"
+  },
+  {
+    "old": "days/day-046-warmer-days/dsa",
+    "new": "days/day-046-warmer-days/dsa_warmer-days"
+  },
+  {
+    "old": "days/day-046-warmer-days/sd",
+    "new": "days/day-046-warmer-days/sd_partition-keys"
+  },
+  {
+    "old": "days/day-046-warmer-days/lang",
+    "new": "days/day-046-warmer-days/lang_protocols"
+  },
+  {
+    "old": "days/day-047-largest-histogram-rectangle/dsa",
+    "new": "days/day-047-largest-histogram-rectangle/dsa_largest-histogram-rectangle"
+  },
+  {
+    "old": "days/day-047-largest-histogram-rectangle/sd",
+    "new": "days/day-047-largest-histogram-rectangle/sd_consistent-placement"
+  },
+  {
+    "old": "days/day-047-largest-histogram-rectangle/lang",
+    "new": "days/day-047-largest-histogram-rectangle/lang_generics"
+  },
+  {
+    "old": "days/day-048-sliding-window-maxima/dsa",
+    "new": "days/day-048-sliding-window-maxima/dsa_sliding-window-maxima"
+  },
+  {
+    "old": "days/day-048-sliding-window-maxima/sd",
+    "new": "days/day-048-sliding-window-maxima/sd_resharding"
+  },
+  {
+    "old": "days/day-048-sliding-window-maxima/lang",
+    "new": "days/day-048-sliding-window-maxima/lang_overloads"
+  },
+  {
+    "old": "days/day-049-week-7-review/dsa",
+    "new": "days/day-049-week-7-review/dsa_week-7-dsa-review"
+  },
+  {
+    "old": "days/day-049-week-7-review/sd",
+    "new": "days/day-049-week-7-review/sd_week-7-design-review"
+  },
+  {
+    "old": "days/day-049-week-7-review/lang",
+    "new": "days/day-049-week-7-review/lang_week-7-python-review"
+  },
+  {
+    "old": "days/day-050-enumerate-subsets/dsa",
+    "new": "days/day-050-enumerate-subsets/dsa_enumerate-subsets"
+  },
+  {
+    "old": "days/day-050-enumerate-subsets/sd",
+    "new": "days/day-050-enumerate-subsets/sd_leader-replication"
+  },
+  {
+    "old": "days/day-050-enumerate-subsets/lang",
+    "new": "days/day-050-enumerate-subsets/lang_callable-signatures"
+  },
+  {
+    "old": "days/day-051-enumerate-permutations/dsa",
+    "new": "days/day-051-enumerate-permutations/dsa_enumerate-permutations"
+  },
+  {
+    "old": "days/day-051-enumerate-permutations/sd",
+    "new": "days/day-051-enumerate-permutations/sd_read-your-writes"
+  },
+  {
+    "old": "days/day-051-enumerate-permutations/lang",
+    "new": "days/day-051-enumerate-permutations/lang_variance-reasoning"
+  },
+  {
+    "old": "days/day-052-combination-sum/dsa",
+    "new": "days/day-052-combination-sum/dsa_combination-sum"
+  },
+  {
+    "old": "days/day-052-combination-sum/sd",
+    "new": "days/day-052-combination-sum/sd_consistency-models"
+  },
+  {
+    "old": "days/day-052-combination-sum/lang",
+    "new": "days/day-052-combination-sum/lang_literal-states"
+  },
+  {
+    "old": "days/day-053-balanced-parentheses/dsa",
+    "new": "days/day-053-balanced-parentheses/dsa_balanced-parentheses"
+  },
+  {
+    "old": "days/day-053-balanced-parentheses/sd",
+    "new": "days/day-053-balanced-parentheses/sd_quorum-reasoning"
+  },
+  {
+    "old": "days/day-053-balanced-parentheses/lang",
+    "new": "days/day-053-balanced-parentheses/lang_type-guards"
+  },
+  {
+    "old": "days/day-054-word-search/dsa",
+    "new": "days/day-054-word-search/dsa_word-search"
+  },
+  {
+    "old": "days/day-054-word-search/sd",
+    "new": "days/day-054-word-search/sd_network-partitions"
+  },
+  {
+    "old": "days/day-054-word-search/lang",
+    "new": "days/day-054-word-search/lang_newtype"
+  },
+  {
+    "old": "days/day-055-nonattacking-queens/dsa",
+    "new": "days/day-055-nonattacking-queens/dsa_nonattacking-queens"
+  },
+  {
+    "old": "days/day-055-nonattacking-queens/sd",
+    "new": "days/day-055-nonattacking-queens/sd_failover"
+  },
+  {
+    "old": "days/day-055-nonattacking-queens/lang",
+    "new": "days/day-055-nonattacking-queens/lang_typing-debt"
+  },
+  {
+    "old": "days/day-056-week-8-review/dsa",
+    "new": "days/day-056-week-8-review/dsa_week-8-dsa-review"
+  },
+  {
+    "old": "days/day-056-week-8-review/sd",
+    "new": "days/day-056-week-8-review/sd_week-8-design-review"
+  },
+  {
+    "old": "days/day-056-week-8-review/lang",
+    "new": "days/day-056-week-8-review/lang_week-8-python-review"
+  },
+  {
+    "old": "days/day-057-tree-depth/dsa",
+    "new": "days/day-057-tree-depth/dsa_tree-depth"
+  },
+  {
+    "old": "days/day-057-tree-depth/sd",
+    "new": "days/day-057-tree-depth/sd_queue-fundamentals"
+  },
+  {
+    "old": "days/day-057-tree-depth/lang",
+    "new": "days/day-057-tree-depth/lang_exception-chaining"
+  },
+  {
+    "old": "days/day-058-level-order/dsa",
+    "new": "days/day-058-level-order/dsa_level-order"
+  },
+  {
+    "old": "days/day-058-level-order/sd",
+    "new": "days/day-058-level-order/sd_delivery-semantics"
+  },
+  {
+    "old": "days/day-058-level-order/lang",
+    "new": "days/day-058-level-order/lang_exception-boundaries"
+  },
+  {
+    "old": "days/day-059-validate-search-tree/dsa",
+    "new": "days/day-059-validate-search-tree/dsa_validate-search-tree"
+  },
+  {
+    "old": "days/day-059-validate-search-tree/sd",
+    "new": "days/day-059-validate-search-tree/sd_consumer-idempotency"
+  },
+  {
+    "old": "days/day-059-validate-search-tree/lang",
+    "new": "days/day-059-validate-search-tree/lang_finally-behavior"
+  },
+  {
+    "old": "days/day-060-kth-tree-value/dsa",
+    "new": "days/day-060-kth-tree-value/dsa_kth-tree-value"
+  },
+  {
+    "old": "days/day-060-kth-tree-value/sd",
+    "new": "days/day-060-kth-tree-value/sd_ordering"
+  },
+  {
+    "old": "days/day-060-kth-tree-value/lang",
+    "new": "days/day-060-kth-tree-value/lang_contextlib"
+  },
+  {
+    "old": "days/day-061-tree-diameter/dsa",
+    "new": "days/day-061-tree-diameter/dsa_tree-diameter"
+  },
+  {
+    "old": "days/day-061-tree-diameter/sd",
+    "new": "days/day-061-tree-diameter/sd_backpressure"
+  },
+  {
+    "old": "days/day-061-tree-diameter/lang",
+    "new": "days/day-061-tree-diameter/lang_exitstack"
+  },
+  {
+    "old": "days/day-062-lowest-shared-ancestor/dsa",
+    "new": "days/day-062-lowest-shared-ancestor/dsa_lowest-shared-ancestor"
+  },
+  {
+    "old": "days/day-062-lowest-shared-ancestor/sd",
+    "new": "days/day-062-lowest-shared-ancestor/sd_poison-messages"
+  },
+  {
+    "old": "days/day-062-lowest-shared-ancestor/lang",
+    "new": "days/day-062-lowest-shared-ancestor/lang_exception-groups"
+  },
+  {
+    "old": "days/day-063-week-9-review/dsa",
+    "new": "days/day-063-week-9-review/dsa_week-9-dsa-review"
+  },
+  {
+    "old": "days/day-063-week-9-review/sd",
+    "new": "days/day-063-week-9-review/sd_week-9-design-review"
+  },
+  {
+    "old": "days/day-063-week-9-review/lang",
+    "new": "days/day-063-week-9-review/lang_week-9-python-review"
+  },
+  {
+    "old": "days/day-064-k-largest-stream-values/dsa",
+    "new": "days/day-064-k-largest-stream-values/dsa_k-largest-stream-values"
+  },
+  {
+    "old": "days/day-064-k-largest-stream-values/sd",
+    "new": "days/day-064-k-largest-stream-values/sd_retry-budgets"
+  },
+  {
+    "old": "days/day-064-k-largest-stream-values/lang",
+    "new": "days/day-064-k-largest-stream-values/lang_unittest-subtests"
+  },
+  {
+    "old": "days/day-065-merge-sorted-streams/dsa",
+    "new": "days/day-065-merge-sorted-streams/dsa_merge-sorted-streams"
+  },
+  {
+    "old": "days/day-065-merge-sorted-streams/sd",
+    "new": "days/day-065-merge-sorted-streams/sd_backoff-and-jitter"
+  },
+  {
+    "old": "days/day-065-merge-sorted-streams/lang",
+    "new": "days/day-065-merge-sorted-streams/lang_test-doubles"
+  },
+  {
+    "old": "days/day-066-running-median/dsa",
+    "new": "days/day-066-running-median/dsa_running-median"
+  },
+  {
+    "old": "days/day-066-running-median/sd",
+    "new": "days/day-066-running-median/sd_circuit-breakers"
+  },
+  {
+    "old": "days/day-066-running-median/lang",
+    "new": "days/day-066-running-median/lang_mock-boundaries"
+  },
+  {
+    "old": "days/day-067-prefix-dictionary/dsa",
+    "new": "days/day-067-prefix-dictionary/dsa_prefix-dictionary"
+  },
+  {
+    "old": "days/day-067-prefix-dictionary/sd",
+    "new": "days/day-067-prefix-dictionary/sd_bulkheads"
+  },
+  {
+    "old": "days/day-067-prefix-dictionary/lang",
+    "new": "days/day-067-prefix-dictionary/lang_property-checks"
+  },
+  {
+    "old": "days/day-068-tree-reconstruction/dsa",
+    "new": "days/day-068-tree-reconstruction/dsa_tree-reconstruction"
+  },
+  {
+    "old": "days/day-068-tree-reconstruction/sd",
+    "new": "days/day-068-tree-reconstruction/sd_rate-limiting"
+  },
+  {
+    "old": "days/day-068-tree-reconstruction/lang",
+    "new": "days/day-068-tree-reconstruction/lang_metamorphic-tests"
+  },
+  {
+    "old": "days/day-069-tree-codec-round-trip/dsa",
+    "new": "days/day-069-tree-codec-round-trip/dsa_tree-codec-round-trip"
+  },
+  {
+    "old": "days/day-069-tree-codec-round-trip/sd",
+    "new": "days/day-069-tree-codec-round-trip/sd_graceful-degradation"
+  },
+  {
+    "old": "days/day-069-tree-codec-round-trip/lang",
+    "new": "days/day-069-tree-codec-round-trip/lang_debugging-workflow"
+  },
+  {
+    "old": "days/day-070-week-10-review/dsa",
+    "new": "days/day-070-week-10-review/dsa_week-10-dsa-review"
+  },
+  {
+    "old": "days/day-070-week-10-review/sd",
+    "new": "days/day-070-week-10-review/sd_week-10-design-review"
+  },
+  {
+    "old": "days/day-070-week-10-review/lang",
+    "new": "days/day-070-week-10-review/lang_week-10-python-review"
+  },
+  {
+    "old": "days/day-071-reachability/dsa",
+    "new": "days/day-071-reachability/dsa_reachability"
+  },
+  {
+    "old": "days/day-071-reachability/sd",
+    "new": "days/day-071-reachability/sd_logical-ordering"
+  },
+  {
+    "old": "days/day-071-reachability/lang",
+    "new": "days/day-071-reachability/lang_deque-behavior"
+  },
+  {
+    "old": "days/day-072-unweighted-distance/dsa",
+    "new": "days/day-072-unweighted-distance/dsa_unweighted-distance"
+  },
+  {
+    "old": "days/day-072-unweighted-distance/sd",
+    "new": "days/day-072-unweighted-distance/sd_consensus-purpose"
+  },
+  {
+    "old": "days/day-072-unweighted-distance/lang",
+    "new": "days/day-072-unweighted-distance/lang_counter-algebra"
+  },
+  {
+    "old": "days/day-073-island-count/dsa",
+    "new": "days/day-073-island-count/dsa_island-count"
+  },
+  {
+    "old": "days/day-073-island-count/sd",
+    "new": "days/day-073-island-count/sd_leader-terms"
+  },
+  {
+    "old": "days/day-073-island-count/lang",
+    "new": "days/day-073-island-count/lang_default-dictionaries"
+  },
+  {
+    "old": "days/day-074-dependency-order/dsa",
+    "new": "days/day-074-dependency-order/dsa_dependency-order"
+  },
+  {
+    "old": "days/day-074-dependency-order/sd",
+    "new": "days/day-074-dependency-order/sd_distributed-locks"
+  },
+  {
+    "old": "days/day-074-dependency-order/lang",
+    "new": "days/day-074-dependency-order/lang_heap-ordering"
+  },
+  {
+    "old": "days/day-075-two-color-graph/dsa",
+    "new": "days/day-075-two-color-graph/dsa_two-color-graph"
+  },
+  {
+    "old": "days/day-075-two-color-graph/sd",
+    "new": "days/day-075-two-color-graph/sd_unique-identifiers"
+  },
+  {
+    "old": "days/day-075-two-color-graph/lang",
+    "new": "days/day-075-two-color-graph/lang_bisect-contracts"
+  },
+  {
+    "old": "days/day-076-multi-source-spread/dsa",
+    "new": "days/day-076-multi-source-spread/dsa_multi-source-spread"
+  },
+  {
+    "old": "days/day-076-multi-source-spread/sd",
+    "new": "days/day-076-multi-source-spread/sd_cross-service-transactions"
+  },
+  {
+    "old": "days/day-076-multi-source-spread/lang",
+    "new": "days/day-076-multi-source-spread/lang_sorting-keys"
+  },
+  {
+    "old": "days/day-077-week-11-review/dsa",
+    "new": "days/day-077-week-11-review/dsa_week-11-dsa-review"
+  },
+  {
+    "old": "days/day-077-week-11-review/sd",
+    "new": "days/day-077-week-11-review/sd_week-11-design-review"
+  },
+  {
+    "old": "days/day-077-week-11-review/lang",
+    "new": "days/day-077-week-11-review/lang_week-11-python-review"
+  },
+  {
+    "old": "days/day-078-nonnegative-shortest-paths/dsa",
+    "new": "days/day-078-nonnegative-shortest-paths/dsa_nonnegative-shortest-paths"
+  },
+  {
+    "old": "days/day-078-nonnegative-shortest-paths/sd",
+    "new": "days/day-078-nonnegative-shortest-paths/sd_slis-and-slos"
+  },
+  {
+    "old": "days/day-078-nonnegative-shortest-paths/lang",
+    "new": "days/day-078-nonnegative-shortest-paths/lang_itertools-grouping"
+  },
+  {
+    "old": "days/day-079-negative-edge-paths/dsa",
+    "new": "days/day-079-negative-edge-paths/dsa_negative-edge-paths"
+  },
+  {
+    "old": "days/day-079-negative-edge-paths/sd",
+    "new": "days/day-079-negative-edge-paths/sd_error-budgets"
+  },
+  {
+    "old": "days/day-079-negative-edge-paths/lang",
+    "new": "days/day-079-negative-edge-paths/lang_iterator-duplication"
+  },
+  {
+    "old": "days/day-080-disjoint-set-queries/dsa",
+    "new": "days/day-080-disjoint-set-queries/dsa_disjoint-set-queries"
+  },
+  {
+    "old": "days/day-080-disjoint-set-queries/sd",
+    "new": "days/day-080-disjoint-set-queries/sd_logs-metrics-traces"
+  },
+  {
+    "old": "days/day-080-disjoint-set-queries/lang",
+    "new": "days/day-080-disjoint-set-queries/lang_bounded-iteration"
+  },
+  {
+    "old": "days/day-081-minimum-spanning-cost/dsa",
+    "new": "days/day-081-minimum-spanning-cost/dsa_minimum-spanning-cost"
+  },
+  {
+    "old": "days/day-081-minimum-spanning-cost/sd",
+    "new": "days/day-081-minimum-spanning-cost/sd_tail-latency"
+  },
+  {
+    "old": "days/day-081-minimum-spanning-cost/lang",
+    "new": "days/day-081-minimum-spanning-cost/lang_function-caching"
+  },
+  {
+    "old": "days/day-082-strong-components/dsa",
+    "new": "days/day-082-strong-components/dsa_strong-components"
+  },
+  {
+    "old": "days/day-082-strong-components/sd",
+    "new": "days/day-082-strong-components/sd_capacity-and-cost"
+  },
+  {
+    "old": "days/day-082-strong-components/lang",
+    "new": "days/day-082-strong-components/lang_cache-invalidation"
+  },
+  {
+    "old": "days/day-083-critical-edges/dsa",
+    "new": "days/day-083-critical-edges/dsa_critical-edges"
+  },
+  {
+    "old": "days/day-083-critical-edges/sd",
+    "new": "days/day-083-critical-edges/sd_incident-review"
+  },
+  {
+    "old": "days/day-083-critical-edges/lang",
+    "new": "days/day-083-critical-edges/lang_dispatch"
+  },
+  {
+    "old": "days/day-084-week-12-review/dsa",
+    "new": "days/day-084-week-12-review/dsa_week-12-dsa-review"
+  },
+  {
+    "old": "days/day-084-week-12-review/sd",
+    "new": "days/day-084-week-12-review/sd_week-12-design-review"
+  },
+  {
+    "old": "days/day-084-week-12-review/lang",
+    "new": "days/day-084-week-12-review/lang_week-12-python-review"
+  },
+  {
+    "old": "days/day-085-maximum-compatible-meetings/dsa",
+    "new": "days/day-085-maximum-compatible-meetings/dsa_maximum-compatible-meetings"
+  },
+  {
+    "old": "days/day-085-maximum-compatible-meetings/sd",
+    "new": "days/day-085-maximum-compatible-meetings/sd_trust-boundaries"
+  },
+  {
+    "old": "days/day-085-maximum-compatible-meetings/lang",
+    "new": "days/day-085-maximum-compatible-meetings/lang_coroutine-lifecycle"
+  },
+  {
+    "old": "days/day-086-reach-the-end/dsa",
+    "new": "days/day-086-reach-the-end/dsa_reach-the-end"
+  },
+  {
+    "old": "days/day-086-reach-the-end/sd",
+    "new": "days/day-086-reach-the-end/sd_authentication-and-authorization"
+  },
+  {
+    "old": "days/day-086-reach-the-end/lang",
+    "new": "days/day-086-reach-the-end/lang_blocking-the-loop"
+  },
+  {
+    "old": "days/day-087-minimum-jumps/dsa",
+    "new": "days/day-087-minimum-jumps/dsa_minimum-jumps"
+  },
+  {
+    "old": "days/day-087-minimum-jumps/sd",
+    "new": "days/day-087-minimum-jumps/sd_abuse-prevention"
+  },
+  {
+    "old": "days/day-087-minimum-jumps/lang",
+    "new": "days/day-087-minimum-jumps/lang_concurrent-tasks"
+  },
+  {
+    "old": "days/day-088-circular-fuel-route/dsa",
+    "new": "days/day-088-circular-fuel-route/dsa_circular-fuel-route"
+  },
+  {
+    "old": "days/day-088-circular-fuel-route/sd",
+    "new": "days/day-088-circular-fuel-route/sd_secret-handling"
+  },
+  {
+    "old": "days/day-088-circular-fuel-route/lang",
+    "new": "days/day-088-circular-fuel-route/lang_cancellation"
+  },
+  {
+    "old": "days/day-089-task-cooldown-length/dsa",
+    "new": "days/day-089-task-cooldown-length/dsa_task-cooldown-length"
+  },
+  {
+    "old": "days/day-089-task-cooldown-length/sd",
+    "new": "days/day-089-task-cooldown-length/sd_tenant-isolation"
+  },
+  {
+    "old": "days/day-089-task-cooldown-length/lang",
+    "new": "days/day-089-task-cooldown-length/lang_timeout-scopes"
+  },
+  {
+    "old": "days/day-090-optimal-merge-cost/dsa",
+    "new": "days/day-090-optimal-merge-cost/dsa_optimal-merge-cost"
+  },
+  {
+    "old": "days/day-090-optimal-merge-cost/sd",
+    "new": "days/day-090-optimal-merge-cost/sd_retention-and-audit"
+  },
+  {
+    "old": "days/day-090-optimal-merge-cost/lang",
+    "new": "days/day-090-optimal-merge-cost/lang_async-context-managers"
+  },
+  {
+    "old": "days/day-091-week-13-review/dsa",
+    "new": "days/day-091-week-13-review/dsa_week-13-dsa-review"
+  },
+  {
+    "old": "days/day-091-week-13-review/sd",
+    "new": "days/day-091-week-13-review/sd_week-13-design-review"
+  },
+  {
+    "old": "days/day-091-week-13-review/lang",
+    "new": "days/day-091-week-13-review/lang_week-13-python-review"
+  },
+  {
+    "old": "days/day-092-climbing-steps/dsa",
+    "new": "days/day-092-climbing-steps/dsa_climbing-steps"
+  },
+  {
+    "old": "days/day-092-climbing-steps/sd",
+    "new": "days/day-092-climbing-steps/sd_shortener-requirements"
+  },
+  {
+    "old": "days/day-092-climbing-steps/lang",
+    "new": "days/day-092-climbing-steps/lang_bounded-concurrency"
+  },
+  {
+    "old": "days/day-093-nonadjacent-loot/dsa",
+    "new": "days/day-093-nonadjacent-loot/dsa_nonadjacent-loot"
+  },
+  {
+    "old": "days/day-093-nonadjacent-loot/sd",
+    "new": "days/day-093-nonadjacent-loot/sd_shortener-api-and-data"
+  },
+  {
+    "old": "days/day-093-nonadjacent-loot/lang",
+    "new": "days/day-093-nonadjacent-loot/lang_async-queues"
+  },
+  {
+    "old": "days/day-094-minimum-coins/dsa",
+    "new": "days/day-094-minimum-coins/dsa_minimum-coins"
+  },
+  {
+    "old": "days/day-094-minimum-coins/sd",
+    "new": "days/day-094-minimum-coins/sd_shortener-capacity"
+  },
+  {
+    "old": "days/day-094-minimum-coins/lang",
+    "new": "days/day-094-minimum-coins/lang_task-failure"
+  },
+  {
+    "old": "days/day-095-coin-combinations/dsa",
+    "new": "days/day-095-coin-combinations/dsa_coin-combinations"
+  },
+  {
+    "old": "days/day-095-coin-combinations/sd",
+    "new": "days/day-095-coin-combinations/sd_shortener-architecture"
+  },
+  {
+    "old": "days/day-095-coin-combinations/lang",
+    "new": "days/day-095-coin-combinations/lang_context-variables"
+  },
+  {
+    "old": "days/day-096-increasing-subsequence/dsa",
+    "new": "days/day-096-increasing-subsequence/dsa_increasing-subsequence"
+  },
+  {
+    "old": "days/day-096-increasing-subsequence/sd",
+    "new": "days/day-096-increasing-subsequence/sd_shortener-deep-dive"
+  },
+  {
+    "old": "days/day-096-increasing-subsequence/lang",
+    "new": "days/day-096-increasing-subsequence/lang_offloading-blocking-work"
+  },
+  {
+    "old": "days/day-097-decode-digits/dsa",
+    "new": "days/day-097-decode-digits/dsa_decode-digits"
+  },
+  {
+    "old": "days/day-097-decode-digits/sd",
+    "new": "days/day-097-decode-digits/sd_shortener-failure-review"
+  },
+  {
+    "old": "days/day-097-decode-digits/lang",
+    "new": "days/day-097-decode-digits/lang_async-shutdown"
+  },
+  {
+    "old": "days/day-098-week-14-review/dsa",
+    "new": "days/day-098-week-14-review/dsa_week-14-dsa-review"
+  },
+  {
+    "old": "days/day-098-week-14-review/sd",
+    "new": "days/day-098-week-14-review/sd_week-14-design-review"
+  },
+  {
+    "old": "days/day-098-week-14-review/lang",
+    "new": "days/day-098-week-14-review/lang_week-14-python-review"
+  },
+  {
+    "old": "days/day-099-grid-path-count/dsa",
+    "new": "days/day-099-grid-path-count/dsa_grid-path-count"
+  },
+  {
+    "old": "days/day-099-grid-path-count/sd",
+    "new": "days/day-099-grid-path-count/sd_feed-requirements"
+  },
+  {
+    "old": "days/day-099-grid-path-count/lang",
+    "new": "days/day-099-grid-path-count/lang_thread-ownership"
+  },
+  {
+    "old": "days/day-100-minimum-grid-path/dsa",
+    "new": "days/day-100-minimum-grid-path/dsa_minimum-grid-path"
+  },
+  {
+    "old": "days/day-100-minimum-grid-path/sd",
+    "new": "days/day-100-minimum-grid-path/sd_feed-api-and-data"
+  },
+  {
+    "old": "days/day-100-minimum-grid-path/lang",
+    "new": "days/day-100-minimum-grid-path/lang_condition-signaling"
+  },
+  {
+    "old": "days/day-101-common-subsequence-length/dsa",
+    "new": "days/day-101-common-subsequence-length/dsa_common-subsequence-length"
+  },
+  {
+    "old": "days/day-101-common-subsequence-length/sd",
+    "new": "days/day-101-common-subsequence-length/sd_feed-capacity"
+  },
+  {
+    "old": "days/day-101-common-subsequence-length/lang",
+    "new": "days/day-101-common-subsequence-length/lang_thread-pools"
+  },
+  {
+    "old": "days/day-102-edit-distance/dsa",
+    "new": "days/day-102-edit-distance/dsa_edit-distance"
+  },
+  {
+    "old": "days/day-102-edit-distance/sd",
+    "new": "days/day-102-edit-distance/sd_feed-architecture"
+  },
+  {
+    "old": "days/day-102-edit-distance/lang",
+    "new": "days/day-102-edit-distance/lang_process-pools"
+  },
+  {
+    "old": "days/day-103-longest-palindrome-length/dsa",
+    "new": "days/day-103-longest-palindrome-length/dsa_longest-palindrome-length"
+  },
+  {
+    "old": "days/day-103-longest-palindrome-length/sd",
+    "new": "days/day-103-longest-palindrome-length/sd_feed-deep-dive"
+  },
+  {
+    "old": "days/day-103-longest-palindrome-length/lang",
+    "new": "days/day-103-longest-palindrome-length/lang_serialization-cost"
+  },
+  {
+    "old": "days/day-104-word-segmentation/dsa",
+    "new": "days/day-104-word-segmentation/dsa_word-segmentation"
+  },
+  {
+    "old": "days/day-104-word-segmentation/sd",
+    "new": "days/day-104-word-segmentation/sd_feed-failure-review"
+  },
+  {
+    "old": "days/day-104-word-segmentation/lang",
+    "new": "days/day-104-word-segmentation/lang_gil-boundaries"
+  },
+  {
+    "old": "days/day-105-week-15-review/dsa",
+    "new": "days/day-105-week-15-review/dsa_week-15-dsa-review"
+  },
+  {
+    "old": "days/day-105-week-15-review/sd",
+    "new": "days/day-105-week-15-review/sd_week-15-design-review"
+  },
+  {
+    "old": "days/day-105-week-15-review/lang",
+    "new": "days/day-105-week-15-review/lang_week-15-python-review"
+  },
+  {
+    "old": "days/day-106-zero-one-knapsack/dsa",
+    "new": "days/day-106-zero-one-knapsack/dsa_zero-one-knapsack"
+  },
+  {
+    "old": "days/day-106-zero-one-knapsack/sd",
+    "new": "days/day-106-zero-one-knapsack/sd_chat-requirements"
+  },
+  {
+    "old": "days/day-106-zero-one-knapsack/lang",
+    "new": "days/day-106-zero-one-knapsack/lang_measurement-design"
+  },
+  {
+    "old": "days/day-107-equal-partition/dsa",
+    "new": "days/day-107-equal-partition/dsa_equal-partition"
+  },
+  {
+    "old": "days/day-107-equal-partition/sd",
+    "new": "days/day-107-equal-partition/sd_chat-api-and-data"
+  },
+  {
+    "old": "days/day-107-equal-partition/lang",
+    "new": "days/day-107-equal-partition/lang_cpu-profiles"
+  },
+  {
+    "old": "days/day-108-signed-target-count/dsa",
+    "new": "days/day-108-signed-target-count/dsa_signed-target-count"
+  },
+  {
+    "old": "days/day-108-signed-target-count/sd",
+    "new": "days/day-108-signed-target-count/sd_chat-connections"
+  },
+  {
+    "old": "days/day-108-signed-target-count/lang",
+    "new": "days/day-108-signed-target-count/lang_allocation-tracing"
+  },
+  {
+    "old": "days/day-109-weighted-scheduling/dsa",
+    "new": "days/day-109-weighted-scheduling/dsa_weighted-scheduling"
+  },
+  {
+    "old": "days/day-109-weighted-scheduling/sd",
+    "new": "days/day-109-weighted-scheduling/sd_chat-architecture"
+  },
+  {
+    "old": "days/day-109-weighted-scheduling/lang",
+    "new": "days/day-109-weighted-scheduling/lang_reference-cycles"
+  },
+  {
+    "old": "days/day-110-matrix-chain-cost/dsa",
+    "new": "days/day-110-matrix-chain-cost/dsa_matrix-chain-cost"
+  },
+  {
+    "old": "days/day-110-matrix-chain-cost/sd",
+    "new": "days/day-110-matrix-chain-cost/sd_chat-deep-dive"
+  },
+  {
+    "old": "days/day-110-matrix-chain-cost/lang",
+    "new": "days/day-110-matrix-chain-cost/lang_weak-references"
+  },
+  {
+    "old": "days/day-111-visit-every-city/dsa",
+    "new": "days/day-111-visit-every-city/dsa_visit-every-city"
+  },
+  {
+    "old": "days/day-111-visit-every-city/sd",
+    "new": "days/day-111-visit-every-city/sd_chat-failure-review"
+  },
+  {
+    "old": "days/day-111-visit-every-city/lang",
+    "new": "days/day-111-visit-every-city/lang_optimization-memo"
+  },
+  {
+    "old": "days/day-112-week-16-review/dsa",
+    "new": "days/day-112-week-16-review/dsa_week-16-dsa-review"
+  },
+  {
+    "old": "days/day-112-week-16-review/sd",
+    "new": "days/day-112-week-16-review/sd_week-16-design-review"
+  },
+  {
+    "old": "days/day-112-week-16-review/lang",
+    "new": "days/day-112-week-16-review/lang_week-16-python-review"
+  },
+  {
+    "old": "days/day-113-single-unmatched-value/dsa",
+    "new": "days/day-113-single-unmatched-value/dsa_single-unmatched-value"
+  },
+  {
+    "old": "days/day-113-single-unmatched-value/sd",
+    "new": "days/day-113-single-unmatched-value/sd_upload-requirements"
+  },
+  {
+    "old": "days/day-113-single-unmatched-value/lang",
+    "new": "days/day-113-single-unmatched-value/lang_path-handling"
+  },
+  {
+    "old": "days/day-114-set-bit-counts/dsa",
+    "new": "days/day-114-set-bit-counts/dsa_set-bit-counts"
+  },
+  {
+    "old": "days/day-114-set-bit-counts/sd",
+    "new": "days/day-114-set-bit-counts/sd_upload-api-and-metadata"
+  },
+  {
+    "old": "days/day-114-set-bit-counts/lang",
+    "new": "days/day-114-set-bit-counts/lang_unicode-normalization"
+  },
+  {
+    "old": "days/day-115-modular-power/dsa",
+    "new": "days/day-115-modular-power/dsa_modular-power"
+  },
+  {
+    "old": "days/day-115-modular-power/sd",
+    "new": "days/day-115-modular-power/sd_upload-capacity"
+  },
+  {
+    "old": "days/day-115-modular-power/lang",
+    "new": "days/day-115-modular-power/lang_binary-interfaces"
+  },
+  {
+    "old": "days/day-116-primes-below-a-bound/dsa",
+    "new": "days/day-116-primes-below-a-bound/dsa_primes-below-a-bound"
+  },
+  {
+    "old": "days/day-116-primes-below-a-bound/sd",
+    "new": "days/day-116-primes-below-a-bound/sd_upload-architecture"
+  },
+  {
+    "old": "days/day-116-primes-below-a-bound/lang",
+    "new": "days/day-116-primes-below-a-bound/lang_json-boundaries"
+  },
+  {
+    "old": "days/day-117-mutable-range-sums/dsa",
+    "new": "days/day-117-mutable-range-sums/dsa_mutable-range-sums"
+  },
+  {
+    "old": "days/day-117-mutable-range-sums/sd",
+    "new": "days/day-117-mutable-range-sums/sd_upload-deep-dive"
+  },
+  {
+    "old": "days/day-117-mutable-range-sums/lang",
+    "new": "days/day-117-mutable-range-sums/lang_decimal-arithmetic"
+  },
+  {
+    "old": "days/day-118-mutable-range-minima/dsa",
+    "new": "days/day-118-mutable-range-minima/dsa_mutable-range-minima"
+  },
+  {
+    "old": "days/day-118-mutable-range-minima/sd",
+    "new": "days/day-118-mutable-range-minima/sd_upload-failure-review"
+  },
+  {
+    "old": "days/day-118-mutable-range-minima/lang",
+    "new": "days/day-118-mutable-range-minima/lang_timezone-handling"
+  },
+  {
+    "old": "days/day-119-week-17-review/dsa",
+    "new": "days/day-119-week-17-review/dsa_week-17-dsa-review"
+  },
+  {
+    "old": "days/day-119-week-17-review/sd",
+    "new": "days/day-119-week-17-review/sd_week-17-design-review"
+  },
+  {
+    "old": "days/day-119-week-17-review/lang",
+    "new": "days/day-119-week-17-review/lang_week-17-python-review"
+  },
+  {
+    "old": "days/day-120-normalize-text-units/dsa",
+    "new": "days/day-120-normalize-text-units/dsa_normalize-text-units"
+  },
+  {
+    "old": "days/day-120-normalize-text-units/sd",
+    "new": "days/day-120-normalize-text-units/sd_search-requirements"
+  },
+  {
+    "old": "days/day-120-normalize-text-units/lang",
+    "new": "days/day-120-normalize-text-units/lang_sqlite-transactions"
+  },
+  {
+    "old": "days/day-121-prefix-border-lengths/dsa",
+    "new": "days/day-121-prefix-border-lengths/dsa_prefix-border-lengths"
+  },
+  {
+    "old": "days/day-121-prefix-border-lengths/sd",
+    "new": "days/day-121-prefix-border-lengths/sd_search-indexing"
+  },
+  {
+    "old": "days/day-121-prefix-border-lengths/lang",
+    "new": "days/day-121-prefix-border-lengths/lang_csv-streaming"
+  },
+  {
+    "old": "days/day-122-find-all-pattern-matches/dsa",
+    "new": "days/day-122-find-all-pattern-matches/dsa_find-all-pattern-matches"
+  },
+  {
+    "old": "days/day-122-find-all-pattern-matches/sd",
+    "new": "days/day-122-find-all-pattern-matches/sd_search-query-path"
+  },
+  {
+    "old": "days/day-122-find-all-pattern-matches/lang",
+    "new": "days/day-122-find-all-pattern-matches/lang_atomic-replacement"
+  },
+  {
+    "old": "days/day-123-rolling-hash-matching/dsa",
+    "new": "days/day-123-rolling-hash-matching/dsa_rolling-hash-matching"
+  },
+  {
+    "old": "days/day-123-rolling-hash-matching/sd",
+    "new": "days/day-123-rolling-hash-matching/sd_notification-requirements"
+  },
+  {
+    "old": "days/day-123-rolling-hash-matching/lang",
+    "new": "days/day-123-rolling-hash-matching/lang_subprocess-contracts"
+  },
+  {
+    "old": "days/day-124-smallest-covering-window/dsa",
+    "new": "days/day-124-smallest-covering-window/dsa_smallest-covering-window"
+  },
+  {
+    "old": "days/day-124-smallest-covering-window/sd",
+    "new": "days/day-124-smallest-covering-window/sd_notification-architecture"
+  },
+  {
+    "old": "days/day-124-smallest-covering-window/lang",
+    "new": "days/day-124-smallest-covering-window/lang_untrusted-serialization"
+  },
+  {
+    "old": "days/day-125-dictionary-wildcard-search/dsa",
+    "new": "days/day-125-dictionary-wildcard-search/dsa_dictionary-wildcard-search"
+  },
+  {
+    "old": "days/day-125-dictionary-wildcard-search/sd",
+    "new": "days/day-125-dictionary-wildcard-search/sd_notification-failure-review"
+  },
+  {
+    "old": "days/day-125-dictionary-wildcard-search/lang",
+    "new": "days/day-125-dictionary-wildcard-search/lang_resource-limits"
+  },
+  {
+    "old": "days/day-126-week-18-review/dsa",
+    "new": "days/day-126-week-18-review/dsa_week-18-dsa-review"
+  },
+  {
+    "old": "days/day-126-week-18-review/sd",
+    "new": "days/day-126-week-18-review/sd_week-18-design-review"
+  },
+  {
+    "old": "days/day-126-week-18-review/lang",
+    "new": "days/day-126-week-18-review/lang_week-18-python-review"
+  },
+  {
+    "old": "days/day-127-longest-dag-path/dsa",
+    "new": "days/day-127-longest-dag-path/dsa_longest-dag-path"
+  },
+  {
+    "old": "days/day-127-longest-dag-path/sd",
+    "new": "days/day-127-longest-dag-path/sd_reservation-invariants"
+  },
+  {
+    "old": "days/day-127-longest-dag-path/lang",
+    "new": "days/day-127-longest-dag-path/lang_import-execution"
+  },
+  {
+    "old": "days/day-128-minimum-effort-grid-route/dsa",
+    "new": "days/day-128-minimum-effort-grid-route/dsa_minimum-effort-grid-route"
+  },
+  {
+    "old": "days/day-128-minimum-effort-grid-route/sd",
+    "new": "days/day-128-minimum-effort-grid-route/sd_reservation-data"
+  },
+  {
+    "old": "days/day-128-minimum-effort-grid-route/lang",
+    "new": "days/day-128-minimum-effort-grid-route/lang_circular-imports"
+  },
+  {
+    "old": "days/day-129-redundant-undirected-edge/dsa",
+    "new": "days/day-129-redundant-undirected-edge/dsa_redundant-undirected-edge"
+  },
+  {
+    "old": "days/day-129-redundant-undirected-edge/sd",
+    "new": "days/day-129-redundant-undirected-edge/sd_payment-idempotency"
+  },
+  {
+    "old": "days/day-129-redundant-undirected-edge/lang",
+    "new": "days/day-129-redundant-undirected-edge/lang_entry-points"
+  },
+  {
+    "old": "days/day-130-subtree-sizes/dsa",
+    "new": "days/day-130-subtree-sizes/dsa_subtree-sizes"
+  },
+  {
+    "old": "days/day-130-subtree-sizes/sd",
+    "new": "days/day-130-subtree-sizes/sd_transactional-outbox"
+  },
+  {
+    "old": "days/day-130-subtree-sizes/lang",
+    "new": "days/day-130-subtree-sizes/lang_package-layout"
+  },
+  {
+    "old": "days/day-131-tree-distance-sums/dsa",
+    "new": "days/day-131-tree-distance-sums/dsa_tree-distance-sums"
+  },
+  {
+    "old": "days/day-131-tree-distance-sums/sd",
+    "new": "days/day-131-tree-distance-sums/sd_compensation-workflow"
+  },
+  {
+    "old": "days/day-131-tree-distance-sums/lang",
+    "new": "days/day-131-tree-distance-sums/lang_environment-isolation"
+  },
+  {
+    "old": "days/day-132-bipartite-matching/dsa",
+    "new": "days/day-132-bipartite-matching/dsa_bipartite-matching"
+  },
+  {
+    "old": "days/day-132-bipartite-matching/sd",
+    "new": "days/day-132-bipartite-matching/sd_reconciliation"
+  },
+  {
+    "old": "days/day-132-bipartite-matching/lang",
+    "new": "days/day-132-bipartite-matching/lang_dependency-policy"
+  },
+  {
+    "old": "days/day-133-week-19-review/dsa",
+    "new": "days/day-133-week-19-review/dsa_week-19-dsa-review"
+  },
+  {
+    "old": "days/day-133-week-19-review/sd",
+    "new": "days/day-133-week-19-review/sd_week-19-design-review"
+  },
+  {
+    "old": "days/day-133-week-19-review/lang",
+    "new": "days/day-133-week-19-review/lang_week-19-python-review"
+  },
+  {
+    "old": "days/day-134-time-indexed-values/dsa",
+    "new": "days/day-134-time-indexed-values/dsa_time-indexed-values"
+  },
+  {
+    "old": "days/day-134-time-indexed-values/sd",
+    "new": "days/day-134-time-indexed-values/sd_analytics-requirements"
+  },
+  {
+    "old": "days/day-134-time-indexed-values/lang",
+    "new": "days/day-134-time-indexed-values/lang_structured-logs"
+  },
+  {
+    "old": "days/day-135-frequency-stack/dsa",
+    "new": "days/day-135-frequency-stack/dsa_frequency-stack"
+  },
+  {
+    "old": "days/day-135-frequency-stack/sd",
+    "new": "days/day-135-frequency-stack/sd_event-time"
+  },
+  {
+    "old": "days/day-135-frequency-stack/lang",
+    "new": "days/day-135-frequency-stack/lang_configuration"
+  },
+  {
+    "old": "days/day-136-least-frequently-used-cache/dsa",
+    "new": "days/day-136-least-frequently-used-cache/dsa_least-frequently-used-cache"
+  },
+  {
+    "old": "days/day-136-least-frequently-used-cache/sd",
+    "new": "days/day-136-least-frequently-used-cache/sd_aggregation-windows"
+  },
+  {
+    "old": "days/day-136-least-frequently-used-cache/lang",
+    "new": "days/day-136-least-frequently-used-cache/lang_retry-wrapper"
+  },
+  {
+    "old": "days/day-137-order-statistic-stream/dsa",
+    "new": "days/day-137-order-statistic-stream/dsa_order-statistic-stream"
+  },
+  {
+    "old": "days/day-137-order-statistic-stream/sd",
+    "new": "days/day-137-order-statistic-stream/sd_partitioned-aggregation"
+  },
+  {
+    "old": "days/day-137-order-statistic-stream/lang",
+    "new": "days/day-137-order-statistic-stream/lang_idempotent-handler"
+  },
+  {
+    "old": "days/day-138-expiring-counter/dsa",
+    "new": "days/day-138-expiring-counter/dsa_expiring-counter"
+  },
+  {
+    "old": "days/day-138-expiring-counter/sd",
+    "new": "days/day-138-expiring-counter/sd_approximate-answers"
+  },
+  {
+    "old": "days/day-138-expiring-counter/lang",
+    "new": "days/day-138-expiring-counter/lang_shutdown-hooks"
+  },
+  {
+    "old": "days/day-139-autocomplete-ranking/dsa",
+    "new": "days/day-139-autocomplete-ranking/dsa_autocomplete-ranking"
+  },
+  {
+    "old": "days/day-139-autocomplete-ranking/sd",
+    "new": "days/day-139-autocomplete-ranking/sd_replay-and-rebuild"
+  },
+  {
+    "old": "days/day-139-autocomplete-ranking/lang",
+    "new": "days/day-139-autocomplete-ranking/lang_error-taxonomy"
+  },
+  {
+    "old": "days/day-140-week-20-review/dsa",
+    "new": "days/day-140-week-20-review/dsa_week-20-dsa-review"
+  },
+  {
+    "old": "days/day-140-week-20-review/sd",
+    "new": "days/day-140-week-20-review/sd_week-20-design-review"
+  },
+  {
+    "old": "days/day-140-week-20-review/lang",
+    "new": "days/day-140-week-20-review/lang_week-20-python-review"
+  },
+  {
+    "old": "days/day-141-product-except-self/dsa",
+    "new": "days/day-141-product-except-self/dsa_product-except-self"
+  },
+  {
+    "old": "days/day-141-product-except-self/sd",
+    "new": "days/day-141-product-except-self/sd_regional-topology"
+  },
+  {
+    "old": "days/day-141-product-except-self/lang",
+    "new": "days/day-141-product-except-self/lang_bytecode-inspection"
+  },
+  {
+    "old": "days/day-142-longest-consecutive-run/dsa",
+    "new": "days/day-142-longest-consecutive-run/dsa_longest-consecutive-run"
+  },
+  {
+    "old": "days/day-142-longest-consecutive-run/sd",
+    "new": "days/day-142-longest-consecutive-run/sd_recovery-objectives"
+  },
+  {
+    "old": "days/day-142-longest-consecutive-run/lang",
+    "new": "days/day-142-longest-consecutive-run/lang_object-sizes"
+  },
+  {
+    "old": "days/day-143-trapped-rainwater/dsa",
+    "new": "days/day-143-trapped-rainwater/dsa_trapped-rainwater"
+  },
+  {
+    "old": "days/day-143-trapped-rainwater/sd",
+    "new": "days/day-143-trapped-rainwater/sd_conflict-resolution"
+  },
+  {
+    "old": "days/day-143-trapped-rainwater/lang",
+    "new": "days/day-143-trapped-rainwater/lang_name-resolution"
+  },
+  {
+    "old": "days/day-144-top-frequent-words/dsa",
+    "new": "days/day-144-top-frequent-words/dsa_top-frequent-words"
+  },
+  {
+    "old": "days/day-144-top-frequent-words/sd",
+    "new": "days/day-144-top-frequent-words/sd_data-placement"
+  },
+  {
+    "old": "days/day-144-top-frequent-words/lang",
+    "new": "days/day-144-top-frequent-words/lang_special-method-lookup"
+  },
+  {
+    "old": "days/day-145-rotated-minimum-with-duplicates/dsa",
+    "new": "days/day-145-rotated-minimum-with-duplicates/dsa_rotated-minimum-with-duplicates"
+  },
+  {
+    "old": "days/day-145-rotated-minimum-with-duplicates/sd",
+    "new": "days/day-145-rotated-minimum-with-duplicates/sd_disaster-recovery-drill"
+  },
+  {
+    "old": "days/day-145-rotated-minimum-with-duplicates/lang",
+    "new": "days/day-145-rotated-minimum-with-duplicates/lang_version-compatibility"
+  },
+  {
+    "old": "days/day-146-find-duplicate-without-mutation/dsa",
+    "new": "days/day-146-find-duplicate-without-mutation/dsa_find-duplicate-without-mutation"
+  },
+  {
+    "old": "days/day-146-find-duplicate-without-mutation/sd",
+    "new": "days/day-146-find-duplicate-without-mutation/sd_migration-strategy"
+  },
+  {
+    "old": "days/day-146-find-duplicate-without-mutation/lang",
+    "new": "days/day-146-find-duplicate-without-mutation/lang_implementation-portability"
+  },
+  {
+    "old": "days/day-147-week-21-review/dsa",
+    "new": "days/day-147-week-21-review/dsa_week-21-dsa-review"
+  },
+  {
+    "old": "days/day-147-week-21-review/sd",
+    "new": "days/day-147-week-21-review/sd_week-21-design-review"
+  },
+  {
+    "old": "days/day-147-week-21-review/lang",
+    "new": "days/day-147-week-21-review/lang_week-21-python-review"
+  },
+  {
+    "old": "days/day-148-interleaved-strings/dsa",
+    "new": "days/day-148-interleaved-strings/dsa_interleaved-strings"
+  },
+  {
+    "old": "days/day-148-interleaved-strings/sd",
+    "new": "days/day-148-interleaved-strings/sd_responsibilities"
+  },
+  {
+    "old": "days/day-148-interleaved-strings/lang",
+    "new": "days/day-148-interleaved-strings/lang_api-simplification"
+  },
+  {
+    "old": "days/day-149-course-completion-time/dsa",
+    "new": "days/day-149-course-completion-time/dsa_course-completion-time"
+  },
+  {
+    "old": "days/day-149-course-completion-time/sd",
+    "new": "days/day-149-course-completion-time/sd_state-machines"
+  },
+  {
+    "old": "days/day-149-course-completion-time/lang",
+    "new": "days/day-149-course-completion-time/lang_hidden-state"
+  },
+  {
+    "old": "days/day-150-maximum-path-sum/dsa",
+    "new": "days/day-150-maximum-path-sum/dsa_maximum-path-sum"
+  },
+  {
+    "old": "days/day-150-maximum-path-sum/sd",
+    "new": "days/day-150-maximum-path-sum/sd_dependency-inversion"
+  },
+  {
+    "old": "days/day-150-maximum-path-sum/lang",
+    "new": "days/day-150-maximum-path-sum/lang_mutable-ownership-review"
+  },
+  {
+    "old": "days/day-151-smallest-missing-positive/dsa",
+    "new": "days/day-151-smallest-missing-positive/dsa_smallest-missing-positive"
+  },
+  {
+    "old": "days/day-151-smallest-missing-positive/sd",
+    "new": "days/day-151-smallest-missing-positive/sd_concurrency-contracts"
+  },
+  {
+    "old": "days/day-151-smallest-missing-positive/lang",
+    "new": "days/day-151-smallest-missing-positive/lang_concurrency-review"
+  },
+  {
+    "old": "days/day-152-shortest-subarray-with-negatives/dsa",
+    "new": "days/day-152-shortest-subarray-with-negatives/dsa_shortest-subarray-with-negatives"
+  },
+  {
+    "old": "days/day-152-shortest-subarray-with-negatives/sd",
+    "new": "days/day-152-shortest-subarray-with-negatives/sd_extensibility"
+  },
+  {
+    "old": "days/day-152-shortest-subarray-with-negatives/lang",
+    "new": "days/day-152-shortest-subarray-with-negatives/lang_typing-review"
+  },
+  {
+    "old": "days/day-153-minimum-interval-for-queries/dsa",
+    "new": "days/day-153-minimum-interval-for-queries/dsa_minimum-interval-for-queries"
+  },
+  {
+    "old": "days/day-153-minimum-interval-for-queries/sd",
+    "new": "days/day-153-minimum-interval-for-queries/sd_design-review"
+  },
+  {
+    "old": "days/day-153-minimum-interval-for-queries/lang",
+    "new": "days/day-153-minimum-interval-for-queries/lang_performance-review"
+  },
+  {
+    "old": "days/day-154-week-22-review/dsa",
+    "new": "days/day-154-week-22-review/dsa_week-22-dsa-review"
+  },
+  {
+    "old": "days/day-154-week-22-review/sd",
+    "new": "days/day-154-week-22-review/sd_week-22-design-review"
+  },
+  {
+    "old": "days/day-154-week-22-review/lang",
+    "new": "days/day-154-week-22-review/lang_week-22-python-review"
+  },
+  {
+    "old": "days/day-155-mock-arrays/dsa",
+    "new": "days/day-155-mock-arrays/dsa_mock-arrays"
+  },
+  {
+    "old": "days/day-155-mock-arrays/sd",
+    "new": "days/day-155-mock-arrays/sd_mock-requirements-round"
+  },
+  {
+    "old": "days/day-155-mock-arrays/lang",
+    "new": "days/day-155-mock-arrays/lang_semantics-drill"
+  },
+  {
+    "old": "days/day-156-mock-search/dsa",
+    "new": "days/day-156-mock-search/dsa_mock-search"
+  },
+  {
+    "old": "days/day-156-mock-search/sd",
+    "new": "days/day-156-mock-search/sd_mock-architecture-round"
+  },
+  {
+    "old": "days/day-156-mock-search/lang",
+    "new": "days/day-156-mock-search/lang_protocol-drill"
+  },
+  {
+    "old": "days/day-157-mock-graph/dsa",
+    "new": "days/day-157-mock-graph/dsa_mock-graph"
+  },
+  {
+    "old": "days/day-157-mock-graph/sd",
+    "new": "days/day-157-mock-graph/sd_mock-deep-dive"
+  },
+  {
+    "old": "days/day-157-mock-graph/lang",
+    "new": "days/day-157-mock-graph/lang_typing-drill"
+  },
+  {
+    "old": "days/day-158-mock-dp/dsa",
+    "new": "days/day-158-mock-dp/dsa_mock-dp"
+  },
+  {
+    "old": "days/day-158-mock-dp/sd",
+    "new": "days/day-158-mock-dp/sd_mock-alternative"
+  },
+  {
+    "old": "days/day-158-mock-dp/lang",
+    "new": "days/day-158-mock-dp/lang_concurrency-drill"
+  },
+  {
+    "old": "days/day-159-mock-heap/dsa",
+    "new": "days/day-159-mock-heap/dsa_mock-heap"
+  },
+  {
+    "old": "days/day-159-mock-heap/sd",
+    "new": "days/day-159-mock-heap/sd_critique-round"
+  },
+  {
+    "old": "days/day-159-mock-heap/lang",
+    "new": "days/day-159-mock-heap/lang_debugging-drill"
+  },
+  {
+    "old": "days/day-160-mock-backtracking/dsa",
+    "new": "days/day-160-mock-backtracking/dsa_mock-backtracking"
+  },
+  {
+    "old": "days/day-160-mock-backtracking/sd",
+    "new": "days/day-160-mock-backtracking/sd_repair-round"
+  },
+  {
+    "old": "days/day-160-mock-backtracking/lang",
+    "new": "days/day-160-mock-backtracking/lang_review-drill"
+  },
+  {
+    "old": "days/day-161-week-23-review/dsa",
+    "new": "days/day-161-week-23-review/dsa_week-23-dsa-review"
+  },
+  {
+    "old": "days/day-161-week-23-review/sd",
+    "new": "days/day-161-week-23-review/sd_week-23-design-review"
+  },
+  {
+    "old": "days/day-161-week-23-review/lang",
+    "new": "days/day-161-week-23-review/lang_week-23-python-review"
+  },
+  {
+    "old": "days/day-162-routing-capstone/dsa",
+    "new": "days/day-162-routing-capstone/dsa_routing-capstone"
+  },
+  {
+    "old": "days/day-162-routing-capstone/sd",
+    "new": "days/day-162-routing-capstone/sd_capstone-brief"
+  },
+  {
+    "old": "days/day-162-routing-capstone/lang",
+    "new": "days/day-162-routing-capstone/lang_capstone-interface"
+  },
+  {
+    "old": "days/day-163-scheduling-capstone/dsa",
+    "new": "days/day-163-scheduling-capstone/dsa_scheduling-capstone"
+  },
+  {
+    "old": "days/day-163-scheduling-capstone/sd",
+    "new": "days/day-163-scheduling-capstone/sd_capstone-architecture"
+  },
+  {
+    "old": "days/day-163-scheduling-capstone/lang",
+    "new": "days/day-163-scheduling-capstone/lang_capstone-generator"
+  },
+  {
+    "old": "days/day-164-search-capstone/dsa",
+    "new": "days/day-164-search-capstone/dsa_search-capstone"
+  },
+  {
+    "old": "days/day-164-search-capstone/sd",
+    "new": "days/day-164-search-capstone/sd_capstone-consistency"
+  },
+  {
+    "old": "days/day-164-search-capstone/lang",
+    "new": "days/day-164-search-capstone/lang_capstone-execution"
+  },
+  {
+    "old": "days/day-165-range-capstone/dsa",
+    "new": "days/day-165-range-capstone/dsa_range-capstone"
+  },
+  {
+    "old": "days/day-165-range-capstone/sd",
+    "new": "days/day-165-range-capstone/sd_capstone-resilience"
+  },
+  {
+    "old": "days/day-165-range-capstone/lang",
+    "new": "days/day-165-range-capstone/lang_capstone-tests"
+  },
+  {
+    "old": "days/day-166-counterexample-capstone/dsa",
+    "new": "days/day-166-counterexample-capstone/dsa_counterexample-capstone"
+  },
+  {
+    "old": "days/day-166-counterexample-capstone/sd",
+    "new": "days/day-166-counterexample-capstone/sd_capstone-tradeoffs"
+  },
+  {
+    "old": "days/day-166-counterexample-capstone/lang",
+    "new": "days/day-166-counterexample-capstone/lang_capstone-profile"
+  },
+  {
+    "old": "days/day-167-final-independent-problem/dsa",
+    "new": "days/day-167-final-independent-problem/dsa_final-independent-problem"
+  },
+  {
+    "old": "days/day-167-final-independent-problem/sd",
+    "new": "days/day-167-final-independent-problem/sd_final-defense"
+  },
+  {
+    "old": "days/day-167-final-independent-problem/lang",
+    "new": "days/day-167-final-independent-problem/lang_final-explanation"
+  },
+  {
+    "old": "days/day-168-week-24-review/dsa",
+    "new": "days/day-168-week-24-review/dsa_week-24-dsa-review"
+  },
+  {
+    "old": "days/day-168-week-24-review/sd",
+    "new": "days/day-168-week-24-review/sd_week-24-design-review"
+  },
+  {
+    "old": "days/day-168-week-24-review/lang",
+    "new": "days/day-168-week-24-review/lang_week-24-python-review"
+  }
+]

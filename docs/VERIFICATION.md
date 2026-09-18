@@ -22,3 +22,15 @@ no written full chapters: this deliverable contains assignment hubs and practice
 not the optional eleven-section Granth teaching chapters. Example fixtures are smoke checks;
 the learner adds adversarial cases as part of each DSA practice session. No benchmark or
 system-design workload estimate is represented as a measured production result.
+
+## v1.1.0 update — 2026-09-19
+
+- Renamed all 504 subject folders to track plus topic; retained all day numbers and objective IDs.
+- Compared SHA256 values after migration: all 1,176 protected learner files remained byte-identical.
+- Added 168 LeetCode guides: one companion on each topic day and two prior companions on each review day.
+- Linked 140 distinct problems. Verified 138 public problem records; confirmed title/access gates for two Premium companions with local alternatives. Jump Game was verified through its official description URL after its base URL timed out.
+- `python course.py check`, `python granth.py doctor` and `python granth.py check` passed.
+- Regenerated 173 Granth index documents at v1.1.0.
+- All seven course-tool tests passed, including stable track aliases and rejection of a manifest path escaping its subject folder.
+- `python course.py practice 10` reached the renamed directory and failed on the untouched `NotImplementedError` starter, as expected.
+- Track progress remains unchanged. No learner exercise was solved and no commit was created.

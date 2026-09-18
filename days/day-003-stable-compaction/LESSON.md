@@ -4,7 +4,7 @@ phase: 1
 title: "Stable compaction"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-03, SD-03, PY-03; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Stable compaction](dsa/README.md) |
-| System design | 30 minutes | [Traffic estimates](sd/README.md) |
-| Python | 15 minutes | [Mutable defaults](lang/README.md) |
+| DSA | 60 minutes | [Stable compaction](dsa_stable-compaction/README.md) |
+| System design | 30 minutes | [Traffic estimates](sd_traffic-estimates/README.md) |
+| Python | 15 minutes | [Mutable defaults](lang_mutable-defaults/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

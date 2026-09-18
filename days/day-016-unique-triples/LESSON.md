@@ -4,7 +4,7 @@ phase: 3
 title: "Unique triples"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-16, SD-16, PY-16; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Unique triples](dsa/README.md) |
-| System design | 30 minutes | [API contract](sd/README.md) |
-| Python | 15 minutes | [Generator laziness](lang/README.md) |
+| DSA | 60 minutes | [Unique triples](dsa_unique-triples/README.md) |
+| System design | 30 minutes | [API contract](sd_api-contract/README.md) |
+| Python | 15 minutes | [Generator laziness](lang_generator-laziness/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

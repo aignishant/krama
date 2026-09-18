@@ -4,7 +4,7 @@ phase: 18
 title: "Prefix border lengths"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-121, SD-121, PY-121; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Prefix border lengths](dsa/README.md) |
-| System design | 30 minutes | [Search indexing](sd/README.md) |
-| Python | 15 minutes | [CSV streaming](lang/README.md) |
+| DSA | 60 minutes | [Prefix border lengths](dsa_prefix-border-lengths/README.md) |
+| System design | 30 minutes | [Search indexing](sd_search-indexing/README.md) |
+| Python | 15 minutes | [CSV streaming](lang_csv-streaming/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

@@ -13,7 +13,25 @@
       "SD-01",
       "PY-01"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_count-target-values",
+      "sd": "sd_functional-scope",
+      "lang": "lang_identity-and-equality"
+    },
+    "leetcode": [
+      {
+        "number": 1365,
+        "title": "How Many Numbers Are Smaller Than the Current Number",
+        "slug": "how-many-numbers-are-smaller-than-the-current-number",
+        "url": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+        "premium": false,
+        "note": "Related counting drill: the online problem counts smaller values for each position, not occurrences of one target.",
+        "source_day": 1,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 2,
@@ -29,7 +47,25 @@
       "SD-02",
       "PY-02"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_find-the-first-maximum",
+      "sd": "sd_quality-requirements",
+      "lang": "lang_shallow-and-deep-copies"
+    },
+    "leetcode": [
+      {
+        "number": 747,
+        "title": "Largest Number At Least Twice of Others",
+        "slug": "largest-number-at-least-twice-of-others",
+        "url": "https://leetcode.com/problems/largest-number-at-least-twice-of-others/",
+        "premium": false,
+        "note": "Related maximum-scan drill: the online problem adds a dominance condition; the local task asks only for the first maximum.",
+        "source_day": 2,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 3,
@@ -45,7 +81,25 @@
       "SD-03",
       "PY-03"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_stable-compaction",
+      "sd": "sd_traffic-estimates",
+      "lang": "lang_mutable-defaults"
+    },
+    "leetcode": [
+      {
+        "number": 283,
+        "title": "Move Zeroes",
+        "slug": "move-zeroes",
+        "url": "https://leetcode.com/problems/move-zeroes/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 3,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 4,
@@ -61,7 +115,25 @@
       "SD-04",
       "PY-04"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_reverse-a-segment",
+      "sd": "sd_storage-estimates",
+      "lang": "lang_hash-and-equality"
+    },
+    "leetcode": [
+      {
+        "number": 344,
+        "title": "Reverse String",
+        "slug": "reverse-string",
+        "url": "https://leetcode.com/problems/reverse-string/",
+        "premium": false,
+        "note": "Related pointer drill: reverse an entire character array in place online; the local task reverses an integer segment.",
+        "source_day": 4,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 5,
@@ -77,7 +149,25 @@
       "SD-05",
       "PY-05"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_merge-sorted-arrays",
+      "sd": "sd_latency-budgets",
+      "lang": "lang_truth-and-sentinels"
+    },
+    "leetcode": [
+      {
+        "number": 88,
+        "title": "Merge Sorted Array",
+        "slug": "merge-sorted-array",
+        "url": "https://leetcode.com/problems/merge-sorted-array/",
+        "premium": false,
+        "note": "Online uses a preallocated destination array; local practice returns a new merged list.",
+        "source_day": 5,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 6,
@@ -93,7 +183,25 @@
       "SD-06",
       "PY-06"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_best-single-trade",
+      "sd": "sd_single-node-baseline",
+      "lang": "lang_mutation-contracts"
+    },
+    "leetcode": [
+      {
+        "number": 121,
+        "title": "Best Time to Buy and Sell Stock",
+        "slug": "best-time-to-buy-and-sell-stock",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 6,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 7,
@@ -109,7 +217,36 @@
       "SD-07",
       "PY-07"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-1-dsa-review",
+      "sd": "sd_week-1-design-review",
+      "lang": "lang_week-1-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 1365,
+        "title": "How Many Numbers Are Smaller Than the Current Number",
+        "slug": "how-many-numbers-are-smaller-than-the-current-number",
+        "url": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+        "premium": false,
+        "note": "Related counting drill: the online problem counts smaller values for each position, not occurrences of one target.",
+        "source_day": 1,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 88,
+        "title": "Merge Sorted Array",
+        "slug": "merge-sorted-array",
+        "url": "https://leetcode.com/problems/merge-sorted-array/",
+        "premium": false,
+        "note": "Online uses a preallocated destination array; local practice returns a new merged list.",
+        "source_day": 5,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 8,
@@ -125,7 +262,25 @@
       "SD-08",
       "PY-08"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_first-repeated-value",
+      "sd": "sd_request-journey",
+      "lang": "lang_argument-binding"
+    },
+    "leetcode": [
+      {
+        "number": 217,
+        "title": "Contains Duplicate",
+        "slug": "contains-duplicate",
+        "url": "https://leetcode.com/problems/contains-duplicate/",
+        "premium": false,
+        "note": "Online returns a boolean for any duplicate; local practice returns the first value whose second occurrence is encountered.",
+        "source_day": 8,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 9,
@@ -141,7 +296,25 @@
       "SD-09",
       "PY-09"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_frequency-ranking",
+      "sd": "sd_http-methods",
+      "lang": "lang_closure-binding"
+    },
+    "leetcode": [
+      {
+        "number": 347,
+        "title": "Top K Frequent Elements",
+        "slug": "top-k-frequent-elements",
+        "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+        "premium": false,
+        "note": "Online asks for top k frequencies; local practice ranks all distinct integers with an explicit tie rule.",
+        "source_day": 9,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 10,
@@ -157,7 +330,25 @@
       "SD-10",
       "PY-10"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_pair-sum-indices",
+      "sd": "sd_idempotency-semantics",
+      "lang": "lang_nonlocal-state"
+    },
+    "leetcode": [
+      {
+        "number": 1,
+        "title": "Two Sum",
+        "slug": "two-sum",
+        "url": "https://leetcode.com/problems/two-sum/",
+        "premium": false,
+        "note": "Online guarantees one solution and permits either answer order. Local practice allows no/multiple solutions and requires the lexicographically smallest [i,j].",
+        "source_day": 10,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 11,
@@ -173,7 +364,25 @@
       "SD-11",
       "PY-11"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_group-anagrams",
+      "sd": "sd_connection-budgets",
+      "lang": "lang_decorator-metadata"
+    },
+    "leetcode": [
+      {
+        "number": 49,
+        "title": "Group Anagrams",
+        "slug": "group-anagrams",
+        "url": "https://leetcode.com/problems/group-anagrams/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 11,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 12,
@@ -189,7 +398,25 @@
       "SD-12",
       "PY-12"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_range-sums",
+      "sd": "sd_timeout-propagation",
+      "lang": "lang_decorator-arguments"
+    },
+    "leetcode": [
+      {
+        "number": 303,
+        "title": "Range Sum Query - Immutable",
+        "slug": "range-sum-query-immutable",
+        "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 12,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 13,
@@ -205,7 +432,25 @@
       "SD-13",
       "PY-13"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_count-target-subarrays",
+      "sd": "sd_pagination",
+      "lang": "lang_partial-application"
+    },
+    "leetcode": [
+      {
+        "number": 560,
+        "title": "Subarray Sum Equals K",
+        "slug": "subarray-sum-equals-k",
+        "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 13,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 14,
@@ -221,7 +466,36 @@
       "SD-14",
       "PY-14"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-2-dsa-review",
+      "sd": "sd_week-2-design-review",
+      "lang": "lang_week-2-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 217,
+        "title": "Contains Duplicate",
+        "slug": "contains-duplicate",
+        "url": "https://leetcode.com/problems/contains-duplicate/",
+        "premium": false,
+        "note": "Online returns a boolean for any duplicate; local practice returns the first value whose second occurrence is encountered.",
+        "source_day": 8,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 303,
+        "title": "Range Sum Query - Immutable",
+        "slug": "range-sum-query-immutable",
+        "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 12,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 15,
@@ -237,7 +511,25 @@
       "SD-15",
       "PY-15"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_sorted-pair-existence",
+      "sd": "sd_domain-model",
+      "lang": "lang_iterator-protocol"
+    },
+    "leetcode": [
+      {
+        "number": 167,
+        "title": "Two Sum II - Input Array Is Sorted",
+        "slug": "two-sum-ii-input-array-is-sorted",
+        "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 15,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 16,
@@ -253,7 +545,25 @@
       "SD-16",
       "PY-16"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_unique-triples",
+      "sd": "sd_api-contract",
+      "lang": "lang_generator-laziness"
+    },
+    "leetcode": [
+      {
+        "number": 15,
+        "title": "3Sum",
+        "slug": "3sum",
+        "url": "https://leetcode.com/problems/3sum/",
+        "premium": false,
+        "note": "Online output ordering may differ; local practice canonicalizes each triple and the result list.",
+        "source_day": 16,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 17,
@@ -269,7 +579,25 @@
       "SD-17",
       "PY-17"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_container-capacity",
+      "sd": "sd_stateless-workers",
+      "lang": "lang_generator-cleanup"
+    },
+    "leetcode": [
+      {
+        "number": 11,
+        "title": "Container With Most Water",
+        "slug": "container-with-most-water",
+        "url": "https://leetcode.com/problems/container-with-most-water/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 17,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 18,
@@ -285,7 +613,25 @@
       "SD-18",
       "PY-18"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_fixed-window-maximum-sum",
+      "sd": "sd_sync-versus-async",
+      "lang": "lang_yield-delegation"
+    },
+    "leetcode": [
+      {
+        "number": 643,
+        "title": "Maximum Average Subarray I",
+        "slug": "maximum-average-subarray-i",
+        "url": "https://leetcode.com/problems/maximum-average-subarray-i/",
+        "premium": false,
+        "note": "Online maximizes a fixed-length average; local practice returns a fixed-length sum.",
+        "source_day": 18,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 19,
@@ -301,7 +647,25 @@
       "SD-19",
       "PY-19"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_longest-distinct-substring",
+      "sd": "sd_compatibility",
+      "lang": "lang_iterator-consumption"
+    },
+    "leetcode": [
+      {
+        "number": 3,
+        "title": "Longest Substring Without Repeating Characters",
+        "slug": "longest-substring-without-repeating-characters",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 19,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 20,
@@ -317,7 +681,25 @@
       "SD-20",
       "PY-20"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-positive-window",
+      "sd": "sd_modular-monolith",
+      "lang": "lang_streaming-pipeline"
+    },
+    "leetcode": [
+      {
+        "number": 209,
+        "title": "Minimum Size Subarray Sum",
+        "slug": "minimum-size-subarray-sum",
+        "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 20,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 21,
@@ -333,7 +715,36 @@
       "SD-21",
       "PY-21"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-3-dsa-review",
+      "sd": "sd_week-3-design-review",
+      "lang": "lang_week-3-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 167,
+        "title": "Two Sum II - Input Array Is Sorted",
+        "slug": "two-sum-ii-input-array-is-sorted",
+        "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 15,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 3,
+        "title": "Longest Substring Without Repeating Characters",
+        "slug": "longest-substring-without-repeating-characters",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 19,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 22,
@@ -349,7 +760,25 @@
       "SD-22",
       "PY-22"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_lower-bound",
+      "sd": "sd_schema-constraints",
+      "lang": "lang_representations"
+    },
+    "leetcode": [
+      {
+        "number": 35,
+        "title": "Search Insert Position",
+        "slug": "search-insert-position",
+        "url": "https://leetcode.com/problems/search-insert-position/",
+        "premium": false,
+        "note": "Online inputs are strictly increasing; local lower-bound practice also tests duplicates.",
+        "source_day": 22,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 23,
@@ -365,7 +794,25 @@
       "SD-23",
       "PY-23"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_target-range",
+      "sd": "sd_index-selection",
+      "lang": "lang_rich-comparison"
+    },
+    "leetcode": [
+      {
+        "number": 34,
+        "title": "Find First and Last Position of Element in Sorted Array",
+        "slug": "find-first-and-last-position-of-element-in-sorted-array",
+        "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 23,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 24,
@@ -381,7 +828,25 @@
       "SD-24",
       "PY-24"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_rotated-search",
+      "sd": "sd_query-plans",
+      "lang": "lang_container-protocol"
+    },
+    "leetcode": [
+      {
+        "number": 33,
+        "title": "Search in Rotated Sorted Array",
+        "slug": "search-in-rotated-sorted-array",
+        "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 24,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 25,
@@ -397,7 +862,25 @@
       "SD-25",
       "PY-25"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_integer-square-root",
+      "sd": "sd_transactions",
+      "lang": "lang_indexing-and-slicing"
+    },
+    "leetcode": [
+      {
+        "number": 69,
+        "title": "Sqrt(x)",
+        "slug": "sqrtx",
+        "url": "https://leetcode.com/problems/sqrtx/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 25,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 26,
@@ -413,7 +896,25 @@
       "SD-26",
       "PY-26"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-shipping-capacity",
+      "sd": "sd_isolation-anomalies",
+      "lang": "lang_callable-instances"
+    },
+    "leetcode": [
+      {
+        "number": 1011,
+        "title": "Capacity To Ship Packages Within D Days",
+        "slug": "capacity-to-ship-packages-within-d-days",
+        "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 26,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 27,
@@ -429,7 +930,25 @@
       "SD-27",
       "PY-27"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_median-of-two-arrays",
+      "sd": "sd_optimistic-concurrency",
+      "lang": "lang_context-managers"
+    },
+    "leetcode": [
+      {
+        "number": 4,
+        "title": "Median of Two Sorted Arrays",
+        "slug": "median-of-two-sorted-arrays",
+        "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 27,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 28,
@@ -445,7 +964,36 @@
       "SD-28",
       "PY-28"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-4-dsa-review",
+      "sd": "sd_week-4-design-review",
+      "lang": "lang_week-4-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 35,
+        "title": "Search Insert Position",
+        "slug": "search-insert-position",
+        "url": "https://leetcode.com/problems/search-insert-position/",
+        "premium": false,
+        "note": "Online inputs are strictly increasing; local lower-bound practice also tests duplicates.",
+        "source_day": 22,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 1011,
+        "title": "Capacity To Ship Packages Within D Days",
+        "slug": "capacity-to-ship-packages-within-d-days",
+        "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 26,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 29,
@@ -461,7 +1009,25 @@
       "SD-29",
       "PY-29"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_stable-record-sorting",
+      "sd": "sd_tree-indexes",
+      "lang": "lang_attribute-lookup"
+    },
+    "leetcode": [
+      {
+        "number": 912,
+        "title": "Sort an Array",
+        "slug": "sort-an-array",
+        "url": "https://leetcode.com/problems/sort-an-array/",
+        "premium": false,
+        "note": "Online sorts numbers; local practice sorts records and explicitly checks stability.",
+        "source_day": 29,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 30,
@@ -477,7 +1043,25 @@
       "SD-30",
       "PY-30"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_merge-overlapping-intervals",
+      "sd": "sd_log-structured-storage",
+      "lang": "lang_properties"
+    },
+    "leetcode": [
+      {
+        "number": 56,
+        "title": "Merge Intervals",
+        "slug": "merge-intervals",
+        "url": "https://leetcode.com/problems/merge-intervals/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 30,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 31,
@@ -493,7 +1077,25 @@
       "SD-31",
       "PY-31"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_insert-an-interval",
+      "sd": "sd_access-pattern-modeling",
+      "lang": "lang_descriptors"
+    },
+    "leetcode": [
+      {
+        "number": 57,
+        "title": "Insert Interval",
+        "slug": "insert-interval",
+        "url": "https://leetcode.com/problems/insert-interval/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 31,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 32,
@@ -509,7 +1111,25 @@
       "SD-32",
       "PY-32"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-meeting-rooms",
+      "sd": "sd_hot-partitions",
+      "lang": "lang_method-binding"
+    },
+    "leetcode": [
+      {
+        "number": 2406,
+        "title": "Divide Intervals Into Minimum Number of Groups",
+        "slug": "divide-intervals-into-minimum-number-of-groups",
+        "url": "https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/",
+        "premium": false,
+        "note": "Online intervals are CLOSED, so touching endpoints conflict; local meetings are half-open and touching endpoints reuse a room.",
+        "source_day": 32,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 33,
@@ -525,7 +1145,25 @@
       "SD-33",
       "PY-33"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_kth-smallest",
+      "sd": "sd_ttl-and-deletion",
+      "lang": "lang_inheritance-and-super"
+    },
+    "leetcode": [
+      {
+        "number": 215,
+        "title": "Kth Largest Element in an Array",
+        "slug": "kth-largest-element-in-an-array",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+        "premium": false,
+        "note": "Online selects kth LARGEST; local practice selects kth SMALLEST.",
+        "source_day": 33,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 34,
@@ -541,7 +1179,25 @@
       "SD-34",
       "PY-34"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_count-inversions",
+      "sd": "sd_storage-decision-memo",
+      "lang": "lang_slots"
+    },
+    "leetcode": [
+      {
+        "number": 493,
+        "title": "Reverse Pairs",
+        "slug": "reverse-pairs",
+        "url": "https://leetcode.com/problems/reverse-pairs/",
+        "premium": false,
+        "note": "Online counts nums[i] > 2*nums[j]; local inversions use nums[i] > nums[j]. Adjust the merge-count condition.",
+        "source_day": 34,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 35,
@@ -557,7 +1213,36 @@
       "SD-35",
       "PY-35"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-5-dsa-review",
+      "sd": "sd_week-5-design-review",
+      "lang": "lang_week-5-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 912,
+        "title": "Sort an Array",
+        "slug": "sort-an-array",
+        "url": "https://leetcode.com/problems/sort-an-array/",
+        "premium": false,
+        "note": "Online sorts numbers; local practice sorts records and explicitly checks stability.",
+        "source_day": 29,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 215,
+        "title": "Kth Largest Element in an Array",
+        "slug": "kth-largest-element-in-an-array",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+        "premium": false,
+        "note": "Online selects kth LARGEST; local practice selects kth SMALLEST.",
+        "source_day": 33,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 36,
@@ -573,7 +1258,25 @@
       "SD-36",
       "PY-36"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_reverse-a-linked-list",
+      "sd": "sd_cache-aside",
+      "lang": "lang_dataclass-defaults"
+    },
+    "leetcode": [
+      {
+        "number": 206,
+        "title": "Reverse Linked List",
+        "slug": "reverse-linked-list",
+        "url": "https://leetcode.com/problems/reverse-linked-list/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 36,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 37,
@@ -589,7 +1292,25 @@
       "SD-37",
       "PY-37"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_middle-node",
+      "sd": "sd_invalidation-race",
+      "lang": "lang_frozen-models"
+    },
+    "leetcode": [
+      {
+        "number": 876,
+        "title": "Middle of the Linked List",
+        "slug": "middle-of-the-linked-list",
+        "url": "https://leetcode.com/problems/middle-of-the-linked-list/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 37,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 38,
@@ -605,7 +1326,25 @@
       "SD-38",
       "PY-38"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_cycle-entry",
+      "sd": "sd_ttl-and-eviction",
+      "lang": "lang_ordering-and-hashing"
+    },
+    "leetcode": [
+      {
+        "number": 142,
+        "title": "Linked List Cycle II",
+        "slug": "linked-list-cycle-ii",
+        "url": "https://leetcode.com/problems/linked-list-cycle-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 38,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 39,
@@ -621,7 +1360,25 @@
       "SD-39",
       "PY-39"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_merge-linked-lists",
+      "sd": "sd_stampede-control",
+      "lang": "lang_enums"
+    },
+    "leetcode": [
+      {
+        "number": 21,
+        "title": "Merge Two Sorted Lists",
+        "slug": "merge-two-sorted-lists",
+        "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 39,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 40,
@@ -637,7 +1394,25 @@
       "SD-40",
       "PY-40"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_remove-from-end",
+      "sd": "sd_negative-caching",
+      "lang": "lang_composition"
+    },
+    "leetcode": [
+      {
+        "number": 19,
+        "title": "Remove Nth Node From End of List",
+        "slug": "remove-nth-node-from-end-of-list",
+        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 40,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 41,
@@ -653,7 +1428,25 @@
       "SD-41",
       "PY-41"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_least-recently-used-cache",
+      "sd": "sd_cdn-behavior",
+      "lang": "lang_model-boundary"
+    },
+    "leetcode": [
+      {
+        "number": 146,
+        "title": "LRU Cache",
+        "slug": "lru-cache",
+        "url": "https://leetcode.com/problems/lru-cache/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 41,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 42,
@@ -669,7 +1462,36 @@
       "SD-42",
       "PY-42"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-6-dsa-review",
+      "sd": "sd_week-6-design-review",
+      "lang": "lang_week-6-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 206,
+        "title": "Reverse Linked List",
+        "slug": "reverse-linked-list",
+        "url": "https://leetcode.com/problems/reverse-linked-list/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 36,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 19,
+        "title": "Remove Nth Node From End of List",
+        "slug": "remove-nth-node-from-end-of-list",
+        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 40,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 43,
@@ -685,7 +1507,25 @@
       "SD-43",
       "PY-43"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_balanced-delimiters",
+      "sd": "sd_balancing-policies",
+      "lang": "lang_annotations-at-runtime"
+    },
+    "leetcode": [
+      {
+        "number": 20,
+        "title": "Valid Parentheses",
+        "slug": "valid-parentheses",
+        "url": "https://leetcode.com/problems/valid-parentheses/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 43,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 44,
@@ -701,7 +1541,25 @@
       "SD-44",
       "PY-44"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_queue-from-stacks",
+      "sd": "sd_health-checks",
+      "lang": "lang_optional-and-narrowing"
+    },
+    "leetcode": [
+      {
+        "number": 232,
+        "title": "Implement Queue using Stacks",
+        "slug": "implement-queue-using-stacks",
+        "url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 44,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 45,
@@ -717,7 +1575,25 @@
       "SD-45",
       "PY-45"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-stack",
+      "sd": "sd_horizontal-scaling",
+      "lang": "lang_typed-dictionaries"
+    },
+    "leetcode": [
+      {
+        "number": 155,
+        "title": "Min Stack",
+        "slug": "min-stack",
+        "url": "https://leetcode.com/problems/min-stack/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 45,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 46,
@@ -733,7 +1609,25 @@
       "SD-46",
       "PY-46"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_warmer-days",
+      "sd": "sd_partition-keys",
+      "lang": "lang_protocols"
+    },
+    "leetcode": [
+      {
+        "number": 739,
+        "title": "Daily Temperatures",
+        "slug": "daily-temperatures",
+        "url": "https://leetcode.com/problems/daily-temperatures/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 46,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 47,
@@ -749,7 +1643,25 @@
       "SD-47",
       "PY-47"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_largest-histogram-rectangle",
+      "sd": "sd_consistent-placement",
+      "lang": "lang_generics"
+    },
+    "leetcode": [
+      {
+        "number": 84,
+        "title": "Largest Rectangle in Histogram",
+        "slug": "largest-rectangle-in-histogram",
+        "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 47,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 48,
@@ -765,7 +1677,25 @@
       "SD-48",
       "PY-48"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_sliding-window-maxima",
+      "sd": "sd_resharding",
+      "lang": "lang_overloads"
+    },
+    "leetcode": [
+      {
+        "number": 239,
+        "title": "Sliding Window Maximum",
+        "slug": "sliding-window-maximum",
+        "url": "https://leetcode.com/problems/sliding-window-maximum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 48,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 49,
@@ -781,7 +1711,36 @@
       "SD-49",
       "PY-49"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-7-dsa-review",
+      "sd": "sd_week-7-design-review",
+      "lang": "lang_week-7-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 20,
+        "title": "Valid Parentheses",
+        "slug": "valid-parentheses",
+        "url": "https://leetcode.com/problems/valid-parentheses/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 43,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 84,
+        "title": "Largest Rectangle in Histogram",
+        "slug": "largest-rectangle-in-histogram",
+        "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 47,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 50,
@@ -797,7 +1756,25 @@
       "SD-50",
       "PY-50"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_enumerate-subsets",
+      "sd": "sd_leader-replication",
+      "lang": "lang_callable-signatures"
+    },
+    "leetcode": [
+      {
+        "number": 78,
+        "title": "Subsets",
+        "slug": "subsets",
+        "url": "https://leetcode.com/problems/subsets/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 50,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 51,
@@ -813,7 +1790,25 @@
       "SD-51",
       "PY-51"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_enumerate-permutations",
+      "sd": "sd_read-your-writes",
+      "lang": "lang_variance-reasoning"
+    },
+    "leetcode": [
+      {
+        "number": 46,
+        "title": "Permutations",
+        "slug": "permutations",
+        "url": "https://leetcode.com/problems/permutations/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 51,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 52,
@@ -829,7 +1824,25 @@
       "SD-52",
       "PY-52"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_combination-sum",
+      "sd": "sd_consistency-models",
+      "lang": "lang_literal-states"
+    },
+    "leetcode": [
+      {
+        "number": 39,
+        "title": "Combination Sum",
+        "slug": "combination-sum",
+        "url": "https://leetcode.com/problems/combination-sum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 52,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 53,
@@ -845,7 +1858,25 @@
       "SD-53",
       "PY-53"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_balanced-parentheses",
+      "sd": "sd_quorum-reasoning",
+      "lang": "lang_type-guards"
+    },
+    "leetcode": [
+      {
+        "number": 22,
+        "title": "Generate Parentheses",
+        "slug": "generate-parentheses",
+        "url": "https://leetcode.com/problems/generate-parentheses/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 53,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 54,
@@ -861,7 +1892,25 @@
       "SD-54",
       "PY-54"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_word-search",
+      "sd": "sd_network-partitions",
+      "lang": "lang_newtype"
+    },
+    "leetcode": [
+      {
+        "number": 79,
+        "title": "Word Search",
+        "slug": "word-search",
+        "url": "https://leetcode.com/problems/word-search/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 54,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 55,
@@ -877,7 +1926,25 @@
       "SD-55",
       "PY-55"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_nonattacking-queens",
+      "sd": "sd_failover",
+      "lang": "lang_typing-debt"
+    },
+    "leetcode": [
+      {
+        "number": 52,
+        "title": "N-Queens II",
+        "slug": "n-queens-ii",
+        "url": "https://leetcode.com/problems/n-queens-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 55,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 56,
@@ -893,7 +1960,36 @@
       "SD-56",
       "PY-56"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-8-dsa-review",
+      "sd": "sd_week-8-design-review",
+      "lang": "lang_week-8-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 78,
+        "title": "Subsets",
+        "slug": "subsets",
+        "url": "https://leetcode.com/problems/subsets/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 50,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 79,
+        "title": "Word Search",
+        "slug": "word-search",
+        "url": "https://leetcode.com/problems/word-search/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 54,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 57,
@@ -909,7 +2005,25 @@
       "SD-57",
       "PY-57"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_tree-depth",
+      "sd": "sd_queue-fundamentals",
+      "lang": "lang_exception-chaining"
+    },
+    "leetcode": [
+      {
+        "number": 104,
+        "title": "Maximum Depth of Binary Tree",
+        "slug": "maximum-depth-of-binary-tree",
+        "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 57,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 58,
@@ -925,7 +2039,25 @@
       "SD-58",
       "PY-58"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_level-order",
+      "sd": "sd_delivery-semantics",
+      "lang": "lang_exception-boundaries"
+    },
+    "leetcode": [
+      {
+        "number": 102,
+        "title": "Binary Tree Level Order Traversal",
+        "slug": "binary-tree-level-order-traversal",
+        "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 58,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 59,
@@ -941,7 +2073,25 @@
       "SD-59",
       "PY-59"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_validate-search-tree",
+      "sd": "sd_consumer-idempotency",
+      "lang": "lang_finally-behavior"
+    },
+    "leetcode": [
+      {
+        "number": 98,
+        "title": "Validate Binary Search Tree",
+        "slug": "validate-binary-search-tree",
+        "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 59,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 60,
@@ -957,7 +2107,25 @@
       "SD-60",
       "PY-60"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_kth-tree-value",
+      "sd": "sd_ordering",
+      "lang": "lang_contextlib"
+    },
+    "leetcode": [
+      {
+        "number": 230,
+        "title": "Kth Smallest Element in a BST",
+        "slug": "kth-smallest-element-in-a-bst",
+        "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 60,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 61,
@@ -973,7 +2141,25 @@
       "SD-61",
       "PY-61"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_tree-diameter",
+      "sd": "sd_backpressure",
+      "lang": "lang_exitstack"
+    },
+    "leetcode": [
+      {
+        "number": 543,
+        "title": "Diameter of Binary Tree",
+        "slug": "diameter-of-binary-tree",
+        "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 61,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 62,
@@ -989,7 +2175,25 @@
       "SD-62",
       "PY-62"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_lowest-shared-ancestor",
+      "sd": "sd_poison-messages",
+      "lang": "lang_exception-groups"
+    },
+    "leetcode": [
+      {
+        "number": 236,
+        "title": "Lowest Common Ancestor of a Binary Tree",
+        "slug": "lowest-common-ancestor-of-a-binary-tree",
+        "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 62,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 63,
@@ -1005,7 +2209,36 @@
       "SD-63",
       "PY-63"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-9-dsa-review",
+      "sd": "sd_week-9-design-review",
+      "lang": "lang_week-9-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 104,
+        "title": "Maximum Depth of Binary Tree",
+        "slug": "maximum-depth-of-binary-tree",
+        "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 57,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 543,
+        "title": "Diameter of Binary Tree",
+        "slug": "diameter-of-binary-tree",
+        "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 61,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 64,
@@ -1021,7 +2254,25 @@
       "SD-64",
       "PY-64"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_k-largest-stream-values",
+      "sd": "sd_retry-budgets",
+      "lang": "lang_unittest-subtests"
+    },
+    "leetcode": [
+      {
+        "number": 215,
+        "title": "Kth Largest Element in an Array",
+        "slug": "kth-largest-element-in-an-array",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+        "premium": false,
+        "note": "Online returns one kth-largest value; local practice returns the entire top-k set in descending order.",
+        "source_day": 64,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 65,
@@ -1037,7 +2288,25 @@
       "SD-65",
       "PY-65"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_merge-sorted-streams",
+      "sd": "sd_backoff-and-jitter",
+      "lang": "lang_test-doubles"
+    },
+    "leetcode": [
+      {
+        "number": 23,
+        "title": "Merge k Sorted Lists",
+        "slug": "merge-k-sorted-lists",
+        "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+        "premium": false,
+        "note": "Online merges linked lists; local practice merges arrays. Reuse heap reasoning, not the adapter.",
+        "source_day": 65,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 66,
@@ -1053,7 +2322,25 @@
       "SD-66",
       "PY-66"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_running-median",
+      "sd": "sd_circuit-breakers",
+      "lang": "lang_mock-boundaries"
+    },
+    "leetcode": [
+      {
+        "number": 295,
+        "title": "Find Median from Data Stream",
+        "slug": "find-median-from-data-stream",
+        "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 66,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 67,
@@ -1069,7 +2356,25 @@
       "SD-67",
       "PY-67"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_prefix-dictionary",
+      "sd": "sd_bulkheads",
+      "lang": "lang_property-checks"
+    },
+    "leetcode": [
+      {
+        "number": 208,
+        "title": "Implement Trie (Prefix Tree)",
+        "slug": "implement-trie-prefix-tree",
+        "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+        "premium": false,
+        "note": "Online tests trie insert/search/prefix operations; local practice counts distinct words sharing a prefix.",
+        "source_day": 67,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 68,
@@ -1085,7 +2390,25 @@
       "SD-68",
       "PY-68"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_tree-reconstruction",
+      "sd": "sd_rate-limiting",
+      "lang": "lang_metamorphic-tests"
+    },
+    "leetcode": [
+      {
+        "number": 105,
+        "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+        "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+        "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 68,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 69,
@@ -1101,7 +2424,25 @@
       "SD-69",
       "PY-69"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_tree-codec-round-trip",
+      "sd": "sd_graceful-degradation",
+      "lang": "lang_debugging-workflow"
+    },
+    "leetcode": [
+      {
+        "number": 297,
+        "title": "Serialize and Deserialize Binary Tree",
+        "slug": "serialize-and-deserialize-binary-tree",
+        "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 69,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 70,
@@ -1117,7 +2458,36 @@
       "SD-70",
       "PY-70"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-10-dsa-review",
+      "sd": "sd_week-10-design-review",
+      "lang": "lang_week-10-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 215,
+        "title": "Kth Largest Element in an Array",
+        "slug": "kth-largest-element-in-an-array",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+        "premium": false,
+        "note": "Online returns one kth-largest value; local practice returns the entire top-k set in descending order.",
+        "source_day": 64,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 105,
+        "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+        "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+        "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 68,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 71,
@@ -1133,7 +2503,25 @@
       "SD-71",
       "PY-71"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_reachability",
+      "sd": "sd_logical-ordering",
+      "lang": "lang_deque-behavior"
+    },
+    "leetcode": [
+      {
+        "number": 1971,
+        "title": "Find if Path Exists in Graph",
+        "slug": "find-if-path-exists-in-graph",
+        "url": "https://leetcode.com/problems/find-if-path-exists-in-graph/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 71,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 72,
@@ -1149,7 +2537,25 @@
       "SD-72",
       "PY-72"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_unweighted-distance",
+      "sd": "sd_consensus-purpose",
+      "lang": "lang_counter-algebra"
+    },
+    "leetcode": [
+      {
+        "number": 1091,
+        "title": "Shortest Path in Binary Matrix",
+        "slug": "shortest-path-in-binary-matrix",
+        "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+        "premium": false,
+        "note": "Online uses an eight-direction binary grid and counts cells; local BFS uses an undirected edge list and counts edges.",
+        "source_day": 72,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 73,
@@ -1165,7 +2571,25 @@
       "SD-73",
       "PY-73"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_island-count",
+      "sd": "sd_leader-terms",
+      "lang": "lang_default-dictionaries"
+    },
+    "leetcode": [
+      {
+        "number": 200,
+        "title": "Number of Islands",
+        "slug": "number-of-islands",
+        "url": "https://leetcode.com/problems/number-of-islands/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 73,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 74,
@@ -1181,7 +2605,25 @@
       "SD-74",
       "PY-74"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_dependency-order",
+      "sd": "sd_distributed-locks",
+      "lang": "lang_heap-ordering"
+    },
+    "leetcode": [
+      {
+        "number": 210,
+        "title": "Course Schedule II",
+        "slug": "course-schedule-ii",
+        "url": "https://leetcode.com/problems/course-schedule-ii/",
+        "premium": false,
+        "note": "Online permits any valid topological order; local practice requires lexicographically smallest order.",
+        "source_day": 74,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 75,
@@ -1197,7 +2639,25 @@
       "SD-75",
       "PY-75"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_two-color-graph",
+      "sd": "sd_unique-identifiers",
+      "lang": "lang_bisect-contracts"
+    },
+    "leetcode": [
+      {
+        "number": 785,
+        "title": "Is Graph Bipartite?",
+        "slug": "is-graph-bipartite",
+        "url": "https://leetcode.com/problems/is-graph-bipartite/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 75,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 76,
@@ -1213,7 +2673,25 @@
       "SD-76",
       "PY-76"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_multi-source-spread",
+      "sd": "sd_cross-service-transactions",
+      "lang": "lang_sorting-keys"
+    },
+    "leetcode": [
+      {
+        "number": 994,
+        "title": "Rotting Oranges",
+        "slug": "rotting-oranges",
+        "url": "https://leetcode.com/problems/rotting-oranges/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 76,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 77,
@@ -1229,7 +2707,36 @@
       "SD-77",
       "PY-77"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-11-dsa-review",
+      "sd": "sd_week-11-design-review",
+      "lang": "lang_week-11-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 1971,
+        "title": "Find if Path Exists in Graph",
+        "slug": "find-if-path-exists-in-graph",
+        "url": "https://leetcode.com/problems/find-if-path-exists-in-graph/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 71,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 785,
+        "title": "Is Graph Bipartite?",
+        "slug": "is-graph-bipartite",
+        "url": "https://leetcode.com/problems/is-graph-bipartite/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 75,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 78,
@@ -1245,7 +2752,25 @@
       "SD-78",
       "PY-78"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_nonnegative-shortest-paths",
+      "sd": "sd_slis-and-slos",
+      "lang": "lang_itertools-grouping"
+    },
+    "leetcode": [
+      {
+        "number": 743,
+        "title": "Network Delay Time",
+        "slug": "network-delay-time",
+        "url": "https://leetcode.com/problems/network-delay-time/",
+        "premium": false,
+        "note": "Online returns a single maximum arrival delay; local practice returns all source distances.",
+        "source_day": 78,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 79,
@@ -1261,7 +2786,25 @@
       "SD-79",
       "PY-79"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_negative-edge-paths",
+      "sd": "sd_error-budgets",
+      "lang": "lang_iterator-duplication"
+    },
+    "leetcode": [
+      {
+        "number": 787,
+        "title": "Cheapest Flights Within K Stops",
+        "slug": "cheapest-flights-within-k-stops",
+        "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+        "premium": false,
+        "note": "Related bounded-relaxation drill with a stop limit and nonnegative fares. It does not replace the local negative-edge/cycle-detection exercise.",
+        "source_day": 79,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 80,
@@ -1277,7 +2820,25 @@
       "SD-80",
       "PY-80"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_disjoint-set-queries",
+      "sd": "sd_logs-metrics-traces",
+      "lang": "lang_bounded-iteration"
+    },
+    "leetcode": [
+      {
+        "number": 547,
+        "title": "Number of Provinces",
+        "slug": "number-of-provinces",
+        "url": "https://leetcode.com/problems/number-of-provinces/",
+        "premium": false,
+        "note": "Online counts connected components from a matrix; local practice exposes union/same operations.",
+        "source_day": 80,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 81,
@@ -1293,7 +2854,25 @@
       "SD-81",
       "PY-81"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-spanning-cost",
+      "sd": "sd_tail-latency",
+      "lang": "lang_function-caching"
+    },
+    "leetcode": [
+      {
+        "number": 1584,
+        "title": "Min Cost to Connect All Points",
+        "slug": "min-cost-to-connect-all-points",
+        "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+        "premium": false,
+        "note": "Online is a complete Manhattan-distance graph; local practice receives explicit weighted edges.",
+        "source_day": 81,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 82,
@@ -1309,7 +2888,25 @@
       "SD-82",
       "PY-82"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_strong-components",
+      "sd": "sd_capacity-and-cost",
+      "lang": "lang_cache-invalidation"
+    },
+    "leetcode": [
+      {
+        "number": 802,
+        "title": "Find Eventual Safe States",
+        "slug": "find-eventual-safe-states",
+        "url": "https://leetcode.com/problems/find-eventual-safe-states/",
+        "premium": false,
+        "note": "Related directed-cycle analysis, not an SCC implementation. Keep the local strongly-connected-components exercise for that objective.",
+        "source_day": 82,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 83,
@@ -1325,7 +2922,25 @@
       "SD-83",
       "PY-83"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_critical-edges",
+      "sd": "sd_incident-review",
+      "lang": "lang_dispatch"
+    },
+    "leetcode": [
+      {
+        "number": 1192,
+        "title": "Critical Connections in a Network",
+        "slug": "critical-connections-in-a-network",
+        "url": "https://leetcode.com/problems/critical-connections-in-a-network/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 83,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 84,
@@ -1341,7 +2956,36 @@
       "SD-84",
       "PY-84"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-12-dsa-review",
+      "sd": "sd_week-12-design-review",
+      "lang": "lang_week-12-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 743,
+        "title": "Network Delay Time",
+        "slug": "network-delay-time",
+        "url": "https://leetcode.com/problems/network-delay-time/",
+        "premium": false,
+        "note": "Online returns a single maximum arrival delay; local practice returns all source distances.",
+        "source_day": 78,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 802,
+        "title": "Find Eventual Safe States",
+        "slug": "find-eventual-safe-states",
+        "url": "https://leetcode.com/problems/find-eventual-safe-states/",
+        "premium": false,
+        "note": "Related directed-cycle analysis, not an SCC implementation. Keep the local strongly-connected-components exercise for that objective.",
+        "source_day": 82,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 85,
@@ -1357,7 +3001,25 @@
       "SD-85",
       "PY-85"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_maximum-compatible-meetings",
+      "sd": "sd_trust-boundaries",
+      "lang": "lang_coroutine-lifecycle"
+    },
+    "leetcode": [
+      {
+        "number": 435,
+        "title": "Non-overlapping Intervals",
+        "slug": "non-overlapping-intervals",
+        "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+        "premium": false,
+        "note": "Online asks how many intervals to remove; local practice asks how many to keep.",
+        "source_day": 85,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 86,
@@ -1373,7 +3035,25 @@
       "SD-86",
       "PY-86"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_reach-the-end",
+      "sd": "sd_authentication-and-authorization",
+      "lang": "lang_blocking-the-loop"
+    },
+    "leetcode": [
+      {
+        "number": 55,
+        "title": "Jump Game",
+        "slug": "jump-game",
+        "url": "https://leetcode.com/problems/jump-game/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 86,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 87,
@@ -1389,7 +3069,25 @@
       "SD-87",
       "PY-87"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-jumps",
+      "sd": "sd_abuse-prevention",
+      "lang": "lang_concurrent-tasks"
+    },
+    "leetcode": [
+      {
+        "number": 45,
+        "title": "Jump Game II",
+        "slug": "jump-game-ii",
+        "url": "https://leetcode.com/problems/jump-game-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 87,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 88,
@@ -1405,7 +3103,25 @@
       "SD-88",
       "PY-88"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_circular-fuel-route",
+      "sd": "sd_secret-handling",
+      "lang": "lang_cancellation"
+    },
+    "leetcode": [
+      {
+        "number": 134,
+        "title": "Gas Station",
+        "slug": "gas-station",
+        "url": "https://leetcode.com/problems/gas-station/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 88,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 89,
@@ -1421,7 +3137,25 @@
       "SD-89",
       "PY-89"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_task-cooldown-length",
+      "sd": "sd_tenant-isolation",
+      "lang": "lang_timeout-scopes"
+    },
+    "leetcode": [
+      {
+        "number": 621,
+        "title": "Task Scheduler",
+        "slug": "task-scheduler",
+        "url": "https://leetcode.com/problems/task-scheduler/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 89,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 90,
@@ -1437,7 +3171,25 @@
       "SD-90",
       "PY-90"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_optimal-merge-cost",
+      "sd": "sd_retention-and-audit",
+      "lang": "lang_async-context-managers"
+    },
+    "leetcode": [
+      {
+        "number": 1167,
+        "title": "Minimum Cost to Connect Sticks",
+        "slug": "minimum-cost-to-connect-sticks",
+        "url": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+        "premium": true,
+        "note": "Premium companion: the local file-merge exercise is the complete no-subscription alternative.",
+        "source_day": 90,
+        "difficulty": "Not exposed",
+        "verification": "premium-locked"
+      }
+    ]
   },
   {
     "day": 91,
@@ -1453,7 +3205,36 @@
       "SD-91",
       "PY-91"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-13-dsa-review",
+      "sd": "sd_week-13-design-review",
+      "lang": "lang_week-13-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 435,
+        "title": "Non-overlapping Intervals",
+        "slug": "non-overlapping-intervals",
+        "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+        "premium": false,
+        "note": "Online asks how many intervals to remove; local practice asks how many to keep.",
+        "source_day": 85,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 621,
+        "title": "Task Scheduler",
+        "slug": "task-scheduler",
+        "url": "https://leetcode.com/problems/task-scheduler/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 89,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 92,
@@ -1469,7 +3250,25 @@
       "SD-92",
       "PY-92"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_climbing-steps",
+      "sd": "sd_shortener-requirements",
+      "lang": "lang_bounded-concurrency"
+    },
+    "leetcode": [
+      {
+        "number": 70,
+        "title": "Climbing Stairs",
+        "slug": "climbing-stairs",
+        "url": "https://leetcode.com/problems/climbing-stairs/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 92,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 93,
@@ -1485,7 +3284,25 @@
       "SD-93",
       "PY-93"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_nonadjacent-loot",
+      "sd": "sd_shortener-api-and-data",
+      "lang": "lang_async-queues"
+    },
+    "leetcode": [
+      {
+        "number": 198,
+        "title": "House Robber",
+        "slug": "house-robber",
+        "url": "https://leetcode.com/problems/house-robber/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 93,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 94,
@@ -1501,7 +3318,25 @@
       "SD-94",
       "PY-94"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-coins",
+      "sd": "sd_shortener-capacity",
+      "lang": "lang_task-failure"
+    },
+    "leetcode": [
+      {
+        "number": 322,
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "url": "https://leetcode.com/problems/coin-change/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 94,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 95,
@@ -1517,7 +3352,25 @@
       "SD-95",
       "PY-95"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_coin-combinations",
+      "sd": "sd_shortener-architecture",
+      "lang": "lang_context-variables"
+    },
+    "leetcode": [
+      {
+        "number": 518,
+        "title": "Coin Change II",
+        "slug": "coin-change-ii",
+        "url": "https://leetcode.com/problems/coin-change-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 95,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 96,
@@ -1533,7 +3386,25 @@
       "SD-96",
       "PY-96"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_increasing-subsequence",
+      "sd": "sd_shortener-deep-dive",
+      "lang": "lang_offloading-blocking-work"
+    },
+    "leetcode": [
+      {
+        "number": 300,
+        "title": "Longest Increasing Subsequence",
+        "slug": "longest-increasing-subsequence",
+        "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 96,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 97,
@@ -1549,7 +3420,25 @@
       "SD-97",
       "PY-97"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_decode-digits",
+      "sd": "sd_shortener-failure-review",
+      "lang": "lang_async-shutdown"
+    },
+    "leetcode": [
+      {
+        "number": 91,
+        "title": "Decode Ways",
+        "slug": "decode-ways",
+        "url": "https://leetcode.com/problems/decode-ways/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 97,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 98,
@@ -1565,7 +3454,36 @@
       "SD-98",
       "PY-98"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-14-dsa-review",
+      "sd": "sd_week-14-design-review",
+      "lang": "lang_week-14-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 70,
+        "title": "Climbing Stairs",
+        "slug": "climbing-stairs",
+        "url": "https://leetcode.com/problems/climbing-stairs/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 92,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 300,
+        "title": "Longest Increasing Subsequence",
+        "slug": "longest-increasing-subsequence",
+        "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 96,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 99,
@@ -1581,7 +3499,25 @@
       "SD-99",
       "PY-99"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_grid-path-count",
+      "sd": "sd_feed-requirements",
+      "lang": "lang_thread-ownership"
+    },
+    "leetcode": [
+      {
+        "number": 63,
+        "title": "Unique Paths II",
+        "slug": "unique-paths-ii",
+        "url": "https://leetcode.com/problems/unique-paths-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 99,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 100,
@@ -1597,7 +3533,25 @@
       "SD-100",
       "PY-100"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-grid-path",
+      "sd": "sd_feed-api-and-data",
+      "lang": "lang_condition-signaling"
+    },
+    "leetcode": [
+      {
+        "number": 64,
+        "title": "Minimum Path Sum",
+        "slug": "minimum-path-sum",
+        "url": "https://leetcode.com/problems/minimum-path-sum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 100,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 101,
@@ -1613,7 +3567,25 @@
       "SD-101",
       "PY-101"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_common-subsequence-length",
+      "sd": "sd_feed-capacity",
+      "lang": "lang_thread-pools"
+    },
+    "leetcode": [
+      {
+        "number": 1143,
+        "title": "Longest Common Subsequence",
+        "slug": "longest-common-subsequence",
+        "url": "https://leetcode.com/problems/longest-common-subsequence/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 101,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 102,
@@ -1629,7 +3601,25 @@
       "SD-102",
       "PY-102"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_edit-distance",
+      "sd": "sd_feed-architecture",
+      "lang": "lang_process-pools"
+    },
+    "leetcode": [
+      {
+        "number": 72,
+        "title": "Edit Distance",
+        "slug": "edit-distance",
+        "url": "https://leetcode.com/problems/edit-distance/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 102,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 103,
@@ -1645,7 +3635,25 @@
       "SD-103",
       "PY-103"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_longest-palindrome-length",
+      "sd": "sd_feed-deep-dive",
+      "lang": "lang_serialization-cost"
+    },
+    "leetcode": [
+      {
+        "number": 5,
+        "title": "Longest Palindromic Substring",
+        "slug": "longest-palindromic-substring",
+        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+        "premium": false,
+        "note": "Online returns an actual longest substring; local practice returns its length.",
+        "source_day": 103,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 104,
@@ -1661,7 +3669,25 @@
       "SD-104",
       "PY-104"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_word-segmentation",
+      "sd": "sd_feed-failure-review",
+      "lang": "lang_gil-boundaries"
+    },
+    "leetcode": [
+      {
+        "number": 139,
+        "title": "Word Break",
+        "slug": "word-break",
+        "url": "https://leetcode.com/problems/word-break/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 104,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 105,
@@ -1677,7 +3703,36 @@
       "SD-105",
       "PY-105"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-15-dsa-review",
+      "sd": "sd_week-15-design-review",
+      "lang": "lang_week-15-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 63,
+        "title": "Unique Paths II",
+        "slug": "unique-paths-ii",
+        "url": "https://leetcode.com/problems/unique-paths-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 99,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 5,
+        "title": "Longest Palindromic Substring",
+        "slug": "longest-palindromic-substring",
+        "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+        "premium": false,
+        "note": "Online returns an actual longest substring; local practice returns its length.",
+        "source_day": 103,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 106,
@@ -1693,7 +3748,25 @@
       "SD-106",
       "PY-106"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_zero-one-knapsack",
+      "sd": "sd_chat-requirements",
+      "lang": "lang_measurement-design"
+    },
+    "leetcode": [
+      {
+        "number": 474,
+        "title": "Ones and Zeroes",
+        "slug": "ones-and-zeroes",
+        "url": "https://leetcode.com/problems/ones-and-zeroes/",
+        "premium": false,
+        "note": "Related zero-one knapsack with TWO capacity dimensions; local practice has one weight capacity.",
+        "source_day": 106,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 107,
@@ -1709,7 +3782,25 @@
       "SD-107",
       "PY-107"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_equal-partition",
+      "sd": "sd_chat-api-and-data",
+      "lang": "lang_cpu-profiles"
+    },
+    "leetcode": [
+      {
+        "number": 416,
+        "title": "Partition Equal Subset Sum",
+        "slug": "partition-equal-subset-sum",
+        "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 107,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 108,
@@ -1725,7 +3816,25 @@
       "SD-108",
       "PY-108"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_signed-target-count",
+      "sd": "sd_chat-connections",
+      "lang": "lang_allocation-tracing"
+    },
+    "leetcode": [
+      {
+        "number": 494,
+        "title": "Target Sum",
+        "slug": "target-sum",
+        "url": "https://leetcode.com/problems/target-sum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 108,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 109,
@@ -1741,7 +3850,25 @@
       "SD-109",
       "PY-109"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_weighted-scheduling",
+      "sd": "sd_chat-architecture",
+      "lang": "lang_reference-cycles"
+    },
+    "leetcode": [
+      {
+        "number": 1235,
+        "title": "Maximum Profit in Job Scheduling",
+        "slug": "maximum-profit-in-job-scheduling",
+        "url": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 109,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 110,
@@ -1757,7 +3884,25 @@
       "SD-110",
       "PY-110"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_matrix-chain-cost",
+      "sd": "sd_chat-deep-dive",
+      "lang": "lang_weak-references"
+    },
+    "leetcode": [
+      {
+        "number": 1039,
+        "title": "Minimum Score Triangulation of Polygon",
+        "slug": "minimum-score-triangulation-of-polygon",
+        "url": "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/",
+        "premium": false,
+        "note": "Related interval-split DP over polygon vertices; local practice uses matrix dimensions and multiplication cost.",
+        "source_day": 110,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 111,
@@ -1773,7 +3918,25 @@
       "SD-111",
       "PY-111"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_visit-every-city",
+      "sd": "sd_chat-failure-review",
+      "lang": "lang_optimization-memo"
+    },
+    "leetcode": [
+      {
+        "number": 847,
+        "title": "Shortest Path Visiting All Nodes",
+        "slug": "shortest-path-visiting-all-nodes",
+        "url": "https://leetcode.com/problems/shortest-path-visiting-all-nodes/",
+        "premium": false,
+        "note": "Related visited-mask state on an unweighted graph, allowing revisits and no return-to-start requirement. It is not the local weighted Hamiltonian tour.",
+        "source_day": 111,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 112,
@@ -1789,7 +3952,36 @@
       "SD-112",
       "PY-112"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-16-dsa-review",
+      "sd": "sd_week-16-design-review",
+      "lang": "lang_week-16-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 474,
+        "title": "Ones and Zeroes",
+        "slug": "ones-and-zeroes",
+        "url": "https://leetcode.com/problems/ones-and-zeroes/",
+        "premium": false,
+        "note": "Related zero-one knapsack with TWO capacity dimensions; local practice has one weight capacity.",
+        "source_day": 106,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 1039,
+        "title": "Minimum Score Triangulation of Polygon",
+        "slug": "minimum-score-triangulation-of-polygon",
+        "url": "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/",
+        "premium": false,
+        "note": "Related interval-split DP over polygon vertices; local practice uses matrix dimensions and multiplication cost.",
+        "source_day": 110,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 113,
@@ -1805,7 +3997,25 @@
       "SD-113",
       "PY-113"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_single-unmatched-value",
+      "sd": "sd_upload-requirements",
+      "lang": "lang_path-handling"
+    },
+    "leetcode": [
+      {
+        "number": 136,
+        "title": "Single Number",
+        "slug": "single-number",
+        "url": "https://leetcode.com/problems/single-number/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 113,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 114,
@@ -1821,7 +4031,25 @@
       "SD-114",
       "PY-114"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_set-bit-counts",
+      "sd": "sd_upload-api-and-metadata",
+      "lang": "lang_unicode-normalization"
+    },
+    "leetcode": [
+      {
+        "number": 338,
+        "title": "Counting Bits",
+        "slug": "counting-bits",
+        "url": "https://leetcode.com/problems/counting-bits/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 114,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 115,
@@ -1837,7 +4065,25 @@
       "SD-115",
       "PY-115"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_modular-power",
+      "sd": "sd_upload-capacity",
+      "lang": "lang_binary-interfaces"
+    },
+    "leetcode": [
+      {
+        "number": 50,
+        "title": "Pow(x, n)",
+        "slug": "powx-n",
+        "url": "https://leetcode.com/problems/powx-n/",
+        "premium": false,
+        "note": "Online uses floating-point powers, including negative exponents; local practice uses nonnegative integer exponents and a modulus.",
+        "source_day": 115,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 116,
@@ -1853,7 +4099,25 @@
       "SD-116",
       "PY-116"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_primes-below-a-bound",
+      "sd": "sd_upload-architecture",
+      "lang": "lang_json-boundaries"
+    },
+    "leetcode": [
+      {
+        "number": 204,
+        "title": "Count Primes",
+        "slug": "count-primes",
+        "url": "https://leetcode.com/problems/count-primes/",
+        "premium": false,
+        "note": "Online returns the prime COUNT; local practice returns the prime LIST.",
+        "source_day": 116,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 117,
@@ -1869,7 +4133,25 @@
       "SD-117",
       "PY-117"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mutable-range-sums",
+      "sd": "sd_upload-deep-dive",
+      "lang": "lang_decimal-arithmetic"
+    },
+    "leetcode": [
+      {
+        "number": 307,
+        "title": "Range Sum Query - Mutable",
+        "slug": "range-sum-query-mutable",
+        "url": "https://leetcode.com/problems/range-sum-query-mutable/",
+        "premium": false,
+        "note": "Online assigns a new value at an index; local practice adds a delta.",
+        "source_day": 117,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 118,
@@ -1885,7 +4167,25 @@
       "SD-118",
       "PY-118"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mutable-range-minima",
+      "sd": "sd_upload-failure-review",
+      "lang": "lang_timezone-handling"
+    },
+    "leetcode": [
+      {
+        "number": 307,
+        "title": "Range Sum Query - Mutable",
+        "slug": "range-sum-query-mutable",
+        "url": "https://leetcode.com/problems/range-sum-query-mutable/",
+        "premium": false,
+        "note": "Online range aggregation is SUM, not MIN. Implement its segment-tree variant, then retain the local min exercise to check the changed identity/combine rule.",
+        "source_day": 118,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 119,
@@ -1901,7 +4201,36 @@
       "SD-119",
       "PY-119"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-17-dsa-review",
+      "sd": "sd_week-17-design-review",
+      "lang": "lang_week-17-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 136,
+        "title": "Single Number",
+        "slug": "single-number",
+        "url": "https://leetcode.com/problems/single-number/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 113,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 307,
+        "title": "Range Sum Query - Mutable",
+        "slug": "range-sum-query-mutable",
+        "url": "https://leetcode.com/problems/range-sum-query-mutable/",
+        "premium": false,
+        "note": "Online assigns a new value at an index; local practice adds a delta.",
+        "source_day": 117,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 120,
@@ -1917,7 +4246,25 @@
       "SD-120",
       "PY-120"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_normalize-text-units",
+      "sd": "sd_search-requirements",
+      "lang": "lang_sqlite-transactions"
+    },
+    "leetcode": [
+      {
+        "number": 125,
+        "title": "Valid Palindrome",
+        "slug": "valid-palindrome",
+        "url": "https://leetcode.com/problems/valid-palindrome/",
+        "premium": false,
+        "note": "Related text-normalization drill with a palindrome decision; local practice returns normalized code points.",
+        "source_day": 120,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 121,
@@ -1933,7 +4280,25 @@
       "SD-121",
       "PY-121"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_prefix-border-lengths",
+      "sd": "sd_search-indexing",
+      "lang": "lang_csv-streaming"
+    },
+    "leetcode": [
+      {
+        "number": 1392,
+        "title": "Longest Happy Prefix",
+        "slug": "longest-happy-prefix",
+        "url": "https://leetcode.com/problems/longest-happy-prefix/",
+        "premium": false,
+        "note": "Online returns the final longest border string; local practice returns every prefix-function length.",
+        "source_day": 121,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 122,
@@ -1949,7 +4314,25 @@
       "SD-122",
       "PY-122"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_find-all-pattern-matches",
+      "sd": "sd_search-query-path",
+      "lang": "lang_atomic-replacement"
+    },
+    "leetcode": [
+      {
+        "number": 28,
+        "title": "Find the Index of the First Occurrence in a String",
+        "slug": "find-the-index-of-the-first-occurrence-in-a-string",
+        "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+        "premium": false,
+        "note": "Online returns the first match; local practice returns all matches including overlaps.",
+        "source_day": 122,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 123,
@@ -1965,7 +4348,25 @@
       "SD-123",
       "PY-123"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_rolling-hash-matching",
+      "sd": "sd_notification-requirements",
+      "lang": "lang_subprocess-contracts"
+    },
+    "leetcode": [
+      {
+        "number": 28,
+        "title": "Find the Index of the First Occurrence in a String",
+        "slug": "find-the-index-of-the-first-occurrence-in-a-string",
+        "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 123,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 124,
@@ -1981,7 +4382,25 @@
       "SD-124",
       "PY-124"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_smallest-covering-window",
+      "sd": "sd_notification-architecture",
+      "lang": "lang_untrusted-serialization"
+    },
+    "leetcode": [
+      {
+        "number": 76,
+        "title": "Minimum Window Substring",
+        "slug": "minimum-window-substring",
+        "url": "https://leetcode.com/problems/minimum-window-substring/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 124,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 125,
@@ -1997,7 +4416,25 @@
       "SD-125",
       "PY-125"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_dictionary-wildcard-search",
+      "sd": "sd_notification-failure-review",
+      "lang": "lang_resource-limits"
+    },
+    "leetcode": [
+      {
+        "number": 211,
+        "title": "Design Add and Search Words Data Structure",
+        "slug": "design-add-and-search-words-data-structure",
+        "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 125,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 126,
@@ -2013,7 +4450,36 @@
       "SD-126",
       "PY-126"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-18-dsa-review",
+      "sd": "sd_week-18-design-review",
+      "lang": "lang_week-18-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 125,
+        "title": "Valid Palindrome",
+        "slug": "valid-palindrome",
+        "url": "https://leetcode.com/problems/valid-palindrome/",
+        "premium": false,
+        "note": "Related text-normalization drill with a palindrome decision; local practice returns normalized code points.",
+        "source_day": 120,
+        "difficulty": "Easy",
+        "verification": "verified"
+      },
+      {
+        "number": 76,
+        "title": "Minimum Window Substring",
+        "slug": "minimum-window-substring",
+        "url": "https://leetcode.com/problems/minimum-window-substring/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 124,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 127,
@@ -2029,7 +4495,25 @@
       "SD-127",
       "PY-127"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_longest-dag-path",
+      "sd": "sd_reservation-invariants",
+      "lang": "lang_import-execution"
+    },
+    "leetcode": [
+      {
+        "number": 329,
+        "title": "Longest Increasing Path in a Matrix",
+        "slug": "longest-increasing-path-in-a-matrix",
+        "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+        "premium": false,
+        "note": "Related longest-path DAG with implicit matrix edges; local practice receives explicit edges and counts edges.",
+        "source_day": 127,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 128,
@@ -2045,7 +4529,25 @@
       "SD-128",
       "PY-128"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-effort-grid-route",
+      "sd": "sd_reservation-data",
+      "lang": "lang_circular-imports"
+    },
+    "leetcode": [
+      {
+        "number": 1631,
+        "title": "Path With Minimum Effort",
+        "slug": "path-with-minimum-effort",
+        "url": "https://leetcode.com/problems/path-with-minimum-effort/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 128,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 129,
@@ -2061,7 +4563,25 @@
       "SD-129",
       "PY-129"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_redundant-undirected-edge",
+      "sd": "sd_payment-idempotency",
+      "lang": "lang_entry-points"
+    },
+    "leetcode": [
+      {
+        "number": 684,
+        "title": "Redundant Connection",
+        "slug": "redundant-connection",
+        "url": "https://leetcode.com/problems/redundant-connection/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 129,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 130,
@@ -2077,7 +4597,25 @@
       "SD-130",
       "PY-130"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_subtree-sizes",
+      "sd": "sd_transactional-outbox",
+      "lang": "lang_package-layout"
+    },
+    "leetcode": [
+      {
+        "number": 1519,
+        "title": "Number of Nodes in the Sub-Tree With the Same Label",
+        "slug": "number-of-nodes-in-the-sub-tree-with-the-same-label",
+        "url": "https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/",
+        "premium": false,
+        "note": "Online subtree counts are label-specific; local practice counts every node in each subtree.",
+        "source_day": 130,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 131,
@@ -2093,7 +4631,25 @@
       "SD-131",
       "PY-131"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_tree-distance-sums",
+      "sd": "sd_compensation-workflow",
+      "lang": "lang_environment-isolation"
+    },
+    "leetcode": [
+      {
+        "number": 834,
+        "title": "Sum of Distances in Tree",
+        "slug": "sum-of-distances-in-tree",
+        "url": "https://leetcode.com/problems/sum-of-distances-in-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 131,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 132,
@@ -2109,7 +4665,25 @@
       "SD-132",
       "PY-132"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_bipartite-matching",
+      "sd": "sd_reconciliation",
+      "lang": "lang_dependency-policy"
+    },
+    "leetcode": [
+      {
+        "number": 1820,
+        "title": "Maximum Number of Accepted Invitations",
+        "slug": "maximum-number-of-accepted-invitations",
+        "url": "https://leetcode.com/problems/maximum-number-of-accepted-invitations/",
+        "premium": true,
+        "note": "Premium companion: the local matching exercise is the complete no-subscription alternative.",
+        "source_day": 132,
+        "difficulty": "Not exposed",
+        "verification": "premium-locked"
+      }
+    ]
   },
   {
     "day": 133,
@@ -2125,7 +4699,36 @@
       "SD-133",
       "PY-133"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-19-dsa-review",
+      "sd": "sd_week-19-design-review",
+      "lang": "lang_week-19-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 329,
+        "title": "Longest Increasing Path in a Matrix",
+        "slug": "longest-increasing-path-in-a-matrix",
+        "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+        "premium": false,
+        "note": "Related longest-path DAG with implicit matrix edges; local practice receives explicit edges and counts edges.",
+        "source_day": 127,
+        "difficulty": "Hard",
+        "verification": "verified"
+      },
+      {
+        "number": 834,
+        "title": "Sum of Distances in Tree",
+        "slug": "sum-of-distances-in-tree",
+        "url": "https://leetcode.com/problems/sum-of-distances-in-tree/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 131,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 134,
@@ -2141,7 +4744,25 @@
       "SD-134",
       "PY-134"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_time-indexed-values",
+      "sd": "sd_analytics-requirements",
+      "lang": "lang_structured-logs"
+    },
+    "leetcode": [
+      {
+        "number": 981,
+        "title": "Time Based Key-Value Store",
+        "slug": "time-based-key-value-store",
+        "url": "https://leetcode.com/problems/time-based-key-value-store/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 134,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 135,
@@ -2157,7 +4778,25 @@
       "SD-135",
       "PY-135"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_frequency-stack",
+      "sd": "sd_event-time",
+      "lang": "lang_configuration"
+    },
+    "leetcode": [
+      {
+        "number": 895,
+        "title": "Maximum Frequency Stack",
+        "slug": "maximum-frequency-stack",
+        "url": "https://leetcode.com/problems/maximum-frequency-stack/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 135,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 136,
@@ -2173,7 +4812,25 @@
       "SD-136",
       "PY-136"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_least-frequently-used-cache",
+      "sd": "sd_aggregation-windows",
+      "lang": "lang_retry-wrapper"
+    },
+    "leetcode": [
+      {
+        "number": 460,
+        "title": "LFU Cache",
+        "slug": "lfu-cache",
+        "url": "https://leetcode.com/problems/lfu-cache/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 136,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 137,
@@ -2189,7 +4846,25 @@
       "SD-137",
       "PY-137"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_order-statistic-stream",
+      "sd": "sd_partitioned-aggregation",
+      "lang": "lang_idempotent-handler"
+    },
+    "leetcode": [
+      {
+        "number": 703,
+        "title": "Kth Largest Element in a Stream",
+        "slug": "kth-largest-element-in-a-stream",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 137,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 138,
@@ -2205,7 +4880,25 @@
       "SD-138",
       "PY-138"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_expiring-counter",
+      "sd": "sd_approximate-answers",
+      "lang": "lang_shutdown-hooks"
+    },
+    "leetcode": [
+      {
+        "number": 933,
+        "title": "Number of Recent Calls",
+        "slug": "number-of-recent-calls",
+        "url": "https://leetcode.com/problems/number-of-recent-calls/",
+        "premium": false,
+        "note": "Online recent-call window includes its left boundary; the local counter uses an open left boundary and allows equal timestamps.",
+        "source_day": 138,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 139,
@@ -2221,7 +4914,25 @@
       "SD-139",
       "PY-139"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_autocomplete-ranking",
+      "sd": "sd_replay-and-rebuild",
+      "lang": "lang_error-taxonomy"
+    },
+    "leetcode": [
+      {
+        "number": 1268,
+        "title": "Search Suggestions System",
+        "slug": "search-suggestions-system",
+        "url": "https://leetcode.com/problems/search-suggestions-system/",
+        "premium": false,
+        "note": "Online suggests lexicographically for successive prefixes; local practice ranks one prefix by frequency then lexicographic order.",
+        "source_day": 139,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 140,
@@ -2237,7 +4948,36 @@
       "SD-140",
       "PY-140"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-20-dsa-review",
+      "sd": "sd_week-20-design-review",
+      "lang": "lang_week-20-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 981,
+        "title": "Time Based Key-Value Store",
+        "slug": "time-based-key-value-store",
+        "url": "https://leetcode.com/problems/time-based-key-value-store/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 134,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 933,
+        "title": "Number of Recent Calls",
+        "slug": "number-of-recent-calls",
+        "url": "https://leetcode.com/problems/number-of-recent-calls/",
+        "premium": false,
+        "note": "Online recent-call window includes its left boundary; the local counter uses an open left boundary and allows equal timestamps.",
+        "source_day": 138,
+        "difficulty": "Easy",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 141,
@@ -2253,7 +4993,25 @@
       "SD-141",
       "PY-141"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_product-except-self",
+      "sd": "sd_regional-topology",
+      "lang": "lang_bytecode-inspection"
+    },
+    "leetcode": [
+      {
+        "number": 238,
+        "title": "Product of Array Except Self",
+        "slug": "product-of-array-except-self",
+        "url": "https://leetcode.com/problems/product-of-array-except-self/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 141,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 142,
@@ -2269,7 +5027,25 @@
       "SD-142",
       "PY-142"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_longest-consecutive-run",
+      "sd": "sd_recovery-objectives",
+      "lang": "lang_object-sizes"
+    },
+    "leetcode": [
+      {
+        "number": 128,
+        "title": "Longest Consecutive Sequence",
+        "slug": "longest-consecutive-sequence",
+        "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 142,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 143,
@@ -2285,7 +5061,25 @@
       "SD-143",
       "PY-143"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_trapped-rainwater",
+      "sd": "sd_conflict-resolution",
+      "lang": "lang_name-resolution"
+    },
+    "leetcode": [
+      {
+        "number": 42,
+        "title": "Trapping Rain Water",
+        "slug": "trapping-rain-water",
+        "url": "https://leetcode.com/problems/trapping-rain-water/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 143,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 144,
@@ -2301,7 +5095,25 @@
       "SD-144",
       "PY-144"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_top-frequent-words",
+      "sd": "sd_data-placement",
+      "lang": "lang_special-method-lookup"
+    },
+    "leetcode": [
+      {
+        "number": 692,
+        "title": "Top K Frequent Words",
+        "slug": "top-k-frequent-words",
+        "url": "https://leetcode.com/problems/top-k-frequent-words/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 144,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 145,
@@ -2317,7 +5129,25 @@
       "SD-145",
       "PY-145"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_rotated-minimum-with-duplicates",
+      "sd": "sd_disaster-recovery-drill",
+      "lang": "lang_version-compatibility"
+    },
+    "leetcode": [
+      {
+        "number": 154,
+        "title": "Find Minimum in Rotated Sorted Array II",
+        "slug": "find-minimum-in-rotated-sorted-array-ii",
+        "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 145,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 146,
@@ -2333,7 +5163,25 @@
       "SD-146",
       "PY-146"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_find-duplicate-without-mutation",
+      "sd": "sd_migration-strategy",
+      "lang": "lang_implementation-portability"
+    },
+    "leetcode": [
+      {
+        "number": 287,
+        "title": "Find the Duplicate Number",
+        "slug": "find-the-duplicate-number",
+        "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 146,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 147,
@@ -2349,7 +5197,36 @@
       "SD-147",
       "PY-147"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-21-dsa-review",
+      "sd": "sd_week-21-design-review",
+      "lang": "lang_week-21-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 238,
+        "title": "Product of Array Except Self",
+        "slug": "product-of-array-except-self",
+        "url": "https://leetcode.com/problems/product-of-array-except-self/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 141,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 154,
+        "title": "Find Minimum in Rotated Sorted Array II",
+        "slug": "find-minimum-in-rotated-sorted-array-ii",
+        "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 145,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 148,
@@ -2365,7 +5242,25 @@
       "SD-148",
       "PY-148"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_interleaved-strings",
+      "sd": "sd_responsibilities",
+      "lang": "lang_api-simplification"
+    },
+    "leetcode": [
+      {
+        "number": 97,
+        "title": "Interleaving String",
+        "slug": "interleaving-string",
+        "url": "https://leetcode.com/problems/interleaving-string/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 148,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 149,
@@ -2381,7 +5276,25 @@
       "SD-149",
       "PY-149"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_course-completion-time",
+      "sd": "sd_state-machines",
+      "lang": "lang_hidden-state"
+    },
+    "leetcode": [
+      {
+        "number": 2050,
+        "title": "Parallel Courses III",
+        "slug": "parallel-courses-iii",
+        "url": "https://leetcode.com/problems/parallel-courses-iii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 149,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 150,
@@ -2397,7 +5310,25 @@
       "SD-150",
       "PY-150"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_maximum-path-sum",
+      "sd": "sd_dependency-inversion",
+      "lang": "lang_mutable-ownership-review"
+    },
+    "leetcode": [
+      {
+        "number": 124,
+        "title": "Binary Tree Maximum Path Sum",
+        "slug": "binary-tree-maximum-path-sum",
+        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 150,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 151,
@@ -2413,7 +5344,25 @@
       "SD-151",
       "PY-151"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_smallest-missing-positive",
+      "sd": "sd_concurrency-contracts",
+      "lang": "lang_concurrency-review"
+    },
+    "leetcode": [
+      {
+        "number": 41,
+        "title": "First Missing Positive",
+        "slug": "first-missing-positive",
+        "url": "https://leetcode.com/problems/first-missing-positive/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 151,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 152,
@@ -2429,7 +5378,25 @@
       "SD-152",
       "PY-152"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_shortest-subarray-with-negatives",
+      "sd": "sd_extensibility",
+      "lang": "lang_typing-review"
+    },
+    "leetcode": [
+      {
+        "number": 862,
+        "title": "Shortest Subarray with Sum at Least K",
+        "slug": "shortest-subarray-with-sum-at-least-k",
+        "url": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 152,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 153,
@@ -2445,7 +5412,25 @@
       "SD-153",
       "PY-153"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_minimum-interval-for-queries",
+      "sd": "sd_design-review",
+      "lang": "lang_performance-review"
+    },
+    "leetcode": [
+      {
+        "number": 1851,
+        "title": "Minimum Interval to Include Each Query",
+        "slug": "minimum-interval-to-include-each-query",
+        "url": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 153,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 154,
@@ -2461,7 +5446,36 @@
       "SD-154",
       "PY-154"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-22-dsa-review",
+      "sd": "sd_week-22-design-review",
+      "lang": "lang_week-22-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 97,
+        "title": "Interleaving String",
+        "slug": "interleaving-string",
+        "url": "https://leetcode.com/problems/interleaving-string/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 148,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 862,
+        "title": "Shortest Subarray with Sum at Least K",
+        "slug": "shortest-subarray-with-sum-at-least-k",
+        "url": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 152,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 155,
@@ -2477,7 +5491,25 @@
       "SD-155",
       "PY-155"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mock-arrays",
+      "sd": "sd_mock-requirements-round",
+      "lang": "lang_semantics-drill"
+    },
+    "leetcode": [
+      {
+        "number": 904,
+        "title": "Fruit Into Baskets",
+        "slug": "fruit-into-baskets",
+        "url": "https://leetcode.com/problems/fruit-into-baskets/",
+        "premium": false,
+        "note": "Online fixes at most TWO distinct types; local practice accepts general k.",
+        "source_day": 155,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 156,
@@ -2493,7 +5525,25 @@
       "SD-156",
       "PY-156"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mock-search",
+      "sd": "sd_mock-architecture-round",
+      "lang": "lang_protocol-drill"
+    },
+    "leetcode": [
+      {
+        "number": 875,
+        "title": "Koko Eating Bananas",
+        "slug": "koko-eating-bananas",
+        "url": "https://leetcode.com/problems/koko-eating-bananas/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 156,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 157,
@@ -2509,7 +5559,25 @@
       "SD-157",
       "PY-157"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mock-graph",
+      "sd": "sd_mock-deep-dive",
+      "lang": "lang_typing-drill"
+    },
+    "leetcode": [
+      {
+        "number": 1976,
+        "title": "Number of Ways to Arrive at Destination",
+        "slug": "number-of-ways-to-arrive-at-destination",
+        "url": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/",
+        "premium": false,
+        "note": "Online has positive weighted roads and modular path counts; local practice uses unweighted edges and exact counts.",
+        "source_day": 157,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 158,
@@ -2525,7 +5593,25 @@
       "SD-158",
       "PY-158"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mock-dp",
+      "sd": "sd_mock-alternative",
+      "lang": "lang_concurrency-drill"
+    },
+    "leetcode": [
+      {
+        "number": 213,
+        "title": "House Robber II",
+        "slug": "house-robber-ii",
+        "url": "https://leetcode.com/problems/house-robber-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 158,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 159,
@@ -2541,7 +5627,25 @@
       "SD-159",
       "PY-159"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mock-heap",
+      "sd": "sd_critique-round",
+      "lang": "lang_debugging-drill"
+    },
+    "leetcode": [
+      {
+        "number": 1584,
+        "title": "Min Cost to Connect All Points",
+        "slug": "min-cost-to-connect-all-points",
+        "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 159,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 160,
@@ -2557,7 +5661,25 @@
       "SD-160",
       "PY-160"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_mock-backtracking",
+      "sd": "sd_repair-round",
+      "lang": "lang_review-drill"
+    },
+    "leetcode": [
+      {
+        "number": 131,
+        "title": "Palindrome Partitioning",
+        "slug": "palindrome-partitioning",
+        "url": "https://leetcode.com/problems/palindrome-partitioning/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 160,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 161,
@@ -2573,7 +5695,36 @@
       "SD-161",
       "PY-161"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-23-dsa-review",
+      "sd": "sd_week-23-design-review",
+      "lang": "lang_week-23-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 904,
+        "title": "Fruit Into Baskets",
+        "slug": "fruit-into-baskets",
+        "url": "https://leetcode.com/problems/fruit-into-baskets/",
+        "premium": false,
+        "note": "Online fixes at most TWO distinct types; local practice accepts general k.",
+        "source_day": 155,
+        "difficulty": "Medium",
+        "verification": "verified"
+      },
+      {
+        "number": 1584,
+        "title": "Min Cost to Connect All Points",
+        "slug": "min-cost-to-connect-all-points",
+        "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 159,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 162,
@@ -2589,7 +5740,25 @@
       "SD-162",
       "PY-162"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_routing-capstone",
+      "sd": "sd_capstone-brief",
+      "lang": "lang_capstone-interface"
+    },
+    "leetcode": [
+      {
+        "number": 2642,
+        "title": "Design Graph With Shortest Path Calculator",
+        "slug": "design-graph-with-shortest-path-calculator",
+        "url": "https://leetcode.com/problems/design-graph-with-shortest-path-calculator/",
+        "premium": false,
+        "note": "Online supports adding edges between queries; local practice has a static graph and can cache distances per source.",
+        "source_day": 162,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 163,
@@ -2605,7 +5774,25 @@
       "SD-163",
       "PY-163"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_scheduling-capstone",
+      "sd": "sd_capstone-architecture",
+      "lang": "lang_capstone-generator"
+    },
+    "leetcode": [
+      {
+        "number": 1834,
+        "title": "Single-Threaded CPU",
+        "slug": "single-threaded-cpu",
+        "url": "https://leetcode.com/problems/single-threaded-cpu/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 163,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 164,
@@ -2621,7 +5808,25 @@
       "SD-164",
       "PY-164"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_search-capstone",
+      "sd": "sd_capstone-consistency",
+      "lang": "lang_capstone-execution"
+    },
+    "leetcode": [
+      {
+        "number": 212,
+        "title": "Word Search II",
+        "slug": "word-search-ii",
+        "url": "https://leetcode.com/problems/word-search-ii/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 164,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 165,
@@ -2637,7 +5842,25 @@
       "SD-165",
       "PY-165"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_range-capstone",
+      "sd": "sd_capstone-resilience",
+      "lang": "lang_capstone-tests"
+    },
+    "leetcode": [
+      {
+        "number": 315,
+        "title": "Count of Smaller Numbers After Self",
+        "slug": "count-of-smaller-numbers-after-self",
+        "url": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+        "premium": false,
+        "note": "Related offline order-statistics/range-count drill, not distinct values per interval. Retain the local exercise for its latest-occurrence technique.",
+        "source_day": 165,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 166,
@@ -2653,7 +5876,25 @@
       "SD-166",
       "PY-166"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_counterexample-capstone",
+      "sd": "sd_capstone-tradeoffs",
+      "lang": "lang_capstone-profile"
+    },
+    "leetcode": [
+      {
+        "number": 53,
+        "title": "Maximum Subarray",
+        "slug": "maximum-subarray",
+        "url": "https://leetcode.com/problems/maximum-subarray/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 166,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 167,
@@ -2669,7 +5910,25 @@
       "SD-167",
       "PY-167"
     ],
-    "review": false
+    "review": false,
+    "track_folders": {
+      "dsa": "dsa_final-independent-problem",
+      "sd": "sd_final-defense",
+      "lang": "lang_final-explanation"
+    },
+    "leetcode": [
+      {
+        "number": 354,
+        "title": "Russian Doll Envelopes",
+        "slug": "russian-doll-envelopes",
+        "url": "https://leetcode.com/problems/russian-doll-envelopes/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 167,
+        "difficulty": "Hard",
+        "verification": "verified"
+      }
+    ]
   },
   {
     "day": 168,
@@ -2685,6 +5944,35 @@
       "SD-168",
       "PY-168"
     ],
-    "review": true
+    "review": true,
+    "track_folders": {
+      "dsa": "dsa_week-24-dsa-review",
+      "sd": "sd_week-24-design-review",
+      "lang": "lang_week-24-python-review"
+    },
+    "leetcode": [
+      {
+        "number": 2642,
+        "title": "Design Graph With Shortest Path Calculator",
+        "slug": "design-graph-with-shortest-path-calculator",
+        "url": "https://leetcode.com/problems/design-graph-with-shortest-path-calculator/",
+        "premium": false,
+        "note": "Online supports adding edges between queries; local practice has a static graph and can cache distances per source.",
+        "source_day": 162,
+        "difficulty": "Hard",
+        "verification": "verified"
+      },
+      {
+        "number": 53,
+        "title": "Maximum Subarray",
+        "slug": "maximum-subarray",
+        "url": "https://leetcode.com/problems/maximum-subarray/",
+        "premium": false,
+        "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
+        "source_day": 166,
+        "difficulty": "Medium",
+        "verification": "verified"
+      }
+    ]
   }
 ]

@@ -4,7 +4,7 @@ phase: 7
 title: "Balanced delimiters"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-43, SD-43, PY-43; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Balanced delimiters](dsa/README.md) |
-| System design | 30 minutes | [Balancing policies](sd/README.md) |
-| Python | 15 minutes | [Annotations at runtime](lang/README.md) |
+| DSA | 60 minutes | [Balanced delimiters](dsa_balanced-delimiters/README.md) |
+| System design | 30 minutes | [Balancing policies](sd_balancing-policies/README.md) |
+| Python | 15 minutes | [Annotations at runtime](lang_annotations-at-runtime/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

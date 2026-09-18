@@ -4,7 +4,7 @@ phase: 21
 title: "Trapped rainwater"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-143, SD-143, PY-143; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Trapped rainwater](dsa/README.md) |
-| System design | 30 minutes | [Conflict resolution](sd/README.md) |
-| Python | 15 minutes | [Name resolution](lang/README.md) |
+| DSA | 60 minutes | [Trapped rainwater](dsa_trapped-rainwater/README.md) |
+| System design | 30 minutes | [Conflict resolution](sd_conflict-resolution/README.md) |
+| Python | 15 minutes | [Name resolution](lang_name-resolution/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

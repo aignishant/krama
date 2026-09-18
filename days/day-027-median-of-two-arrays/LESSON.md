@@ -4,7 +4,7 @@ phase: 4
 title: "Median of two arrays"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-27, SD-27, PY-27; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Median of two arrays](dsa/README.md) |
-| System design | 30 minutes | [Optimistic concurrency](sd/README.md) |
-| Python | 15 minutes | [Context managers](lang/README.md) |
+| DSA | 60 minutes | [Median of two arrays](dsa_median-of-two-arrays/README.md) |
+| System design | 30 minutes | [Optimistic concurrency](sd_optimistic-concurrency/README.md) |
+| Python | 15 minutes | [Context managers](lang_context-managers/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

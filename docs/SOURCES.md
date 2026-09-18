@@ -29,3 +29,15 @@ these is rejected by `python granth.py depth`.
 These landing pages/records were opened live. Individual linked chapters are assigned readings,
 not claims of a fresh verification of every interface. Recheck the exact versioned page before
 each lab. Case-study workloads and service targets are hypothetical design inputs.
+
+## LeetCode interview-practice references — 2026-09-19
+
+The official [Top Interview 150](https://leetcode.com/studyplan/top-interview-150/) and
+[LeetCode 75](https://leetcode.com/studyplan/leetcode-75/) pages were opened during this update.
+Individual official problem-page records, difficulty observations and access status are in
+[leetcode_sources.json](leetcode_sources.json); course assignments are in [LEETCODE_INDEX.md](LEETCODE_INDEX.md).
+These are pattern-based recommendations, not verified employer-frequency data. No paid problem
+statement was reproduced; the two subscription-gated companions retain free local alternatives.
+
+The base Jump Game URL timed out; its [official description page](https://leetcode.com/problems/jump-game/description/)
+was successfully checked on 2026-09-19, confirming problem 55 and Medium difficulty.

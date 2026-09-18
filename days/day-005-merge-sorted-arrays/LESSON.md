@@ -4,7 +4,7 @@ phase: 1
 title: "Merge sorted arrays"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-05, SD-05, PY-05; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Merge sorted arrays](dsa/README.md) |
-| System design | 30 minutes | [Latency budgets](sd/README.md) |
-| Python | 15 minutes | [Truth and sentinels](lang/README.md) |
+| DSA | 60 minutes | [Merge sorted arrays](dsa_merge-sorted-arrays/README.md) |
+| System design | 30 minutes | [Latency budgets](sd_latency-budgets/README.md) |
+| Python | 15 minutes | [Truth and sentinels](lang_truth-and-sentinels/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

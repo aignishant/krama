@@ -4,7 +4,7 @@ phase: 12
 title: "Strong components"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-82, SD-82, PY-82; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Strong components](dsa/README.md) |
-| System design | 30 minutes | [Capacity and cost](sd/README.md) |
-| Python | 15 minutes | [Cache invalidation](lang/README.md) |
+| DSA | 60 minutes | [Strong components](dsa_strong-components/README.md) |
+| System design | 30 minutes | [Capacity and cost](sd_capacity-and-cost/README.md) |
+| Python | 15 minutes | [Cache invalidation](lang_cache-invalidation/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

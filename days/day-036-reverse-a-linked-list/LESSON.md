@@ -4,7 +4,7 @@ phase: 6
 title: "Reverse a linked list"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-36, SD-36, PY-36; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Reverse a linked list](dsa/README.md) |
-| System design | 30 minutes | [Cache aside](sd/README.md) |
-| Python | 15 minutes | [Dataclass defaults](lang/README.md) |
+| DSA | 60 minutes | [Reverse a linked list](dsa_reverse-a-linked-list/README.md) |
+| System design | 30 minutes | [Cache aside](sd_cache-aside/README.md) |
+| Python | 15 minutes | [Dataclass defaults](lang_dataclass-defaults/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

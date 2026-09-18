@@ -4,7 +4,7 @@ phase: 3
 title: "Sorted pair existence"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-15, SD-15, PY-15; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Sorted pair existence](dsa/README.md) |
-| System design | 30 minutes | [Domain model](sd/README.md) |
-| Python | 15 minutes | [Iterator protocol](lang/README.md) |
+| DSA | 60 minutes | [Sorted pair existence](dsa_sorted-pair-existence/README.md) |
+| System design | 30 minutes | [Domain model](sd_domain-model/README.md) |
+| Python | 15 minutes | [Iterator protocol](lang_iterator-protocol/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

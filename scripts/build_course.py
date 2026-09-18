@@ -1,4 +1,8 @@
-"""One-time curriculum authoring utility; refuses to replace existing course files."""
+"""Archived v1.0 authoring source. Do not rebuild an active v1.1 course with this file.
+
+Topic-folder paths and LeetCode companions are defined by docs/sessions.json and the v1.1
+migration. This source is retained for provenance, not as the current generator.
+"""
 from pathlib import Path
 import csv
 import hashlib
@@ -790,4 +794,4 @@ python course.py check after writing, and report exactly which teaching document
 
 
 if __name__ == '__main__':
-    main()
+    raise SystemExit('Archived v1.0 scaffolder: edit the current course using docs/sessions.json; do not regenerate learner work.')

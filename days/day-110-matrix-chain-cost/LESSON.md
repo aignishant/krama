@@ -4,7 +4,7 @@ phase: 16
 title: "Matrix chain cost"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-110, SD-110, PY-110; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Matrix chain cost](dsa/README.md) |
-| System design | 30 minutes | [Chat deep dive](sd/README.md) |
-| Python | 15 minutes | [Weak references](lang/README.md) |
+| DSA | 60 minutes | [Matrix chain cost](dsa_matrix-chain-cost/README.md) |
+| System design | 30 minutes | [Chat deep dive](sd_chat-deep-dive/README.md) |
+| Python | 15 minutes | [Weak references](lang_weak-references/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

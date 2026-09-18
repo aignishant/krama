@@ -4,7 +4,7 @@ phase: 19
 title: "Minimum effort grid route"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-128, SD-128, PY-128; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Minimum effort grid route](dsa/README.md) |
-| System design | 30 minutes | [Reservation data](sd/README.md) |
-| Python | 15 minutes | [Circular imports](lang/README.md) |
+| DSA | 60 minutes | [Minimum effort grid route](dsa_minimum-effort-grid-route/README.md) |
+| System design | 30 minutes | [Reservation data](sd_reservation-data/README.md) |
+| Python | 15 minutes | [Circular imports](lang_circular-imports/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

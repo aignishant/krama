@@ -4,7 +4,7 @@ phase: 12
 title: "Negative edge paths"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-79, SD-79, PY-79; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Negative edge paths](dsa/README.md) |
-| System design | 30 minutes | [Error budgets](sd/README.md) |
-| Python | 15 minutes | [Iterator duplication](lang/README.md) |
+| DSA | 60 minutes | [Negative edge paths](dsa_negative-edge-paths/README.md) |
+| System design | 30 minutes | [Error budgets](sd_error-budgets/README.md) |
+| Python | 15 minutes | [Iterator duplication](lang_iterator-duplication/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

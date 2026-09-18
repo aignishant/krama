@@ -5,7 +5,7 @@ description: Expand one Krama subject assignment into teaching parts while prese
 
 Read CLAUDE.md, the master plan, ADR-0001 and the requested day's subject files. Ask which subject
 only if it is genuinely ambiguous; a request for all three means all three. Use the vendored
-Granth SKILL.md's full teaching contract for depth, but keep parts within dsa/, sd/ or lang/
+Granth SKILL.md's full teaching contract for depth, but keep parts within the manifest's dsa_<topic>/, sd_<topic>/ or lang_<topic>/ folders
 and preserve the 60/30/15-minute core assignment. Mark deeper reading optional. Inspect that
 track's progress rather than blocking on another track. Never overwrite learner code or notes.
 Use one idea per document, a plain-language explanation, mechanism, observed failure, production

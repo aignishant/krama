@@ -77,7 +77,7 @@
     "slug": "contains-duplicate",
     "url": "https://leetcode.com/problems/contains-duplicate/",
     "premium": false,
-    "note": "Online returns the most frequent k values, not the first repeated value.",
+    "note": "Online returns a boolean for any duplicate; local practice returns the first value whose second occurrence is encountered.",
     "verified": true,
     "difficulty": "Easy",
     "status": "verified",
@@ -870,10 +870,11 @@
     "url": "https://leetcode.com/problems/jump-game/",
     "premium": false,
     "note": "Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.",
-    "verified": false,
-    "difficulty": "Not exposed",
-    "status": "lookup-incomplete",
-    "checked": "2026-09-18"
+    "verified": true,
+    "difficulty": "Medium",
+    "status": "verified",
+    "checked": "2026-09-19",
+    "verified_url": "https://leetcode.com/problems/jump-game/description/"
   },
   {
     "number": 45,

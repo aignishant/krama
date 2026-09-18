@@ -4,7 +4,7 @@ phase: 5
 title: "Stable record sorting"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-29, SD-29, PY-29; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Stable record sorting](dsa/README.md) |
-| System design | 30 minutes | [Tree indexes](sd/README.md) |
-| Python | 15 minutes | [Attribute lookup](lang/README.md) |
+| DSA | 60 minutes | [Stable record sorting](dsa_stable-record-sorting/README.md) |
+| System design | 30 minutes | [Tree indexes](sd_tree-indexes/README.md) |
+| Python | 15 minutes | [Attribute lookup](lang_attribute-lookup/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

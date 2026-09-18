@@ -4,7 +4,7 @@ phase: 14
 title: "Increasing subsequence"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-96, SD-96, PY-96; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Increasing subsequence](dsa/README.md) |
-| System design | 30 minutes | [Shortener deep dive](sd/README.md) |
-| Python | 15 minutes | [Offloading blocking work](lang/README.md) |
+| DSA | 60 minutes | [Increasing subsequence](dsa_increasing-subsequence/README.md) |
+| System design | 30 minutes | [Shortener deep dive](sd_shortener-deep-dive/README.md) |
+| Python | 15 minutes | [Offloading blocking work](lang_offloading-blocking-work/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

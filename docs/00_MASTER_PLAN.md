@@ -1,6 +1,6 @@
 ---
 plan: krama
-version: "v1.0.0"
+version: "v1.1.0"
 days: 168
 tracks: 3
 ids: 504
@@ -12,7 +12,9 @@ phases: 24
 ## 1 · Outcome and assumptions
 
 Krama means sequence: steady practice in three independently usable tracks. The assumed goal
-is strong software-engineering and interview readiness, not competitive-programming specialization.
+is strong software-engineering and product-company interview readiness, including the user's
+Google goal. Focus on unfamiliar problems, clear reasoning, correctness, complexity and follow-ups.
+LeetCode assignments are pattern practice, not claims about an employer's current question bank.
 Python assumes five years of practical experience; DSA and design start with a diagnostic foundation.
 Duration is 168 study days, or 24 weeks at seven sessions per week. At six sessions per week it
 takes 28 calendar weeks. The count is an initial recommendation, not a user-specified deadline.
@@ -44,6 +46,12 @@ for cleanup, concurrency and failure paths. No cloud deployment or paid platform
 | dsa | 60 minutes | 5 recall + 10 concept/trace + 30 core attempt + 10 tests/explanation + 5 log |
 | sd | 30 minutes | 5 recall + 10 reference/concept + 12 one design deliverable + 3 critique |
 | lang | 15 minutes | 3 predict + 8 experiment + 4 explain/test |
+
+For DSA, use the LeetCode companion as the main attempt when its pattern matches. The local
+exercise provides a warm-up, a free fallback, or a contract variation for review. Do not require
+both implementations within the same hour. An online solve needs actual submission evidence and
+a contract comparison; local tests check only the local contract. See [interview practice](INTERVIEW_PREP.md)
+and the [complete LeetCode index](LEETCODE_INDEX.md).
 
 Total: 105 minutes daily. Across 168 sessions the budget is 168 DSA hours, 84 design hours and
 42 Python hours. Optional exercises replace spare time; they never add mandatory time. Hard DSA
@@ -423,8 +431,11 @@ study ledger. A hub-only status is expected for guided assignments without deep 
 
 ## 11 · Adapted day contract
 
-Each day contains exactly dsa/, sd/ and lang/, plus an orienting LESSON.md and CHECKLIST.md.
-DSA has README.md, PRACTICE.md, HINTS.md, solution.py, cases.json, test_solution.py and NOTES.md.
+Each day contains exactly three topic-named subject folders: dsa_<topic>/, sd_<topic>/ and
+lang_<topic>/, plus an orienting LESSON.md and CHECKLIST.md. Actual paths live in sessions.json;
+CLI aliases remain dsa, sd and lang. The day-1 folders are dsa_count-target-values,
+sd_functional-scope and lang_identity-and-equality.
+DSA has README.md, PRACTICE.md, HINTS.md, LEETCODE.md, solution.py, cases.json, test_solution.py and NOTES.md.
 Review days point to explicit earlier core problems and have their own replacement solve target.
 SD has a bounded assignment, design-response template and checklist. Python has a focused lab
 assignment, unsolved lab.py and notes. Each subject can be opened without reading the other two.
@@ -453,3 +464,6 @@ as such. Advanced and optional work must fit spare time or a later review sessio
 2026-09-18: v1.0.0 adopted with the user's timing/layout overriding upstream defaults; see
 [ADR-0001](adr/ADR-0001-the-plan-as-adopted.md). Scope, sequencing or layout changes require an
 append-only decision and changelog entry before renumbering. No automatic commit is part of study.
+
+2026-09-19: v1.1.0 adds topic-named subject folders and LeetCode interview assignments under
+[ADR-0002](adr/ADR-0002-topic-folders-and-interview-practice.md). The 168-day order and IDs are unchanged.

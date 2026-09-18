@@ -4,7 +4,7 @@ phase: 20
 title: "Order statistic stream"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-137, SD-137, PY-137; none are
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Order statistic stream](dsa/README.md) |
-| System design | 30 minutes | [Partitioned aggregation](sd/README.md) |
-| Python | 15 minutes | [Idempotent handler](lang/README.md) |
+| DSA | 60 minutes | [Order statistic stream](dsa_order-statistic-stream/README.md) |
+| System design | 30 minutes | [Partitioned aggregation](sd_partitioned-aggregation/README.md) |
+| Python | 15 minutes | [Idempotent handler](lang_idempotent-handler/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

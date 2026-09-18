@@ -15,7 +15,9 @@ class ToolTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         (self.root / 'docs').mkdir()
-        self.entries = [{'day': 1, 'folder': 'day-001-fixture'}, {'day': 2, 'folder': 'day-002-fixture'}]
+        self.entries = [{'day': n, 'folder': f'day-{n:03d}-fixture',
+                         'track_folders': {t: f'{t}_example-topic' for t in course.TRACKS}}
+                        for n in (1, 2)]
         (self.root / 'docs/sessions.json').write_text(json.dumps(self.entries), encoding='utf-8')
         self.ledger = self.root / 'docs/TRACK_PROGRESS.csv'
         self.header = 'day,track,status,date,evidence,notes\n'
@@ -49,11 +51,21 @@ class ToolTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'No day'):
             course.get_session(99, self.root)
 
+    def test_track_alias_resolves_topic_folder(self):
+        self.assertEqual(course.track_folder(self.entries[0], 'dsa'), 'dsa_example-topic')
+        self.assertEqual(course.track_folder(self.entries[0], 'lang'), 'lang_example-topic')
+
+    def test_manifest_cannot_escape_day_folder(self):
+        self.entries[0]['track_folders']['dsa'] = '../outside'
+        with self.assertRaisesRegex(ValueError, 'Invalid topic folder'):
+            course.track_folder(self.entries[0], 'dsa')
+
     def test_runner_detects_wrong_answer_and_accepts_correct_answer(self):
         # Synthetic echo fixture tests the runner without solving a learner exercise.
-        folder = self.root / 'days/day-001-fixture/dsa'
+        folder = self.root / 'days/day-001-fixture/dsa_example-topic'
         folder.mkdir(parents=True)
-        source = next((course.ROOT / 'days').glob('day-001-*/dsa/test_solution.py'))
+        entry = course.get_session(1)
+        source = course.ROOT / 'days' / entry['folder'] / course.track_folder(entry, 'dsa') / 'test_solution.py'
         (folder / 'test_solution.py').write_text(source.read_text(encoding='utf-8'), encoding='utf-8')
         (folder / 'solution.py').write_text('def solve(data):\n    return data["sentinel"]\n', encoding='utf-8')
         fixture = folder / 'cases.json'

@@ -4,7 +4,7 @@ phase: 14
 title: "Nonadjacent loot"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-93, SD-93, PY-93; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Nonadjacent loot](dsa/README.md) |
-| System design | 30 minutes | [Shortener API and data](sd/README.md) |
-| Python | 15 minutes | [Async queues](lang/README.md) |
+| DSA | 60 minutes | [Nonadjacent loot](dsa_nonadjacent-loot/README.md) |
+| System design | 30 minutes | [Shortener API and data](sd_shortener-api-and-data/README.md) |
+| Python | 15 minutes | [Async queues](lang_async-queues/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

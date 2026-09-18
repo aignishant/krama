@@ -4,7 +4,7 @@ phase: 4
 title: "Rotated search"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-24, SD-24, PY-24; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Rotated search](dsa/README.md) |
-| System design | 30 minutes | [Query plans](sd/README.md) |
-| Python | 15 minutes | [Container protocol](lang/README.md) |
+| DSA | 60 minutes | [Rotated search](dsa_rotated-search/README.md) |
+| System design | 30 minutes | [Query plans](sd_query-plans/README.md) |
+| Python | 15 minutes | [Container protocol](lang_container-protocol/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

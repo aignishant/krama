@@ -157,7 +157,7 @@ NOTES = {
 2: 'Related maximum-scan drill: the online problem adds a dominance condition; the local task asks only for the first maximum.',
 4: 'Related pointer drill: reverse an entire character array in place online; the local task reverses an integer segment.',
 5: 'Online uses a preallocated destination array; local practice returns a new merged list.',
-8: 'Online returns the most frequent k values, not the first repeated value.',
+8: 'Online returns a boolean for any duplicate; local practice returns the first value whose second occurrence is encountered.',
 9: 'Online asks for top k frequencies; local practice ranks all distinct integers with an explicit tie rule.',
 10: 'Online guarantees one solution and permits either answer order. Local practice allows no/multiple solutions and requires the lexicographically smallest [i,j].',
 16: 'Online output ordering may differ; local practice canonicalizes each triple and the result list.',

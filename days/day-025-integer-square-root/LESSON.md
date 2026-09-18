@@ -4,7 +4,7 @@ phase: 4
 title: "Integer square root"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-25, SD-25, PY-25; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Integer square root](dsa/README.md) |
-| System design | 30 minutes | [Transactions](sd/README.md) |
-| Python | 15 minutes | [Indexing and slicing](lang/README.md) |
+| DSA | 60 minutes | [Integer square root](dsa_integer-square-root/README.md) |
+| System design | 30 minutes | [Transactions](sd_transactions/README.md) |
+| Python | 15 minutes | [Indexing and slicing](lang_indexing-and-slicing/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.

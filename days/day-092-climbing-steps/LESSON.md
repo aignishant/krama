@@ -4,7 +4,7 @@ phase: 14
 title: "Climbing steps"
 ids: []
 kind: guided-assignment
-plan_version: "v1.0.0"
+plan_version: "v1.1.0"
 parts: 0
 generated: "2026-09-18"
 status: planned
@@ -16,9 +16,9 @@ This is a guided assignment hub. Assigned IDs: DSA-92, SD-92, PY-92; none are cl
 
 | Subject | Budget | Open |
 | --- | --- | --- |
-| DSA | 60 minutes | [Climbing steps](dsa/README.md) |
-| System design | 30 minutes | [Shortener requirements](sd/README.md) |
-| Python | 15 minutes | [Bounded concurrency](lang/README.md) |
+| DSA | 60 minutes | [Climbing steps](dsa_climbing-steps/README.md) |
+| System design | 30 minutes | [Shortener requirements](sd_shortener-requirements/README.md) |
+| Python | 15 minutes | [Bounded concurrency](lang_bounded-concurrency/README.md) |
 
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.
