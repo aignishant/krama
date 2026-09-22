@@ -11,9 +11,10 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 20.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Both ask for the shortest nonempty contiguous subarray with sum >= target, returning 0 if none qualifies. Values and target are positive integers. Local input uses data["nums"] and data["target"]; empty local input has no answer, while online constraints require at least one element. Negative values invalidate the positive-window proof. The online O(n log n) follow-up is optional.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official public problem page checked on 2026-09-22; see [the source ledger](../../../docs/SOURCES.md).
+Learn [the mechanism](CONCEPTS.md) before this attempt; it covers the companion's required variation.
 
 ## Interview checklist
 

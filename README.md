@@ -29,19 +29,19 @@ and [interview practice method](docs/INTERVIEW_PREP.md). Premium companions have
 3. For later reading without practice, use [DSA recall](docs/DSA_RECALL.md),
    [Python recall](docs/LANG_RECALL.md), or [system design recall](docs/SD_RECALL.md).
 
-Days 1–16 have full topic explanations across all three tracks, with worked traces, observed
+Days 1–20 have full topic explanations across all three tracks, with worked traces, observed
 teaching failures, readiness checks, and recall cards. Continue with [Day 2](days/day-002-find-the-first-maximum/LESSON.md),
 [Day 3](days/day-003-stable-compaction/LESSON.md), [Day 4](days/day-004-reverse-a-segment/LESSON.md),
 or [Day 5](days/day-005-merge-sorted-arrays/LESSON.md), then
 [Day 6](days/day-006-best-single-trade/LESSON.md), [Day 7 review](days/day-007-week-1-review/LESSON.md),
 [Day 8](days/day-008-first-repeated-value/LESSON.md),
 [Day 9](days/day-009-frequency-ranking/LESSON.md), [Day 10](days/day-010-pair-sum-indices/LESSON.md),
-[Day 11](days/day-011-group-anagrams/LESSON.md), and [Day 12](days/day-012-range-sums/LESSON.md). Continue with [Day 13](days/day-013-count-target-subarrays/LESSON.md), [Day 14](days/day-014-week-2-review/LESSON.md), [Day 15](days/day-015-sorted-pair-existence/LESSON.md), [Day 16](days/day-016-unique-triples/LESSON.md). Days 7 and 14 begin with cold attempts before repair reading.
-Days 17–168 have navigation to preparation guides until their topic lessons are expanded.
+[Day 11](days/day-011-group-anagrams/LESSON.md), and [Day 12](days/day-012-range-sums/LESSON.md). Continue with [Day 13](days/day-013-count-target-subarrays/LESSON.md), [Day 14](days/day-014-week-2-review/LESSON.md), [Day 15](days/day-015-sorted-pair-existence/LESSON.md), [Day 16](days/day-016-unique-triples/LESSON.md). Continue with [Day 17](days/day-017-container-capacity/LESSON.md), [Day 18](days/day-018-fixed-window-maximum-sum/LESSON.md), [Day 19](days/day-019-longest-distinct-substring/LESSON.md), [Day 20](days/day-020-minimum-positive-window/LESSON.md). Days 7 and 14 begin with cold attempts before repair reading.
+Days 21–168 have navigation to preparation guides until their topic lessons are expanded.
 [The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
 explanations and recall cards part of every future day expansion.
 
-For system design, Days 1–16 also include a complete **REFERENCE_DESIGN.md** written by the
+For system design, Days 1–20 also include a complete **REFERENCE_DESIGN.md** written by the
 assistant. **DESIGN.md** is your practice file: its `TODO(me)` prompts are for you when you
 choose to practice. Read the reference first for guidance or compare after your own attempt;
 on Days 7 and 14, open the reference only after the cold review attempt.

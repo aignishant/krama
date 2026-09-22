@@ -44,6 +44,10 @@ second design task. Existing practice files are preserved when references are ad
 | 014 | [Week 2 design review](../days/day-014-week-2-review/sd_week-2-design-review/REFERENCE_DESIGN.md) |
 | 015 | [Domain model](../days/day-015-sorted-pair-existence/sd_domain-model/REFERENCE_DESIGN.md) |
 | 016 | [API contract](../days/day-016-unique-triples/sd_api-contract/REFERENCE_DESIGN.md) |
+| 017 | [Stateless workers](../days/day-017-container-capacity/sd_stateless-workers/REFERENCE_DESIGN.md) |
+| 018 | [Sync versus async](../days/day-018-fixed-window-maximum-sum/sd_sync-versus-async/REFERENCE_DESIGN.md) |
+| 019 | [Compatibility](../days/day-019-longest-distinct-substring/sd_compatibility/REFERENCE_DESIGN.md) |
+| 020 | [Modular monolith](../days/day-020-minimum-positive-window/sd_modular-monolith/REFERENCE_DESIGN.md) |
 
 Later days receive a complete reference when their topic lessons are expanded. Each reference
 is one reasoned answer under stated assumptions; another design can be valid with different

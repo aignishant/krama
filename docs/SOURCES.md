@@ -176,3 +176,28 @@ SQL, HTTP exchanges, and service timelines in references are explicitly design s
 | spec:postgresql-18-constraints | 5.5. Constraints | 18 | https://www.postgresql.org/docs/18/ddl-constraints.html | 2026-09-22 | Day 15 primary, unique and foreign keys |
 | RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-22 | Day 16 methods and response status semantics |
 | RFC 3339 | Date and Time on the Internet: Timestamps | 2002 | https://www.rfc-editor.org/rfc/rfc3339.html | 2026-09-22 | Day 16 explicit timezone offset and timestamp subset |
+
+## Days 17–20 teaching checks — 2026-09-22
+
+Official pages below were opened for the named claims. Python examples were executed locally;
+service diagrams, thresholds, and timelines are hypothetical designs. The Python web pages
+track the 3.12 maintenance series; executable evidence records the installed interpreter.
+
+| Identifier | Exact title | Version/year | URL | Checked | Use |
+| --- | --- | --- | --- | --- | --- |
+| LeetCode 11 | Container With Most Water | Live problem | https://leetcode.com/problems/container-with-most-water/ | 2026-09-22 | Day 17 area and nonnegative-height contract |
+| LeetCode 643 | Maximum Average Subarray I | Live problem | https://leetcode.com/problems/maximum-average-subarray-i/ | 2026-09-22 | Day 18 average versus local sum, fixed positive k |
+| LeetCode 3 | Longest Substring Without Repeating Characters | Live problem | https://leetcode.com/problems/longest-substring-without-repeating-characters/ | 2026-09-22 | Day 19 contiguous substring and empty input |
+| LeetCode 209 | Minimum Size Subarray Sum | Live problem | https://leetcode.com/problems/minimum-size-subarray-sum/ | 2026-09-22 | Day 20 positive input and no-answer result |
+| Python expressions | 6. Expressions | 3.12 | https://docs.python.org/3.12/reference/expressions.html | 2026-09-22 | Generator close, membership consumption, generator-expression timing |
+| Python contextlib | contextlib — Utilities for with-statement contexts | 3.12 | https://docs.python.org/3.12/library/contextlib.html | 2026-09-22 | Day 17 consumer-owned closing scope |
+| PEP 380 | Syntax for Delegating to a Subgenerator | 2009 | https://peps.python.org/pep-0380/ | 2026-09-22 | Day 18 yield from and StopIteration.value |
+| Python itertools | itertools — Functions creating iterators for efficient looping | 3.12 | https://docs.python.org/3.12/library/itertools.html | 2026-09-22 | Days 19–20 tee buffering and iterator composition |
+| Twelve-Factor VI | The Twelve-Factor App — VI. Processes | Live page | https://12factor.net/processes | 2026-09-22 | Day 17 replaceable processes and backing state |
+| Azure async pattern | Asynchronous Request-Reply pattern | Live page | https://learn.microsoft.com/en-us/azure/architecture/patterns/asynchronous-request-reply | 2026-09-22 | Day 18 acceptance versus completion; adapted to internal analytics |
+| AIP-180 | Backwards compatibility | Live guidance | https://google.aip.dev/180 | 2026-09-22 | Day 19 wire and semantic compatibility, additive changes |
+| Azure architecture | Microservices architecture style | Live page | https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices | 2026-09-22 | Day 20 independent scaling and distributed-system complexity |
+
+The async pattern page redirected from /patterns/async-request-reply to the canonical address
+recorded above. These sources support technical semantics; no source claims that the authored
+service numbers were measured or that a problem occurs at a particular employer.

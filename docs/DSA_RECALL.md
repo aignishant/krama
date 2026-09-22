@@ -29,6 +29,10 @@ are taught; this is not a summary of all 168 planned days.
 | 014 | Week 2 DSA review | [Recall card](#day-014-week-2-dsa-review) |
 | 015 | Sorted pair existence | [Recall card](#day-015-sorted-pair-existence) |
 | 016 | Unique triples | [Recall card](#day-016-unique-triples) |
+| 017 | Container capacity | [Recall card](#day-017-container-capacity) |
+| 018 | Fixed window maximum sum | [Recall card](#day-018-fixed-window-maximum-sum) |
+| 019 | Longest distinct substring | [Recall card](#day-019-longest-distinct-substring) |
+| 020 | Minimum positive window | [Recall card](#day-020-minimum-positive-window) |
 
 ## Day 001: Counting and reusing counts
 
@@ -300,6 +304,50 @@ an unbounded exact history consumes growing memory. Hashability and equality def
 
 [Full lesson](../days/day-016-unique-triples/dsa_unique-triples/CONCEPTS.md) ·
 [Your notes](../days/day-016-unique-triples/dsa_unique-triples/NOTES.md)
+
+## Day 017: Container capacity
+
+**Cue and mechanism:** Two boundaries trade width against limiting height; evaluate the pair and move a shorter wall.
+
+**Why it works and cost:** Pairs retaining the shorter wall can only lose width without gaining limiting height. O(n) time and O(1) auxiliary space.
+
+**Memory anchor and trap:** [1,3,3] defeats moving the taller wall. Never sort heights: positions determine width.
+
+[Full lesson](../days/day-017-container-capacity/dsa_container-capacity/CONCEPTS.md) ·
+[Your notes](../days/day-017-container-capacity/dsa_container-capacity/NOTES.md)
+
+## Day 018: Fixed window maximum sum
+
+**Cue and mechanism:** Every candidate has exactly k adjacent values; reuse overlap by subtracting the departing value and adding the incoming one.
+
+**Why it works and cost:** The update preserves the exact k-item total and visits all n-k+1 windows in O(n) time. Indexable input permits O(1) extra space; streaming needs O(k) buffering.
+
+**Memory anchor and trap:** All-negative windows require a real initial sum. The online companion wants best_sum/k, not best_sum.
+
+[Full lesson](../days/day-018-fixed-window-maximum-sum/dsa_fixed-window-maximum-sum/CONCEPTS.md) ·
+[Your notes](../days/day-018-fixed-window-maximum-sum/dsa_fixed-window-maximum-sum/NOTES.md)
+
+## Day 019: Longest distinct substring
+
+**Cue and mechanism:** Find the longest contiguous distinct range; expand right and remove left characters until the incoming one is absent.
+
+**Why it works and cost:** Each character enters and leaves at most once: expected O(n) time with hashing and O(k) active-set space. Historical last-seen storage can instead use O(u).
+
+**Memory anchor and trap:** Trace abba. Last-seen jumps need max(current_left, previous_index+1); left must never move backward.
+
+[Full lesson](../days/day-019-longest-distinct-substring/dsa_longest-distinct-substring/CONCEPTS.md) ·
+[Your notes](../days/day-019-longest-distinct-substring/dsa_longest-distinct-substring/NOTES.md)
+
+## Day 020: Minimum positive window
+
+**Cue and mechanism:** Positive values and a shortest range with sum >= target suggest expand, then repeatedly record and shrink while valid.
+
+**Why it works and cost:** Positive sums make the stopping rule monotone. Discarded starts already gave shorter qualifying windows, so both pointers advance in O(n) time and O(1) space.
+
+**Memory anchor and trap:** [1,-1,5] with target 5 breaks the positive-only rule. Use while, not if, and record before removing.
+
+[Full lesson](../days/day-020-minimum-positive-window/dsa_minimum-positive-window/CONCEPTS.md) ·
+[Your notes](../days/day-020-minimum-positive-window/dsa_minimum-positive-window/NOTES.md)
 
 
 ---

@@ -11,9 +11,10 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 19.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Both return a length, not the substring. Local input uses data["text"] and explicitly treats Python string elements as Unicode code points, without normalization; the online page describes English letters, digits, symbols, and spaces. Empty input returns 0. A substring is contiguous, unlike a subsequence.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official public problem page checked on 2026-09-22; see [the source ledger](../../../docs/SOURCES.md).
+Learn [the mechanism](CONCEPTS.md) before this attempt; it covers the companion's required variation.
 
 ## Interview checklist
 

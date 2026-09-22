@@ -52,3 +52,25 @@ system-design workload estimate is represented as a measured production result.
   hypothetical designs, not executed service tests or production measurements.
 - Days 1–16 now have expanded topic lessons and SD references. Days 17–168 retain assignment
   briefs and preparation navigation. No study completion or commit was recorded.
+
+## Days 17–20 documentation expansion — 2026-09-22
+
+- Added 12 topic explanations and four complete SD reference answers for container capacity,
+  fixed windows, distinct substrings, positive windows, and their independent SD/Python tracks.
+- Connected subject reading routes, day hubs, checklists, precise LeetCode contract comparisons,
+  12 recall cards, the reference index, glossary, and teaching-availability notices.
+- Executed all 12 new Python teaching blocks on Python 3.12.10 and compared captured output
+  with each recorded transcript. All matched, including the deliberately caught failures.
+- Checked 760 local links, including heading anchors, across 70 relevant documents; all resolved.
+  Verified that the four new recall cards in each track have unique headings and linked routes.
+- Compared SHA256 hashes of 1,179 captured learner/progress files; all remained byte-identical.
+  Existing exercises, personal notes, design attempts, fixtures, and study ledgers were preserved.
+- `python course.py check`, `python granth.py doctor`, and `git diff --check` passed.
+- Opened official Python, PEP, LeetCode, Twelve-Factor, API compatibility, and architecture pages;
+  their dated uses appear in [SOURCES.md](SOURCES.md). Reference service behavior and numeric
+  budgets are hypothetical designs, not executed deployment tests or performance measurements.
+- `python granth.py check` also passed; all 173 generated documents remain current. Its upstream
+  depth scan does not assess these adapted topic-folder lessons, as documented in the master plan.
+- Days 1–20 now have expanded topic lessons and complete SD references. Days 21–168 retain
+  assignment briefs and preparation navigation. The 60/30/15-minute caps remain unchanged.
+  No learner study completion or commit was recorded.

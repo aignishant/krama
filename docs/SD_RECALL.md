@@ -28,6 +28,10 @@ is the first available card; future taught days will extend this file in day ord
 | 014 | Week 2 design review | [Recall card](#day-014-week-2-design-review) |
 | 015 | Domain model | [Recall card](#day-015-domain-model) |
 | 016 | API contract | [Recall card](#day-016-api-contract) |
+| 017 | Stateless workers | [Recall card](#day-017-stateless-workers) |
+| 018 | Sync versus async | [Recall card](#day-018-sync-versus-async) |
+| 019 | Compatibility | [Recall card](#day-019-compatibility) |
+| 020 | Modular monolith | [Recall card](#day-020-modular-monolith) |
 
 ## Day 001: Functional scope
 
@@ -316,6 +320,54 @@ another origin may need another connection. HTTP/3 requires a different transpor
 [Full lesson](../days/day-016-unique-triples/sd_api-contract/CONCEPTS.md) ·
 [Complete reference](../days/day-016-unique-triples/sd_api-contract/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-016-unique-triples/sd_api-contract/DESIGN.md)
+
+## Day 017: Stateless workers
+
+**Cue and mechanism:** A restart or a different worker must not change session or link behavior; put authoritative state in shared durable storage.
+
+**Why it works and cost:** Each worker consults the same session, link, and replay records. Remote access and shared dependency costs replace affinity.
+
+**Memory anchor and trap:** A commits, B replays after A restarts. A shared cache or sticky routing alone does not establish durability.
+
+[Full lesson](../days/day-017-container-capacity/sd_stateless-workers/CONCEPTS.md) ·
+[Complete reference](../days/day-017-container-capacity/sd_stateless-workers/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-017-container-capacity/sd_stateless-workers/DESIGN.md)
+
+## Day 018: Sync versus async
+
+**Cue and mechanism:** Keep redirect decisions synchronous and defer derived analytics after a defined handoff.
+
+**Why it works and cost:** Durable acceptance and completed processing are separate; retries can duplicate delivery, and atomic event-ID deduplication protects effects.
+
+**Memory anchor and trap:** An in-memory task disappears on crash. Bounded enqueue preserves redirect availability but permits event loss; a queue cannot fix sustained overload.
+
+[Full lesson](../days/day-018-fixed-window-maximum-sum/sd_sync-versus-async/CONCEPTS.md) ·
+[Complete reference](../days/day-018-fixed-window-maximum-sum/sd_sync-versus-async/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-018-fixed-window-maximum-sum/sd_sync-versus-async/DESIGN.md)
+
+## Day 019: Compatibility
+
+**Cue and mechanism:** An optional field changes a response; check old/new readers against old/new servers and preserve existing semantics.
+
+**Why it works and cost:** Tolerant readers permit additive fields, but strict decoders can fail. Rollback requires new clients to accept absence.
+
+**Memory anchor and trap:** Absent means unavailable, null means no scheduled expiry, timestamp means scheduled expiry. Adding metadata is not permission to expire permanent links.
+
+[Full lesson](../days/day-019-longest-distinct-substring/sd_compatibility/CONCEPTS.md) ·
+[Complete reference](../days/day-019-longest-distinct-substring/sd_compatibility/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-019-longest-distinct-substring/sd_compatibility/DESIGN.md)
+
+## Day 020: Modular monolith
+
+**Cue and mechanism:** One team can begin with separate Links and Analytics modules in one deployment and explicit ownership.
+
+**Why it works and cost:** Public module interfaces preserve reasoning boundaries without immediate network costs, but CPU, memory, database, and release failures can still be shared.
+
+**Memory anchor and trap:** Analytics must not write link expiry. Extract after measured interference and a verified scaling benefit, not merely because two domain names exist.
+
+[Full lesson](../days/day-020-minimum-positive-window/sd_modular-monolith/CONCEPTS.md) ·
+[Complete reference](../days/day-020-minimum-positive-window/sd_modular-monolith/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-020-minimum-positive-window/sd_modular-monolith/DESIGN.md)
 
 
 ---

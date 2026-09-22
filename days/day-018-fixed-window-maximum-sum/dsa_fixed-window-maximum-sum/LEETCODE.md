@@ -11,9 +11,10 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 18.
 
-**Contract comparison:** Online maximizes a fixed-length average; local practice returns a fixed-length sum.
+**Contract comparison:** Online returns the maximum average of exactly k adjacent values; local practice returns their maximum sum from data["nums"] and data["k"]. Since k is fixed and positive, maximize the sum and divide by k only for the online answer. Both allow negative values and require 1 <= k <= n; the online answer has a floating-point tolerance.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official public problem page checked on 2026-09-22; see [the source ledger](../../../docs/SOURCES.md).
+Learn [the mechanism](CONCEPTS.md) before this attempt; it covers the companion's required variation.
 
 ## Interview checklist
 

@@ -72,3 +72,16 @@ introduced it instead of redefining it.
 | Entity identity | A stable key distinguishing one domain object from another despite equal or changed attributes. | [Day 15 sd](../days/day-015-sorted-pair-existence/sd_domain-model/CONCEPTS.md) | Domain key |
 | Generator suspension | Preserving a generator frame at yield until the next advancement. | [Day 16 lang](../days/day-016-unique-triples/lang_generator-laziness/CONCEPTS.md) | Lazy resumption |
 | API contract | The declared accepted inputs, observable outcomes, errors, and semantics of an interface. | [Day 16 sd](../days/day-016-unique-triples/sd_api-contract/CONCEPTS.md) | Request/response agreement |
+
+## Days 17–20 additions
+
+| Term | Meaning | Introduction | Related phrase |
+| --- | --- | --- | --- |
+| Stateless worker | A replaceable process whose local state is not authoritative for later requests. | [Day 17 sd](../days/day-017-container-capacity/sd_stateless-workers/CONCEPTS.md) | External state |
+| Generator closure | Explicitly ending a suspended generator and unwinding entered cleanup scopes. | [Day 17 lang](../days/day-017-container-capacity/lang_generator-cleanup/CONCEPTS.md) | close |
+| Sliding window | A contiguous range whose boundaries advance while its summary is maintained. | [Day 18 dsa](../days/day-018-fixed-window-maximum-sum/dsa_fixed-window-maximum-sum/CONCEPTS.md) | Moving interval |
+| Yield delegation | Forwarding a child iterator through yield from and capturing its terminal return value. | [Day 18 lang](../days/day-018-fixed-window-maximum-sum/lang_yield-delegation/CONCEPTS.md) | Subgenerator delegation |
+| Durable handoff | Acceptance of work by storage that survives the stated producer failure model. | [Day 18 sd](../days/day-018-fixed-window-maximum-sum/sd_sync-versus-async/CONCEPTS.md) | Persistent enqueue |
+| Tolerant reader | A response consumer that reads required fields while permitting documented unknown additions. | [Day 19 sd](../days/day-019-longest-distinct-substring/sd_compatibility/CONCEPTS.md) | Additive response compatibility |
+| Pull pipeline | Composed stages whose upstream advancement is driven by downstream requests. | [Day 20 lang](../days/day-020-minimum-positive-window/lang_streaming-pipeline/CONCEPTS.md) | Demand-driven iteration |
+| Modular monolith | One deployable application with explicit internal module interfaces and data ownership. | [Day 20 sd](../days/day-020-minimum-positive-window/sd_modular-monolith/CONCEPTS.md) | Internal service boundaries |

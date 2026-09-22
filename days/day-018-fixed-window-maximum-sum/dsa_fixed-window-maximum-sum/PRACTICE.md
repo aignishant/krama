@@ -1,5 +1,7 @@
 # Practice — Fixed window maximum sum
 
+Learn [the mechanism and worked trace](CONCEPTS.md) and answer [readiness questions](CONCEPTS.md#readiness-before-practice) before attempting.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

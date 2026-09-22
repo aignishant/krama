@@ -32,13 +32,17 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 | [014](day-014-week-2-review/LESSON.md) | Week 2 DSA review | Week 2 design review | Week 2 Python review |
 | [015](day-015-sorted-pair-existence/LESSON.md) | Sorted pair existence | Domain model | Iterator protocol |
 | [016](day-016-unique-triples/LESSON.md) | Unique triples | API contract | Generator laziness |
+| [017](day-017-container-capacity/LESSON.md) | Container capacity | Stateless workers | Generator cleanup |
+| [018](day-018-fixed-window-maximum-sum/LESSON.md) | Fixed window maximum sum | Sync versus async | Yield delegation |
+| [019](day-019-longest-distinct-substring/LESSON.md) | Longest distinct substring | Compatibility | Iterator consumption |
+| [020](day-020-minimum-positive-window/LESSON.md) | Minimum positive window | Modular monolith | Streaming pipeline |
 
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
-three tracks. Days 7 and 14 start with cold attempts, then repair reading. Days 17–168 still contain
+three tracks. Days 7 and 14 start with cold attempts, then repair reading. Days 21–168 still contain
 assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
 
-Days 1–16 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+Days 1–20 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
 you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
 to read a finished design without filling a TODO. References for Days 7 and 14 are for comparison after
 the cold attempt. Future expanded SD days use the same format.

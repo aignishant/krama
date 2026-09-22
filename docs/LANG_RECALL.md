@@ -28,6 +28,10 @@ the first available card; future taught days will extend this file in day order.
 | 014 | Week 2 Python review | [Recall card](#day-014-week-2-python-review) |
 | 015 | Iterator protocol | [Recall card](#day-015-iterator-protocol) |
 | 016 | Generator laziness | [Recall card](#day-016-generator-laziness) |
+| 017 | Generator cleanup | [Recall card](#day-017-generator-cleanup) |
+| 018 | Yield delegation | [Recall card](#day-018-yield-delegation) |
+| 019 | Iterator consumption | [Recall card](#day-019-iterator-consumption) |
+| 020 | Streaming pipeline | [Recall card](#day-020-streaming-pipeline) |
 
 ## Day 001: Identity, equality, and aliasing
 
@@ -293,6 +297,50 @@ binding work; large unpacked collections have separate costs. Error wording can 
 
 [Full lesson](../days/day-016-unique-triples/lang_generator-laziness/CONCEPTS.md) ·
 [Your notes](../days/day-016-unique-triples/lang_generator-laziness/NOTES.md)
+
+## Day 017: Generator cleanup
+
+**Cue and mechanism:** A consumer stops partway through a resource-owning generator; arrange explicit close in a consumer cleanup scope.
+
+**Why it works and cost:** close unwinds an entered finally; break alone does not. Suspended locals retain resources until their lifetime ends.
+
+**Memory anchor and trap:** Created, suspended, closed are different states. Closing before first next does not run an unentered finally.
+
+[Full lesson](../days/day-017-container-capacity/lang_generator-cleanup/CONCEPTS.md) ·
+[Your notes](../days/day-017-container-capacity/lang_generator-cleanup/NOTES.md)
+
+## Day 018: Yield delegation
+
+**Cue and mechanism:** A generator wrapper needs both child items and its final result; use result = yield from child().
+
+**Why it works and cost:** Yielded items pass through, while child return becomes the expression value. Active delegated frames add memory with nesting depth.
+
+**Memory anchor and trap:** yield "row" and return 7 use separate channels. A plain forwarding loop drops the return value; early close is not normal completion.
+
+[Full lesson](../days/day-018-fixed-window-maximum-sum/lang_yield-delegation/CONCEPTS.md) ·
+[Your notes](../days/day-018-fixed-window-maximum-sum/lang_yield-delegation/NOTES.md)
+
+## Day 019: Iterator consumption
+
+**Cue and mechanism:** Multiple operations share one cursor; count membership, list, and inspection as consumers.
+
+**Why it works and cost:** Iterator membership consumes through a match or exhausts on a miss. Snapshot before either pass, reopen a stable source, or buffer explicitly.
+
+**Memory anchor and trap:** 4 in iter([2,4,6]) leaves only 6. tee can buffer the entire lag and does not provide free replay.
+
+[Full lesson](../days/day-019-longest-distinct-substring/lang_iterator-consumption/CONCEPTS.md) ·
+[Your notes](../days/day-019-longest-distinct-substring/lang_iterator-consumption/NOTES.md)
+
+## Day 020: Streaming pipeline
+
+**Cue and mechanism:** A preview or incremental consumer should not scan all records; keep source, transforms, and sink incremental.
+
+**Why it works and cost:** Pull demand advances upstream only far enough to produce results. O(1) extra storage requires bounded state at every stage and no retaining sink.
+
+**Memory anchor and trap:** Odd-filter then times-ten mapping pulls 0 and 1 for its first result. One list stage defeats laziness; explicitly close resource owners.
+
+[Full lesson](../days/day-020-minimum-positive-window/lang_streaming-pipeline/CONCEPTS.md) ·
+[Your notes](../days/day-020-minimum-positive-window/lang_streaming-pipeline/NOTES.md)
 
 
 ---
