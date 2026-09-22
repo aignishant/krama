@@ -103,3 +103,28 @@ or filled in, and these checks do not establish learner completion or online acc
 | spec:python-3.12-builtins | Built-in Types | rolling, version 3.12 | https://docs.python.org/3.12/library/stdtypes.html#truth-value-testing | 2026-09-22 | Day 5 truth testing, Boolean operators, and mapping lookup | lang_truth-and-sentinels/CONCEPTS.md |
 | spec:python-3.12-expressions | 6. Expressions | rolling, version 3.12 | https://docs.python.org/3.12/reference/expressions.html#is | 2026-09-22 | Day 5 identity-tested markers | lang_truth-and-sentinels/CONCEPTS.md |
 | spec:sre-slos | Service Level Objectives | 2016 | https://sre.google/sre-book/service-level-objectives/ | 2026-09-22 | Day 5 latency distributions and target boundaries | sd_latency-budgets/CONCEPTS.md |
+
+## Days 6–8 teaching expansion — 2026-09-22
+
+The following official pages were opened live. All nine new Python teaching blocks were run
+on Python 3.12.10; their actual output was inserted into the lessons, including deliberate
+failures and repairs. System-design timings, workloads, capacity figures, and failure
+walkthroughs are hypothetical. The executed calculations are not network traces, database
+benchmarks, crash tests, or learner evidence. Day 7 reviews existing sources and mechanisms;
+its reference is for comparison after the cold attempt.
+
+| Identifier | Exact title | Year | URL | Record checked | Taught on | Cited by |
+| --- | --- | --- | --- | --- | --- | --- |
+| spec:leetcode-121 | Best Time to Buy and Sell Stock | rolling | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ | 2026-09-22 | Day 6 ordered trade contract | dsa_best-single-trade/CONCEPTS.md and LEETCODE.md |
+| spec:leetcode-217 | Contains Duplicate | rolling | https://leetcode.com/problems/contains-duplicate/ | 2026-09-22 | Day 8 Boolean versus encounter-order contract | dsa_first-repeated-value/CONCEPTS.md and LEETCODE.md |
+| spec:leetcode-1365 | How Many Numbers Are Smaller Than the Current Number | rolling | https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ | 2026-09-22 | Day 7 review of Day 1 | dsa_week-1-dsa-review/CONCEPTS.md |
+| spec:leetcode-88 | Merge Sorted Array | rolling | https://leetcode.com/problems/merge-sorted-array/ | 2026-09-22 | Day 7 review of Day 5 | dsa_week-1-dsa-review/CONCEPTS.md |
+| spec:python-3.12-data-structures | 5. Data Structures | rolling, version 3.12 | https://docs.python.org/3.12/tutorial/datastructures.html | 2026-09-22 | Day 6 mutation and Day 7 ownership review | lang_mutation-contracts/CONCEPTS.md and lang_week-1-python-review/CONCEPTS.md |
+| spec:python-3.12-special-parameters | 4. More Control Flow Tools | rolling, version 3.12 | https://docs.python.org/3.12/tutorial/controlflow.html#special-parameters | 2026-09-22 | Day 8 parameter categories | lang_argument-binding/CONCEPTS.md |
+| spec:python-3.12-expressions | 6. Expressions | rolling, version 3.12 | https://docs.python.org/3.12/reference/expressions.html#calls | 2026-09-22 | Day 8 argument binding | lang_argument-binding/CONCEPTS.md |
+| spec:python-3.12-builtins | Built-in Types | rolling, version 3.12 | https://docs.python.org/3.12/library/stdtypes.html#set-types-set-frozenset | 2026-09-22 | Day 8 set membership | dsa_first-repeated-value/CONCEPTS.md |
+| spec:sre-overload | Handling Overload | 2016 | https://sre.google/sre-book/handling-overload/ | 2026-09-22 | Days 6–7 workload-dependent limits | sd_single-node-baseline and sd_week-1-design-review teaching |
+| RFC 1034 | DOMAIN NAMES - CONCEPTS AND FACILITIES | 1987 | https://www.rfc-editor.org/rfc/rfc1034.html | 2026-09-22 | Day 8 name resolution | sd_request-journey/CONCEPTS.md and REFERENCE_DESIGN.md |
+| RFC 9293 | Transmission Control Protocol (TCP) | 2022 | https://www.rfc-editor.org/rfc/rfc9293.html | 2026-09-22 | Day 8 connection establishment | sd_request-journey/CONCEPTS.md and REFERENCE_DESIGN.md |
+| RFC 8446 | The Transport Layer Security (TLS) Protocol Version 1.3 | 2018 | https://www.rfc-editor.org/rfc/rfc8446.html | 2026-09-22 | Day 8 secure handshake | sd_request-journey/CONCEPTS.md and REFERENCE_DESIGN.md |
+| RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-22 | Days 6 and 8 redirect boundaries | sd_single-node-baseline/REFERENCE_DESIGN.md and sd_request-journey teaching |

@@ -17,6 +17,9 @@ the first available card; future taught days will extend this file in day order.
 | 003 | Mutable defaults | [Recall card](#day-003-mutable-defaults) |
 | 004 | Hash and equality | [Recall card](#day-004-hash-and-equality) |
 | 005 | Truth and sentinels | [Recall card](#day-005-truth-and-sentinels) |
+| 006 | Mutation contracts | [Recall card](#day-006-mutation-contracts) |
+| 007 | Week 1 Python review | [Recall card](#day-007-week-1-python-review) |
+| 008 | Argument binding | [Recall card](#day-008-argument-binding) |
 
 ## Day 001: Identity, equality, and aliasing
 
@@ -139,6 +142,61 @@ work or raise. `False == 0` does not decide whether an API should accept Boolean
 
 [Full lesson](../days/day-005-merge-sorted-arrays/lang_truth-and-sentinels/CONCEPTS.md) ·
 [Your notes](../days/day-005-merge-sorted-arrays/lang_truth-and-sentinels/NOTES.md)
+
+---
+
+## Day 006: Mutation contracts
+
+**Cue and mechanism:** if an edit leaks between callers, name the ownership promise: permitted
+input mutation, fresh output, shared children, and retained references. Test value and identity
+separately. Binding a parameter does not copy the object it receives.
+
+**Why it works:** aliases observe changes to one object; a fresh outer container separates
+outer edits only. Copying n references costs O(n) space and time. Avoiding allocation through
+mutation shifts responsibility to callers that share the input.
+
+**Memory anchor:** `items.sort()` reorders the caller's list and returns `None`; `sorted(items)`
+returns a fresh outer list. Nested mutable children may still be shared. Equality alone cannot
+prove independent ownership, and an exception need not roll back changes already made.
+
+[Full lesson](../days/day-006-best-single-trade/lang_mutation-contracts/CONCEPTS.md) ·
+[Your notes](../days/day-006-best-single-trade/lang_mutation-contracts/NOTES.md)
+
+## Day 007: Week 1 Python review
+
+**Cue and mechanism:** a remembered surprise needs an explicit contract and object graph.
+Identify the shared object, the mutation, and the observer. A regression assertion should fail
+on the original mistake and pass after its repair.
+
+**Why it works:** checking the affected layer distinguishes equal contents, independent
+containers, default lifetime, key equality, and absence semantics. Copy only the layer the
+contract requires; copying more costs extra references and may change intended sharing.
+
+**Memory anchor:** a shallow copy of `[[2]]` has a new outer list and the same child. Appending
+through the copy changes the original child. An outer identity assertion can pass while the
+ownership promise fails. A one-call test can similarly miss shared defaults across calls.
+This reading card does not substitute for the cold reproduction, repair, and explanation.
+
+[Repair lesson](../days/day-007-week-1-review/lang_week-1-python-review/CONCEPTS.md) ·
+[Your notes](../days/day-007-week-1-review/lang_week-1-python-review/NOTES.md)
+
+## Day 008: Argument binding
+
+**Cue and mechanism:** use signature slots to reason about ambiguous options and forwarding
+errors. Parameters before `/` are positional-only; those after `*` are keyword-only; middle
+slots permit either route. Reject duplicates and missing required slots; defaults fill omissions.
+
+**Why it works:** valid binding establishes which supplied reference each parameter denotes
+before the body executes. It neither copies mutable inputs nor performs business validation.
+Named options improve clarity but their names become part of the public calling contract.
+
+**Memory anchor:** `label(parcel, /, copies=1, *, urgent=False)` accepts
+`label("P7", 2, urgent=True)`. Supplying `parcel=` or a third positional argument fails.
+Argument expressions can run even when binding fails. Fixed small signatures have bounded
+binding work; large unpacked collections have separate costs. Error wording can vary by version.
+
+[Full lesson](../days/day-008-first-repeated-value/lang_argument-binding/CONCEPTS.md) ·
+[Your notes](../days/day-008-first-repeated-value/lang_argument-binding/NOTES.md)
 
 ---
 

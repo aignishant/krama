@@ -1,5 +1,8 @@
 # Day 008 — LeetCode interview practice
 
+**Learn first:** read [CONCEPTS.md](CONCEPTS.md), trace the mechanism, and check readiness
+before choosing this practice route.
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -13,7 +16,7 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Contract comparison:** Online returns a boolean for any duplicate; local practice returns the first value whose second occurrence is encountered.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem page rechecked on 2026-09-22; this assignment's statement was accessible.
 
 ## Interview checklist
 

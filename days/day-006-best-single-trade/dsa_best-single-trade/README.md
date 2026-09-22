@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md). This is a shared preparation guide; the full explanation of **Best single trade** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
-3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
-4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
-5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
-6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
-7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+1. **Learn:** read [CONCEPTS.md](CONCEPTS.md) for the mechanism, reasoning, costs, and limits.
+2. **Trace and check readiness:** follow the [worked trace](CONCEPTS.md#worked-trace), inspect the observed failure, and answer the [readiness questions](CONCEPTS.md#readiness-before-practice).
+3. **Read the exact contracts:** Open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md); choose one main attempt within the same hour.
+4. **Implement independently:** use the online editor or [solution.py](solution.py) for the local target. Use [hints](HINTS.md) only after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence), or record online submission evidence and the local-contract comparison.
+6. **Record:** save actual results, reasoning, help used, and next steps in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** use the [track recall cards](../../../docs/DSA_RECALL.md) for topics already studied; cards do not mark completion.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -47,7 +47,7 @@ This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain
 
-Read [week 1 in the DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) for this week's mechanism before the first attempt.
+Read [the topic explanation](CONCEPTS.md) and its readiness check before the first attempt.
 
 Before optimizing, write what a straightforward correct algorithm would enumerate or maintain.
 On the sample, record the changing state after each meaningful step. Identify what remains true

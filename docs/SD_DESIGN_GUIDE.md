@@ -33,6 +33,9 @@ second design task. Existing practice files are preserved when references are ad
 | 003 | [Traffic estimates](../days/day-003-stable-compaction/sd_traffic-estimates/REFERENCE_DESIGN.md) |
 | 004 | [Storage estimates](../days/day-004-reverse-a-segment/sd_storage-estimates/REFERENCE_DESIGN.md) |
 | 005 | [Latency budgets](../days/day-005-merge-sorted-arrays/sd_latency-budgets/REFERENCE_DESIGN.md) |
+| 006 | [Single-node baseline](../days/day-006-best-single-trade/sd_single-node-baseline/REFERENCE_DESIGN.md) |
+| 007 | [Week 1 design review — compare after the cold attempt](../days/day-007-week-1-review/sd_week-1-design-review/REFERENCE_DESIGN.md) |
+| 008 | [Request journey](../days/day-008-first-repeated-value/sd_request-journey/REFERENCE_DESIGN.md) |
 
 Later days receive a complete reference when their topic lessons are expanded. Each reference
 is one reasoned answer under stated assumptions; another design can be valid with different

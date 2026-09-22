@@ -1,12 +1,13 @@
 # Practice — Cold re-solve: Merge sorted arrays
 
+**Cold review:** attempt before opening [CONCEPTS.md](CONCEPTS.md); use its linked
+original lessons only afterwards to repair gaps and record help used.
+
 ## Product-company interview practice
 
-Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
-remains the specification for solution.py and cases.json. For an online-only attempt, record
-submission evidence, compare the contracts, and use the interview checklist for completion.
-The local implementation steps below apply when you choose the local route.
+Choose the [online pair](LEETCODE.md) or the local pair below for two cold re-solves within
+the existing 60 minutes. Online attempts need submission evidence and contract comparisons.
+The local implementation steps apply to the local contracts; this folder tests merge only.
 
 ## Weekly assessment
 
@@ -14,8 +15,10 @@ Use the 60-minute session as 5 recall + 20 re-solve + 20 second re-solve + 10 cr
 First re-solve [day 1](../../day-001-count-target-values/dsa_count-target-values/README.md), then the core below from
 [day 5](../../day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/README.md), both from blank code. A harder unresolved problem
 may replace the second. The local fixture checks the second problem only; run the first day's
-tests against your first re-solve too. Score correctness/explanation/complexity/tests 0–2 each;
-pass at 6/8 with correctness=2 and at least one hint-free solve. Review is not a new problem.
+fixtures against your first re-solve too, using separate scratch code to preserve earlier work.
+Score each attempt's correctness/explanation/complexity/tests 0–2 each; pass at 6/8 with
+correctness=2 and at least one hint-free solve. Unfinished attempts remain partial.
+Review is not a new problem.
 
 ## Contract
 

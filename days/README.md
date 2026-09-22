@@ -21,11 +21,16 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 | [003](day-003-stable-compaction/LESSON.md) | Stable compaction | Traffic estimates | Mutable defaults |
 | [004](day-004-reverse-a-segment/LESSON.md) | Reverse a segment | Storage estimates | Hash and equality |
 | [005](day-005-merge-sorted-arrays/LESSON.md) | Merge sorted arrays and backward merging | Latency budgets | Truth and sentinels |
+| [006](day-006-best-single-trade/LESSON.md) | Best single trade | Single-node baseline | Mutation contracts |
+| [007](day-007-week-1-review/LESSON.md) | Week 1 DSA review | Week 1 design review | Week 1 Python review |
+| [008](day-008-first-repeated-value/LESSON.md) | First repeated value | Request journey | Argument binding |
 
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
-three tracks. Days 6–168 still contain assignment briefs with preparation navigation.
+three tracks. Day 7 starts with cold attempts, then repair reading. Days 9–168 still contain
+assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
 
-Days 1–5 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+Days 1–8 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
 you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
-to read a finished design without filling a TODO. Future expanded SD days use the same format.
+to read a finished design without filling a TODO. Day 7's reference is for comparison after
+the cold attempt. Future expanded SD days use the same format.

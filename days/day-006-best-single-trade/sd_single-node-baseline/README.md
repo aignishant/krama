@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [design method](../../../docs/SD_DESIGN_GUIDE.md). This is a shared preparation guide; the full explanation of **Single-node baseline** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
-3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
-4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
-5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
-6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
-7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+1. **Learn:** read [CONCEPTS.md](CONCEPTS.md) for the mechanism, reasoning, costs, and limits.
+2. **Trace and check readiness:** follow the [worked trace](CONCEPTS.md#worked-trace), inspect the observed failure, and answer the [readiness questions](CONCEPTS.md#readiness-before-practice).
+3. **Read the task:** open [the assignment](#assignment). Read the [complete reference](REFERENCE_DESIGN.md) before a guided attempt or compare after an independent attempt.
+4. **Write your decision:** [DESIGN.md](DESIGN.md) is your practice file; its TODOs belong to you. The assistant authors the reference.
+5. **Verify:** apply [the acceptance check](#acceptance-check), defend an alternative, and trace a failure.
+6. **Record:** keep your evidence, assumptions, help used, and status in [DESIGN.md](DESIGN.md). Reference reading alone does not complete study.
+7. **Recall later without practice:** use the [track recall cards](../../../docs/SD_RECALL.md) for topics already studied; cards do not mark completion.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -17,6 +17,8 @@
 
 ## Assignment
 
+Use [the topic explanation](CONCEPTS.md) before attempting this task.
+
 Draw browser -> service -> database and trace create and redirect; name the first bottleneck to measure.
 
 ## Work method
@@ -24,6 +26,9 @@ Draw browser -> service -> database and trace create and redirect; name the firs
 Produce one bounded artifact: a small diagram, a calculation with units, a state table or a short decision memo. Label assumptions before reasoning from them. Trace one concrete request or failure through the result. Compare at least one alternative and state why your choice fits the requirements.
 
 ## References
+
+The [topic lesson](CONCEPTS.md#the-source-behind-it) names the exact official pages checked
+on 2026-09-22. The broader references below are optional background.
 
 Read the [track method](../../../docs/SD_DESIGN_GUIDE.md) when starting this track.
 

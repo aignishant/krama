@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
-3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
-4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
-5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
-6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
-7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+1. **Choose the behavior:** read [the assignment](#assignment) and select one surprise from Days 1?6.
+2. **Attempt cold:** predict and reproduce it from memory in [lab.py](lab.py), then repair it without copying prior code.
+3. **Verify:** write a regression assertion, explain the mechanism, and apply [the acceptance check](#acceptance-check).
+4. **Repair understanding afterwards:** read [CONCEPTS.md](CONCEPTS.md), its [worked trace](CONCEPTS.md#worked-trace), and [readiness questions](CONCEPTS.md#readiness-after-repair). Revisit the original lessons below for specific gaps.
+5. **Recheck:** confirm the regression assertion detects the original defect and explain the ownership or value contract aloud.
+6. **Record:** save your prediction, actual output, repair, help used, and status in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** use [Python recall](../../../docs/LANG_RECALL.md) for studied topics.
 
 Original reading, after cold recall: [Day 1](../../day-001-count-target-values/lang_identity-and-equality/README.md) · [Day 2](../../day-002-find-the-first-maximum/lang_shallow-and-deep-copies/README.md) · [Day 3](../../day-003-stable-compaction/lang_mutable-defaults/README.md) · [Day 4](../../day-004-reverse-a-segment/lang_hash-and-equality/README.md) · [Day 5](../../day-005-merge-sorted-arrays/lang_truth-and-sentinels/README.md) · [Day 6](../../day-006-best-single-trade/lang_mutation-contracts/README.md).
 
@@ -19,6 +19,8 @@ Original reading, after cold recall: [Day 1](../../day-001-count-target-values/l
 
 ## Assignment
 
+After the cold attempt, use [the repair lesson](CONCEPTS.md) to address gaps.
+
 Revisit days 1–6. From memory reproduce one surprising behavior, write a regression test for its repair, and explain the mechanism.
 
 ## Work method
@@ -26,6 +28,9 @@ Revisit days 1–6. From memory reproduce one surprising behavior, write a regre
 Predict the behavior before running code. Write a tiny experiment in lab.py using the local interpreter, observe its actual output, then add an assertion covering the surprise or failure. Finish with a short explanation of the mechanism and where it matters in production. Basic Python syntax is assumed.
 
 ## References
+
+The [topic lesson](CONCEPTS.md#the-source-behind-it) names the exact official pages checked
+on 2026-09-22. The broader references below are optional background.
 
 Read the [track method](../../../docs/PYTHON_LAB_GUIDE.md) when starting this track.
 

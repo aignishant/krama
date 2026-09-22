@@ -1,5 +1,8 @@
 # Practice — First repeated value
 
+**Learn first:** read [CONCEPTS.md](CONCEPTS.md), trace the mechanism, and check readiness
+before choosing this practice route.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

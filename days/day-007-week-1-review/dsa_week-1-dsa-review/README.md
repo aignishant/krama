@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
-3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
-4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
-5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
-6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
-7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+1. **Choose the contracts:** use the [local pair](PRACTICE.md#weekly-assessment) or [online pair](LEETCODE.md) within one hour.
+2. **Attempt cold:** re-solve both from blank code without notes, old solutions, hints, or references. The local [solution.py](solution.py) is for the second solve; keep the first in separate scratch code.
+3. **Verify:** test each attempt against its own contract, explain its invariant and costs, and apply [the review rubric](PRACTICE.md#weekly-assessment).
+4. **Repair afterwards:** read [CONCEPTS.md](CONCEPTS.md), its [worked trace](CONCEPTS.md#worked-trace), and [readiness questions](CONCEPTS.md#readiness-after-repair). Use the original lessons below for specific gaps.
+5. **Recheck:** test the repaired behavior and explain it aloud. Record any [hints](HINTS.md) used; a repaired attempt does not retroactively become hint-free.
+6. **Record:** save both attempts, scores, actual results, help used, and next steps in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** use [DSA recall](../../../docs/DSA_RECALL.md) for studied topics; it does not pass the cold assessment.
 
 Original reading, after cold recall: [Day 1](../../day-001-count-target-values/dsa_count-target-values/README.md) · [Day 2](../../day-002-find-the-first-maximum/dsa_find-the-first-maximum/README.md) · [Day 3](../../day-003-stable-compaction/dsa_stable-compaction/README.md) · [Day 4](../../day-004-reverse-a-segment/dsa_reverse-a-segment/README.md) · [Day 5](../../day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/README.md) · [Day 6](../../day-006-best-single-trade/dsa_best-single-trade/README.md).
 
@@ -16,40 +16,41 @@ Original reading, after cold recall: [Day 1](../../day-001-count-target-values/d
 
 ## Product-company interview practice
 
-Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
-remains the specification for solution.py and cases.json. For an online-only attempt, record
-submission evidence, compare the contracts, and use the interview checklist for completion.
-The local implementation steps below apply when you choose the local route.
+Use [the online pair](LEETCODE.md) or [the local pair](PRACTICE.md#weekly-assessment)
+for the two cold re-solves in this 60-minute review. The local review fixture checks only
+the second solve, merge; verify the first solve against its own contract and fixtures.
+Online attempts require actual submission evidence and contract comparisons.
 
 **Budget:** 60 minutes. **Outcome:** DSA-07. **Theme:** Cost, invariants and arrays.
 
 ## Prerequisite and recall
 
-Prior DSA session: [day 6](../../day-006-best-single-trade/dsa_best-single-trade/README.md). Read only its notes if already comfortable.
-Recall one candidate, not all of them: [day 6](../../day-006-best-single-trade/dsa_best-single-trade/README.md)
+Prior DSA session: [day 6](../../day-006-best-single-trade/dsa_best-single-trade/README.md).
+Recall from memory before opening prior notes. Use the original lessons above only for repair.
 
 ## Session
 
 | Step | Minutes | Work |
 | --- | --- | --- |
-| Recall | 5 | Explain a previous invariant without notes. |
-| Understand | 10 | Read the contract; trace a small example; choose a baseline. |
-| Solve | 30 | Implement the core problem in solution.py without reading hints first. |
-| Verify | 10 | Run tests, add boundary cases, explain time and space. |
-| Record | 5 | Write the mistake, evidence and next review. |
+| Recall | 5 | Restate the two contracts without opening old solutions. |
+| First re-solve | 20 | Re-solve Day 1's local or online counting task from blank code. |
+| Second re-solve | 20 | Re-solve Day 5's matching merge task; an unresolved problem may replace this slot. |
+| Critique | 10 | Test both attempts, explain invariants and costs, then repair gaps. |
+| Record | 5 | Score both attempts, record help, and schedule the next cold review. |
 
 ## Core assignment
 
 **Cold re-solve: Merge sorted arrays.** Return a new sorted list containing all values from sorted lists a and b, including duplicates.
 
-After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
-the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(n+m) time; output space O(n+m).
+Open [PRACTICE.md](PRACTICE.md) for both cold tasks before reading explanations.
+This folder's starter implements only the second task. Keep the first attempt in separate
+scratch code so prior learner work is preserved. Expected merge target: O(n+m) time; output space O(n+m).
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain
 
-Read [week 1 in the DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) for this week's mechanism before the first attempt.
+After the cold attempts, use [CONCEPTS.md](CONCEPTS.md) and its original-lesson links to repair
+specific gaps. Do not read a pattern guide or hints before an attempt you intend to score as cold.
 
 Before optimizing, write what a straightforward correct algorithm would enumerate or maintain.
 On the sample, record the changing state after each meaningful step. Identify what remains true
@@ -64,6 +65,7 @@ contracts and staged hints; use a review session for deeper derivations.
 
 ## Done when
 
+- [ ] I completed two cold re-solves and scored each at least 6/8 across correctness, explanation, complexity, and tests, with correctness=2 and at least one hint-free solve.
 - [ ] I can restate the contract, including ties, empty input and mutation rules.
 - [ ] My chosen route meets its contract: local tests plus self-authored cases, or online submission evidence plus a local-contract comparison.
 - [ ] I can justify correctness and the time/space bound.

@@ -18,6 +18,9 @@ are taught; this is not a summary of all 168 planned days.
 | 003 | Stable compaction | [Recall card](#day-003-stable-compaction) |
 | 004 | Reverse a segment | [Recall card](#day-004-reverse-a-segment) |
 | 005 | Merge sorted arrays | [Recall card](#day-005-merge-sorted-arrays) |
+| 006 | Best single trade | [Recall card](#day-006-best-single-trade) |
+| 007 | Week 1 DSA review | [Recall card](#day-007-week-1-dsa-review) |
+| 008 | First repeated value | [Recall card](#day-008-first-repeated-value) |
 
 ## Day 001: Counting and reusing counts
 
@@ -148,6 +151,59 @@ the promised buffer-capacity and non-overlap assumptions.
 [Full lesson](../days/day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/CONCEPTS.md) ·
 [Backward merging](../days/day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/BACKWARD_MERGE.md) ·
 [Your notes](../days/day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/NOTES.md)
+
+---
+
+## Day 006: Best single trade
+
+**Cue and mechanism:** combine today's sale with an earlier purchase. Keep the cheapest
+strictly earlier price and the best completed nonnegative profit. Consider today's sale before
+making its price eligible for future purchases.
+
+**Why it works:** for a fixed sale, the cheapest eligible purchase dominates every more
+expensive one. Examining all sales covers every possible ending day. Zero includes no trade.
+O(n) time, O(1) auxiliary and output space without copying a suffix.
+
+**Memory anchor:** `[9, 2, 5]` yields 3; global maximum minus minimum yields an impossible 7.
+Sorting destroys chronology. Multiple trades need a different contract and state. Empty and
+single-element local inputs have no eligible pair; the online input is nonempty.
+
+[Full lesson](../days/day-006-best-single-trade/dsa_best-single-trade/CONCEPTS.md) ·
+[Your notes](../days/day-006-best-single-trade/dsa_best-single-trade/NOTES.md)
+
+## Day 007: Week 1 DSA review
+
+**Cue and mechanism:** when a remembered loop is hard to explain, reconstruct its state
+meaning, initialization, preservation, and termination. Test properties that cover the whole
+contract: ordering, multiplicity, boundaries, ownership, and eligibility as appropriate.
+
+**Why it works:** an invariant explains every update; a counterexample distinguishes a plausible
+wrong implementation. Independent tiny-input oracles cost extra time but reduce shared mistakes.
+Counting needs O(n) time and constant state; new-output merge needs O(n+m) time and output space.
+
+**Memory anchor:** deduplicated `[1, 3, 4]` is sorted but fails to merge `[1, 4]` with `[1, 3]`.
+A passing weak assertion is not proof. Online counting and backward merging have different
+contracts from the local exercises. This card is optional recall, not the two-solve cold gate.
+
+[Repair lesson](../days/day-007-week-1-review/dsa_week-1-dsa-review/CONCEPTS.md) ·
+[Your notes](../days/day-007-week-1-review/dsa_week-1-dsa-review/NOTES.md)
+
+## Day 008: First repeated value
+
+**Cue and mechanism:** exact “seen before” queries need retained membership. Before each
+item, the set contains exactly the distinct earlier values. Check membership before insertion;
+the first hit identifies the earliest second occurrence.
+
+**Why it works:** an earlier repeat would already have stopped the scan. The set can discard
+counts and order because scanning supplies encounter order. For fixed-size integers, expected
+O(n) time and O(n) worst-case auxiliary space; collisions can degrade time. Output is O(1).
+
+**Memory anchor:** `[7, 2, 2, 7]` returns 2, not 7. Repeated zero is a valid answer, distinct
+from `None`. Online Contains Duplicate asks only for a Boolean. Sorting changes local order;
+an unbounded exact history consumes growing memory. Hashability and equality define the key domain.
+
+[Full lesson](../days/day-008-first-repeated-value/dsa_first-repeated-value/CONCEPTS.md) ·
+[Your notes](../days/day-008-first-repeated-value/dsa_first-repeated-value/NOTES.md)
 
 ---
 

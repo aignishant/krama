@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md). This is a shared preparation guide; the full explanation of **Mutation contracts** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
-3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
-4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
-5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
-6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
-7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+1. **Learn:** read [CONCEPTS.md](CONCEPTS.md) for the mechanism, reasoning, costs, and limits.
+2. **Trace and check readiness:** follow the [worked trace](CONCEPTS.md#worked-trace), inspect the observed failure, and answer the [readiness questions](CONCEPTS.md#readiness-before-practice).
+3. **Read the task:** use [the assignment](#assignment) and predict before running code.
+4. **Experiment:** write your independent [lab.py](lab.py) and capture the actual behavior.
+5. **Verify:** apply [the acceptance check](#acceptance-check), including a regression assertion and spoken explanation.
+6. **Record:** save prediction, actual output, repair, and help used in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** use the [track recall cards](../../../docs/LANG_RECALL.md) for topics already studied; cards do not mark completion.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -17,6 +17,8 @@
 
 ## Assignment
 
+Use [the topic explanation](CONCEPTS.md) before attempting this task.
+
 Write one function that mutates input and one that returns a new value; test ownership assumptions explicitly.
 
 ## Work method
@@ -24,6 +26,9 @@ Write one function that mutates input and one that returns a new value; test own
 Predict the behavior before running code. Write a tiny experiment in lab.py using the local interpreter, observe its actual output, then add an assertion covering the surprise or failure. Finish with a short explanation of the mechanism and where it matters in production. Basic Python syntax is assumed.
 
 ## References
+
+The [topic lesson](CONCEPTS.md#the-source-behind-it) names the exact official pages checked
+on 2026-09-22. The broader references below are optional background.
 
 Read the [track method](../../../docs/PYTHON_LAB_GUIDE.md) when starting this track.
 
