@@ -37,6 +37,12 @@ Days 6–168 have navigation to preparation guides until their topic lessons are
 [The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
 explanations and recall cards part of every future day expansion.
 
+For system design, Days 1–5 also include a complete **REFERENCE_DESIGN.md** written by the
+assistant. **DESIGN.md** is your practice file: its `TODO(me)` prompts are for you when you
+choose to practice. Read the reference first for guidance or compare after your own attempt.
+See [the SD workflow and reference index](docs/SD_DESIGN_GUIDE.md#who-fills-the-todos).
+Future expanded SD days include both files; reading alone does not mark study complete.
+
 - [Master plan and all 168 daily assignments](docs/00_MASTER_PLAN.md)
 - [Day 1](days/day-001-count-target-values/LESSON.md)
 - [DSA practice guide](docs/PRACTICE_GUIDE.md)

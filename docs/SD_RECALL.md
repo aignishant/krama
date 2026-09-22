@@ -51,6 +51,7 @@ exclusions; present assumed traffic as measured traffic; count destination failu
 undefined shortener guarantee. Compare one alternative and state what evidence would change the decision.
 
 [Full explanation](../days/day-001-count-target-values/sd_functional-scope/CONCEPTS.md) ·
+[Complete reference](../days/day-001-count-target-values/sd_functional-scope/REFERENCE_DESIGN.md) ·
 [Your Day 1 memo](../days/day-001-count-target-values/sd_functional-scope/DESIGN.md)
 
 ---
@@ -76,6 +77,7 @@ can reduce cache usefulness. Do not average local percentiles into a supposed gl
 or mistake gateway timing for the whole client experience.
 
 [Full lesson](../days/day-002-find-the-first-maximum/sd_quality-requirements/CONCEPTS.md) ·
+[Complete reference](../days/day-002-find-the-first-maximum/sd_quality-requirements/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-002-find-the-first-maximum/sd_quality-requirements/DESIGN.md)
 
 ## Day 003: Traffic estimates
@@ -97,6 +99,7 @@ Equal QPS can consume different resources. Use measurements of the request mix a
 cost before deriving server count; the estimate is a starting model, not a benchmark.
 
 [Full lesson](../days/day-003-stable-compaction/sd_traffic-estimates/CONCEPTS.md) ·
+[Complete reference](../days/day-003-stable-compaction/sd_traffic-estimates/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-003-stable-compaction/sd_traffic-estimates/DESIGN.md)
 
 ## Day 004: Storage estimates
@@ -118,6 +121,7 @@ retention saves storage at a product cost. Replicas can repeat an accidental del
 replication and independently retained recovery copies serve different needs.
 
 [Full lesson](../days/day-004-reverse-a-segment/sd_storage-estimates/CONCEPTS.md) ·
+[Complete reference](../days/day-004-reverse-a-segment/sd_storage-estimates/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-004-reverse-a-segment/sd_storage-estimates/DESIGN.md)
 
 ---
@@ -144,6 +148,7 @@ calls, retries, and per-stage timeouts can change the critical path; a passing t
 does not validate a production target.
 
 [Full lesson](../days/day-005-merge-sorted-arrays/sd_latency-budgets/CONCEPTS.md) ·
+[Complete reference](../days/day-005-merge-sorted-arrays/sd_latency-budgets/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-005-merge-sorted-arrays/sd_latency-budgets/DESIGN.md)
 
 ---

@@ -87,3 +87,11 @@ If time expires, record partial progress and continue that track later. Mark who
 only when all three tracks meet their criteria. Reading these documents alone does not close IDs.
 
 [Master plan](../../docs/00_MASTER_PLAN.md) · [Independent progress](../../docs/TRACK_PROGRESS.csv)
+
+## System-design reference and practice
+
+The assistant's [complete SD reference design](sd_functional-scope/REFERENCE_DESIGN.md)
+answers today's design task. Read it before a guided attempt or compare afterwards.
+The TODOs in [DESIGN.md](sd_functional-scope/DESIGN.md) are for your own practice;
+reading the reference alone does not mark study complete. Both routes use the existing
+30-minute SD budget.

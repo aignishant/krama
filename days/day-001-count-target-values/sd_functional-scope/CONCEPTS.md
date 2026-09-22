@@ -202,3 +202,11 @@ read the whole specification for this assignment.
 **Next:** [Write the design evidence](DESIGN.md).
 
 **Later, recall without a new memo:** [System design summary](../../../docs/SD_RECALL.md#day-001-functional-scope).
+
+## Complete worked design
+
+Open [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md) for a finished response to the actual daily
+assignment, including assumptions, reasoning, an alternative, and a failure walkthrough.
+Read it first for guidance or compare after an independent attempt. The assistant writes the
+reference; you fill [DESIGN.md](DESIGN.md) for your own practice. Reference reading is available
+without completing that practice and does not mark the track complete.

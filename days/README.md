@@ -25,3 +25,7 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
 three tracks. Days 6–168 still contain assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
+
+Days 1–5 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
+to read a finished design without filling a TODO. Future expanded SD days use the same format.

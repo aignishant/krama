@@ -47,3 +47,11 @@ use spare time or another sitting. DSA online and local routes are alternatives 
 Teaching transcripts are author verification, not learner evidence. Exercise starters remain
 unsolved. Use the subject acceptance checks and [study workflow](../../docs/STUDY_WORKFLOW.md)
 to record complete, partial, or needs-review honestly.
+
+## System-design reference and practice
+
+The assistant's [complete SD reference design](sd_latency-budgets/REFERENCE_DESIGN.md)
+answers today's design task. Read it before a guided attempt or compare afterwards.
+The TODOs in [DESIGN.md](sd_latency-budgets/DESIGN.md) are for your own practice;
+reading the reference alone does not mark study complete. Both routes use the existing
+30-minute SD budget.

@@ -5,10 +5,11 @@
 1. **Learn the topic:** read [the explanation](CONCEPTS.md) for intuition, recognition cues, the mechanism, and why it works.
 2. **Trace and check readiness:** follow [the worked example](CONCEPTS.md#the-mechanism), then [explain the readiness points](CONCEPTS.md#readiness-before-the-design-exercise) before opening the exercise.
 3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
-4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
-5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
-6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
-7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+4. **Choose your route:** read [the complete reference design](REFERENCE_DESIGN.md) first for guided learning, or attempt independently and compare afterwards.
+5. **Write your decision:** fill the `TODO(me)` prompts in [DESIGN.md](DESIGN.md) with your own assumptions, artifact, alternative, and failure trace.
+6. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+7. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+8. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -19,6 +20,17 @@
 ## Assignment
 
 For a link-shortening service, write three user actions, two exclusions, and one measurable success criterion.
+
+## Who fills the TODOs?
+
+The assistant has written [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md) as a complete answer to
+this day's assignment. **You fill the TODOs in [DESIGN.md](DESIGN.md) when practicing.**
+You can read the reference without doing the exercise; it is one reasoned answer under stated
+assumptions. Your practice file records your own reasoning, actual observations, and help used.
+Reading or copying the reference alone does not meet the completion criteria.
+
+Use the existing concept/reference and critique time for reading and comparison; no extra
+mandatory design is added. See [the SD workflow](../../../docs/SD_DESIGN_GUIDE.md#who-fills-the-todos).
 
 ## Work method
 

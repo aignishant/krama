@@ -28,3 +28,12 @@ Later recall needs no new exercise: [DSA](../../docs/DSA_RECALL.md),
 - [ ] SD deliverable and critique complete.
 - [ ] Python experiment and explanation complete.
 - [ ] Append separate track results; append whole-day progress only when all three pass.
+
+## SD reference ownership
+
+[Complete worked answer](sd_functional-scope/REFERENCE_DESIGN.md): supplied by the assistant.
+[Personal practice](sd_functional-scope/DESIGN.md): its TODOs are for you.
+
+- [ ] If practicing, explain my decision and an alternative in my own words; record whether I used the reference before or after my attempt.
+
+Reading the reference alone requires no completed checkbox or progress entry.

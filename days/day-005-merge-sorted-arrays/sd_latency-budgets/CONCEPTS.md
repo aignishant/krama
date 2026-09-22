@@ -161,3 +161,11 @@ Trace a request exceeding one allocation, describe its user impact, and compare 
 an alternative. Explain what end-to-end observations would validate your design. No server is required.
 
 [Navigation](README.md) · [Quick recall](../../../docs/SD_RECALL.md#day-005-latency-budgets)
+
+## Complete worked design
+
+Open [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md) for a finished response to the actual daily
+assignment, including assumptions, reasoning, an alternative, and a failure walkthrough.
+Read it first for guidance or compare after an independent attempt. The assistant writes the
+reference; you fill [DESIGN.md](DESIGN.md) for your own practice. Reference reading is available
+without completing that practice and does not mark the track complete.

@@ -133,3 +133,11 @@ such as delayed cleanup filling the disk. Explain what you would measure before 
 the exercise requires a memo, not a deployed database.
 
 [Navigation](README.md) · [Quick recall](../../../docs/SD_RECALL.md#day-004-storage-estimates)
+
+## Complete worked design
+
+Open [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md) for a finished response to the actual daily
+assignment, including assumptions, reasoning, an alternative, and a failure walkthrough.
+Read it first for guidance or compare after an independent attempt. The assistant writes the
+reference; you fill [DESIGN.md](DESIGN.md) for your own practice. Reference reading is available
+without completing that practice and does not mark the track complete.
