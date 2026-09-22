@@ -453,6 +453,21 @@ its no-clock/parts-folder assumptions remain unchanged in the preserved upstream
 
 ## 12 · Teaching and practice style
 
+Teach the topic before presenting its practice route. Every subject README starts with a
+linked navigation section explaining what to read, what to try, how to verify, and where to
+record evidence. For an expanded day, CONCEPTS.md is the first teaching entry point: explain
+the underlying idea, how to recognize it, why it works, its assumptions and costs, a worked
+example, and a readiness check before the learner opens the problem. Teach general techniques
+openly; reserve problem-specific rescue hints for after an independent attempt. Follow
+[the teaching workflow](TEACHING_WORKFLOW.md) for every future day expansion. Existing future
+briefs may link a clearly labeled preparation guide until their full topic lesson is written.
+
+Maintain three common files for recall without a new exercise: [DSA](DSA_RECALL.md),
+[Python](LANG_RECALL.md), and [system design](SD_RECALL.md). Add a compact day card when its
+teaching material is expanded, link it from the subject README, and let readers select the
+topics they have already studied using their independent track progress. Summary availability
+does not imply completion. This optional reading mode does not replace weekly cold assessments.
+
 Use plain language and explicit contracts. Explain why a pattern applies before writing code.
 Draw state or data flow where it clarifies an invariant. Keep hints separate and staged. No solved
 learner reps. Name actual observed failures; never fabricate a traceback or benchmark. Python

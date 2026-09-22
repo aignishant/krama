@@ -1,5 +1,19 @@
 # Day 161 — Week 23 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 155](../../day-155-mock-arrays/sd_mock-requirements-round/README.md) · [Day 156](../../day-156-mock-search/sd_mock-architecture-round/README.md) · [Day 157](../../day-157-mock-graph/sd_mock-deep-dive/README.md) · [Day 158](../../day-158-mock-dp/sd_mock-alternative/README.md) · [Day 159](../../day-159-mock-heap/sd_critique-round/README.md) · [Day 160](../../day-160-mock-backtracking/sd_repair-round/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-161.
 **Weekly theme:** Design interviews and critique.
 

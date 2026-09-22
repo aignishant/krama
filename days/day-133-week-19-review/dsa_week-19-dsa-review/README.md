@@ -1,5 +1,19 @@
 # Day 133 DSA — Week 19 DSA review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
+3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
+6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 127](../../day-127-longest-dag-path/dsa_longest-dag-path/README.md) · [Day 128](../../day-128-minimum-effort-grid-route/dsa_minimum-effort-grid-route/README.md) · [Day 129](../../day-129-redundant-undirected-edge/dsa_redundant-undirected-edge/README.md) · [Day 130](../../day-130-subtree-sizes/dsa_subtree-sizes/README.md) · [Day 131](../../day-131-tree-distance-sums/dsa_tree-distance-sums/README.md) · [Day 132](../../day-132-bipartite-matching/dsa_bipartite-matching/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -29,8 +43,8 @@ Recall one candidate, not all of them: [day 132](../../day-132-bipartite-matchin
 
 **Cold re-solve: Tree distance sums.** Return sum of distances from each vertex to all others in a tree rooted arbitrarily; n >= 1.
 
-Start in [PRACTICE.md](PRACTICE.md). The invariant to investigate is kept in
-[HINTS.md](HINTS.md), so the first attempt remains independent. Expected target: O(n) time; stretch.
+After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(n) time; stretch.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain

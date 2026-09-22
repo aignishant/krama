@@ -1,5 +1,19 @@
 # Day 105 — Week 15 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 99](../../day-099-grid-path-count/sd_feed-requirements/README.md) · [Day 100](../../day-100-minimum-grid-path/sd_feed-api-and-data/README.md) · [Day 101](../../day-101-common-subsequence-length/sd_feed-capacity/README.md) · [Day 102](../../day-102-edit-distance/sd_feed-architecture/README.md) · [Day 103](../../day-103-longest-palindrome-length/sd_feed-deep-dive/README.md) · [Day 104](../../day-104-word-segmentation/sd_feed-failure-review/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-105.
 **Weekly theme:** Feed case study.
 

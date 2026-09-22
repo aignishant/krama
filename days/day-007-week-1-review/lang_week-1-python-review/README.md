@@ -1,5 +1,19 @@
 # Day 007 — Week 1 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 1](../../day-001-count-target-values/lang_identity-and-equality/README.md) · [Day 2](../../day-002-find-the-first-maximum/lang_shallow-and-deep-copies/README.md) · [Day 3](../../day-003-stable-compaction/lang_mutable-defaults/README.md) · [Day 4](../../day-004-reverse-a-segment/lang_hash-and-equality/README.md) · [Day 5](../../day-005-merge-sorted-arrays/lang_truth-and-sentinels/README.md) · [Day 6](../../day-006-best-single-trade/lang_mutation-contracts/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-07.
 **Weekly theme:** Object semantics.
 

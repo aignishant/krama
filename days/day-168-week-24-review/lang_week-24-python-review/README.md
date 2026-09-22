@@ -1,5 +1,19 @@
 # Day 168 — Week 24 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 162](../../day-162-routing-capstone/lang_capstone-interface/README.md) · [Day 163](../../day-163-scheduling-capstone/lang_capstone-generator/README.md) · [Day 164](../../day-164-search-capstone/lang_capstone-execution/README.md) · [Day 165](../../day-165-range-capstone/lang_capstone-tests/README.md) · [Day 166](../../day-166-counterexample-capstone/lang_capstone-profile/README.md) · [Day 167](../../day-167-final-independent-problem/lang_final-explanation/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-168.
 **Weekly theme:** Python capstone and retention.
 

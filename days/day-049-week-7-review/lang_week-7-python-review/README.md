@@ -1,5 +1,19 @@
 # Day 049 — Week 7 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 43](../../day-043-balanced-delimiters/lang_annotations-at-runtime/README.md) · [Day 44](../../day-044-queue-from-stacks/lang_optional-and-narrowing/README.md) · [Day 45](../../day-045-minimum-stack/lang_typed-dictionaries/README.md) · [Day 46](../../day-046-warmer-days/lang_protocols/README.md) · [Day 47](../../day-047-largest-histogram-rectangle/lang_generics/README.md) · [Day 48](../../day-048-sliding-window-maxima/lang_overloads/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-49.
 **Weekly theme:** Typing foundations for experienced developers.
 

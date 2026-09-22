@@ -1,5 +1,19 @@
 # Day 028 — Week 4 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 22](../../day-022-lower-bound/lang_representations/README.md) · [Day 23](../../day-023-target-range/lang_rich-comparison/README.md) · [Day 24](../../day-024-rotated-search/lang_container-protocol/README.md) · [Day 25](../../day-025-integer-square-root/lang_indexing-and-slicing/README.md) · [Day 26](../../day-026-minimum-shipping-capacity/lang_callable-instances/README.md) · [Day 27](../../day-027-median-of-two-arrays/lang_context-managers/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-28.
 **Weekly theme:** Data model protocols.
 

@@ -1,5 +1,19 @@
 # Day 098 — Week 14 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 92](../../day-092-climbing-steps/sd_shortener-requirements/README.md) · [Day 93](../../day-093-nonadjacent-loot/sd_shortener-api-and-data/README.md) · [Day 94](../../day-094-minimum-coins/sd_shortener-capacity/README.md) · [Day 95](../../day-095-coin-combinations/sd_shortener-architecture/README.md) · [Day 96](../../day-096-increasing-subsequence/sd_shortener-deep-dive/README.md) · [Day 97](../../day-097-decode-digits/sd_shortener-failure-review/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-98.
 **Weekly theme:** URL shortener case study.
 

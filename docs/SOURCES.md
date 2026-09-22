@@ -41,3 +41,29 @@ statement was reproduced; the two subscription-gated companions retain free loca
 
 The base Jump Game URL timed out; its [official description page](https://leetcode.com/problems/jump-game/description/)
 was successfully checked on 2026-09-19, confirming problem 55 and Medium difficulty.
+
+## Day 1 teaching expansion — 2026-09-19
+
+The following official pages were opened live for the Day 1 teaching documents. Python author
+demonstrations were executed locally on Python 3.12.10. The HTTP example is a synthetic response
+fixture, not a network test. No learner completion or online acceptance is implied.
+
+| Identifier | Exact title | Year | URL | Record checked | Taught on | Cited by |
+| --- | --- | --- | --- | --- | --- | --- |
+| spec:python-3.12-data-model | 3. Data model | rolling, version 3.12 | https://docs.python.org/3.12/reference/datamodel.html | 2026-09-19 | Day 1 Python | lang_identity-and-equality/CONCEPTS.md |
+| spec:python-3.12-expressions | 6. Expressions | rolling, version 3.12 | https://docs.python.org/3.12/reference/expressions.html | 2026-09-19 | Day 1 Python | lang_identity-and-equality/CONCEPTS.md |
+| spec:python-3.12-copy | copy — Shallow and deep copy operations | rolling, version 3.12 | https://docs.python.org/3.12/library/copy.html | 2026-09-19 | Day 1 optional Python follow-up | lang_identity-and-equality/CONCEPTS.md |
+| RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-19 | Day 1 scope and redirect trace | sd_functional-scope/CONCEPTS.md |
+| spec:leetcode-1365 | How Many Numbers Are Smaller Than the Current Number | rolling | https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ | 2026-09-19 | Day 1 DSA companion | dsa_count-target-values/LEETCODE.md |
+
+## Day 1 explanation and recall update — 2026-09-22
+
+Reopened the following primary pages for the extended explanations and recall cards. The
+inventory frequency trace is an original derivation. Source checks are not learner evidence.
+
+| Identifier | Exact title | Year | URL | Record checked | Taught on | Cited by |
+| --- | --- | --- | --- | --- | --- | --- |
+| spec:leetcode-1365 | How Many Numbers Are Smaller Than the Current Number | rolling | https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ | 2026-09-22 | Day 1 bounded counting domain | dsa_count-target-values/FREQUENCY_COUNTS.md |
+| spec:python-3.12-data-model | 3. Data model | rolling, version 3.12 | https://docs.python.org/3.12/reference/datamodel.html | 2026-09-22 | Day 1 identity and ownership | lang_identity-and-equality/CONCEPTS.md |
+| spec:python-3.12-expressions | 6. Expressions | rolling, version 3.12 | https://docs.python.org/3.12/reference/expressions.html | 2026-09-22 | Day 1 comparison semantics | lang_identity-and-equality/CONCEPTS.md |
+| RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-22 | Day 1 redirect boundaries | sd_functional-scope/CONCEPTS.md |

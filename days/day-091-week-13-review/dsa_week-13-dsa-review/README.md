@@ -1,5 +1,19 @@
 # Day 091 DSA — Week 13 DSA review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
+3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
+6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 85](../../day-085-maximum-compatible-meetings/dsa_maximum-compatible-meetings/README.md) · [Day 86](../../day-086-reach-the-end/dsa_reach-the-end/README.md) · [Day 87](../../day-087-minimum-jumps/dsa_minimum-jumps/README.md) · [Day 88](../../day-088-circular-fuel-route/dsa_circular-fuel-route/README.md) · [Day 89](../../day-089-task-cooldown-length/dsa_task-cooldown-length/README.md) · [Day 90](../../day-090-optimal-merge-cost/dsa_optimal-merge-cost/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -29,8 +43,8 @@ Recall one candidate, not all of them: [day 90](../../day-090-optimal-merge-cost
 
 **Cold re-solve: Task cooldown length.** Uppercase tasks take one slot, same task occurrences need at least n intervening slots. Return minimum total slots including idle.
 
-Start in [PRACTICE.md](PRACTICE.md). The invariant to investigate is kept in
-[HINTS.md](HINTS.md), so the first attempt remains independent. Expected target: O(number of tasks + alphabet size).
+After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(number of tasks + alphabet size).
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain

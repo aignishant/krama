@@ -1,5 +1,19 @@
 # Day 063 — Week 9 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 57](../../day-057-tree-depth/sd_queue-fundamentals/README.md) · [Day 58](../../day-058-level-order/sd_delivery-semantics/README.md) · [Day 59](../../day-059-validate-search-tree/sd_consumer-idempotency/README.md) · [Day 60](../../day-060-kth-tree-value/sd_ordering/README.md) · [Day 61](../../day-061-tree-diameter/sd_backpressure/README.md) · [Day 62](../../day-062-lowest-shared-ancestor/sd_poison-messages/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-63.
 **Weekly theme:** Queues and event processing.
 

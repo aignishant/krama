@@ -1,5 +1,19 @@
 # Day 154 — Week 22 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 148](../../day-148-interleaved-strings/lang_api-simplification/README.md) · [Day 149](../../day-149-course-completion-time/lang_hidden-state/README.md) · [Day 150](../../day-150-maximum-path-sum/lang_mutable-ownership-review/README.md) · [Day 151](../../day-151-smallest-missing-positive/lang_concurrency-review/README.md) · [Day 152](../../day-152-shortest-subarray-with-negatives/lang_typing-review/README.md) · [Day 153](../../day-153-minimum-interval-for-queries/lang_performance-review/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-154.
 **Weekly theme:** Code review and refactoring.
 

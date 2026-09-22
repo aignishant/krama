@@ -1,5 +1,19 @@
 # Day 070 DSA — Week 10 DSA review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
+3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
+6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 64](../../day-064-k-largest-stream-values/dsa_k-largest-stream-values/README.md) · [Day 65](../../day-065-merge-sorted-streams/dsa_merge-sorted-streams/README.md) · [Day 66](../../day-066-running-median/dsa_running-median/README.md) · [Day 67](../../day-067-prefix-dictionary/dsa_prefix-dictionary/README.md) · [Day 68](../../day-068-tree-reconstruction/dsa_tree-reconstruction/README.md) · [Day 69](../../day-069-tree-codec-round-trip/dsa_tree-codec-round-trip/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -29,8 +43,8 @@ Recall one candidate, not all of them: [day 69](../../day-069-tree-codec-round-t
 
 **Cold re-solve: Tree reconstruction.** Given preorder and inorder traversals with distinct equal value sets, return the nested-list tree.
 
-Start in [PRACTICE.md](PRACTICE.md). The invariant to investigate is kept in
-[HINTS.md](HINTS.md), so the first attempt remains independent. Expected target: O(n) time with index map.
+After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(n) time with index map.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain

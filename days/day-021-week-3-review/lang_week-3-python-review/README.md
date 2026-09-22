@@ -1,5 +1,19 @@
 # Day 021 — Week 3 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 15](../../day-015-sorted-pair-existence/lang_iterator-protocol/README.md) · [Day 16](../../day-016-unique-triples/lang_generator-laziness/README.md) · [Day 17](../../day-017-container-capacity/lang_generator-cleanup/README.md) · [Day 18](../../day-018-fixed-window-maximum-sum/lang_yield-delegation/README.md) · [Day 19](../../day-019-longest-distinct-substring/lang_iterator-consumption/README.md) · [Day 20](../../day-020-minimum-positive-window/lang_streaming-pipeline/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-21.
 **Weekly theme:** Iteration and generators.
 

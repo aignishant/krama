@@ -1,5 +1,12 @@
 # Practice — Count target values
 
+## Before the problem
+
+Start with [the counting explanation](CONCEPTS.md): learn the predicate, why one counter is
+enough, the worked trace, the invariant, costs, and common mistakes. Answer
+[the readiness questions](CONCEPTS.md#readiness-before-practice), then return here for the
+exact contract. [The README](README.md) provides the complete reading order.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -16,8 +23,9 @@ Implement `solve(data)` in [solution.py](solution.py). `data` is the JSON object
 Return the described JSON-compatible result. Python uses `None`, `True` and `False` for JSON
 null/true/false. All unspecified inputs satisfy the stated preconditions; define any additional
 edge behavior before adding a case. Numbers use the usual unit-cost interview model unless
-you explicitly analyze arbitrary-size integer operations. Tree inputs are null or nested
-`[value,left,right]`; graphs use integer vertices; linked-list tasks must build real nodes.
+you explicitly analyze arbitrary-size integer operations. For this exercise, use integer
+values, allow an empty list, and count each occurrence independently. Return 0 when no values
+match, including the empty case. `target` does not need to appear in `nums`.
 
 ## Example
 
@@ -55,3 +63,5 @@ which invariant survives and which fails. Skip this if the core or due review ne
 
 Record test command/output, four added cases, the invariant, complexity and the minimal failure
 in [NOTES.md](NOTES.md). The provided sample is a smoke test, not an exhaustive judge.
+
+For a later refresher without solving again, use [DSA recall](../../../docs/DSA_RECALL.md#day-001-counting-and-reusing-counts).

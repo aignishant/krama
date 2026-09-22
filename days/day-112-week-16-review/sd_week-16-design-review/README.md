@@ -1,5 +1,19 @@
 # Day 112 — Week 16 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 106](../../day-106-zero-one-knapsack/sd_chat-requirements/README.md) · [Day 107](../../day-107-equal-partition/sd_chat-api-and-data/README.md) · [Day 108](../../day-108-signed-target-count/sd_chat-connections/README.md) · [Day 109](../../day-109-weighted-scheduling/sd_chat-architecture/README.md) · [Day 110](../../day-110-matrix-chain-cost/sd_chat-deep-dive/README.md) · [Day 111](../../day-111-visit-every-city/sd_chat-failure-review/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-112.
 **Weekly theme:** Chat case study.
 

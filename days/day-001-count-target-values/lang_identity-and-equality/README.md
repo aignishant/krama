@@ -1,7 +1,20 @@
 # Day 001 — Identity and equality
 
+## Navigation — where to start
+
+1. **Learn the topic:** read [the explanation](CONCEPTS.md) for intuition, recognition cues, the mechanism, and why it works.
+2. **Trace and check readiness:** follow [the worked example](CONCEPTS.md#the-mechanism), then [explain the readiness points](CONCEPTS.md#readiness-before-the-lab) before opening the exercise.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-01.
 **Weekly theme:** Object semantics.
+
 
 ## Assignment
 
@@ -13,11 +26,11 @@ Predict the behavior before running code. Write a tiny experiment in lab.py usin
 
 ## References
 
-Read the [track method](../../../docs/PYTHON_LAB_GUIDE.md) when starting this track.
-
-[The Python Standard Library](https://docs.python.org/3.12/library/index.html) and [Data model](https://docs.python.org/3/reference/datamodel.html). Use the named module or protocol; compare version notes with your local interpreter.
-Source records were checked on 2026-09-18; fetch the exact relevant section when studying.
-For later case studies, reuse earlier track notes rather than adding a new reading project.
+The [track method](../../../docs/PYTHON_LAB_GUIDE.md) is a reusable reference. Today's exact
+references are [Python 3.12 Data model](https://docs.python.org/3.12/reference/datamodel.html#objects-values-and-types)
+and [Expressions: comparisons](https://docs.python.org/3.12/reference/expressions.html#comparisons),
+opened on 2026-09-19. The [copy documentation](https://docs.python.org/3.12/library/copy.html)
+supports the optional follow-up. Run `python --version` and record your actual interpreter.
 
 ## Acceptance check
 

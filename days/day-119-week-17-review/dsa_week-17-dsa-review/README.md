@@ -1,5 +1,19 @@
 # Day 119 DSA — Week 17 DSA review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
+3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
+6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 113](../../day-113-single-unmatched-value/dsa_single-unmatched-value/README.md) · [Day 114](../../day-114-set-bit-counts/dsa_set-bit-counts/README.md) · [Day 115](../../day-115-modular-power/dsa_modular-power/README.md) · [Day 116](../../day-116-primes-below-a-bound/dsa_primes-below-a-bound/README.md) · [Day 117](../../day-117-mutable-range-sums/dsa_mutable-range-sums/README.md) · [Day 118](../../day-118-mutable-range-minima/dsa_mutable-range-minima/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -29,8 +43,8 @@ Recall one candidate, not all of them: [day 118](../../day-118-mutable-range-min
 
 **Cold re-solve: Mutable range sums.** Process [add,index,delta] and [sum,left,right] inclusive over nums; valid indices. Return sums. Use a binary indexed tree.
 
-Start in [PRACTICE.md](PRACTICE.md). The invariant to investigate is kept in
-[HINTS.md](HINTS.md), so the first attempt remains independent. Expected target: O(log n) per operation.
+After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(log n) per operation.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain

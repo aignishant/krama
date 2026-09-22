@@ -1,5 +1,19 @@
 # Day 014 DSA — Week 2 DSA review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
+3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
+6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 8](../../day-008-first-repeated-value/dsa_first-repeated-value/README.md) · [Day 9](../../day-009-frequency-ranking/dsa_frequency-ranking/README.md) · [Day 10](../../day-010-pair-sum-indices/dsa_pair-sum-indices/README.md) · [Day 11](../../day-011-group-anagrams/dsa_group-anagrams/README.md) · [Day 12](../../day-012-range-sums/dsa_range-sums/README.md) · [Day 13](../../day-013-count-target-subarrays/dsa_count-target-subarrays/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -29,8 +43,8 @@ Recall one candidate, not all of them: [day 13](../../day-013-count-target-subar
 
 **Cold re-solve: Range sums.** For each inclusive [left,right] query return the sum. Queries are valid for nums; an empty nums has no queries.
 
-Start in [PRACTICE.md](PRACTICE.md). The invariant to investigate is kept in
-[HINTS.md](HINTS.md), so the first attempt remains independent. Expected target: O(n+q) time; O(n) space.
+After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(n+q) time; O(n) space.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain

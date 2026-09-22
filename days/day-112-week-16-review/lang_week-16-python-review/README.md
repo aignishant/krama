@@ -1,5 +1,19 @@
 # Day 112 — Week 16 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
+4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
+5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
+6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 106](../../day-106-zero-one-knapsack/lang_measurement-design/README.md) · [Day 107](../../day-107-equal-partition/lang_cpu-profiles/README.md) · [Day 108](../../day-108-signed-target-count/lang_allocation-tracing/README.md) · [Day 109](../../day-109-weighted-scheduling/lang_reference-cycles/README.md) · [Day 110](../../day-110-matrix-chain-cost/lang_weak-references/README.md) · [Day 111](../../day-111-visit-every-city/lang_optimization-memo/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** lang. **Budget:** 15 minutes (3 predict + 8 experiment + 4 explain/test). **Outcome:** PY-112.
 **Weekly theme:** Profiling and memory.
 

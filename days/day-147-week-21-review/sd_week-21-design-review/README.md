@@ -1,5 +1,19 @@
 # Day 147 — Week 21 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 141](../../day-141-product-except-self/sd_regional-topology/README.md) · [Day 142](../../day-142-longest-consecutive-run/sd_recovery-objectives/README.md) · [Day 143](../../day-143-trapped-rainwater/sd_conflict-resolution/README.md) · [Day 144](../../day-144-top-frequent-words/sd_data-placement/README.md) · [Day 145](../../day-145-rotated-minimum-with-duplicates/sd_disaster-recovery-drill/README.md) · [Day 146](../../day-146-find-duplicate-without-mutation/sd_migration-strategy/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-147.
 **Weekly theme:** Multi-region and advanced tradeoffs.
 

@@ -1,5 +1,19 @@
 # Day 091 — Week 13 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 85](../../day-085-maximum-compatible-meetings/sd_trust-boundaries/README.md) · [Day 86](../../day-086-reach-the-end/sd_authentication-and-authorization/README.md) · [Day 87](../../day-087-minimum-jumps/sd_abuse-prevention/README.md) · [Day 88](../../day-088-circular-fuel-route/sd_secret-handling/README.md) · [Day 89](../../day-089-task-cooldown-length/sd_tenant-isolation/README.md) · [Day 90](../../day-090-optimal-merge-cost/sd_retention-and-audit/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-91.
 **Weekly theme:** Security and tenancy.
 

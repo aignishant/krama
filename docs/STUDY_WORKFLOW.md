@@ -16,6 +16,20 @@ the local practice command never submits to LeetCode.
 
 ## Independent progress
 
+### Recall previous topics without practice
+
+Open one shared file: [DSA recall](DSA_RECALL.md), [Python recall](LANG_RECALL.md), or
+[system design recall](SD_RECALL.md). Use its index to reread the cards for topics you have
+studied. No new solve, lab, memo, or test run is required for this quick reading mode.
+Open the linked full explanation only if you need depth.
+
+Cards are added when teaching documents are expanded. They do not mark study complete. Use
+the latest event for the relevant day and track in TRACK_PROGRESS.csv to select recorded
+completed topics; track progress may differ between DSA, Python, and system design.
+Scheduled weekly cold assessments remain a separate activity with their own acceptance criteria.
+
+### Record actual study
+
 Append events to TRACK_PROGRESS.csv; keep old events. Allowed tracks: dsa, sd, lang.
 Allowed statuses: not-started, partial, needs-review, complete. Example syntax only:
 

@@ -1,5 +1,18 @@
 # Day 001 DSA — Count target values
 
+## Navigation — where to start
+
+1. **Learn the topic:** read [the explanation](CONCEPTS.md) for intuition, recognition cues, the mechanism, and why it works.
+   For the online route, also read [how frequencies and cumulative counts reuse work](FREQUENCY_COUNTS.md).
+2. **Trace and check readiness:** follow [the worked example](CONCEPTS.md#the-mechanism), then [explain the readiness points](CONCEPTS.md#readiness-before-practice) before opening the exercise.
+3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
+5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
+6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
+7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -19,7 +32,7 @@ Recall one candidate, not all of them: No earlier session; state your baseline c
 
 | Step | Minutes | Work |
 | --- | --- | --- |
-| Recall | 5 | Explain a previous invariant without notes. |
+| Recall | 5 | State your starting confidence; explain what an input/output contract means. |
 | Understand | 10 | Read the contract; trace a small example; choose a baseline. |
 | Solve | 30 | Implement the core problem in solution.py without reading hints first. |
 | Verify | 10 | Run tests, add boundary cases, explain time and space. |
@@ -29,13 +42,14 @@ Recall one candidate, not all of them: No earlier session; state your baseline c
 
 **Count target values.** Return how many elements equal target. Do not mutate nums.
 
-Start in [PRACTICE.md](PRACTICE.md). The invariant to investigate is kept in
-[HINTS.md](HINTS.md), so the first attempt remains independent. Expected target: O(n) time; O(1) extra space.
+After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(n) time; O(1) extra space.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain
 
-Read [week 1 in the DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) for this week's mechanism before the first attempt.
+Use [today's teaching document](CONCEPTS.md) before the first attempt. The
+[week 1 pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) is a compact review reference.
 
 Before optimizing, write what a straightforward correct algorithm would enumerate or maintain.
 On the sample, record the changing state after each meaningful step. Identify what remains true

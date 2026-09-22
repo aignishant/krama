@@ -1,5 +1,19 @@
 # Day 056 — Week 8 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 50](../../day-050-enumerate-subsets/sd_leader-replication/README.md) · [Day 51](../../day-051-enumerate-permutations/sd_read-your-writes/README.md) · [Day 52](../../day-052-combination-sum/sd_consistency-models/README.md) · [Day 53](../../day-053-balanced-parentheses/sd_quorum-reasoning/README.md) · [Day 54](../../day-054-word-search/sd_network-partitions/README.md) · [Day 55](../../day-055-nonattacking-queens/sd_failover/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-56.
 **Weekly theme:** Replication and consistency.
 

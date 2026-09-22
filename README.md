@@ -23,6 +23,16 @@ and [interview practice method](docs/INTERVIEW_PREP.md). Premium companions have
 
 ## Start here
 
+1. Open [Day 1](days/day-001-count-target-values/LESSON.md), then choose a subject README.
+2. Follow its **Navigation — where to start** section: explanation → trace → readiness →
+   assignment → implementation → verification → evidence.
+3. For later reading without practice, use [DSA recall](docs/DSA_RECALL.md),
+   [Python recall](docs/LANG_RECALL.md), or [system design recall](docs/SD_RECALL.md).
+
+Day 1 has full teaching documents. Other days have navigation to preparation guides until
+their topic lessons are expanded. [The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
+explanations and recall cards part of every future day expansion.
+
 - [Master plan and all 168 daily assignments](docs/00_MASTER_PLAN.md)
 - [Day 1](days/day-001-count-target-values/LESSON.md)
 - [DSA practice guide](docs/PRACTICE_GUIDE.md)

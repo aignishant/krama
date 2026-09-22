@@ -1,7 +1,20 @@
 # Day 001 — Functional scope
 
+## Navigation — where to start
+
+1. **Learn the topic:** read [the explanation](CONCEPTS.md) for intuition, recognition cues, the mechanism, and why it works.
+2. **Trace and check readiness:** follow [the worked example](CONCEPTS.md#the-mechanism), then [explain the readiness points](CONCEPTS.md#readiness-before-the-design-exercise) before opening the exercise.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-01.
 **Weekly theme:** Requirements and estimation.
+
 
 ## Assignment
 
@@ -13,11 +26,10 @@ Produce one bounded artifact: a small diagram, a calculation with units, a state
 
 ## References
 
-Read the [track method](../../../docs/SD_DESIGN_GUIDE.md) when starting this track.
-
-[HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html), [Concurrency Control](https://www.postgresql.org/docs/current/mvcc.html), [consensus paper](https://raft.github.io/raft.pdf), and [reliability book contents](https://sre.google/sre-book/table-of-contents/). Choose the section relevant to this assignment; do not read all four.
-Source records were checked on 2026-09-18; fetch the exact relevant section when studying.
-For later case studies, reuse earlier track notes rather than adding a new reading project.
+The [track method](../../../docs/SD_DESIGN_GUIDE.md) is a reusable reference.
+For optional protocol reading after the memo, use [HTTP Semantics, RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html),
+sections 10.2.2 and 15.4 on Location and redirects; opened on 2026-09-19.
+The core lesson is self-contained. Database concurrency and consensus are outside today's scope.
 
 ## Acceptance check
 

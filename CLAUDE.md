@@ -21,3 +21,13 @@ authorization. In particular do not invoke granth.py done, which stages the whol
 When expanding a day, work inside the requested subject folder, consult the full vendored
 Granth teaching contract, verify exact interfaces, and keep core assignment versus optional
 deep reading explicit. No assumption that finishing DSA is required before opening Python.
+
+For every day expansion, follow docs/TEACHING_WORKFLOW.md: teach the topic and the reasoning
+behind its techniques before directing the learner to practice. Each subject README needs
+linked navigation in reading order. CONCEPTS.md is the teaching entry point; explain any
+additional mechanism required by the LeetCode companion. General instruction is not a hint
+to withhold until failure. Future briefs must label preparation guides honestly until expanded.
+
+Every expanded subject also contributes a short card to docs/DSA_RECALL.md, docs/LANG_RECALL.md,
+or docs/SD_RECALL.md. Link that file from its README for optional recall without practice.
+Preserve day order and distinguish summary availability from completion in TRACK_PROGRESS.csv.

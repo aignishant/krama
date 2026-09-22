@@ -1,5 +1,19 @@
 # Day 168 — Week 24 review
 
+## Navigation — where to start
+
+1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
+2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
+3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
+6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
+7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+
+Original reading, after cold recall: [Day 162](../../day-162-routing-capstone/sd_capstone-brief/README.md) · [Day 163](../../day-163-scheduling-capstone/sd_capstone-architecture/README.md) · [Day 164](../../day-164-search-capstone/sd_capstone-consistency/README.md) · [Day 165](../../day-165-range-capstone/sd_capstone-resilience/README.md) · [Day 166](../../day-166-counterexample-capstone/sd_capstone-tradeoffs/README.md) · [Day 167](../../day-167-final-independent-problem/sd_final-defense/README.md).
+
+[Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
+
 **Track:** sd. **Budget:** 30 minutes (5 recall + 10 concept/reference + 12 design + 3 critique). **Outcome:** SD-168.
 **Weekly theme:** Final design portfolio.
 
