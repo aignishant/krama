@@ -440,6 +440,20 @@ Review days point to explicit earlier core problems and have their own replaceme
 SD has a bounded assignment, design-response template and checklist. Python has a focused lab
 assignment, unsolved lab.py and notes. Each subject can be opened without reading the other two.
 
+Every expanded SD day also includes an author-written `REFERENCE_DESIGN.md`: a complete response
+to the day's actual task with assumptions, the requested artifact or calculation, a decision,
+an alternative, a failure walkthrough, and a self-review. The assistant writes that reference;
+the learner fills `TODO(me)` in `DESIGN.md` as personal practice. Preserve existing practice
+content. A concept lesson alone is no longer sufficient to declare an SD day fully expanded.
+Days 001–005 include references; remaining planned days receive them when expanded.
+
+Choose guided reading (concepts → reference → own attempt) or independent practice (concepts
+→ own attempt → reference comparison). Record help used. Reading a reference is available
+without completing practice, but does not count as learner completion. Weekly cold reviews
+still start without answers. Use the existing 30-minute reference/practice/critique windows,
+not another mandatory design. See [the SD method](SD_DESIGN_GUIDE.md#who-fills-the-todos) and
+[ADR-0003](adr/ADR-0003-system-design-reference-and-practice.md).
+
 A complete practice session includes understanding the contract, a baseline, an independent
 attempt, boundary tests, a complexity argument and a failure note. Provided example fixtures are
 smoke checks, not exhaustive correctness proofs. Add your own cases and a small brute-force oracle

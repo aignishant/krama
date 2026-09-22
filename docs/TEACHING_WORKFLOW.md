@@ -46,6 +46,26 @@ In system design, teach the decision framework and its tradeoff with a worked ex
 asking for a memo. In Python, explain the language or runtime model and trace it before the
 learner implements a prediction-driven experiment. Assume experienced Python syntax knowledge.
 
+### System-design reference answers
+
+For every expanded SD day, the assistant must write `REFERENCE_DESIGN.md` as a complete worked
+answer to the actual daily assignment, in addition to `CONCEPTS.md`. Address every required
+output with assumptions, the artifact/calculation, reasoning, an alternative, a concrete
+failure walkthrough, and a self-review. Explain all introduced numbers and units. Leave no
+`TODO(me)` or unanswered exercise placeholders in the reference. Distinguish hypothetical
+scenarios from observed tests; use sources when making external technical claims.
+
+Keep `DESIGN.md` as the learner's personal practice and evidence. Its TODOs belong to the
+learner; the assistant does not fill them when authoring a reference. Put this ownership in
+the subject README and link the completed reference from the lesson, hub, checklist, and
+recall card. Allow reading it before a guided attempt or comparing it after an independent
+attempt. Weekly cold reviews must defer it until after the cold attempt.
+
+Reference reading and comparison use the existing SD concept and critique windows. The learner
+may read without practicing, but that does not close the assessment. A reference is one
+defensible answer, not a mandatory architecture to copy. Future briefs state honestly that
+their reference is not yet authored. See [the SD method](SD_DESIGN_GUIDE.md#who-fills-the-todos).
+
 ## Teaching versus hints
 
 Explain general counting, frequency tables, invariants, or other assigned concepts openly in
@@ -54,6 +74,9 @@ HINTS.md is for progressively stronger help applying those ideas to the particul
 Complete teaching demonstrations use a separate example; learner solution files and personal
 evidence stay under learner control. “Complete day documents” means finish the instruction and
 navigation, not fill in TODO(me) exercises or mark the day studied.
+
+SD additionally supplies the explicitly requested worked answer in `REFERENCE_DESIGN.md`.
+This exception concerns author-provided teaching material, not the learner's `DESIGN.md`.
 
 ## Navigation in each README
 

@@ -31,3 +31,10 @@ to withhold until failure. Future briefs must label preparation guides honestly 
 Every expanded subject also contributes a short card to docs/DSA_RECALL.md, docs/LANG_RECALL.md,
 or docs/SD_RECALL.md. Link that file from its README for optional recall without practice.
 Preserve day order and distinguish summary availability from completion in TRACK_PROGRESS.csv.
+
+Expanded SD days must include a complete REFERENCE_DESIGN.md answering the actual assignment
+with assumptions, artifact/calculation, decision, alternative, failure walkthrough, and self-review.
+The assistant authors that file; DESIGN.md and its TODO(me) sections belong to the learner.
+Link both roles clearly and permit guided reading before practice or comparison afterwards.
+Preserve cold reviews, the 30-minute budget, learner work, and independent completion criteria.
+See docs/adr/ADR-0003-system-design-reference-and-practice.md and docs/TEACHING_WORKFLOW.md.

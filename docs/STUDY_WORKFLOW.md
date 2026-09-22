@@ -30,6 +30,12 @@ Scheduled weekly cold assessments remain a separate activity with their own acce
 
 ### Record actual study
 
+For SD, the assistant supplies `REFERENCE_DESIGN.md` and you fill `DESIGN.md` when practicing.
+The latter's `TODO(me)` markers are prompts for your own reasoning, not missing lesson content.
+Choose [guided reading or an independent attempt](SD_DESIGN_GUIDE.md#who-fills-the-todos).
+Reading the reference is allowed without writing a memo, but does not mark the assignment
+complete. Record reference help when used; keep weekly cold assessments independent.
+
 Append events to TRACK_PROGRESS.csv; keep old events. Allowed tracks: dsa, sd, lang.
 Allowed statuses: not-started, partial, needs-review, complete. Example syntax only:
 

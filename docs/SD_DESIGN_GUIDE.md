@@ -3,6 +3,43 @@
 Use this guide throughout the 30-minute track. A daily task asks for one piece of a design,
 not a complete architecture every day.
 
+## Who fills the TODOs?
+
+**You fill `TODO(me)` in `DESIGN.md` when you choose to practice. The assistant writes the
+complete `REFERENCE_DESIGN.md` for you to study.** You do not need to fill any TODO just to
+read and understand the course.
+
+| File | What to do with it |
+| --- | --- |
+| `CONCEPTS.md` | Learn the method, reasoning, and traps |
+| `REFERENCE_DESIGN.md` | Read a finished response to the actual task, including decisions and tradeoffs |
+| `DESIGN.md` | Write your own attempt and actual evidence; these TODOs are intentional practice prompts |
+
+For guided learning, read concepts and the reference, close them, then explain or attempt the
+task in your own words. For independent practice, attempt first and compare afterwards. Record
+which help you used. You may stop after reading, but only your own work and the acceptance
+criteria establish completion. In weekly cold reviews, attempt before opening a reference.
+
+Use the existing 5-minute recall, 10-minute concept/reference, 12-minute design, and 3-minute
+critique allocation. If the reading needs longer, continue another sitting rather than add a
+second design task. Existing practice files are preserved when references are added.
+
+### Available complete reference designs
+
+| Day | Worked answer |
+| --- | --- |
+| 001 | [Functional scope](../days/day-001-count-target-values/sd_functional-scope/REFERENCE_DESIGN.md) |
+| 002 | [Quality requirements](../days/day-002-find-the-first-maximum/sd_quality-requirements/REFERENCE_DESIGN.md) |
+| 003 | [Traffic estimates](../days/day-003-stable-compaction/sd_traffic-estimates/REFERENCE_DESIGN.md) |
+| 004 | [Storage estimates](../days/day-004-reverse-a-segment/sd_storage-estimates/REFERENCE_DESIGN.md) |
+| 005 | [Latency budgets](../days/day-005-merge-sorted-arrays/sd_latency-budgets/REFERENCE_DESIGN.md) |
+
+Later days receive a complete reference when their topic lessons are expanded. Each reference
+is one reasoned answer under stated assumptions; another design can be valid with different
+requirements. No reference represents a deployed or measured service unless explicitly evidenced.
+
+## Design method
+
 1. **Define the operation.** State who uses it, what it returns and what is outside scope.
 2. **State quality targets.** Latency needs a percentile and measurement boundary. Availability
    needs a definition of a successful request. Freshness and durability are separate requirements.
