@@ -1,5 +1,8 @@
 # Day 005 — LeetCode interview practice
 
+Before attempting, read [the merge lesson](CONCEPTS.md) and its
+[readiness check](CONCEPTS.md#readiness-before-practice). Then read [backward merging](BACKWARD_MERGE.md). [Back to navigation](README.md).
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +14,17 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 5.
 
-**Contract comparison:** Online uses a preallocated destination array; local practice returns a new merged list.
+**Contract comparison:** Local practice returns a newly allocated list containing all occurrences.
+Online, write into `nums1`, which holds `m` valid entries and `n` spare slots; `nums2` holds
+`n` entries. Read logical lengths instead of filtering out zero values. Either logical input
+may be empty, but their combined length is positive online. The judge observes mutation;
+returning a separate merged list does not satisfy that contract.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+The [backward-merge lesson](BACKWARD_MERGE.md) derives an O(m+n)-time, O(1)-extra-space route.
+The local output itself requires O(m+n) storage.
+
+Official problem statement and constraints rechecked on 2026-09-22; this companion is freely accessible.
+Use the current online editor signature. Local tests do not validate that signature or submission.
 
 ## Interview checklist
 

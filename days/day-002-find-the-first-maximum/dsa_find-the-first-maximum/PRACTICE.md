@@ -1,5 +1,8 @@
 # Practice — Find the first maximum
 
+Before attempting, read [the concept lesson](CONCEPTS.md) and its
+[readiness check](CONCEPTS.md#readiness-before-practice). [Back to navigation](README.md).
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

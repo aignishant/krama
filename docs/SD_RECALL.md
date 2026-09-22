@@ -13,6 +13,10 @@ is the first available card; future taught days will extend this file in day ord
 | Day | Topic | Jump |
 | --- | --- | --- |
 | 001 | Functional scope and observable outcomes | [Recall card](#day-001-functional-scope) |
+| 002 | Quality requirements | [Recall card](#day-002-quality-requirements) |
+| 003 | Traffic estimates | [Recall card](#day-003-traffic-estimates) |
+| 004 | Storage estimates | [Recall card](#day-004-storage-estimates) |
+| 005 | Latency budgets | [Recall card](#day-005-latency-budgets) |
 
 ## Day 001: Functional scope
 
@@ -48,6 +52,99 @@ undefined shortener guarantee. Compare one alternative and state what evidence w
 
 [Full explanation](../days/day-001-count-target-values/sd_functional-scope/CONCEPTS.md) ·
 [Your Day 1 memo](../days/day-001-count-target-values/sd_functional-scope/DESIGN.md)
+
+---
+
+## Day 002: Quality requirements
+
+**Idea and cue:** replace words such as fast and reliable with a population, measurement
+boundary, window, and threshold. The measured indicator is an SLI; its target is an SLO.
+
+**Mechanism:** distinguish availability (successful eligible requests), latency (duration),
+durability (retention of acknowledged data), and freshness (visibility delay after change).
+Name timeouts and exclusions. Targets are assumptions until observations establish results.
+
+**Why it works:** two reviewers can apply the same event definitions and agree on a result.
+A fast stale answer can pass latency but fail freshness; temporary unavailability need not
+mean permanent data loss.
+
+**Memory anchor:** nine 10 ms requests and one 910 ms request average 100 ms, while nearest-rank
+p95 is 910 ms. An average can hide a user-visible tail.
+
+**Tradeoff and trap:** finer measurements cost collection and storage effort. Stricter freshness
+can reduce cache usefulness. Do not average local percentiles into a supposed global percentile
+or mistake gateway timing for the whole client experience.
+
+[Full lesson](../days/day-002-find-the-first-maximum/sd_quality-requirements/CONCEPTS.md) ·
+[Your memo](../days/day-002-find-the-first-maximum/sd_quality-requirements/DESIGN.md)
+
+## Day 003: Traffic estimates
+
+**Idea and cue:** turn a proposed user workload into request rates before discussing capacity.
+Daily active users × actions/user × requests/action gives daily requests. Divide by 86,400
+seconds for the average of a modeled 24-hour day; derive peaks from a separate concentration scenario.
+
+**Why it works:** units cancel visibly, and the model exposes which assumption drives each
+number. Retain population, frequency, boundary, interval, and peak assumptions rather than one
+unexplained rate. Changing any input gives a sensitivity case.
+
+**Memory anchor:** 1,440,000 daily reads average about 16.67 QPS; putting 25% into one hour
+gives 100 QPS for that hour. These are illustrative assumptions, not measured traffic.
+
+**Tradeoff and trap:** an average hides bursts, users are not simultaneous requests, and an
+hourly rate is not QPS. API rate and database rate differ with caching, fan-out, and retries.
+Equal QPS can consume different resources. Use measurements of the request mix and resource
+cost before deriving server count; the estimate is a starting model, not a benchmark.
+
+[Full lesson](../days/day-003-stable-compaction/sd_traffic-estimates/CONCEPTS.md) ·
+[Your memo](../days/day-003-stable-compaction/sd_traffic-estimates/DESIGN.md)
+
+## Day 004: Storage estimates
+
+**Idea and cue:** estimate retained records before provisioning disk. Raw bytes = new records
+per day × retained days × bytes per record. Then add named overheads and count total copies.
+
+**Mechanism and reason:** if every live copy contains both data and indexes, occupied bytes
+are `(raw + indexes) × total copies`. Required capacity at utilization u is occupied/u.
+Each term names a layer so you can detect omissions and double counting.
+
+**Memory anchor:** assumed 2.88 GB raw + 0.72 GB indexes gives 3.60 GB per copy; three copies
+occupy 10.80 GB; 75% maximum use requires 14.40 GB capacity.
+
+**Tradeoff and trap:** replication factor three means three total copies. Decimal GB and binary
+GiB differ. Reads do not automatically create records. Backups, logs, temporary rewrites, and
+delayed deletion need explicit allowances; generic headroom does not prove they fit. Shorter
+retention saves storage at a product cost. Replicas can repeat an accidental deletion, so
+replication and independently retained recovery copies serve different needs.
+
+[Full lesson](../days/day-004-reverse-a-segment/sd_storage-estimates/CONCEPTS.md) ·
+[Your memo](../days/day-004-reverse-a-segment/sd_storage-estimates/DESIGN.md)
+
+---
+
+## Day 005: Latency budgets
+
+**Idea and cue:** when a whole interaction has a latency target, allocate time along its
+actual dependency path. Name the measurement boundary, request population, and component
+boundaries before choosing numbers. An allocation is a planning assumption, not a measurement.
+
+**Mechanism and reason:** nonoverlapping serial durations add for one request. Parallel work
+requires tracing the path that determines completion. Measure complete-request durations to
+verify the end-to-end percentile. Component p95 values may describe different slow requests,
+so their sum is not generally end-to-end p95.
+
+**Memory anchor:** across 20 synthetic requests, one stage is 100 ms once and 10 ms otherwise;
+another is slow on a different request. Each nearest-rank p95 is 10 ms, but the paired totals
+have p95 110 ms. Adding the two 10 ms percentiles misses the tail.
+
+**Tradeoff and trap:** reserve margin and account for queueing, network travel, and client work.
+Do not add a storage span to an inclusive app span that already contains it. Finer tracing
+costs collection and analysis effort. Caching may improve latency at a freshness cost. Parallel
+calls, retries, and per-stage timeouts can change the critical path; a passing toy fixture
+does not validate a production target.
+
+[Full lesson](../days/day-005-merge-sorted-arrays/sd_latency-budgets/CONCEPTS.md) ·
+[Your memo](../days/day-005-merge-sorted-arrays/sd_latency-budgets/DESIGN.md)
 
 ---
 

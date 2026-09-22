@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md). This is a shared preparation guide; the full explanation of **Shallow and deep copies** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
+1. **Learn:** read [the topic explanation](CONCEPTS.md) for the intuition, state, and reasoning.
+2. **Trace and check readiness:** follow [the worked example](CONCEPTS.md#worked-trace), then answer [the readiness questions](CONCEPTS.md#readiness-before-practice).
 3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
 4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
 5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.
 6. **Record:** save predictions, observations, and the explanation in [NOTES.md](NOTES.md).
-7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+7. **Recall later without practice:** read the [Python summary file](../../../docs/LANG_RECALL.md#day-002-shallow-and-deep-copies) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -25,14 +25,12 @@ Predict the behavior before running code. Write a tiny experiment in lab.py usin
 
 ## References
 
-Read the [track method](../../../docs/PYTHON_LAB_GUIDE.md) when starting this track.
-
-[The Python Standard Library](https://docs.python.org/3.12/library/index.html) and [Data model](https://docs.python.org/3/reference/datamodel.html). Use the named module or protocol; compare version notes with your local interpreter.
-Source records were checked on 2026-09-18; fetch the exact relevant section when studying.
-For later case studies, reuse earlier track notes rather than adding a new reading project.
+Optional deeper reading: [copy: Shallow and deep copy operations](https://docs.python.org/3.12/library/copy.html).
+The exact page was checked on 2026-09-22; see [source records](../../../docs/SOURCES.md).
 
 ## Acceptance check
 
+- [ ] Assert outer identity, nested sharing, and isolation after mutation.
 - [ ] I completed the specific assignment above and saved evidence.
 - [ ] I can explain the mechanism or tradeoff without reading my notes.
 - [ ] I named one failure or counterexample and the response to it.

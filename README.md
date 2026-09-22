@@ -29,8 +29,12 @@ and [interview practice method](docs/INTERVIEW_PREP.md). Premium companions have
 3. For later reading without practice, use [DSA recall](docs/DSA_RECALL.md),
    [Python recall](docs/LANG_RECALL.md), or [system design recall](docs/SD_RECALL.md).
 
-Day 1 has full teaching documents. Other days have navigation to preparation guides until
-their topic lessons are expanded. [The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
+Days 1–5 have full topic explanations across all three tracks, with worked traces, observed
+teaching failures, readiness checks, and recall cards. Continue with [Day 2](days/day-002-find-the-first-maximum/LESSON.md),
+[Day 3](days/day-003-stable-compaction/LESSON.md), [Day 4](days/day-004-reverse-a-segment/LESSON.md),
+or [Day 5](days/day-005-merge-sorted-arrays/LESSON.md).
+Days 6–168 have navigation to preparation guides until their topic lessons are expanded.
+[The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
 explanations and recall cards part of every future day expansion.
 
 - [Master plan and all 168 daily assignments](docs/00_MASTER_PLAN.md)

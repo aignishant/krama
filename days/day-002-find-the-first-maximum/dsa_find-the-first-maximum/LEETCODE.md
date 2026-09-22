@@ -1,5 +1,8 @@
 # Day 002 — LeetCode interview practice
 
+Before attempting, read [the concept lesson](CONCEPTS.md) and its
+[readiness check](CONCEPTS.md#readiness-before-practice). Then read [dominance checks](DOMINANCE.md). [Back to navigation](README.md).
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +14,10 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 2.
 
-**Contract comparison:** Related maximum-scan drill: the online problem adds a dominance condition; the local task asks only for the first maximum.
+**Contract comparison:** The local task accepts empty input and ties and returns the earliest maximum index. Online, the array has at least two nonnegative integers and a unique maximum; return its index only if it meets the dominance condition, otherwise -1. Read [the dominance lesson](DOMINANCE.md) before attempting it.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement and constraints rechecked on 2026-09-22; this companion is freely accessible.
+Use the online editor's current signature; local tests validate only the local adapter.
 
 ## Interview checklist
 

@@ -28,3 +28,18 @@ introduced it instead of redefining it.
 | Predicate | A condition with a yes/no result that determines whether an item qualifies. | [Day 1 DSA](../days/day-001-count-target-values/dsa_count-target-values/CONCEPTS.md) | Boolean condition |
 | Frequency table | A summary retaining how often each value occurs. | [Day 1 DSA](../days/day-001-count-target-values/dsa_count-target-values/FREQUENCY_COUNTS.md) | Histogram |
 | Cumulative count | A sum of frequencies across a stated value boundary. | [Day 1 DSA](../days/day-001-count-target-values/dsa_count-target-values/FREQUENCY_COUNTS.md) | Prefix count |
+| Stable compaction | Packing retained items into a prefix without changing their relative order. | [Day 3 DSA](../days/day-003-stable-compaction/dsa_stable-compaction/CONCEPTS.md) | Stable filtering |
+| Closed interval | A range including both endpoints; indices L through R contain R−L+1 positions. | [Day 4 DSA](../days/day-004-reverse-a-segment/dsa_reverse-a-segment/CONCEPTS.md) | Inclusive interval |
+| Shallow copy | A new outer container holding references to the original children. | [Day 2 Python](../days/day-002-find-the-first-maximum/lang_shallow-and-deep-copies/CONCEPTS.md) | Outer copy |
+| Hash collision | Different keys producing the same hash value; equality still distinguishes them. | [Day 4 Python](../days/day-004-reverse-a-segment/lang_hash-and-equality/CONCEPTS.md) | Collision |
+| SLI | A measured service-quality indicator with a defined population and boundary. | [Day 2 SD](../days/day-002-find-the-first-maximum/sd_quality-requirements/CONCEPTS.md) | Service level indicator |
+| SLO | A target for a service level indicator. | [Day 2 SD](../days/day-002-find-the-first-maximum/sd_quality-requirements/CONCEPTS.md) | Service level objective |
+| QPS | Queries or requests per second at a named service boundary. | [Day 3 SD](../days/day-003-stable-compaction/sd_traffic-estimates/CONCEPTS.md) | Request rate |
+| Retention | How long records remain stored. | [Day 4 SD](../days/day-004-reverse-a-segment/sd_storage-estimates/CONCEPTS.md) | Retention period |
+| Replication factor | The total count of live copies, including the original. | [Day 4 SD](../days/day-004-reverse-a-segment/sd_storage-estimates/CONCEPTS.md) | Total copies |
+| Headroom | Spare provisioned capacity for operations and growth. | [Day 4 SD](../days/day-004-reverse-a-segment/sd_storage-estimates/CONCEPTS.md) | Capacity reserve |
+| Nondecreasing order | Each value is at least the preceding value; equal neighbors are allowed. | [Day 5 DSA](../days/day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/CONCEPTS.md) | Ascending order with ties |
+| Logical length | The number of meaningful entries, excluding spare capacity. | [Day 5 DSA](../days/day-005-merge-sorted-arrays/dsa_merge-sorted-arrays/BACKWARD_MERGE.md) | Valid length |
+| Latency budget | An allocation of an end-to-end time target among request-path components. | [Day 5 SD](../days/day-005-merge-sorted-arrays/sd_latency-budgets/CONCEPTS.md) | Time allocation |
+| Critical path | The dependency path that determines when a response can finish. | [Day 5 SD](../days/day-005-merge-sorted-arrays/sd_latency-budgets/CONCEPTS.md) | Completion path |
+| Sentinel | A distinguished object representing a state such as an omitted value. | [Day 5 Python](../days/day-005-merge-sorted-arrays/lang_truth-and-sentinels/CONCEPTS.md) | Absence marker |

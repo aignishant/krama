@@ -1,5 +1,8 @@
 # Practice — Reverse a segment
 
+Before attempting, read [the concept lesson](CONCEPTS.md) and its
+[readiness check](CONCEPTS.md#readiness-before-practice). [Back to navigation](README.md).
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -44,6 +47,8 @@ Expected output:
 8. Deliberately introduce one plausible bug, observe a failing test, then undo the bug.
 9. Explain correctness, time, auxiliary space and output space. Target: **O(right-left+1) time; O(1) space**.
 10. Record whether you solved independently or used hints; schedule a cold re-solve.
+
+Also verify the returned object is the original `data["nums"]` list, not just an equal copy. Check positions outside the inclusive interval are unchanged. Empty input is outside the stated precondition.
 
 ## Optional extension
 

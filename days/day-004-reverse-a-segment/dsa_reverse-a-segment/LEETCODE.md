@@ -1,5 +1,8 @@
 # Day 004 — LeetCode interview practice
 
+Before attempting, read [the concept lesson](CONCEPTS.md) and its
+[readiness check](CONCEPTS.md#readiness-before-practice). [Back to navigation](README.md).
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +14,10 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 4.
 
-**Contract comparison:** Related pointer drill: reverse an entire character array in place online; the local task reverses an integer segment.
+**Contract comparison:** The local task reverses only the inclusive integer subrange left..right and returns the modified list. Online, reverse the entire nonempty character array in place with constant extra memory. The untouched-prefix and suffix checks belong to the local contract.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement and constraints rechecked on 2026-09-22; this companion is freely accessible.
+Use the online editor's current signature; local tests validate only the local adapter.
 
 ## Interview checklist
 

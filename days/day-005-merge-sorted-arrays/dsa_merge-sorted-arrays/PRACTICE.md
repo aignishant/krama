@@ -1,5 +1,8 @@
 # Practice — Merge sorted arrays
 
+Before attempting, read [the merge lesson](CONCEPTS.md) and its
+[readiness check](CONCEPTS.md#readiness-before-practice). [Back to navigation](README.md).
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
@@ -44,6 +47,11 @@ Expected output:
 8. Deliberately introduce one plausible bug, observe a failing test, then undo the bug.
 9. Explain correctness, time, auxiliary space and output space. Target: **O(n+m) time; output space O(n+m)**.
 10. Record whether you solved independently or used hints; schedule a cold re-solve.
+
+Check that the result is a new list even when either input is empty. Verify sorted order,
+length equal to the sum of input lengths, and preserved multiplicities; a set-based answer
+can look sorted while losing duplicates. A concatenate-and-sort baseline can serve as a
+small-input oracle, independently of your two-pointer implementation.
 
 ## Optional extension
 
