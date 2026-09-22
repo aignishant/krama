@@ -21,6 +21,14 @@ are taught; this is not a summary of all 168 planned days.
 | 006 | Best single trade | [Recall card](#day-006-best-single-trade) |
 | 007 | Week 1 DSA review | [Recall card](#day-007-week-1-dsa-review) |
 | 008 | First repeated value | [Recall card](#day-008-first-repeated-value) |
+| 009 | Frequency ranking | [Recall card](#day-009-frequency-ranking) |
+| 010 | Pair sum indices | [Recall card](#day-010-pair-sum-indices) |
+| 011 | Group anagrams | [Recall card](#day-011-group-anagrams) |
+| 012 | Range sums | [Recall card](#day-012-range-sums) |
+| 013 | Count target subarrays | [Recall card](#day-013-count-target-subarrays) |
+| 014 | Week 2 DSA review | [Recall card](#day-014-week-2-dsa-review) |
+| 015 | Sorted pair existence | [Recall card](#day-015-sorted-pair-existence) |
+| 016 | Unique triples | [Recall card](#day-016-unique-triples) |
 
 ## Day 001: Counting and reusing counts
 
@@ -204,6 +212,95 @@ an unbounded exact history consumes growing memory. Hashability and equality def
 
 [Full lesson](../days/day-008-first-repeated-value/dsa_first-repeated-value/CONCEPTS.md) ·
 [Your notes](../days/day-008-first-repeated-value/dsa_first-repeated-value/NOTES.md)
+
+## Day 009: Frequency ranking
+
+**Cue and mechanism:** Frequency questions need counts, then a separate ordering step. Count each value once and sort distinct values by (-count, value).
+
+**Why it works and cost:** The count table represents the processed prefix; tuple keys implement both ranking priorities. Expected O(n + u log u) time and O(u) auxiliary space for u distinct values. Online frequency buckets use O(n) auxiliary space to avoid comparison sorting.
+
+**Memory anchor and trap:** Counts {8: 2, 2: 3, 5: 2} rank as [2, 5, 8]. Sorting only by count leaves ties dependent on arrival order. Online top-k is a different output contract.
+
+[Full lesson](../days/day-009-frequency-ranking/dsa_frequency-ranking/CONCEPTS.md) ·
+[Your notes](../days/day-009-frequency-ranking/dsa_frequency-ranking/NOTES.md)
+
+## Day 010: Pair sum indices
+
+**Cue and mechanism:** When the current value determines its partner, look up target minus value among earlier entries. Save earliest indices and compare complete candidate pairs.
+
+**Why it works and cost:** The earliest partner dominates later equal-valued partners for a fixed right index. Comparing all candidates yields the local smallest pair. Expected O(n) time, O(u) auxiliary space, O(1) output.
+
+**Memory anchor and trap:** [4, 1, 5, 2], target 6 finds [1, 2] before the better [0, 3]. Check before inserting to avoid self-pairs. Index zero is valid, so do not use truthiness for presence.
+
+[Full lesson](../days/day-010-pair-sum-indices/dsa_pair-sum-indices/CONCEPTS.md) ·
+[Your notes](../days/day-010-pair-sum-indices/dsa_pair-sum-indices/NOTES.md)
+
+## Day 011: Group anagrams
+
+**Cue and mechanism:** Equivalent words need equal canonical keys. Sorted characters retain every letter occurrence; map each key to its original words.
+
+**Why it works and cost:** Equal sorted keys hold exactly for equal letter multiplicities. Key construction costs O(S log(max(2,L))) in the stated upper bound, with O(S+n) key/reference storage. Local within-group and outer sorting add string comparison costs.
+
+**Memory anchor and trap:** abb and bab share a key; ab must not join them. A set loses counts, and a raw hash is not a unique key. Preserve duplicate words; local output order is stricter than online.
+
+[Full lesson](../days/day-011-group-anagrams/dsa_group-anagrams/CONCEPTS.md) ·
+[Your notes](../days/day-011-group-anagrams/dsa_group-anagrams/NOTES.md)
+
+## Day 012: Range sums
+
+**Cue and mechanism:** Many queries on unchanged data suggest reusable boundary totals. P[t] sums the first t values; inclusive [l,r] is P[r+1] - P[l].
+
+**Why it works and cost:** Subtracting cancels exactly the shared prefix. Build in O(n), answer each query in O(1): O(n+q) total time, O(n) auxiliary space, and O(q) local output.
+
+**Memory anchor and trap:** [3, -2, 6, 1] has boundaries [0, 3, 1, 7, 8]; [1,2] gives 7-3=4. P[r]-P[l] drops the endpoint. Negative values work; mutations make later totals stale.
+
+[Full lesson](../days/day-012-range-sums/dsa_range-sums/CONCEPTS.md) ·
+[Your notes](../days/day-012-range-sums/dsa_range-sums/NOTES.md)
+
+## Day 013: Count target subarrays
+
+**Cue and mechanism:** Count target sums with signed values by looking up earlier prefix frequencies.
+
+**Why it works and cost:** P[r]-P[l]=k becomes P[l]=P[r]-k. Each earlier boundary gives one interval; expected O(n) time and O(n) storage.
+
+**Memory anchor and trap:** Seed zero once, query before inserting. Two zeros have three zero-sum intervals; a set loses multiplicity.
+
+[Full lesson](../days/day-013-count-target-subarrays/dsa_count-target-subarrays/CONCEPTS.md) ·
+[Your notes](../days/day-013-count-target-subarrays/dsa_count-target-subarrays/NOTES.md)
+
+## Day 014: Week 2 DSA review
+
+**Cue and mechanism:** Review which information the exact answer needs: membership, count, position, canonical key, or prefix boundary.
+
+**Why it works and cost:** State meaning and update order prove correctness. Duplicate detection is expected O(n); batch range queries are O(n+q), with O(n) auxiliary space.
+
+**Memory anchor and trap:** A boolean duplicate result is not the first repeated value. P[right+1]-P[left] includes both endpoints. Read this after the cold attempts.
+
+[Full lesson](../days/day-014-week-2-review/dsa_week-2-dsa-review/CONCEPTS.md) ·
+[Your notes](../days/day-014-week-2-review/dsa_week-2-dsa-review/NOTES.md)
+
+## Day 015: Sorted pair existence
+
+**Cue and mechanism:** For sorted pair existence, inspect endpoint sums and eliminate an impossible endpoint.
+
+**Why it works and cost:** Too small rules out left with every available partner; too large rules out right. At most n-1 moves give O(n) time, O(1) auxiliary space.
+
+**Memory anchor and trap:** Use left < right: [5] cannot make 10, but [5,5] can. Unsorted input invalidates the elimination proof.
+
+[Full lesson](../days/day-015-sorted-pair-existence/dsa_sorted-pair-existence/CONCEPTS.md) ·
+[Your notes](../days/day-015-sorted-pair-existence/dsa_sorted-pair-existence/NOTES.md)
+
+## Day 016: Unique triples
+
+**Cue and mechanism:** For unique triples, sort, fix a distinct first value, and search a suffix using two pointers.
+
+**Why it works and cost:** Sorted elimination finds all suffix pairs; skipping repeated matched values removes duplicate answers. O(n²) time, Python sorting up to O(n) workspace, plus output.
+
+**Memory anchor and trap:** [-1,-1,2] needs both -1 occurrences. Deduplicate answers, not the input; report output ordering and memory.
+
+[Full lesson](../days/day-016-unique-triples/dsa_unique-triples/CONCEPTS.md) ·
+[Your notes](../days/day-016-unique-triples/dsa_unique-triples/NOTES.md)
+
 
 ---
 

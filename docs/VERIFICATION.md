@@ -34,3 +34,21 @@ system-design workload estimate is represented as a measured production result.
 - All seven course-tool tests passed, including stable track aliases and rejection of a manifest path escaping its subject folder.
 - `python course.py practice 10` reached the renamed directory and failed on the untouched `NotImplementedError` starter, as expected.
 - Track progress remains unchanged. No learner exercise was solved and no commit was created.
+
+## Days 13–16 documentation expansion — 2026-09-22
+
+- Added 12 topic explanations and four complete SD reference answers; updated reading routes,
+  day hubs, checklists, LeetCode contract comparisons, recall cards, and availability indexes.
+- Preserved Day 14's two cold DSA re-solves and deferred review explanations/reference answers
+  until after cold attempts. The daily 60/30/15-minute caps remain unchanged.
+- Executed all 12 new Python teaching blocks on Python 3.12.10 and matched their recorded
+  output, including deliberate failures. These are author demonstrations, not learner results.
+- Checked 695 local documentation links, including heading anchors; all resolved.
+- Compared SHA256 values for 1,010 learner/progress files captured before authoring; all
+  remained byte-identical. Earlier working-tree changes were preserved.
+- `python course.py check`, `python granth.py doctor`, and `git diff --check` passed.
+- Official Python, PostgreSQL, HTTP/timestamp, and LeetCode pages were checked; dated addresses
+  and uses are in [SOURCES.md](SOURCES.md). SQL and HTTP reference artifacts are explicitly
+  hypothetical designs, not executed service tests or production measurements.
+- Days 1–16 now have expanded topic lessons and SD references. Days 17–168 retain assignment
+  briefs and preparation navigation. No study completion or commit was recorded.

@@ -1,5 +1,10 @@
 # Day 011 — LeetCode interview practice
 
+Start with [the concepts](CONCEPTS.md), [worked trace](CONCEPTS.md#worked-trace), and
+[readiness check](CONCEPTS.md#readiness-before-practice). General techniques are taught there;
+choose one main practice route within the existing 60-minute budget.
+
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +16,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 11.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Online groups lowercase English strings and accepts arbitrary answer order. Local sorts the strings in every group, then sorts the groups lexicographically. Preserve duplicate words and empty strings; include local output-sorting costs in the complexity argument.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement checked live on 2026-09-22. No online submission is claimed.
 
 ## Interview checklist
 

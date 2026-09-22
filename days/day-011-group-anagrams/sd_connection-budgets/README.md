@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [design method](../../../docs/SD_DESIGN_GUIDE.md). This is a shared preparation guide; the full explanation of **Connection budgets** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
+1. **Learn:** read [the topic explanation](CONCEPTS.md) for the mechanism, assumptions, and reasoning.
+2. **Trace and check readiness:** follow [the worked trace](CONCEPTS.md#worked-trace), then answer [the readiness questions](CONCEPTS.md#readiness-before-practice) before opening the assignment.
 3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
-4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+4. **Choose guided or independent practice:** read the assistant's [complete reference answer](REFERENCE_DESIGN.md) before a guided attempt, or compare after your own attempt. Write your work in [DESIGN.md](DESIGN.md); its TODOs belong to you.
 5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
 6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
-7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+7. **Recall later without practice:** read [this day's recall card](../../../docs/SD_RECALL.md#day-011-connection-budgets) for a previously studied topic. Reading is not learner completion.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -19,11 +19,18 @@
 
 Given 200 concurrent requests per worker and 20 workers, estimate connection demand; identify which pools impose separate limits.
 
+## Reference and practice ownership
+
+The assistant authors [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md); [DESIGN.md](DESIGN.md) is your personal practice. Use the existing concept and critique windows for reference reading. Reading alone does not satisfy the acceptance criteria. Continue deeper reading another sitting if needed.
+
 ## Work method
 
 Produce one bounded artifact: a small diagram, a calculation with units, a state table or a short decision memo. Label assumptions before reasoning from them. Trace one concrete request or failure through the result. Compare at least one alternative and state why your choice fits the requirements.
 
 ## References
+
+The [topic source section](CONCEPTS.md#the-source-behind-it) identifies the exact official
+references checked on 2026-09-22. Start there; the broad resources below are optional background.
 
 Read the [track method](../../../docs/SD_DESIGN_GUIDE.md) when starting this track.
 

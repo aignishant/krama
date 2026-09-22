@@ -1,5 +1,7 @@
 # Practice — Unique triples
 
+First learn [the mechanism](CONCEPTS.md), trace its example, and check readiness.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

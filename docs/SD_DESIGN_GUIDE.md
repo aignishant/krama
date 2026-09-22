@@ -36,6 +36,14 @@ second design task. Existing practice files are preserved when references are ad
 | 006 | [Single-node baseline](../days/day-006-best-single-trade/sd_single-node-baseline/REFERENCE_DESIGN.md) |
 | 007 | [Week 1 design review — compare after the cold attempt](../days/day-007-week-1-review/sd_week-1-design-review/REFERENCE_DESIGN.md) |
 | 008 | [Request journey](../days/day-008-first-repeated-value/sd_request-journey/REFERENCE_DESIGN.md) |
+| 009 | [HTTP methods](../days/day-009-frequency-ranking/sd_http-methods/REFERENCE_DESIGN.md) |
+| 010 | [Idempotency semantics](../days/day-010-pair-sum-indices/sd_idempotency-semantics/REFERENCE_DESIGN.md) |
+| 011 | [Connection budgets](../days/day-011-group-anagrams/sd_connection-budgets/REFERENCE_DESIGN.md) |
+| 012 | [Timeout propagation](../days/day-012-range-sums/sd_timeout-propagation/REFERENCE_DESIGN.md) |
+| 013 | [Pagination](../days/day-013-count-target-subarrays/sd_pagination/REFERENCE_DESIGN.md) |
+| 014 | [Week 2 design review](../days/day-014-week-2-review/sd_week-2-design-review/REFERENCE_DESIGN.md) |
+| 015 | [Domain model](../days/day-015-sorted-pair-existence/sd_domain-model/REFERENCE_DESIGN.md) |
+| 016 | [API contract](../days/day-016-unique-triples/sd_api-contract/REFERENCE_DESIGN.md) |
 
 Later days receive a complete reference when their topic lessons are expanded. Each reference
 is one reasoned answer under stated assumptions; another design can be valid with different

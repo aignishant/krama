@@ -20,6 +20,14 @@ the first available card; future taught days will extend this file in day order.
 | 006 | Mutation contracts | [Recall card](#day-006-mutation-contracts) |
 | 007 | Week 1 Python review | [Recall card](#day-007-week-1-python-review) |
 | 008 | Argument binding | [Recall card](#day-008-argument-binding) |
+| 009 | Closure binding | [Recall card](#day-009-closure-binding) |
+| 010 | Nonlocal state | [Recall card](#day-010-nonlocal-state) |
+| 011 | Decorator metadata | [Recall card](#day-011-decorator-metadata) |
+| 012 | Decorator arguments | [Recall card](#day-012-decorator-arguments) |
+| 013 | Partial application | [Recall card](#day-013-partial-application) |
+| 014 | Week 2 Python review | [Recall card](#day-014-week-2-python-review) |
+| 015 | Iterator protocol | [Recall card](#day-015-iterator-protocol) |
+| 016 | Generator laziness | [Recall card](#day-016-generator-laziness) |
 
 ## Day 001: Identity, equality, and aliasing
 
@@ -197,6 +205,95 @@ binding work; large unpacked collections have separate costs. Error wording can 
 
 [Full lesson](../days/day-008-first-repeated-value/lang_argument-binding/CONCEPTS.md) ·
 [Your notes](../days/day-008-first-repeated-value/lang_argument-binding/NOTES.md)
+
+## Day 009: Closure binding
+
+**Cue and mechanism:** Delayed callbacks read retained bindings at call time. Capture a creation-time object with a default parameter or a fresh factory scope when that is the intended policy.
+
+**Why it works and cost:** Loop-created closures can share one changing binding. A default is evaluated at function creation. O(m) function storage for m callbacks; captured objects may keep much larger graphs alive.
+
+**Memory anchor and trap:** Late callbacks for 4, 7, 9 all see 9; defaults retain 4, 7, 9. Capturing a list does not copy its contents. A default parameter can also be overridden by the caller.
+
+[Full lesson](../days/day-009-frequency-ranking/lang_closure-binding/CONCEPTS.md) ·
+[Your notes](../days/day-009-frequency-ranking/lang_closure-binding/NOTES.md)
+
+## Day 010: Nonlocal state
+
+**Cue and mechanism:** A stateful closure needs an explicit owner. nonlocal rebinds an existing enclosing function name; each factory call owns separate state.
+
+**Why it works and cost:** Assignment normally makes the name local, so reading it first can fail. An instance with __call__ can expose the same ownership through attributes. Constant state here; neither form supplies durability or thread safety.
+
+**Memory anchor and trap:** Independent running totals produce [5, 7, 2], not one global sequence. An alias to one returned callable shares its state. Mutating an outer list differs from rebinding its name.
+
+[Full lesson](../days/day-010-pair-sum-indices/lang_nonlocal-state/CONCEPTS.md) ·
+[Your notes](../days/day-010-pair-sum-indices/lang_nonlocal-state/NOTES.md)
+
+## Day 011: Decorator metadata
+
+**Cue and mechanism:** A forwarding decorator replaces the public callable. functools.wraps preserves metadata and the __wrapped__ link while behavior still runs through the wrapper.
+
+**Why it works and cost:** Tools can follow the link back to the wrapped callable. Metadata work occurs at decoration time; forwarding and tracing add per-call overhead.
+
+**Memory anchor and trap:** A plain wrapper is named wrapper; the preserved wrapper reports receipt. inspect.signature normally follows __wrapped__, but actual wrapper arguments can remain *args and **kwargs. wraps cannot fix a missing return or async awaiting.
+
+[Full lesson](../days/day-011-group-anagrams/lang_decorator-metadata/CONCEPTS.md) ·
+[Your notes](../days/day-011-group-anagrams/lang_decorator-metadata/NOTES.md)
+
+## Day 012: Decorator arguments
+
+**Cue and mechanism:** Separate factory configuration, function decoration, and wrapper invocation. Validate policy once and call arguments each time; let business exceptions propagate.
+
+**Why it works and cost:** Distinct closures retain configuration and the function at the right lifetime. A fixed integer guard adds O(1) work and state here; general binding and wrapped execution have separate costs.
+
+**Memory anchor and trap:** bounded(20) captures 20 before receipt(12) executes. An invalid amount is a validation error; a broken printer must remain a RuntimeError. A catch-all returning None hides that failure.
+
+[Full lesson](../days/day-012-range-sums/lang_decorator-arguments/CONCEPTS.md) ·
+[Your notes](../days/day-012-range-sums/lang_decorator-arguments/NOTES.md)
+
+## Day 013: Partial application
+
+**Cue and mechanism:** Use partial when a callback needs some arguments supplied in advance.
+
+**Why it works and cost:** Stored positional arguments precede later ones; later keywords override stored keywords before ordinary binding. Retains references, not deep copies.
+
+**Memory anchor and trap:** partial(f, prefix="x")(7) can bind prefix twice. Mutating a retained list is visible; rebinding its old name is not.
+
+[Full lesson](../days/day-013-count-target-subarrays/lang_partial-application/CONCEPTS.md) ·
+[Your notes](../days/day-013-count-target-subarrays/lang_partial-application/NOTES.md)
+
+## Day 014: Week 2 Python review
+
+**Cue and mechanism:** Diagnose a function surprise by when the object is selected: definition, decoration, lookup, or invocation.
+
+**Why it works and cost:** A regression rejects the original behavior and accepts the intended repair. Capturing n callbacks costs O(n) references plus retained objects.
+
+**Memory anchor and trap:** Loop closures share a binding; default parameters store each creation-time object. Mutable objects are still shared. Cold attempt first.
+
+[Full lesson](../days/day-014-week-2-review/lang_week-2-python-review/CONCEPTS.md) ·
+[Your notes](../days/day-014-week-2-review/lang_week-2-python-review/NOTES.md)
+
+## Day 015: Iterator protocol
+
+**Cue and mechanism:** Distinguish a reusable iterable from one consumable iterator.
+
+**Why it works and cost:** iter(iterator) returns itself; next advances state and exhaustion remains exhausted. Cursor state may be O(1) while retaining a large collection.
+
+**Memory anchor and trap:** list(cursor) consumes it. Calling iter(cursor) does not rewind; create a new iterator from the source.
+
+[Full lesson](../days/day-015-sorted-pair-existence/lang_iterator-protocol/CONCEPTS.md) ·
+[Your notes](../days/day-015-sorted-pair-existence/lang_iterator-protocol/NOTES.md)
+
+## Day 016: Generator laziness
+
+**Cue and mechanism:** Use generator laziness to perform body work only when consumers request values.
+
+**Why it works and cost:** next runs to yield, preserving local state for resumption. Total work follows consumption; retained locals determine memory.
+
+**Memory anchor and trap:** Creation is not first execution. Body errors may appear on next, while argument expressions already ran at the call site.
+
+[Full lesson](../days/day-016-unique-triples/lang_generator-laziness/CONCEPTS.md) ·
+[Your notes](../days/day-016-unique-triples/lang_generator-laziness/NOTES.md)
+
 
 ---
 

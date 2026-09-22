@@ -1,5 +1,10 @@
 # Day 012 — LeetCode interview practice
 
+Start with [the concepts](CONCEPTS.md), [worked trace](CONCEPTS.md#worked-trace), and
+[readiness check](CONCEPTS.md#readiness-before-practice). General techniques are taught there;
+choose one main practice route within the existing 60-minute budget.
+
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +16,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 12.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Online uses NumArray(nums) followed by sumRange(left, right) calls on nonempty input. Local solve(data) returns all inclusive query answers in query order, and permits empty nums only with no queries. Precompute once in the online constructor; local tests do not test the class interface.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement checked live on 2026-09-22. No online submission is claimed.
 
 ## Interview checklist
 

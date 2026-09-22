@@ -128,3 +128,51 @@ its reference is for comparison after the cold attempt.
 | RFC 9293 | Transmission Control Protocol (TCP) | 2022 | https://www.rfc-editor.org/rfc/rfc9293.html | 2026-09-22 | Day 8 connection establishment | sd_request-journey/CONCEPTS.md and REFERENCE_DESIGN.md |
 | RFC 8446 | The Transport Layer Security (TLS) Protocol Version 1.3 | 2018 | https://www.rfc-editor.org/rfc/rfc8446.html | 2026-09-22 | Day 8 secure handshake | sd_request-journey/CONCEPTS.md and REFERENCE_DESIGN.md |
 | RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-22 | Days 6 and 8 redirect boundaries | sd_single-node-baseline/REFERENCE_DESIGN.md and sd_request-journey teaching |
+
+## Days 9–12 teaching expansion — 2026-09-22
+
+Opened the following official records live for the four-day expansion. Executed all twelve
+new Python teaching blocks on Python 3.12.10 and inserted their actual output, including the
+deliberate failures and repaired checks. SD workloads, limits, timelines, API policies, and
+failure walkthroughs are hypothetical. The local models are not HTTP integration tests,
+database crash tests, load measurements, or cancellation tests. No learner solution, lab,
+personal evidence, or completion ledger was changed. No online acceptance is claimed.
+
+| Identifier | Exact title | Year | URL | Record checked | Taught on | Cited by |
+| --- | --- | --- | --- | --- | --- | --- |
+| spec:leetcode-347 | Top K Frequent Elements | rolling | https://leetcode.com/problems/top-k-frequent-elements/ | 2026-09-22 | Day 9 top-k contract and follow-up | dsa_frequency-ranking/CONCEPTS.md and LEETCODE.md |
+| spec:leetcode-1 | Two Sum | rolling | https://leetcode.com/problems/two-sum/ | 2026-09-22 | Day 10 unique online solution versus local ordering | dsa_pair-sum-indices/CONCEPTS.md and LEETCODE.md |
+| spec:leetcode-49 | Group Anagrams | rolling | https://leetcode.com/problems/group-anagrams/ | 2026-09-22 | Day 11 alphabet and output ordering | dsa_group-anagrams/CONCEPTS.md and LEETCODE.md |
+| spec:leetcode-303 | Range Sum Query - Immutable | rolling | https://leetcode.com/problems/range-sum-query-immutable/ | 2026-09-22 | Day 12 constructor and inclusive query interface | dsa_range-sums/CONCEPTS.md and LEETCODE.md |
+| spec:python-3.12-programming-faq | Programming FAQ | rolling, version 3.12 | https://docs.python.org/3.12/faq/programming.html#why-do-lambdas-defined-in-a-loop-with-different-values-all-return-the-same-result | 2026-09-22 | Day 9 delayed callback lookup | lang_closure-binding/CONCEPTS.md |
+| spec:python-3.12-simple-statements | 7. Simple statements | rolling, version 3.12 | https://docs.python.org/3.12/reference/simple_stmts.html#the-nonlocal-statement | 2026-09-22 | Day 10 nonlocal binding | lang_nonlocal-state/CONCEPTS.md |
+| spec:python-3.12-functools | functools — Higher-order functions and operations on callable objects | rolling, version 3.12 | https://docs.python.org/3.12/library/functools.html#functools.wraps | 2026-09-22 | Day 11 wraps; reused Day 12 | lang_decorator-metadata/CONCEPTS.md |
+| spec:python-3.12-inspect | inspect — Inspect live objects | rolling, version 3.12 | https://docs.python.org/3.12/library/inspect.html#inspect.signature | 2026-09-22 | Day 11 signature inspection | lang_decorator-metadata/CONCEPTS.md |
+| spec:python-3.12-compound-statements | 8. Compound statements | rolling, version 3.12 | https://docs.python.org/3.12/reference/compound_stmts.html#function-definitions | 2026-09-22 | Day 12 decorator application | lang_decorator-arguments/CONCEPTS.md |
+| RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-22 | Days 9–10 method and effect semantics | sd_http-methods and sd_idempotency-semantics teaching |
+| RFC 9111 | HTTP Caching | 2022 | https://www.rfc-editor.org/rfc/rfc9111.html | 2026-09-22 | Day 9 explicit cache directives | sd_http-methods/CONCEPTS.md and REFERENCE_DESIGN.md |
+| spec:postgresql-16-connections | 20.3. Connections and Authentication | rolling, version 16 | https://www.postgresql.org/docs/16/runtime-config-connection.html | 2026-09-22 | Day 11 connection limits and reserved slots | sd_connection-budgets/CONCEPTS.md and REFERENCE_DESIGN.md |
+| spec:grpc-deadlines | Deadlines | rolling | https://grpc.io/docs/guides/deadlines/ | 2026-09-22 | Day 12 remaining-time propagation | sd_timeout-propagation/CONCEPTS.md and REFERENCE_DESIGN.md |
+| spec:grpc-cancellation | Cancellation | rolling | https://grpc.io/docs/guides/cancellation/ | 2026-09-22 | Day 12 cooperative handler cancellation | sd_timeout-propagation/CONCEPTS.md and REFERENCE_DESIGN.md |
+
+
+## Days 13–16 teaching checks — 2026-09-22
+
+Public pages below were opened on this date. Examples in CONCEPTS.md were executed locally;
+SQL, HTTP exchanges, and service timelines in references are explicitly design sketches.
+
+| Identifier | Title | Version/year | URL | Checked | Used for |
+| --- | --- | --- | --- | --- | --- |
+| spec:leetcode-560 | Subarray Sum Equals K | live problem | https://leetcode.com/problems/subarray-sum-equals-k/ | 2026-09-22 | Day 13 nonempty signed subarray count |
+| spec:leetcode-217 | Contains Duplicate | live problem | https://leetcode.com/problems/contains-duplicate/ | 2026-09-22 | Day 14 boolean versus first-repeat contract |
+| spec:leetcode-303 | Range Sum Query - Immutable | live problem | https://leetcode.com/problems/range-sum-query-immutable/ | 2026-09-22 | Day 14 inclusive queries and NumArray interface |
+| spec:leetcode-167 | Two Sum II - Input Array Is Sorted | live problem | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ | 2026-09-22 | Day 15 one-based indices and unique solution |
+| spec:leetcode-15 | 3Sum | live problem | https://leetcode.com/problems/3sum/ | 2026-09-22 | Day 16 distinct indices, unique triples, arbitrary order |
+| spec:python-312-partial | functools — Higher-order functions and operations on callable objects | 3.12 | https://docs.python.org/3.12/library/functools.html#functools.partial | 2026-09-22 | Day 13 argument storage and keyword override |
+| spec:python-312-faq-closures | Programming FAQ | 3.12 | https://docs.python.org/3.12/faq/programming.html#why-do-lambdas-defined-in-a-loop-with-different-values-all-return-the-same-result | 2026-09-22 | Day 14 closure lookup versus default capture |
+| spec:python-312-iterators | Built-in Types — Iterator Types | 3.12 | https://docs.python.org/3.12/library/stdtypes.html#iterator-types | 2026-09-22 | Day 15 permanent exhaustion |
+| spec:python-312-yield | Expressions — Yield expressions | 3.12 | https://docs.python.org/3.12/reference/expressions.html#yield-expressions | 2026-09-22 | Day 16 suspended body and resumption |
+| spec:postgresql-18-limit | 7.6. LIMIT and OFFSET | 18 | https://www.postgresql.org/docs/18/queries-limit.html | 2026-09-22 | Days 13–14 ordered pagination and skipped-row work |
+| spec:postgresql-18-constraints | 5.5. Constraints | 18 | https://www.postgresql.org/docs/18/ddl-constraints.html | 2026-09-22 | Day 15 primary, unique and foreign keys |
+| RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-22 | Day 16 methods and response status semantics |
+| RFC 3339 | Date and Time on the Internet: Timestamps | 2002 | https://www.rfc-editor.org/rfc/rfc3339.html | 2026-09-22 | Day 16 explicit timezone offset and timestamp subset |

@@ -24,13 +24,21 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 | [006](day-006-best-single-trade/LESSON.md) | Best single trade | Single-node baseline | Mutation contracts |
 | [007](day-007-week-1-review/LESSON.md) | Week 1 DSA review | Week 1 design review | Week 1 Python review |
 | [008](day-008-first-repeated-value/LESSON.md) | First repeated value | Request journey | Argument binding |
+| [009](day-009-frequency-ranking/LESSON.md) | Frequency ranking | HTTP methods | Closure binding |
+| [010](day-010-pair-sum-indices/LESSON.md) | Pair sum indices | Idempotency semantics | Nonlocal state |
+| [011](day-011-group-anagrams/LESSON.md) | Group anagrams | Connection budgets | Decorator metadata |
+| [012](day-012-range-sums/LESSON.md) | Range sums | Timeout propagation | Decorator arguments |
+| [013](day-013-count-target-subarrays/LESSON.md) | Count target subarrays | Pagination | Partial application |
+| [014](day-014-week-2-review/LESSON.md) | Week 2 DSA review | Week 2 design review | Week 2 Python review |
+| [015](day-015-sorted-pair-existence/LESSON.md) | Sorted pair existence | Domain model | Iterator protocol |
+| [016](day-016-unique-triples/LESSON.md) | Unique triples | API contract | Generator laziness |
 
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
-three tracks. Day 7 starts with cold attempts, then repair reading. Days 9–168 still contain
+three tracks. Days 7 and 14 start with cold attempts, then repair reading. Days 17–168 still contain
 assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
 
-Days 1–8 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+Days 1–16 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
 you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
-to read a finished design without filling a TODO. Day 7's reference is for comparison after
+to read a finished design without filling a TODO. References for Days 7 and 14 are for comparison after
 the cold attempt. Future expanded SD days use the same format.

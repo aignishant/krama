@@ -1,5 +1,10 @@
 # Practice — Range sums
 
+Start with [the concepts](CONCEPTS.md), [worked trace](CONCEPTS.md#worked-trace), and
+[readiness check](CONCEPTS.md#readiness-before-practice). General techniques are taught there;
+choose one main practice route within the existing 60-minute budget.
+
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

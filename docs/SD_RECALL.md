@@ -20,6 +20,14 @@ is the first available card; future taught days will extend this file in day ord
 | 006 | Single-node baseline | [Recall card](#day-006-single-node-baseline) |
 | 007 | Week 1 design review | [Recall card](#day-007-week-1-design-review) |
 | 008 | Request journey | [Recall card](#day-008-request-journey) |
+| 009 | HTTP methods | [Recall card](#day-009-http-methods) |
+| 010 | Idempotency semantics | [Recall card](#day-010-idempotency-semantics) |
+| 011 | Connection budgets | [Recall card](#day-011-connection-budgets) |
+| 012 | Timeout propagation | [Recall card](#day-012-timeout-propagation) |
+| 013 | Pagination | [Recall card](#day-013-pagination) |
+| 014 | Week 2 design review | [Recall card](#day-014-week-2-design-review) |
+| 015 | Domain model | [Recall card](#day-015-domain-model) |
+| 016 | API contract | [Recall card](#day-016-api-contract) |
 
 ## Day 001: Functional scope
 
@@ -212,6 +220,103 @@ another origin may need another connection. HTTP/3 requires a different transpor
 [Full lesson](../days/day-008-first-repeated-value/sd_request-journey/CONCEPTS.md) ·
 [Complete reference](../days/day-008-first-repeated-value/sd_request-journey/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-008-first-repeated-value/sd_request-journey/DESIGN.md)
+
+## Day 009: HTTP methods
+
+**Cue and mechanism:** Choose methods from intended effects, then specify response fields and cache policy. Create via POST; look up a short URL via GET and redirect through Location.
+
+**Why it works and cost:** Separate resource creation from navigation. Editable destinations can use an explicit no-store policy for immediate lookup freshness, at the cost of more origin reads.
+
+**Memory anchor and trap:** POST /links returns 201 with resource Location; GET /q7 returns 302 with destination Location. A cached old redirect can survive a destination edit. no-cache permits storage with validation; no-store forbids storage.
+
+[Full lesson](../days/day-009-frequency-ranking/sd_http-methods/CONCEPTS.md) ·
+[Complete reference](../days/day-009-frequency-ranking/sd_http-methods/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-009-frequency-ranking/sd_http-methods/DESIGN.md)
+
+## Day 010: Idempotency semantics
+
+**Cue and mechanism:** An uncertain create needs a stable client operation key scoped by owner and operation. Match the normalized payload before replaying a saved result.
+
+**Why it works and cost:** A unique key plus one transaction for effect and result prevents duplicate local commits during retention. Durable storage and cleanup cost roughly rate times retention records.
+
+**Memory anchor and trap:** One original attempt plus two matching retries returns q7 each time. Changed payload with the same key is a conflict. Expiry removes the duplicate barrier; remote effects need a separate atomicity/reconciliation design.
+
+[Full lesson](../days/day-010-pair-sum-indices/sd_idempotency-semantics/CONCEPTS.md) ·
+[Complete reference](../days/day-010-pair-sum-indices/sd_idempotency-semantics/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-010-pair-sum-indices/sd_idempotency-semantics/DESIGN.md)
+
+## Day 011: Connection budgets
+
+**Cue and mechanism:** Count request concurrency, then map it to each resource using explicit assumptions. Bound incoming, HTTP, DB, and cache pools separately across the maximum fleet.
+
+**Why it works and cost:** Per-process limits multiply with process count and rollout overlap. Bounded waiting limits memory and latency at the cost of rejected work.
+
+**Memory anchor and trap:** 200 requests x 20 workers = 4,000 in flight, not automatically 4,000 DB sessions. A 400-connection allocation permits 16 per worker at a 25-worker rollout ceiling. Overflow or extra replicas can violate it.
+
+[Full lesson](../days/day-011-group-anagrams/sd_connection-budgets/CONCEPTS.md) ·
+[Complete reference](../days/day-011-group-anagrams/sd_connection-budgets/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-011-group-anagrams/sd_connection-budgets/DESIGN.md)
+
+## Day 012: Timeout propagation
+
+**Cue and mechanism:** Carry remaining request lifetime downstream, subtract response reserve, and apply a smaller local cap. Cancel child work when its result is no longer useful.
+
+**Why it works and cost:** Nested deadlines constrain useful work despite elapsed queue and connection wait. Cancellation requires cooperation and may lag; it cannot reverse a committed effect.
+
+**Memory anchor and trap:** At t=380 with deadline 500 and reserve 40, only 80 ms remain for a child. A fresh 350 ms timeout would finish at 730. Cross-host propagation must not use raw local monotonic timestamps.
+
+[Full lesson](../days/day-012-range-sums/sd_timeout-propagation/CONCEPTS.md) ·
+[Complete reference](../days/day-012-range-sums/sd_timeout-propagation/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-012-range-sums/sd_timeout-propagation/DESIGN.md)
+
+## Day 013: Pagination
+
+**Cue and mechanism:** Use a cursor for sequential navigation through a changing list.
+
+**Why it works and cost:** Continue strictly after the last returned key in the declared order. A unique tie-breaker avoids ambiguity; immutable keys prevent repeats of returned rows.
+
+**Memory anchor and trap:** Descending (time,ID) uses <. Insertions shift offsets but not the saved key. Live keyset traversal is not a snapshot.
+
+[Full lesson](../days/day-013-count-target-subarrays/sd_pagination/CONCEPTS.md) ·
+[Complete reference](../days/day-013-count-target-subarrays/sd_pagination/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-013-count-target-subarrays/sd_pagination/DESIGN.md)
+
+## Day 014: Week 2 design review
+
+**Cue and mechanism:** Review one decision against one concrete violated requirement.
+
+**Why it works and cost:** Trace old behavior, revise the smallest decision, and defend an alternative. Each repair adds a cost or narrows a guarantee.
+
+**Memory anchor and trap:** Offset page two repeats a row after a newer insertion. A cursor repairs continuation but sacrifices numbered-page jumps. Compare after cold recall.
+
+[Full lesson](../days/day-014-week-2-review/sd_week-2-design-review/CONCEPTS.md) ·
+[Complete reference](../days/day-014-week-2-review/sd_week-2-design-review/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-014-week-2-review/sd_week-2-design-review/DESIGN.md)
+
+## Day 015: Domain model
+
+**Cue and mechanism:** Model identity, relationships, and lifecycle before choosing storage boundaries.
+
+**Why it works and cost:** Owner has many links; link has many click events. Separate keys preserve independent occurrences; event storage grows with click count.
+
+**Memory anchor and trap:** Same destination does not mean same link. Same event delivered twice keeps its ID; two actual clicks get different IDs.
+
+[Full lesson](../days/day-015-sorted-pair-existence/sd_domain-model/CONCEPTS.md) ·
+[Complete reference](../days/day-015-sorted-pair-existence/sd_domain-model/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-015-sorted-pair-existence/sd_domain-model/DESIGN.md)
+
+## Day 016: API contract
+
+**Cue and mechanism:** Define creation input, committed success, validation errors, and uncertain outcomes as one API contract.
+
+**Why it works and cost:** Consistent time boundaries and owner-scoped atomic replay records make callers able to reason about expiry and retries, at a storage/retention cost.
+
+**Memory anchor and trap:** Creation requires expiry > now; redirect expiry uses now >= expiry. A timeout cannot prove that a committed link does not exist.
+
+[Full lesson](../days/day-016-unique-triples/sd_api-contract/CONCEPTS.md) ·
+[Complete reference](../days/day-016-unique-triples/sd_api-contract/REFERENCE_DESIGN.md) ·
+[Your memo](../days/day-016-unique-triples/sd_api-contract/DESIGN.md)
+
 
 ---
 

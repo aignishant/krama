@@ -43,3 +43,32 @@ introduced it instead of redefining it.
 | Latency budget | An allocation of an end-to-end time target among request-path components. | [Day 5 SD](../days/day-005-merge-sorted-arrays/sd_latency-budgets/CONCEPTS.md) | Time allocation |
 | Critical path | The dependency path that determines when a response can finish. | [Day 5 SD](../days/day-005-merge-sorted-arrays/sd_latency-budgets/CONCEPTS.md) | Completion path |
 | Sentinel | A distinguished object representing a state such as an omitted value. | [Day 5 Python](../days/day-005-merge-sorted-arrays/lang_truth-and-sentinels/CONCEPTS.md) | Absence marker |
+| Frequency bucket | A collection of values sharing one occurrence count. | [Day 9 DSA](../days/day-009-frequency-ranking/dsa_frequency-ranking/CONCEPTS.md) | Count bucket |
+| Closure | A function retaining access to bindings from an enclosing function scope. | [Day 9 Python](../days/day-009-frequency-ranking/lang_closure-binding/CONCEPTS.md) | Enclosing state |
+| Free variable | A name used inside a function but bound outside its local scope. | [Day 9 Python](../days/day-009-frequency-ranking/lang_closure-binding/CONCEPTS.md) | Nonlocal reference |
+| Safe method | An HTTP method whose requested semantics do not ask for a state change. | [Day 9 SD](../days/day-009-frequency-ranking/sd_http-methods/CONCEPTS.md) | Read semantics |
+| Idempotency | Repetition having the same intended effect as one operation. | [Day 9 SD](../days/day-009-frequency-ranking/sd_http-methods/CONCEPTS.md) | Repeat-effect semantics |
+| Complement | The other value required to satisfy a target equation. | [Day 10 DSA](../days/day-010-pair-sum-indices/dsa_pair-sum-indices/CONCEPTS.md) | Needed partner |
+| Lexicographic order | Compare the first unequal corresponding components; an equal proper prefix sorts first. | [Day 10 DSA](../days/day-010-pair-sum-indices/dsa_pair-sum-indices/CONCEPTS.md) | Dictionary order |
+| Nonlocal rebinding | Assigning an existing binding in the nearest applicable enclosing function scope. | [Day 10 Python](../days/day-010-pair-sum-indices/lang_nonlocal-state/CONCEPTS.md) | nonlocal |
+| Replay record | Stored operation identity, request, and result used to answer matching retries. | [Day 10 SD](../days/day-010-pair-sum-indices/sd_idempotency-semantics/CONCEPTS.md) | Deduplication record |
+| Canonical key | A common representation equal exactly for items considered equivalent. | [Day 11 DSA](../days/day-011-group-anagrams/dsa_group-anagrams/CONCEPTS.md) | Canonical representation |
+| Decorator | A callable that receives a function and returns its replacement at definition time. | [Day 11 Python](../days/day-011-group-anagrams/lang_decorator-metadata/CONCEPTS.md) | Function decorator |
+| Connection pool | A bounded collection of reusable connections with a checkout policy. | [Day 11 SD](../days/day-011-group-anagrams/sd_connection-budgets/CONCEPTS.md) | Resource pool |
+| Prefix sum | A total over an initial segment, with its boundary convention stated explicitly. | [Day 12 DSA](../days/day-012-range-sums/dsa_range-sums/CONCEPTS.md) | Cumulative sum |
+| Decorator factory | A callable accepting configuration and returning a decorator. | [Day 12 Python](../days/day-012-range-sums/lang_decorator-arguments/CONCEPTS.md) | Configurable decorator |
+| Deadline | The point after which an operation's result is no longer timely. | [Day 12 SD](../days/day-012-range-sums/sd_timeout-propagation/CONCEPTS.md) | Request expiry |
+| Cancellation | A cooperative signal to stop work whose result is no longer wanted. | [Day 12 SD](../days/day-012-range-sums/sd_timeout-propagation/CONCEPTS.md) | Stop request |
+
+## Days 13–16 additions
+
+| Term | Meaning | Introduction | Related phrase |
+| --- | --- | --- | --- |
+| Prefix frequency | The number of earlier prefix boundaries with a given cumulative total. | [Day 13 dsa](../days/day-013-count-target-subarrays/dsa_count-target-subarrays/CONCEPTS.md) | Multiplicity of boundaries |
+| Partial application | A callable specialized by storing some arguments for later invocation. | [Day 13 lang](../days/day-013-count-target-subarrays/lang_partial-application/CONCEPTS.md) | functools.partial |
+| Cursor pagination | Continuing a listing from an ordered boundary rather than a row offset. | [Day 13 sd](../days/day-013-count-target-subarrays/sd_pagination/CONCEPTS.md) | Keyset continuation |
+| Two-pointer elimination | Discarding an endpoint after proving it cannot participate in a remaining answer. | [Day 15 dsa](../days/day-015-sorted-pair-existence/dsa_sorted-pair-existence/CONCEPTS.md) | Sorted pair scan |
+| Iterator | A traversal object returning itself from iter and producing values until permanent exhaustion. | [Day 15 lang](../days/day-015-sorted-pair-existence/lang_iterator-protocol/CONCEPTS.md) | Consumable cursor |
+| Entity identity | A stable key distinguishing one domain object from another despite equal or changed attributes. | [Day 15 sd](../days/day-015-sorted-pair-existence/sd_domain-model/CONCEPTS.md) | Domain key |
+| Generator suspension | Preserving a generator frame at yield until the next advancement. | [Day 16 lang](../days/day-016-unique-triples/lang_generator-laziness/CONCEPTS.md) | Lazy resumption |
+| API contract | The declared accepted inputs, observable outcomes, errors, and semantics of an interface. | [Day 16 sd](../days/day-016-unique-triples/sd_api-contract/CONCEPTS.md) | Request/response agreement |

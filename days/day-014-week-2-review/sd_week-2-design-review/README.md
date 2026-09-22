@@ -3,12 +3,12 @@
 ## Navigation — where to start
 
 1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
-3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
+2. **Repair after the cold attempt:** read [the review explanation](CONCEPTS.md), [worked trace](CONCEPTS.md#worked-trace), and [readiness questions](CONCEPTS.md#readiness-before-practice).
+3. **Read the assignment:** use [the bounded design task](#assignment) for the cold attempt; compare explanations afterward.
 4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
 5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
 6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
-7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+7. **Recall later without practice:** read [this day's card](../../../docs/SD_RECALL.md#day-014-week-2-design-review) for a previously studied topic; reading is not completion.
 
 Original reading, after cold recall: [Day 8](../../day-008-first-repeated-value/sd_request-journey/README.md) · [Day 9](../../day-009-frequency-ranking/sd_http-methods/README.md) · [Day 10](../../day-010-pair-sum-indices/sd_idempotency-semantics/README.md) · [Day 11](../../day-011-group-anagrams/sd_connection-budgets/README.md) · [Day 12](../../day-012-range-sums/sd_timeout-propagation/README.md) · [Day 13](../../day-013-count-target-subarrays/sd_pagination/README.md).
 
@@ -21,11 +21,20 @@ Original reading, after cold recall: [Day 8](../../day-008-first-repeated-value/
 
 Revisit days 8–13. Choose your weakest design decision, revise its diagram or memo, then defend one alternative and walk through one failure.
 
+## Complete reference and personal practice
+
+The assistant wrote [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md). Compare this only after the cold attempt.
+[DESIGN.md](DESIGN.md) and its TODOs belong to you. Reference reading uses the
+existing concept/critique windows and does not complete the assessment.
+
 ## Work method
 
 Produce one bounded artifact: a small diagram, a calculation with units, a state table or a short decision memo. Label assumptions before reasoning from them. Trace one concrete request or failure through the result. Compare at least one alternative and state why your choice fits the requirements.
 
 ## References
+
+Start with [the exact topic sources](CONCEPTS.md#the-source-behind-it), checked
+2026-09-22. The broad references below are optional background.
 
 Read the [track method](../../../docs/SD_DESIGN_GUIDE.md) when starting this track.
 

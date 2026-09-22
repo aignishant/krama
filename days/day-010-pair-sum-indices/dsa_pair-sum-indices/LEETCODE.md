@@ -1,5 +1,10 @@
 # Day 010 — LeetCode interview practice
 
+Start with [the concepts](CONCEPTS.md), [worked trace](CONCEPTS.md#worked-trace), and
+[readiness check](CONCEPTS.md#readiness-before-practice). General techniques are taught there;
+choose one main practice route within the existing 60-minute budget.
+
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +16,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 10.
 
-**Contract comparison:** Online guarantees one solution and permits either answer order. Local practice allows no/multiple solutions and requires the lexicographically smallest [i,j].
+**Contract comparison:** Online guarantees exactly one solution with distinct indices and permits either answer order. Local allows no or multiple solutions, returns [] if absent, and requires the lexicographically smallest [i,j] with i < j. An early first match is insufficient locally.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement checked live on 2026-09-22. No online submission is claimed.
 
 ## Interview checklist
 

@@ -2,13 +2,13 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md). This is a shared preparation guide; the full explanation of **Count target subarrays** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
+1. **Learn:** read [the topic explanation](CONCEPTS.md) for the mechanism and its reasoning.
+2. **Trace and check readiness:** follow [the worked trace](CONCEPTS.md#worked-trace), then answer [the readiness questions](CONCEPTS.md#readiness-before-practice).
 3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
 4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
 5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
 6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
-7. **Recall later without practice:** read the [DSA summary file](../../../docs/DSA_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
+7. **Recall later without practice:** read [this day's card](../../../docs/DSA_RECALL.md#day-013-count-target-subarrays) for a previously studied topic; reading is not completion.
 
 [Back to the day hub](../LESSON.md) · [Independent study and progress](../../../docs/STUDY_WORKFLOW.md)
 
@@ -32,7 +32,7 @@ Recall one candidate, not all of them: [day 12](../../day-012-range-sums/dsa_ran
 | Step | Minutes | Work |
 | --- | --- | --- |
 | Recall | 5 | Explain a previous invariant without notes. |
-| Understand | 10 | Read the contract; trace a small example; choose a baseline. |
+| Understand | 10 | Read concepts, trace the mechanism, check readiness, then read the contract. |
 | Solve | 30 | Implement the core problem in solution.py without reading hints first. |
 | Verify | 10 | Run tests, add boundary cases, explain time and space. |
 | Record | 5 | Write the mistake, evidence and next review. |
@@ -47,7 +47,7 @@ This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain
 
-Read [week 2 in the DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) for this week's mechanism before the first attempt.
+Read [the topic explanation](CONCEPTS.md) and explain its invariant before practice.
 
 Before optimizing, write what a straightforward correct algorithm would enumerate or maintain.
 On the sample, record the changing state after each meaningful step. Identify what remains true

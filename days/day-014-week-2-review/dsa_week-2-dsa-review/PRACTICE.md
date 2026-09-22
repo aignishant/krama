@@ -1,9 +1,11 @@
 # Practice — Cold re-solve: Range sums
 
+Begin cold; read [the review explanation](CONCEPTS.md) after the attempts or record help used.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
+complete the two scheduled cold re-solves, choosing local or online format for each. The local contract
 remains the specification for solution.py and cases.json. For an online-only attempt, record
 submission evidence, compare the contracts, and use the interview checklist for completion.
 The local implementation steps below apply when you choose the local route.

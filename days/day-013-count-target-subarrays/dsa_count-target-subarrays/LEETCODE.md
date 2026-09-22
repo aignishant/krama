@@ -1,5 +1,7 @@
 # Day 013 — LeetCode interview practice
 
+First learn [the mechanism](CONCEPTS.md), trace its example, and check readiness.
+
 Use this inside the existing **60-minute DSA budget**. Choose the online problem or
 the local exercise as the main attempt; use its companion as a variation or review.
 
@@ -11,9 +13,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 13.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Online and local both count nonempty contiguous intervals with sum k; negative values are allowed. Local solve(data) reads nums and k and returns the integer count.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official public statement checked on 2026-09-22.
 
 ## Interview checklist
 
