@@ -3,8 +3,8 @@
 ## Navigation — where to start
 
 1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
-3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+2. **Repair after the cold attempt:** read [the review lesson](CONCEPTS.md), its [worked trace](CONCEPTS.md#worked-trace), and [readiness checks](CONCEPTS.md#readiness-before-practice). Record help used.
+3. **Attempt two cold re-solves:** use [the review contract](PRACTICE.md#weekly-assessment) or [the online companions](LEETCODE.md) for Day 29 and Day 33. A harder unresolved problem may replace the second slot.
 4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
 5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
 6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
@@ -17,7 +17,7 @@ Original reading, after cold recall: [Day 29](../../day-029-stable-record-sortin
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
+use the two scheduled cold re-solves below; do not add a new problem quota. The local contract
 remains the specification for solution.py and cases.json. For an online-only attempt, record
 submission evidence, compare the contracts, and use the interview checklist for completion.
 The local implementation steps below apply when you choose the local route.
@@ -33,23 +33,23 @@ Recall one candidate, not all of them: [day 34](../../day-034-count-inversions/d
 
 | Step | Minutes | Work |
 | --- | --- | --- |
-| Recall | 5 | Explain a previous invariant without notes. |
-| Understand | 10 | Read the contract; trace a small example; choose a baseline. |
-| Solve | 30 | Implement the core problem in solution.py without reading hints first. |
-| Verify | 10 | Run tests, add boundary cases, explain time and space. |
-| Record | 5 | Write the mistake, evidence and next review. |
+| Recall | 5 | Recall the mechanisms without notes. |
+| First re-solve | 20 | Day 29 stable sorting from blank code. |
+| Second re-solve | 20 | Day 33 selection, or one harder unresolved problem. |
+| Critique | 10 | Test both attempts, explain invariants and costs, then repair. |
+| Record | 5 | Score evidence and log help and remaining gaps. |
 
 ## Core assignment
 
 **Cold re-solve: Kth smallest.** Return kth smallest value, counting duplicates; k is one-based and valid. Implement partition-based selection.
 
-After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+Start cold with [PRACTICE.md](PRACTICE.md); open explanations afterwards. General mechanisms belong in
 the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: Expected O(n), worst O(n^2); explain pivot choice.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain
 
-Read [week 5 in the DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) for this week's mechanism before the first attempt.
+Read [the topic lesson](CONCEPTS.md) after the cold attempts for repair.
 
 Before optimizing, write what a straightforward correct algorithm would enumerate or maintain.
 On the sample, record the changing state after each meaningful step. Identify what remains true
@@ -64,6 +64,8 @@ contracts and staged hints; use a review session for deeper derivations.
 
 ## Done when
 
+- [ ] I attempted both scheduled cold re-solves and verified them separately; the Day 35 fixture checks only selection.
+- [ ] I scored correctness/explanation/complexity/tests 0–2 each, reaching 6/8 with correctness=2 and at least one hint-free solve, or recorded partial/needs-review.
 - [ ] I can restate the contract, including ties, empty input and mutation rules.
 - [ ] My chosen route meets its contract: local tests plus self-authored cases, or online submission evidence plus a local-contract comparison.
 - [ ] I can justify correctness and the time/space bound.

@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 36.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Online receives a ListNode head and returns the reversed head. Local receives values, requires building real nodes and reversing links, then returns serialized values. Reversing only the input array does not meet the local contract.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official statement checked on 2026-09-23; this companion is publicly readable.
 
 ## Interview checklist
 
@@ -26,3 +26,5 @@ Official page checked on 2026-09-18; premium statements were not accessible.
 
 The local `solve(data)` adapter and fixtures do not use the online judge signature.
 A local green test is not an online acceptance. Adapt to the official interface when submitting.
+
+[Teaching route](CONCEPTS.md) — includes the mechanism needed for the chosen contract.

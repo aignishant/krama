@@ -40,6 +40,14 @@ the first available card; future taught days will extend this file in day order.
 | 026 | Callable instances | [Recall card](#day-026-callable-instances) |
 | 027 | Context managers | [Recall card](#day-027-context-managers) |
 | 028 | Week 4 Python review | [Recall card](#day-028-week-4-python-review) |
+| 029 | Attribute lookup | [Recall card](#day-029-attribute-lookup) |
+| 030 | Properties | [Recall card](#day-030-properties) |
+| 031 | Descriptors | [Recall card](#day-031-descriptors) |
+| 032 | Method binding | [Recall card](#day-032-method-binding) |
+| 033 | Inheritance and super | [Recall card](#day-033-inheritance-and-super) |
+| 034 | Slots | [Recall card](#day-034-slots) |
+| 035 | Week 5 Python review | [Recall card](#day-035-week-5-python-review) |
+| 036 | Dataclass defaults | [Recall card](#day-036-dataclass-defaults) |
 
 ## Day 001: Identity, equality, and aliasing
 
@@ -429,6 +437,86 @@ binding work; large unpacked collections have separate costs. Error wording can 
 **Memory anchor and trap:** values[slice(*slice(None,None,-1).indices(n))] reinterprets a normalized negative stop; use range positions.
 
 [Full lesson](../days/day-028-week-4-review/lang_week-4-python-review/CONCEPTS.md) · [Your notes](../days/day-028-week-4-review/lang_week-4-python-review/NOTES.md)
+
+## Day 029: Attribute lookup
+
+**Cue and mechanism:** Attribute surprises: distinguish lookup, assignment, and mutation.
+
+**Why it works and cost:** Ordinary instance values shadow class values; class mutables remain shared until shadowed.
+
+**Memory anchor and trap:** a.queue.append(x) shares; a.queue=[] shadows; data descriptors are the precedence exception.
+
+[Full lesson](../days/day-029-stable-record-sorting/lang_attribute-lookup/CONCEPTS.md) · [Your evidence](../days/day-029-stable-record-sorting/lang_attribute-lookup/NOTES.md)
+
+## Day 030: Properties
+
+**Cue and mechanism:** Use a property to validate while retaining obj.field syntax.
+
+**Why it works and cost:** Validate before changing backing state; property dispatch outranks a same-name instance entry.
+
+**Memory anchor and trap:** Store _retries, not retries, inside its setter; rejected writes preserve the old value.
+
+[Full lesson](../days/day-030-merge-overlapping-intervals/lang_properties/CONCEPTS.md) · [Your evidence](../days/day-030-merge-overlapping-intervals/lang_properties/NOTES.md)
+
+## Day 031: Descriptors
+
+**Cue and mechanism:** Repeated managed-field rules fit a descriptor installed on the class.
+
+**Why it works and cost:** Data descriptors outrank instance entries; store values on each owner, not the shared descriptor.
+
+**Memory anchor and trap:** __set_name__ selects _level; __get__(None, Owner) can return the descriptor itself.
+
+[Full lesson](../days/day-031-insert-an-interval/lang_descriptors/CONCEPTS.md) · [Your evidence](../days/day-031-insert-an-interval/lang_descriptors/NOTES.md)
+
+## Day 032: Method binding
+
+**Cue and mechanism:** A saved instance method carries its receiver along with the function.
+
+**Why it works and cost:** Ordinary methods bind instances, classmethods bind classes, staticmethods bind neither.
+
+**Memory anchor and trap:** bound() corresponds to bound.__func__(bound.__self__); callbacks can retain receivers.
+
+[Full lesson](../days/day-032-minimum-meeting-rooms/lang_method-binding/CONCEPTS.md) · [Your evidence](../days/day-032-minimum-meeting-rooms/lang_method-binding/NOTES.md)
+
+## Day 033: Inheritance and super
+
+**Cue and mechanism:** Use cooperative super when multiple classes participate in one protocol.
+
+**Why it works and cost:** The actual instance MRO chooses the next implementation; each participant delegates once.
+
+**Memory anchor and trap:** D,B,C,A means B delegates to C, not necessarily its direct parent A.
+
+[Full lesson](../days/day-033-kth-smallest/lang_inheritance-and-super/CONCEPTS.md) · [Your evidence](../days/day-033-kth-smallest/lang_inheritance-and-super/NOTES.md)
+
+## Day 034: Slots
+
+**Cue and mechanism:** Many fixed-shape instances may benefit from slots; measure first.
+
+**Why it works and cost:** Slots can omit dictionaries but inheritance can reintroduce them; payloads still consume memory.
+
+**Memory anchor and trap:** getsizeof(instance) omits its separate dictionary; slots restrict fields, not mutation.
+
+[Full lesson](../days/day-034-count-inversions/lang_slots/CONCEPTS.md) · [Your evidence](../days/day-034-count-inversions/lang_slots/NOTES.md)
+
+## Day 035: Week 5 Python review
+
+**Cue and mechanism:** Cold-review one object-model surprise with a regression that distinguishes its cause.
+
+**Why it works and cost:** Predict, reproduce, repair, and explain within 15 minutes; keep original evidence.
+
+**Memory anchor and trap:** Two instances expose a shared class list that one-instance value tests miss.
+
+[Full lesson](../days/day-035-week-5-review/lang_week-5-python-review/CONCEPTS.md) · [Your evidence](../days/day-035-week-5-review/lang_week-5-python-review/NOTES.md)
+
+## Day 036: Dataclass defaults
+
+**Cue and mechanism:** Mutable dataclass fields need a zero-argument factory producing fresh state.
+
+**Why it works and cost:** The factory runs for an omitted field; explicit values keep their supplied ownership.
+
+**Memory anchor and trap:** field(default_factory=list) isolates instances; lambda: shared still aliases.
+
+[Full lesson](../days/day-036-reverse-a-linked-list/lang_dataclass-defaults/CONCEPTS.md) · [Your evidence](../days/day-036-reverse-a-linked-list/lang_dataclass-defaults/NOTES.md)
 
 
 ---

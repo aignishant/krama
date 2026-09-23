@@ -41,6 +41,14 @@ are taught; this is not a summary of all 168 planned days.
 | 026 | Minimum shipping capacity | [Recall card](#day-026-minimum-shipping-capacity) |
 | 027 | Median of two arrays | [Recall card](#day-027-median-of-two-arrays) |
 | 028 | Week 4 DSA review | [Recall card](#day-028-week-4-dsa-review) |
+| 029 | Stable record sorting | [Recall card](#day-029-stable-record-sorting) |
+| 030 | Merge overlapping intervals | [Recall card](#day-030-merge-overlapping-intervals) |
+| 031 | Insert an interval | [Recall card](#day-031-insert-an-interval) |
+| 032 | Minimum meeting rooms | [Recall card](#day-032-minimum-meeting-rooms) |
+| 033 | Kth smallest | [Recall card](#day-033-kth-smallest) |
+| 034 | Count inversions | [Recall card](#day-034-count-inversions) |
+| 035 | Week 5 DSA review | [Recall card](#day-035-week-5-dsa-review) |
+| 036 | Reverse a linked list | [Recall card](#day-036-reverse-a-linked-list) |
 
 ## Day 001: Counting and reusing counts
 
@@ -436,6 +444,86 @@ an unbounded exact history consumes growing memory. Hashability and equality def
 **Memory anchor and trap:** On [lo,hi]=[0,1], lo=mid stalls unless adjacency is already the stopping condition.
 
 [Full lesson](../days/day-028-week-4-review/dsa_week-4-dsa-review/CONCEPTS.md) · [Your notes](../days/day-028-week-4-review/dsa_week-4-dsa-review/NOTES.md)
+
+## Day 029: Stable record sorting
+
+**Cue and mechanism:** Equal-key order matters: split contiguous runs and merge left-first on ties.
+
+**Why it works and cost:** Sorted heads certify the next output; O(n log n) time and O(n) buffer.
+
+**Memory anchor and trap:** z:3 before a:3 must remain z,a; sorting whole records changes the tie rule.
+
+[Full lesson](../days/day-029-stable-record-sorting/dsa_stable-record-sorting/CONCEPTS.md) · [Your evidence](../days/day-029-stable-record-sorting/dsa_stable-record-sorting/NOTES.md)
+
+## Day 030: Merge overlapping intervals
+
+**Cue and mechanism:** For union of closed intervals, sort starts and retain the maximum active end.
+
+**Why it works and cost:** Future starts cannot reconnect an emitted group; O(n log n) including sort.
+
+**Memory anchor and trap:** [1,8] plus [2,3] stays [1,8]; equality overlaps and nesting must not shrink coverage.
+
+[Full lesson](../days/day-030-merge-overlapping-intervals/dsa_merge-overlapping-intervals/CONCEPTS.md) · [Your evidence](../days/day-030-merge-overlapping-intervals/dsa_merge-overlapping-intervals/NOTES.md)
+
+## Day 031: Insert an interval
+
+**Cue and mechanism:** Sorted disjoint input permits prefix / growing merge / suffix phases.
+
+**Why it works and cost:** Each interval is consumed once: O(n) time and O(n) output.
+
+**Memory anchor and trap:** [1,3], new [3,5], [5,7] becomes [1,7]; equality is not a gap.
+
+[Full lesson](../days/day-031-insert-an-interval/dsa_insert-an-interval/CONCEPTS.md) · [Your evidence](../days/day-031-insert-an-interval/dsa_insert-an-interval/NOTES.md)
+
+## Day 032: Minimum meeting rooms
+
+**Cue and mechanism:** Count active intervals in time order; local half-open ends precede starts at ties.
+
+**Why it works and cost:** Peak is necessary and achievable by room reuse; O(n log n) time, O(n) space.
+
+**Memory anchor and trap:** [1,4),[4,6) needs one room; closed versions need two groups.
+
+[Full lesson](../days/day-032-minimum-meeting-rooms/dsa_minimum-meeting-rooms/CONCEPTS.md) · [Your evidence](../days/day-032-minimum-meeting-rooms/dsa_minimum-meeting-rooms/NOTES.md)
+
+## Day 033: Kth smallest
+
+**Cue and mechanism:** Need one rank: partition into less/equal/greater and retain its region.
+
+**Why it works and cost:** A nonempty pivot band guarantees progress; expected O(n), worst O(n²); in-place iterative state O(1).
+
+**Memory anchor and trap:** Duplicates occupy ranks; kth smallest is k-1, kth largest is n-k.
+
+[Full lesson](../days/day-033-kth-smallest/dsa_kth-smallest/CONCEPTS.md) · [Your evidence](../days/day-033-kth-smallest/dsa_kth-smallest/NOTES.md)
+
+## Day 034: Count inversions
+
+**Cue and mechanism:** Count cross-half disorder while merge sort combines sorted halves.
+
+**Why it works and cost:** One right value accounts for a suffix of left values; O(n log n), O(n) buffer.
+
+**Memory anchor and trap:** Online a>2*b needs a separate monotone counting pass; it is not the ordinary merge comparator.
+
+[Full lesson](../days/day-034-count-inversions/dsa_count-inversions/CONCEPTS.md) · [Your evidence](../days/day-034-count-inversions/dsa_count-inversions/NOTES.md)
+
+## Day 035: Week 5 DSA review
+
+**Cue and mechanism:** Cold gate: stable sort and selection, followed by invariant-based repair.
+
+**Why it works and cost:** Two attempts reveal different gaps; keep the 60-minute gate and score evidence honestly.
+
+**Memory anchor and trap:** Sorted scores can hide unstable record order; review lessons are help after attempting.
+
+[Full lesson](../days/day-035-week-5-review/dsa_week-5-dsa-review/CONCEPTS.md) · [Your evidence](../days/day-035-week-5-review/dsa_week-5-dsa-review/NOTES.md)
+
+## Day 036: Reverse a linked list
+
+**Cue and mechanism:** For an acyclic node chain, save next, reverse the edge, advance prev and curr.
+
+**Why it works and cost:** Processed prefix and untouched suffix partition the nodes; O(n) time and O(1) reversal state.
+
+**Memory anchor and trap:** Save B before setting A.next=None; building and serializing still allocate O(n).
+
+[Full lesson](../days/day-036-reverse-a-linked-list/dsa_reverse-a-linked-list/CONCEPTS.md) · [Your evidence](../days/day-036-reverse-a-linked-list/dsa_reverse-a-linked-list/NOTES.md)
 
 
 ---

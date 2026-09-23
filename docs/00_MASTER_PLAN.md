@@ -445,7 +445,7 @@ to the day's actual task with assumptions, the requested artifact or calculation
 an alternative, a failure walkthrough, and a self-review. The assistant writes that reference;
 the learner fills `TODO(me)` in `DESIGN.md` as personal practice. Preserve existing practice
 content. A concept lesson alone is no longer sufficient to declare an SD day fully expanded.
-Days 001–020 include references; remaining planned days receive them when expanded.
+Days 001–036 include references; remaining planned days receive them when expanded.
 
 Choose guided reading (concepts → reference → own attempt) or independent practice (concepts
 → own attempt → reference comparison). Record help used. Reading a reference is available

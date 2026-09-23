@@ -44,13 +44,21 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 | [026](day-026-minimum-shipping-capacity/LESSON.md) | Minimum shipping capacity | Isolation anomalies | Callable instances |
 | [027](day-027-median-of-two-arrays/LESSON.md) | Median of two arrays | Optimistic concurrency | Context managers |
 | [028](day-028-week-4-review/LESSON.md) | Week 4 DSA review | Week 4 design review | Week 4 Python review |
+| [029](day-029-stable-record-sorting/LESSON.md) | Stable record sorting | Tree indexes | Attribute lookup |
+| [030](day-030-merge-overlapping-intervals/LESSON.md) | Merge overlapping intervals | Log structured storage | Properties |
+| [031](day-031-insert-an-interval/LESSON.md) | Insert an interval | Access-pattern modeling | Descriptors |
+| [032](day-032-minimum-meeting-rooms/LESSON.md) | Minimum meeting rooms | Hot partitions | Method binding |
+| [033](day-033-kth-smallest/LESSON.md) | Kth smallest | TTL and deletion | Inheritance and super |
+| [034](day-034-count-inversions/LESSON.md) | Count inversions | Storage decision memo | Slots |
+| [035](day-035-week-5-review/LESSON.md) | Week 5 DSA review | Week 5 design review | Week 5 Python review |
+| [036](day-036-reverse-a-linked-list/LESSON.md) | Reverse a linked list | Cache aside | Dataclass defaults |
 
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
-three tracks. Days 7, 14, 21, and 28 start with cold attempts, then repair reading. Days 29–168 still contain
+three tracks. Days 7, 14, 21, 28, and 35 start with cold attempts, then repair reading. Days 37–168 still contain
 assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
 
-Days 1–28 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+Days 1–36 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
 you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
-to read a finished design without filling a TODO. References for Days 7, 14, 21, and 28 are for comparison after
+to read a finished design without filling a TODO. References for Days 7, 14, 21, 28, and 35 are for comparison after
 the cold attempt. Future expanded SD days use the same format.

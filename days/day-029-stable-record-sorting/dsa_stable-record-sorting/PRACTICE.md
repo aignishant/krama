@@ -1,5 +1,7 @@
 # Practice — Stable record sorting
 
+Before attempting, read [the topic explanation](CONCEPTS.md), work through its trace, and answer its readiness questions.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

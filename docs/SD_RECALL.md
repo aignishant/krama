@@ -40,6 +40,14 @@ is the first available card; future taught days will extend this file in day ord
 | 026 | Isolation anomalies | [Recall card](#day-026-isolation-anomalies) |
 | 027 | Optimistic concurrency | [Recall card](#day-027-optimistic-concurrency) |
 | 028 | Week 4 design review | [Recall card](#day-028-week-4-design-review) |
+| 029 | Tree indexes | [Recall card](#day-029-tree-indexes) |
+| 030 | Log structured storage | [Recall card](#day-030-log-structured-storage) |
+| 031 | Access-pattern modeling | [Recall card](#day-031-access-pattern-modeling) |
+| 032 | Hot partitions | [Recall card](#day-032-hot-partitions) |
+| 033 | TTL and deletion | [Recall card](#day-033-ttl-and-deletion) |
+| 034 | Storage decision memo | [Recall card](#day-034-storage-decision-memo) |
+| 035 | Week 5 design review | [Recall card](#day-035-week-5-design-review) |
+| 036 | Cache aside | [Recall card](#day-036-cache-aside) |
 
 ## Day 001: Functional scope
 
@@ -456,6 +464,86 @@ another origin may need another connection. HTTP/3 requires a different transpor
 **Memory anchor and trap:** Fast indexed reads do not make a separate version-check-then-write atomic.
 
 [Full lesson](../days/day-028-week-4-review/sd_week-4-design-review/CONCEPTS.md) · [Complete reference](../days/day-028-week-4-review/sd_week-4-design-review/REFERENCE_DESIGN.md) · [Your design](../days/day-028-week-4-review/sd_week-4-design-review/DESIGN.md)
+
+## Day 029: Tree indexes
+
+**Cue and mechanism:** Ordered access uses separator pages leading to sorted leaves.
+
+**Why it works and cost:** High fan-out shortens paths; splits and logging amplify writes and payload fetches amplify reads.
+
+**Memory anchor and trap:** [10,20,30]+25 can become [10,20] / [25,30]; publish separator 25.
+
+[Full lesson](../days/day-029-stable-record-sorting/sd_tree-indexes/CONCEPTS.md) · [Complete reference](../days/day-029-stable-record-sorting/sd_tree-indexes/REFERENCE_DESIGN.md) · [Your design](../days/day-029-stable-record-sorting/sd_tree-indexes/DESIGN.md)
+
+## Day 030: Log structured storage
+
+**Cue and mechanism:** Bursty updates can be buffered and flushed into immutable sorted files.
+
+**Why it works and cost:** Batching defers maintenance; reads reconcile versions and compaction rewrites data.
+
+**Memory anchor and trap:** Newest tombstone beats older values; 10 WAL + 10 flush + 30 merge per 10 MiB is 5x here.
+
+[Full lesson](../days/day-030-merge-overlapping-intervals/sd_log-structured-storage/CONCEPTS.md) · [Complete reference](../days/day-030-merge-overlapping-intervals/sd_log-structured-storage/REFERENCE_DESIGN.md) · [Your design](../days/day-030-merge-overlapping-intervals/sd_log-structured-storage/DESIGN.md)
+
+## Day 031: Access-pattern modeling
+
+**Cue and mechanism:** Write query contracts before storage selection: recent link events and owner/day totals differ.
+
+**Why it works and cost:** An index serves ordered detail; an aggregate trades update complexity for cheaper summaries.
+
+**Memory anchor and trap:** e1,e2,e1 retry counts two; event-time ownership and atomic dedupe need explicit contracts.
+
+[Full lesson](../days/day-031-insert-an-interval/sd_access-pattern-modeling/CONCEPTS.md) · [Complete reference](../days/day-031-insert-an-interval/sd_access-pattern-modeling/REFERENCE_DESIGN.md) · [Your design](../days/day-031-insert-an-interval/sd_access-pattern-modeling/DESIGN.md)
+
+## Day 032: Hot partitions
+
+**Cue and mechanism:** Skewed popularity can overload one partition despite balanced bytes.
+
+**Why it works and cost:** Compare per-partition demand with capacity; cache reads or explicitly shard suitable writes.
+
+**Memory anchor and trap:** 3200<4000 total still fails at 2600>1000 on one owner; hit rate is an assumption.
+
+[Full lesson](../days/day-032-minimum-meeting-rooms/sd_hot-partitions/CONCEPTS.md) · [Complete reference](../days/day-032-minimum-meeting-rooms/sd_hot-partitions/REFERENCE_DESIGN.md) · [Your design](../days/day-032-minimum-meeting-rooms/sd_hot-partitions/DESIGN.md)
+
+## Day 033: TTL and deletion
+
+**Cue and mechanism:** Expiration controls reads; cleanup reclaims bytes; tombstones suppress older state.
+
+**Why it works and cost:** Separating contracts allows safe delayed cleanup at the cost of retention and repair work.
+
+**Memory anchor and trap:** At now=101, expiry=100 means absent even if stored; purging a delete too early can revive v7.
+
+[Full lesson](../days/day-033-kth-smallest/sd_ttl-and-deletion/CONCEPTS.md) · [Complete reference](../days/day-033-kth-smallest/sd_ttl-and-deletion/REFERENCE_DESIGN.md) · [Your design](../days/day-033-kth-smallest/sd_ttl-and-deletion/DESIGN.md)
+
+## Day 034: Storage decision memo
+
+**Cue and mechanism:** Choose storage from redirect, create-retry, and owner-list contracts.
+
+**Why it works and cost:** Relational indexes/transactions simplify this baseline; key-value may trade view maintenance for scaling.
+
+**Memory anchor and trap:** A fast GET does not solve duplicate creates or stale expiry; name each enforcement point.
+
+[Full lesson](../days/day-034-count-inversions/sd_storage-decision-memo/CONCEPTS.md) · [Complete reference](../days/day-034-count-inversions/sd_storage-decision-memo/REFERENCE_DESIGN.md) · [Your design](../days/day-034-count-inversions/sd_storage-decision-memo/DESIGN.md)
+
+## Day 035: Week 5 design review
+
+**Cue and mechanism:** Cold-review one storage decision by tracing its invariant through a failure.
+
+**Why it works and cost:** Revise the artifact and defend an alternative within the 30-minute gate.
+
+**Memory anchor and trap:** Expiry=100, cleanup=150, read=120 exposes a cleanup-only serving rule.
+
+[Full lesson](../days/day-035-week-5-review/sd_week-5-design-review/CONCEPTS.md) · [Complete reference](../days/day-035-week-5-review/sd_week-5-design-review/REFERENCE_DESIGN.md) · [Your design](../days/day-035-week-5-review/sd_week-5-design-review/DESIGN.md)
+
+## Day 036: Cache aside
+
+**Cue and mechanism:** Repeated reads can use cache-aside: hit, or source load and best-effort fill.
+
+**Why it works and cost:** Database remains authoritative; copies save reads but introduce staleness and outage load.
+
+**Memory anchor and trap:** DB failure is not not-found; fill failure need not fail a valid fetched redirect.
+
+[Full lesson](../days/day-036-reverse-a-linked-list/sd_cache-aside/CONCEPTS.md) · [Complete reference](../days/day-036-reverse-a-linked-list/sd_cache-aside/REFERENCE_DESIGN.md) · [Your design](../days/day-036-reverse-a-linked-list/sd_cache-aside/DESIGN.md)
 
 
 ---

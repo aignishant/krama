@@ -102,3 +102,32 @@ system-design workload estimate is represented as a measured production result.
   `python granth.py index`, then reran the check successfully; all 173 generated documents
   are current. Its upstream depth scan does not inspect these adapted topic-folder lessons.
   `git diff --check` also passed.
+
+## Days 29–36 documentation expansion — 2026-09-23
+
+- Added 24 topic explanations and eight complete SD reference answers. Connected subject
+  navigation, day hubs, checklists, practice routes, 24 recall cards, the SD reference index,
+  glossary, and teaching-availability notices. Days 1–36 are expanded; Days 37–168 retain
+  assignment briefs and preparation navigation.
+- Explained companion-contract differences for stable record sorting, closed versus half-open
+  intervals, kth largest versus smallest, reverse pairs versus inversions, and linked-list
+  heads versus local serialization. Day 34 teaches the separate reverse-pair counting pass.
+- Preserved Day 35 cold attempts before repair reading. Clarified its two DSA re-solves and
+  corrected the contradictory note that one unresolved problem could replace both slots.
+  The 60/30/15-minute caps and independent assessment criteria remain in place.
+- Executed all 24 teaching blocks on Python 3.12.10, then independently extracted and reran
+  them from the authored Markdown. Every recorded transcript matched, including deliberate
+  failures and the scoped slots memory measurements.
+- Checked 1,347 local links and heading anchors across 129 documents; all resolved. All three
+  recall files contain exactly one card per authored day in order, Days 1–36.
+- Compared SHA256 hashes for 1,179 learner/progress files captured before authoring; all stayed
+  byte-identical. Existing uncommitted work was preserved. Solutions, labs, fixtures, personal
+  notes, DESIGN.md files, and study ledgers were not filled or marked complete.
+- `python course.py check`, `python granth.py doctor`, `python granth.py check`, and
+  `git diff --check` passed. All 173 generated documents were already current; no regeneration
+  was needed. The upstream depth check does not inspect this adapted topic-folder layout.
+- Official-source checks and the unavailable B-tree implementation subpage are recorded in
+  [SOURCES.md](SOURCES.md). The page split, storage budgets, retention policy, query projection,
+  and cache failure scenarios are explicitly hypothetical. No database, cache, replication
+  system, or production performance claim was tested by the Python models.
+- No learner completion or commit was recorded.

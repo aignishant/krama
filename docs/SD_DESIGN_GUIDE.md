@@ -56,6 +56,14 @@ second design task. Existing practice files are preserved when references are ad
 | 026 | [Isolation anomalies](../days/day-026-minimum-shipping-capacity/sd_isolation-anomalies/REFERENCE_DESIGN.md) |
 | 027 | [Optimistic concurrency](../days/day-027-median-of-two-arrays/sd_optimistic-concurrency/REFERENCE_DESIGN.md) |
 | 028 | [Week 4 design review — compare after the cold attempt](../days/day-028-week-4-review/sd_week-4-design-review/REFERENCE_DESIGN.md) |
+| 029 | [Tree indexes](../days/day-029-stable-record-sorting/sd_tree-indexes/REFERENCE_DESIGN.md) |
+| 030 | [Log structured storage](../days/day-030-merge-overlapping-intervals/sd_log-structured-storage/REFERENCE_DESIGN.md) |
+| 031 | [Access-pattern modeling](../days/day-031-insert-an-interval/sd_access-pattern-modeling/REFERENCE_DESIGN.md) |
+| 032 | [Hot partitions](../days/day-032-minimum-meeting-rooms/sd_hot-partitions/REFERENCE_DESIGN.md) |
+| 033 | [TTL and deletion](../days/day-033-kth-smallest/sd_ttl-and-deletion/REFERENCE_DESIGN.md) |
+| 034 | [Storage decision memo](../days/day-034-count-inversions/sd_storage-decision-memo/REFERENCE_DESIGN.md) |
+| 035 | [Week 5 design review — compare after the cold attempt](../days/day-035-week-5-review/sd_week-5-design-review/REFERENCE_DESIGN.md) |
+| 036 | [Cache aside](../days/day-036-reverse-a-linked-list/sd_cache-aside/REFERENCE_DESIGN.md) |
 
 Later days receive a complete reference when their topic lessons are expanded. Each reference
 is one reasoned answer under stated assumptions; another design can be valid with different

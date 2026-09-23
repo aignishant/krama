@@ -1,9 +1,11 @@
 # Practice — Cold re-solve: Kth smallest
 
+After both cold attempts, use [the review explanation](CONCEPTS.md) for repair; record help.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
+use the two scheduled cold re-solves below; do not add a new problem quota. The local contract
 remains the specification for solution.py and cases.json. For an online-only attempt, record
 submission evidence, compare the contracts, and use the interview checklist for completion.
 The local implementation steps below apply when you choose the local route.

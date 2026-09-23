@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Hard. **Original course day:** 34.
 
-**Contract comparison:** Online counts nums[i] > 2*nums[j]; local inversions use nums[i] > nums[j]. Adjust the merge-count condition.
+**Contract comparison:** Online counts i<j with nums[i]>2*nums[j]; local counts ordinary inversions nums[i]>nums[j]. Use a separate monotone cross-pair counting pass before an ordinary merge for the online route; changing only the merge comparator is incorrect.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official statement checked on 2026-09-23; this companion is publicly readable.
 
 ## Interview checklist
 
@@ -26,3 +26,5 @@ Official page checked on 2026-09-18; premium statements were not accessible.
 
 The local `solve(data)` adapter and fixtures do not use the online judge signature.
 A local green test is not an online acceptance. Adapt to the official interface when submitting.
+
+[Teaching route](CONCEPTS.md) — includes the mechanism needed for the chosen contract.

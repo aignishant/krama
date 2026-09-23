@@ -12,7 +12,8 @@ status: planned
 
 # Day 035
 
-This is a guided assignment hub. Assigned IDs: DSA-35, SD-35, PY-35; none are claimed completed.
+This hub links complete teaching material for DSA-35, SD-35, and PY-35.
+Authoring these documents does not mark learner study complete.
 
 | Subject | Budget | Open |
 | --- | --- | --- |
@@ -23,3 +24,20 @@ This is a guided assignment hub. Assigned IDs: DSA-35, SD-35, PY-35; none are cl
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.
 See [daily checklist](CHECKLIST.md) and [master plan](../../docs/00_MASTER_PLAN.md).
+
+## Teaching documents
+
+Start with cold assignments before opening these repair lessons or the reference. Record any help.
+
+| Track | Explanation |
+| --- | --- |
+| dsa | [Week 5 DSA review](dsa_week-5-dsa-review/CONCEPTS.md) |
+| sd | [Week 5 design review](sd_week-5-design-review/CONCEPTS.md) |
+| lang | [Week 5 Python review](lang_week-5-python-review/CONCEPTS.md) |
+
+The assistant’s [complete SD reference](sd_week-5-design-review/REFERENCE_DESIGN.md) answers the assignment.
+Compare only after your cold attempt. [DESIGN.md](sd_week-5-design-review/DESIGN.md) and its TODOs are your personal practice.
+
+Keep the 60/30/15-minute caps. Optional depth may continue another sitting. Reading alone
+does not pass an assessment. For later recall use [DSA](../../docs/DSA_RECALL.md),
+[Python](../../docs/LANG_RECALL.md), or [system design](../../docs/SD_RECALL.md).

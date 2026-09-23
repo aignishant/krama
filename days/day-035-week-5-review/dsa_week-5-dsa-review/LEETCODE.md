@@ -1,7 +1,7 @@
 # Day 035 — LeetCode interview practice
 
-Use this inside the existing **60-minute DSA budget**. Choose the online problem or
-the local exercise as the main attempt; use its companion as a variation or review.
+Use this inside the existing **60-minute DSA budget**. Choose the online or
+local routes for the two scheduled re-solves. Open repair reading afterwards.
 
 [Interview method](../../../docs/INTERVIEW_PREP.md) · [Local contract](PRACTICE.md) · [Evidence](NOTES.md)
 
@@ -13,7 +13,7 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Contract comparison:** Online sorts numbers; local practice sorts records and explicitly checks stability.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official statement checked on 2026-09-23; this companion is publicly readable.
 
 ## 215. Kth Largest Element in an Array
 
@@ -21,9 +21,9 @@ Official page checked on 2026-09-18; premium statements were not accessible.
 
 **Difficulty:** Medium. **Original course day:** 33.
 
-**Contract comparison:** Online selects kth LARGEST; local practice selects kth SMALLEST.
+**Contract comparison:** Online target is n-k in ascending order; local target is k-1. Both count duplicate values as separate ranks.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official statement checked on 2026-09-23; this companion is publicly readable.
 
 ## Interview checklist
 
@@ -40,4 +40,6 @@ A local green test is not an online acceptance. Adapt to the official interface 
 ## Review pacing
 
 5 minutes recall, 20 minutes per cold attempt, 10 minutes critique and 5 minutes logging.
-A difficult unresolved problem may replace both attempt slots. No new problem quota.
+A harder unresolved problem may replace the second attempt slot. No new problem quota.
+
+[Teaching route](CONCEPTS.md) — repair reading after cold attempts.

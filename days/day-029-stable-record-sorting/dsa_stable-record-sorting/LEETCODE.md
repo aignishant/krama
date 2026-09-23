@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 29.
 
-**Contract comparison:** Online sorts numbers; local practice sorts records and explicitly checks stability.
+**Contract comparison:** Online sorts integers without built-in sorting in O(n log n); local practice requires merge sort of records by score with stable ties. Tagged equal scores test the additional local requirement.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official statement checked on 2026-09-23; this companion is publicly readable.
 
 ## Interview checklist
 
@@ -26,3 +26,5 @@ Official page checked on 2026-09-18; premium statements were not accessible.
 
 The local `solve(data)` adapter and fixtures do not use the online judge signature.
 A local green test is not an online acceptance. Adapt to the official interface when submitting.
+
+[Teaching route](CONCEPTS.md) — includes the mechanism needed for the chosen contract.

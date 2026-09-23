@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 32.
 
-**Contract comparison:** Online intervals are CLOSED, so touching endpoints conflict; local meetings are half-open and touching endpoints reuse a room.
+**Contract comparison:** Online intervals are CLOSED, including possible point intervals, so starts precede ends at equal times. Local meetings have positive length and are HALF-OPEN, so ends precede starts and touching meetings reuse a room.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official statement checked on 2026-09-23; this companion is publicly readable.
 
 ## Interview checklist
 
@@ -26,3 +26,5 @@ Official page checked on 2026-09-18; premium statements were not accessible.
 
 The local `solve(data)` adapter and fixtures do not use the online judge signature.
 A local green test is not an online acceptance. Adapt to the official interface when submitting.
+
+[Teaching route](CONCEPTS.md) — includes the mechanism needed for the chosen contract.

@@ -3,7 +3,7 @@
 ## Navigation — where to start
 
 1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md) as a preparation reference.
+2. **Repair after the cold attempt:** read [the review lesson](CONCEPTS.md), its [worked trace](CONCEPTS.md#worked-trace), and [readiness checks](CONCEPTS.md#readiness-before-practice). Record help used.
 3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
 4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
 5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.

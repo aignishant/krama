@@ -2,8 +2,8 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [Python lab method](../../../docs/PYTHON_LAB_GUIDE.md). This is a shared preparation guide; the full explanation of **Method binding** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
+1. **Learn the topic:** read [the explanation](CONCEPTS.md) for the mechanism, assumptions, and tradeoffs.
+2. **Trace and check readiness:** follow [the worked example](CONCEPTS.md#worked-trace), predict its failure, and answer [the readiness questions](CONCEPTS.md#readiness-before-practice).
 3. **Read the assignment:** use [the experiment task](#assignment), then predict the behavior before running code.
 4. **Experiment independently:** implement [lab.py](lab.py); use your installed interpreter and record its version.
 5. **Verify:** run your lab and apply [the acceptance check](#acceptance-check), including an assertion that can detect the mistake.

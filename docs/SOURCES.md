@@ -227,3 +227,39 @@ documentation follows the 3.12 maintenance series. PostgreSQL designs were not e
 Days 21–24 already contained authored teaching files at the start of this expansion. Their
 navigation and recall cards were connected here; their historical source-check dates were
 not relabeled as new live verification.
+
+## Days 29–36 teaching checks — 2026-09-23
+
+Opened the official pages below for the listed semantics. Algorithm proofs, hand traces,
+design decisions, and numeric scenarios are original teaching material. Python demonstrations
+ran on the installed 3.12.10 interpreter; online Python documentation is the 3.12 maintenance
+series. No storage engine, cache service, or concurrent database was deployed or benchmarked.
+
+| Identifier | Exact title and URL | Version/year | Checked | Use |
+| --- | --- | --- | --- | --- |
+| LeetCode 912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Live problem | 2026-09-23 | Days 29/35 numeric sorting and built-in-sort restriction |
+| LeetCode 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Live problem | 2026-09-23 | Day 30 touching closed endpoints |
+| LeetCode 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Live problem | 2026-09-23 | Day 31 sorted disjoint input and insertion |
+| LeetCode 2406 | [Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/) | Live problem | 2026-09-23 | Day 32 closed intervals versus local half-open meetings |
+| LeetCode 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Live problem | 2026-09-23 | Days 33/35 largest versus smallest rank; duplicates count |
+| LeetCode 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Live problem | 2026-09-23 | Day 34 doubled-right-value predicate |
+| LeetCode 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Live problem | 2026-09-23 | Day 36 node-head interface versus local serialization |
+| Python sorting | [Sorting Techniques](https://docs.python.org/3.12/howto/sorting.html) | 3.12 | 2026-09-23 | Day 29 stable built-in oracle and key-based ordering |
+| Python descriptors | [Descriptor Guide](https://docs.python.org/3.12/howto/descriptor.html) | 3.12 | 2026-09-23 | Days 29–32 precedence, properties, field descriptors, bound methods |
+| Python data model | [3. Data model](https://docs.python.org/3.12/reference/datamodel.html) | 3.12 | 2026-09-23 | Days 29–35 attribute lookup, inheritance, slots |
+| Python builtins | [Built-in Functions](https://docs.python.org/3.12/library/functions.html#super) | 3.12 | 2026-09-23 | Day 33 cooperative super and actual-instance MRO |
+| Python sys | [sys — System-specific parameters and functions](https://docs.python.org/3.12/library/sys.html#sys.getsizeof) | 3.12 | 2026-09-23 | Day 34 shallow object-size measurement boundary |
+| Python dataclasses | [dataclasses — Data Classes](https://docs.python.org/3.12/library/dataclasses.html) | 3.12 | 2026-09-23 | Day 36 field factories and mutable-default rejection |
+| PostgreSQL B-tree | [65.1. B-Tree Indexes](https://www.postgresql.org/docs/18/btree.html) | 18 | 2026-09-23 | Day 29 ordered-index context; split drawing is a generic model |
+| PostgreSQL multicolumn | [11.3. Multicolumn Indexes](https://www.postgresql.org/docs/18/indexes-multicolumn.html) | 18 | 2026-09-23 | Days 31/34 equality-prefix ordered access |
+| RocksDB introduction | [Getting started](https://rocksdb.org/docs/getting-started.html) | Live documentation | 2026-09-23 | Day 30 WAL, memtable, immutable file components |
+| RocksDB compaction | [Leveled Compaction](https://github.com/facebook/rocksdb/wiki/Leveled-Compaction) | Live documentation | 2026-09-23 | Day 30 maintenance and read/write/space tradeoffs |
+| DynamoDB key design | [Best practices for designing and using partition keys effectively in DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-design.html) | Live documentation | 2026-09-23 | Days 32/34/35 request skew; example capacities are assumptions |
+| DynamoDB TTL | [Working with expired items and time to live (TTL)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ttl-expired-items.html) | Live documentation | 2026-09-23 | Days 33/35 filtering expired items while cleanup is pending |
+| Azure cache pattern | [Cache-Aside Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside) | Live documentation | 2026-09-23 | Day 36 miss loading, invalidation, and consistency limitations |
+
+The PostgreSQL 18 B-tree implementation subpage could not be retrieved during source checks.
+No claim of checking its split/recovery details is made; Day 29 labels its split as a simplified
+generic model and leaves engine-specific recovery verification as a next step. Tombstone
+retention durations, freshness targets, capacities, and request deadlines elsewhere are stated
+design assumptions, not vendor limits or measured production observations.

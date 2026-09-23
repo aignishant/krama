@@ -85,3 +85,17 @@ introduced it instead of redefining it.
 | Tolerant reader | A response consumer that reads required fields while permitting documented unknown additions. | [Day 19 sd](../days/day-019-longest-distinct-substring/sd_compatibility/CONCEPTS.md) | Additive response compatibility |
 | Pull pipeline | Composed stages whose upstream advancement is driven by downstream requests. | [Day 20 lang](../days/day-020-minimum-positive-window/lang_streaming-pipeline/CONCEPTS.md) | Demand-driven iteration |
 | Modular monolith | One deployable application with explicit internal module interfaces and data ownership. | [Day 20 sd](../days/day-020-minimum-positive-window/sd_modular-monolith/CONCEPTS.md) | Internal service boundaries |
+| Stable sort | An ordering that retains the input order of equal-key records. | [Day 29 dsa](../days/day-029-stable-record-sorting/dsa_stable-record-sorting/CONCEPTS.md) | Tie preservation |
+| Half-open interval | A range including its start and excluding its end. | [Day 32 dsa](../days/day-032-minimum-meeting-rooms/dsa_minimum-meeting-rooms/CONCEPTS.md) | [start,end) |
+| Three-way partition | A split into values below, equal to, and above a pivot. | [Day 33 dsa](../days/day-033-kth-smallest/dsa_kth-smallest/CONCEPTS.md) | Pivot band |
+| Inversion | An earlier position whose value exceeds a later position’s value. | [Day 34 dsa](../days/day-034-count-inversions/dsa_count-inversions/CONCEPTS.md) | Out-of-order pair |
+| Data descriptor | An attribute descriptor whose type defines __set__ or __delete__. | [Day 31 lang](../days/day-031-insert-an-interval/lang_descriptors/CONCEPTS.md) | Managed attribute |
+| Bound method | A callable pairing an underlying function with its receiver. | [Day 32 lang](../days/day-032-minimum-meeting-rooms/lang_method-binding/CONCEPTS.md) | __self__ / __func__ |
+| Method resolution order | The ordered classes searched for inherited attributes. | [Day 33 lang](../days/day-033-kth-smallest/lang_inheritance-and-super/CONCEPTS.md) | MRO |
+| Slots | Declared instance storage names that can avoid an instance dictionary. | [Day 34 lang](../days/day-034-count-inversions/lang_slots/CONCEPTS.md) | __slots__ |
+| Default factory | A zero-argument callable supplying an omitted dataclass field value. | [Day 36 lang](../days/day-036-reverse-a-linked-list/lang_dataclass-defaults/CONCEPTS.md) | default_factory |
+| Write amplification | Storage bytes written divided by logical bytes written under a stated boundary. | [Day 30 sd](../days/day-030-merge-overlapping-intervals/sd_log-structured-storage/CONCEPTS.md) | Maintenance writes |
+| Compaction | Merging stored runs while preserving required visible versions. | [Day 30 sd](../days/day-030-merge-overlapping-intervals/sd_log-structured-storage/CONCEPTS.md) | LSM maintenance |
+| Tombstone | A deletion marker used to suppress older stored values. | [Day 33 sd](../days/day-033-kth-smallest/sd_ttl-and-deletion/CONCEPTS.md) | Deletion state |
+| Hot partition | A partition receiving more request work than its capacity supports. | [Day 32 sd](../days/day-032-minimum-meeting-rooms/sd_hot-partitions/CONCEPTS.md) | Load skew |
+| Cache-aside | Application-managed cache lookup followed by source loading on a miss. | [Day 36 sd](../days/day-036-reverse-a-linked-list/sd_cache-aside/CONCEPTS.md) | Load on miss |
