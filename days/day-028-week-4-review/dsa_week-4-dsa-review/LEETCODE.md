@@ -1,7 +1,7 @@
 # Day 028 — LeetCode interview practice
 
-Use this inside the existing **60-minute DSA budget**. Choose the online problem or
-the local exercise as the main attempt; use its companion as a variation or review.
+Use this inside the existing **60-minute DSA budget**. Use the two assigned cold re-solves through the online or
+local route. Repair reading follows the attempts.
 
 [Interview method](../../../docs/INTERVIEW_PREP.md) · [Local contract](PRACTICE.md) · [Evidence](NOTES.md)
 
@@ -40,4 +40,4 @@ A local green test is not an online acceptance. Adapt to the official interface 
 ## Review pacing
 
 5 minutes recall, 20 minutes per cold attempt, 10 minutes critique and 5 minutes logging.
-A difficult unresolved problem may replace both attempt slots. No new problem quota.
+A difficult unresolved problem may replace the second attempt, as specified in PRACTICE.md. No new problem quota.

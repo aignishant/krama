@@ -3,8 +3,8 @@
 ## Navigation — where to start
 
 1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) as a preparation reference.
-3. **Choose one problem:** open [LeetCode practice](LEETCODE.md) or [the local contract](PRACTICE.md). They are alternative main attempts within the same hour.
+2. **Repair after the cold attempt:** open [the review lesson](CONCEPTS.md), its [worked trace](CONCEPTS.md#worked-trace), and [readiness checks](CONCEPTS.md#readiness-before-practice). Record any help used.
+3. **Use the weekly assessment:** follow [the two cold re-solves](PRACTICE.md#weekly-assessment), using [LeetCode](LEETCODE.md) or the local route within the same hour.
 4. **Implement independently:** use the online editor for LeetCode, or [solution.py](solution.py) locally. [Hints](HINTS.md) offer help applying the lesson after an attempt.
 5. **Verify:** follow [the practice checks](PRACTICE.md#complete-practice-sequence) for the local route, or record an actual online submission result and contract comparison.
 6. **Record:** save reasoning, test results, hints, and your next step in [NOTES.md](NOTES.md).
@@ -17,7 +17,7 @@ Original reading, after cold recall: [Day 22](../../day-022-lower-bound/dsa_lowe
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
+use the two scheduled cold re-solves rather than adding a new problem quota. The local contract
 remains the specification for solution.py and cases.json. For an online-only attempt, record
 submission evidence, compare the contracts, and use the interview checklist for completion.
 The local implementation steps below apply when you choose the local route.
@@ -31,25 +31,19 @@ Recall one candidate, not all of them: [day 27](../../day-027-median-of-two-arra
 
 ## Session
 
-| Step | Minutes | Work |
-| --- | --- | --- |
-| Recall | 5 | Explain a previous invariant without notes. |
-| Understand | 10 | Read the contract; trace a small example; choose a baseline. |
-| Solve | 30 | Implement the core problem in solution.py without reading hints first. |
-| Verify | 10 | Run tests, add boundary cases, explain time and space. |
-| Record | 5 | Write the mistake, evidence and next review. |
+Use 5 minutes recall, 20 minutes for each of two cold re-solves, 10 minutes critique, and 5 minutes logging. Follow [the weekly assessment](PRACTICE.md#weekly-assessment); repair reading comes afterwards.
 
 ## Core assignment
 
 **Cold re-solve: Minimum shipping capacity.** Return smallest daily capacity shipping positive weights in given order within days; weights nonempty and days >= 1.
 
-After learning the topic, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
+For the cold assessment, open [PRACTICE.md](PRACTICE.md). General mechanisms belong in
 the explanation; [HINTS.md](HINTS.md) helps apply them after an attempt. Expected target: O(n log sum(weights)) time.
 This is a target to justify, not a claim that any implementation meets it.
 
 ## Learn and explain
 
-Read [week 4 in the DSA pattern guide](../../../docs/DSA_PATTERN_GUIDE.md) for this week's mechanism before the first attempt.
+After the cold attempts, use [CONCEPTS.md](CONCEPTS.md) to repair the mechanism and explain your counterexample.
 
 Before optimizing, write what a straightforward correct algorithm would enumerate or maintain.
 On the sample, record the changing state after each meaningful step. Identify what remains true

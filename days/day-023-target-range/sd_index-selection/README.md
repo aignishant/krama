@@ -2,10 +2,10 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [design method](../../../docs/SD_DESIGN_GUIDE.md). This is a shared preparation guide; the full explanation of **Index selection** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
-3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
-4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+1. **Learn the topic:** read [CONCEPTS.md](CONCEPTS.md) for intuition, the mechanism, its proof or tradeoff, and its limits.
+2. **Trace and check readiness:** follow [the worked trace](CONCEPTS.md#worked-trace), then answer [the readiness questions](CONCEPTS.md#readiness-before-practice).
+3. **Reference and assignment:** For guided reading, study [the complete reference design](REFERENCE_DESIGN.md). Use [the bounded task](#assignment) for your own work; independent attempts can compare afterwards.
+4. **Write your own decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
 5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
 6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
 7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.

@@ -48,6 +48,14 @@ second design task. Existing practice files are preserved when references are ad
 | 018 | [Sync versus async](../days/day-018-fixed-window-maximum-sum/sd_sync-versus-async/REFERENCE_DESIGN.md) |
 | 019 | [Compatibility](../days/day-019-longest-distinct-substring/sd_compatibility/REFERENCE_DESIGN.md) |
 | 020 | [Modular monolith](../days/day-020-minimum-positive-window/sd_modular-monolith/REFERENCE_DESIGN.md) |
+| 021 | [Week 3 design review — compare after the cold attempt](../days/day-021-week-3-review/sd_week-3-design-review/REFERENCE_DESIGN.md) |
+| 022 | [Schema constraints](../days/day-022-lower-bound/sd_schema-constraints/REFERENCE_DESIGN.md) |
+| 023 | [Index selection](../days/day-023-target-range/sd_index-selection/REFERENCE_DESIGN.md) |
+| 024 | [Query plans](../days/day-024-rotated-search/sd_query-plans/REFERENCE_DESIGN.md) |
+| 025 | [Transactions](../days/day-025-integer-square-root/sd_transactions/REFERENCE_DESIGN.md) |
+| 026 | [Isolation anomalies](../days/day-026-minimum-shipping-capacity/sd_isolation-anomalies/REFERENCE_DESIGN.md) |
+| 027 | [Optimistic concurrency](../days/day-027-median-of-two-arrays/sd_optimistic-concurrency/REFERENCE_DESIGN.md) |
+| 028 | [Week 4 design review — compare after the cold attempt](../days/day-028-week-4-review/sd_week-4-design-review/REFERENCE_DESIGN.md) |
 
 Later days receive a complete reference when their topic lessons are expanded. Each reference
 is one reasoned answer under stated assumptions; another design can be valid with different

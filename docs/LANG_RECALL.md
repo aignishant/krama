@@ -32,6 +32,14 @@ the first available card; future taught days will extend this file in day order.
 | 018 | Yield delegation | [Recall card](#day-018-yield-delegation) |
 | 019 | Iterator consumption | [Recall card](#day-019-iterator-consumption) |
 | 020 | Streaming pipeline | [Recall card](#day-020-streaming-pipeline) |
+| 021 | Week 3 Python review | [Recall card](#day-021-week-3-python-review) |
+| 022 | Representations | [Recall card](#day-022-representations) |
+| 023 | Rich comparison | [Recall card](#day-023-rich-comparison) |
+| 024 | Container protocol | [Recall card](#day-024-container-protocol) |
+| 025 | Indexing and slicing | [Recall card](#day-025-indexing-and-slicing) |
+| 026 | Callable instances | [Recall card](#day-026-callable-instances) |
+| 027 | Context managers | [Recall card](#day-027-context-managers) |
+| 028 | Week 4 Python review | [Recall card](#day-028-week-4-python-review) |
 
 ## Day 001: Identity, equality, and aliasing
 
@@ -341,6 +349,86 @@ binding work; large unpacked collections have separate costs. Error wording can 
 
 [Full lesson](../days/day-020-minimum-positive-window/lang_streaming-pipeline/CONCEPTS.md) ·
 [Your notes](../days/day-020-minimum-positive-window/lang_streaming-pipeline/NOTES.md)
+
+## Day 021: Week 3 Python review
+
+**Cue and mechanism:** Review cursor ownership, advancement, suspension, and cleanup after the cold experiment.
+
+**Why it works and cost:** Laziness reduces eager work only if downstream stages do not retain all values.
+
+**Memory anchor and trap:** An iterator is consumed; a reusable iterable supplies fresh cursors.
+
+[Full lesson](../days/day-021-week-3-review/lang_week-3-python-review/CONCEPTS.md) · [Your notes](../days/day-021-week-3-review/lang_week-3-python-review/NOTES.md)
+
+## Day 022: Representations
+
+**Cue and mechanism:** repr serves diagnostics and str serves readable labels; choose safe fields explicitly.
+
+**Why it works and cost:** Small allowlisted representations aid debugging; rendering large fields still has a cost.
+
+**Memory anchor and trap:** Redacted repr does not sanitize explicit attribute logs or serialization.
+
+[Full lesson](../days/day-022-lower-bound/lang_representations/CONCEPTS.md) · [Your notes](../days/day-022-lower-bound/lang_representations/NOTES.md)
+
+## Day 023: Rich comparison
+
+**Cue and mechanism:** Unsupported comparison operands should return NotImplemented so dispatch can continue.
+
+**Why it works and cost:** Dispatch chooses an implementation; it does not prove symmetry, transitivity, or hash consistency.
+
+**Memory anchor and trap:** False means a supported comparison was false; NotImplemented means another route should be tried.
+
+[Full lesson](../days/day-023-target-range/lang_rich-comparison/CONCEPTS.md) · [Your notes](../days/day-023-target-range/lang_rich-comparison/NOTES.md)
+
+## Day 024: Container protocol
+
+**Cue and mechanism:** Separate reusable container data from iterator cursor state; each iteration gets a fresh cursor.
+
+**Why it works and cost:** Tuple storage preserves order; linear membership costs O(n), while an extra set trades memory for lookup speed.
+
+**Memory anchor and trap:** Two loops must not consume a single shared cursor; immutable outer storage can still contain mutable values.
+
+[Full lesson](../days/day-024-rotated-search/lang_container-protocol/CONCEPTS.md) · [Your notes](../days/day-024-rotated-search/lang_container-protocol/NOTES.md)
+
+## Day 025: Indexing and slicing
+
+**Cue and mechanism:** __getitem__ receives a scalar key or slice descriptor; define result ownership and error behavior.
+
+**Why it works and cost:** Normalize slices with indices(length) and consume the result with range. A copied k-item slice costs O(k).
+
+**Memory anchor and trap:** obj[99] raises while obj[:99] clips. A normalized reverse stop of -1 is a range bound, not a new raw slice.
+
+[Full lesson](../days/day-025-integer-square-root/lang_indexing-and-slicing/CONCEPTS.md) · [Your notes](../days/day-025-integer-square-root/lang_indexing-and-slicing/NOTES.md)
+
+## Day 026: Callable instances
+
+**Cue and mechanism:** A class-defined __call__ supplies function-like behavior with named instance state.
+
+**Why it works and cost:** Attributes make retained state inspectable; closures retain enclosing bindings. Neither ensures concurrency safety.
+
+**Memory anchor and trap:** Assigning __call__ only on a plain instance does not implement implicit call dispatch.
+
+[Full lesson](../days/day-026-minimum-shipping-capacity/lang_callable-instances/CONCEPTS.md) · [Your notes](../days/day-026-minimum-shipping-capacity/lang_callable-instances/NOTES.md)
+
+## Day 027: Context managers
+
+**Cue and mechanism:** with pairs successful entry with exit; false-like __exit__ results preserve a body exception.
+
+**Why it works and cost:** Cleanup and exception recovery are distinct decisions. Actual resource operations dominate dispatch cost.
+
+**Memory anchor and trap:** closed=True does not prove success. Failed __enter__ must clean up its own partial acquisition.
+
+[Full lesson](../days/day-027-median-of-two-arrays/lang_context-managers/CONCEPTS.md) · [Your notes](../days/day-027-median-of-two-arrays/lang_context-managers/NOTES.md)
+
+## Day 028: Week 4 Python review
+
+**Cue and mechanism:** After the cold reproduction, choose a regression that distinguishes the public contract failure.
+
+**Why it works and cost:** Test the missed boundary and explain the protocol; one lab fits the review, six new labs do not.
+
+**Memory anchor and trap:** values[slice(*slice(None,None,-1).indices(n))] reinterprets a normalized negative stop; use range positions.
+
+[Full lesson](../days/day-028-week-4-review/lang_week-4-python-review/CONCEPTS.md) · [Your notes](../days/day-028-week-4-review/lang_week-4-python-review/NOTES.md)
 
 
 ---

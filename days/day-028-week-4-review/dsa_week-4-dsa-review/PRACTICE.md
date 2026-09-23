@@ -1,9 +1,11 @@
 # Practice — Cold re-solve: Minimum shipping capacity
 
+Cold assessment first; afterwards use [CONCEPTS.md](CONCEPTS.md), including its trace and readiness questions.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;
-choose one main attempt rather than adding a second mandatory problem. The local contract
+use the two scheduled cold re-solves within this hour. The local contract
 remains the specification for solution.py and cases.json. For an online-only attempt, record
 submission evidence, compare the contracts, and use the interview checklist for completion.
 The local implementation steps below apply when you choose the local route.

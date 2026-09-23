@@ -23,3 +23,13 @@ This is a guided assignment hub. Assigned IDs: DSA-21, SD-21, PY-21; none are cl
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.
 See [daily checklist](CHECKLIST.md) and [master plan](../../docs/00_MASTER_PLAN.md).
+
+## Teaching route
+
+Begin with the cold assignments. Open the following repair lessons and reference only after the attempts, or record their use as help.
+
+- [Week 3 DSA review concepts](dsa_week-3-dsa-review/CONCEPTS.md)
+- [Week 3 design review concepts](sd_week-3-design-review/CONCEPTS.md) and [complete reference answer](sd_week-3-design-review/REFERENCE_DESIGN.md); [DESIGN.md](sd_week-3-design-review/DESIGN.md) is your practice.
+- [Week 3 Python review concepts](lang_week-3-python-review/CONCEPTS.md)
+
+Core caps remain DSA 60, system design 30, and Python 15 minutes. Production extensions are optional. Teaching availability does not mark study complete.

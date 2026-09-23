@@ -3,9 +3,9 @@
 ## Navigation — where to start
 
 1. **Cold recall first:** use the assigned review below without notes. Open explanations after the attempt or when deliberately repairing a gap; record any help used.
-2. **Repair understanding:** revisit the original subject READMEs linked below, or use the [design method](../../../docs/SD_DESIGN_GUIDE.md) as a preparation reference.
-3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
-4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+2. **Repair after the cold attempt:** open [the review lesson](CONCEPTS.md), its [worked trace](CONCEPTS.md#worked-trace), and [readiness checks](CONCEPTS.md#readiness-before-practice). Record any help used.
+3. **Reference and assignment:** After the cold attempt, compare [the complete reference design](REFERENCE_DESIGN.md). Use [the bounded task](#assignment) for your own work; independent attempts can compare afterwards.
+4. **Write your own decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
 5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
 6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
 7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.

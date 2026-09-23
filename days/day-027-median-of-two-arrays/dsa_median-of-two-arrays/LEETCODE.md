@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Hard. **Original course day:** 27.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Local input is {"a": [...], "b": [...]}; the online arrays are nums1 and nums2. Both are sorted with positive combined length; either individual array may be empty. The online task requests logarithmic time in total length; the shorter-array partition meets that target. Use numeric median output, averaging both central values for even length.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement checked on 2026-09-23. Read [the topic explanation](CONCEPTS.md) before practice; adapt to the Python editor signature shown by the online judge.
 
 ## Interview checklist
 

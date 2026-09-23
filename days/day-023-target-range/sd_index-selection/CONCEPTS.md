@@ -115,3 +115,6 @@ and representative owner distributions before claiming a latency improvement.
 
 Use [README.md](README.md) for the assignment, verification, and personal evidence route.
 Reading the lesson does not complete study.
+
+
+For a complete worked answer, read [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md). Your own practice belongs in [DESIGN.md](DESIGN.md).

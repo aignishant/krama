@@ -36,13 +36,21 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 | [018](day-018-fixed-window-maximum-sum/LESSON.md) | Fixed window maximum sum | Sync versus async | Yield delegation |
 | [019](day-019-longest-distinct-substring/LESSON.md) | Longest distinct substring | Compatibility | Iterator consumption |
 | [020](day-020-minimum-positive-window/LESSON.md) | Minimum positive window | Modular monolith | Streaming pipeline |
+| [021](day-021-week-3-review/LESSON.md) | Week 3 DSA review | Week 3 design review | Week 3 Python review |
+| [022](day-022-lower-bound/LESSON.md) | Lower bound | Schema constraints | Representations |
+| [023](day-023-target-range/LESSON.md) | Target range | Index selection | Rich comparison |
+| [024](day-024-rotated-search/LESSON.md) | Rotated search | Query plans | Container protocol |
+| [025](day-025-integer-square-root/LESSON.md) | Integer square root | Transactions | Indexing and slicing |
+| [026](day-026-minimum-shipping-capacity/LESSON.md) | Minimum shipping capacity | Isolation anomalies | Callable instances |
+| [027](day-027-median-of-two-arrays/LESSON.md) | Median of two arrays | Optimistic concurrency | Context managers |
+| [028](day-028-week-4-review/LESSON.md) | Week 4 DSA review | Week 4 design review | Week 4 Python review |
 
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
-three tracks. Days 7 and 14 start with cold attempts, then repair reading. Days 21–168 still contain
+three tracks. Days 7, 14, 21, and 28 start with cold attempts, then repair reading. Days 29–168 still contain
 assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
 
-Days 1–20 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+Days 1–28 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
 you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
-to read a finished design without filling a TODO. References for Days 7 and 14 are for comparison after
+to read a finished design without filling a TODO. References for Days 7, 14, 21, and 28 are for comparison after
 the cold attempt. Future expanded SD days use the same format.

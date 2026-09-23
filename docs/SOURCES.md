@@ -201,3 +201,29 @@ track the 3.12 maintenance series; executable evidence records the installed int
 The async pattern page redirected from /patterns/async-request-reply to the canonical address
 recorded above. These sources support technical semantics; no source claims that the authored
 service numbers were measured or that a problem occurs at a particular employer.
+
+## Days 25–28 teaching checks — 2026-09-23
+
+Official pages below were opened live for the named claims. Examples and proofs are original
+teaching material. Python output records the installed 3.12.10 interpreter; Python web
+documentation follows the 3.12 maintenance series. PostgreSQL designs were not executed.
+
+| Identifier | Exact title | Version/year | URL | Checked | Use |
+| --- | --- | --- | --- | --- | --- |
+| LeetCode 69 | Sqrt(x) | Live problem | https://leetcode.com/problems/sqrtx/ | 2026-09-23 | Day 25 floor root and operation restrictions |
+| LeetCode 1011 | Capacity To Ship Packages Within D Days | Live problem | https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/ | 2026-09-23 | Days 26 and 28 order and deadline contract |
+| LeetCode 4 | Median of Two Sorted Arrays | Live problem | https://leetcode.com/problems/median-of-two-sorted-arrays/ | 2026-09-23 | Day 27 median and runtime contract |
+| LeetCode 35 | Search Insert Position | Live problem | https://leetcode.com/problems/search-insert-position/ | 2026-09-23 | Day 28 existing review companion |
+| Python data model | 3. Data model | 3.12 | https://docs.python.org/3.12/reference/datamodel.html | 2026-09-23 | Days 25–28 subscription, callable objects, special-method dispatch |
+| Python functions | Built-in Functions | 3.12 | https://docs.python.org/3.12/library/functions.html | 2026-09-23 | Day 25 slice descriptor |
+| Python inspect | inspect — Inspect live objects | 3.12 | https://docs.python.org/3.12/library/inspect.html | 2026-09-23 | Day 26 named closure inspection |
+| Python compound statements | 8. Compound statements | 3.12 | https://docs.python.org/3.12/reference/compound_stmts.html | 2026-09-23 | Day 27 with entry, exit, and suppression |
+| Python sqlite3 | sqlite3 — DB-API 2.0 interface for SQLite databases | 3.12 | https://docs.python.org/3.12/library/sqlite3.html | 2026-09-23 | Day 25 local rollback demonstration |
+| PostgreSQL transactions | 3.4. Transactions | 18 | https://www.postgresql.org/docs/18/tutorial-transactions.html | 2026-09-23 | Day 25 transaction boundary |
+| PostgreSQL isolation | 13.2. Transaction Isolation | 18 | https://www.postgresql.org/docs/18/transaction-iso.html | 2026-09-23 | Days 26–28 isolation and retry semantics |
+| PostgreSQL update | UPDATE | 18 | https://www.postgresql.org/docs/18/sql-update.html | 2026-09-23 | Days 25–28 conditional update and returned rows |
+| RFC 9110 | HTTP Semantics | 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | 2026-09-23 | Days 27–28 If-Match preconditions |
+
+Days 21–24 already contained authored teaching files at the start of this expansion. Their
+navigation and recall cards were connected here; their historical source-check dates were
+not relabeled as new live verification.

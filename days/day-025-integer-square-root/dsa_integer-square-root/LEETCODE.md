@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 25.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Both routes return the floor root of a nonnegative integer. Local input is {"n": ...}; the online parameter is x and has a 32-bit nonnegative range. The online problem prohibits exponent functions/operators; use multiplication for candidate squares and no square-root shortcut.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement checked on 2026-09-23. Read [the topic explanation](CONCEPTS.md) before practice; adapt to the Python editor signature shown by the online judge.
 
 ## Interview checklist
 

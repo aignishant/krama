@@ -1,5 +1,7 @@
 # Practice — Rotated search
 
+Before attempting, learn from [CONCEPTS.md](CONCEPTS.md), including its trace and readiness questions.
+
 ## Product-company interview practice
 
 Open [today's LeetCode assignment](LEETCODE.md). Use the same 60-minute session;

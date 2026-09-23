@@ -32,6 +32,14 @@ is the first available card; future taught days will extend this file in day ord
 | 018 | Sync versus async | [Recall card](#day-018-sync-versus-async) |
 | 019 | Compatibility | [Recall card](#day-019-compatibility) |
 | 020 | Modular monolith | [Recall card](#day-020-modular-monolith) |
+| 021 | Week 3 design review | [Recall card](#day-021-week-3-design-review) |
+| 022 | Schema constraints | [Recall card](#day-022-schema-constraints) |
+| 023 | Index selection | [Recall card](#day-023-index-selection) |
+| 024 | Query plans | [Recall card](#day-024-query-plans) |
+| 025 | Transactions | [Recall card](#day-025-transactions) |
+| 026 | Isolation anomalies | [Recall card](#day-026-isolation-anomalies) |
+| 027 | Optimistic concurrency | [Recall card](#day-027-optimistic-concurrency) |
+| 028 | Week 4 design review | [Recall card](#day-028-week-4-design-review) |
 
 ## Day 001: Functional scope
 
@@ -368,6 +376,86 @@ another origin may need another connection. HTTP/3 requires a different transpor
 [Full lesson](../days/day-020-minimum-positive-window/sd_modular-monolith/CONCEPTS.md) ·
 [Complete reference](../days/day-020-minimum-positive-window/sd_modular-monolith/REFERENCE_DESIGN.md) ·
 [Your memo](../days/day-020-minimum-positive-window/sd_modular-monolith/DESIGN.md)
+
+## Day 021: Week 3 design review
+
+**Cue and mechanism:** After the cold revision, trace an acknowledged operation through failure and recovery.
+
+**Why it works and cost:** A durable status/ownership boundary supports recovery but adds coordination; synchronous completion can simplify short work.
+
+**Memory anchor and trap:** An acceptance response does not prove the work finished.
+
+[Full lesson](../days/day-021-week-3-review/sd_week-3-design-review/CONCEPTS.md) · [Complete reference](../days/day-021-week-3-review/sd_week-3-design-review/REFERENCE_DESIGN.md) · [Your design](../days/day-021-week-3-review/sd_week-3-design-review/DESIGN.md)
+
+## Day 022: Schema constraints
+
+**Cue and mechanism:** Use constraints for always-valid stored facts and choose indexes separately for access patterns.
+
+**Why it works and cost:** Authoritative checks protect every writer but add validation work; migration must account for old data.
+
+**Memory anchor and trap:** A single-row CHECK cannot establish an arbitrary cross-row invariant.
+
+[Full lesson](../days/day-022-lower-bound/sd_schema-constraints/CONCEPTS.md) · [Complete reference](../days/day-022-lower-bound/sd_schema-constraints/REFERENCE_DESIGN.md) · [Your design](../days/day-022-lower-bound/sd_schema-constraints/DESIGN.md)
+
+## Day 023: Index selection
+
+**Cue and mechanism:** For newest links by owner, lead the index with owner equality, followed by timestamp and unique tie-breaker.
+
+**Why it works and cost:** Matching access order can avoid sorting; every index costs storage and write maintenance.
+
+**Memory anchor and trap:** An index existing is not evidence of an index-only plan or measured speed.
+
+[Full lesson](../days/day-023-target-range/sd_index-selection/CONCEPTS.md) · [Complete reference](../days/day-023-target-range/sd_index-selection/REFERENCE_DESIGN.md) · [Your design](../days/day-023-target-range/sd_index-selection/DESIGN.md)
+
+## Day 024: Query plans
+
+**Cue and mechanism:** Follow rows through scan, filter, order, and limit; separate estimated from observed plans.
+
+**Why it works and cost:** Access-path choice depends on cardinality and statistics. Parent costs include children.
+
+**Memory anchor and trap:** ANALYZE executes the query; planner cost is not milliseconds.
+
+[Full lesson](../days/day-024-rotated-search/sd_query-plans/CONCEPTS.md) · [Complete reference](../days/day-024-rotated-search/sd_query-plans/REFERENCE_DESIGN.md) · [Your design](../days/day-024-rotated-search/sd_query-plans/DESIGN.md)
+
+## Day 025: Transactions
+
+**Cue and mechanism:** Changes that must succeed together belong in one database transaction.
+
+**Why it works and cost:** Quota reservation and link insertion commit or roll back together; short transactions reduce lock duration.
+
+**Memory anchor and trap:** A lost response after commit is not rollback. Resolve replay using a durable operation key.
+
+[Full lesson](../days/day-025-integer-square-root/sd_transactions/CONCEPTS.md) · [Complete reference](../days/day-025-integer-square-root/sd_transactions/REFERENCE_DESIGN.md) · [Your design](../days/day-025-integer-square-root/sd_transactions/DESIGN.md)
+
+## Day 026: Isolation anomalies
+
+**Cue and mechanism:** Two decisions from stale quota reads require a shared guarded write, not merely separate atomic transactions.
+
+**Why it works and cost:** A conditional increment plus affected-row check admits only the available unit; contention costs waits and retries.
+
+**Memory anchor and trap:** used=5 can coexist with six links after stale literal writes. Retry transient failures, not quota exhaustion.
+
+[Full lesson](../days/day-026-minimum-shipping-capacity/sd_isolation-anomalies/CONCEPTS.md) · [Complete reference](../days/day-026-minimum-shipping-capacity/sd_isolation-anomalies/REFERENCE_DESIGN.md) · [Your design](../days/day-026-minimum-shipping-capacity/sd_isolation-anomalies/DESIGN.md)
+
+## Day 027: Optimistic concurrency
+
+**Cue and mechanism:** Protect an edit with a version predicate in the same UPDATE that changes content and increments version.
+
+**Why it works and cost:** The write certifies the token matched; low-contention edits avoid human-duration locks at the cost of conflict handling.
+
+**Memory anchor and trap:** Two version-8 saves yield one version-9 success and one conflict. Blind reread-and-overwrite loses intent.
+
+[Full lesson](../days/day-027-median-of-two-arrays/sd_optimistic-concurrency/CONCEPTS.md) · [Complete reference](../days/day-027-median-of-two-arrays/sd_optimistic-concurrency/REFERENCE_DESIGN.md) · [Your design](../days/day-027-median-of-two-arrays/sd_optimistic-concurrency/DESIGN.md)
+
+## Day 028: Week 4 design review
+
+**Cue and mechanism:** After the cold attempt, revise one weak decision with an invariant, enforcement point, alternative, and failure timeline.
+
+**Why it works and cost:** A falsifiable next check makes the memo reviewable; extra infrastructure without a requirement adds cost.
+
+**Memory anchor and trap:** Fast indexed reads do not make a separate version-check-then-write atomic.
+
+[Full lesson](../days/day-028-week-4-review/sd_week-4-design-review/CONCEPTS.md) · [Complete reference](../days/day-028-week-4-review/sd_week-4-design-review/REFERENCE_DESIGN.md) · [Your design](../days/day-028-week-4-review/sd_week-4-design-review/DESIGN.md)
 
 
 ---

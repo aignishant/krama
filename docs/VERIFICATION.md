@@ -74,3 +74,31 @@ system-design workload estimate is represented as a measured production result.
 - Days 1–20 now have expanded topic lessons and complete SD references. Days 21–168 retain
   assignment briefs and preparation navigation. The 60/30/15-minute caps remain unchanged.
   No learner study completion or commit was recorded.
+
+## Days 25–28 documentation expansion — 2026-09-23
+
+- Added 12 topic explanations and four complete SD reference answers for integer square root,
+  shipping capacity, median partitioning, the Week 4 review, and their independent SD/Python tracks.
+- Added 12 new recall cards and connected reading routes, hubs, checklists, and precise
+  LeetCode contract comparisons. Connected the existing Days 21–24 lessons and references to
+  their unfinished navigation and added their 12 missing recall cards.
+- Preserved cold attempts before repair reading on Days 21 and 28. Clarified the two scheduled
+  DSA re-solves within the 60-minute gate; SD and Python retain their 30/15-minute caps.
+- Executed the 12 new Python teaching blocks on Python 3.12.10, including deliberate failures,
+  and independently re-executed the authored Markdown blocks. All recorded transcripts matched.
+- Checked 1,023 local Markdown links, including heading anchors, across the changed and new
+  teaching/navigation documents; all resolved.
+- The working tree was clean before authoring. Git comparison confirms no changes to learner
+  solutions, labs, fixtures, notes, DESIGN.md files, or either study progress ledger.
+- `python course.py check` and `python granth.py doctor` passed. The former validates the
+  adapted course format; neither tool certifies learner mastery or production behavior.
+- Opened the official sources listed in the dated [source ledger](SOURCES.md). PostgreSQL
+  schedules, SQL templates, and HTTP reference designs were not deployed or tested against
+  concurrent database sessions. Their assumptions and proposed next checks are explicit.
+- Days 1–28 now have connected topic lessons, recall cards, and complete SD references.
+  Days 29–168 retain assignment briefs and preparation navigation. No learner completion
+  was recorded and no commit was created.
+- The first `python granth.py check` reported 173 stale generated documents. Ran
+  `python granth.py index`, then reran the check successfully; all 173 generated documents
+  are current. Its upstream depth scan does not inspect these adapted topic-folder lessons.
+  `git diff --check` also passed.

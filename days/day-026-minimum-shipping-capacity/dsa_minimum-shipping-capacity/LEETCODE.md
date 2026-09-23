@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Medium. **Original course day:** 26.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Both routes preserve positive parcel weights in order and return minimum capacity within the deadline. Local input is {"weights": [...], "days": ...}; it allows any days>=1, including days greater than the number of parcels. The online constraints bound days by the parcel count. The same feasibility model handles both.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official problem statement checked on 2026-09-23. Read [the topic explanation](CONCEPTS.md) before practice; adapt to the Python editor signature shown by the online judge.
 
 ## Interview checklist
 

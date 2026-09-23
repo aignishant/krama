@@ -33,6 +33,14 @@ are taught; this is not a summary of all 168 planned days.
 | 018 | Fixed window maximum sum | [Recall card](#day-018-fixed-window-maximum-sum) |
 | 019 | Longest distinct substring | [Recall card](#day-019-longest-distinct-substring) |
 | 020 | Minimum positive window | [Recall card](#day-020-minimum-positive-window) |
+| 021 | Week 3 DSA review | [Recall card](#day-021-week-3-dsa-review) |
+| 022 | Lower bound | [Recall card](#day-022-lower-bound) |
+| 023 | Target range | [Recall card](#day-023-target-range) |
+| 024 | Rotated search | [Recall card](#day-024-rotated-search) |
+| 025 | Integer square root | [Recall card](#day-025-integer-square-root) |
+| 026 | Minimum shipping capacity | [Recall card](#day-026-minimum-shipping-capacity) |
+| 027 | Median of two arrays | [Recall card](#day-027-median-of-two-arrays) |
+| 028 | Week 4 DSA review | [Recall card](#day-028-week-4-dsa-review) |
 
 ## Day 001: Counting and reusing counts
 
@@ -348,6 +356,86 @@ an unbounded exact history consumes growing memory. Hashability and equality def
 
 [Full lesson](../days/day-020-minimum-positive-window/dsa_minimum-positive-window/CONCEPTS.md) ·
 [Your notes](../days/day-020-minimum-positive-window/dsa_minimum-positive-window/NOTES.md)
+
+## Day 021: Week 3 DSA review
+
+**Cue and mechanism:** Pointer moves need a proof of which candidates they remove; repair after the cold solve.
+
+**Why it works and cost:** Linear scans depend on the stated ordering, positivity, or uniqueness assumptions.
+
+**Memory anchor and trap:** A window rule for positive values can fail with negatives.
+
+[Full lesson](../days/day-021-week-3-review/dsa_week-3-dsa-review/CONCEPTS.md) · [Your notes](../days/day-021-week-3-review/dsa_week-3-dsa-review/NOTES.md)
+
+## Day 022: Lower bound
+
+**Cue and mechanism:** An ordered first qualifying position suggests lower bound; maintain the smaller prefix and qualifying suffix.
+
+**Why it works and cost:** Halving the unknown range gives O(log(n+1)) time and O(1) space.
+
+**Memory anchor and trap:** In [2,2,5], target 2 starts at 0; the answer can equal length.
+
+[Full lesson](../days/day-022-lower-bound/dsa_lower-bound/CONCEPTS.md) · [Your notes](../days/day-022-lower-bound/dsa_lower-bound/NOTES.md)
+
+## Day 023: Target range
+
+**Cue and mechanism:** Find L=first >= target and U=first > target; equal values occupy [L,U).
+
+**Why it works and cost:** Two logarithmic searches avoid scanning a long equal run; O(1) auxiliary space.
+
+**Memory anchor and trap:** Return [L,U-1] only when L<U; absence needs the local no-answer result.
+
+[Full lesson](../days/day-023-target-range/dsa_target-range/CONCEPTS.md) · [Your notes](../days/day-023-target-range/dsa_target-range/NOTES.md)
+
+## Day 024: Rotated search
+
+**Cue and mechanism:** With distinct rotated sorted values, identify the sorted half and keep it only if its range can contain the target.
+
+**Why it works and cost:** A valid half is eliminated each step: O(log(n+1)) time, O(1) space.
+
+**Memory anchor and trap:** Duplicates such as [1,0,1,1,1] can hide the seam and defeat the logarithmic proof.
+
+[Full lesson](../days/day-024-rotated-search/dsa_rotated-search/CONCEPTS.md) · [Your notes](../days/day-024-rotated-search/dsa_rotated-search/NOTES.md)
+
+## Day 025: Integer square root
+
+**Cue and mechanism:** An extremal integer with monotone squared feasibility suggests answer-space search.
+
+**Why it works and cost:** Keep lo²<=n<hi²; adjacency proves lo is maximal. O(log(n+1)) comparisons, O(1) integer variables.
+
+**Memory anchor and trap:** At n=16, < gives 3 while <= admits 4. Avoid floating-point approximations.
+
+[Full lesson](../days/day-025-integer-square-root/dsa_integer-square-root/CONCEPTS.md) · [Your notes](../days/day-025-integer-square-root/dsa_integer-square-root/NOTES.md)
+
+## Day 026: Minimum shipping capacity
+
+**Cue and mechanism:** Minimize capacity by testing ordered greedy packing, then binary-search the first feasible capacity.
+
+**Why it works and cost:** Greedy ships at least as long a prefix as any schedule; feasibility stays true as capacity grows. O(n log(S-M+2)) time, O(1) space.
+
+**Memory anchor and trap:** [4,4,4] in two days needs 8, although the average-weight lower bound is 6.
+
+[Full lesson](../days/day-026-minimum-shipping-capacity/dsa_minimum-shipping-capacity/CONCEPTS.md) · [Your notes](../days/day-026-minimum-shipping-capacity/dsa_minimum-shipping-capacity/NOTES.md)
+
+## Day 027: Median of two arrays
+
+**Cue and mechanism:** A combined median in two sorted arrays suggests a balanced cut with two cross-boundary comparisons.
+
+**Why it works and cost:** Search the shorter array; each violation rules out one direction. O(1+log(min(m,n)+1)) time and O(1) space.
+
+**Memory anchor and trap:** Odd length uses max(left); even length averages max(left) and min(right). Empty sides need sentinels.
+
+[Full lesson](../days/day-027-median-of-two-arrays/dsa_median-of-two-arrays/CONCEPTS.md) · [Your notes](../days/day-027-median-of-two-arrays/dsa_median-of-two-arrays/NOTES.md)
+
+## Day 028: Week 4 DSA review
+
+**Cue and mechanism:** After the two cold solves, review predicate, bound meanings, discarded candidates, and termination.
+
+**Why it works and cost:** The search proof and feasibility-check proof are separate; multiply per-check cost by candidate tests.
+
+**Memory anchor and trap:** On [lo,hi]=[0,1], lo=mid stalls unless adjacency is already the stopping condition.
+
+[Full lesson](../days/day-028-week-4-review/dsa_week-4-dsa-review/CONCEPTS.md) · [Your notes](../days/day-028-week-4-review/dsa_week-4-dsa-review/NOTES.md)
 
 
 ---
