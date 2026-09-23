@@ -23,3 +23,14 @@ This is a guided assignment hub. Assigned IDs: DSA-38, SD-38, PY-38; none are cl
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.
 See [daily checklist](CHECKLIST.md) and [master plan](../../docs/00_MASTER_PLAN.md).
+
+## Topic explanations
+
+Follow each subject README for explanation, trace, readiness, practice, verification, and evidence.
+
+- [Cycle entry](dsa_cycle-entry/CONCEPTS.md).
+- [TTL and eviction](sd_ttl-and-eviction/CONCEPTS.md).
+- [Ordering and hashing](lang_ordering-and-hashing/CONCEPTS.md).
+
+[Complete SD reference answer](sd_ttl-and-eviction/REFERENCE_DESIGN.md) is author-written; [DESIGN.md](sd_ttl-and-eviction/DESIGN.md) is your practice file.
+Reading alone does not complete a track; optional depth can use another sitting.

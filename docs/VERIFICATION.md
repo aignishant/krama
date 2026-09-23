@@ -131,3 +131,33 @@ system-design workload estimate is represented as a measured production result.
   and cache failure scenarios are explicitly hypothetical. No database, cache, replication
   system, or production performance claim was tested by the Python models.
 - No learner completion or commit was recorded.
+
+## Days 37–40 documentation expansion — 2026-09-23
+
+- Added 12 topic explanations and four complete SD reference answers. Connected subject
+  navigation, day hubs, checklists, practice routes, 12 recall cards, the SD reference index,
+  glossary, and teaching-availability notices. Days 1–40 now have expanded teaching across
+  all three tracks; Days 41–168 retain assignment briefs and preparation navigation.
+- Clarified online node-return interfaces versus local values, indices, and serialization.
+  Day 38 explains why pos is construction metadata rather than a detection shortcut.
+  The pointer proofs cover even-length ties, cycle entry, identity-preserving merges, and
+  the exact gap/stopping-rule pair for removing a node from the end.
+- Executed all 12 teaching blocks on Python 3.12.10, then extracted and reran them from
+  the authored Markdown. All recorded output matched, including deliberate failure examples.
+- Checked 1,002 local links and heading anchors across 54 teaching/navigation documents;
+  all resolved. Each recall file has exactly one indexed card per day for Days 1–40, in order.
+- Compared SHA256 hashes for 1,181 learner/progress files captured before authoring; all
+  remained byte-identical. Solutions, labs, tests, fixtures, notes, DESIGN.md files, and
+  study ledgers were preserved. No learner completion or commit was recorded.
+- `python course.py check`, `python granth.py doctor`, `python granth.py check`, and
+  `git diff --check` passed. All 173 generated documents were already current. The upstream
+  depth checker does not inspect the adapted topic-folder teaching layout, so this is not
+  a claim of upstream depth certification or learner mastery.
+- `python granth.py brief 37`, `38`, `39`, and `40` each returned a nonzero completion-order
+  guard because the whole-day learner ledger still starts at Day 1. Documentation authoring
+  continued under the master plan's independent authoring/study distinction, ADR-0001, and
+  the explicit request for the next four documents; no study gate or day order was changed.
+- Primary-source checks are listed in [SOURCES.md](SOURCES.md). SD calculations use explicit
+  hypothetical inputs. The cache examples are deterministic models, not deployed concurrency,
+  performance, authorization, or clock tests. Freshness bounds remain conditional on their
+  stated assumptions, and the reference designs identify the checks needed to validate them.

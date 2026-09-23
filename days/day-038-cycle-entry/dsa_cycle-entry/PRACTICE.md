@@ -10,6 +10,8 @@ The local implementation steps below apply when you choose the local route.
 
 ## Contract
 
+First learn [the mechanism](CONCEPTS.md#the-mechanism) and pass [the readiness check](CONCEPTS.md#readiness-before-practice).
+
 Build nodes from values and link the tail to index pos, or no cycle for -1. Return entry index or -1. Nonempty when pos >= 0.
 
 Implement `solve(data)` in [solution.py](solution.py). `data` is the JSON object below.

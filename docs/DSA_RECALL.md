@@ -49,6 +49,10 @@ are taught; this is not a summary of all 168 planned days.
 | 034 | Count inversions | [Recall card](#day-034-count-inversions) |
 | 035 | Week 5 DSA review | [Recall card](#day-035-week-5-dsa-review) |
 | 036 | Reverse a linked list | [Recall card](#day-036-reverse-a-linked-list) |
+| 037 | Middle node | [Recall card](#day-037-middle-node) |
+| 038 | Cycle entry | [Recall card](#day-038-cycle-entry) |
+| 039 | Merge linked lists | [Recall card](#day-039-merge-linked-lists) |
+| 040 | Remove from end | [Recall card](#day-040-remove-from-end) |
 
 ## Day 001: Counting and reusing counts
 
@@ -524,6 +528,46 @@ an unbounded exact history consumes growing memory. Hashability and equality def
 **Memory anchor and trap:** Save B before setting A.next=None; building and serializing still allocate O(n).
 
 [Full lesson](../days/day-036-reverse-a-linked-list/dsa_reverse-a-linked-list/CONCEPTS.md) · [Your evidence](../days/day-036-reverse-a-linked-list/dsa_reverse-a-linked-list/NOTES.md)
+
+## Day 037: Middle node
+
+**Cue and mechanism:** An unknown-length acyclic chain suggests slow/fast pointers, advancing one/two edges.
+
+**Why it works and cost:** After k rounds their distances are k and 2k; O(L) time and O(1) traversal space.
+
+**Memory anchor and trap:** A-B ends at B for the second-middle rule; a stricter guard returns A.
+
+[Full lesson](../days/day-037-middle-node/dsa_middle-node/CONCEPTS.md) · [Your evidence](../days/day-037-middle-node/dsa_middle-node/NOTES.md)
+
+## Day 038: Cycle entry
+
+**Cue and mechanism:** A possible repeated node suggests Floyd detection followed by equal-speed entry search.
+
+**Why it works and cost:** At a meeting t is divisible by cycle length, so mu more steps land at entry; O(L) time/O(1) detection space.
+
+**Memory anchor and trap:** A-B-C-D-E-C meets at D but enters at C; equal payloads do not establish a cycle.
+
+[Full lesson](../days/day-038-cycle-entry/dsa_cycle-entry/CONCEPTS.md) · [Your evidence](../days/day-038-cycle-entry/dsa_cycle-entry/NOTES.md)
+
+## Day 039: Merge linked lists
+
+**Cue and mechanism:** Two sorted disjoint chains can be merged by selecting heads and advancing an output tail.
+
+**Why it works and cost:** The selected head is the smallest remaining value; O(n+m) time and O(1) merge workspace.
+
+**Memory anchor and trap:** A dummy precedes the real head; copied values pass serialization but fail identity.
+
+[Full lesson](../days/day-039-merge-linked-lists/dsa_merge-linked-lists/CONCEPTS.md) · [Your evidence](../days/day-039-merge-linked-lists/dsa_merge-linked-lists/NOTES.md)
+
+## Day 040: Remove from end
+
+**Cue and mechanism:** A backward rank on a forward chain suggests a fixed gap and a dummy predecessor.
+
+**Why it works and cost:** At the tail, an n-edge gap leaves slow at L-n; O(L) time/O(1) traversal state.
+
+**Memory anchor and trap:** Return dummy.next after the splice; pair the lead distance with its exact stopping rule.
+
+[Full lesson](../days/day-040-remove-from-end/dsa_remove-from-end/CONCEPTS.md) · [Your evidence](../days/day-040-remove-from-end/dsa_remove-from-end/NOTES.md)
 
 
 ---

@@ -2,10 +2,10 @@
 
 ## Navigation — where to start
 
-1. **Prepare before practice:** read the [design method](../../../docs/SD_DESIGN_GUIDE.md). This is a shared preparation guide; the full explanation of **TTL and eviction** is not yet expanded.
-2. **Understand before attempting:** when this day is expanded, start with its topic explanation, worked trace, and readiness check. A broad preparation guide alone is not the full lesson; follow [the teaching workflow](../../../docs/TEACHING_WORKFLOW.md).
-3. **Read the assignment:** use [the bounded design task](#assignment) after the explanation.
-4. **Write your decision:** use [DESIGN.md](DESIGN.md) for assumptions, the artifact, an alternative, and a failure trace.
+1. **Learn:** read [the topic explanation](CONCEPTS.md) for vocabulary, intuition, and the mechanism.
+2. **Trace and check readiness:** follow [the worked trace](CONCEPTS.md#worked-trace), then answer [the readiness questions](CONCEPTS.md#readiness-before-practice) before attempting the assignment.
+3. **Read the assignment:** open [the bounded design task](#assignment). Read [the complete reference answer](REFERENCE_DESIGN.md) for guidance, or compare it after an independent attempt.
+4. **Write your decision:** [DESIGN.md](DESIGN.md) is your practice file; its TODOs belong to you. The assistant-written [REFERENCE_DESIGN.md](REFERENCE_DESIGN.md) is complete and available for reading without practice.
 5. **Verify:** apply [the acceptance check](#acceptance-check), testing whether the stated user outcome is observable.
 6. **Record:** keep actual evidence, uncertainty, and status in [DESIGN.md](DESIGN.md).
 7. **Recall later without practice:** read the [system design summary file](../../../docs/SD_RECALL.md) for previously studied topics. Cards appear as days are taught; their presence does not mark study complete.
@@ -20,6 +20,8 @@
 Choose expiration separately from memory eviction; explain behavior when all popular keys expire together.
 
 ## Work method
+
+Use [the mechanism and worked trace](CONCEPTS.md#the-mechanism) before producing your own artifact.
 
 Produce one bounded artifact: a small diagram, a calculation with units, a state table or a short decision memo. Label assumptions before reasoning from them. Trace one concrete request or failure through the result. Compare at least one alternative and state why your choice fits the requirements.
 

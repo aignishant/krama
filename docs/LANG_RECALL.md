@@ -48,6 +48,10 @@ the first available card; future taught days will extend this file in day order.
 | 034 | Slots | [Recall card](#day-034-slots) |
 | 035 | Week 5 Python review | [Recall card](#day-035-week-5-python-review) |
 | 036 | Dataclass defaults | [Recall card](#day-036-dataclass-defaults) |
+| 037 | Frozen models | [Recall card](#day-037-frozen-models) |
+| 038 | Ordering and hashing | [Recall card](#day-038-ordering-and-hashing) |
+| 039 | Enums | [Recall card](#day-039-enums) |
+| 040 | Composition | [Recall card](#day-040-composition) |
 
 ## Day 001: Identity, equality, and aliasing
 
@@ -517,6 +521,46 @@ binding work; large unpacked collections have separate costs. Error wording can 
 **Memory anchor and trap:** field(default_factory=list) isolates instances; lambda: shared still aliases.
 
 [Full lesson](../days/day-036-reverse-a-linked-list/lang_dataclass-defaults/CONCEPTS.md) · [Your evidence](../days/day-036-reverse-a-linked-list/lang_dataclass-defaults/NOTES.md)
+
+## Day 037: Frozen models
+
+**Cue and mechanism:** Use frozen records for stable field bindings, and inspect nested ownership separately.
+
+**Why it works and cost:** A tuple snapshot of k string labels costs O(k); a frozen wrapper around a list still aliases that list.
+
+**Memory anchor and trap:** packet.tags assignment fails while packet.tags.append succeeds; shallow is not deep.
+
+[Full lesson](../days/day-037-middle-node/lang_frozen-models/CONCEPTS.md) · [Your evidence](../days/day-037-middle-node/lang_frozen-models/NOTES.md)
+
+## Day 038: Ordering and hashing
+
+**Cue and mechanism:** Value records need compatible equality, ordering, hashing, and mutability choices.
+
+**Why it works and cost:** Equal objects must hash equally; frozen ordered records compare lexicographically by participating fields.
+
+**Memory anchor and trap:** Default mutable dataclasses are unhashable; unsafe_hash does not make mutation safe.
+
+[Full lesson](../days/day-038-cycle-entry/lang_ordering-and-hashing/CONCEPTS.md) · [Your evidence](../days/day-038-cycle-entry/lang_ordering-and-hashing/NOTES.md)
+
+## Day 039: Enums
+
+**Cue and mechanism:** Finite domain states fit Enum; legal changes require a separate transition table.
+
+**Why it works and cost:** Boundary parsing rejects unknown values and edge validation rejects impossible paths.
+
+**Memory anchor and trap:** queued -> succeeded uses valid names but is an illegal edge in this model.
+
+[Full lesson](../days/day-039-merge-linked-lists/lang_enums/CONCEPTS.md) · [Your evidence](../days/day-039-merge-linked-lists/lang_enums/NOTES.md)
+
+## Day 040: Composition
+
+**Cue and mechanism:** Independently varying configuration suggests a small composed policy object.
+
+**Why it works and cost:** Delegation separates policy decisions from orchestration and permits isolated tests; ownership remains explicit.
+
+**Memory anchor and trap:** Runner has a BatchPolicy; sharing a mutable collaborator can still leak state.
+
+[Full lesson](../days/day-040-remove-from-end/lang_composition/CONCEPTS.md) · [Your evidence](../days/day-040-remove-from-end/lang_composition/NOTES.md)
 
 
 ---

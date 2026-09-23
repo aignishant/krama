@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 39.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Online receives list1/list2 heads and returns a merged head by splicing original nodes. Local builds from a/b, relinks original nodes, and returns serialized values. Both inputs are sorted; the construction yields disjoint chains. Choosing the left input on ties is a documented deterministic convention, not an extra online requirement.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official public problem statement checked on 2026-09-23. Learn [the pointer mechanism](CONCEPTS.md) before attempting; no additional algorithm is required for this companion.
 
 ## Interview checklist
 

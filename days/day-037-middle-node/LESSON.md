@@ -23,3 +23,14 @@ This is a guided assignment hub. Assigned IDs: DSA-37, SD-37, PY-37; none are cl
 You may take these in separate sittings and progress at different speeds.
 Read the relevant subject only, then record evidence in that track's notes and ledger.
 See [daily checklist](CHECKLIST.md) and [master plan](../../docs/00_MASTER_PLAN.md).
+
+## Topic explanations
+
+Follow each subject README for explanation, trace, readiness, practice, verification, and evidence.
+
+- [Middle node](dsa_middle-node/CONCEPTS.md).
+- [Invalidation race](sd_invalidation-race/CONCEPTS.md).
+- [Frozen models](lang_frozen-models/CONCEPTS.md).
+
+[Complete SD reference answer](sd_invalidation-race/REFERENCE_DESIGN.md) is author-written; [DESIGN.md](sd_invalidation-race/DESIGN.md) is your practice file.
+Reading alone does not complete a track; optional depth can use another sitting.

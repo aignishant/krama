@@ -99,3 +99,16 @@ introduced it instead of redefining it.
 | Tombstone | A deletion marker used to suppress older stored values. | [Day 33 sd](../days/day-033-kth-smallest/sd_ttl-and-deletion/CONCEPTS.md) | Deletion state |
 | Hot partition | A partition receiving more request work than its capacity supports. | [Day 32 sd](../days/day-032-minimum-meeting-rooms/sd_hot-partitions/CONCEPTS.md) | Load skew |
 | Cache-aside | Application-managed cache lookup followed by source loading on a miss. | [Day 36 sd](../days/day-036-reverse-a-linked-list/sd_cache-aside/CONCEPTS.md) | Load on miss |
+
+## Days 37–40 additions
+
+| Term | Meaning | Introduction | Related phrase |
+| --- | --- | --- | --- |
+| Cycle entry | First node on a reachable cycle when traversing from the head. | [Day 38 DSA](../days/day-038-cycle-entry/dsa_cycle-entry/CONCEPTS.md) | Node identity |
+| Fixed pointer gap | A constant edge distance maintained by equal-speed pointers. | [Day 40 DSA](../days/day-040-remove-from-end/dsa_remove-from-end/CONCEPTS.md) | Predecessor |
+| Invalidation race | An interleaving in which an obsolete loader publishes after a writer removes a cached value. | [Day 37 SD](../days/day-037-middle-node/sd_invalidation-race/CONCEPTS.md) | Late fill |
+| Cache eviction | Removal to satisfy capacity policy, independently of freshness expiry. | [Day 38 SD](../days/day-038-cycle-entry/sd_ttl-and-eviction/CONCEPTS.md) | LRU/LFU |
+| Single-flight | Sharing one in-progress operation among same-key callers within a defined coordination scope. | [Day 39 SD](../days/day-039-merge-linked-lists/sd_stampede-control/CONCEPTS.md) | Request coalescing |
+| Negative caching | Retaining an authoritative absence result for a bounded lifetime. | [Day 40 SD](../days/day-040-remove-from-end/sd_negative-caching/CONCEPTS.md) | NOT_FOUND |
+| Frozen dataclass | A dataclass with generated guards against ordinary field assignment and deletion. | [Day 37 Python](../days/day-037-middle-node/lang_frozen-models/CONCEPTS.md) | Shallow protection |
+| Composition | Storing and delegating to a collaborator with its own behavioral contract. | [Day 40 Python](../days/day-040-remove-from-end/lang_composition/CONCEPTS.md) | Policy object |

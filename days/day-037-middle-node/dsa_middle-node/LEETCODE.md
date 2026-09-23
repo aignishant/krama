@@ -11,9 +11,9 @@ the local exercise as the main attempt; use its companion as a variation or revi
 
 **Difficulty:** Easy. **Original course day:** 37.
 
-**Contract comparison:** Practice the same pattern using the official constraints and judge interface. Local output ordering, edge cases, and input adapters may differ.
+**Contract comparison:** Online receives a nonempty head and returns the actual middle node (the second middle for even length). Local builds from values and returns the middle value, or None for an empty list. The online suffix display is not a request to return an array.
 
-Official page checked on 2026-09-18; premium statements were not accessible.
+Official public problem statement checked on 2026-09-23. Learn [the pointer mechanism](CONCEPTS.md) before attempting; no additional algorithm is required for this companion.
 
 ## Interview checklist
 

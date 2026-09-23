@@ -52,13 +52,17 @@ Use `python course.py start 1 --track dsa` from the root to find the first assig
 | [034](day-034-count-inversions/LESSON.md) | Count inversions | Storage decision memo | Slots |
 | [035](day-035-week-5-review/LESSON.md) | Week 5 DSA review | Week 5 design review | Week 5 Python review |
 | [036](day-036-reverse-a-linked-list/LESSON.md) | Reverse a linked list | Cache aside | Dataclass defaults |
+| [037](day-037-middle-node/LESSON.md) | Middle node | Invalidation race | Frozen models |
+| [038](day-038-cycle-entry/LESSON.md) | Cycle entry | TTL and eviction | Ordering and hashing |
+| [039](day-039-merge-linked-lists/LESSON.md) | Merge linked lists | Stampede control | Enums |
+| [040](day-040-remove-from-end/LESSON.md) | Remove from end | Negative caching | Composition |
 
 These days include topic lessons, worked traces, readiness checks, and recall cards for all
-three tracks. Days 7, 14, 21, 28, and 35 start with cold attempts, then repair reading. Days 37–168 still contain
+three tracks. Days 7, 14, 21, 28, and 35 start with cold attempts, then repair reading. Days 41–168 still contain
 assignment briefs with preparation navigation.
 Teaching availability does not mark learner exercises or progress complete.
 
-Days 1–36 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
+Days 1–40 also include complete SD reference answers. The assistant writes `REFERENCE_DESIGN.md`;
 you fill `DESIGN.md` when practicing. Use [the reference index](../docs/SD_DESIGN_GUIDE.md#available-complete-reference-designs)
 to read a finished design without filling a TODO. References for Days 7, 14, 21, 28, and 35 are for comparison after
 the cold attempt. Future expanded SD days use the same format.

@@ -48,6 +48,10 @@ is the first available card; future taught days will extend this file in day ord
 | 034 | Storage decision memo | [Recall card](#day-034-storage-decision-memo) |
 | 035 | Week 5 design review | [Recall card](#day-035-week-5-design-review) |
 | 036 | Cache aside | [Recall card](#day-036-cache-aside) |
+| 037 | Invalidation race | [Recall card](#day-037-invalidation-race) |
+| 038 | TTL and eviction | [Recall card](#day-038-ttl-and-eviction) |
+| 039 | Stampede control | [Recall card](#day-039-stampede-control) |
+| 040 | Negative caching | [Recall card](#day-040-negative-caching) |
 
 ## Day 001: Functional scope
 
@@ -544,6 +548,46 @@ another origin may need another connection. HTTP/3 requires a different transpor
 **Memory anchor and trap:** DB failure is not not-found; fill failure need not fail a valid fetched redirect.
 
 [Full lesson](../days/day-036-reverse-a-linked-list/sd_cache-aside/CONCEPTS.md) · [Complete reference](../days/day-036-reverse-a-linked-list/sd_cache-aside/REFERENCE_DESIGN.md) · [Your design](../days/day-036-reverse-a-linked-list/sd_cache-aside/DESIGN.md)
+
+## Day 037: Invalidation race
+
+**Cue and mechanism:** Concurrent miss loaders and writers require reasoning about late fills after invalidation.
+
+**Why it works and cost:** A capped loader delay D plus fixed TTL T gives a conditional D+T bound; version barriers need atomic publication and durable lifecycle rules.
+
+**Memory anchor and trap:** Read v4, commit v5, delete, then fill v4; deleting is not cancellation.
+
+[Full lesson](../days/day-037-middle-node/sd_invalidation-race/CONCEPTS.md) · [Your evidence](../days/day-037-middle-node/sd_invalidation-race/DESIGN.md) · [Complete reference](../days/day-037-middle-node/sd_invalidation-race/REFERENCE_DESIGN.md)
+
+## Day 038: TTL and eviction
+
+**Cue and mechanism:** Choose TTL for freshness and eviction for memory pressure; they solve different problems.
+
+**Why it works and cost:** A cache hit must pass an expiry check; bounded downward jitter spreads many-key reload times.
+
+**Memory anchor and trap:** A popular key can expire and a fresh key can be evicted; jitter alone cannot protect one hot key.
+
+[Full lesson](../days/day-038-cycle-entry/sd_ttl-and-eviction/CONCEPTS.md) · [Your evidence](../days/day-038-cycle-entry/sd_ttl-and-eviction/DESIGN.md) · [Complete reference](../days/day-038-cycle-entry/sd_ttl-and-eviction/REFERENCE_DESIGN.md)
+
+## Day 039: Stampede control
+
+**Cue and mechanism:** A hot miss suggests single-flight; correlated keys suggest jitter; tolerated stale answers allow bounded background refresh.
+
+**Why it works and cost:** One pending result shares same-key work within a defined scope; coordination and freshness limits still cost state and failure handling.
+
+**Memory anchor and trap:** Six misses can share one load; a failed refresh must not extend stale_until forever.
+
+[Full lesson](../days/day-039-merge-linked-lists/sd_stampede-control/CONCEPTS.md) · [Your evidence](../days/day-039-merge-linked-lists/sd_stampede-control/DESIGN.md) · [Complete reference](../days/day-039-merge-linked-lists/sd_stampede-control/REFERENCE_DESIGN.md)
+
+## Day 040: Negative caching
+
+**Cue and mechanism:** Repeated authoritative missing-key lookups can use a distinct short-lived NOT_FOUND entry.
+
+**Why it works and cost:** It suppresses repeated work but delays visibility of creation; use scoped keys, expiry, and invalidation.
+
+**Memory anchor and trap:** MISS, NOT_FOUND, and origin error are different; a timeout must not become a cached 404.
+
+[Full lesson](../days/day-040-remove-from-end/sd_negative-caching/CONCEPTS.md) · [Your evidence](../days/day-040-remove-from-end/sd_negative-caching/DESIGN.md) · [Complete reference](../days/day-040-remove-from-end/sd_negative-caching/REFERENCE_DESIGN.md)
 
 
 ---

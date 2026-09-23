@@ -10,6 +10,8 @@ The local implementation steps below apply when you choose the local route.
 
 ## Contract
 
+First learn [the mechanism](CONCEPTS.md#the-mechanism) and pass [the readiness check](CONCEPTS.md#readiness-before-practice).
+
 Build singly linked nodes and return the second middle value for even length; null for empty.
 
 Implement `solve(data)` in [solution.py](solution.py). `data` is the JSON object below.

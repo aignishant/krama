@@ -10,6 +10,8 @@ The local implementation steps below apply when you choose the local route.
 
 ## Contract
 
+First learn [the mechanism](CONCEPTS.md#the-mechanism) and pass [the readiness check](CONCEPTS.md#readiness-before-practice).
+
 Build two sorted linked lists, merge by relinking their nodes, then serialize.
 
 Implement `solve(data)` in [solution.py](solution.py). `data` is the JSON object below.

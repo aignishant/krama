@@ -263,3 +263,30 @@ No claim of checking its split/recovery details is made; Day 29 labels its split
 generic model and leaves engine-specific recovery verification as a next step. Tombstone
 retention durations, freshness targets, capacities, and request deadlines elsewhere are stated
 design assumptions, not vendor limits or measured production observations.
+
+## Days 37–40 teaching checks — 2026-09-23
+
+Opened these primary sources for the listed semantics. Examples, pointer proofs, traces,
+numeric budgets, and policy decisions are original teaching material. All 12 Python teaching
+blocks ran locally; cache schedules are deterministic models, not concurrent service tests.
+The local interpreter is Python 3.12.10; the documentation URLs follow the 3.12 maintenance series.
+
+| Source | Checked page | Use |
+| --- | --- | --- |
+| LeetCode 876 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Node result, nonempty input, second middle |
+| LeetCode 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Entry node, no mutation, pos is construction metadata |
+| LeetCode 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Relink sorted input nodes and return head |
+| LeetCode 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Valid rank, return new head |
+| Python dataclasses | [Data Classes](https://docs.python.org/3.12/library/dataclasses.html) | Frozen assignment guards, generated comparisons/hash, field participation |
+| Python enum | [Support for enumerations](https://docs.python.org/3.12/library/enum.html) | Members, names, values, and lookup |
+| Python classes | [Classes tutorial](https://docs.python.org/3.12/tutorial/classes.html) | Attribute sharing and object composition mechanisms |
+| Azure architecture | [Cache-Aside Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside) | Source ownership and consistency limitations |
+| Redis eviction | [Key eviction](https://redis.io/docs/latest/develop/reference/eviction/) | Memory pressure and eviction choices |
+| Redis expiration | [EXPIRE](https://redis.io/docs/latest/commands/expire/) | Key expiration and timeout behavior |
+| Go synchronization | [singleflight](https://pkg.go.dev/golang.org/x/sync/singleflight) | Duplicate-call suppression within a Group |
+| RFC 5861 (2010) | [HTTP Cache-Control Extensions for Stale Content](https://www.rfc-editor.org/rfc/rfc5861) | Bounded stale-while-revalidate; application policy is an explicit analogy |
+| RFC 2308 (1998) | [Negative Caching of DNS Queries](https://www.rfc-editor.org/rfc/rfc2308) | Protocol example of caching absence; application tags/TTLs are not DNS rules |
+
+No online solutions were submitted, and no cache or origin database was deployed or load-tested.
+Freshness bounds depend on stated loader, clock, source, publication, and downstream-cache
+assumptions; they are not claims about an untested implementation.

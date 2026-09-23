@@ -64,6 +64,10 @@ second design task. Existing practice files are preserved when references are ad
 | 034 | [Storage decision memo](../days/day-034-count-inversions/sd_storage-decision-memo/REFERENCE_DESIGN.md) |
 | 035 | [Week 5 design review — compare after the cold attempt](../days/day-035-week-5-review/sd_week-5-design-review/REFERENCE_DESIGN.md) |
 | 036 | [Cache aside](../days/day-036-reverse-a-linked-list/sd_cache-aside/REFERENCE_DESIGN.md) |
+| 037 | [Invalidation race](../days/day-037-middle-node/sd_invalidation-race/REFERENCE_DESIGN.md) |
+| 038 | [TTL and eviction](../days/day-038-cycle-entry/sd_ttl-and-eviction/REFERENCE_DESIGN.md) |
+| 039 | [Stampede control](../days/day-039-merge-linked-lists/sd_stampede-control/REFERENCE_DESIGN.md) |
+| 040 | [Negative caching](../days/day-040-remove-from-end/sd_negative-caching/REFERENCE_DESIGN.md) |
 
 Later days receive a complete reference when their topic lessons are expanded. Each reference
 is one reasoned answer under stated assumptions; another design can be valid with different

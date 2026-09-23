@@ -29,16 +29,16 @@ and [interview practice method](docs/INTERVIEW_PREP.md). Premium companions have
 3. For later reading without practice, use [DSA recall](docs/DSA_RECALL.md),
    [Python recall](docs/LANG_RECALL.md), or [system design recall](docs/SD_RECALL.md).
 
-Days 1–36 have full topic explanations across all three tracks, with worked traces, observed
+Days 1–40 have full topic explanations across all three tracks, with worked traces, observed
 teaching failures, readiness checks, and recall cards. Find them in the
 [expanded teaching index](days/README.md#expanded-teaching-days). The newest block starts at
-[Day 29](days/day-029-stable-record-sorting/LESSON.md) and ends at
-[Day 36](days/day-036-reverse-a-linked-list/LESSON.md). Days 7, 14, 21, 28, and 35 begin with
-cold attempts before repair reading. Days 37–168 have preparation navigation until expanded.
+[Day 37](days/day-037-middle-node/LESSON.md) and ends at
+[Day 40](days/day-040-remove-from-end/LESSON.md). Days 7, 14, 21, 28, and 35 begin with
+cold attempts before repair reading. Days 41–168 have preparation navigation until expanded.
 [The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
 explanations and recall cards part of every future day expansion.
 
-For system design, Days 1–36 also include a complete **REFERENCE_DESIGN.md** written by the
+For system design, Days 1–40 also include a complete **REFERENCE_DESIGN.md** written by the
 assistant. **DESIGN.md** is your practice file: its `TODO(me)` prompts are for you when you
 choose to practice. Read the reference first for guidance or compare after your own attempt;
 on weekly review days, open the reference only after the cold review attempt.
