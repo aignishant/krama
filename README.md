@@ -1,92 +1,119 @@
-# Krama — DSA, system design and advanced Python
+# Krama
 
-**168 study days · 24 weekly phases · three independent tracks.**
+**180 days. Two tracks, side by side. One goal: crack a product-company interview.**
 
-Built using the supplied [Granth skill](https://github.com/aignishant/granth-skill), adapted
-to your daily schedule and five years of Python experience. This is the full daily assignment
-plan and practice workspace; long-form Granth teaching chapters can be expanded as you study.
+Every day teaches one DSA topic and one system design topic. You do both, every day,
+for six months. At the end you can answer either kind of question out loud, to a stranger,
+without notes.
 
-| Track | Daily budget | Focus |
-| --- | --- | --- |
-| `dsa` | 60 minutes | 144 core problems, runnable starter tests, hints, optional extensions and 24 reviews |
-| `sd` | 30 minutes | Fundamentals, distributed systems, case studies and design defenses |
-| `lang` | 15 minutes | Python internals, typing, concurrency, testing, profiling and production code |
+Written for someone starting from **zero**. Not a computer science graduate. Not someone
+brushing up. If you need to be told what a server is, you are the reader.
 
-Every seventh session reviews the previous six. You can study the three tracks separately and
-keep independent progress. The 168-day length is a recommendation; hard problems can need extra
-calendar sessions. See the overload policy in the master plan.
-
-DSA now targets product-company interview preparation, including your Google goal. Each daily
-DSA folder includes a LeetCode companion with difficulty and contract-comparison notes. Use it
-as the main attempt within the existing hour. See the [full LeetCode index](docs/LEETCODE_INDEX.md)
-and [interview practice method](docs/INTERVIEW_PREP.md). Premium companions have local free alternatives.
+---
 
 ## Start here
 
-1. Open [Day 1](days/day-001-count-target-values/LESSON.md), then choose a subject README.
-2. Follow its **Navigation — where to start** section: explanation → trace → readiness →
-   assignment → implementation → verification → evidence.
-3. For later reading without practice, use [DSA recall](docs/DSA_RECALL.md),
-   [Python recall](docs/LANG_RECALL.md), or [system design recall](docs/SD_RECALL.md).
-
-Days 1–40 have full topic explanations across all three tracks, with worked traces, observed
-teaching failures, readiness checks, and recall cards. Find them in the
-[expanded teaching index](days/README.md#expanded-teaching-days). The newest block starts at
-[Day 37](days/day-037-middle-node/LESSON.md) and ends at
-[Day 40](days/day-040-remove-from-end/LESSON.md). Days 7, 14, 21, 28, and 35 begin with
-cold attempts before repair reading. Days 41–168 have preparation navigation until expanded.
-[The teaching workflow](docs/TEACHING_WORKFLOW.md) makes
-explanations and recall cards part of every future day expansion.
-
-For system design, Days 1–40 also include a complete **REFERENCE_DESIGN.md** written by the
-assistant. **DESIGN.md** is your practice file: its `TODO(me)` prompts are for you when you
-choose to practice. Read the reference first for guidance or compare after your own attempt;
-on weekly review days, open the reference only after the cold review attempt.
-See [the SD workflow and reference index](docs/SD_DESIGN_GUIDE.md#who-fills-the-todos).
-Future expanded SD days include both files; reading alone does not mark study complete.
-
-- [Master plan and all 168 daily assignments](docs/00_MASTER_PLAN.md)
-- [Day 1](days/day-001-count-target-values/LESSON.md)
-- [DSA practice guide](docs/PRACTICE_GUIDE.md)
-- [DSA pattern notes](docs/DSA_PATTERN_GUIDE.md), [design method](docs/SD_DESIGN_GUIDE.md), [Python lab method](docs/PYTHON_LAB_GUIDE.md)
-- [Independent progress instructions](docs/STUDY_WORKFLOW.md)
-- [Source references](docs/SOURCES.md)
-
-```powershell
-python course.py start 1 --track dsa
-python course.py practice 1
-python course.py status
+```bash
+./k status        # where you are
+./k day 1         # today's hub
 ```
 
-The practice command **fails initially by design**: implement `solve(data)` first. Provided
-examples are smoke tests; add your own boundary and counterexample tests before marking complete.
-No exercise solution has been filled in for you. Python 3.12 is the lab baseline; no dependencies
-or paid services are needed to start.
+Then open [`days/day-001-how-your-code-actually-runs/README.md`](days/day-001-how-your-code-actually-runs/README.md).
 
-## Folder shape
+---
 
-```text
-days/day-001-count-target-values/
-  LESSON.md
-  CHECKLIST.md
-  dsa_count-target-values/       README, PRACTICE, LEETCODE, HINTS, solution, cases, tests, notes
-  sd_functional-scope/           README, DESIGN
-  lang_identity-and-equality/    README, lab, notes
+## What a day looks like
+
+```
+days/day-001-how-your-code-actually-runs/
+    README.md                                    the hub — today in one screen
+    01-dsa-how-your-code-actually-runs.md        the DSA lesson
+    02-system-design-what-happens-when-you-type.md   the system design lesson
+    03-practice.md                               problems to code, questions to say aloud
 ```
 
-All 168 days use the same `track_topic-title` naming convention. CLI aliases stay `dsa`, `sd`
-and `lang`; old IDE tabs should reopen the files under their new topic-named folders.
+Four files. No lab folder, no test harness, no setup. You read, you code along, you
+say the answers out loud.
 
-## Verify the course
+Each lesson has the same nine sections, so you learn one reading rhythm and keep it
+for six months:
 
-```powershell
-python course.py check
-python granth.py doctor
-python granth.py index
-python granth.py check
+| # | DSA lesson | System design lesson |
+|---:|---|---|
+| 1 | What this is, and why they ask it | What this is, and why they ask it |
+| 2 | The story | The story |
+| 3 | The idea in plain English | The idea in plain English |
+| 4 | The picture | The picture |
+| 5 | The code, built step by step | How it actually works |
+| 6 | What it costs | The numbers |
+| 7 | The traps | The trade-offs |
+| 8 | **In the interview** | **In the interview** |
+| 9 | Recall card | Recall card |
+
+Section 2 is a scene from ordinary life with no technical words in it. Section 8 is what
+the whole document exists for: the real phrasings, what to say in the first ninety
+seconds, the follow-ups, and a model answer.
+
+---
+
+## The two tracks
+
+**DSA** — foundations and Big-O, then arrays, strings, two pointers, sliding window,
+prefix sums, binary search, sorting, hashing, stacks and queues, linked lists, recursion
+and backtracking, trees, heaps, tries, graphs, dynamic programming, greedy, bits and
+maths, then mocks.
+
+**System design** — how computers and the internet work, then APIs, databases,
+object-oriented design, SOLID, design patterns, twenty low-level design case studies,
+scaling, distributed systems, the building blocks of big systems, twenty-six high-level
+design case studies, then reliability and the interview itself.
+
+The system design track is deliberately ordered **fundamentals and LLD first, HLD second**.
+Low-level design is what junior candidates actually get asked, and high-level design makes
+no sense until you know what a database index and a message queue are.
+
+Full syllabus: [`docs/CURRICULUM_INDEX.md`](docs/CURRICULUM_INDEX.md) ·
+Every day at a glance: [`days/README.md`](days/README.md)
+
+---
+
+## Commands
+
+```bash
+./k status        progress on both tracks, computed from disk
+./k day N         print day N's hub and list its files
+./k next          the first day not written yet
+./k check [N]     verify written lessons against the format contract
+./k build         create any missing day folders and placeholders
 ```
 
-Granth's indexes describe planning/authoring. They show assignment hubs, not completed study or
-full teaching chapters. Use `course.py status` for independent study progress. Read the
-[adaptation decision](docs/adr/ADR-0001-the-plan-as-adopted.md) for the preserved upstream tool's
-limits. Do not use its `done` command for this workflow: it stages and commits the whole tree.
+To write a day, ask Claude:
+
+```
+/day-krama 37
+```
+
+---
+
+## How the repo is put together
+
+| Path | What it is |
+|---|---|
+| [`days/`](days/) | The 180 day folders. 720 files. |
+| [`docs/00_HOW_A_DAY_WORKS.md`](docs/00_HOW_A_DAY_WORKS.md) | The format contract every lesson follows. |
+| [`docs/CURRICULUM_INDEX.md`](docs/CURRICULUM_INDEX.md) | The syllabus. **Generated** — do not hand-edit. |
+| [`scripts/curriculum.py`](scripts/curriculum.py) | The syllabus as data. The source of truth. |
+| [`scripts/build_skeleton.py`](scripts/build_skeleton.py) | Turns the data into folders and placeholders. |
+| [`CLAUDE.md`](CLAUDE.md) | The rules Claude follows when writing a day. |
+| [`archive/`](archive/) | The previous 230-day version, kept for reference. |
+
+To change what a day teaches, edit `scripts/curriculum.py` and run
+`python scripts/build_skeleton.py`. Never rename a folder by hand.
+
+---
+
+## Progress
+
+Nothing is written yet. All 180 days exist as folders with their topics, section
+headings and interview questions already in place, so you can see the whole road before
+walking it. Lessons get filled in one day at a time.

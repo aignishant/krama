@@ -1,36 +1,42 @@
-# Plan changelog — Krama
+# Changelog — the plan
 
-Principle 8: *if reality changes, the plan is amended first.* Every amendment lands here **before**
-any day or any work changes. **Append-only. Newest last.**
-
-An entry answers three questions in this order: **what moved in the world**, **what this plan now
-says instead**, and **what that costs** — which days are affected, which IDs move, what has to be
-rewritten. An entry that names the change but not its cost is a note, not an amendment.
-
-Anything structural — a change to the day format, the ID scheme, the phase boundaries, the
-toolchain — also gets an ADR in `docs/adr/`, and the entry here links it.
+Structural changes to the course. Not a log of days written.
 
 ---
 
-- 2026-09-18 — Plan adopted at v1.0.0. See `docs/adr/ADR-0001-the-plan-as-adopted.md`.
+## 2026-08-25 · Restarted as a 180-day two-track course
 
-- 2026-09-18 — Initial adaptation: timed independent tracks and guided assignments; 168-day scope assumed. All 168 days affected. See ADR-0001.
+The 230-day DSA course plus 78-day system design course became **one 180-day course
+where every day teaches both**.
 
-- 2026-09-19 — v1.1.0: user requested product-company interview preparation, LeetCode assignments and topic-named subject folders. All 504 subject directories and their links change; day order, IDs, study budgets and learner work remain intact. See [ADR-0002](adr/ADR-0002-topic-folders-and-interview-practice.md).
+**Why.** The old version failed the reader on two counts. The material was written at
+the level of someone who already had a computer science background, and the `lab/`
+scaffold — `implement.py` as a stub, a reference oracle, pytest, a benchmark harness —
+added setup work without adding learning. It also ran DSA for 230 days before system
+design started, which meant no system design practice for most of a year.
 
-- 2026-09-22 — Teaching clarification requested by the learner: explain each topic and its underlying reasoning before practice, and provide navigation in every subject README. Expand Day 1's counting instruction and install navigation across 504 subject READMEs. Future day expansions follow [TEACHING_WORKFLOW.md](TEACHING_WORKFLOW.md); unexpanded briefs identify their preparation guides honestly. This extends teaching prose within the existing v1.1.0 layout and budgets; no IDs, day order, progress records, or exercise implementations change.
+**What changed.**
 
-- 2026-09-22 — Added the learner's requested recall mode through [DSA](DSA_RECALL.md), [Python](LANG_RECALL.md), and [system design](SD_RECALL.md) summary files. Day 001 receives full preparation and readiness sections plus counting-technique depth; every future expansion must append a compact summary card. All subject READMEs link navigation and recall. This is a teaching-content extension within v1.1.0; the 168-day assignments and independent assessment criteria stay in place.
+| Before | After |
+|---|---|
+| 308 days, DSA then system design in sequence | 180 days, both tracks every day |
+| Hub `LESSON.md` + `parts/NN-section/N.N-subtopic.md` | Hub `README.md` + two lesson files + one practice sheet |
+| Ten-section depth contract | Nine-section contract, story-first, interview-shaped |
+| `lab/` with stub, oracle, tests, bench | Removed entirely. Full solutions in the lesson, named problems in `03-practice.md` |
+| Solutions withheld from the reader (old rule 12) | Solutions shown in full (new rule 5) |
+| Concept IDs (`CPX-04`, `BSR-03`) owned per day | Dropped. The day's topic is its identity |
+| Derivations, proofs, potential functions, CPython internals | Cut unless an interviewer would ask (new rule 14) |
+| `docs/PROBLEM_INDEX.md` as a catalogue | Dropped. Problems named per day |
+| Syllabus in a hand-maintained markdown table | Syllabus is data in `scripts/curriculum.py`; the index is generated |
 
-- 2026-09-22 — The learner requested the next three days. Expand Days 002–004 across all three tracks with topic explanations, worked traces, observed teaching failures, readiness checks, and nine recall cards; Day 002 also needs a separate dominance-check lesson for its online companion. Update their navigation and checklists within v1.1.0. No IDs, budgets, assignment order, learner implementations, evidence, or progress records change.
+**System design ordering.** Fundamentals → APIs → databases → object-oriented design →
+SOLID → patterns → low-level design case studies occupy days 1-96. Scaling, distributed
+systems, building blocks and high-level design case studies occupy days 97-180. Low-level
+design comes first because that is the round junior candidates actually get, and because
+high-level design is unreadable before you know what an index and a queue are.
 
-- 2026-09-22 — The learner requested complete day documents through Day 005 in all three tracks. Add Day 005 lessons for merging sorted inputs, backward merging into spare capacity, latency budgets, and truth/sentinels, plus three recall cards and connected navigation. Days 001–004 already have topic lessons. This extends teaching within v1.1.0; IDs, budgets, learner exercises, personal evidence, and progress remain unchanged.
+**Kept.** The writing style — second person, present tense, short sentences, concrete
+before abstract, no cheerleading, no time estimates. The story section, which was the
+best part of the old format. The refusal to hand-edit generated files.
 
-- 2026-09-22 — The learner found SD's TODO ownership unclear and chose complete reference designs alongside personal practice. Expanded SD days now require an author-written `REFERENCE_DESIGN.md` answering the assigned task; `DESIGN.md` remains the learner's practice/evidence file. Backfill references and navigation for Days 001–005, update the master plan and teaching/study guides, and require the same for future expansions. No existing learner work, completion records, day IDs, or budgets change. This additive format decision is documented in [ADR-0003](adr/ADR-0003-system-design-reference-and-practice.md).
-
-- 2026-09-22 ? The learner requested the next four day documents after the authored Days 001?020. Expand Days 021?024 with 12 topic explanations, four complete SD references, worked failures, readiness checks, recall cards, and connected navigation. Preserve Day 021 cold assessment order and the 60/30/15-minute caps. Update teaching availability and source/verification records within v1.1.0; no IDs, assignments, learner files, or study progress change. Existing uncommitted Days 017?020 work remains in place.
-- 2026-09-23 — The learner requested the next four day documents. Author Days 025–028 across all three tracks, including four SD reference answers, executable teaching examples, source checks, recall cards, and navigation. Connect the existing Days 021–024 teaching files to their unfinished navigation and recall indexes. Preserve the Day 028 cold gate, existing assignments, the 60/30/15-minute budgets, learner work, and all study progress. This is a teaching extension within v1.1.0; no IDs or day order change.
-
-- 2026-09-23 ? The learner requested the next eight day documents after Days 001?028. Expand Days 029?036 with 24 topic lessons, eight complete SD references, executed teaching demonstrations, readiness checks, recall cards, and connected navigation. Preserve Day 035 cold assessment order and the 60/30/15-minute budgets. Update availability, source and verification records within v1.1.0; no IDs, assigned exercises, learner evidence, or progress change. Preserve existing uncommitted work.
-
-- 2026-09-23 — The learner requested the next four day documents after Days 001–036. Expand Days 037–040 across all three tracks with 12 topic lessons, four complete SD references, executed teaching examples, readiness checks, recall cards, and connected navigation. Preserve the existing assignments, 60/30/15-minute budgets, learner files and progress. Update source and verification records within v1.1.0; no day order or IDs change.
+The previous version is in [`archive/`](../archive/) in full.
